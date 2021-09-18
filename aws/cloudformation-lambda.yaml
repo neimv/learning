@@ -1,0 +1,44 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  NombreLambda:
+    Description: Nombre de la función lambda
+    Type: String
+
+  RuntimeLambda:
+    Description: Ingresa el runtime de la funcion lambda
+    Type: String
+    Default: python3.7
+    AllowedValues:
+      - python3.7
+      - python2.7
+      - ruby2.5
+      - nodejs8.10
+      - java8
+      - dotnetcore2.1
+ 
+Resource:
+  LambdaPlatzi:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Ref NombreLambda
+      Handler: lambda_function.lambda_handler
+      Runtime: !Ref RuntimeLmabda
+      MemorySize: 512
+      Timeout: 600
+      Role: !GetAtt LambdaRolePlatzi.Arn
+
+Outputs:
+  LambdaARN:
+    Description: "ARN de la función lambda"
+    Value:
+      !GetAtt LmabdaPlatzi.Arn
+    Export:
+      Name: LambdaPlatziArn
+  LambdaName:
+    Description: "Nombre de la función lambda"
+    Value:
+      !Ref LambdaPlatzi
+    Export:
+      Name: LambdaPlatziName
+

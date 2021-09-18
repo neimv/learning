@@ -1,0 +1,25 @@
+[2021-08-21 01:20:32,112] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-08-20T00:00:00+00:00 [queued]>
+[2021-08-21 01:20:32,137] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-08-20T00:00:00+00:00 [queued]>
+[2021-08-21 01:20:32,138] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-21 01:20:32,138] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-21 01:20:32,138] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-21 01:20:32,150] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2021-08-20T00:00:00+00:00
+[2021-08-21 01:20:32,156] {standard_task_runner.py:52} INFO - Started process 11188 to run task
+[2021-08-21 01:20:32,161] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2021-08-20T00:00:00+00:00', '--job-id', '13', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpbsgjcdtb', '--error-file', '/tmp/tmpydb_2cmg']
+[2021-08-21 01:20:32,161] {standard_task_runner.py:77} INFO - Job 13: Subtask extracting_user
+[2021-08-21 01:20:32,215] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2021-08-20T00:00:00+00:00 [running]> on host 07cd8e03eca8
+[2021-08-21 01:20:32,282] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2021-08-20T00:00:00+00:00
+[2021-08-21 01:20:32,282] {http.py:111} INFO - Calling HTTP method
+[2021-08-21 01:20:32,294] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-08-21 01:20:32,298] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/?nat=us,gb
+[2021-08-21 01:20:32,706] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Mrs","first":"Christina","last":"Moreno"},"location":{"street":{"number":4832,"name":"E Center St"},"city":"Plano","state":"Arkansas","country":"United States","postcode":57233,"coordinates":{"latitude":"-57.3322","longitude":"131.5086"},"timezone":{"offset":"-8:00","description":"Pacific Time (US & Canada)"}},"email":"christina.moreno@example.com","login":{"uuid":"396273a1-8c2e-456a-a116-57335124fb2d","username":"greengoose549","password":"babies","salt":"Wk5wyOyf","md5":"44d1a3e6fbfbd577d0520eb657d094ab","sha1":"bc2d819fc59309f51377debc2b01861aae123ffd","sha256":"cd9d2f24f8cbe28b10d8d5ac7feb8b893e90fdc03ff5f4f60853af541d2a1311"},"dob":{"date":"1955-06-12T11:21:48.958Z","age":66},"registered":{"date":"2005-07-02T19:43:08.515Z","age":16},"phone":"(012)-961-8379","cell":"(320)-661-9684","id":{"name":"SSN","value":"680-05-0424"},"picture":{"large":"https://randomuser.me/api/portraits/women/35.jpg","medium":"https://randomuser.me/api/portraits/med/women/35.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/35.jpg"},"nat":"US"}],"info":{"seed":"329ec6f0bd52976c","results":1,"page":1,"version":"1.3"}}
+[2021-08-21 01:20:32,740] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20210820T000000, start_date=20210821T012032, end_date=20210821T012032
+[2021-08-21 01:20:32,781] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-21 01:20:32,811] {local_task_job.py:149} INFO - Task exited with return code 0

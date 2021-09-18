@@ -1,0 +1,25 @@
+[2021-08-21 01:25:42,659] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-08-21T01:25:39.186200+00:00 [queued]>
+[2021-08-21 01:25:42,681] {taskinstance.py:896} INFO - Dependencies all met for <TaskInstance: user_processing.extracting_user 2021-08-21T01:25:39.186200+00:00 [queued]>
+[2021-08-21 01:25:42,682] {taskinstance.py:1087} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-21 01:25:42,682] {taskinstance.py:1088} INFO - Starting attempt 1 of 1
+[2021-08-21 01:25:42,682] {taskinstance.py:1089} INFO - 
+--------------------------------------------------------------------------------
+[2021-08-21 01:25:42,691] {taskinstance.py:1107} INFO - Executing <Task(SimpleHttpOperator): extracting_user> on 2021-08-21T01:25:39.186200+00:00
+[2021-08-21 01:25:42,697] {standard_task_runner.py:52} INFO - Started process 11902 to run task
+[2021-08-21 01:25:42,701] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'user_processing', 'extracting_user', '2021-08-21T01:25:39.186200+00:00', '--job-id', '36', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/user_processing.py', '--cfg-path', '/tmp/tmpewbjabvs', '--error-file', '/tmp/tmpnjgdedt9']
+[2021-08-21 01:25:42,701] {standard_task_runner.py:77} INFO - Job 36: Subtask extracting_user
+[2021-08-21 01:25:42,747] {logging_mixin.py:104} INFO - Running <TaskInstance: user_processing.extracting_user 2021-08-21T01:25:39.186200+00:00 [running]> on host 07cd8e03eca8
+[2021-08-21 01:25:42,804] {taskinstance.py:1302} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=user_processing
+AIRFLOW_CTX_TASK_ID=extracting_user
+AIRFLOW_CTX_EXECUTION_DATE=2021-08-21T01:25:39.186200+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2021-08-21T01:25:39.186200+00:00
+[2021-08-21 01:25:42,805] {http.py:111} INFO - Calling HTTP method
+[2021-08-21 01:25:42,819] {base.py:78} INFO - Using connection to: id: user_api. Host: https://randomuser.me/, Port: None, Schema: , Login: , Password: None, extra: {}
+[2021-08-21 01:25:42,821] {http.py:140} INFO - Sending 'GET' to url: https://randomuser.me/api/?nat=us,gb
+[2021-08-21 01:25:43,294] {http.py:115} INFO - {"results":[{"gender":"female","name":{"title":"Ms","first":"Susanna","last":"Wood"},"location":{"street":{"number":2595,"name":"Windsor Road"},"city":"Coventry","state":"Humberside","country":"United Kingdom","postcode":"YL45 4JR","coordinates":{"latitude":"77.0013","longitude":"40.9521"},"timezone":{"offset":"+3:00","description":"Baghdad, Riyadh, Moscow, St. Petersburg"}},"email":"susanna.wood@example.com","login":{"uuid":"efb84f38-60f2-47c6-801a-6b9723c927ba","username":"redkoala739","password":"ballin","salt":"b0jCWAsb","md5":"94be627cd68d3e794239642e07c32c4f","sha1":"5ddc73e9df01aac837bd67bebbc49d89149e0b00","sha256":"3eb825d19017d53f46a1202738af5183c2847e542bfe19846cb249cf9a549443"},"dob":{"date":"1978-01-09T21:09:39.389Z","age":43},"registered":{"date":"2010-03-05T03:41:07.062Z","age":11},"phone":"015396 45908","cell":"0768-436-492","id":{"name":"NINO","value":"NX 11 87 52 Y"},"picture":{"large":"https://randomuser.me/api/portraits/women/13.jpg","medium":"https://randomuser.me/api/portraits/med/women/13.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/13.jpg"},"nat":"GB"}],"info":{"seed":"5d219ad432bd3f26","results":1,"page":1,"version":"1.3"}}
+[2021-08-21 01:25:43,336] {taskinstance.py:1211} INFO - Marking task as SUCCESS. dag_id=user_processing, task_id=extracting_user, execution_date=20210821T012539, start_date=20210821T012542, end_date=20210821T012543
+[2021-08-21 01:25:43,375] {taskinstance.py:1265} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2021-08-21 01:25:43,392] {local_task_job.py:149} INFO - Task exited with return code 0

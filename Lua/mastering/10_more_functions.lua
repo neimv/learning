@@ -1,0 +1,1 @@
+local curses = require "curses"
