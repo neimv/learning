@@ -1,0 +1,3703 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <bookmarks list=""/>
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1626023332">
+    <node name="Analisis de negocios" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
+      <rich_text>¿Que es la ciencia de datos?
+- big data: gran volumen de información
+- solución matemática a un problema de negocio
+Empresas con gran volumen de información:
+- facebook
+- bancos
+- sintrafico
+
+Tipos de datos
+existen 5 tipos de datos principales
+- personas, la generamos nosotros, preferencias, información de tiempo con personas
+- transacciones, monetarias y no monetarias, flujo de dinero las primeras (que s epaga y en donde), las no financieras son como las compañias telefonicas (patrones de conducta)
+- navegación web, cookies, registros de información desde el browser
+- machine 2 machine, dispositivos de GPS, movilidad
+- biométricos, es información unica y con debate etico
+empresas
+facebook: personas, información de gustos
+bancos: transacciones monetarias (ver que se compra y con que frecuencia)
+sintrafico: machien 2 machine
+
+Cultura data-driven
+1. crear cultura, hacer que todos tomen decisiones de acuerdo a los datos (hay que enseñar que son los datos)
+2. recolectar (almacenaje y procesado)
+3. medir todo (entender la data y por que)
+4. datos precisos y relevantes (que es lo que realmente sirve de lo que tenemos, que sea precisa y estandar, tener datos que tenga los datos lo mas identicos posibles)
+5. testear y crear hipotesis (saber que puede pasar y por que pasa, patrones especificos)
+6. insights para tomas acciones (saber que vamos a hacer una vez con data recolectada)
+7. automatizar &lt;3 . &lt;3
+
+Machine learning e inteligencia artifical
+la inteligencia articial es lo que se conoce como maquina inteligente
+machine learning es el aprendizaje por la computadora y que se pueda mejorar
+el machine learning nos sirve para
+- detección de fraudes
+- búsqueda web
+- anuncios a tiempo real
+- análisis de textos
+- next best action
+tres empresas:
+- facebook
+- amazon
+- mercado libre
+
+Deep learning
+es el aprendizaje profundo, nos sirve generalmente para las saber que tipo de imagen es o que canción, son modelos con mucho entrenamiento
+
+Roles en datos
+- Ingeniero de datos, construye la informacion a almacenar, obtiene información y la guarda
+- Analista BI, partiendo de la información guardada la extrae para información que le interese
+- Data Scientist, predice por medio de modelos, explica las situaciones de la empresa (pasado, presente y futuro)
+
+Herramientas
+- SQL, analista e ingeniero de datos
+- Python Y R, cientifico de datos analisis descriptivo y exploratorio
+
+Conflictos de los datos
+- hay información delicada de los usuario
+
+Técnicas de storytelling
+Estructura del problema: problema, solución, alcance (que se quiere explicar con este estudio)
+
+Estructurar un caso de negocio:
+que? - cual es el problema del negicio
+por que? - cuales son los motivos o causas
+como?:
+	- análisis cuantitativo
+	- análisis cualitativo
+	- matriz cuantitativa-cualitativa
+	- definir acciones
+	- validación
+
+Análisis cuantitativo
+- identificar variables numericas
+- cuales nos son utiles
+
+Análisis cualitativo
+- variables cualitativas
+- clusterizar causas de contacto, agrupar problematicas
+- clasificación
+- profundizar
+
+Toma de decisiones:
+- </rich_text>
+    </node>
+    <node name="POO" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1618776094" ts_lastsave="1619095024">
+      <rich_text># Programación básica en POO-Python
+- es un modelado del mundo
+- se puede decomponer
+
+# Complejidad algoritmica
+- es la comparacion de la eficiencia de dos diferentes algoritmos
+- predice el tiempo en resolver un problema
+- se puede definir como T(n)
+- hay dos tipos, la temporal y espacial
+
+Aproximaciones:
+- tiempo de respuesta 1 vs 1, tiene el problema de depender del hardware o software, schedulers
+- Contar pasos como medida abstracta, operaciones matematicas... puede ser mas eficiente, la solucion varia de programa a programa a nivel algoritmico
+- Contar pasos asintoticamente, para el crecimiento
+
+# Conteo abstracto
+- aproximación del tipo matematico
+- se cuenta que pasa adentro del programa
+- se suma cada operacion que se hacen (los loops por cada una de las iteraciones)
+- se puede representar las operaciones de loops en x, lo que puede darnos parabolas
+
+# Notación asintótica
+- conocido como “Big O notation”, esto se llama asi ya que se va acercando al infinito o se va acercando
+- el input generalmente es que el que nos da esta salida
+- existen otros tipos de notaciones
+- este tipo de notación se puede saber sumando los ‘n’ pasos que vamos requiriendo en el algoritmos
+- se toma el termino mas grande por ej. si queda ‘n’ vs ‘n**2’ se toma el ‘n**2’
+
+# Clases de complejidad algoritmica
+- O(1) este siempre sera constante, no importa cuando cresca el input
+- O(n) Lineal, se crece de manera proporcional al imput
+- O(log n) Logaritmica, crece mucho y de poco a poco se estabiliza, mergesort
+- O(n log n) logaritmico lineal, crece de manera logaritmica pero constantemente
+- O(n**2) Polinomial
+- O(2**n) exponcial, este crece mas rapido que el polinomial, este es el menos efectivo ("tiralos a la basura"), son muy bueno a nivel teorico
+
+# Busqueda lineal
+- busqueda de manera secuencial
+- el peor de los casos es que el elemento que se busca esta al final
+- de tipo O(n)
+
+# Busqueda binaria
+- divide y conquistaras
+- se parte en 2 en cada iteración
+- asume que esta ordenada
+
+# Ordenamiento de burbuja
+- de tipo O(n**2)
+
+</rich_text>
+    </node>
+    <node name="Probabilidad y Estadistica, marce" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619978072" ts_lastsave="1623388351">
+      <rich_text># Conceptos básico
+- Probabilidad, que tan posible es que ocurra un evento
+   → la probabilidad siempre va entre 0 y 1
+   → se puede escribir en fraccion, decimal o porcentaje
+   → la probabilidad nunca es negativa
+   → se escribe P(A)
+- Experimento: se busca un valor determinado, proceso que nos da los datos estadisticos a estudiar
+   → numericos: numeros
+   → no numericos: colores, nombres
+- Espacio muestral: conjunto de valores que se obtienen en el experimento, se define por la letra Omega
+- Suceso, son cada uno de los resultados que se obtienen en el experimento
+   → posible: existe la probabilidad de que se obtenga lo que quiere
+   → seguro: si todo el espacio muestral esta definido por lo que se necesita
+   → imposible: que no se tenga el valor que se quiere
+
+# Calculo de probabilidades
+- Experimentos equiprobables: Cada suceso del espacio muestral tiene la misma probabilidad de ocurrencia
+- Regla de Laplace: P(A) = Casos favorables de A / Casos posibles
+
+# Probabilidad compuesta y diagramas de árbol
+- es donde intervienen mas de un experimento aleatorio
+- se hace la multiplicación de cada evento que tenemos
+- los diagramas de arbol pueden ayudar a saber que probabilidad le toca a cada evento
+
+# Union
+- compatibles: encuentra los resultados necesarios en cada uno de los universos creados
+   → P(AUB) = P(A) + P(B)
+   → P(AUB) = P(A) + P(B) - P(A^B)
+- incompatibles: no encuentra el resultado dentro de uno de los universos
+- complementarios: cuando ambos universos se unen y crean todo el espacio muestral
+
+# Intersección
+- Suceso formado que cumplen a y b
+   → P(A^B) = P(A) * P(B)
+   → P(A^B) = P(A/B) * P(B) donde:
+      ⇒ P(B/A) = P(A^B) / P(A). si P(A) != 0
+
+# Variaciones, permutacion y combinaciones
+- Combinatoria, estudia las agrupaciones partiendo de un conjunto de acuerdo al orden y al número de elementos
+-  variaciones, subgrupos que ocurren cuando se agrupan cierto numero de elementos en una cantidad especifica 
+   →  V(n,r) = n! / (n - r)!
+- permutacones: Son variaciones de n elementos tomados en grupos de r, donde n = r
+   → p(n) = n(n-1)(n-2)...(1) = n!
+- combinaciones: Se obtienen al seleccionar de n elementos un subgrupo r, aqui si importa que no se repitan, se calcula a partir de:
+   → C(n,r) = n! / r!(n - r)! = (n /n r) = C(n,r) = V(n, r) / P(r)
+
+# Tabla de frecuencias
+- la distribucion de datos, sirve para saber que metodo estadistico es el correcto a usar
+- los datos se pueden presentar:
+   → graficas
+   → textual
+   → en cuadros estadisticos
+- la organizacion de datos es por medio de una tabla de frecuencias donde se muestra que tanto se repiten los datos
+- la frecuencia absoluta es cada uno de los valores que tiene por valor
+- la frecuencia absoluta acumulada es la suma la de la actual mas la anterior
+- la frecuencia relativa es la division de la frecuencia absoluta entre la frecuencia total
+- la frecuencia relativa acumulada es la suma de la frecuencia relativa mas su anterior
+
+# Gráfica de dispersión
+- Relaciona los datos de estudio, por medio de sus variables
+- se representa por medio de un diagrama matematico
+- Se le conoce como nube de puntos, son variables bidimensionales, sabiendo que tanto afectan o dependen de ellas
+
+# Parametros estadisticos, centralización
+- centralizacion: son valores recogidos, que representan de forma global a la muestra o poblacion
+   → media: es la suma de todas las observaciones dividivo por el numero de observaciones
+   → mediana: Es el valor de posición de datos ordenados, se toma el que esta en medio
+      ⇒ par = X=X(n+1) / 2
+      ⇒ impar= (X=X(N/2) + X(N/2+1)) / 2
+   → moda: Es el valor que tiene mas repeticiones de datos
+
+# Tipos de correlación o covarianza
+- existen tres tipos de correlaciones
+   → Directa: se da cuando una variable aumenta y la otra también o de caso inverso
+   → Inversa: se presenta cuando una variable aumente la otra disminuye y en caso inverso
+   → Nula: cuando no se encuentra ninguna relacion entre variables
+- Covarianza: es la media aritmetica de los productos de las desviaciones de cada una de las variables respecto a sus medias respectivas
+
+# Rango (Dispersion de distribuciones)
+- son una serie de valores que indican que tan dispersos, juntos o separados estan los datos, esto de acuerdo a las medidas centrales
+- rango o amplitud, es el recorrido de la distribución estadística, es la distancia que hay entre el mayor y menor
+- para datos agrupados, el recorrido es la diferencia entre el límite real superior del ultimo intervalo y el primer intervalo
+- mide la dispersion total de todos los elementos
+
+# Desviacion media
+- es la media aritmetica de los valores absolutos de todos los datos respecto a la media aritmetica
+
+# Varianza y desviacion estandar
+- desviacion estandar raiz cuadrada de la varianza
+- varianza, que tan separados estan los datos
+
+# Coeficiente de correlación
+- es una valor cuantitativo
+- relacion entre dos variables
+- la proporcionalidad positiva esta dada por 1, negativa por -1, si no existe es igual a 0
+- es a covarianza de x, y entre las desviaciones tipicas de x y de y
+
+# Cuartiles, deciles y percentiles
+- Cuartiles son valores que dividen a la población en 4 partes iguales, representan al 25%, 50% y 75% de los datos, el 2 representa la mediana
+- Deciles divide a los valores en 9 partes, el 5 representa la mediana
+- Percentiles divide el conujunto de datos en 100 partes iguales el percentil 50 coincide con la mediana
+
+# Que es y para que sirve la regresion logistica
+- regresion simple, a partir de datos como la correlación y los datos tabulados, se puede encontrar un valor futuro que se puede predecir
+- la formula es x(i) = a + bt
+</rich_text>
+    </node>
+    <node name="regresion-python" unique_id="24" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620426905" ts_lastsave="1620654556">
+      <rich_text># Regresion líneal y machine learning
+- machine learner, usando modelos de regresion lineal
+- prediccion de datos por medio una linea, los datos que esten mas cerca de ella
+- por medio de variables ‘x’ y ‘y’
+- se puede sobreajustar o underfit puede dar predicciones reales
+- regresion lineal para regresiones
+- regresion logistica es para clasificaciones
+- naive bayes clasificacion
+- KNN regresion y clasificacion
+- arboles regresion y clasificacion
+
+# Explicacion matemática de la regresión líneal
+- termino estadistico, modelo matematico, relacion entre una relacion dependiente e independiente
+- y = bo + biX
+   → y: dependiente
+   → X: independiente
+   → bo: constante
+   → bi: pendiente, inclinacion del sistema
+
+# Metodo de mínimos cuadrados
+- sumatoria de x menos promedio de x multiplicado por y menos y promedio y se divide entre la sumatoria de los cuadrados de x menos promedio de x
+   → sum ((x - avg(x)(y - avg(y)) / sum (x - avg(x))^2
+   → sirve para encontrar la inclinación
+- con el pomedio de puntos se puede encontrar bo, siendo y = avg(y) y la x = avg(x), y b1 es la inclinación</rich_text>
+    </node>
+    <node name="Calculo basico" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621260505" ts_lastsave="1622078620">
+      <rich_text># Aprendamos calculo
+- las matemáticas son un lenguaje, sirven para modelar y entender fenomenos de nuestra realidad
+- Descenso del gradiente es lo final
+
+# Qué es el cálculo?
+- realizar operaciones para llegar a un resultado
+- calculo infinitesimal, cuando las cantidades tienden a ser cercanas a 0
+- calculo diferencial, estudia la tasa de cambio de las funciones, los cambios pequeños se conocen como delta x
+- calculo integral, es el proceso inverso del diferencial
+
+# Que es una funcion
+- es una regla donde cada elemento de A, se le asigna un elemento del conjunto B
+- una funcion es como una maquina, y = f(x)
+- una funcion se puede representar:
+   → Verbalmente
+      ⇒ de forma verbal, diciendo el problema
+   → Numéricamente
+      ⇒ se puede representar a lo largo de una tabla, donde tenemos x y y en cada columna
+   → Visualmente
+      ⇒ se muestra por medio de una gráfica
+   → Algebraicamente
+      ⇒ este se representa de y = f(x) = x^2
+
+# Dominio y rango de una función
+- el dominio, se define como los valores que toma x y estan definidos en f(x)
+- el rango, son todos los resultados que nos da x una vez resuelta
+
+# Como se compone una neurona
+- dentro de una neurona se tiene una funcion, donde recibe estimulos (entradas)
+- hace sumas ponderadas de los valores de entrada
+- se les agrega un peso determinado (W)
+   → y = f(x) = W1x1 + W2x2 + b
+   → y = f(x) = W1x1 + W2x2 + ... + Wnxn + b
+   → bias, es constante es un rango para ajustar el valor
+
+# Funciones activadoras de neuronas
+- las funciones de activacion nos da una linea curva, se ajusta al comportamiento de los datos
+- tipos:
+   → paso escalonado, heaviside, su rango esta dado con [0, 1], solo toma o valor 0 o 1
+   → funcion sigmoide, es una curva que parte en 0.5, sus valores van de 0 a 1, pero no los toca, f(x) = 1 / (1 + e^-x), su rango va de (0, 1), puede tomar cualquier valor de 0 a 1
+   → funcion tangente hiperbolica, su rango va de (-1, 1) y toma cualquier valor, tanh(x) = (e^x - e^-x) / (e^x + e^-x)
+   → funcion ReLU, funcion rectificada lineal f(x) = max(0, x), 0 para x menores o iguales a 0 y x para valores mayores a x
+
+# Función de coste
+- se calculan que tan alejados estan los datos reales de la predicción
+- (y_pred - y_real)^2 = error
+- error_total = sumatoria de i = 1 hasta n de error dado por la prediccion - datos reales al cuadrado
+- ECM = 1 / n (sum_i=1_n (y_prom - y)^2)
+
+# Que es un limite
+- se puede decir que es a que valor tiende una funcion en un punto dado
+
+# De donde surge la derivada
+- surge para saber la tangente a una curva
+- linea que toca la curva en un solo punto
+- el punto se evalua en x + delta_x, esto s una razon de cambio, donde hay un movimento
+- el incremento sirve para saber con mayor exactitud la pendiente, esto cuando ese incremento esta muy cerca uno del otro
+
+# Máximos y mínimos
+- teorema de la primera derivada
+   → Si f’(x)&gt;0 hacia la izquierda de un punto a y si f’(x)&lt;0 hacia la derecha del punto a, entonces f tiene un máximo relativo en (a, f(a))
+   → Si f’(x)&lt;0 hacia la izquierda de un punto a y si f’(x)&gt;0 hacia la derecha del punto a, entonces f tiene un mínino relativo en (a, f(a))
+   → Si f’(x) es menos o mayor de ambos lados, no es ni un máximo ni un mínimo
+- Teorema de la segunda derivada
+   → Si f’’(x)&lt;0 entonces f tiene un máximo relativo en (x, f(x))
+   → Si f’’(x)&gt;0 entonces f tiene un mínimo relativo en (x, f(x))
+   → Si f’’(x)=0 no se puede determinar si es un máximo o un mínimo o ninguno de los dos. Se debe utilizar el teorema de la primera derivada para poder determinarlo
+
+# Parciales
+- con la parcial de X, se encuentra la tangente que esta sobre x, mientras que la de y nos ayuda a encontrar la que esta con y
+- con ambas se puede encontrar un plano que pase sobre la curva
+
+# Gradiente
+- Vector que nos dice donde asciende de manera mas rapida na superficie
+- se representa con nabla y es la derivada parcial de x + la derivada parcial de y
+
+# Descenso del gradiente
+- para optimizacion de funciones
+- es un proceso iterativo para mejorar la funcion, se puede representar como:
+   → w : w - {alpha}{grad}F
+- la limitacion es que si tienen muchas curvas puede caer en un minimo muy pequeño o puede variar mucho</rich_text>
+    </node>
+    <node name="Probablidad" unique_id="28" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1624453808">
+      <rich_text># Que es la probablidad?
+- se usa en situaciones donde hay incertidumbre
+- la toma de decisiones con informacion incompleta
+- lenguaje y conjunto de herramientas, para cuantificar la incertidumbre
+- escuelas:
+   → frecuentista
+   → bayesiana
+- sucesos:
+   → elemental, que va a pasar sin restriccion
+   → suceso: resultado con alguna restriccion, es algo mas general
+- Espacio muestral: donde estan toda las ocurrencias que van a pasar
+- Axiomas:
+   → P = numero de sucesos exitosos / numero de sucesos totales
+- propiedades:
+   → va del 0 al 100
+   → si es 100 es certeza
+   → si es 0 es imposibilidad
+   → disjuntos: la probabilidad es la suma de cada evento
+
+# Probabilidad en machine learning
+- fuentes de incertidumbre:
+   → datos, este es un proceso imperfecto, debido a los instrumentos que se usan
+   → atributos del modelo, las variables preditores son un subconjunto reducido, lo que hace que halla mas incertidumbre
+   → arquitectura del modelo, representación de la realidad
+- etapas del modelo:
+   → arquitectura, que modelo se usa, si usa o no probabilidad
+   → parametros, entrenamiendo, aprendiendo por la distribucion de probabilidad
+   → calibracion, ajuste del modelo por medio de hiper parametros
+   → interpretacion de la prediccioón
+   → resultado
+
+# Tipos de probabilidad
+- conjunta
+   → cuando se calcula la probabilidad de dos o mas sucesos
+   → se calcula con un conteo al espacio muestral
+- marginal
+   → solo la probabilidad de un suceso, sin importar otro suceso
+- condicional
+   → depende de que ya se tenga un condicion
+   → esto nos reduce el espacio muestral
+   → calculando el valor de la probabilidad condicional y multiplicandolo por la probabilidad nos dara la probabilidad conjunta, regla del producto
+
+# Que es una distribución o una densidad
+- P(X=x)
+   → X -&gt; variable aleatoria
+   → x -&gt; posibles valores
+   → El domino son todos los valores posibles que puede tener la variables aleatoria
+   → se dividen en dos:
+      ⇒ funciones discretas
+      ⇒ funcion continuas
+
+# Distribuciones discretas
+- Distribución de Bernoulli
+   → ocurrencias binarias
+   → se acompleja teniendo varias secuencias de eventos binarios -&gt; distribución binomial
+   → combinatorio: (n k) = n! / k!(n-k)!
+   → formula: p(k, n) = (n k) (p^k) * (1-p)^(n-k)
+- otras distribuciones, Poisson, geométrica, hipergeométrica, binomial negativa
+
+# Distribuciones continuas
+- otras:
+   → exponencial
+   → pareto
+
+# Que es MLE
+- Estimación de máxima verosimilitud
+- framework para estimacion de densidades de un cojuntos de datos:
+   → escoger la distribucion, teniendo solo una muestra de los datos
+   → escoger los parametros de la distribucion, que ajustan mejor la distribucion
+- es un problema de optimización
+   → se tienen muchos datos que pueden variar la salida
+   → se toma el valor mas probable que pueda pasar calcular los valores
+
+# MLE en machine learning
+- se ajustan densidades datos en ml
+- regresion lineal con MLE:
+   → se encuentra el modelo lineal
+- los minimos cuadrados son un problema de MLE
+
+# Regresion logistica
+- problema de clasificacion binaria
+- los resultados son de dos tipos en clasificacion binaria
+- sigmoide: y = 1 / (1 + exp(-x))
+- se pueden dar P con valores entre 0 y 1, usando los errores se arregla que nos de las categorias con las probabilidades mas altas
+- distribucion bernoulli:
+   → p = p x 1 + (1 - p) x 0
+   → L = ŷ * y + (1 - ŷ) x (1 - y)
+- cross entropy: CE = -(sum)y_i * log ŷ + (1 -y_i) * log (1 - ŷ)
+
+# Teoria de Bayes
+- P(A|B) -&gt; posteriori
+- P(B|A) -&gt; Verosimil
+- P(A) -&gt; priori
+- P(B) -&gt; evidencia
+- por lo tanto P(A|B) = (P(B|A)P(A)) / P(B)
+- MAP sirve como MLE para bayesianos
+
+# TEMAS A ESTUDIAR
+La función de error que se usa en regresión logística se conoce como:
+¿Qué son las funciones en programación?
+Una distribuciÃ³n de probabilidad es:
+
+</rich_text>
+    </node>
+    <node name="algebra lineal" unique_id="30" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622838312" ts_lastsave="1623196812">
+      <rich_text># Las bases
+- el tipo de datos se diferencia en los grados de libertad
+- escalar es un numero, variables normales en python
+- vector, es un lugar donde se colocan mucho numeros
+- la matriz tiene dos grados de libertad, es la union de varios vectores
+- el tensor tiene uno o mas grados de libertad que la matriz, se puede decir que son multiples matrices
+
+# Propiedades de las matrices
+- asociativo: Ax(BxC) = (AxB)xC
+- distributivo: Ax(B+C) = (AxB)+(AxC)
+- conmutatio: BxC = CxB, no lo es en matrices, en el caso de vectores si lo es
+- (AB)^t = B^tA^t
+
+# Que es combinacion lineal
+- es multiplicar un vector por un escalar, otro vector por otro escalar y sumar el resultado para obtener un nuevo vector
+
+# La norma
+- La norma sirve para medir el tamaño de un vector, no puede ser negativo, queremos conocer el error al hacer las aproximaciones
+- norma &gt;= 0
+- la norma(v) = 0 ⇔ v = 0
+- la deisgualdad triangular, es la suma de dos vectores, se calculan las nomas se puede decir que norm(v3) &lt;= norm(v1) + norm(v2)
+- norm(a*v) = abs(a)*norm(v)
+- la unica forma en que la norma de las sumas sea igual a la suma de las normas de cada vector es que ambos sean parte de si mismos
+
+# Normas:
+- L0: nos devuelve la cantidad de elementos distintos de cero
+- L1: sum_i abs(vi)
+- L2: es la distancia euclidiana entre dos puntos
+- en ML se usa mucho el (L2)^2
+- L_inf = max_i abs(v_i)
+
+# Producto interno de dos vectores
+- el producto interno de dos vectores es la norma de cada vector por el angulo que forman entre ellos
+
+# matriz identidad
+- es el elemento neutro del producto interno
+- al multiplica A*A^1 = Id.
+- la singular es aquella que no tiene matriz inversa
+- al multiplicar la matriz lineal por un vector no hace una combinacion lineal de las distintas coordenadas, se dice que hace una ponderacion
+- una matriz es simetrica, cuando su traspuesta es igual a la matriz A = A^t
+
+# Vectores ortogonales
+- para ser ortogonal es en referencia a otro vector
+- el angulo que forman los dos vectores forman 90°
+- ortonormal, cuando la norma de los vectores es 1
+- se pueden volver ortonormales si se les divide por su norma
+
+# matriz ortogonal
+- es cuando todas sus filas y columnas con ortonormales
+- los vectores que se forman en la matriz deben de ser ortogonales
+- A^t*A = A*A^t = id -&gt; A^t = A^-1
+
+# la traza y el determinante
+- la traza nos devuelve el mismo numero independientemente de que sistema de referencia se utilice para representar la matriz
+- traza(ABC) = traza(ACB) = traza(CBA)
+- el determinante nos da el espejo del espacio</rich_text>
+    </node>
+    <node name="visualizacion de datos" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623292658" ts_lastsave="1623770620">
+      <rich_text># Que es la visualización
+- el input: es la parte donde se inicializa la visualizacion de datos, se pone de forma estructurada o no estructurada
+- el output: es el producto final que sirve para reconocer patrones de forma visual
+- para que se usa: reconocer patrones, historias...
+- es importante por que estamos en la era de la informacion
+
+### Florence Nightingale
+
+# Importancia
+- la dificultad para retener informacion del humano
+- carga cognitiva: es el esfuerzo para retener la informacion
+- nos ayuda a entender nuestra información
+- ben Shneiderman, la visualizacion da respuestas a preguntas que no sabias que tenias
+- sirve para comunicar mejor
+
+# Buenas practicas
+- define la audiencia y motivo
+- utilizar la percepción visual
+- estandariza, no usar tendencia engañosa, usar mismas medidas con compartivas, no cortar axis, alinear siempre
+- simplificar pero no recortar
+- disminuye el sesgo... no tener las preferencias personales
+- no al cherry-picking, retomar o tomar datos que solo muestran nuestro punto
+- principios gestalt, ley de proximidad, ley de similitud, ley de la continuidad
+
+# Conflictos de ética
+- la audiencia cree y escucha lo que mostramos
+- credibilidad y mensaje, si se pierde la confianza es dificil volver a obtenerla, los datos deben contar sus propias historias
+- segmentación
+
+# Graficas
+- son importantes para enviar mensajes, en especial para gente que no tiene tiempo de hacer interpretacion de los datos
+- dataviz, termino de visualizacion
+- de barras:
+   → es una representacion de barras
+   → hace comparacion rapida
+   → son datos por categorias, que se agrupan por frecuencias
+   → existen de diferentes formas, verticales, horizontales y de stack(aqui se une el 100%)
+   → se debe usar un color distinto para cada categoria
+   → representar de mayor a menos a menos que sea escala de tiempo
+- de pie (pastel):
+   → es un circulo, donde las categorias tienen una representacion por área
+   → debe de ser muy sencilla
+   → se puede simplificar en una grafica de dona
+   → se peuden poner anotaciones para ver el valor preciso
+   → no usar graficas en 3D afectan la percepsion visual
+   → no usar mas de 6 categorias
+- dispersion:
+   → es posicionar en un plano dos variables, es la mas comun en la ciencia de datos
+   → colores son importantes
+   → se debe entender la dispersion de los datos en lo plano
+      ⇒ correlacion positivo
+      ⇒ correlacion negativa
+      ⇒ sin correlacion
+   → no poner muchas anotaciones ya que ocupa muchos puntos
+- de burbujas:
+   → es una variacion de la scatter plot
+   → muestra el tamaño de la populacion
+   → no debe de tener necesariamente un grafico con correlacion de grafica
+   → uso de colores para definir categorias
+   → no usar graficos 3D
+- de mapas:
+   → datos ubicados geograficamente
+   → simplificar anotaciones
+- heatmap:
+   → permite sobreponer sobre otra visualizacion una paleta de colores, que nos ayuda a saber la frecuencia que tenemos
+   → nos muestra los lugares en donde mas se repiten sucesos
+   → se pueden usar dentro de graficas de tabla
+   → se usa mucho sobre paginas web, para saber por donde pasan mas los cursores
+   → calibrar la paleta de colores
+- tablas:
+   → representacion de manera ordenada
+   → se utiliza cuando se quiere entregar un mensaje acompañado de otro datavis
+   → solo si son expertos en la materia, no utilizar datos extensos
+
+# Como afecta en el bussiness
+- direccion y gerencia, estan corto de tiempo, entender en el menor tiempo posible, bajando la carga cognitiva
+- nos sirve para comunicarnos con el propio equipo
+- eficiencia y mejora
+
+# Explora, descubre y pregunta
+- los datos son numero o letras
+- ofrecer informaciòn relevante
+- explorar en las bases de datos o informacion para conocer que se tiene ahi
+- trabajar en equipo es fundamental
+- tomar decisiones por medio de lo anterior
+
+# Business intellingence
+- referido a informaciòn del negocio
+- data visualization, lo usa para interpretar desiciones para las altas gerencias
+- generalmente es gente que entienden el negocio
+- ellos identifican los movimientos principales y conocen cada medida para mejorar el negocio
+
+# Recoleccion de datos
+- los datos son muy diversos
+- se tienen bases publicas y privadas
+- la informacion puede venir de informacion estructurada y no estructurada
+- distintos tipos de archivos y fuentes
+
+# Limpieza de datos
+- estandarizar formato
+- GIGO / RIRO, entra basura, sale basura, se tiene que limpiar lo mejor que se puedan los datos
+- preparacion -&gt; visualizacion
+
+# Exploracion de datos
+- Descubrir, preguntar, reformular y analizar
+- es importante contar historias
+- evitar errores, bias, cherry picking
+
+# creacion de graficas
+- se usa para entregar mensaje a los altos mando
+- que quiero comunicar
+- que se adapta mejor a mi mensaje
+- quien es mi audiencia
+- no olvidar las buenas practicas
+
+# Generacion de reportes
+- son aglomerado de las data viz
+- son para la audiencia para que se tomen decisiones
+- concentrar los resultados, se debe enfocar en un solo mensaje
+- a mayor retencion menor esfuerzo, carga cognitiva baja
+
+# Definir KPI
+- sirven para saber si se puede mejorar o no
+- dependen del area donde se este, estos son especiales para cada area donde uno se encuentre
+- SMART:
+   → </rich_text>
+      <rich_text weight="heavy">S</rich_text>
+      <rich_text>pecific
+   → </rich_text>
+      <rich_text weight="heavy">M</rich_text>
+      <rich_text>easurable
+   → </rich_text>
+      <rich_text weight="heavy">A</rich_text>
+      <rich_text>chievable
+   → </rich_text>
+      <rich_text weight="heavy">R</rich_text>
+      <rich_text>elevant
+   → </rich_text>
+      <rich_text weight="heavy">T</rich_text>
+      <rich_text>ime-bound</rich_text>
+    </node>
+    <node name="estadistica descriptiva" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1626820666">
+      <rich_text>- Curso para descifrar lo que es cierto y lo que no
+
+# Que es estadistica descriptiva
+- “resumir un historial deportivo”
+   → como es un desempeño despues de varios partidos
+   → se crean metricas resumidas... en este tipo de estadistica
+- basicamente es resumir la informacion
+- como se define lo que es correcto o no, definición de metricas unicas
+- maked statistics, Charles Wheelan
+- se aprende por:
+   → resumir grandes cantidades de informacion
+   → tomar decisiones
+   → responder preguntas con relevancia social
+   → reconocer patrones en los datos
+   → descrubir neofitos
+
+# Tipos de datos
+- Categoricos (genero, categoria, metodos de pago), como tal no son números separan los datos en categorias
+   → ordinal, existe una relacion de orden entre categorias
+   → nominal, no existe una relacion
+- Numericos (edad, altura, temperatura), son explicitamente numeros
+   → discretos, generalmente la edad
+   → continuos, la altura ya que es un poco mas flotante
+- categoricos: object y bool, numericos: int64, float64
+- medidas de tendencia central y de dispersion... TIPOS DE ESTADISTICOS DESCRIPTIVOS
+
+# Medidas de tendencia central
+- sirve para resumir información
+- Media (promedio), dice una ubicacion del conjunto de datos
+   → es susceptible a valores atípicos
+- Mediana (dato central), ordenados del mayor al menor, es que este en medio es la Mediana, valor balanceado
+- Moda (dato que mas se repite)
+   → no aplica para datos numéricos continuos
+- Se usa generalmente la tabla de frecuencias
+
+# Medidas de dispersion
+- son un complemento para las medidas de tendencia central
+- Rango
+   → valor minimo y maximo de un conjunto de datos
+- Rango intercuartil
+   → se basa en los cuartiles
+   → se divide el conjunto de datos en 4 subdivisiones
+   → Q2 es la mediana
+   → Q1 esta entre la mediana y el minimo
+   → Q3 esta entre la mediana y el maximo
+   → la distancia entre el Q1 y el Q3 es el rango intercuartil
+   → diagrama de caja sirve para visualizar los cuartiles
+- Desviacion estandar
+   → (punto - promedio)^2 -&gt; la suma de cada elemento entre su numero de elementos -&gt; es la varianza
+   → la desviacion estandar es la raiz de la varianza
+   → en el caso de que sea por medio de la muestra no se divide entre el numero de elementos sino de (numero de elementos - 1)
+- Distribución normal
+   → tiene forma de campana
+   → el promedio mas/menos 3 veces la desviacion estandar es donde se encuentran la totalidad de todos los datos
+   → identificacion de datos anomalos:
+      ⇒ Q1 - 1.5 * IQR
+      ⇒ Q3 + 1.5 * IQR
+   → coinciden lo de la desviacion estandar con los cuartiles
+
+# estadística en la ingesta de datos
+- pipelines de procesamiento de datos numericos:
+   → escalamiento lineal o normalizar
+      ⇒ se deben de usar entre el rango de -1, 1
+      ⇒ existen diferentes tipos (se usan dependiendo de lo que se esta tratando de hacer con el modelo)
+         • max-min, se transforma a un valor normalizado donde se usa una transformacion para ir de un valor x a x_s, se puede defirnir como x_s = (2x - min - max) / (max - min)
+         • clipping, se toma la distribucion y se corta entre los valores limite inferior y superior, descarta valores por eso no es muy usable
+         • z-score, es mas comun, esta basado en definicion de promedio y desviacion estandar, x_s = (x - prom) / desv. estandar
+         • winsorizing
+      ⇒ como usarlos:
+         • data simetrica o uniformemente distribuida
+- transformacion no lineal (se usa cuando no estan con distribuciones simetricas)
+   → datos fuertemente sesgados, no simetricos
+   → existen diferentes:
+      ⇒ logaritmos
+      ⇒ sigmoides
+      ⇒ polinomiales
+   → se usan antes de escalar linealmente
+- Pipelines de procesamiento de datos categoricos
+   → Dummy
+      ⇒ representacion compacta
+      ⇒ Mejor para inputs linealmente independientes
+      ⇒ una correlacion no tan fuerte
+      ⇒ cuando las categorias son independientes entre si
+   → One-hot
+      ⇒ permite describir categorias no incluidas inicialmente
+   → ambos se deben de mapear manualmente las categorias de los valores
+   → categorias no ordinales, no tienen un orden entre ellas
+- se pueden tratar variables numericas como categorias: si, depende del caso del uso
+- Correlaciones:
+   → cuando dos variables tienen un comportamiento identico se dice que estan correlacionadas
+   → se puede reducir el número de variables
+   → mide las desviaciones de una variable x con relacion a otra variable
+- el coeficiente de correlacion
+   → es la medida especifica que cuantifica la intensidad de la relacion lineal entre dos varibales en un analisis
+   → es el coeficiente P
+- la correlacion mide algo que puede ser casualidad que varie, al revisar el problema puede no ser causa-relación
+- matriz de covarianza:
+   → cuando se obtienen todas las variables de covarianza entre ellas
+
+# PCA
+- anáisis de componentes principales
+   → proyección(sombra) de un vector sobre otro
+      ⇒ es que se proyecta sobre la superficie del segundo vector (como una sobra), se desea calcular solo la longitud que tiene sobre el vector
+         • vec(a_p) = a_p^b = ((vec(a) * vec(b)) / |vec(b)|) uni(b)
+   → cada vector propio es una de las direcciones principales de la cual capturamos varianza de los datos originales
+
+</rich_text>
+    </node>
+    <node name="estadistica computacional" unique_id="47" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
+  </node>
+  <node name="devops" unique_id="14" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1630695860">
+    <node name="Curso de cloud computing" unique_id="16" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
+      <rich_text># Que es EC2
+- son practicamente maquinas virtuales
+- las AMI son imagenes preconfiguradas
+- Se pueden escoger diferentes configuraciones, llamadas instancias
+
+# Lightsail
+- es una opción a EC2
+- es un vps (virtual private server), ip publica y dominio gratis
+- este inicia en segundos
+- ya contiene templates preconfigurados
+- Tiene precio fijo y predecible, mas barato que EC2
+- bases de datos
+- respaldos
+- restauracion
+- multiregion
+
+# Marketplace lightsail
+- es muy parecido a digital ocean
+- tiene varias plantillas pero también sistemas aparte
+- sigue siendo responsabilidad del admin tener todo actualizado
+
+# ECR, ECS, EKR
+- ECS, permite correr contenedores de docker, solo se paga lo que se necesita, se puede escalar de acuerdo a las necesidades, microservicios o migraciones al cloud
+- EKS, implementacion de kubernetes, permite crear el ambiente de workers, corre contenedores con herramientas tradicionales, se levanta el servicio y dentro del server creado se maneja la creación de servicios
+
+# Lambda
+- funciones de codigo que implementa microservicios
+- dedicado a arquitectura microservicios
+- tiene su propio endpoint
+- no se administra nada por parte del usuario
+- es autoescalable
+- tiene un millón de llamadas gratis, no expira
+- soporta: JS, python, java, C#, Go
+- deben de llevar el menor numero de permisos
+- NOTA: lo mas importante es aprender a hacer roles que tengan permisos limitados y solo los necesarios
+
+# Elastic beanstalk
+- es un endpoint, arquitectura de deploy, incluye todo lo necesario
+- tiene un load balancer
+- l1 o mas EC2 instances
+- software de administración
+- tiene soporte para varios lenguajes
+- Soporte para docker, go, java se, tomcat, .net, nodejs, php, python, ruby</rich_text>
+    </node>
+    <node name="Curso de storage" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617750952" ts_lastsave="1619722086">
+      <rich_text>Storage en S3
+
+Caracteristicas de S3
+Almacenamiento de objetos
+existen varios tipos:
+- S3
+- S3 IA
+- S3 One Zone
+- S3 Glacier
+Alta durabilidad y disponibilidad
+
+se divide en:
+Bucket - donde se almacena
+Objeto - el archivo guardado
+Web estatica - sirve para servir paginas estativas
+el bucket debe de estar lo mas cercano de nuestra infraestructura
+
+Versionamiento
+es el manejo que se puede tener estilo github, donde podemos regresar a varios archivos anteriores
+los buckets deben de tener un nombre único, esto depende mas que de los que tenemos, son los que existen hasta de otros usuarios
+en propiedades se activa el versionamiento de archivos
+para ver las versiones hay que darle show en version
+
+Sitios web estaticos
+Se puede usar el dominio normal, Route53 para la gestión de dominios
+se requiere:
+- nombre, se debe llamar el bucket igual que el dominio
+- archivo index y error
+- se debe configurar el DNS
+
+para activarlo se debe de ir a propiedades y activar el static website
+se le debe de hacer publico a los objetos que usara el sitio web
+
+Logs a nivel de objeto
+Son usados para eventos, accesos y que acciones se hacen sobre los objetos se puede usar cloudwatch
+se deben conectar a un servicio de cloudtrail, se puede crear otro bucket para el guaradado de los eventos
+
+Transferencia acelerada
+Es tomar la ventaja de las locaciones o CDN de amazon para cargar la informacion de forma mas rapida
+en propiedades se muestra transferencia acelarada y se habilita, se identifica el mejor CDN con el mejor tiempo de respuesta, se da un endpoint para hacer esas cargas
+mejores tiempos de carga de datos
+
+Eventos S3
+configuracion para manejar otros procesos
+se puede usar SNS, sirve para el envio de notificaciones
+se puede enviar a un SQS que puede procesar una lambda
+se puede enviar directamente a la función lambda
+
+Replicación
+Sirve para recuperación de datos, para información crítica
+esta es asincrona
+en managment es donde se hace o activa la opción, se puede hacer por todo el bucket o por el subfolder
+se puede pasar a un tipo distinto de almacenamiento
+se utiliza muchas veces si la infraestructura esta en otra region
+
+Clases de storage
+tipos:
+- s3 estandar, replicacion en 3 zonas
+- s3 IA, replicado en 3 zonas
+- s3 IA one zone, solo una zona
+- S3 glacier, N/D
+
+Ciclo de vida
+- cambios entre storage de S3, S3-&gt;S3 IA-&gt;S3 glacier
+- la modificacion es en lifecycle rule
+- se pueden elegir actuales y previos
+- lo minimo para envio es de 30 dias para cada uno de los cambios
+
+Snowball
+- Se usa a escala de PB
+- en algunos paises aun no exiten
+- Si excede a los PB se debe de usar Snowmobile
+- cargas multiparte, &gt; 100MB
+- 5GB de tipo PUT
+- 5TB tamaño maximo en S3
+
+Seguridad en S3
+Encriptacion de objetos
+tres tipos de server side:
+- SSE-S3, amazon administra y gestiona las llaves, estandar AES-256, estan en IAM
+- SSE-KMS, se crean en IAM, tienen factores de seguridad adicional, nosotros la creamos y amazon la administra, se elige que usuarios pueden usarla y crearla, estan en cloudtrail para auditarla, la rotacion depende del usuario
+- SSE-C, el usuario provee las llaves, se generan en el sistema propio, el mismo usuario debe proveer la llave para revisar la data, las peticiones deben de ser por HTTPS, las llaves no se guardan en S3
+- una de cliente
+
+Politicas
+- control de seguridad, para permisos y accesos dependiendo que se quiera para el usuario
+- son de tipo JSON
+- Statement es obligatorio
+- Sid identificador de la politica
+- Effect, allow o deny, es obligatorio
+- Principal, especifica usuario o rol, es obligatorio
+
+ACL en S3 (listas de control de acceso)
+- permite que otras cuentas tengan accesos a los bukets
+- se le puede dar acceso publico, se recomienda no hacer esto
+
+# Storage gateway
+- permite conectar on-premise con la nube, actua como intermediario con el data center fisico con la nube, es un almacenamiento hibrido
+- Archivos, volumenes y Tapes
+- almacenamiento hibrido
+- se usa para backups, archiving, disaster recovery y cloud data processing
+- usa protocolos NFS, SMB y iSCI
+- se integra con S3, EBS y glacier
+- se usa por medio de una maquina virtual
+- se combina con toda la seguridad de AWS
+
+# tipos, 3 tipos
+- File gateway, accesos por SMB o NFS, es a nivel de objetos, tiene cache si se requiere que algo sea accedido de inmediato
+- Virtual tape library, reemplaza el backup de cintas en el cloud, es data historica
+- Volume gateway, crea cache de servicios locales, crea snapshots locales en AWS, son asincronos
+
+# Elastic file system
+- sistema de archivos
+- sirve para conectar varios sistemas al mismo almacenamiento
+- precio es por GB consumido
+- Aumento y reduccion automatica
+- Solo permite acceso a instancias Linux
+- Permite IOPS
+- Tiene mejor rendimiento de red
+- Hay cifrado en reposo usando KMS
+
+# Elastick block storage
+- se pueden instalar sistemas y aplicaciones
+- tiene replicacion
+- manejo de diferentes cargas de trabajo
+- solo se puede asociar a un solo EC2
+- si es boot no se puede cifrar
+- los adicionales si se pueden cifrar
+- se monta a nivel de SO
+- existen diferentes tipos
+- se puede proteger el borrado
+- el maximo es de 16TB
+
+# Tipos
+- GP2, discos de estado solido, proposito general, cargas de hasta 10000 IOPS, instancia entre 1GB y 16TB
+- IO1, mas de 10000 IOPS, puede ser root, se usa para aplicacionse de altos volumenes de esscritura y lectura, bases de datos no relaciones
+- ST1, big data, dataware, log process o streaming, no puede ser root, espacio entre 500GB y 16TB
+
+
+errores: 
+migracion de 5TB de info
+que pasa con las versiones anteriores del versionamiento
+siendo el CIO de una empresa seleccionar el tipo de almacenamiento
+</rich_text>
+    </node>
+    <node name="IBM" unique_id="20" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619734546" ts_lastsave="1619823923">
+      <rich_text># IBM cloud
+- se puede conectar nuestro git con un toolchain que sirve para desplegar, muy parecido a CodeBuild, parece que tiene un web IDE donde se puede trabajar
+- IBM cloud lite (dev), se pueden usar solo algunos servicios, gratis, no expira, 256MB de memoria para cloud foundry
+- Pago por uso (test), 
+- Subscripción (live), 
+- son open source, son miembros fundadores de Apache
+- Cloud foundry, sirve para desplegar servicios, virtualiza, ya tiene ambientes preinstalados
+- microservicios, es construir un sistemas con diversos servicios escalables que son poliglotas (diversos lenguajes de programacion)
+- se puede usar cloud foundry de dos formas
+   → creación de aplicacion por la plataforma de los diversos lenguajes de programación
+   → a traves del push, despliegue de push sobre linea de comando
+- toolchain, permite prototipar sin costo
+- el dominio ya puede estar siendo utilizado por otra persona{
+- estos se pueden conectar a otros servicios de IBM
+- el devops es el toolchain en IBM
+- el pipeline usan jenkins, github para pushes
+- se deben de ir habilitando los servicios
+- usan eclipse Orion
+
+# Economia de las API
+- API Connect, solución para construir APIs en IBM cloud
+- la economia de api es el valor que ofrece la rentabilidad de una empresa sobre sus datos expuestos
+- Se garantiza un nivel de servicio
+- Capacidades para provedores
+- capacidades para los consumidores
+- como interactuan entre ellos
+- permite crear, depurar y deplegar api
+- gestiona la seguridad
+- componentes:
+   → portal del desarrollador
+   → api manager, guarda en parte la analitca
+   → api gateway, no se interactua directamente, aqui se hacen las transacciones, como politicas de seguridad
+   → entorno de desarrollo
+- Catálogos, un listado de apis con documentación, se pueden hacer pruebas en linea
+- Productos, este encapsula una o mas apis, sirve para registrar la aplicación
+- Planes, hay diferenes tipos de planes, donde puede poner logica de consumo por precio
+- Estandar que se usan;
+   → Swagger 2.0
+   → mensajes en JSON/XML
+   → protocolos SOAP/REST
+# Como hacer deploy de apps
+- exite:
+   → Build-from-the.scratch
+      ⇒ runtimes, varios lenguajes donde se puede construir
+      ⇒ boilerplates, se va mas adelante, se tiene contenedores donde estan preconfigurados con algunos otros servicios
+   → Bring-your-own-app
+      ⇒ CLI, teniendo el codigo propio
+      ⇒ Botón de despliegue, aqui se puede usar con github, uso del toolchain
+
+#IBM watson
+- computación cognitiva, redes neuronales artificiales
+   → proliferacion de datos
+   → Economia de las API
+   → La capacidad de procesamiento sobre la nube, aqui nace watson
+
+ERRORES:
+Después de desplegar una aplicación “starter” desde el catálogo, se puede acceder al código de muestra de la aplicación a través de la página “Getting Started”.
+¿Cuál es el resultado de vincular una instancia de servicio a una aplicación Cloud Foundry en IBM Cloud?</rich_text>
+    </node>
+    <node name="rds" unique_id="34" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801016" ts_lastsave="1625259642">
+      <rich_text># Caracteristicas
+- se tiene compatibilidad con:
+   → aurora
+   → mysql
+   → mariadb
+   → postgresql
+   → oracle
+   → mssql
+- Caracteristicas:
+   → backups automaticos de 1 a 35 dias de retencion
+   → backups manuales, se pueden crear en cualquier momento y al eliminar la base
+   → sistema de almacenamiento
+      ⇒ proposito general (SSD)
+      ⇒ Provisionado (SSD), uso intensivo de E/S
+   → Cifrado de datos en reposo, se puede hacer a travez de un KMS
+   → Actualizaciones automaticas de la BD
+   → "DBLess"
+- se pueden usar tokens con IAM, 10 a 20 conexiones por segundo
+- monitoreo en tiempo real
+- se pueden seleccionar varios tipos y tamaños de instancias
+- oracle necesita licencia
+- postgresql contiene diferentes plugins
+- aurora esta optimizada para queries
+
+# Backups y performance
+- se tienen backs automaticos y manuales
+- los manuales son responsabilidad del usuario, estos son incrementales, se manetienen si se borran la base de datos, se pueden mover de region
+- los automaticos se crean a diario, las operaciones de E/S pueden quedar suspendidos, ser recomienda hacer uso de Deploy A/Z
+- el precio depende del storage de la base de datos
+- monitore de I/O, CPU, DD y memoria, num de conexiones
+- replicas de lectura, mejorar el desempeño de la DB, no para Oracle y SQL Server
+- IOPS provisionados
+- elasticache, dividir la bd en mas pequeñas
+- monitoreo d eperformance
+- aws recomeinda Aurora
+- despliegues multi AZ
+   → despliegue en diferentes zonas
+   → sirve para alta disponibilidad de la base
+   → recomendadas para produccion
+   → se compone de una master-standby
+   → replicacion sincrona
+   → failover automatico
+   → conmutacion por error
+   → replicacion entre AZ
+   → El pricing es como tener 2
+   → el Back se hace de DB standby
+
+# Migraciones
+- database migration service:
+   → adaptar los recursos a la carga de trabajo, solo se paga lo que se usa en la migracion
+   → no hay downtime
+   → administra la arquitectura para la migracion
+   → conmutación por error
+   → los datos en reposo se cifran con KMS
+   → si se requieren parches el mismo servicio los identifica
+- puede estar en otro provedor
+- se tiene un instancia intermedia que hace la replicacion y un target
+- Homogeneas:
+   → un origen con el mismo destino (el motor solo cambia la version pero no el tipo), aplica de mysql o postgresql a aurora
+- Heterogenea:
+   → Se cambia de motor completamente
+   → se requiere hacer una conversion de schemas
+   → se debe verificar la compatibilidad
+
+# Aurora
+- es el motor de datos mas robusto
+- es una base de datos relacional
+- 5 veces mejor que mysql y 3 que postgresql
+- 64TB de storage
+- 15 read replicas
+- &lt; 10 ms replica lag
+- monitoreo y failover
+- usa dos endpoints:
+   → el master
+   → uno que es el de replica, cada replica tendra su propio endpoint, pero se tiene un tercero que especifica todo
+- tiene autoreparacion, fallos de disco, guardando la data
+- cache-warm, pre calienta la cache al iniciar, consultas mas comunes
+- recuperación de desastres, si falla la principal toma una de las replicas y la convierte en principal
+- Serverless:
+   → se configura una capacidad minima y maxima
+   → compatible con mysql 5.6
+   → se puede poner que este inactiva cuando no se use
+
+# DynamoDB
+- caracteristicas:
+   → servicio de bases de datos NoSql
+   → completamente administrado
+   → compuesto de varios nodos
+   → disrtibuida en varias regiones
+   → baja latencia
+   → almacenamiento en cache
+   → completamente escalable
+   → unidades de lectura, bloques de 4kb por segundo
+   → unidades de esritura, bloques de 1kb por segundo
+   → se replica en diferentes locaciones
+   → se deben de especificar las capacidades de lectura y escritura
+   → la unidad fundamental son las tablas
+   → se compone de item, coleccion de atributos
+   → particiones son el espacio de almacenamiento que se dan por una llave, nos permite identificar un elemento en especifico
+   → sort key, es una llave secundaria para el ordenamiento
+   → local secondary index
+- consistencia:
+   → eventual:
+      ⇒ puede no responder algo que recientemente se creo
+      ⇒ consume 4KB de bloques por segundo
+   → fuerte de lectura:
+      ⇒ se toma la mas reciente, se consume el doble de la eventual
+      ⇒ este son 8KB
+- Casos de uso:
+   → mobile
+   → IoT
+   → Web
+   → Gaming
+   → Manejo de sesiones
+   → Real time
+
+# Dynamo (rendimiento)
+- particiones e indices
+   → los datos se almacenan en particiones
+   → dynamodb se encarga de asignar las particiones de acuerdo al desempeño aprovicionado
+   → aumenta el tamaño o el numero de parciones
+- limites:
+   → las particiones se aumenta al llegar a las 10Gb o 3 mil de lectura o mil de escritura
+   → una llave principal, se toma y se crea una funcion hash, determina en que particion se guarda
+   → la preferencia es que la llave sea mas random
+- clave compuesta:
+   → se usan dos llaves la principal y la de ordenamiento
+   → la primera define la particion y la segunda como estara acomodada
+- operaciones
+   → scan:
+      ⇒ es la menos eficiente
+      ⇒ examinda la tabla o inidce secundario en su totalidad
+      ⇒ no usar con tablas grande
+      ⇒ examina cada objeto
+      ⇒ consume muchas unidades de lectura
+      ⇒ realiza lecturas consistentes puede devolver hasta 1MB de datos (una pagina)
+      ⇒ aumento de costos
+      ⇒ hacer distribuciones de requests
+      ⇒ es malo hacer operaciones grandes
+      ⇒ se pueden mejorar:
+         • se puede poner un limite para los resultados
+         • se pueden duplica tablas para no afectar las principales
+   → queries
+      ⇒ busca elementos basados en la llave principal
+      ⇒ puede consultar tablas o indices secundarios
+      ⇒ se pueden usar condiciones
+      ⇒ se determina por clave que valores se leeran
+      ⇒ se puede expeficar el nombre de la clave y el valor
+      ⇒ limites:
+         • limita el numero de resultados
+         • no devuelve la cantidad de lectura del query
+
+# Stream y replicacion
+- proporciona una secuencia ordenada, se mantiiene el registro de todo lo que se modifique en un campo, esto para que sea en tiempo real
+- se amplia el poder de dynamo con replicas entre regioes, analisis con redshift, y muhcos otros escenarios
+- captura en orden cronologico, de las modificaciones lo almancena por 24 hr.
+- las aplicaciones pueden obtener accesos de como estaban
+- contiene informacion sobre la modificacion
+- DAX:
+   → acelerator, es un cache complemtamente administrado y de alta disponibilidad
+   → tiene rendimiento de hasta 10 veces
+   → soporta millones de peticiones
+   → permite cifrado
+   → hasta 10 nodos
+   → instancias small y medium y de tipo R (opt. de memoria)
+   → se puede seleccionar la region</rich_text>
+    </node>
+    <node name="networking" unique_id="39" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625236500" ts_lastsave="1625420838">
+      <rich_text># Introduccion
+- Una familia de servicios
+- optimización de la red
+- componentes:
+   → VPC, red privada virtual
+   → Cloud front, acelerados de entrega de contenido web
+   → Route 53, servidor de nombres de aws
+   → API Gateway, direccion publica que conecta servicios
+
+# Servidores y CDN
+- Domain Name System
+   → la computadora no sabe de nombres
+   → pero entiende las IPV4 e IPV6
+   → El nombre se traduce a una dirección tipo: 1.2.3.4
+   → route 53 es el DNS / NS de aws
+- CDN
+   → red de distribucion de contenido, copias de sitios para que cargue mas rapido
+   → pueden ser HTML, JS, CSS, imagenes y otros
+   → cloudfront de aws hace esto trabajo
+- Endpoint
+   → un punto de contacto con el internet y la infraestructura interna
+
+# Arquitectura en aws
+- usuarios y clientes
+   → mobile
+   → tableta
+   → computadora
+   → web services
+- API Gateway
+   → EC2
+   → aws lambda
+   → otros servicios que son accesibles por un endpoint
+- API gateway cache
+- CloudWatch
+- VPC:
+   → un red privada que proporciona amazon, es virtual
+   → se compone de subredes
+   → se pueden asignar IPs estaticas “internas” (gratis)
+   → si se tiene una IP publica y se reinicia el server cmbia de IP
+   → se pueden asignar puertos (en securities group)
+   → se pueden asignar multiples ip a la misma instancia
+   → se le puede asignar una IPV6
+   → se pueden cambiar grupos de seguridad
+   → toda instancia de amazon tiene libre acceso a internet
+   → controles de seguridad a nivel de red ACLs
+   → si se pierde la llave se detiene la instancia se crea una copia, se restaura y se levanta con una nueva llave
+   → Jumpbox
+
+CloudFront
+- es una implementacion de CDN de AWS
+- estan en varios puntos geograficos
+- se sincroniza rapidamente con los datacenter
+- se usa mediaconvert dependiendo del dispositivo que requiera
+- tambien lo manipula a nivel de velocidad de internet
+- es economico, se cobra por lo que se usa
+- se podria desarrollar con instancias ec2 en varias regiones (complicado)
+- se usa en cualquier archivo que pueda ser compartido por un servidor web
+- permite niveles de calidad de distribucion
+- el contenido va sobre ssh
+- se puede enviar codigos de lambda
+
+# Route53
+- es un servicio de nombre de dominio
+- de route53 a ELB a las instancias
+- registro de dominios
+- alta disponibilidad en dominios
+- se puede definir cual es el servidor principal para tener alta disponibilidad
+- se puede configurar para tener baja latencia
+
+# Api Gateway
+- endpoint abierto que soporta peticiones http
+- se devuelve la informacion que esta en cache
+- si no esta en cache:
+   → redirecciona a una funcion lambda
+   → servidor web en EC2
+   → elastic beanstock
+
+</rich_text>
+    </node>
+    <node name="despliegue de apps" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625423192" ts_lastsave="1625494503">
+      <rich_text># Historia:
+- apps de escritorio:
+   → linea de comandos
+   → base propia
+- cliente-servidor:
+   → recibe conexiones de muchos clientes
+   → accede al servidor y consume y lee información
+- monoliticas vs microservicios:
+   → monoliticos: se tiene todo en un solo archivo, despues el back y front todo en el mismo servidor
+   → microservicos: separemos los componentes de las apps, cada cosa en su “servidor”, filosofia UNIX
+
+# Stacks:
+- LAMP:
+   → linux
+   → apache
+   → mysql
+   → php
+- MERN:
+   → Mongo
+   → Express
+   → Reac
+   → Node
+- JOTL:
+   → Java
+   → Oracle
+   → Tomcat
+   → Linux
+- JAM:
+   → JavaScript
+   → API
+   → Markup
+
+# Despliegues
+- Github:
+   → nombre de usuario.github.com
+   → tiene que ser publico
+- surge.sh
+   → install npm surge
+   → pide usuario y contraseña
+   → surge no da ssl
+- netlify.com:
+   → se puede conectar con github
+   → pide el repo a usar
+- vercel.com
+   → se conecta igual con github y se agrega el repo, parece ser una buena opcion para frameworks
+   → me dio opcion de usar empresa o usuario
+   → tiene acceso a fallos y revision de deploys
+
+# Bases de datos
+- mongo atlas
+- elephant
+
+# Heroku
+- se pueden desplegar backends
+- es un PAAS</rich_text>
+    </node>
+    <node name="big data" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625508695" ts_lastsave="1625785979">
+      <rich_text># Intro
+- en la nube se puede tener un crecimiento escalable
+- crecimiento por demanda, servicios escalables
+- se tienen procesos automatizados
+- solo se cobra por lo que se use de recursos, costo por demanda
+- flexibilidad existen varios para proyectos de bigdata
+- almacenamiento, se tiene que seleccionar donde se almacenara
+- de la extracción se tienen que tener en cuenta las herramientas y de donde se obtendra la data
+- ingesta: tomar la información y alimentar otros sistemas
+- validación, proporcionar caracteristicas y garantias, de que la informacion es precisa
+- verificación: que los diferentes tipos de datos sea exacta e inconsistente
+- test: se ejecutan sobre un subset de la data para garantizar que el proceso este bien
+
+condiciones son opcionales, sirve para crear algunos recursos si otros ya estan
+transform opcional, son para serverles
+recursos, es obligatorio y es para saber que se va a crear
+
+# Arquitecturas
+- Lambda:
+   → se atribuye a Nathan Marz, arquitectura escalable, tolerante a fallos y de procesamientos de datos
+   → robusta, soporta multiples cargas de trabajo
+   → compuesta de 3 capas, batch, serve y speed
+   → se divide la informacion en 2 servicios, batch y speed
+   → alimentan queries y visualizaciones
+   → se aumenta la complejidad en cargas de administración
+   → es muy comun
+- kappa:
+   → presentada por Jay Krepsen en 2014
+   → evoluciona de la lambda
+   → no tiene capa de batch
+   → todo es un streaming
+   → informacion origen no modificada
+   → solo un flujo de procesamiento
+   → capaz de reprocesar
+   → llega el origen de datos y se procesa en tiempo real
+- batch
+   → parte especifica de la arquitectura lambda
+   → entra la informacion, la procesa y da una salida
+   → procesar data desde el dia prensenta hacia atras
+   → se puede procesar data de dias anteriores
+   → se pueden alimentar sistemas de visualizacion
+
+# Extracción de la información
+- como se llevan los datos que se tiene a cloud
+- SDK
+   → usando un lenguaje de programación
+- CLI
+   → utiliza el CLI de aws
+- Servicios
+   → hay varios servicios que pueden recibir y extraer informacion
+- API GAteway
+   → es una puerta de enlace entre la data que se produce con la plataforma de nube
+   → puede manejar ciento de miles de llamadas recurrentes
+   → previene ataques de DNS
+- se puede configurar pra que por medio de operaciones se mande a un función lambda
+- Storage gateway:
+   → permite informacion desde on-premise a la nube
+   → se pueden enviar los logs a s3 para procesarlos
+   → funciona en una VM instalada
+- Kinesis data streams
+   → es como pup/sub de GCP
+   → recopilar y procesar grandes cantidades de stream.. tiempo real
+   → procesamiento de logs, markets data feeds y web clickstream
+   → se utiliza para hacer agregaciones
+   → se compone de:
+      ⇒ data record, unidad fundamental
+      ⇒ retention period, periodo de retención, tiempo que durara la data
+      ⇒ producer, se encarga de poner el data record en kinesis
+      ⇒ consumes, toma el data procesado y lo deja donde se use
+      ⇒ shard, es una secuencia de Data records dentro de un stream
+      ⇒ Partition key, se usa para agrupar los data records
+- Kinesis firehouse
+   → servicio completamente administrado para la entrega de datos
+   → se pueden usar lambdas para hacer las transformaciones
+   → se puede integrar a S3, redshift, ElasticSearc y Splunk
+- MSK
+   → servicio apache kafka administrado en la nube
+   → se despliega en cluster y tiene autoreparacion de nodos
+   → usaba la version 1.1.1 de kafka
+   → se usa cuando se requiere interactuar con apps de terceros
+   → se compone de broker nodes, cuantos y donde
+   → zookeeper mantiene datos de nombres y configuraciones, este es un nodo
+   → nodos de zookeeper, siempre se tiene uno
+
+# Transformación
+- Glue
+   → es un servicio totalmente administrado
+   → provee un contexto de spark para ejecutar trabajo en Python o Scala
+   → Se encarga de la creación del glue catalog, este puede ser consultado por otros servicios como Athena
+   → usa DPUs, que son 4vCPU y 16GB de ram, la mínima de desarrollo es de dos
+   → glue catalog, es un almacen de metadatos persistentes, cada cuante tiene uno
+   → Crawler y classifier escanea e identifica la información de origen y crea su glue catalog
+- Zeppelin:
+   → permite notebook web que puede hacer analisis, SQL y mas cosas
+   → permite ejecutar SQL, python y spark
+   → tiene integracion con AWS, se puede integrar con GLUE y con EMR
+   → en seguridad se le pueden especificar librerias de python y scala (en el endpoint)
+   → pide llave para conectarse por ssh
+- EMR
+   → Elastic map reduce
+   → es un cluster donde se corren cargas de trabajo grandes
+   → son servicios administrados basados en Hadoop
+   → Corre apps de map reduce, spark y otras opciones que usa hadoop
+   → provee integracion con otros servicos de aws, s3, redshif
+   → se corre sobre el cluster el script
+   → tiene pasos que se ejecutan para procesar la data
+   → se compone de un master y core nodes para la información en HDFS y task nodes de procesamiento
+   → se puede usar autoscaling
+- AWS Lambda
+   → servicio para el real time
+   → solo puede hacer 20000 llamadas de concurrencia
+   → se puede integrar con Kinesis firehouse
+   → con sqs suele utilizarse para entornos de alto procesamiento para evitar throttles
+   → se puede actualizar usando codepipeline y boto3
+   → librerias de python para monitoreo de ejecución de código
+   → al superar los reintentos se puede enviar a una cola SQS o a un topic SNS
+   → los layer sirven para:
+      ⇒ cuando se manejan muchas librerias y muchas lambdas se pueden usar para compartir las utilidades
+
+# Carga de información
+- Athena:
+   → permite hacer consultas interactivas para S3 de tipo SQL
+   → es serverless
+   → provee interacción con otros servicios como S3, Redshift, Dynamos y Kinesis
+   → se puede integrar con JDBC como sql workbench
+   → las queries pueden ser guardadas
+   → permisos granulares por base de datos y tablas
+- Redshift
+   → es un data warehouse o un data lake, centra la infromacion que viene de varias fuentes de información
+   → repositorio de datos centralizados, tiene una cantidad enorme de raw-data en formato nativo
+   → Data mart, es un subset de datawarehouse que hace una tarea especifica
+   → sirve para analizar y tomas mejores decisiones
+   → diferentes fuentes de datos
+   → diferentes stakeholders
+   → es una base de datos columnar
+   → mejora el I/O de los discos
+   → se usa sobre consultas de analitica
+   → servicio desplegado a nivel de PB
+   → el servicio se lanza en un cluster de instancias
+   → sirve para consultas complejas de sql
+   → esta basado en postgresql
+   → hace compresión de la data para optimizar I/O
+   → utiliza cahce para ciertos tipos de valores
+- AWS lake formation
+   → facilita la creacion de un data lake
+   → tiene integracion con diferentes fuentes usando JDBC
+   → identifica origenes y crea tablas (crawlers)
+   → se encarga de orquestar los ETL de glue
+   → limpia y elimina la data duplicada con FindMatch
+   → Optimiza las particiones de S3 para consultas mas eficientes
+   → cifrado automatico de la data en S3
+   → control de permisos por usuario por bases, tablas y columnas
+   → logging a nivel de auditorio registrados en cloudtrail
+   → owners; permite crear el lake para controlar los usuarios
+   → descubre data relevanta para implementar analisis
+   → analytics desde otros servicios como EMR y redshift
+
+# Consumo de información
+- ElasticSearch
+   → visualización de información
+   → es un motor de busqueda basado en Lucene, busca texto complejo y JSON sin esquema
+   → se despliega en un cluster de AWS compuesto por varios nodos
+   → la solución viene integrada con Kibana y Logstash
+   → Se puede integrar con AWS Cognito para manejo de usuarios
+   → Se pueden cifrar datos en reposo
+   → Puede recibir información de Kinesis firehouse y lambda
+   → el indice, es una base de datos que guarda informacion que llega, es un nombre lógico que distribuye en un shard
+   → Estructura, ES-&gt;indices-&gt;types-&gt;Documents with properties
+   → Shard, un índice se puede dividir en multiples shards y setos se almacenan en diferentes nodos
+   → se recomienda usar instancias tipo I
+   → El dimensionamiento del Cluster es esencial y fundamental (Cantidad de Shards, almacenamiento y la cantidad de índices)
+   → Completamente integrado con LogStage y Kibana para temas de visualización
+   → Siempre en ambientes productivos se debe habilitar el Cifrado de la data (De nodo a nodo y en reposo)
+   → Una medida extra de seguridad. Hacer uso de Amazo Cognito para que los usuarios que van a trabajar en el cluster les aparezca el usuario y password.
+- Kibana
+   → se integra con ElasticSearch
+   → provee diferentes opciones de visualización
+   → permite el uso de plugins de terceros para visualización y analítica
+- QuickSight
+   → es el mas dedicado a visualización
+   → es para bussiness intelligence
+   → cuenta con un cliente para cel
+   → puede escalar hasta 10000 usuarios y su cobro es por demanda
+   → usa un motor de machine learning llamado SPICE
+   → usando el api permite realizar el embebido en apps
+   → permite integracion con variedad de servicios de AWS
+
+# Seguridad, orquestacion y
+- a tener en cuenta:
+   → cifrado en todos los servicios posibles
+   → permisos, todos los usuarios deben de tener permisos basados en granularidad
+   → servicios, utilizar servicios adeministrados y servicios de seguridad, serverless
+   → monitoreo, todos los servicios deben de registrar los logs
+   → contingencia replicacion de datos, pruebas de multiregion, almacenar data historica
+   → utilizar datsos sobre la data que llega
+- AWS Macie:
+   → aprendizaje automatico para conectarse a las fuentes de datos, clasifica, descubre y protege datos privados
+   → es un servicio completamente administrado
+   → se encuentra para proteger datos de amazon s3
+   → lectura y escritura de S3 (manejo de alertas)
+   → credenciales de acces
+   → cambios de configuracion que puedan afectar a un servicio
+   → detecta software peligroso
+   → accesos a recursos desde IP o sistemas sospechosos
+   → identificacion de intentos de un usuario/role para obtener privilegios elevados
+   → anonymous, alguien quiere acceder a los datos y trata de hacerse pasar por alguien mas
+   → permisos, identifica los permisos de los datos y las politicas
+   → perdida de datos riesgos de anomalías de acceso a data importante
+   → credentials, credenciales cargadas en S3
+   → location, intentos de acceso desde lugares desconocidos
+   → hosting, almacenamiento de software riesgoso o malintencionado
+</rich_text>
+    </node>
+    <node name="Infra as code" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625506996" ts_lastsave="1625605027">
+      <rich_text># Intro
+- herramientas
+   → hay varias, cloudformation sera el fundamental
+- servicios en cloud
+   → variados
+- se puede tener versionamiento
+- se puede tener control y trazbilidad de quien hace los cambios
+- se puede tener un set de servicios a desplegar
+- se puede hacer por medio de un template
+   → se tiene estandarizado
+   → se puede automatizar
+- es reutilizable
+- infraestructura inmutable, es muy normal en Infra as code
+- Herramientas:
+   → Terraform:
+      ⇒ multicloud
+      ⇒ es open source y enterprise
+   → Pulumi:
+      ⇒ se puede usar un lenguaje de programacion para el despliegue
+   → serverless framework
+      ⇒ especializado en arquitecturas serverless
+      ⇒ no se puede hacer otro tipo de infra
+   → SDK
+      ⇒ es la forma nativa que da el cloud
+      ⇒ es el boto3 por medio de lenguaje de programacion
+   → CDK
+      ⇒ cloud development kit
+      ⇒ se despliega con lenguajes de programacion
+      ⇒ se llaman los mismo servicios
+   → AWS SAM
+      ⇒ aplicaciones serverless pero es de AWS
+- Cloud formation:
+   → flujo de despliegue
+   → codigo, verificion y despliegue
+   → se pueden crear los templates en JSON o YAML
+   → servicios:
+      ⇒ Stacks
+      ⇒ Stacks set
+      ⇒ Designer
+   → Integracion completa con AWS
+   → aws da soporte sobre el codigo
+   → los nuevos servicios son accesibles
+   → Se pueden crear arquitecturas de forma gráfica
+   → Multi cuenta, se pueden hacer varios despliegues
+   → es flexible, crear recursos dinamicos
+   → es gratis
+   → con una plantilla se puede desplegar varios servidores
+   → todos los despliegues son cifrados
+   → estable, maneja algo sslas
+   → espera a los recursos por crearse
+
+# Que es un stack y como funcionan
+- Es una colección de recursos que se manejan como una unidad
+- CF asegura que todos los recursos sean creados, si en dado caso falla alguno se borran todos
+- se hace rollback si falla el recurso, puede que no los elimine si uno asi lo requiere
+- al borrar un stack se borra todo
+- Drift:
+   → detecta desviación de lo que se desplego con lo que esta en la consola
+   → no se debe de hacer, se debe hacer todo desde los stacks
+
+# Stack sets:
+- existen cuentas administrador y cuentas target
+- se deben de hacer desde cuenta maestra
+- se hace referencia a un stack dentro de una cuenta
+- se pueden desplegar con diferentes parametros
+- se puede actualizar desde la cuenta maestra
+- solo cambia para el stack que se requiera
+- se puede borrar desde la cuenta maestra
+- se pueden usar diferentes tipos de roles, por eso se crea con una maestra
+- generalmente se usan para despligues de alto rendimiento
+
+# Nested stacks
+- stacks en otros stacks
+- limites de cloudformation
+   → 100 mappins
+   → 200 recursos
+   → 51,200 bytes, cuerpo del template
+   → 460,800 bytes tamaño maxico de template S3
+- granularidad:
+   → cada recurso queda con un stack independiente
+- se mantiene un orden
+- se puede tener interacción entre si a través de outputs
+
+# Funciones intrínsecas
+- GetAtt:
+   → trae el valor de un atributo
+   → se compone del nombre del recurso y del nombre del atributo
+   → se tienen tres formatos, y dependera de si se esta usando yaml o json
+   → se usa cuando se tiene un stack, se tienen dos recursos y un recurso depende de otro recurso
+   → se referencia un recurso de otro recurso
+- FindInMap:
+   → Devuelve el valor correspondiente al map declarado en la sección Mappings
+   → composicion: MapName, TopLevelKey y SecondLevelKey
+   → se tienen tres formatos e igual depende de que se use
+   → se usa cuando un Mapping tiene un valor que se requiere llamar
+   → nombre del mapping, referencia al valor y se obtiene el valor interno
+- Join
+   → une valores diferentes en uno solo
+   → usa un listado de valores
+   → igual se tienen 3 tipos de formatos
+   → un delimitador y una lista de valores
+- Split:
+   → divide una cadena de valores en valores independientes
+   → se tiene 3 sintaxis
+   → se usan cuando se tienen unos valores que estan unidos por un delimitador y que se requiere uno
+   → se usa teniendo el delimitador y el valor que se quiere dividir
+- Select:
+   → se toma un valor dividio en split
+   → se tiene 3 sintaxis
+   → se usa el indice que se quiere (empezando en 0) y toma el argumento dividido
+- Sub
+   → sustituye valores por un valor especificado
+   → se tiene el nombre de la variable y el valor que se quiere poner por ese valor
+   → se pueden usar como si fueran variables de entorno ${variable}
+- Ref
+   → retorna un valor de un parámetro o un recurso
+   → string varname: valuename
+   → se usa cuando se necesita hacer referencia a un parametro
+   → cuando se quiere hacer referencia a una propiedad de un recurso que no soporte GetAtt
+   → generalmente se usa con Parameters
+- ImportValue
+   → devuelve el valor de una salida exportada de otro stack
+   → referencia al nombre lógico del recurso exportado
+- if
+   → retorna un valor si la condicion se cumple y otro si no (es un if ternario)
+- OR
+   → regrese true si alguno de los valores es verdadero
+- AND
+   → solo regresa true si todo se cumple
+- EQUALS:
+   → compara dos valores, si son iguales hace una acción en especifico
+~~~ Las condiciones logicas dependen de como se use el template
+
+# Automatizar
+- Agilidad, despliegues cortos
+- control, integridad en la infraestructura
+- seguridad, Pipelines seguros sin exponer datos
+- Usabilidad reutilización de componentes
+- manejo de errores, trazabilidad en todos los despliegues
+- rollback, automático ante errores
+- Servicios:
+   → codecommit
+      ⇒ parecido a github, el repo de aws
+   → cloudformation
+      ⇒ la infraestructura como codigo
+   → Codepipeline:
+      ⇒ Orqueta servicios del despliegue
+   → Codebuild:
+      ⇒ Compilacion y creación de artefactos
+   → se puede usar repos github
+   → IAM
+      ⇒ manejo de roles en el pipeline
+   → cloudwatch
+      ⇒ moniitoreo de despliegues
+   → S3
+      ⇒ almacenamiento de artefactos
+   → secrets manager:
+      ⇒ gestion de secretos
+   → KMS
+      ⇒ Llaves de seguridad en el pipeline
+
+# Seguridad
+- informacion sensible
+   → cadenas de conexion
+   → token de github
+   → todo aquello que se debe de proteger
+- Integracion:
+   → integrar diferentes tipos de seguridad
+- secrets manager:
+   → maneja secretos
+   → manejo de datos como claves, credenciales de aws, claves y otros secretos
+- Parameter stores:
+   → maneja llaves y claves seguras
+- uso de buckets cifrados
+- tokens de repositorios para haer la integracion
+
+# Errores:
+¿Cómo se llama a dividir los stacks por recursos y orquestarlos desde un stack maestro?
+¿Cuál servicio en AWS dentro de un pipeline podemos utilizar para crear el artefacto que desplegaremos en Cloudformation?
+El estado UPDATE_COMPLETE a qué hace referencia? 
+¿Cuál propiedad es obligatoria al desplegar una función lambda como AWS::Lambda::Function?
+En la creación de un ROLE en Cloudformation, ¿qué opción debe ser habilitada en Cloudformation?
+¿Cuál función utilizarías para obtener un true si alguno de los valores es falso en un arreglo?
+</rich_text>
+    </node>
+    <node name="docker" unique_id="48" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626358714" ts_lastsave="1627941892">
+      <rich_text># Problemas del desarrollo del software en general:
+- Construir:
+   → solo es una pequeña parte
+   → los problemas complejos necesitan equipo
+   → entorno de desarrollo
+   → dependencias
+   → entorno de ejecución
+   → equivalencia con entorno productivo
+   → servicios externos
+- Distribuir:
+   → tiene que transformarse en un artefacto, que se transportan donde se deben ejecutar
+   → son por ejemplo exe, apk, jars y demas
+   → divergencia de repositorios
+   → divergencia de artefactos
+   → versionado
+- Ejecutar:
+   → la maquina donde se escribe es diferente a la maquina que se ejecuta
+   → compatibilidad con el entorno productivo
+   → dependencias
+   → disponibilidad de servicios externos
+   → recursos de hardware
+- docker permite construir, distribuir y ejecutar cualquier app
+
+# Virtualización:
+- forma de solucionar algunos problemas
+- versión virtual de algún recurso
+- permite atacar en simultaneo los tres problemas del software
+- crear maquinas (por software) en otra maquinas (fisicas)
+- problemas:
+   → peso, en el orden de los GB, repiten archivos, inicio lento
+   → costo de administración, necesita mantenimiento igual que cualquier otra maquina
+   → multiples formatos: VDI, VMDK, VHD, raw y otros
+- docker alterna la virtualizacion. con contenedores
+- los contenedores tienen un tamaño por default preestablecido
+- ventajas:
+   → son flexibles
+   → livianos
+   → portables
+   → bajo acoplamiento
+   → escalables
+   → seguros
+   → se usa el kernel de la maquina donde se esta ejecutando
+
+# Que se instala y que se hace:
+- permite contruir, ejecutar y compartir contenedores
+- es:
+   → server (docker deamon)
+   → Rest API
+   → Client docker CLI
+   → network:
+      ⇒ las redes que permite a los contenedores comunicarse
+   → container:
+      ⇒ es la base de todo docker
+      ⇒ aqui corren las apps
+   → image
+      ⇒ artefactos para empaquetar contenedores
+   → data volumes
+      ⇒ permisos para acceder con seguridad al sistema de archivos
+      ⇒ no compromete la seguridad
+
+# Primeros pasos
+- un contenedor es una maquina virtual liviana
+- uno o mas procesos que corren nativamente de la maquina pero estan aislados
+- esta limitado a que puede ver o acceder
+- inspect sirve para poder ver como estan los dockers (por nombre)
+- se puede renombrar con docker rename . .
+- para borrar se usa docker rm
+- docker run -it {maquina}, para acceder
+- se puede tener prendido asi: docker run -d ubuntu tail -f /dev/null
+- el process id dentro del contenedor siempre tendra como 1 el que se manda, fuera de docker es otro process id
+- puertos:
+   → 8080(local):80(contenedor)
+
+# Datos en docker
+- no se puede acceder a la maquina a menos que se les permita
+- no se sabe que esta dentro de otra maquina
+- con -v se especifica un bind mount: -v {ruta de la maquina}:{ruta del contenedor}
+- volumenes:
+   → es lo mas estandar
+   → es una evolucion de los bind mounts
+   → para crear un volumen: docker run -d --name db --mount src=dbdata,dst=/data/db mongo
+   → estos son mount creados con docker volume create
+- para copiar archivos: docker cp prueba.txt copy_test:/testing/., no es necesario que el contenedor este corriendo
+
+# Imagenes:
+- como docker como soluciona la construccion y distribucion del codigo
+- docker gana eficiencia haciendo capas
+- una imagen es la plantilla para correr nuevos contenedores
+- conjunto de capas, una va detras de la otra y estan ordenadas
+
+# Uso
+- se recomiendas mas el uso de CMD ["app", “command”] aunque tambien se puede usar CMD app command
+- cada que se construye una nueva app se puede usar el layer cache
+   → si la tiene ya construida y docker la encuentra ya no la vuelve a crear
+   → para aprovechar mejor su uso, lo mejor es copiar primero los archivos de dependencias y luego el codigo
+   → uso de volumenes para no hacer el build cada que cambia algo
+- en redes la red de tipo host sirve para usar la red real de mi maquina
+- none es para que no acceda de ninguna forma a la red
+- docker network create --attachable platzinet, el comando en -- es para que se pueda conectar cualquiera
+- docker network connect platzinet db, connect contenedores a la red
+
+# Docker-compose
+- El docker compose es una herramienta que nos permite describir de forma declarativa la arquitectura de nuestra app.
+- compose override para hacer cambios al compose sin estar cambiando el archivo
+
+# Administración
+- revisar alternativas para docker desktop y revisar configuraciones
+- envia señar systerm si no termina envia syskill
+- docker ps -l, para mostrar el ultimo ps del proceso, si es mayor a 128 quiere decir que se forzo... 128 + 9 = 137, por lo tanto salio forzado
+- se puede usar docker kill {nombre}
+- docker exec looper ps -ef, muestra los procesos sin entrar el docker
+- si se usa ["{programa}"] es exec form, sin corchetes es shell form, si se corre como shell se corre como programa hijo de shell
+- de preferencia usar exec form
+- CMD o ENTRYPOINT: usando el docker como binario
+   → CMD: es el comando que se ejecutara o las opciones que se mandan
+   → ENTRYPOINT: es el comando por defecto que se corra siempre
+- el contexto del build, monta en un filesystem temporal todos los archivos donde se haran los copies
+- con dos front lo que se hace, es definir las fases en un build, nos ayuda que de una fase posterior podemos acceder a una fase anterior
+- docker en docker:
+   → se habla a docker por un socket
+   → montar socket a un docker
+   → docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock docker:19.03.12
+   → suena a manejo de administracion por medio de dockers usando el otro docker
+
+
+
+Uso de .dockerignore:
+¿Qué es Docker Cloud?
+¿Qué es Docker Machine?
+
+</rich_text>
+    </node>
+    <node name="Azure" unique_id="53" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1628261625" ts_lastsave="1632417701">
+      <rich_text># Aprenidiendo sobre la nube
+- abstraccion de muchas cosas
+- que no es:
+   → no son satelites con internet
+- lo que si es:
+   → son instalaciones de equipos de computo
+   → seguridad, electricidad independiente
+   → se les conoce como data centers
+   → no es publica, solo ingresan las personas con ciertos permisos
+   → estan distribuidos a lo largo del mundo
+- curiosidades:
+   → es la que tiene mas datacenters tiene
+   → se busca que sean 100% sustentables
+   → busqueda de llevarlos al oceano
+   → centros de datos en regiones costeras
+- se dedica a brindar servicios:
+   → computo
+   → servidores
+   → redes
+   → IA
+   → almacenamiento
+   → software y mas
+- todo lo que se hace en una computadora en el provedor y muchas mas barato, agil y seguro
+- se maneja a traves de servicios, no se requiere de tener infraestructura
+- se escala segun la necesidad
+- gastos de capital (CapEx) inversion en infraestructura fisica, deducible a largo plazo
+- gastos operativos (OpEx), invecrsion en servicios o productos facturados al momento
+- confiabilidad y alta disponibilidad:
+   → se encarga de que no se noten los errores de forma perseptible
+- es escalable:
+   → vertical, en un solo equipo
+   → horizontal, aumento de instancias requeridas
+- elastica:
+   → las apps siempre tendran los recursos necesarios
+- agil:
+   → es muy rapida la implementación
+- distribucion geografica:
+   → se asegura que este disponible para todo el mundo
+- recuperacion ante desastres:
+   → datos protegidos por desastres de la naturaleza
+- Modelos de servicios:
+   → local, depende al 100 de nosotros
+   → infraestructura como servicio, administración del cliente, solo la parte virtual del equipo
+   → plataforma como servicio, administración del provedor, solo te preocupas por el almacenamiento y las apps
+   → software como servicio, SaaS, 100% al provedor
+- Tipos de nubes:
+   → publica
+      ⇒ accesible a tod el mundo
+      ⇒ son propiedad de un provedor
+      ⇒ se distribuye a traves de internet
+   → privada
+      ⇒ accesible para ciertos miembros de la organizacion
+      ⇒ puede ser on-premise u hospedada
+   → hibrida
+      ⇒ es una combinacion de ambas
+      ⇒ generalmente son on-premise con nube publica
+
+# Componentes de Azure
+- mas de 100 servicios distintos para la nube
+   → procesos
+   → seguridad
+   → servidores
+   → redes
+   → devops
+   → desarrollo de apps
+   → hartas cosas
+- ventajas:
+   → preparado para el futuro
+   → crea a tu ritmo
+   → listo para cualquier tipo de nube
+   → confiable
+- como funciona:
+   → a traves de virtualizacion
+- se organizan por fabric controller
+- tiene un orquestador
+- api: azure portal, azure CLI
+- market place, desarrollos de terceros
+- cuentas:
+   → administrador
+      ⇒ administran el acceso, las directivas y el cumplimiento de las subcipciones
+   → suscripciones
+      ⇒ agrupacion de cuentas de usuario y recursos creados por estas cuentas, se pueden tener limites o cuotas
+   → grupo de recursos
+      ⇒ se pueden agrupar en contenedores logicos
+      ⇒ implementacion y administracion, por ej. aplicaciones web
+      ⇒ si un recurso existe en un grupo solo se puede usar en ese grupo, pero se pueden comunicar con otros
+   → recursos
+      ⇒ instancias de los servicios disponibles
+         • discos duros
+         • FaaS
+         • Bases de datos
+- Tipos de suscripcion:
+   → desarrollador
+   → prueba
+   → suscripcion
+   → estudiante
+- limites:
+   → facturacion:
+      ⇒ cada una es diferente
+   → control de accesos:
+      ⇒ algunas acciones no se pueden hacer
+- se ocupan mas suscripciones cuando:
+   → se necesitan separar los espacios de trabajo
+   → desarrollo
+   → pruebas
+   → aislamiento de datos
+   → depende tambien de la estructura organizacional
+   → separados segun la facturacion
+   → se pueden definir por el hardware, poniendo limites a los accesos de red, discos o computadoras
+- grupos de administracion
+   → se puede tener una jerarquia
+   → se tendran accesos a solo ciertos espacios de trabajo
+   → se pueden tener 10000 grupos de administracion por directorio
+   → y es un arbol de hasta 6 niveles
+   → cada grupo solo puede tener un grupo primario
+   → pero puede tener muchos grupos secundarios
+- recurso es un elemento administrable en azure
+   → todos los recursos pertenecen a un grupo de recursos
+   → solo puede pertenecer a un solo grupo de recursos
+   → se pueden mover entre los grupos
+   → no se pueden anidar grupos de recursos
+   → facilita la administracion y organizacion
+   → tienen un sistema de autorizacion, basado en roles
+   → azure resource manager
+      ⇒ se puede comunicar de varias formas, ARM, sdk, cliente rest, azure-cli, powershell o portal
+      ⇒ plantillas en JSON
+      ⇒ administrar grupos de recursos o recursos
+      ⇒ capacidad de reutilizacion
+      ⇒ Etiquetas
+      ⇒ facturacion, se puede tener por etiquetado
+- grupo e sla agrupacion de recursos en contenedores logicos
+   → cuando se elimina se le eliminan todos los recursos que tenga dentro
+- Regiones y zonas de disponiblidad:
+   → las regiones son las areas geograficas donde tendremos al menos un datacenter
+   → las regiones tiene ciertas herramientas que en otras no
+   → hay regiones especiales que son para el uso del gobierno
+   → azure tiene el mayor numero de regiones a nivel global
+   → las zonas de disponibilidad, es donde hay mas de dos datacenters en una misma region, son los respaldos
+   → no todas las regiones tiene zonas de disponibilidad
+   → pares de regiones, son regiones que tienen por lo menos 500km de distancia para replicar ciertos recursos
+
+# Servicios de azure
+- se tiene dos tipos de bases de datos (aqui se tienen laboratorios de bases de datos, clase 11):
+   → SQL:
+      ⇒ Azure sql database, es un sql server es compatible con NoSQL, es un PaaS
+      ⇒ Managed instance
+         • comando para backup
+         • common language runtime
+         • transacciones entre bases de datos
+         • no cuenta con escalado automático
+         • nos permite migrar a la nube
+      ⇒ se tiene otros servicios como:
+         • mysql community, 5.6, 5.7 y 8.0
+         • Postgresql
+   → NoSQL:
+      ⇒ azure cosmos db, es serverless es independiente al rendimiento y almacenamiento, es flexible y guarda en ARS (se abstraen y se proyectan como un API), es compatible con otros motores de datos
+   → Tiene tipos de datos:
+      ⇒ estructurados
+      ⇒ no estructurados
+      ⇒ semiestructurados
+   → Servicios de analisis y big data
+      ⇒ Azure synapse analytics
+         • datos sin procesar, refinados o seleccionados
+         • compatible con sql y spark
+      ⇒ Azure hdinsight
+         • se pueden crear con cluster tipo, spark, hadoop, kafka, Hbase y mas
+         • admite etl
+      ⇒ Azure Databricks
+         • descubre informacion en volumenes muy grandes
+         • compatible con apache spark
+      ⇒ Azure data lake analytics
+         • realiza análisis bajo demand
+         • enfocado a etl
+         • modelo pay as you go
+- Servicios de computo
+   → Azure virtual machine
+      ⇒ IaaS
+      ⇒ buenas para pruebas y desarrollo, ejecutar apps en la nube, extender recursos en la nube, recuperacion ante desastres
+      ⇒ Migración (lift-and-shift) on-premise to cloud
+   → Azure batch
+      ⇒ conjunto de vms
+      ⇒ configuracion rapida
+      ⇒ aumento o disminución automático
+   → Azure container instances
+      ⇒ un maquina virtual mas liviana
+      ⇒ solo se virtualizan ciertas cosas del SO
+      ⇒ espacio aislados
+      ⇒ PaaS
+      ⇒ es sencillo
+      ⇒ permite cargar contenedores
+   → Azure kubernetes services
+      ⇒ Orquestacion de contenedores en volumen
+   → Azure app services:
+      ⇒ permite crear y alojar aplicaciones conectadas a la web
+      ⇒ compatible con linux y windows
+      ⇒ permite web, app, segundo plano y moviles
+   → Azure functions (serverless)
+      ⇒ sin servidor
+      ⇒ control por evento
+      ⇒ pago por uso
+   → Azure logic apps
+      ⇒ flujos de trabajo basado en eeventos
+      ⇒ se pueden crear de forma visual o en json
+      ⇒ cuenta con mas de 200 conectores y bloques
+      ⇒ los conectores tienen diferentes precios
+- Servicios de almacenamiento:
+   → Azure blob storage
+      ⇒ binary large object
+      ⇒ almacenamiento no estructurado
+      ⇒ miles de cargas simultaneas
+      ⇒ sin restricciones
+      ⇒ sirve para imagenes, videos
+      ⇒ acceso distribuido
+      ⇒ streaming
+      ⇒ backup
+      ⇒ analisis de datos
+      ⇒ almacenamiento de VMs &gt; 8TB
+      ⇒ tiene niveles de acceso:
+         • frecuente
+         • esporadico (30 dias): reportes
+         • archivo (180), copias de seguridad
+   → Azure Files:
+      ⇒ permite almacenar archivos
+      ⇒ archivos administrados en SMB o NFS
+      ⇒ pueden estar local o en la nube
+- Servicios de red
+   → Azure virtual network
+      ⇒ permite a los recursos comunicarse entre si
+      ⇒ se puede tener aislamiento y segmentación
+      ⇒ comunicacion con internet
+      ⇒ comunicacion entre recursos
+         • redes virtuales
+         • puntos de conexion
+      ⇒ comunicacion con recursos locales
+         • redes virtuales de punto a sitio
+         • redes privadas (VPN)
+         • azure expressroute
+      ⇒ enrutamiento de trafico
+         • tablas de ruta
+         • protocolo de puerta de enolace de borde (BGP)
+      ⇒ Filtrado del trafico de red
+         • grupos de seguridad
+         • aplicaciones virtuales de red
+   → Azure VPN GAteway
+      ⇒ conecta redes locales a azure via VPN de sitio a sitio
+      ⇒ se usan protocolos IPsec e IKE
+   → Azure ExpressRoute
+      ⇒ genera conexiones privadas entre azure y la infraestructura, sin utilizar internet público
+      ⇒ solo 10 conexiones a la vez
+- Servicios de inteligencia artificial
+   → Azure machine learning:
+      ⇒ PaaS para realizar predicciones conectandose a datos para entrenar datos
+      ⇒ ofrece control completo del diseño y entrenamiento de algoritmos
+   → Azure cognitive services
+      ⇒ modelos de ML que permiten ver, oir, hablar, entender y pensar
+      ⇒ no se necesitan conocimientos de ML o DS
+   → Azure bot service
+      ⇒ permite crear bots o agentes virtuales
+      ⇒ bot framework
+- Servicios de devops
+   → Devops services
+      ⇒ azure repos, codigo fuente estilo github, estan en la misma nube y uso de la organización
+      ⇒ azure boards, tableros para la gestion de proyectos y tareas un jira
+      ⇒ azure pipelines, herramienta de automatizacion CI/CD
+      ⇒ Azure artifacts, repositorios para guardar artefactos
+      ⇒ azure test plans, herramientas de pruebas automatizadas para garantizar la calidad
+      ⇒ Github &amp; github actions
+   → Azure devtest labs
+      ⇒ automatizado de administrar proceso de compilacion, configuracion y anulacion de VMs y otros recursos
+- Servicios de supervisión y monitoreo
+   → Azure advisor
+      ⇒ evalua recursos
+      ⇒ hace recomendacion para mejorar
+      ⇒ se hace atraves de api o del portal
+      ⇒ confiabilidad
+      ⇒ seguridad
+      ⇒ rendimiento
+      ⇒ costos
+      ⇒ excelencia operativa
+   → Azure monitor
+      ⇒ informacion de manera general
+      ⇒ recopila analiza y muestra datos para tomar acciones basadas en metricas
+   → Azure service health
+      ⇒ brinda vista personalizada del estado de los servicios, regiones y recursos de azure
+      ⇒ problemas de servicio
+      ⇒ mantenimientos planeados
+      ⇒ avisos de estado
+- Herramientas para administracion y control
+   → Visuales
+      ⇒ Azure portal
+      ⇒ Azure mobile app
+         • compatible con iOS y Android
+         • supervisa estado de azure
+         • alertas, diagnosticos y correcciones
+         • se peude ejecutar comando con powershell o bash
+   → basadas en codigo
+      ⇒ Azure powershell
+      ⇒ Azure cli - para sistemas diferentes de windows
+      ⇒ Azure resource manager
+         • formato json
+         • se comprueban antes de ejecutar
+         • se define el estado y configuracion de cada recurso
+- Serverless
+   → azure functions
+      ⇒ tiene porciones de codigo
+      ⇒ se basa en eventos
+         • solicitudes http
+         • temporizadores
+         • mensajes
+         • acciones
+      ⇒ tiene escalado automatico
+      ⇒ pago por funcion ejecutada
+      ⇒ con o sin estado
+      ⇒ tareas de orquestacion
+      ⇒ compatible con C#, python, ts, js, shell, java, F#
+   → Azure logic apps
+      ⇒ no-code, low-code
+      ⇒ ideal para automatizar y organizar
+      ⇒ integracion con aplicaciones
+- IoT
+   → red de objetos fisicos con sensores y software, con el fin de conectar e intercambiar datos con otros dispositivos a traves de internet
+   → Azure IoT hub
+      ⇒ conecta los dispositivos con la nube
+      ⇒ controlar las apps de forma manual o automatica
+      ⇒ se puede supervisar
+   → Azure IoT Central
+      ⇒ esta basado en hub pero con interfaz virtual
+      ⇒ posee plantillas para escenarios comunes
+   → Azure Sphere
+      ⇒ unidad de microcontrolador
+      ⇒ sistema operativo
+      ⇒ servicio de seguridad (AS3)
+- Servicios de seguridad administrativa
+   → Azure security center
+      ⇒ brinda visibilidad del nivel de los servicios de la nube y local
+      ⇒ supervisa la configuracion de seguridad
+      ⇒ aplica cambios automaticamente
+      ⇒ brinda recomendaciones
+      ⇒ detecta y bloquea amenazas
+      ⇒ detecta ataques e investiga amenazas
+      ⇒ proporciona control just in time
+      ⇒ notifica el estado actual
+      ⇒ mejora el nivel
+      ⇒ comparacion con puntos de referencia
+   → Azure sentinel
+      ⇒ recopila datos en volumen
+      ⇒ detecta amenazas
+      ⇒ investiga con IA
+      ⇒ responde a incidentes
+   → Azure key vault
+      ⇒ administrar secretos o datos confidenciales
+   → Azure dedicated host
+      ⇒ servidores fisico que no se comparten con nadie mas
+      ⇒ tienen mayor coste
+   → Seguridad en la red
+      ⇒ azure firewall
+      ⇒ azure DDos protection
+      ⇒ combinacion de servicios
+   → servicios de identidad
+      ⇒ autenticacion
+         • solicitar credenciales legitimas a una persona
+      ⇒ autorizacion
+         • establece el nivel de acceso
+   → Azure active directory
+      ⇒ a que se accede y que permisos
+   → Multi factor authentication
+      ⇒ se le pide un codigo mas aparte de las credenciales
+   → Inicio de sesion unico
+
+# Privacidad, cumplimiento y proteccion de los datos
+- para microsoft: “los datos de nuestros clientes NO son nuestros datos”
+- cumplimiento
+   → cumplir con una ley, estandar, conjunto de directrices, normas o requerimientos
+- Declaración de privacidad
+   → explica que datos personales recopila de nosotros y como los usa
+- Terminos de los servicios en linea
+   → contrato legal entre microsoft y el cliente
+   → detalla obligaciones de ambas partes respecto al procesamiento y seguridad de los datos
+- Anexo de proteccion de datos
+   → terminos de seguridad y procesamiento de los datos en linea
+
+# Manejo de costos
+- Calculadora de costo total de propiedad:
+   → costo de azure vs local
+   → definir cargas de trabajo
+   → ajustar presupuestos
+   → consultar informe
+- opciones para comprar:
+   → contratos enterprise
+   → en la web
+   → provedor de soluciones (partners)
+- Acuerdo de nivel de servicio
+   → contrato formal entre empresa de servicios y cliente
+   → define estandares
+   → que incluyen
+      ⇒ introduccion
+      ⇒ terminos generales
+      ⇒ detalles de SLA
+   → entender:
+      ⇒ garantias de servicios
+      ⇒ hacerlas efectivas
+      ⇒ disponibilidades
+- Ciclos de vida
+   → desarrollo
+   → preliminar
+   → disponibilidad general
+   → desansejado
+
+culture
+automatizion
+measure
+sharing
+
+CT - continues testing
+CM - continues monitring
+
+modelos de madurez
+- cultura
+- procesos
+- tecnologia</rich_text>
+    </node>
+    <node name="kubernetes" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629332219" ts_lastsave="1629332243">
+      <rich_text>para crear y acceder a un pod
+
+kubectl run nginx --image=nginx:alpine --port=80
+kubectl port-forward nginx 7000:80</rich_text>
+    </node>
+    <node name="AWS Certified Developer - Associate" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629731276" ts_lastsave="1629737116">
+      <rich_text># What to expect
+- examen de opcion multiple
+- es de 65 preguntas
+- cuando son multiples respuestas a contestar, se deben acertar todas las respuestas
+- para presentarlo no se pueden tener pantallas extras, el mic abierto y con camara
+
+# Deployment 22%
+# Security 26%
+# Development with AWS 30%
+# Refactoring 10%
+# Monitoring and Troubleshooting 12%
+
+
+lectura de dynamo pueden ser:
+- eventualmente consistentes a la mitad
+- fuertemenete consistentes el total
+- en excritura cada una siemrpe usa una unidad aun siendo menos de 1KB
+- se pueden usar streams, para ciertsa operaciones, dondelas lambdas pueden procesar esa data</rich_text>
+    </node>
+    <node name="azure IaaS" unique_id="58" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1630696518">
+      <rich_text># Manejando la nube de azure
+
+- Se divide en IaaS y en PaaS
+   → IaaS
+      ⇒ son maquinas virtuales que ofrecen el servicio
+      ⇒ son mas caros, solidos y personalizables
+   → PaaS
+      ⇒ no se lidia con configuracion del servidor
+   → depende mucho de la experiencia
+   → arquitectura propuesta
+      ⇒ por medio de dibujos que se va a hacer
+      ⇒ saber que es capaz de hacer el sistema</rich_text>
+    </node>
+  </node>
+  <node name="JS" unique_id="44" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
+    <node name="fontend-dev" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
+      <rich_text>- html, es un lenguaje de marcado, estructura el sitio web
+- css, permita crear un diseño agradable
+
+# renderizado:
+- DOM
+   → document object model
+   → se transforman las etiquetas a objetos que entiende el navegador
+- CSSOM
+   → es casi lo mismo que el DOM, solo que es para CSS
+- RenderTree
+   → es el arbol que uno al dom y al cssom
+   → los pasa:
+      ⇒ Bytes
+      ⇒ characteres
+      ⇒ tokens
+      ⇒ nodes
+      ⇒ dom
+   → se crea primero el arbol y luego se le asigna el css que le corresponde
+- el navegador hace:
+   → procesa html y construlle el dom
+   → procesa el css y construye el cssom
+   → dom + cssom = render tree
+   → ejecuta el diseño en el render tree
+   → pinta el nodo en la pantalla
+
+# HTML
+- la etiqueta i es para italica mientras que em enfatiza
+
+# CSS
+- con nth-child -&gt; se agrega 2n para los parrafos pares
+- con el resolutor de ambito (::) se usan los pseudoelementos (first-letter para jugar con elementos de P)
+- Valores relativos y absolutos
+   → absolutas, cm, in, mm, px, pt, pc
+   → no se fijan en la medida de algo más
+   → relativas: relativas a otra unidad de medida u otro elemento
+      ⇒ vmax, em...
+- Arquitecturas:
+   → deben ser:
+      ⇒ predecibles
+      ⇒ reutilizables
+      ⇒ mantenible
+      ⇒ escalable
+   → buenas practicas:
+      ⇒ establecer reglas
+      ⇒ explicar la estructura base
+      ⇒ establecer estandares de codificacion
+      ⇒ evitar largas hojas de estilo
+      ⇒ documentación
+   → OOCSS
+      ⇒ orientado a objetos
+      ⇒ diseño separado del contenido
+   → BEM
+      ⇒ block element modify
+      ⇒ separa los bloques, elementos y modificadores
+      ⇒ se usa “__” para agregar el nuevo elemento de clase y “--” para agregar el elemento modificador
+   → SMACSS
+      ⇒ arquitectura de CSS escalable y modular
+      ⇒ se divide en
+         • base: componentes que se usan en toda la applicacion como botones
+         • layout: elementos que solo se usan en la pagina una vez
+         • module: componentes que se usan en la app mas de una vez
+         • state: cambios que se ven en ciertos elementos
+         • theme: cuando halla cambios en temas sea facil hacer esos cambios
+   → ITCSS
+      ⇒ Triangulo invertido de CSS
+      ⇒ se dividen los archivos de CSS en ciertas partes:
+         • ajustes
+         • herramientas
+         • genericos
+         • elementos
+         • objetos
+         • componentes
+         • utilidades
+   → Atomic Desing
+      ⇒ atomos: elementos mas chicos
+      ⇒ moleculas: conjuntos de atomos
+      ⇒ organismos
+      ⇒ templates
+      ⇒ paginas
+
+# Construcción de componentes
+- es un elemento muy pequeño que sirve para construir componentes mas grandes en un futuro
+- se deben de identificar para ver donde se pueden volver a utilizar
+- strorybooks -&gt; npm
+
+# Flexbox
+- sirve para ayudar en la parte de la alineacion
+- se tiene un contenedor con sus items:
+   → container maneja el display
+   → flex-direction para manejar hacia donde queremos que vallan los elementos
+   → se le puede colocar orders
+- CSS grid
+   → nos ayuda a manejar todo el layout
+   → maquetación y diseño responsivo
+   → display en grid
+   → se pueden por porcentaje cuantas columnas y filas
+- media queries:
+   → se pueden ajustar diseños a dispositivos mas pequeños
+
+# Preprocesadores
+- sass:
+   → manejo de variables, se definen con $
+   → anidamiento, se puede tener una clase que tenga varios elementos
+   → herencia, se usa con @extend {nombre de la clase}
+   → mixin, reutilización de codigo, se hace para cuando se tienen propiedades que se repiten varias veces y se usa @include
+
+# Accesibilidad:
+- manejo de buena semantica
+- uso de lectores de pantalla
+- voiceover
+- ANDI
+- todos los input deben tener una etiqueta label (aria-label)
+
+Errores:
+La etiqueta </rich_text>
+      <rich_text family="monospace">&lt;em&gt;</rich_text>
+      <rich_text> y la etiqueta </rich_text>
+      <rich_text family="monospace">&lt;i&gt;</rich_text>
+      <rich_text> hacen que el texto contenido en ellas sea itĂ¡lico, sin embargo, </rich_text>
+      <rich_text family="monospace">&lt;em&gt;</rich_text>
+      <rich_text> influye en:
+Un pseudo-elemento se puede utilizar para:
+Es la manera mediante la cual los navegadores deciden qué valores de una propiedad de CSS son más relevantes para un elemento:
+La abreviaciÃ³n de grid-column-start: 2; y grid-column-end: 5; es:
+Con flexbox (con el valor por defecto de flex-direction) para centrar un elemento de manera horizontal debo usar:
+¿Cuál de los siguientes </rich_text>
+      <rich_text weight="heavy">NO</rich_text>
+      <rich_text> es un lector de pantalla?
+</rich_text>
+    </node>
+    <node name="Curso practico JS" unique_id="49" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626820687" ts_lastsave="1626820687"/>
+    <node name="closures y scope" unique_id="52" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1628030397" ts_lastsave="1628030400">
+      <rich_text>el scope es el alcance que tiene la variable dentro del codigo
+- local
+- global</rich_text>
+    </node>
+    <node name="node1" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630594410" ts_lastsave="1632930112">
+      <rich_text>¿Cuál es el comando para listar los paquetes y módulos instalados?
+npm list -g --depth 0
+¿Cuál es el comando que nos permite ver todo el output en la terminal/consola?
+npm run build --dd
+¿Cuál es el comando que nos permite ver una auditoría en formato json?
+npm audit --json
+
+
+# EventLoop
+- bucle que se ejecta todo el tiempo
+- todo funciona de forma asincrona
+- se ejecuta aparte del eventloop
+- se evian los eventos a traves del event queue
+- thread pool si no se puede ejecutar al momento... por ejemplo consultas a bases de datos
+- cada thread pool levanta un hilo por cada peticion
+- problemas de seguridad
+
+Para leer un archivo de manera síncrona, mediante el módulo fs hacemos uso de
+Para crear un servidor en Node.js es necesario ejecutar el método del módulo http:
+Cuando hacemos tests para nuestros servicios lo importante es probar los llamados de las librerĂ­as u otros servicios.
+La manera como creamos una consola personalizada es mediante la instanciaciĂ³n de:
+¿Cuál es una característica de Express?
+¿Cuál de los siguientes es un verbo HTTP?
+Para retornar una respuesta con cache es necesario establecer el header:
+La clase EventEmitter se obtiene del módulo:
+Los métodos mas populares de un Readable stream son:
+</rich_text>
+    </node>
+  </node>
+  <node name="Juegos" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
+  <node name="English" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1631657919">
+    <node name="Descriptions" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
+      <rich_text>Discovery learning
+	fill in the gaps
+	Guessing
+	Match columns
+	Organize words
+complete sentences
+play games
+use pen and paper
+play and pause is very important
+interactive discution panel (Q&amp;A)
+uses of like
+places
+weather
+peaple
+character and personality
+describe pictures
+using descriptive language to compare
+
+What is it like? (como es, description, forma de ser) != what does your best friend like? (comments, interests)
+what does your best friend like? (comments, interests)
+Intelligent, friendly, 
+what does you best friend look like? (description of physical aparience)
+############
+1-b
+2-a
+3-d
+4-c
+############
+Class 2 ex 2
+1-d
+2-c
+3-b
+4-a
+############
+
+# The weather
+good, great, nice, fine, lovely, beautiful, wonderful, excellent, gorgeous, fair, pleasant, balmy;
+bad, awful, terrible, nasty, lousy, foul, rotten, miserable, unpleasant, dull, gloomy, ugly;
+sunny, warm, hot, mild, cool, chilly, cold, freezing, icy, frosty; very cold; bitter cold;
+rainy, wet, humid, dry, arid, frigid, foggy, windy, stormy, breezy, windless, calm, still;
+a spell of good weather; a two-day spell of sunny weather; a spell of rainy weather;
+Sky: cloudy, overcast, cloudless, clear, bright, blue, gray (BrE grey), dark; a patch of blue sky.
+
+rainy - lluvioso
+foogy - niebla
+cloudy - cielo nublado
+warm - caluroso
+
+class 3 ex 1
+caluroso
+1-warm
+2-boiling
+3-mild
+4-
+frio
+1-cool
+2-freezing
+3-chilly
+4-icy
+--
+1-windy
+2-breezy
+3-cool
+4-icy
+
+places:
+bright
+dark
+big
+small
+Noise - ruidoso
+Quiet - silencioso
+
+more advance
+crowded: (of a space) full of people, leaving little or no room for movement; packed
+expensive
+famous
+fascinating
+lively - full of life and energy; active and outgoing
+spectacular
+
+ancient
+boring
+charming - special place
+exciting
+dangerous
+awesomw
+
+Describir el clima de la ciudad
+Describir tu hogar
+
+</rich_text>
+    </node>
+    <node name="reto" unique_id="50" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627231811" ts_lastsave="1627232346">
+      <rich_text>What is your favorite place? Describe it below in the comments!
+In this moment my favorite place is my house, especially my “office”, it is a special room in my house where I have my computer, my controls, my chair, one large desktop in L and other things. It is a medium room, whit 3 windows, one door, it very bright and quiet, the weather is little warm, this is caused by the computer when is worked.
+
+
+
+bright
+dark
+big
+small
+Noise - ruidoso
+Quiet - silencioso</rich_text>
+    </node>
+    <node name="reto" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627536290" ts_lastsave="1627539650">
+      <rich_text>• Wake up (Despertarse)
+• Get up (Levantarse)
+• Take a shower ( tomar una ducha)
+• Check email (Revisar email)
+• Have breakfast (Desayunar)
+• Go to work ( ir al trabajo)
+• Have lunch (Almorzar)
+• Have coffee (Tomar un cafe)
+• Drive ( Conducir)
+• Have dinner (Cenar)
+• Watch TV (Mirar Television)
+• Chat (Platicar o charlar)
+• Go to bed ( ir a la cama)
+• Sleep (dormir)
+
+describe daily routine
+I wake up at 7:30 am, I get up at 8:00 am, I have breakfast at 9:00 am, usually I study from 8:00 am to 10:30 am, I take a meet at 10:30 am, I have lunch at 11:00 am, I work from 12:00 pm to 6:00 pm and from 6:00 pm to 7:00 pm I study basic courses of programming or I review some themes of libraries, I have another lunch at 5:00pm, I take shower at 7:00 pm, I have dinner at 9:00 pm and I go to bed at 12:00 am
+
+describe family
+We are three in my family, my son, my wife and I, my son is a little boy, his name is Leo, he has various play doh of color blue, green, yellow and white, my wife is student of gastronomy, her name is Stephani, I'm engineer, I'm work in my house and I have one computer of color grey</rich_text>
+    </node>
+    <node name="metas" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1629764319">
+      <rich_text>asimilar 10 palabras
+anotar palabras nuevas
+asimilar dos frases diarias
+pensar 10 minutos en ingles
+aplicar lecturas en ingles</rich_text>
+    </node>
+    <node name="JJ" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1634258810">
+      <rich_text>
+In the morning
+In the afternoon
+In the evening
+at night
+
+In, On &amp; At
+ I go to the park ON saturday AT ten IN THE MORNING
+ I go to school ON monday AT nine IN THE MORNING
+ 
+introducing yourself
+"(Greeting)!
+My name is  (Your name) .
+My last name is spelled  (spell your last name) .
+I am _____ years old. I am from (your country)
+(Farewell)!"
+
+how are you?
+
+See you later, take care
+
+bakery
+hospital
+airport
+school
+pharmacy
+
+Prepositions of place
+	- on - arriba
+	- between - entre
+	- behind - detras
+	- in front of - delante de
+	- next to - al lado de
+
+What do you like? (hobbies)
+- I like to ...
+- in dislike use I don't like
+
+Adverbs of frecuenct
+- never - 0%
+- rarely - 5%
+- seldom - 10%
+- occasionally - 30%
+- sometimes - 50%
+- often - 70%
+- frequenly - 80%
+- usually - 90%
+- alway - 100%
+- Noun + frequency + action, ex: I never drink coffe
+- Exception: Sometimes I go to the beach
+
+tarea
+- numeros
+- spell de palabras que nos aventamos
+
+----------------------------------------------------------------------------------
+---
+----------------------------------------------------------------------------------
+Can you speak slowly please? *
+Can you repeat please? *
+nice to meet you * to *
+It's a plaesure to meet you
+
+I'm well | great | fine | sad | sad
+
+how old are you?
+How do you spell that?
+I´m twenty-eight years old. I´m 28.
+
+what do you do?
+this, cerca (mio)
+that, lejos (no mio)
+theese, cerca (mio)
+those, lejos (no mio)
+
+I
+You
+We
+They
+He
+She
+It
+
+My
+your
+his
+her
+Its
+Their
+Our
+
+
+# When is your birthday?
+- my birthday is in June
+- my birthday is on June 21st
+
+formats of dates is
+- most countries: dd/mm/yyyy
+- USA mm/dd/yy
+
+Telling time
+- o' clock
+- quarter past
+- prepositions past between 0 and half
+- prepositions to between half and 0
+- it's five past four
+- it's quarter past four
+- it's half past four
+- it's twnety-five to five
+- it's quarter to five
+- it's five o'clock
+- se usa para para cuartos de horas, para los pasados, para numero mas puntuales, it's nine four, it's nine ‘ou’ four
+
+What time is your country?
+
+Which - Cuál -option
+Who - Quién
+What - Qué -- tjhis is more general
+When - Cuándo 
+Where - Dónde -- 
+Why - Por qué -- reason
+How - Cómo
+	old
+	far
+	long
+	many -- quantities
+	much -- cost of something
+	
+Prepositions
+- beside
+- behind
+- under
+- over
+
+- in - more general use with countries/cities
+- on - use with streets/avenues
+- at - is more especific, fro example addresses
+
+# Wants and Wishes
+- i would like -&gt; i'd like, more formal
+- I want, is more direct as boss be careful
+
+# have or have got
+- is very similar
+- have, I have a car
+- have got, is very more informal, I've got a car
+- use with Illnesses
+- for third person or it is used with has, for another is used have
+- is used with do and does with question and negatives
+
+# Can vs Can't
+- is used to:
+   → Ability
+   → Permission
+   → Requests
+   → Possibility
+- POSSESSION ('s)
+   → when the word ends with s ex: *the dogs' plates are full* or *James's office is spacious*, the pronuntiotion is necesary
+   → when exists two sustantives and only one 's the possession is of both
+   → when exists more 's each one has a one personal possession
+- there is and there are
+   → something exists or not exists
+   → there is for singular or incontable nouns
+   → there are for plural
+- subject and object pronouns
+   → subjects as I, you, he, she..., used with person animal or thing that does the action
+   → objects as me, you, her, it...., receives the action
+- Likes dislikes and opinios
+   → express feelings
+      ⇒ like, love, enjoy to likes
+      ⇒ don't like, hate, dislike to dislikes
+      ⇒ think, consider or believe to express opinion
+- present simple vs present continuos
+   → things that are always true (present simple) or habits or repeated actions
+   → action happening at the momento of speaking, use verb to be + ing
+
+boot
+but
+bot
+both
+
+four aspects:
+- Name
+- Nationality
+- Job/Occupation
+- Age
+
+Hi!, My name is Pedro, I'm Mexician, I'm SysAdmin, I'm 33 years old
+
+introducing others:
+- use of this: this is my friend Ana
+- with multiple people is used these are
+
+Simple present:
+- two options:
+   → Verb to be
+      ⇒ caracteristics of people (am, is are), details
+   → other verbs
+      ⇒ use ‘s’, ‘es’, ‘ies (when ends with y)’ when is the third person
+      ⇒ use of do in negative and questions
+
+# Wh questions
+- who - people
+- where - places
+- when - times
+- what - things
+- why - reasons
+- which - options
+
+Places:
+- in - dentro
+- on - sobre
+- in front of - en frente de
+- next to - al lado
+- behind - detras
+- under - debajo
+- over - sobre
+
+# have or has
+- deppending of pronoun, (irregular verb), with thid persons is used has, with negative and question form is used have, changing only do -&gt; does
+
+Irregular plural nouns
+- book -&gt; books
+- apple -&gt; apples
+- man -&gt; men
+- life -&gt; lives
+- foot -&gt; feet
+- hero -&gt; heroes
+- child -&gt; children
+- fish -&gt; fish  ?_?
+- knife -&gt; knives
+
+Imperative form
+- use to: instructions, order or advices
+
+And vs but:
+- and, similar ideas
+- but, show contrast
+
+A vs An:
+- this is similar, but the use is depending of first sound of new word
+
+I got late -&gt; llegue tarde
+
+may - permission not can
+restroom =&gt; caoque tenga WC, bathroom =&gt; cuanto tiene regadera, bedroom =&gt; habitacion
+
+as, like -&gt; check differences
+
+# Descriptions and comparatives
+What is it like?
+- what is your best friend like? - this is for descriptions, this is a description in personality
+- what does your best friend like? - this for likes as food or music, interest
+- what does you best friend look like? - this for phisical aparience
+- what is your bedroom like? - this is used with profesions and places</rich_text>
+    </node>
+  </node>
+  <node name="Matematicas" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
+    <node name="calculo" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840076" ts_lastsave="1617842337">
+      <rich_text>Funcion
+- es una relación entre dos conjuntos a traves de la cual cada elemento le corresponde un unico elemento ninguno del otro conjunto
+- hay variables dependientes e independientes
+
+Dominio
+- al conjunto de partida se le llama dominio - X
+
+Contradominio
+- al conjunto de llegada contradominio - y
+
+Representación gráfica
+- debe poseer pares ordenados X, y sobre R2
+
+Que es una derivada?
+</rich_text>
+    </node>
+  </node>
+  <node name="Nuevos lenguajes" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
+    <node name="Algoritmos y pensamiento logico" unique_id="9" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1619532705"/>
+  </node>
+  <node name="Go" unique_id="18" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1623801007">
+    <node name="Arquitectura de software" unique_id="19" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
+      <rich_text>Que es?
+Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
+Entender el rol del arquitecto
+
+# Etapas del proceso
+- Analisis de requerimientos, nace de una idea o problema, aqui se entiende que se va a construir, requerimientos de negocio, usuario, funcionales y no funcionales
+- Diseño de la solucion, Analisis profundo de los problemas, ya se tiene una propuesta de esas soluciones, aqui empieza el arquitecto
+- Desarrollo y evaluacion, programacion y pruebas, criterios de aceptacion, set necesario para construirla
+- Despliegue, infraestructura y roles de operacion para que este disponible
+- Mantenimiento y evolucion, Arreglo de errores y agregado de nuevas funcionalidades
+
+# Dificultades en el desarrollo
+- Esenciales, Entender el diseño y concepto
+   → complejidad, que tan dificil se vuelve, por ejemplo el calculo de rutas
+   → conformidad, el contexto que se va a usar y como adaptarlo, por ejemplo la efectividad del software
+   → tolerancia al cambio, se puede cambiar o ya no, que tanto cambia el problema que se resolvio
+   → invisibilidad, se vuelve dificil al no ser tangible
+- Accidentales, tecnologia y plaforma que se usara, conexiones entre tecnologias o resoluciones en esa tecnologia
+   → Lenguajes de alto nivel, elmismo lenguahe se vuelve una dificultad
+   → multiprocesamiento, el poder hacer mas de una tarea en la computadora
+   → Entornos de programación, algo asi como el que nos ayude con las propiedades que tengan clases o funciones del lenguaje
+como se resuelve?? No desarrollar, comprar OSS, Prototipado rapido, Desarrollo evolutivo, Grandes diseñadores (arquitectos)
+
+# Roles
+- Experto del dominio, es elq ue sabia que se requeria del dominio, en las nuevas metodologias son las partes interesadas
+- Analista, es el que indaga en que se debe de resolver, este es el cliente/dueño del producto, en las nuevas metodologias
+- Admininistrador de sistemas, los viejos sysadmin, hoy DevOps/SRE
+- Equipo de desarrollo, los qa, desarrollador, arquitecto
+- gestor del proyeco, se encarga de las entregas y que se cumpla con el plan, facilitador
+
+# Que es la arquitectura de software
+- modelos y diagramas con conexiones entre cajas
+- este es muy sesgado, pero se deben de hacer analisis profundos sobre que es lo que hay que contruir, y como es que el sistema los va a resolver
+- la arquitectura es algo estructural, por medio de objetos ocultando propiedades, es un conjunto de decisiones para el diseño del sistema
+- la arquitectura se reduce a cuaqluier cosa importante
+
+# La importancia de la comunicación (ley de conway)
+- la comunicación es fundamental para la arquitectura del software
+- la comunicación dara estructura
+
+# Objetivos del arquitecto
+- tiene varias partes interesadas:
+   → cliente, quiere un sistema en presupuesto y a tiempo
+   → desarrollador, facil de implementar y mantener
+   → manager, desarrollar software de forma independiente, asi como lo mismo que el usuario
+   → qa, facil de probar
+   → usuario, debe de ser disponible y confiable
+
+# Arquitectura y metodologías
+- nace en metodologias tradicionales, para encontrar problemas y solucionar a gran escala, las agiles emerge de un equipo autogestionado
+- En la tradicional se toman la definicion, restricciones, requerimientos, riesgos, le falta feedback, este se viene hasta que se termina la solución
+- en metodologia agil, se puede planear en el planteamiento del sprint, se debe de poder medir, se pueden hacer esqueletos de solución
+- lo mas importante para ser agiles es el feedback
+
+# Entender el problema
+- Separar la comprension del problema de la propuesta
+- Espacio del problema, idea, criterios de exito, historias de usuario
+- Espacio de la solucion, diseño, desarrollo, evaluacion, criterios de aceptacion, despliegue
+- se narran historias para llegar a eso
+- es la limitante del problema
+
+# Requerimientos
+- despues de entender el problema
+- de producto, que es lo que necesita
+   → negocio, consta de reglas de negocio
+   → usuario, como el usuario usa el sistema, atributos de calidad, garantia de que tenga calidad y es enfatizado
+   → funcionales, se alimentan de todo, para saber que se debe de hacer especificamente, tambien tienen requerimientos de sistemas, son afectados por las restricciones
+- de proyecto, no tiene que ver con la arquitectura
+   → recursos
+   → capacitacion
+   → certificaciones
+   → documentacion de usuario
+   → infraestructura
+   → licencias
+   → plan de despliegue
+   → plan de transicion
+   → acuerdos de servicio
+- funcionales, como se va a comportar el sistema
+- no funciones, tiene que ver mas con calidad, son parte de los funcionales, siempre los vinculaban con la arquitectura
+- requerimientos significativos, afectan el diseño la arquitectura
+
+# Riesgos
+- para describir, usar escenarios de fracaso que sean medibles y accionables
+- de ingenieria, se mitiga a traves de diseño e implementacion
+- de gestion de proyecto, relacinados mas con la planeacion
+- se identifican con la toma de requerimientos (difcultad y complejidad), atributos de calidad (insertidumbre) y conocimiento del dominio (riesgo prototipico)
+- Se priorizan riesgos y se solucionan los mas criticos, no se pueden solucionar todos
+
+# Restricciones
+- limita las opciones de diseño o implementacion
+- las partes interesadas, integraciones con otros sistemas, ciclo de vida del producto
+
+# Arquitectura, panorama y definición
+- se debe de saber que pasa en el software
+- verificacion de sacrificios y beneficios
+- un estilo de arquitectura es algo generico, resolución a nivel de conectores
+- es una coleccion de decisiones de diseño
+
+# Llamada y retorno
+- hacen invocaciones a otros componentes y espera una respuesta
+- programa principal y subrutinas, estilo C
+- OOP, para aplicaciones que se van a mantener mucho tiempo
+- Multinivel, se tienen diferentes niveles que se van a comunicar por nivel
+
+# Flujo de datos
+- Lote secuencial, lo importante es ejecutar una pieza de codigo y cuando termine pase a otra etapa
+- Tubos y filtros, es un streaming
+
+# Centrada en datos
+- Pizarron, se tienen diferentes componentes que interractuan con un componente principal, cada componente recibe y procesa los datos y envia al pizarron, también el pizarron puede tener procesamiento y dar una salida
+- Centrada en base de datos, generalmente es usado con una base de datos y los componentes comparten esa base de datos, los componentes no se comunican entre si, la base es el puente
+- Sistema experto, estilo basado en reglas, un cliente se comunica con otro que infiere las reglas o consultas, este se comunica con un tercero que es una base de datos de conocimiento
+
+# Componentes independientes
+- Invocación implicita, basada en eventos, aplicaciones que se mandan mensajes entre si, sin que sepan quien invoca a aquien, se usa un bus para comunicarse
+- Invocación explicita, aqui se sabe que se invoca, pero no son dependientes uno del otro, su comunicación es directa, hay un registro central que le dice quien puede rexolver un problema
+
+# Como se elije?
+- Monoliticos, eficiencia, curva de aprendizaje, capacidad de prueba, capacidad de modificacion
+- Distribuidos, mocularidad, disopnibilidad, uso de recursos, adaptabilidad
+
+Errores:
+¿Por qué no existe la bala de plata que resuelva las dificultades del desarrollo de software?
+¿Cuál de los siguientes requerimientos funcionales incluye explícitamente un requerimiento no funcional?
+De las formas en las que podemos trabajar con las dificultades esenciales, ¿cuál es la que más involucra a los arquitectos de software?
+El usuario podrá comprar con tarjeta de crédito a través del sistema, ¿qué tipo de requerimiento es?
+En los frameworks web modernos existe el concepto de middleware,  que describe una forma de interceptar el pedido o la respuesta del  sistema con componentes desarrollados independientes uno del otro. ¿Qué  estilo de arquitectura están implementando?</rich_text>
+    </node>
+    <node name="bases de datos" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801007" ts_lastsave="1625170789">
+      <rich_text>## Necesitamos crear un proyecto que haga de GO el backend y si es posible de front con angular... dockers o kubernetes
+
+- crear entidades de la base de datos
+- hacer atributos
+
+# Historia
+- lenguaje de consultas estructurado
+- se crea para la consulta de datos... no exisitia de principio una forma estandar
+- tiene una estructura clara y definida
+- DDL, data definition language, ayuda a crear los simientos de la base de datos
+- DML, sirve para el manejado de datos
+
+# NoSQL
+- existen varios tipos:
+   → clave- valor
+      ⇒ DynamoDB o Cassandra
+   → en documentos
+      ⇒ MongoDB o Firestore, generalmente son json
+   → en grafos
+      ⇒ neo4j o TITAN, relaciones complejas
+   → en memoria
+      ⇒ Memcache o redis
+   → optimizadas para busquedas
+      ⇒ BigQuery o Elasticsearch
+
+# Firestore
+- uso de cloud para las bases de datos
+- Jerarquia:
+   → base de datos que contiene toda la información
+   → colección de documentos
+   → documento
+- top-level conections:
+   → conecciones que se tienen de inmediato
+- </rich_text>
+      <rich_text style="italic">Tipos de datos en Firestore</rich_text>
+      <rich_text>:
+   1) </rich_text>
+      <rich_text weight="heavy">String</rich_text>
+      <rich_text>: Cualquier tipo de valor alfanumérico
+   2) </rich_text>
+      <rich_text weight="heavy">Number</rich_text>
+      <rich_text>: Soporta enteros y flotantes.
+   3) </rich_text>
+      <rich_text weight="heavy">Boolenan</rich_text>
+      <rich_text>: Los clásicos valores True y False
+   4) </rich_text>
+      <rich_text weight="heavy">Map</rich_text>
+      <rich_text>: Permite agregar un documento dentro de otro.
+   5) </rich_text>
+      <rich_text weight="heavy">Array</rich_text>
+      <rich_text>: Permite agregar un conjunto de datos (soporte multi type) sin nombre e identificador.
+   6) </rich_text>
+      <rich_text weight="heavy">Null</rich_text>
+      <rich_text>: Indica que no se ha definido un valor.
+   7) </rich_text>
+      <rich_text weight="heavy">Timestamp</rich_text>
+      <rich_text>: Permite almacenar fechas (guarda el año, mes, día y hora).
+   8) </rich_text>
+      <rich_text weight="heavy">Geopoint</rich_text>
+      <rich_text>: Guarda una localización geográfica (coordenadas latitud-longitud).
+   9) </rich_text>
+      <rich_text weight="heavy">Reference</rich_text>
+      <rich_text>: Permite referencia un documento (relaciona dos documentos, no importa su colección).
+
+# Uso en la vida real
+- no existen bases de datos unitalla
+- big data
+   → concepto de grandes cantidades de datos
+   → es una serie de soluciones para almacenar una cantidad de datos grandes y en poco tiempo
+   → se puede usar en business inteligent
+   → es un movimiento de varios tipos de bases de datos
+   → Cassandra -&gt; checar
+- data warehouse
+   → almacenaje de datos masivos
+   → no guarda mucho por segundo
+   → se guarda mas por manera historica
+   → es el archivo muerto
+   → big table, es una sola tabla, muy grande
+   → nos permita hacer consultas sobre este mismo
+   → resuelve preguntas acerca de que ha pasado
+- data mining
+   → es minar datos
+   → </rich_text>
+      <rich_text family="monospace">"Data mining, consiste en torturar los datos hasta que confiesen"</rich_text>
+      <rich_text>
+   → se dedica a extraer los datos donde quiera que esten, hace sentido de esta data
+- ETL
+   → la metodologia de extraer, transformar y cargar
+   → es la tecnica que nos ayuda a saber cada cuando aplicar la extraccion
+   → muchas veces las bases de datos no son suficientes para este tipo de cosas
+   → transformar de la base o app a algo con valor
+   → es mas una idea que algo especifico de una tecnologia en si
+   → pasarlo por una serie de cambios y guardarlo cuando sean utiles
+- Business intellingence
+   → inteligencia para el negocio
+   → se usa para tomar decisiones indicadas
+   → se podria decir que es lo final de la cadenita
+   → se pueden entender los usos que se le da a las cosas
+- machine learning
+   → son tecnicas para el tratamiento de datos
+   → nos ayuda a crear modelos que no van por patrones fortuitos
+   → encuentra correlacion que no se ven a simple vista
+   → se agrupan en:
+      ⇒ clasificacion
+      ⇒ prediccion
+- data science
+   → es algo preciso
+   → poca gente lo hace
+   → son mas estadisticos
+   → se debe desarrollar y saber para que sirve cada herramienta
+</rich_text>
+    </node>
+  </node>
+  <node name="Crecimiento personal" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
+    <node name="Personalidad y productividad" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
+      <rich_text>Que es ser productivo??
+- no es ser una persona que trabaja mucho, implica tener mas cuidado de uno que del trabajo como tal
+- una persona productiva es capaz de producir, hacer uso de sus recursos, tiempo y espacio de manera efectiva para entregar un producto
+- eficacia -&gt; medios llegar a un fin empleando los mejores medios
+- eficiencia -&gt; lograr el efecto que se desea
+Principios de productividad;
+- lo que se mide mejora
+- dejar de hacer
+- explotar oportunidades
+- encontrar mejores usos
+Personal UX:
+- tener mirada critica
+- analisis, elaborar objetivos y probar
+Herramientas:
+- 16 personalidades - hecho
+- big 5 personalities - falta
+- eneagrama - hecho
+- disc - estilos de liderasgo - falta
+- high5 test - carrera, creo hecho
+
+Auditoria de la vida
+Mi vida en semanas:
+- principales objetivos que he logrado conseguir
+- revisa la vida de acuerdo como se ha vivido
+
+Conocer la persona productiva
+- Agilismo al personal de UX
+   → autoconocimiento
+   → perspectiva
+   → Planear
+   → Revisar
+   → Focalizar
+   → tomar decisiones
+      ⇒ volver a pivotear
+   → Medición
+   → Documentar y compratir
+   → Reflexionar
+   → Poner en acción
+      ⇒ Iterar
+- Buenas practicas siendo agil
+   → orientar objetivos a una meta
+   → renuncia y ganar (decir si y no)
+   → el metodo de planeacion es flexible
+   → vive y despierta a la realidad
+   → cumple con las tareas
+   → aprender a perdonarse
+   → encuentra equilibrio
+- Principios
+   → curiosidad: actitud de acercarse a la vida con una curiosidad insaciable y la busqueda continua del conocimiento
+   → conexión: interconexion entre todos los conocimientos
+
+Autoconocimiento:
+- es la gestion de uno mismo, tiempo, recursos, canales y habitos
+- las 6 w's, aplicadas a la vida
+   → When
+   → Where
+   → What
+   → Who
+   → How
+   → Why
+- DOFA:
+   → Fortalezas
+   → Oportunidades
+   → Debilidades
+   → Amenazas
+
+La rueda de la vida
+- revisar salud
+- tiempo de amigos y familia
+- tu otro significativo, vida en pareja
+- crecimiento personal, se logra todo lo que se ha planeado
+- hobbies y tiempo libre
+- actividades en casa, cuanto tiempo pasas en casa y le dedicas a eso
+- carrera, que se requiere estudiar y cual es el plan
+- dinero, compensación
+
+Hero canvas:
+- la coducta, pensamientos, actitudes y comportamientos, son un estimulo
+- pensamiento, que tan proactiva
+- relaciones, verbal y no verbal
+- liderazgo, como gestiona los proyectos
+- emocion, autoconocimiento y regulacion
+- autodireccion, vision, rapidez del aprendizaje
+- actitud, accion de la persona y propagacion de conocimiento
+- resultado al cual se orienta
+
+Definir User persona
+- se resuelven problemas de la vida de uno mismo
+- se tiene que llevar lo obtenido a valores cualitativas y cuantitativas
+- definir atributos
+- conectar pasiones, sueños y propositos
+- ikigai
+
+# Crea tu proposito y tu propuesta de vida
+- mision manifesta, un enunciado que te motiva o a donde quieres llegar
+- como realizar ese manifesto:
+   → examinar la vida de otros
+   → determina tu yo ideal
+   → considera tu legado
+   → determina tu proposito
+   → clarifica tu aptitudes
+   → escribe tu declaración
+   → refínala
+
+# Proyecta tu plan de vida
+- se trata de estructura las herramientas en la vida en un determinado tiempo
+- proyeccion: emociones y sentimientos de hacer algo que te hace sentir bien
+
+# Rediseña tu vida
+- tener una vida sistemica
+- Brainstorming:
+   → reestructura de la vida a cosas mas importantes
+   → palabras claves, en el centro lo mas importante
+- Meta: son fines ultimos, mas globales, que pasos se deben de seguir
+- Warren Buffet:
+   → tomarse un tiempo a solas
+   → realizar lista de 25 cosas a realizar
+   → señala los 5 realmente relevantes, deshacerse de las otras 20
+
+# Aplicando desing thinking
+- revisar todo lo anterior y simplificarlo en keywords
+- Areas importantes:
+   → amor
+   → intelecto
+   → salud
+   → espiritu
+- affinity map
+   → escribir cualquier objetivo importante
+   → escribir valores o actividades importantes a priorizar
+   → clasifique las ideas en las declaraciones “yo quiero”
+   → crear grupos organizados en las categorias de los yo quiero
+
+# Objetivos estrategicos (OKR)
+- metodologia dada por google
+- son respuestas a las preguntas
+-  SMART:
+   → specific
+   → measurable
+   → achievable
+   → relevant
+   → time based
+- los objetivos deben ser:
+   → anuales
+   → mensuales
+   → diarios
+   → horas
+   → minutos
+-GOST:
+   → marco de referencia entre meta, objetivo, estrategia, tactica
+- Eisenhower
+   → otra metodologia para la priorizacion, donde esta urgente y poco urgente, importante y poco importante
+
+# Las 3 P de la productividad
+- Planificar, calendizar, metas y actividades, creacion de listas, priorizar listas, conmutar tareas
+- Persuadir, tecnica de la persuacion empatica, seguridad, siempre un porqué, no tomar desicion fuera de la personalidad, genera valor, libertad y comprension
+- Persistir, resilencia es la adaptacion a la adversidad, no vida dura, solo momentos dificiles
+
+# Getting things done
+- has que las cosas pasen, preguntas con flujo
+- que harias si lo que hicieras no te lo pagaran
+- por que lo harias
+- mejor practica, hacer lo que te propones
+   → averigua lo que es importante
+   → priorizalo
+   → hazlo
+
+# Como dejar de perder el tiempo
+- hacer kanban
+
+# Espacio y ciclos
+- espacio
+   → lugar sin interrupciones
+   → designar una zona de trabajo
+   → fijar un horario laboral
+   → acceso a internet
+   → iluminación
+   → tecnologia + accesorios
+   → mesa + silla de trabajo
+- ciclos
+   → definir cronotipo de trabajo
+
+# Rituales y rutinas
+- ritual
+   → primer estadio de interaccion con otras personas
+   → una tarea critica al dia
+   → registra tu tiempo
+   → duerme entre 6 y 8 ocho horas
+   → nuestra eficacia depende de que tiempo es mejor
+   → las primeras 4 horas despues de despertar son efectivas
+   → pasear, hacer ejercicio, desconectarte
+   → cambiar de habitacion y delimitar el espacio de trabajo
+   → largas duchas
+   → tener un cuaderno de notas
+   → rompe la rutina
+- rituales con rutina: la salud mental es la capacidad de trabajar y amar
+   → cuando tenemos un habito ya no cuenta tanto hemos establecido una rutina
+   → minimizar la incertidumbre
+   → ahorrar energia mental
+   → mantener la concentracion
+
+# Habitos
+- 10 tipos de hábitos para tener dentro de nuestra rutina:
+   ◇ Físicos
+   ◇ Afectivos
+   ◇ Sociales
+   ◇ Morales
+   ◇ Intelectuales
+   ◇ Mentales
+   ◇ De higiene
+   ◇ Costumbristas
+   ◇ Saludables
+   ◇ Recreativos
+- habitos son conductas repetitivas y elegidas concientemente
+- recordatorio: estimulo
+- rutina: la accion ejecutada
+- recompensa: benefico obtenido
+
+# Metodo Ivy lee
+- lista diaria de tareas
+   → 6 tareas importante
+   → priorizar y ordenas las 6 tareas
+   → concertrarse en una sola tarea hasta terminarla
+   → si alguna no termina, se pasa al dia siguiente
+- deepwork
+   → para producir a un nivel maximo, se debe trabajar con periodos prolongados con mayor concentracion
+   → la filosofia monastica
+   → la filosofia bimodal
+   → la filosofia ritmica
+   → la filosofia periodistica
+- la tecnica de los grandes gestos
+   → realizar un cambio radical dentro de la rutina
+   → cultivar el ocio, desconectarse completamente
+
+## Trabajo remoto
+- el flujo es un estado de inmersión total
+- remote first, administran trabajo distribuido, tienen procesos de reclutamiento bastante refinados, se tiene todo documentado
+- automattic, basecamp, buffer - hay que investigarlas
+- trabajo asincrono, no importa cuanto trabajes, sino lo que se entregue
+- se buscan resultados
+- niveles
+   → accion no deliberada
+   → recrear la oficina, online
+   → adaptarse al medio
+   → comunicación asíncrona
+- se dice que es un privilegio y no un derecho
+- seis tipos de reunion:
+   → actualizacion de estatus
+   → toma de decisiones
+   → compartir informacion
+   → resolucion de problemas
+   → diseño e innovación
+   → fortalecimiento de equipo
+- mensajes asincronos
+   → proporcionan detalles
+   → acciones claras
+   → fecha de vencimiento
+   → acceso de un recurso en caso de tener dudas
+
+# Home office
+- 23 minutos para reconectarse en lo que anda entre tarea y tarea
+- revisar el equipo y trabajar con ellos
+- andar motivado
+- ergonomiía
+- establecer límites
+
+# metodos de productividad
+- calcular el objetivo al que llegar
+- escribe la meta
+- establece una fecha
+- enumera los pasos
+- clasifica los pasos
+- a trabajar
+- Moscow
+   → must
+   → should
+   → could
+   → would
+
+</rich_text>
+    </node>
+    <node name="notion" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625837110" ts_lastsave="1627235312">
+      <rich_text>las bases de datos son practicamente tablas para organizar la información
+se diferencias las tablas (simples) de las bases de datos en que tiene estructura
+
+El método PARA es una forma de organizar información creado por Tiago Forte que te permite establecer una estructura simple y escalable para categorizar cada aspecto de interés, desde documentos hasta metas que quieras lograr. Este sistema consiste de cuatro espacios llamados Proyectos, Áreas, Recursos y Archivo (por eso se llama PARA), con los cuales podrás clasificar información relevante a distintos aspectos de tu vida de manera ordenada.
+
+El sistema Getting Things Done o GTD, creado por David Allen, consiste en 5 pasos simples que debes aplicar para ordenar y filtrar la forma en la que recolectas información y tareas en el día a día. El método promete brindar un espacio estructurado para poder concentrarse y ser estratégico en la manera en la que completas tareas y obtienes información.
+	- capturar
+	- clasificar
+	- organizar
+	- refelexionar
+	- enganche
+
+La matriz Eisenhower es una herramienta creada por Stephen Covey y basada en la forma de trabajar del ex-presidente de los Estados Unidos Dwight D. Eisenhower. Esta se basa en las cualidades de importancia y urgencia de una tarea para determinar cómo completarla, en qué momento y organizar una lista de tareas según 4 niveles de prioridad. Es especialmente útil para definir un orden específico en el que completar tareas, saber cuándo delegar y liberar un poco de tiempo dentro de lo posible.
+	- urgente e importante
+	- urgente y no importante
+	- no urgente e importante
+	- No urgente y no importante
+	
+	
+-----------------------------------------------------------------------------------------------------------------------------------
+# Que es notion
+- Herramienta de edición colaborativa y sistemas personalizados
+- toma de notas
+- se pueden tener bases de datos
+   → reuniones
+   → tareas
+   → y varias cosas mas
+- creación de dashboards
+- nuevas paginas con canvas en blanco
+
+# Bloques basicos
+- se pueden escribir texto libre o 3 encabezados (h1, h2, h3), se les puede editar, hasta en ecuaciones
+- se pueden crear varios tipos de listas:
+   → tareas
+   → viñetas
+   → lista numerada
+   → lista toggle, permite esconder contenido dentro de cada una
+   → resaltadores, bloques de cita, bloque callout (permite escoger un icono)
+   → separadores, separados en dos secciones diferentes
+   → columnas y colores para personalizar bloques basicos
+   → con los 6 puntitos se pueden mover y crear bloques --- crear landing page
+
+# Bloques avanzados
+- se encuentran en la segunda seccion
+   → tablas de contenido, se dedican a conseguir todos los encabezados en la pagina y se muestran en forma de jerarquia
+   → breadcrumbs
+      ⇒ muestra el camino que se debe de tomar para llegar a la pagina donde estoy
+   → ecuaciones, ecuaciones de bloque o de linea (estilo latex)
+   → botones de plantilla, sirve para usar una configuracion de bloques y usarse en otros
+   → mensiones: de persona (@), fecha (@, se pueden escoger recordatorios) o pagina
+
+# bloques de media o embends:
+- se puede agregar contenido de otras paginas
+- imagenes
+- paginas web
+- archivos
+- contenidos de aplicaciones
+
+# Bases de datos
+- en notion en base de datos
+- generalmente se ven en tablas
+- una forma en la que se organiza la información
+- se pueden diferenciar los tipos de datos
+- hay propiedades:
+   → basicas:
+      ⇒ titulo (texto)
+      ⇒ texto, esta es opcional la anterior no
+      ⇒ número para escribir numeros y darles formato
+      ⇒ seleccion unica, menu de opciones (solo una)
+      ⇒ seleccion multiple, aqui se pueden elegir varias etiquetas
+      ⇒ fecha y persona son identicas a las mensiones
+      ⇒ archivos que se pueden subir
+      ⇒ chackbox para verdadero/falso
+      ⇒ manejo de url con boton para ir a la pagina web
+      ⇒ uso email y correo
+   → avanzadas:
+      ⇒ se actualizan automaticamente
+      ⇒ fecha de creacion para cuando se captura cierta entrada
+      ⇒ creado por, dice quien lo creo
+- se puede organizar desde sort (nos permite ordenar por la propiedad que hallamos creado)
+- los filtros para solo ver un subconjunto de la informacion, es como un sql
+- vistas, nos deja ver diferentes formas de ver la información, nos permite calcular totales para cada final de columna
+- tablero, nos muestra la informacion como tarjetas (un trello), se pueden calcular valores
+- galeria, muestra toda la informacion en tarjetas estilo tablero
+- lista, se ven los iconos y al lado las propiedades
+- calendario, nos muestra las tareas y propiedades que se estan haciendo
+- linea de tiempo, calendario con tabla... gantt
+- relacionadas:
+   → se crea una propiedad con nombre y el tipo en avanzados sera con relacion
+   → rollup para obtener otras propiedades de la tabla relacionada, se puede hacer operaciones estadisticas basicas
+   → se pueden relacionar consigo misma
+   → sincronizada con dos columnas
+   → no sincronizada solo crea una columna
+- plantillas:
+   → se pueden agregar plantillas para repetir bases de datos
+
+# formulas
+- puede calcular datos de 4 tipos diferentes
+   → numeros
+   → texto
+   → fechas
+   → booleanos
+- las funciones se dividen:
+   → numericas
+   → texto
+   → fechas
+   → booleanos
+   → de conversion
+
+# Sistemas de productividad y organizacion
+- El método PARA es una forma de organizar información creado por Tiago Forte que te permite establecer una estructura simple y escalable para categorizar cada aspecto de interés, desde documentos hasta metas que quieras lograr. Este sistema consiste de cuatro espacios llamados Proyectos, Áreas, Recursos y Archivo (por eso se llama PARA), con los cuales podrás clasificar información relevante a distintos aspectos de tu vida de manera ordenada.
+
+- El sistema Getting Things Done o GTD, creado por David Allen, consiste en 5 pasos simples que debes aplicar para ordenar y filtrar la forma en la que recolectas información y tareas en el día a día. El método promete brindar un espacio estructurado para poder concentrarse y ser estratégico en la manera en la que completas tareas y obtienes información.
+   → capturar
+   → clasificar
+   → organizar
+   → refelexionar
+   → enganche
+
+- La matriz Eisenhower es una herramienta creada por Stephen Covey y basada en la forma de trabajar del ex-presidente de los Estados Unidos Dwight D. Eisenhower. Esta se basa en las cualidades de importancia y urgencia de una tarea para determinar cómo completarla, en qué momento y organizar una lista de tareas según 4 niveles de prioridad. Es especialmente útil para definir un orden específico en el que completar tareas, saber cuándo delegar y liberar un poco de tiempo dentro de lo posible.
+   → urgente e importante
+   → urgente y no importante
+   → no urgente e importante
+   → No urgente y no importante
+
+# Proyectos:
+- marco de tiempo
+- tareas
+- estado
+- progreso
+- se pueden organizar en un tabla
+- tareas:
+   → estado
+   → fecha limite
+   → prioridad
+   → proyecto
+- centro de conocimiento:
+   → cualquier aspecto de la vida
+   → tipo
+   → links
+   → archivos
+   → etiquetas
+   → fecha de creacion
+- dashboards
+   → puede ser compartido
+   → puede ser personal
+
+# Trucos e integraciones
+- creacion de pagina web:
+   → agregar permisos para compartir en web
+   → se puede comentar
+   → editar
+   → y compartir como plantilla
+- super.so
+   → link y dominio propio
+   → google analytics
+- fruituonsite:
+   → opensource
+   → mas manual y permite personalizar paginas
+- vercel:
+   → se puede crear un pagina web a partir de una base de de datos de notion
+- hostNotion y Notion2site:
+   → lo mismo que site pero mas nativa
+- Bloques globales:
+   → primero se crea un bloque simple
+   → 6 puntitos, se copia el link
+   → despues del so/, se incluye todo el link sobrante
+   → se queda el link con los datos desde el numeral
+   → se pega en un subpagina
+- agregado de mas columnas:
+   → crear la estructura en paginas aparte
+   → se one la pagina en el boton y se transforma el texto
+   → se elimina el texto de la pagina creada
+- bases de datos de color:
+   → crear la base
+   → crear un toggle y poner la base dentro del toogle
+- widgets:
+   → indify:
+      ⇒ widgets personalizados
+      ⇒ progreso de vida
+      ⇒ contador
+      ⇒ clima
+      ⇒ countdown
+   → aption:
+      ⇒ paypal
+      ⇒ omnicalculator
+      ⇒ formulario de correo
+      ⇒ link-copy
+      ⇒ codigo html, copiar codigo y ponerlo en las paginas
+- Web clipper:
+   → sirve para guardar cosas en notion desde chrome
+- app externas:
+   → slack:
+      ⇒ se pueden mandar actualizaciones de pagina a cualquier canal
+   → chillipepper:
+      ⇒ formularios enviados a las personas
+   → wunderpresentation:
+      ⇒ crear en una pagina la presentacion, toma el h1 como cada plantilla de la presentacion
+
+Errores:
+¿Qué símbolo se usa para crear y mencionar una nueva página?
+¿A cuál de estos formatos no se puede exportar una página de Notion?
+Una tabla, una lista y un calendario son diferentes ejemplos de bases de datos
+Al usar un toggle para darle color a una base de datos, si luego saco la base de datos del toggle, no mantendrĂ¡ su color -- verdadero
+Se pueden agregar múltiples columnas a las páginas, toggles y botones de plantilla arrastrando los bloques hacia la izquierda o derecha de otros bloques -- falso
+
+</rich_text>
+    </node>
+  </node>
+  <node name="Road to code" unique_id="22" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="#a52a2a" ts_creation="1620311539" ts_lastsave="1622842506">
+    <node name="introducion al desarrollo web" unique_id="23" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620311550" ts_lastsave="1621279593">
+      <rich_text># Como empezo todo
+- se queria resolver calculos
+   → ábaco
+   → calculadoras mecanicas
+   → computadoras humanas, libros de calculos
+   → primeras computadoras, los primeros programadores fueron mujeres
+   → tarjetas perforadas
+   → codigo maquina
+   → primeros lenguajes de programación
+
+# inputs y outputs
+- entrada -&gt; proceso -&gt; salida
+</rich_text>
+    </node>
+    <node name="javascript" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621291941" ts_lastsave="1621433512">
+      <rich_text># Tipos de variables
+- representacion de un valor en memoria
+- var [nombre] = [valor], sirve para que sepa que es una variable
+
+# Hoisting
+- solo funciona con ecmascript 5 para abajo
+- variables y funciones se declaran antes que se procese el codigo
+
+# Coherción
+- dos tipos:
+   → implicitas, cuando el lenguaje nos ayuda de una tipo a otro
+   → explicitas, forma en que obligamos de un tipo a otro
+
+# Truthy and Falsy
+- valores verdaderos y falsos por defecto</rich_text>
+    </node>
+    <node name="ecmaScript" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621639589" ts_lastsave="1621639756">
+      <rich_text># Default params y concatenacion
+- </rich_text>
+    </node>
+    <node name="js y v8" unique_id="29" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420892" ts_lastsave="1622467957">
+      <rich_text># Javascript engine</rich_text>
+    </node>
+    <node name="asincronismo" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622842506" ts_lastsave="1623727205">
+      <rich_text># Asincronismo
+- acción que no ocurre al mismo tiempo
+
+# Que es un callback
+- es una funcion que al crearla se le pasa como parametro otra funciòn
+
+¿Cual es el método recomendando por la comunidad para manejar asincronismo en JavaScript?
+¿Nos permite definir una función así­ncrona? 
+¿Para qué nos sirve el método "catch()"?
+</rich_text>
+    </node>
+  </node>
+</cherrytree>
