@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1626023332">
-    <node name="Analisis de negocios" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1626023332">
+    <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
 - solución matemática a un problema de negocio
@@ -87,7 +87,7 @@ Análisis cualitativo
 Toma de decisiones:
 - </rich_text>
     </node>
-    <node name="POO" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1618776094" ts_lastsave="1619095024">
+    <node name="POO" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1618776094" ts_lastsave="1619095024">
       <rich_text># Programación básica en POO-Python
 - es un modelado del mundo
 - se puede decomponer
@@ -139,7 +139,7 @@ Aproximaciones:
 
 </rich_text>
     </node>
-    <node name="Probabilidad y Estadistica, marce" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619978072" ts_lastsave="1623388351">
+    <node name="Probabilidad y Estadistica, marce" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619978072" ts_lastsave="1623388351">
       <rich_text># Conceptos básico
 - Probabilidad, que tan posible es que ocurra un evento
    → la probabilidad siempre va entre 0 y 1
@@ -247,7 +247,7 @@ Aproximaciones:
 - la formula es x(i) = a + bt
 </rich_text>
     </node>
-    <node name="regresion-python" unique_id="24" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620426905" ts_lastsave="1620654556">
+    <node name="regresion-python" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620426905" ts_lastsave="1620654556">
       <rich_text># Regresion líneal y machine learning
 - machine learner, usando modelos de regresion lineal
 - prediccion de datos por medio una linea, los datos que esten mas cerca de ella
@@ -273,7 +273,7 @@ Aproximaciones:
    → sirve para encontrar la inclinación
 - con el pomedio de puntos se puede encontrar bo, siendo y = avg(y) y la x = avg(x), y b1 es la inclinación</rich_text>
     </node>
-    <node name="Calculo basico" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621260505" ts_lastsave="1622078620">
+    <node name="Calculo basico" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621260505" ts_lastsave="1622078620">
       <rich_text># Aprendamos calculo
 - las matemáticas son un lenguaje, sirven para modelar y entender fenomenos de nuestra realidad
 - Descenso del gradiente es lo final
@@ -356,7 +356,7 @@ Aproximaciones:
    → w : w - {alpha}{grad}F
 - la limitacion es que si tienen muchas curvas puede caer en un minimo muy pequeño o puede variar mucho</rich_text>
     </node>
-    <node name="Probablidad" unique_id="28" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1624453808">
+    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1624453808">
       <rich_text># Que es la probablidad?
 - se usa en situaciones donde hay incertidumbre
 - la toma de decisiones con informacion incompleta
@@ -461,7 +461,7 @@ Una distribuciÃ³n de probabilidad es:
 
 </rich_text>
     </node>
-    <node name="algebra lineal" unique_id="30" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622838312" ts_lastsave="1623196812">
+    <node name="algebra lineal" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622838312" ts_lastsave="1623196812">
       <rich_text># Las bases
 - el tipo de datos se diferencia en los grados de libertad
 - escalar es un numero, variables normales en python
@@ -519,7 +519,7 @@ Una distribuciÃ³n de probabilidad es:
 - traza(ABC) = traza(ACB) = traza(CBA)
 - el determinante nos da el espejo del espacio</rich_text>
     </node>
-    <node name="visualizacion de datos" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623292658" ts_lastsave="1623770620">
+    <node name="visualizacion de datos" unique_id="9" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623292658" ts_lastsave="1623770620">
       <rich_text># Que es la visualización
 - el input: es la parte donde se inicializa la visualizacion de datos, se pone de forma estructurada o no estructurada
 - el output: es el producto final que sirve para reconocer patrones de forma visual
@@ -661,7 +661,7 @@ Una distribuciÃ³n de probabilidad es:
       <rich_text weight="heavy">T</rich_text>
       <rich_text>ime-bound</rich_text>
     </node>
-    <node name="estadistica descriptiva" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1626820666">
+    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1626820666">
       <rich_text>- Curso para descifrar lo que es cierto y lo que no
 
 # Que es estadistica descriptiva
@@ -770,10 +770,10 @@ Una distribuciÃ³n de probabilidad es:
 
 </rich_text>
     </node>
-    <node name="estadistica computacional" unique_id="47" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
+    <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
   </node>
-  <node name="devops" unique_id="14" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1630695860">
-    <node name="Curso de cloud computing" unique_id="16" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1630695860">
+    <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
 - las AMI son imagenes preconfiguradas
@@ -818,7 +818,7 @@ Una distribuciÃ³n de probabilidad es:
 - tiene soporte para varios lenguajes
 - Soporte para docker, go, java se, tomcat, .net, nodejs, php, python, ruby</rich_text>
     </node>
-    <node name="Curso de storage" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617750952" ts_lastsave="1619722086">
+    <node name="Curso de storage" unique_id="14" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617750952" ts_lastsave="1619722086">
       <rich_text>Storage en S3
 
 Caracteristicas de S3
@@ -964,7 +964,7 @@ que pasa con las versiones anteriores del versionamiento
 siendo el CIO de una empresa seleccionar el tipo de almacenamiento
 </rich_text>
     </node>
-    <node name="IBM" unique_id="20" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619734546" ts_lastsave="1619823923">
+    <node name="IBM" unique_id="15" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619734546" ts_lastsave="1619823923">
       <rich_text># IBM cloud
 - se puede conectar nuestro git con un toolchain que sirve para desplegar, muy parecido a CodeBuild, parece que tiene un web IDE donde se puede trabajar
 - IBM cloud lite (dev), se pueden usar solo algunos servicios, gratis, no expira, 256MB de memoria para cloud foundry
@@ -1024,7 +1024,7 @@ ERRORES:
 Después de desplegar una aplicación “starter” desde el catálogo, se puede acceder al código de muestra de la aplicación a través de la página “Getting Started”.
 ¿Cuál es el resultado de vincular una instancia de servicio a una aplicación Cloud Foundry en IBM Cloud?</rich_text>
     </node>
-    <node name="rds" unique_id="34" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801016" ts_lastsave="1625259642">
+    <node name="rds" unique_id="16" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801016" ts_lastsave="1625259642">
       <rich_text># Caracteristicas
 - se tiene compatibilidad con:
    → aurora
@@ -1192,7 +1192,7 @@ Después de desplegar una aplicación “starter” desde el catálogo, se puede
    → instancias small y medium y de tipo R (opt. de memoria)
    → se puede seleccionar la region</rich_text>
     </node>
-    <node name="networking" unique_id="39" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625236500" ts_lastsave="1625420838">
+    <node name="networking" unique_id="17" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625236500" ts_lastsave="1625420838">
       <rich_text># Introduccion
 - Una familia de servicios
 - optimización de la red
@@ -1272,7 +1272,7 @@ CloudFront
 
 </rich_text>
     </node>
-    <node name="despliegue de apps" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625423192" ts_lastsave="1625494503">
+    <node name="despliegue de apps" unique_id="18" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625423192" ts_lastsave="1625494503">
       <rich_text># Historia:
 - apps de escritorio:
    → linea de comandos
@@ -1329,7 +1329,7 @@ CloudFront
 - se pueden desplegar backends
 - es un PAAS</rich_text>
     </node>
-    <node name="big data" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625508695" ts_lastsave="1625785979">
+    <node name="big data" unique_id="19" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625508695" ts_lastsave="1625785979">
       <rich_text># Intro
 - en la nube se puede tener un crecimiento escalable
 - crecimiento por demanda, servicios escalables
@@ -1543,7 +1543,7 @@ recursos, es obligatorio y es para saber que se va a crear
    → hosting, almacenamiento de software riesgoso o malintencionado
 </rich_text>
     </node>
-    <node name="Infra as code" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625506996" ts_lastsave="1625605027">
+    <node name="Infra as code" unique_id="20" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625506996" ts_lastsave="1625605027">
       <rich_text># Intro
 - herramientas
    → hay varias, cloudformation sera el fundamental
@@ -1729,7 +1729,7 @@ En la creación de un ROLE en Cloudformation, ¿qué opción debe ser habilitada
 ¿Cuál función utilizarías para obtener un true si alguno de los valores es falso en un arreglo?
 </rich_text>
     </node>
-    <node name="docker" unique_id="48" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626358714" ts_lastsave="1627941892">
+    <node name="docker" unique_id="21" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626358714" ts_lastsave="1627941892">
       <rich_text># Problemas del desarrollo del software en general:
 - Construir:
    → solo es una pequeña parte
@@ -1862,7 +1862,7 @@ Uso de .dockerignore:
 
 </rich_text>
     </node>
-    <node name="Azure" unique_id="53" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1628261625" ts_lastsave="1632417701">
+    <node name="Azure" unique_id="22" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1628261625" ts_lastsave="1632417701">
       <rich_text># Aprenidiendo sobre la nube
 - abstraccion de muchas cosas
 - que no es:
@@ -2284,13 +2284,13 @@ modelos de madurez
 - procesos
 - tecnologia</rich_text>
     </node>
-    <node name="kubernetes" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629332219" ts_lastsave="1629332243">
+    <node name="kubernetes" unique_id="23" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629332219" ts_lastsave="1629332243">
       <rich_text>para crear y acceder a un pod
 
 kubectl run nginx --image=nginx:alpine --port=80
 kubectl port-forward nginx 7000:80</rich_text>
     </node>
-    <node name="AWS Certified Developer - Associate" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629731276" ts_lastsave="1629737116">
+    <node name="AWS Certified Developer - Associate" unique_id="24" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629731276" ts_lastsave="1629737116">
       <rich_text># What to expect
 - examen de opcion multiple
 - es de 65 preguntas
@@ -2310,7 +2310,7 @@ lectura de dynamo pueden ser:
 - en excritura cada una siemrpe usa una unidad aun siendo menos de 1KB
 - se pueden usar streams, para ciertsa operaciones, dondelas lambdas pueden procesar esa data</rich_text>
     </node>
-    <node name="azure IaaS" unique_id="58" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1630696518">
+    <node name="azure IaaS" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1630696518">
       <rich_text># Manejando la nube de azure
 
 - Se divide en IaaS y en PaaS
@@ -2325,8 +2325,8 @@ lectura de dynamo pueden ser:
       ⇒ saber que es capaz de hacer el sistema</rich_text>
     </node>
   </node>
-  <node name="JS" unique_id="44" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
-    <node name="fontend-dev" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
+  <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
+    <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
       <rich_text>- html, es un lenguaje de marcado, estructura el sitio web
 - css, permita crear un diseño agradable
 
@@ -2457,13 +2457,13 @@ Con flexbox (con el valor por defecto de flex-direction) para centrar un element
       <rich_text> es un lector de pantalla?
 </rich_text>
     </node>
-    <node name="Curso practico JS" unique_id="49" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626820687" ts_lastsave="1626820687"/>
-    <node name="closures y scope" unique_id="52" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1628030397" ts_lastsave="1628030400">
+    <node name="Curso practico JS" unique_id="28" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626820687" ts_lastsave="1626820687"/>
+    <node name="closures y scope" unique_id="29" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1628030397" ts_lastsave="1628030400">
       <rich_text>el scope es el alcance que tiene la variable dentro del codigo
 - local
 - global</rich_text>
     </node>
-    <node name="node1" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630594410" ts_lastsave="1632930112">
+    <node name="node1" unique_id="30" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630594410" ts_lastsave="1632930112">
       <rich_text>¿Cuál es el comando para listar los paquetes y módulos instalados?
 npm list -g --depth 0
 ¿Cuál es el comando que nos permite ver todo el output en la terminal/consola?
@@ -2493,9 +2493,9 @@ Los métodos mas populares de un Readable stream son:
 </rich_text>
     </node>
   </node>
-  <node name="Juegos" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1631657919">
-    <node name="Descriptions" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
+  <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1631657919">
+    <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
 	Guessing
@@ -2589,7 +2589,7 @@ Describir tu hogar
 
 </rich_text>
     </node>
-    <node name="reto" unique_id="50" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627231811" ts_lastsave="1627232346">
+    <node name="reto" unique_id="34" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627231811" ts_lastsave="1627232346">
       <rich_text>What is your favorite place? Describe it below in the comments!
 In this moment my favorite place is my house, especially my “office”, it is a special room in my house where I have my computer, my controls, my chair, one large desktop in L and other things. It is a medium room, whit 3 windows, one door, it very bright and quiet, the weather is little warm, this is caused by the computer when is worked.
 
@@ -2602,7 +2602,7 @@ small
 Noise - ruidoso
 Quiet - silencioso</rich_text>
     </node>
-    <node name="reto" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627536290" ts_lastsave="1627539650">
+    <node name="reto" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627536290" ts_lastsave="1627539650">
       <rich_text>• Wake up (Despertarse)
 • Get up (Levantarse)
 • Take a shower ( tomar una ducha)
@@ -2624,14 +2624,14 @@ I wake up at 7:30 am, I get up at 8:00 am, I have breakfast at 9:00 am, usually 
 describe family
 We are three in my family, my son, my wife and I, my son is a little boy, his name is Leo, he has various play doh of color blue, green, yellow and white, my wife is student of gastronomy, her name is Stephani, I'm engineer, I'm work in my house and I have one computer of color grey</rich_text>
     </node>
-    <node name="metas" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1629764319">
+    <node name="metas" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1629764319">
       <rich_text>asimilar 10 palabras
 anotar palabras nuevas
 asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1634258739">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1635103757">
       <rich_text>
 In the morning
 In the afternoon
@@ -2886,11 +2886,25 @@ What is it like?
 - what is your best friend like? - this is for descriptions, this is a description in personality
 - what does your best friend like? - this for likes as food or music, interest
 - what does you best friend look like? - this for phisical aparience
-- what is your bedroom like? - </rich_text>
+- what is your bedroom like? - this is used with profesions and places
+
+The weather
+
+yesterdar, I was only documenting regarding this point, checar los “ando endo” del ingles
+I'm Swiss knife
+I am sleepy
+verify to check
+generate
+
+-- new words to use with reflexive pronouns
+- blame, culpar
+- cur, cortar
+- enjoy, disfrutar
+- hep</rich_text>
     </node>
   </node>
-  <node name="Matematicas" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
-    <node name="calculo" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840076" ts_lastsave="1617842337">
+  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
+    <node name="calculo" unique_id="39" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840076" ts_lastsave="1617842337">
       <rich_text>Funcion
 - es una relación entre dos conjuntos a traves de la cual cada elemento le corresponde un unico elemento ninguno del otro conjunto
 - hay variables dependientes e independientes
@@ -2908,11 +2922,11 @@ Que es una derivada?
 </rich_text>
     </node>
   </node>
-  <node name="Nuevos lenguajes" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
-    <node name="Algoritmos y pensamiento logico" unique_id="9" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1619532705"/>
+  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
+    <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1619532705"/>
   </node>
-  <node name="Go" unique_id="18" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1623801007">
-    <node name="Arquitectura de software" unique_id="19" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
+  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1623801007">
+    <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
 Entender el rol del arquitecto
@@ -3041,7 +3055,7 @@ De las formas en las que podemos trabajar con las dificultades esenciales, ¿cu�
 El usuario podrá comprar con tarjeta de crédito a través del sistema, ¿qué tipo de requerimiento es?
 En los frameworks web modernos existe el concepto de middleware,  que describe una forma de interceptar el pedido o la respuesta del  sistema con componentes desarrollados independientes uno del otro. ¿Qué  estilo de arquitectura están implementando?</rich_text>
     </node>
-    <node name="bases de datos" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801007" ts_lastsave="1625170789">
+    <node name="bases de datos" unique_id="44" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801007" ts_lastsave="1625170789">
       <rich_text>## Necesitamos crear un proyecto que haga de GO el backend y si es posible de front con angular... dockers o kubernetes
 
 - crear entidades de la base de datos
@@ -3155,8 +3169,8 @@ En los frameworks web modernos existe el concepto de middleware,  que describe u
 </rich_text>
     </node>
   </node>
-  <node name="Crecimiento personal" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
-    <node name="Personalidad y productividad" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
+  <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
+    <node name="Personalidad y productividad" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
       <rich_text>Que es ser productivo??
 - no es ser una persona que trabaja mucho, implica tener mas cuidado de uno que del trabajo como tal
 - una persona productiva es capaz de producir, hacer uso de sus recursos, tiempo y espacio de manera efectiva para entregar un producto
@@ -3437,7 +3451,7 @@ Definir User persona
 
 </rich_text>
     </node>
-    <node name="notion" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625837110" ts_lastsave="1627235312">
+    <node name="notion" unique_id="47" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625837110" ts_lastsave="1627235312">
       <rich_text>las bases de datos son practicamente tablas para organizar la información
 se diferencias las tablas (simples) de las bases de datos en que tiene estructura
 
@@ -3647,8 +3661,8 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
 </rich_text>
     </node>
   </node>
-  <node name="Road to code" unique_id="22" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="#a52a2a" ts_creation="1620311539" ts_lastsave="1622842506">
-    <node name="introducion al desarrollo web" unique_id="23" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620311550" ts_lastsave="1621279593">
+  <node name="Road to code" unique_id="48" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#a52a2a" ts_creation="1620311539" ts_lastsave="1622842506">
+    <node name="introducion al desarrollo web" unique_id="49" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620311550" ts_lastsave="1621279593">
       <rich_text># Como empezo todo
 - se queria resolver calculos
    → ábaco
@@ -3663,7 +3677,7 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
 - entrada -&gt; proceso -&gt; salida
 </rich_text>
     </node>
-    <node name="javascript" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621291941" ts_lastsave="1621433512">
+    <node name="javascript" unique_id="50" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621291941" ts_lastsave="1621433512">
       <rich_text># Tipos de variables
 - representacion de un valor en memoria
 - var [nombre] = [valor], sirve para que sepa que es una variable
@@ -3680,14 +3694,14 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
 # Truthy and Falsy
 - valores verdaderos y falsos por defecto</rich_text>
     </node>
-    <node name="ecmaScript" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621639589" ts_lastsave="1621639756">
+    <node name="ecmaScript" unique_id="51" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1621639589" ts_lastsave="1621639756">
       <rich_text># Default params y concatenacion
 - </rich_text>
     </node>
-    <node name="js y v8" unique_id="29" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420892" ts_lastsave="1622467957">
+    <node name="js y v8" unique_id="52" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420892" ts_lastsave="1622467957">
       <rich_text># Javascript engine</rich_text>
     </node>
-    <node name="asincronismo" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622842506" ts_lastsave="1623727205">
+    <node name="asincronismo" unique_id="53" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622842506" ts_lastsave="1623727205">
       <rich_text># Asincronismo
 - acción que no ocurre al mismo tiempo
 
