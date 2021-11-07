@@ -2631,7 +2631,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1635103757">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636072295">
       <rich_text>
 In the morning
 In the afternoon
@@ -2900,7 +2900,64 @@ generate
 - blame, culpar
 - cur, cortar
 - enjoy, disfrutar
-- hep</rich_text>
+- help, ayudar
+- hurt, lastimar
+- introduce, presentarse
+- prepare, preparar
+- teach, enseñar
+
+this is possible change the mean of verb: Help </rich_text>
+      <rich_text weight="heavy">yourself</rich_text>
+      <rich_text> to some coffee.(Sírvete un café tú mismo.)
+
+preposition of time
+- at is used for a specific time
+- exception:
+   → at night, I go to sleep
+   → at christmas, we eat a lot of food (for holydays)
+
+Use of ing
+- I like|love|hate + verb+ing
+
+expressing intentions
+- I want to + verb (intention)
+   → I want to swim
+- I don't want to... (negative)
+
+How far, long and often?
+- long for duration of time
+- far is for distance (kilometers)
+- often is for frequency (every 15 mins)
+
+Common past verbs
+- eat  -- ate
+- give   -- gave
+- write  -- wrote
+- go  -- went
+- see  -- saw
+- feel  -- felt
+- make  -- made
+- do  -- did
+- drink  -- drank
+- know  -- knew
+- fly  -- flew
+- Another
+   → put, cut, read and hit
+- To be, feeling states and physical places:
+   → was, i she and he
+   → were, we they and you
+
+Did and Didn't
+- is an auxiliar verb in past, negatives and questions
+
+Preposition
+- in - dentro
+- on - sobre de algo
+- above - encima algo
+- between - entre
+- under (belove)- abajo
+- next to - al lado
+- near - cerca</rich_text>
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
