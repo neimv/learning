@@ -772,7 +772,7 @@ Una distribuciÃ³n de probabilidad es:
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1630695860">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1636378909">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -2324,6 +2324,68 @@ lectura de dynamo pueden ser:
       ⇒ por medio de dibujos que se va a hacer
       ⇒ saber que es capaz de hacer el sistema</rich_text>
     </node>
+    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1636556439">
+      <rich_text># Computo en la nube
+- computo bajo demanda y auto servicio
+- conectado a la red
+- economias de escala
+- elasticidad, cuando se require que los recursos cambien rapidamente
+- servicio medido
+- * es una computadora enorme de escala mundial
+
+# Esquema del datacenter
+- 22 regiones, 67 zonas, 140 puntos y 96 CDN
+- estan cerca de cuerpos de agua, se usa como enfriamiento
+- con energia renovable para los datacenter, no todos estan al 100% con energia renovable
+- PMDC - centros de distribucion de energia
+- se unen por fibra optica
+- networking room - se conectan la red y cluster de Jupyter, se distribuye cada una de las solicitudes
+- Jupyter network equipment - se absorven la mayor cantidad de datos, conecta todos los data center a la red global de G
+- LOAD BALANCER, PARA DISTRIBUIR LA CARGA de los servicios de google
+- water pipes, el agua que se usa para enfriar las computadoras
+- Hot hut, espacio para mover el aire caliente
+- cooling plant, mueve toda el agua caliente y obtiene nueva agua fria
+
+# Eras del computo
+- maquinas virtuales
+- infraestructura en la nube
+- nube transformacional
+
+# Arquitecturas en GCP
+- Maquinas virtuales
+- GKE, aplicaciones computarizadas (google, kubernetes engine)
+- app engine, cero administacion de servidores
+- cloud run, contenedores serverless
+- cloud functions, funciones serverless
+- firebase, PaaS de front-end y desarrollo movil
+
+# La red de google
+- basado en topologia de capas
+- jupiter data, dentro del data center
+- b4 backbone, datacenter to datacenter
+- b2 backbone, google to internet
+- espresso, SDN peering edge
+- Global VPC
+- Global cloud load balancing
+- DNS de baja latencia
+- Content delivery networks
+- vpc service controls
+- network monitoring
+- defensa contra DDoS y los ataques web
+
+# Regiones y zonas
+- una region es donde se tienen varias zonas
+- cada zona es donde vive cada un datacenter
+
+# API abiertas
+- Multi cloud patterns
+   → generacion de deployments complejos, en diferentes nubes
+- Anthos
+   → permite crear y administrar aplicaciones modernas
+
+# Beneficio de google cloud
+- </rich_text>
+    </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
@@ -2631,7 +2693,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636072425">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636485596">
       <rich_text>
 In the morning
 In the afternoon
@@ -2963,12 +3025,65 @@ Preposition
 - to = before
 
 Wh question:
-- what asking about things or information
-- where
-- why
-- when
-- which
-- who</rich_text>
+- what, asking about things or information
+- where, location or place
+- why, reason of something
+- when, for time
+- which, two options or objects
+- who. a person o people
+
+# A2 - preguntas y respuestas
+- Determiners singular and plural:
+   → this, is for singular and close distances
+   → that, is for singular and far distances
+   → these, plural and near
+   → those, plural and far
+- Present continuos
+   → at the moment
+   → subject + verb-be = verb(ing)
+- Contables an uncountables
+   → contables
+      ⇒ 
+   → uncontables
+      ⇒ sugar
+      ⇒ beer
+      ⇒ food
+      ⇒ money
+      ⇒ time
+      ⇒ fruit
+   → quantifiers
+      ⇒ any: questions and negative
+      ⇒ some: affirmative
+- how much and how many:
+   → much:
+      ⇒ for uncontable nouns
+      ⇒ price of something
+      ⇒ with singular and plural nouns
+   → many:
+      ⇒ contable nouns
+      ⇒ quantity of something
+      ⇒ only with plural nouns
+- At as preposition of time
+   → for specific time
+      ⇒ used with at night:
+         • at night, i go to sleep
+         • at christmas, we eat a lot of food
+- references using ing
+   → used with like, love and hate + verb-ing
+   → or used with like, love and hate + to + verb (without ing)
+- Expressing intentions
+   → I want to + verb (intention)
+      ⇒ I want to swim
+      ⇒ I wanto to eat pizza
+   → Negative: I don't want to...
+- How long, far and often
+   → How long
+      ⇒ use for duration or time 
+   → How far
+      ⇒ is use for distances
+   → How often
+      ⇒ is for frequency
+- especial words: “lift-and-shift”, “lift, tinker, and shift,”</rich_text>
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
