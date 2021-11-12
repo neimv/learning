@@ -2324,7 +2324,7 @@ lectura de dynamo pueden ser:
       ⇒ por medio de dibujos que se va a hacer
       ⇒ saber que es capaz de hacer el sistema</rich_text>
     </node>
-    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1636555997">
+    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1636556502">
       <rich_text># Computo en la nube
 - computo bajo demanda y auto servicio
 - conectado a la red
@@ -2381,7 +2381,17 @@ lectura de dynamo pueden ser:
 - Multi cloud patterns
    → generacion de deployments complejos, en diferentes nubes
 - Anthos
-   → permite crear y administrar aplicaciones modernas</rich_text>
+   → permite crear y administrar aplicaciones modernas
+
+# Beneficios de google cloud
+- Nube inteligente
+- abierta y flexible
+- colaboracion y productividad
+- segura
+- sustentable
+- ahorrar costos
+- facil de usar
+- soluciones de industria</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -2690,7 +2700,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636485596">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636678951">
       <rich_text>
 In the morning
 In the afternoon
@@ -3080,7 +3090,43 @@ Wh question:
       ⇒ is use for distances
    → How often
       ⇒ is for frequency
-- especial words: “lift-and-shift”, “lift, tinker, and shift,”</rich_text>
+- especial words: “lift-and-shift”, “lift, tinker, and shift,”
+- past verbs include was and were
+   →  Eat, ate
+   → give, gave
+   → write, wrote
+   → go, went
+   → see, saw
+   → feel, felt
+   → make, made
+   → do, did
+   → drink, drank
+   → know, knew
+   → fly, flew
+   → other interesting
+      ⇒ put, cut, read and hit
+      ⇒ was: I, she and he, it
+      ⇒ were: we, they and you
+- do and did
+   → is an auxiliar verb, in negative form is necesary
+   → with positive is posible use “I did go to the park” or “I went to the park”
+- with possessives “estructure”: that|those is|are {person}'s {object}
+- Preposition of place
+   → In, dentro
+   → on, sobre algo
+   → above, encima de algo
+   → between, entre
+   → under o below, bajo
+   → next to, al lado de, de formar cercana
+   → near, al lado de de forma lejana
+- Past == after
+- tpo == before
+- Wh questions:
+   → What
+   → where
+   → why
+   → when
+   → w</rich_text>
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
