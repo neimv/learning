@@ -2700,7 +2700,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636678951">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636678962">
       <rich_text>
 In the morning
 In the afternoon
@@ -3122,11 +3122,12 @@ Wh question:
 - Past == after
 - tpo == before
 - Wh questions:
-   → What
-   → where
-   → why
-   → when
-   → w</rich_text>
+   → What, asking about things or information
+   → where, location or place
+   → why, reason for something
+   → when, for time
+   → which, two options or objects
+   → who, a person or people</rich_text>
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
