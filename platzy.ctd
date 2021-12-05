@@ -2324,7 +2324,7 @@ lectura de dynamo pueden ser:
       ⇒ por medio de dibujos que se va a hacer
       ⇒ saber que es capaz de hacer el sistema</rich_text>
     </node>
-    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1636680356">
+    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1637615494">
       <rich_text># Computo en la nube
 - computo bajo demanda y auto servicio
 - conectado a la red
@@ -2393,7 +2393,50 @@ lectura de dynamo pueden ser:
 - facil de usar
 - soluciones de industria
 
-# </rich_text>
+# Seguridad de varias capas
+- on premise de nosotros depende completamente la seguridad
+- IaaS, el provedor le toca el hardware y su conectividad
+- PaaS, toda la seguridad de usuario, accesos y autorizaciones
+- SaaS, el usuario solo se responsabiliza de las politicas de acceso y el contenido
+- usar imagenes bases seguras, usar escaneadores de seguridad, autorizacion binaria (para solo correr en la infraestructura), shielded container, sandbox de contenedores, container threat detection
+
+# Proteccion de los datos
+- se guarda la informacion en diferentes discos duros, particionada y cifrada
+- las llaves se cifran con otra llave
+
+# Presupuesto y facturacion
+- las billing accounts son el vehiculo de pago para los gastos de GCP
+- billing acount
+- payments profiles, metodos de pago
+- tipos de convenios:
+   → self serve, no se require de contrato para usar GCP
+   → existen otros contratos con GCP donde ellos mandan una factura y ya se paga
+- se recomienda tener un solo billing account por organizacion
+- exportar todos los datos de facturacion a big query
+
+# Jerarquia de recursos
+- sirve para la gestion
+- todo es un recurso
+- se crean en:
+   → organizacion, la raiz de la jerarquia de recursos, 50 cloud identities sin costo
+   → Folder, modela la estructura organizacional, contenedores para proyectos y carpetas
+   → proyectos, son los que tiene los recursos computacionales
+
+# IAM
+- quien, persona o subsistema que puede hacer algo en el cloud, confianza cero
+- puede hacer que, referencia a los permisos, un rol es una coleccion de permisos, los roles se asignan a grupos, las politicas se pueden asignar a varios niveles, desde organizacion hasta un solo recurso
+- en cual recurso
+
+# Roles de IAM
+- se asignan roles a grupos, no a usuarios
+- grupos de cajon:
+   → org admin, gestionan la organizacion
+   → administradores de red
+
+# Errores:
+¿Qué ha pasado desde que se usa inteligencia artificial en las instalaciones de GCP?
+¿Cuál es una ventaja de usar el Cloud Marketplace al armar tu solución de software empresarial?
+</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -2702,7 +2745,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1636910084">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1638321230">
       <rich_text>
 In the morning
 In the afternoon
@@ -3133,6 +3176,48 @@ Wh question:
 
 Which question is correct?
 Did you finish your homework?
+
+
+# Basic connectors
+- connects ideas
+- and, is used by addition
+- but, is used to contrast
+- or, is used for multiple options
+
+# Articles
+- the, refer to specific, people, things or situations
+   → specific people:
+      ⇒ only one or unique person
+      ⇒ particular person
+      ⇒ groups of people
+      ⇒ families
+   → things:
+      ⇒ musical instruments
+      ⇒ only one in the place
+      ⇒ particular place
+      ⇒ famouse monuments, builds, museums
+      ⇒ hotels, bars and restaurants
+      ⇒ unique things
+   → situations
+   → ordinal numbers
+   → decades
+   → geografical areas
+   → countries (plural names, republic, kingdom, states)
+- Not use:
+   → name of cities or countries
+   → years
+   → professions
+   → people's names and titles combined wirh names
+   → meals
+   → languages
+
+kick boxing
+korn flakes
+
+kill
+killed
+
+
 </rich_text>
     </node>
   </node>
