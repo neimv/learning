@@ -2324,7 +2324,7 @@ lectura de dynamo pueden ser:
       ⇒ por medio de dibujos que se va a hacer
       ⇒ saber que es capaz de hacer el sistema</rich_text>
     </node>
-    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1636556502">
+    <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1636680356">
       <rich_text># Computo en la nube
 - computo bajo demanda y auto servicio
 - conectado a la red
@@ -2391,7 +2391,9 @@ lectura de dynamo pueden ser:
 - sustentable
 - ahorrar costos
 - facil de usar
-- soluciones de industria</rich_text>
+- soluciones de industria
+
+# </rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
