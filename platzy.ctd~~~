@@ -2310,7 +2310,7 @@ lectura de dynamo pueden ser:
 - en excritura cada una siemrpe usa una unidad aun siendo menos de 1KB
 - se pueden usar streams, para ciertsa operaciones, dondelas lambdas pueden procesar esa data</rich_text>
     </node>
-    <node name="azure IaaS" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1630696518">
+    <node name="azure IaaS" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1640619838">
       <rich_text># Manejando la nube de azure
 
 - Se divide en IaaS y en PaaS
@@ -2322,7 +2322,20 @@ lectura de dynamo pueden ser:
    → depende mucho de la experiencia
    → arquitectura propuesta
       ⇒ por medio de dibujos que se va a hacer
-      ⇒ saber que es capaz de hacer el sistema</rich_text>
+      ⇒ saber que es capaz de hacer el sistema
+- Como se elige una maquina virtual:
+   → par que la voy a usar?
+   → cuanto tiempo estara encendida?
+   → se trata de una aplicacion de investigacion o productiva
+   → cual sera el retorno de la inversion de mi MV
+   → los requisitos principales pueden cambiar dependiendo de lo que se necesita
+   → los tamanios se pueden especificar
+   → existen 11 niveles de maquinas, las m de memory, son de las mas grandes
+   → de preferencia aprendiendo se recomienda prender y apagar mientras se aprende
+   → en productivo ya debe de estar prendida y deberiamos de tener 2 una de prod y otra para pruebas
+   → se manejan dos tipos de sistemas operativos, windows (server y desktop) y linux
+- Costos:
+   → </rich_text>
     </node>
     <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1637615494">
       <rich_text># Computo en la nube
@@ -2745,7 +2758,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1637631726">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1639532069">
       <rich_text>
 In the morning
 In the afternoon
@@ -3209,7 +3222,27 @@ Did you finish your homework?
    → professions
    → people's names and titles combined wirh names
    → meals
-   → languages</rich_text>
+   → languages
+
+kick boxing
+korn flakes
+
+kill
+killed
+laidback - relajado
+
+blue
+megaman
+switch
+share button
+sad
+innocence
+sky
+
+
+
+
+</rich_text>
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
