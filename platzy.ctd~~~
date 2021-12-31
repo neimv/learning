@@ -772,7 +772,7 @@ Una distribuciÃ³n de probabilidad es:
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1636378909">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1640736033">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -2310,7 +2310,7 @@ lectura de dynamo pueden ser:
 - en excritura cada una siemrpe usa una unidad aun siendo menos de 1KB
 - se pueden usar streams, para ciertsa operaciones, dondelas lambdas pueden procesar esa data</rich_text>
     </node>
-    <node name="azure IaaS" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1640619838">
+    <node name="azure IaaS" unique_id="25" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1630695860" ts_lastsave="1640726561">
       <rich_text># Manejando la nube de azure
 
 - Se divide en IaaS y en PaaS
@@ -2335,7 +2335,13 @@ lectura de dynamo pueden ser:
    → en productivo ya debe de estar prendida y deberiamos de tener 2 una de prod y otra para pruebas
    → se manejan dos tipos de sistemas operativos, windows (server y desktop) y linux
 - Costos:
-   → </rich_text>
+   → uso de calculadora para estimacion de costos
+   → la region si influye
+   → el tipo de discos
+- todas las herramientas son hechas con python
+- az vm list|create  --- para maquinas virtuales
+- az vm extension --- para ejecutar scripts
+- la modificacion del tama;o se hace desde Size</rich_text>
     </node>
     <node name="GCP" unique_id="54" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#3465a4" ts_creation="1636378908" ts_lastsave="1637615494">
       <rich_text># Computo en la nube
@@ -2450,6 +2456,62 @@ lectura de dynamo pueden ser:
 ¿Qué ha pasado desde que se usa inteligencia artificial en las instalaciones de GCP?
 ¿Cuál es una ventaja de usar el Cloud Marketplace al armar tu solución de software empresarial?
 </rich_text>
+    </node>
+    <node name="digital ocean" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1640736033" ts_lastsave="1640795476">
+      <rich_text>Digital Ocean and IaaS
+- llevando la app desde la personal a la web
+- la nube son servicios accesibles gracias al navegador
+- IaaS, SaaS, PaaS
+
+Cuando usarlo
+- Hosting gratuito
+- Shared Hosting
+- VPS, servidor privado virtual, aqui es donde es usable
+- Dedicado
+- Cloud (PaaS/IaaS)
+- Datacenter
+
+que es un dropley?
+- es la forma de llamar a lo VSP de digital ocean
+- ofrece sistemas de almacenamiento que son volumenes y spaces
+   → volumes, son bloques de estados solido que se pueden conectar a los droplets, se puede aumentar su espacio
+   → spaces, sistemas de almacenamiento masivo para CDNs (red de entrega de contenidos)
+
+Market place:
+- maquinas ya preconfiguradas
+- es importante agregar el 2FA por si cualquier cosa llegara a pasar, account, security
+- se tienen codigos backup por si se llegara a perder el celular o no llegara el mensaje
+- se modifica contrase;a en acess
+- sshd_config para cambiar el puerto del ssh, en /etc/ssh, systemctl reload sshd
+
+Volumes:
+- particiones de disco ssd que se pueden agregar a droplets
+
+- resize, escalamiento vertical, se agregan mas recursos internos del droplet
+   → se tiene que apagar la maquina primero
+   → el cambio de disco no es reversible
+- tambien hay escalamiento horizontal cuando agregamos mas droplets
+
+Networking
+- se puede crear IP privadas
+   → se puede usar cuando un droplet no se quiere que tenga acceso, y alguno otros nos den salida
+   → para agregar la ip privada se tiene que ejecutar: lshw -class network, se busca serial y se obtiene la MAC
+   → se asocia la red con la MAC en /etc/netplan/{nombre del droplet} y se agrega en ese archivo la MAC y la IP
+   → floating ip, sirve para agregar mas IPs publicas
+   → ICMP para hacer ping, si se quita no se sabe si esta activa
+
+Backups y snapshots
+- los backups son copias de seguridad que se general una vez al dia, cuestan un dolar al mes, son solo archivos
+- los snapshots son copias exacta de como esta el droplet, son utiles cuando se hace un cambio en el SO
+
+History y destroy
+- muestra todo lo que ha pasado con el droplet
+- destroy para eliminar el droplet
+
+Tags
+- las tags son una forma de agrupar todos los droplets que se tienen
+- recovery, permite inicar el droplet desde una ISO
+- graphs son las estadisticas de lo que se tiene en el droplet, se pueden ver los</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
