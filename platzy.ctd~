@@ -2457,7 +2457,7 @@ lectura de dynamo pueden ser:
 ¿Cuál es una ventaja de usar el Cloud Marketplace al armar tu solución de software empresarial?
 </rich_text>
     </node>
-    <node name="digital ocean" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1640736033" ts_lastsave="1640809549">
+    <node name="digital ocean" unique_id="55" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1640736033" ts_lastsave="1640809663">
       <rich_text>Digital Ocean and IaaS
 - llevando la app desde la personal a la web
 - la nube son servicios accesibles gracias al navegador
@@ -2515,7 +2515,8 @@ Tags
 
 API
 - se requiere un token de acceso
-- manage - API</rich_text>
+- manage - API
+- </rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -2687,7 +2688,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1631657919">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1641243242">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -3309,6 +3310,12 @@ sky
 
 
 </rich_text>
+    </node>
+  </node>
+  <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
+    <node name="Arquitectura backend" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243251" ts_lastsave="1641243424">
+      <rich_text>- Que es backend
+   → es el sofware que se ejecuta en el servidor</rich_text>
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
