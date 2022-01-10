@@ -772,7 +772,7 @@ Una distribuciÃ³n de probabilidad es:
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1640736033">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1641688094">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -2518,6 +2518,105 @@ API
 - manage - API
 - </rich_text>
     </node>
+    <node name="swarm" unique_id="58" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641578803" ts_lastsave="1641672202">
+      <rich_text>- Routing mesh
+   → multiple tareas de un servicio corriendo y que se puede acceder por el mismo puerto
+- PORT: </rich_text>
+      <rich_text family="monospace">--publish published=8080,target=80</rich_text>
+      <rich_text>
+- NODE: </rich_text>
+      <rich_text family="monospace">--constraint node.labels.region==east</rich_text>
+      <rich_text>, </rich_text>
+      <rich_text family="monospace">-e constraint:node==csx00153</rich_text>
+      <rich_text>
+- STACK: docker stack deploy {file} name, docker stack rm app
+- Productivo:
+   → rotacion de leader
+   → los lideres siempre tiene que ser impares
+   → para productivo son minimo 3
+- herramientas
+   → traeffic
+   → portainer
+- Productivo
+   → house kipping, mantenimiento en espacio en disco
+   → meltwater/docker-cleanup, modo global sirve para que este en todos los nodos</rich_text>
+    </node>
+  </node>
+  <node name="K8s" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641688094" ts_lastsave="1641776525">
+    <rich_text>- Bases de contenedores
+   → es un namespace + cgroups + chroot
+      ⇒ Namespaces: vistas de los recursos del SO
+      ⇒ Cgroups: Limitan y miden los recursos del SO
+      ⇒ Chroot: Cambia el root directory de un proceso
+   → un pod es un grupo de contenedores
+   → todos los contenedores que esten dentro de un POD comparten la misma namespace de red, tienen la misma ip de red
+   → al escalar se crean copias del mismo pod
+- raft consensus, si llega a pasar que se pierda el nodo master
+- kubelet, crawler para revisar recursos
+- kube-proxy, redirecciona a donde se tienen que ir los paquetes
+- Modelos
+   → declarativo
+      ⇒ K8s es un sistema declarativo
+      ⇒ que quiero
+      ⇒ es sencillo cuando se sabe que quiere
+      ⇒ todo se crea desde un spec para decribir cual es el estado deseado
+   → Imperativo
+      ⇒ como hacer lo que quiero
+- networking
+   → todo el cluster es una gran red del mismo segmento
+   → todos los nodos se conectan entre si, sin nat
+   → todos los pod deben conectarse entre si, sin nat
+   → se usa kube-proxy
+   → los pods estan en capa 3 y los servicios en capa 4
+   → container networking interface
+</rich_text>
+    <rich_text weight="heavy">Kubectl</rich_text>
+    <rich_text> es la  herramienta CLI para interactuar con el cluster de kubernetes, puede  usarse para desplegar pods de pruebas, acceder a los contenedores y  realizar algunos comandos como </rich_text>
+    <rich_text family="monospace">get nodes</rich_text>
+    <rich_text> o </rich_text>
+    <rich_text family="monospace">get services</rich_text>
+    <rich_text>
+En </rich_text>
+    <rich_text family="monospace">.kube</rich_text>
+    <rich_text> es donde se encuentra nuestro archivo </rich_text>
+    <rich_text family="monospace">config</rich_text>
+    <rich_text>, la configuración de kubernetes.
+ </rich_text>
+    <rich_text family="monospace">kubectl get nodes</rich_text>
+    <rich_text>: lista todos los nodos que tiene nuestro cluster
+ </rich_text>
+    <rich_text family="monospace">kubectl --config</rich_text>
+    <rich_text>: puedes pasarle el archivo de configuración en caso de estar usando uno diferente.
+ </rich_text>
+    <rich_text family="monospace">kubectl --server --user</rich_text>
+    <rich_text>: especificas la configuración sin necesidad de darle un archivo.
+ </rich_text>
+    <rich_text family="monospace">kubectl get nodes -a wide</rich_text>
+    <rich_text>: muestra más datos de los nodos
+ </rich_text>
+    <rich_text family="monospace">kubectl describe nodes node1</rich_text>
+    <rich_text>: da mucha información de ese nodo en especifico.
+ </rich_text>
+    <rich_text family="monospace">kubectl explain node</rich_text>
+    <rich_text>: permite ver la definición de todo lo relacionado a ese nodo
+- deployment es una estructura de mas alto nivel, sirve para manejo de versiones, permite hacer rollbacks
+- canary deployment, se tiene una version de app A y app B, se mueve de poco a poco a los pods para las nuevas versiones y se envia de poco a poco el trafico para ver que se comporte estable
+- replicaset es una estructura de mas bajo nivel, se asegura ue exista una cantidad de pods en determinado momento
+
+- kubectl port-forward [service] [ports]
+- los deamon set no se crean a travez del kubectl
+- kubectl apply -f rng.yaml --validate=false, para no validar los problemas
+- max-surge, cuantos pods se crean a partir de los que se tienen
+- max-unable, a lo sumo puede a ver un 25% de pods que no esten disponibles, que esten iniciando los otros 75% estan trabajando
+- al tener 25 y 25 se tiene al menos un 50% de disponibilidad
+- kubectl rollout undo deploy [name]
+- liveness, cuando el pod no se puede recuperar
+- rediness, no muestra un error, puede ser temporal, aun no esta lista, por que esta haciendo algun otro proceso
+- son de tres tipos
+   → http healthcheck
+   → tcp probe, intenta acceder al puerto expuesto
+   → command exec, se ejecuta un comando dentro del contenedor
+- para acceder a los servicios con minikube se puede usar minikube service [servici]</rich_text>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
@@ -2825,7 +2924,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1641345405">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1641346838">
       <rich_text>
 In the morning
 In the afternoon
@@ -3306,7 +3405,14 @@ sad
 innocence
 sky
 
-</rich_text>
+
+park
+cat
+plump
+father in law
+cook
+sister
+pizza</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
