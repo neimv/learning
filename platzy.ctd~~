@@ -2542,7 +2542,7 @@ API
    → meltwater/docker-cleanup, modo global sirve para que este en todos los nodos</rich_text>
     </node>
   </node>
-  <node name="K8s" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641688094" ts_lastsave="1641776599">
+  <node name="K8s" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641688094" ts_lastsave="1641788247">
     <rich_text>- Bases de contenedores
    → es un namespace + cgroups + chroot
       ⇒ Namespaces: vistas de los recursos del SO
@@ -2618,7 +2618,36 @@ En </rich_text>
    → command exec, se ejecuta un comando dentro del contenedor
 - para acceder a los servicios con minikube se puede usar minikube service [servicio]
 - se pueden configurar por diferentes maneras
-   → por linea de comando, </rich_text>
+   → por linea de comando, es para algo muy especial
+   → otra es por variables de entorno (env map en el spec)
+   → archivos de configuracion (config maps)
+- </rich_text>
+    <rich_text foreground="#bbbbbb">kubectl get deploy/rng -o yaml \</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text foreground="#bbbbbb">    | yq eval 'del(.metadata.resourceVersion, .metadata.uid, .metadata.annotations, .metadata.creationTimestamp, .metadata.selfLink, .metadata.managedFields)' -</rich_text>
+    <rich_text>
+- visibilidad de recursos (isolacion), tipo de recurso, nombre y namespace donde vive
+- </rich_text>
+    <rich_text family="monospace">kubectl config set-context --current --namespace=blue</rich_text>
+    <rich_text>
+- namespaces
+   → no provee aislacion de recursos, se usan network policies
+   → un pod en A se puede conectar con B
+   → desde cualquier pod en el cluster nos podemos comunicar con api del K8s
+- la forma para desplegar diferentes versiones en un cluster es:
+   → es usar otro namespace
+- autenticacion y autorizacion
+   → la autenticacion se hace por certificados TLS, bearer tokens, basic auth o proxy
+   → si no pasa la auth regresa un 401
+   → si no es aceptado, el usuario es anonimo
+   → un usuario anonimo no puede hacer ninguna operacion
+- services account tokens
+   → sistema de auth de kubernetes
+   → pueden crearse, eliminarse y actaulizarce
+   → estan asociados a secretos
+   → se usan para otorgar permisos a app y services
+   → kubectl get sa default, nos da el secret</rich_text>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
