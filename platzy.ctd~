@@ -772,7 +772,7 @@ Una distribuciÃ³n de probabilidad es:
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1641688094">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1642640986">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -2518,32 +2518,8 @@ API
 - manage - API
 - </rich_text>
     </node>
-    <node name="swarm" unique_id="58" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641578803" ts_lastsave="1641672202">
-      <rich_text>- Routing mesh
-   → multiple tareas de un servicio corriendo y que se puede acceder por el mismo puerto
-- PORT: </rich_text>
-      <rich_text family="monospace">--publish published=8080,target=80</rich_text>
-      <rich_text>
-- NODE: </rich_text>
-      <rich_text family="monospace">--constraint node.labels.region==east</rich_text>
-      <rich_text>, </rich_text>
-      <rich_text family="monospace">-e constraint:node==csx00153</rich_text>
-      <rich_text>
-- STACK: docker stack deploy {file} name, docker stack rm app
-- Productivo:
-   → rotacion de leader
-   → los lideres siempre tiene que ser impares
-   → para productivo son minimo 3
-- herramientas
-   → traeffic
-   → portainer
-- Productivo
-   → house kipping, mantenimiento en espacio en disco
-   → meltwater/docker-cleanup, modo global sirve para que este en todos los nodos</rich_text>
-    </node>
-  </node>
-  <node name="K8s" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641688094" ts_lastsave="1641788519">
-    <rich_text>- Bases de contenedores
+    <node name="K8s" unique_id="59" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641688094" ts_lastsave="1642357493">
+      <rich_text>- Bases de contenedores
    → es un namespace + cgroups + chroot
       ⇒ Namespaces: vistas de los recursos del SO
       ⇒ Cgroups: Limitan y miden los recursos del SO
@@ -2570,35 +2546,35 @@ API
    → los pods estan en capa 3 y los servicios en capa 4
    → container networking interface
 </rich_text>
-    <rich_text weight="heavy">Kubectl</rich_text>
-    <rich_text> es la  herramienta CLI para interactuar con el cluster de kubernetes, puede  usarse para desplegar pods de pruebas, acceder a los contenedores y  realizar algunos comandos como </rich_text>
-    <rich_text family="monospace">get nodes</rich_text>
-    <rich_text> o </rich_text>
-    <rich_text family="monospace">get services</rich_text>
-    <rich_text>
+      <rich_text weight="heavy">Kubectl</rich_text>
+      <rich_text> es la  herramienta CLI para interactuar con el cluster de kubernetes, puede  usarse para desplegar pods de pruebas, acceder a los contenedores y  realizar algunos comandos como </rich_text>
+      <rich_text family="monospace">get nodes</rich_text>
+      <rich_text> o </rich_text>
+      <rich_text family="monospace">get services</rich_text>
+      <rich_text>
 En </rich_text>
-    <rich_text family="monospace">.kube</rich_text>
-    <rich_text> es donde se encuentra nuestro archivo </rich_text>
-    <rich_text family="monospace">config</rich_text>
-    <rich_text>, la configuración de kubernetes.
+      <rich_text family="monospace">.kube</rich_text>
+      <rich_text> es donde se encuentra nuestro archivo </rich_text>
+      <rich_text family="monospace">config</rich_text>
+      <rich_text>, la configuración de kubernetes.
  </rich_text>
-    <rich_text family="monospace">kubectl get nodes</rich_text>
-    <rich_text>: lista todos los nodos que tiene nuestro cluster
+      <rich_text family="monospace">kubectl get nodes</rich_text>
+      <rich_text>: lista todos los nodos que tiene nuestro cluster
  </rich_text>
-    <rich_text family="monospace">kubectl --config</rich_text>
-    <rich_text>: puedes pasarle el archivo de configuración en caso de estar usando uno diferente.
+      <rich_text family="monospace">kubectl --config</rich_text>
+      <rich_text>: puedes pasarle el archivo de configuración en caso de estar usando uno diferente.
  </rich_text>
-    <rich_text family="monospace">kubectl --server --user</rich_text>
-    <rich_text>: especificas la configuración sin necesidad de darle un archivo.
+      <rich_text family="monospace">kubectl --server --user</rich_text>
+      <rich_text>: especificas la configuración sin necesidad de darle un archivo.
  </rich_text>
-    <rich_text family="monospace">kubectl get nodes -a wide</rich_text>
-    <rich_text>: muestra más datos de los nodos
+      <rich_text family="monospace">kubectl get nodes -a wide</rich_text>
+      <rich_text>: muestra más datos de los nodos
  </rich_text>
-    <rich_text family="monospace">kubectl describe nodes node1</rich_text>
-    <rich_text>: da mucha información de ese nodo en especifico.
+      <rich_text family="monospace">kubectl describe nodes node1</rich_text>
+      <rich_text>: da mucha información de ese nodo en especifico.
  </rich_text>
-    <rich_text family="monospace">kubectl explain node</rich_text>
-    <rich_text>: permite ver la definición de todo lo relacionado a ese nodo
+      <rich_text family="monospace">kubectl explain node</rich_text>
+      <rich_text>: permite ver la definición de todo lo relacionado a ese nodo
 - deployment es una estructura de mas alto nivel, sirve para manejo de versiones, permite hacer rollbacks
 - canary deployment, se tiene una version de app A y app B, se mueve de poco a poco a los pods para las nuevas versiones y se envia de poco a poco el trafico para ver que se comporte estable
 - replicaset es una estructura de mas bajo nivel, se asegura ue exista una cantidad de pods en determinado momento
@@ -2622,15 +2598,15 @@ En </rich_text>
    → otra es por variables de entorno (env map en el spec)
    → archivos de configuracion (config maps)
 - </rich_text>
-    <rich_text foreground="#bbbbbb">kubectl get deploy/rng -o yaml \</rich_text>
-    <rich_text>
+      <rich_text foreground="#bbbbbb">kubectl get deploy/rng -o yaml \</rich_text>
+      <rich_text>
 </rich_text>
-    <rich_text foreground="#bbbbbb">    | yq eval 'del(.metadata.resourceVersion, .metadata.uid, .metadata.annotations, .metadata.creationTimestamp, .metadata.selfLink, .metadata.managedFields)' -</rich_text>
-    <rich_text>
+      <rich_text foreground="#bbbbbb">    | yq eval 'del(.metadata.resourceVersion, .metadata.uid, .metadata.annotations, .metadata.creationTimestamp, .metadata.selfLink, .metadata.managedFields)' -</rich_text>
+      <rich_text>
 - visibilidad de recursos (isolacion), tipo de recurso, nombre y namespace donde vive
 - </rich_text>
-    <rich_text family="monospace">kubectl config set-context --current --namespace=blue</rich_text>
-    <rich_text>
+      <rich_text family="monospace">kubectl config set-context --current --namespace=blue</rich_text>
+      <rich_text>
 - namespaces
    → no provee aislacion de recursos, se usan network policies
    → un pod en A se puede conectar con B
@@ -2650,7 +2626,279 @@ En </rich_text>
    → kubectl get sa default, nos da el secret
 - RBAC
    → un role es un objeto con lista de rules
-   → un rolebiding asocia un roll</rich_text>
+   → un rolebiding asocia un rol a un usuario
+   → pueden existir usuarios, roles y rolebidings con el mismo nombre
+   → es buena practica es tener 1-1-1 bidings
+   → un pod pude estar asociado a un service account
+
+Errores:
+¿Dónde se guarda la configuración del cluster de kubernetes?
+Los rolebiding son recursos que:
+-- asocia un usuario a un rol
+¿Cuál es el namespace utilizado por kuberentes para uso administrativo?
+-- kube-system
+Utilizando un maxSurge y MaxUnavailable del 25% con 3 replicas. ¿Cuál es la cantidad máxima de contenedores que pueden haber corriendo en un momento determinado?
+Un DaemonSet se utiliza principalmente para..
+
+-- K8S in GCP
+- un servicio sirve para conectar un servicio con otros, o con el mundo exterior
+   → Cluster IP, se enfoca a unir microservicios en la misma infraestructura
+   → Node Port, permite tener diferentes pods en diferentes nodos, donde se da un mapeo de un puerto
+   → Load balancer, se crean para usar con los Node port, administra el trafico para cada uno de los pods
+- archivos descriptivos
+   → estan en yaml
+   → describen la parte logica del app, pods, deployment, services
+   → no se describen clusters ni nodos
+   → partes
+      ⇒ kind
+      ⇒ apiVersion
+      ⇒ metadata
+      ⇒ spec
+- labels
+   → metadata arbitraria, se peuden poner los nombres que sean para dar una identidad
+   → son queryable, para busquedas y seleccion
+- selectores
+   → son para usar los labels para saber cuando usar unos u otros pods en los despliegues
+- namespaces
+   → separacion virtual dentro del cluster
+   → se puede hacer aislamiento de los datos
+   → por defecto
+      ⇒ default
+      ⇒ kube-system, administracion de k8s
+      ⇒ kube-public, tambien es para administracion
+- deployments
+   → blue-green
+      ⇒ tecnica de despliegue de aplicacion con zero downtime
+      ⇒ dos ambientes exactamente iguales
+      ⇒ solo un ambiente sirve el trafico de produccion
+   → canary
+      ⇒ sirve para testear nuevas funcionalidades
+      ⇒ se despliega una version en produccion a un numero reducido de usuarios
+- volumen
+   → disco persiste
+   → nfs
+   → cluster
+   → -- sistemas de almacenamiento de las nubes
+- apps stateful
+   → son aplicaciones que guardan el estado de los datos
+   → son
+      ⇒ bases de datos
+      ⇒ datawarehouse
+      ⇒ modelos predictivos
+      ⇒ gestores documentales
+   → con
+      ⇒ pods
+      ⇒ volumenes
+      ⇒ servicios de tipo cluster IP
+   → mayor seguridad al ser una red interna
+- Istio, service mesh
+   → red para servicios
+   → permite fortalecer las politcas de comunicacion en K8s
+   → manejo de redes dividos por subredes
+   → roles. control de trafico, seguridad y fortalecimiento de las politicas
+   → istio es un producto para bajar la complejidad del service mesh
+      ⇒ caracteristicas
+         • service discovery
+         • seguridad
+         • instrumentacion
+         • rutas dinamicas
+         • telemetria
+- stackdriver
+   → es para monitores, log aggregation y alerting con GCP
+- CI/CD
+   → google cloud buider
+   → maneja cloud repository
+   → contauner registry
+- knative
+   → solucion opensource
+   → servicio serverless para contenedores
+   → permite escalar
+- buenas pracrticas
+   → contenedores peque;os
+   → organizar despliegues en namespaces
+   → configurar los health checks
+   → configurar limites en el numero de peticiones
+   → terminar con gracia</rich_text>
+    </node>
+    <node name="swarm" unique_id="58" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641578803" ts_lastsave="1641672202">
+      <rich_text>- Routing mesh
+   → multiple tareas de un servicio corriendo y que se puede acceder por el mismo puerto
+- PORT: </rich_text>
+      <rich_text family="monospace">--publish published=8080,target=80</rich_text>
+      <rich_text>
+- NODE: </rich_text>
+      <rich_text family="monospace">--constraint node.labels.region==east</rich_text>
+      <rich_text>, </rich_text>
+      <rich_text family="monospace">-e constraint:node==csx00153</rich_text>
+      <rich_text>
+- STACK: docker stack deploy {file} name, docker stack rm app
+- Productivo:
+   → rotacion de leader
+   → los lideres siempre tiene que ser impares
+   → para productivo son minimo 3
+- herramientas
+   → traeffic
+   → portainer
+- Productivo
+   → house kipping, mantenimiento en espacio en disco
+   → meltwater/docker-cleanup, modo global sirve para que este en todos los nodos</rich_text>
+    </node>
+    <node name="jenkins" unique_id="60" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642111509" ts_lastsave="1642118638">
+      <rich_text>- Automatizacion
+   → para reproducir procesos y nos de mayor productividad
+   → que se puede automatizar
+      ⇒ pruebas
+      ⇒ deployment
+      ⇒ verificacion (smokes)
+      ⇒ ... cualquier cosa que sea programable
+- Jenkins
+   → herramienta opensource
+   → esta echo en java
+   → se puden escribir los plugins propios en java
+   → permite escalar de manera vertical (una maquina) y horizontal (varias maquinas)
+   → los jobs se pueden escribir en codigo
+- Usarios
+   → deben de ser unico
+   → por temas de auditoria no se debe de usar uno
+- jobs
+   → la unidad mas importante dentro de jenkins
+   → controlado por el build executer
+   → se pueden borrar un build
+   → el build es una ejecucion de un job
+   → se pueden “schedular”
+   → se descartan archivos y folders para no tener lleno el disco
+- core jenkins
+   → jenkins usa las herramientas que estan disponibles en la maquina
+   → jenkins lo lee con el filesystem, para eso debe de tener los permisos necesarios
+- ecosistema de plugins
+   → unidades que extienden a jenkins
+   → se pueden poner x versiones de lenguajes para hacer los builds
+- cadenas de jobs
+   → parameterized trigger plugin
+   → watchers
+      ⇒ ejecuta otras acciones
+   → parameters
+      ⇒ ejecuta con parametros
+- github
+   → se tiene que autoregistrar el hook en jenkins
+- freestyle project
+   → los mas comunes, fue con los que empezo jenkins
+- pipeline
+   → scripting pipeline
+   → declarative pipeline
+      ⇒ agent any, sirve para que se corra en donde sea
+      ⇒ se crea a partir de un archivo estilo json
+      ⇒ stages para cada paso que se requiere
+      ⇒ se comporta muy parecido a un build_spec.yml
+- como se puede acelerar?
+   → pipeline syntax, en smple steps
+   → en replay se puede ver cuanto se tarda sin hacer commit a git
+- jenkins slaves
+   → permite correr jobs distribuidos
+   → conectandolo -- se tiene que entrar al jenkins master
+      ⇒ por medio de ssh
+      ⇒ en el slave se guarda la llave
+      ⇒ se usan authorized_keys
+      ⇒ en el master en mange jenkins
+         • manage nodes
+         • nombre, directorio remoto
+         • los executors deben de ser iguales en master que en slave
+         • ip o dns
+
+¿Por qué debo tener tiempos de espera en mis “builds”?
+Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_text>
+    </node>
+    <node name="travisCI" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642357503" ts_lastsave="1642615356">
+      <rich_text>- travis CI
+   → en teoria opensource
+   → ya no existe la version free, solo por 30 dias
+- se usa npm init. para generar un documento automatizado
+- src para el codigo
+- archivo: .travis.yml
+- se establece el lenguaje: language: {lenguaje}
+- sistema operativo, el default es linux, os: {nombre del os}
+- configuraciones mas profundas
+   → git: depth: 3
+- branches: except: - legacy, - experimental...
+- branches: only: - master, -stable ...
+- before_install: - python
+- install: - yarn install
+- script: - yarn deploy, - yarn test
+- before_script: - yarn test
+- after_script: - yarn clean
+- cache: directories: - node_modules
+- jobs: include: - stage: test..script: yarn test, se pueden ejecutar varios script dentro de cada stage
+- deploy: configuraciones dependiendo del caso, se requiere la doc
+- el cache en el caso de node generalmente se dejar node_modules y .npm
+- para deploy se requiere: 
+   → provider: pages
+   → un github-token
+   → el local-dir
+   → target-branch: {branch}
+   → on: donde debe de ser el cambio para que se active el trigger
+- para mandar notificaciones se agrega notification antes del deploy
+   → email: recipients: - user1, - user2, on_success: always, on_failure:always
+- para slack se puede agregar un app, que es travis_ci
+   → nos da el acceso a la configuracion
+- Buenas practicas
+   → se deben de cifrar los datos sensibles con travis-cli, travis encrypt llave</rich_text>
+    </node>
+    <node name="IaC" unique_id="62" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642640986" ts_lastsave="1642723984">
+      <rich_text>- utilizar archviso de definicion
+- sistemas y procesos autodocumentados
+- versionar las coas
+- preferir cambios peque;os
+- mantener los servicios continuamente disponibles
+- herramientas:
+   → archivos de definiciones de aconfiguraciones, se usan muhco para la infraestructura
+   → herramientas para configuracion de servidores, sirven apra configurar los servidores
+   → aprovisionamiento, tener el recurso ya listo
+- enfoques para gestion de servidores
+   → configuracion de servidores
+   → empequetar plantillas de servidores
+   → ejecutar comando en los servidores
+   → configuracion desde un registro central
+- como elegir herramienta
+   → modo desatendido para herramientas de lineas de comando
+   → idempotencia
+   → parametrizable
+- configuradores: ansible, chef, puppet
+- infraestructura -&gt; dependencias -&gt; app/datos
+- beneficios
+   → creacion rapida bajo demanda
+   → automatizacion, creacion y configuracion sin intervencion humana
+   → ambientes homogeneos
+- Terraform
+   → creada en go
+   → por hashicorp
+   → permite crear infraestructura por codigo
+   → no solo se conecta a nubes publicas sino tambien privadas
+   → tiene planes de ejecucion
+   → facil de automatizar
+- gestion de conf vs creacion de infraestructura
+   → ansible nos permite crear el estado de la infra, nos permite crearla pero no es su funcion principal
+   → infra mutable vs infra inmutable
+      ⇒ mutable: cuando el estado del servidor cambia
+      ⇒ inmutable: se destruye un servidor y se crea uno nuevo con los cambios
+   → lenguaje declarativo vs procedural
+      ⇒ declarativo, se dice a las herramientas que hacer
+      ⇒ procedural: se dice como hacerlo
+
+## Rasgos
+- provider
+- resources
+
+## Packer
+- permite la creacion de amis personalizadas
+- elementos
+   → tipo json
+   → seccion de variables
+   → builders, se decide de donde se construye la imagen
+   → provisioners, se personaliza la imagen'
+   → post-processors: para manipular la imagen despues de crearse, se ejecuta dentro de la maquina
+- se crea un archivo con el nombre credentials, de la forma tradicional para aws
+- packer validate para validar la sintaxis</rich_text>
+    </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
@@ -2958,7 +3206,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1641346838">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1642555098">
       <rich_text>
 In the morning
 In the afternoon
@@ -3009,6 +3257,7 @@ Adverbs of frecuenct
 - alway - 100%
 - Noun + frequency + action, ex: I never drink coffe
 - Exception: Sometimes I go to the beach
+- hardly ever, casi nunca
 
 tarea
 - numeros
@@ -3446,7 +3695,9 @@ plump
 father in law
 cook
 sister
-pizza</rich_text>
+pizza
+
+I can dance, I can play guitar, I can sing</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
@@ -3477,7 +3728,56 @@ Que es una derivada?
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
-    <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1619532705"/>
+    <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1641884633">
+      <rich_text>en python con () se hace un generator expresion que es como una lista pero mas potente, ocupa menos memoria
+
+Un mÃ³dulo es un conjunto de paquetes
+¿Qué módulo se utiliza para verificar los errores de tipado en un proyecto escrito en Python?
+¿Cuál de las siguientes condiciones no es necesaria para encontrar un closure?
+¿Qué es un decorador?
+¿Cuántas veces puede iterarse un generador?
+</rich_text>
+    </node>
+    <node name="python" unique_id="63" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642641418" ts_lastsave="1642694106">
+      <node name="selenium" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642694106" ts_lastsave="1642695459">
+        <rich_text>- que es selenium
+- cominucar con el navegador web
+- automatizar pruebas unitarias y funcionales
+- generar reportes de pruebas
+
+- historia de selenium
+   → suite de herramientas para automatizacion de navegadores
+   → es compatible con varios lenguajes
+   → no es una herramienta de testing ni de web scraping
+   → es para curar el envenenamiento por mercurio (competencia de seleium en su momento)
+   → pros
+      ⇒ excelente para iniciar
+      ⇒ no requiere saber programar
+      ⇒ exporta scripts para slm RC y webdriver
+      ⇒ genera reportes
+      ⇒ soporte para varias platofrmas
+      ⇒ operaciones logicas y condicionales
+      ⇒ ddt
+      ⇒ posee un api madura
+   → contras
+      ⇒ es mas complejo de instalar
+      ⇒ necesita de un servidor corriendo
+      ⇒ comandos redundantes en su api
+      ⇒ navegacion no tan realista
+   → selenium webdriver
+      ⇒ soporta multiples lenguajes
+      ⇒ facil de instalar
+      ⇒ comunicacion directa con el navegador
+      ⇒ interaccion mas realista
+      ⇒ no soporta nuevos navegadores de forma rapida
+      ⇒ no genera reportes o resultados
+      ⇒ requiere saber programar
+   → selenium grid
+   → se utiliza junto a slenium rc
+   → permite correr pruebas en paralelo
+   → conveniente para ahorra tiempo</rich_text>
+      </node>
+    </node>
   </node>
   <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1623801007">
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
