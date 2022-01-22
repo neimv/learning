@@ -2808,7 +2808,7 @@ Un DaemonSet se utiliza principalmente para..
 ¿Por qué debo tener tiempos de espera en mis “builds”?
 Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_text>
     </node>
-    <node name="travisCI" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642357503" ts_lastsave="1642794696">
+    <node name="travisCI" unique_id="61" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642357503" ts_lastsave="1642805775">
       <rich_text>- travis CI
    → en teoria opensource
    → ya no existe la version free, solo por 30 dias
@@ -2848,9 +2848,11 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - dynamics: dynamic “ingress” {"se puede iterar sobre un objeto": for_each = var.ingress_rules / content{valores}}, el item es sobre el nombre del dynamic: ingress.value.from_port
 - un recurso se llama asi: "${nombre_tf.donde.propiedad}
 - los output se ponen:
-   → output “varibale” {value=}</rich_text>
+   → output “varibale” {value=aws_instace.platzi-instace.*.public_ip}
+- Terraforma sabe que infraestrucutar crea
+   → maneja el estado de almacenaje de conficuraciones, terraform.tfstate, puede ser local y remoto</rich_text>
     </node>
-    <node name="IaC" unique_id="62" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642640986" ts_lastsave="1642724076">
+    <node name="IaC" unique_id="62" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642640986" ts_lastsave="1642884411">
       <rich_text>- utilizar archviso de definicion
 - sistemas y procesos autodocumentados
 - versionar las coas
@@ -2905,7 +2907,28 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
    → post-processors: para manipular la imagen despues de crearse, se ejecuta dentro de la maquina
 - se crea un archivo con el nombre credentials, de la forma tradicional para aws
 - packer validate para validar la sintaxis
-- packer build nombre-del-archivo para ejecutar</rich_text>
+- packer build nombre-del-archivo para ejecutar
+
+## Terraform
+- variables descriptivas
+- se pueden omitir los valores en la declaracion de variables
+- manejo de lenguaje HCL
+- por buena practica se define primero el provider, pero no es obligatorio
+- terraform validate, para validar la sintaxis, terraform init, para iniciar el entorno, terraform plan, para visualizar que recursos se van a crear, terraform apply para crear la infraestructura
+- argumento -var-file {archivo de var}, para pasarle el archivo de variables
+- -auto-approve para no tener interaccion con terraform
+- si el archivo se llama prod.auto.tfvar, por automatico toma este archivo para las variables
+- el nombre del recurso y del objeto no deben de ser igual para que funcione
+- para parametrizar se puede usar “dynamic”
+   → dynamic “recurso o segmento” { for_each = variable, content { llave: “recurso o segmento”.value."nombre" } }
+   → para llamar otro recurso se usa ${nombre.propiedad.valor}
+   → los output se manejan: output “nombre” { value = tipo.nombre.*.valorRecurso }
+- Archivos de estados
+   → terraform sabe que infraestructura crea
+   → local, terraform.tfstate, en estado json guarda toda la informacion de lo que creo, si se borra terraform ya no sabe que paso
+   → backend, permite almacenar el estado de forma remota a traves de backends (buckets)
+   → ayuda para trabajar en equipo
+   → mayor disponibilidad</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
