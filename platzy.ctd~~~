@@ -2852,7 +2852,7 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - Terraforma sabe que infraestrucutar crea
    → maneja el estado de almacenaje de conficuraciones, terraform.tfstate, puede ser local y remoto</rich_text>
     </node>
-    <node name="IaC" unique_id="62" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642640986" ts_lastsave="1642884411">
+    <node name="IaC" unique_id="62" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642640986" ts_lastsave="1642985084">
       <rich_text>- utilizar archviso de definicion
 - sistemas y procesos autodocumentados
 - versionar las coas
@@ -2928,7 +2928,27 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
    → local, terraform.tfstate, en estado json guarda toda la informacion de lo que creo, si se borra terraform ya no sabe que paso
    → backend, permite almacenar el estado de forma remota a traves de backends (buckets)
    → ayuda para trabajar en equipo
-   → mayor disponibilidad</rich_text>
+   → mayor disponibilidad
+   → para convifurar el backend se necesita:
+      ⇒ terraform { backend “tipo” {bucket = “nombre bucket”, key = “como se llamara el archivo”, region="region" } }
+- Cifrado del bucket,
+   → en el archivo de configuracion:
+      ⇒ manejo y creacion de un KMS
+      ⇒ se agrega una nueva regla al bucket, con server side encryption
+   → en el backend, se agrega el valor encrypt = true, kms_key_id = arn de la key
+- versionar es bueno tambien para la IAC
+- se puede separar por modulos
+- para craer un modulo:
+   → module “nombre del modulo”
+   → source = “directorio donde se encuentran los modulos”
+   → para las variables se tienen que referenciar, nombre=var.nombre
+   → las variables deben de estar en la carpeta donde esta el modulo
+   → se debe agregar el provider para ue funcione
+- modulos remotos, se hace por medio de control de versiones
+   → se versiona haciendo de los modulos a git init
+   → en el source que se tiene en app, se cambia el nombre de la carpeta por el nombre del repositorio + carpeta de donde esta
+- provisioner, permite configurar servidores despues de crearlos, permite conectarse via remota: provisioner “remote-exec” {}
+- con 0 y -1 se le dice que me puedo conectar a cualquier protocolo con cualquier puerto</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
