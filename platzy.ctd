@@ -3790,7 +3790,7 @@ Un mÃ³dulo es un conjunto de paquetes
 </rich_text>
     </node>
     <node name="python" unique_id="63" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642641418" ts_lastsave="1642694106">
-      <node name="selenium" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642694106" ts_lastsave="1642695459">
+      <node name="selenium" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642694106" ts_lastsave="1643388034">
         <rich_text>- que es selenium
 - cominucar con el navegador web
 - automatizar pruebas unitarias y funcionales
@@ -3826,7 +3826,32 @@ Un mÃ³dulo es un conjunto de paquetes
    → selenium grid
    → se utiliza junto a slenium rc
    → permite correr pruebas en paralelo
-   → conveniente para ahorra tiempo</rich_text>
+   → conveniente para ahorra tiempo
+
+ERRORES
+¿Qué lenguaje no es soportado oficialmente con Selenium?
+java, c#, kotlin, perl, php, python, ruby, js
+¿Qué assertion te permite validar el que el título del sitio web es el siguiente?
+equals
+¿Qué es y para qué nos sirven las test suites?
+coleccion de pruebas unificadas en un solo archivo
+¿Con qué me permite interactuar la clase WebDriver de Selenium?
+ventana del navegador y sus elementos relacionados, como pop ups o alerts
+¿Con qué me permite interactuar la clase WebElement de Selenium?
+elementos de los sitios web
+¿Qué acciones podemos utilizar para interactuar con un alert de JavaScript?
+switch_to_alert, accept
+Son todos mÃ©todos para automatizar la navegaciÃ³n:
+back, forward, refresh
+¿Qué hace el siguiente código?
+implicita espera a que este el dom si lo encuentra continua
+explicita utiliza condiciones de espera, continua hasta que la ecnuetnra
+¿Por qué debemos utilizar la menor cantidad de esperas implícitas posibles?
+
+¿Qué es una expected condition (condición esperada)?
+¿Cuándo es conveniente utilizar try y except en nuestra prueba?
+¿Por qué no debería automatizar o hacer testing en sitios que explícitamente lo prohíben?
+bloqueo</rich_text>
       </node>
     </node>
   </node>
