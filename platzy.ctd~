@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1626023332">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1643578407">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -771,6 +771,39 @@ Una distribuciÃ³n de probabilidad es:
 </rich_text>
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
+    <node name="estructura de datos" unique_id="65" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578407" ts_lastsave="1643578415">
+      <node name="lineales" unique_id="66" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578415" ts_lastsave="1643583961">
+        <rich_text># Arrays
+- representacion interna de una coleccion de informacion
+- caracteristicas
+   → elemento, valor almacenado
+   → indice, referencia a la posicion de diche elemento
+- se usan debido a que guardan informacion de manera consecutiva, las listas de python crecen de manera dinamica
+- generalmente tiene una capacidad
+- existen de 1, 2 y 3 dimensiones, en python se recomienda no usar mas de 2 dimensiones
+- los arrays son un tipo de lista
+- no se pueden agregar o remover posiciones, tamaño fijo
+- uso:
+   → generalmente se usan en sprites de videojuegos
+   → opciones en un menu
+- python si cuenta con un modulo array
+
+# Nodos y singly linked list
+- consisten en nodos conectados unos a otros
+- sencillas o dobles
+- no se accede por indice sino por recorrido
+- conceptos:
+   → data, valor que se alverga
+   → next referencia al siguiente nodo
+   → previuos referencia al nodo anterior
+   → head, primer nodo en la lista
+   → tail, ultimo nodo
+- los nodos se reparten en la memoria
+- se usan los nodos para conectarse a otro nodo
+- para creacion de estructuras mas complejas
+- se usan para la optimizacion</rich_text>
+      </node>
+    </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1642640986">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
@@ -3790,7 +3823,7 @@ Un mÃ³dulo es un conjunto de paquetes
 </rich_text>
     </node>
     <node name="python" unique_id="63" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642641418" ts_lastsave="1642694106">
-      <node name="selenium" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642694106" ts_lastsave="1643387584">
+      <node name="selenium" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642694106" ts_lastsave="1643388034">
         <rich_text>- que es selenium
 - cominucar con el navegador web
 - automatizar pruebas unitarias y funcionales
@@ -3850,7 +3883,8 @@ explicita utiliza condiciones de espera, continua hasta que la ecnuetnra
 
 ¿Qué es una expected condition (condición esperada)?
 ¿Cuándo es conveniente utilizar try y except en nuestra prueba?
-¿Por qué no debería automatizar o hacer testing en sitios que explícitamente lo prohíben?</rich_text>
+¿Por qué no debería automatizar o hacer testing en sitios que explícitamente lo prohíben?
+bloqueo</rich_text>
       </node>
     </node>
   </node>
