@@ -772,7 +772,7 @@ Una distribuciÃ³n de probabilidad es:
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
     <node name="estructura de datos" unique_id="65" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578407" ts_lastsave="1643578415">
-      <node name="lineales" unique_id="66" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578415" ts_lastsave="1643585737">
+      <node name="lineales" unique_id="66" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578415" ts_lastsave="1643830110">
         <rich_text># Arrays
 - representacion interna de una coleccion de informacion
 - caracteristicas
@@ -802,11 +802,34 @@ Una distribuciÃ³n de probabilidad es:
 - se usan los nodos para conectarse a otro nodo
 - para creacion de estructuras mas complejas
 - se usan para la optimizacion
-- en las linked list no se tiene indices, se tienen que emular</rich_text>
+- en las linked list no se tiene indices, se tienen que emular
+
+# stacks
+- conocidos como pilas
+- basados en arrays o en link lists
+- son LIFOS
+- push, pop, top y bottom son sus metodos
+- un stack y una lista son similares pero no lo mismo, las listas se ven afectadas por sus metodos
+
+# queues
+- FIFOs
+- Rear ultimo elemento
+- Front primer elemento
+- Priority queues, se basa en FIFOs con elementos de menor o mayor prioridad
+- pop
+- add
+
+
+errores
+Son las dos principales categorÃ­as de estructuras de datos:
+¿Qué métodos debe tener un array al crearse?
+¿Qué escenarios debemos considerar en los métodos para añadir y/o eliminar nodos en una linked list?
+En general, ¿qué se necesita para realizar operaciones como insertar o eliminar nodos de una linked list?
+</rich_text>
       </node>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1642640986">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1643840042">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -2983,6 +3006,16 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
    → en el source que se tiene en app, se cambia el nombre de la carpeta por el nombre del repositorio + carpeta de donde esta
 - provisioner, permite configurar servidores despues de crearlos, permite conectarse via remota: provisioner “remote-exec” {connection {type = “ssh”, user = “”, private_key = “archivo”, host = self.public_ip}, inline = [comandos]}
 - con 0 y -1 se le dice que me puedo conectar a cualquier protocolo con cualquier puerto</rich_text>
+    </node>
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1643838980"/>
+    <node name="full-course" unique_id="68" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643840042" ts_lastsave="1643840910">
+      <rich_text>- less Dockerfile
+- se crea usuario devops
+- su - devops &amp;&amp; ssh-keygen -t rsa
+- docker run -itd --privileged --name servera centros7ss
+- docker inspect servera
+- ssh devops@192.17.0.3
+- se requiere ser el mismo usuario devops</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
