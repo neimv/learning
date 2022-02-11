@@ -3,16 +3,31 @@
 fileOutPut="hosts.txt"
 counter=0
 
-cp /etc/hosts.bk /etc/hosts && failed=0 || failed=1
+##########################################################################
+# Functions
+##########################################################################
+handle_errs() {
+    exit_need=$1
+    failed=$2
 
-echo $?
-echo $failed
+    if [ "$exit_need" = "true" ] && [ $failed -eq 1 ]; then
+        echo "Command failed and exit of script"
+        exit 1
+    elif [ "$exit_need" = "false" ] && [ $failed -eq 1 ]; then
+        echo "Command failed and continues with the script"
+    fi
+}
 
-if [ $failed -eq 1 ]; then
-    exit 1
-fi
+read -s -p "Ingress password of sudo: " password
+echo -e "\n"
 
-# restore=$(cp /etc/hosts /etc/hosts.bk)
+# Restore original file
+sudo cp /etc/hosts.bk /etc/hosts && failed=0 || failed=1
+handle_errs "false" $failed
+
+sudo cp /etc/hosts /etc/hosts.bk && failed=0 || failed=1
+handle_errs "true" $failed
+
 echo "conts"
 
 # docker ps -q | xargs -n 1 docker inspect --format "{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} {{ .Name }}" | sed 's/ \// /' | grep os_* | sort > $fileOutPut

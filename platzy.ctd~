@@ -3007,14 +3007,67 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - provisioner, permite configurar servidores despues de crearlos, permite conectarse via remota: provisioner “remote-exec” {connection {type = “ssh”, user = “”, private_key = “archivo”, host = self.public_ip}, inline = [comandos]}
 - con 0 y -1 se le dice que me puedo conectar a cualquier protocolo con cualquier puerto</rich_text>
     </node>
-    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1643838980"/>
-    <node name="full-course" unique_id="68" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643840042" ts_lastsave="1643840862">
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1644539919">
+      <rich_text>-----
+
+
+# Planificacion
+- Agile
+   → proceso iterativo
+   → uso de spints
+      ⇒ se define al alcance
+      ⇒ hacemos pruebas
+      ⇒ generamos artefactos
+      ⇒ release
+      ⇒ se vuelve a definir
+- Waterfall
+   → proceso previamente definido
+   → se entrega hasta el final del proyecto
+   → se crean la doc mucho antes
+   → modelo secuencial
+      ⇒ se define el proyecto
+      ⇒ build del proyecto
+      ⇒ test
+      ⇒ release
+- Issues
+   → empieza una conversacion al rededor del codigo
+   → permiten empezar a colaborar sobre una idea antes de codificar
+   → sugerir propuestas
+   → hacer preguntas
+   → reportar bugs y soporte
+   → nuevas implementaciones
+   → se pueden crear templates para estandarizar
+- labels
+   → se usa para clasificarlos
+   → sirve para filtar y buscar en gitlab
+   → permite seguir temas a traves de notificaciones
+   → tipos aqui se anaden tambien las eitquetas:
+      ⇒ grupo
+      ⇒ proyecto
+   → ya estan en infromacion del proyecto... cambio
+- milestones
+   → permite agrupar issues para alcaznar un objetivo determinado en un tiempo especifico
+   → agrupador de releases para los clientes
+   → burndown chart, se require varios dias de desarrollo
+- boards
+   → son una forma de visualizar los flujops de trabajo
+   → es una de las herramientas de planificacion mas importante de gitlab
+   → columnas que agrupan issues por labels
+      ⇒ crear labels: ToDo, Doing, Review
+- service desk
+   → capacidad de abrir issues a traves de correo electronico
+   → soporte para los clientes
+   → permite para que el equipo no tecnico abra issues o bugs
+   → se crea un correo unico </rich_text>
+    </node>
+    <node name="full-course" unique_id="68" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643840042" ts_lastsave="1643840910">
       <rich_text>- less Dockerfile
 - se crea usuario devops
 - su - devops &amp;&amp; ssh-keygen -t rsa
 - docker run -itd --privileged --name servera centros7ss
 - docker inspect servera
-- ssh devop</rich_text>
+- ssh devops@192.17.0.3
+- se requiere ser el mismo usuario devops</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
