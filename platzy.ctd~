@@ -3007,7 +3007,7 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - provisioner, permite configurar servidores despues de crearlos, permite conectarse via remota: provisioner “remote-exec” {connection {type = “ssh”, user = “”, private_key = “archivo”, host = self.public_ip}, inline = [comandos]}
 - con 0 y -1 se le dice que me puedo conectar a cualquier protocolo con cualquier puerto</rich_text>
     </node>
-    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1644539919">
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645142578">
       <rich_text>-----
 
 
@@ -3058,7 +3058,154 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
    → capacidad de abrir issues a traves de correo electronico
    → soporte para los clientes
    → permite para que el equipo no tecnico abra issues o bugs
-   → se crea un correo unico </rich_text>
+   → se crea un correo unico para el proyecto cuando se activa
+- Merge requests
+   → son parte importante para devops, es puerta de la entrada de codigo
+   → es la base de colaboraion de gitlab
+   → para saber
+      ⇒ si se resolvio
+      ⇒ si el performance se reduce
+      ⇒ si el codigo es seguro
+      ⇒ si las nuevas librerias usan licencias abiertas o cerradas
+   → deberian de ser de pocos archivos
+- CI
+   → automatizacion es fundamental
+   → es una practica en la que devs manda sus cambios, detona builds y pruebas
+   → ayuda a encontrar bugs
+   → aumenta la velocidad de releases
+   → automatiza el pipeline que lleva el codigo de local a prod
+   → hub central ded automatizacion
+   → construye, prueba y despliega cambios paquenios en codigo
+   → se configura con .gitlab-ci.yml
+   → tambien se tiene CDelivery y Cdeployment
+      ⇒ en delivery siempre se tiene un artefacto listo para enviar a prod
+      ⇒ en deployment se actualiza continuamente el flujo con los cambios
+      ⇒ review app, para buena practica, son pruebas en prod por cada branch
+   → </rich_text>
+      <rich_text link="webs https://gitlab.com/neimv/platzi-devops/-/ci/lint">https://gitlab.com/neimv/platzi-devops/-/ci/lint</rich_text>
+      <rich_text>
+- github pages
+   → hosting estatico
+   → integracion con gitlab ci
+   → dominios personalizados
+- Desarrollo agil
+   → capacidad de responder al cambio
+   → es un framework basado en 12 reglas
+   → manejo de cambios con exito
+- Autodevops
+   → permite crear un flujo de devops inmediato con la creacion del proyecto
+   → se corren analisis estaticos y dinamicos de seguridad
+   → requisitos
+      ⇒ gitlab runner
+      ⇒ kubernetes
+      ⇒ base domain
+      ⇒ prometheus
+   → nosotros podemos crear
+      ⇒ dockerfile
+      ⇒ .gitlab-ci.yml
+      ⇒ Variables
+- container registry
+   → cuando se hace un build se genera una imagen de docker
+   → empaquetado de codigo
+   → permite almacenar imagenes de docjer
+   → cada que se creat un build la nueva imagen se envia al container registry
+- DevSecOps
+   → el equipo de seg trabajaba aislado y ejecutaba al final del proceso
+   → no habia problemas en esos entonces
+   → es pensar en la seguridad en app y en infra
+   → trata de automatizar la seguridad e incluirla en el ciclo de vida de la app
+   → devsecops manifiest:
+      ⇒ los datos y la ciencia de la seguridad siempre anteponer ante el miedo insertidumbre y duda
+      ⇒ los scores de seguridad debn de ser automatizados
+      ⇒ el monitoreo tiene que ser 24/7
+      ⇒ se deben de cerrar todas y cada una de las puertas abiertas
+- firmas de seguridad
+   → GPG
+      ⇒ permite identificar en los commit
+      ⇒ anade una capa adicional de seguridad a git
+      ⇒ gitlab despliega un banner junto a los commits, para mostrar que dichos commits estan verificados
+- pruebas estaticas de seguridad
+   → buscan en los archivos, patrones inseguros de codigo
+   → verifica que no halla secrets en el codigo
+   → crea reportes
+   → utiliza la imagen de docker sst de gitlab
+   → tipos de vulnerabilidades
+      ⇒ criticas
+      ⇒ altas
+      ⇒ medianas
+      ⇒ bajas
+      ⇒ desconocidas
+   → de acuerdo a las vulnerabilidades se puede saber que hacer para que no afecte
+   → diferentes herramientas para el escaneo
+- escaneo ded contenedores
+   → clair y clair-scanner para verificar contenedores
+   → se pueden omitir vulnerabilidades con el archivo clair-whitelist.yaml
+- escaneo de dependencias
+   → analiza estaticamente las dependencias del proyecto
+   → genera reportes
+   → utiliza docker dependency scanning de gitlab
+   → include: template: dependency-scanning.gitlab-ci.yaml
+- pruebas dinamicas de seguridad
+   → asume que hay un atacante exetrno
+   → utiliza OWSAP ZAP proxy y ZAP basline
+   → correa analisis pasivo
+   → genera reporte con el merrge request
+   → solo corre pruebas pasivas
+      ⇒ no uso de cokies inseguras
+      ⇒ JS sin acceso a cookies
+   → DAST.gitlab-ci.yaml
+- gitlab security dashboard
+   → es un hub centralizado donde se pueden ver las vulnerabilidades de prod
+   → permite acceder rapidamente a los riesgos detectados
+   → permite validar vulnerabilidades como invalida o no ap[licable
+   → genera vinculos a los reportes de seguridad
+   → esta en 
+
+---
+</rich_text>
+      <rich_text family="monospace"># know if gpg is installed
+which gpg
+
+# install gpg with brew
+brew install gpg
+
+# installa pineentry mac (pgp handler)
+brew install pinentry-mac
+
+# generate key
+gpg --full-gen-key
+# 1. select algorith (RSA and RSA for default)
+# 2. select keysize (the longer the better)
+# 3. specify key time validation (1 year could be fine)
+# 4. Fill out your personal data. Email must the same as your GitLab account mail
+
+# list keys
+# GPG key ID -&gt; that starts with sec i.e. rsa4096/&lt;GPG-key-ID&gt;
+gpg -k --keyid-format LONG
+gpg --list-secret-key --keyid-format LONG
+gpg --list-secret-key --keyid-format LONG &lt;your-email&gt;
+
+# export the public key and add to GitLab (User Settings &gt; GPG Keys)
+gpg --armor --export &lt;GPG-key-ID&gt; | pbcopy
+
+# configure git to use the public key to sign commits
+git config --global user.signingkey &lt;GPG-key-ID&gt;
+git config --global gpg.program gpg
+
+# commit with -S flag to sign
+git commit -S -m "My signed commit"
+
+# or tell Git to sign your commits automatically
+git config --global commit.gpgsign true
+
+
+# DELETE GPG KEYS
+
+# first delete private key
+gpg --delete-secret-key key-ID
+
+# then delete public key
+gpg --delete-key key-ID </rich_text>
     </node>
     <node name="full-course" unique_id="68" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643840042" ts_lastsave="1643840910">
       <rich_text>- less Dockerfile
