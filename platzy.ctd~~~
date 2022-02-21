@@ -829,7 +829,7 @@ En general, ¿qué se necesita para realizar operaciones como insertar o elimina
       </node>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1643840042">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1645384680">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -3007,7 +3007,16 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - provisioner, permite configurar servidores despues de crearlos, permite conectarse via remota: provisioner “remote-exec” {connection {type = “ssh”, user = “”, private_key = “archivo”, host = self.public_ip}, inline = [comandos]}
 - con 0 y -1 se le dice que me puedo conectar a cualquier protocolo con cualquier puerto</rich_text>
     </node>
-    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645142448">
+    <node name="full-course" unique_id="68" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643840042" ts_lastsave="1643840910">
+      <rich_text>- less Dockerfile
+- se crea usuario devops
+- su - devops &amp;&amp; ssh-keygen -t rsa
+- docker run -itd --privileged --name servera centros7ss
+- docker inspect servera
+- ssh devops@192.17.0.3
+- se requiere ser el mismo usuario devops</rich_text>
+    </node>
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645396616">
       <rich_text>-----
 
 
@@ -3157,7 +3166,85 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - gitlab security dashboard
    → es un hub centralizado donde se pueden ver las vulnerabilidades de prod
    → permite acceder rapidamente a los riesgos detectados
-   → permi
+   → permite validar vulnerabilidades como invalida o no ap[licable
+   → genera vinculos a los reportes de seguridad
+   → esta en project-&gt; security dashboard
+- CD
+   → continuos delivery, siempre listo para mandar a prod un artifact
+   → continuos deployment, directo a produccion el codigo
+   → se puede poner en riesgo directo a prod con bugs o con downtime
+   → feature flags para activar diferentes features en codigo en prod
+   → sla, son contratos firmados donde se debe tener cierto downtime
+      ⇒ aqui entran los SRE, que basicamente ponen freno a los deployment, para no incumplir
+      ⇒ gitlab contiene diferentes tipos de estrategias
+         • se pueden usar variables de ambiente
+         • se tiene un CI/CD
+         • 3 tipos de estrategias
+            ◇ rapidamente se manda el codigo a prod
+            ◇ se manda continuamente pero no se activa en todos los pods, se activa de poco en poco
+            ◇ se manda a staging primero y a prod se envia manualmente
+- Ambientes
+   → permiten realizar pruebas en diferentes ambientes
+   → lo mas normal es:
+      ⇒ prod
+      ⇒ stage
+      ⇒ dev
+      ⇒ local
+   → hay 3 tipos
+      ⇒ estaticos, no cambian, es la misma infraestructura
+      ⇒ dinamicos, se puede crear un ambiente por cada branch de desarrollo
+      ⇒ protegidos, ambientes donde se definen ciertas personas que pueden hacer deployment a estos ambientes
+   → se pueden definir usando el keyword, enviroment, se puede poner nombre y url, y cuando se hacen los deployment, manuales o automaticos
+   → la variable de REPLICAS puede crear varias insatancias (pods)
+- Review apps
+   → permite ver los cambios de un feature branch
+   → los disenadores y PM pueden ver los cambios sin necesidad de levantar un ambiente local
+   → el merge request es aprobado el feature branch se borra, se detiene el review app y se destruye la infra
+   → generan un ambiente completo por cada branch
+   → se tienen dos job distintos
+      ⇒ uno genera el ambiente y hace el deploy, para borrar el branche se necesita un on_stop: stop_review
+      ⇒ el otro es stop_review
+- rollback
+   → algunas veces pasan cosas que no pensabamos que iban a pasar
+   → mas complejo es mas dificil de entender
+   → permite automatizar el regreso a ambientes libres de bugs
+- monitoreo
+   → antes no se preocupaba muhco, el codigo era estatico
+   → casi no se tenian cambios anteriormente
+   → se volvio indispensable con devops
+   → se obtiene la visibilidad de la salud y el performance del equipo
+   → todos los ambientes se monitorean
+   → familiarizarce con las metricas
+   → automatizar el monitoreo
+      ⇒ se debe generar alertas cuando algo falla
+      ⇒ esto para prevenir que el ambiente caiga
+   → compartir datos
+      ⇒ reportes
+      ⇒ accesos privilegiados
+   → monitoreo de apps, infra y equipo
+   → cuando se establecen metricas, el ser humano se dedica a maximizar esas metricas
+- performance metrics
+   → nos dan una idea de que tanto esta creciendo la infra y que capacidad de respuesta se tiene
+   → se da una idea de como afinar un workload o una query
+- health metrics
+   → permite entender si la infra esta a punto de fallar
+      ⇒ cuando la memoria o cpu esta llegando al limite de lo que se esperaba
+   → se permite generar alertas para cada metrica
+      ⇒ generalmente se quieren tener buenas metricas de performance, pero las de salud tambien son importantes
+- metricas de equipo
+   → cycle analytics
+   → lenguajes de programacion
+   → commits por dia, semana, mes, hora
+   → pipelines existosos
+   → contribuciones personales del equipo
+   → git timeline
+   → ahora es value stream
+- rastro de errores
+   → se debe generar el stack trace para saber donde esta fallando
+   → para esto se maneja sentry
+   → 
+
+
 
 ---
 </rich_text>
@@ -3204,15 +3291,131 @@ gpg --delete-secret-key key-ID
 
 # then delete public key
 gpg --delete-key key-ID </rich_text>
+      <rich_text>
+
+---
+devops avanzado
+- Implementacion de pruebas
+   → </rich_text>
     </node>
-    <node name="full-course" unique_id="68" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643840042" ts_lastsave="1643840910">
-      <rich_text>- less Dockerfile
-- se crea usuario devops
-- su - devops &amp;&amp; ssh-keygen -t rsa
-- docker run -itd --privileged --name servera centros7ss
-- docker inspect servera
-- ssh devops@192.17.0.3
-- se requiere ser el mismo usuario devops</rich_text>
+    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645396138">
+      <rich_text>
+- que son pruebas y por que deberiamos hacerlas
+   → mejores practicas para no introducir errores
+   → es el proceso de evaluar un producto, exploracion y experimentacion, se requiere de entenderlo
+   → no existe un software sin errores
+   → razones
+      ⇒ un problema o un resultado no deseado
+      ⇒ costo algo o fuera de presupuesto
+      ⇒ implicaicones legales o de estandares
+- proceso de pruebas y estandares
+   → se deben de tener
+      ⇒ herramientas
+      ⇒ recursos
+      ⇒ metodologias
+   → un tester debe documentar, identificar problemas y comunicarlos
+   → la falta de comunicacion puede hacer retrabajo
+   → la mayoria de errores se cometen en el analisis y dise;o del software
+   → definir la falta de calidad
+      ⇒ detectar y corregir la falta de calidad
+   → calidad del software
+      ⇒ calidad del producto
+         • lo que la gente produce
+      ⇒ calidad del proceso
+         • como lo hace la gente
+   → cerficaciones, estandares y metodologias para
+      ⇒ individuos
+      ⇒ procesos
+      ⇒ empresas
+      ⇒ servicios
+      ⇒ tipo de industria
+   → ISTQB
+   → IEEE
+   → TPI
+- Calidad y defectos
+   → es una perscepcion entre lo deseado, analizado y el entregable
+   → esta la define el cliente
+   → es parte del proceso, se va mejorando conforme se va creando el sistema
+   → grado con el que un sistema cumple los necesidades o expectativas del cliente, IEEE
+   → anomalia, no siempre es reproducible
+   → defecto, problema que se puede reproducir una y otra vez
+   → fallo, situaciones no asociadas al software
+   → error, accion humana incorrecta
+- principios del testing moderno
+   → allan page
+   → evolucion del testing agile
+   → el tester debe enforcarse en la calidad del software y el dev en desarrollar la app
+   → los 7 principios
+      ⇒ se pasa de ser dueno de defectos a trabajar con el dev y mejorar el proceso
+      ⇒ 1 la prioridad es mejorar el negocio
+      ⇒ 2 se acelera al equipo, modelos como Lean Thinking y teoria de las restricciones, para identificar, priorizar y mitigar cuellos de botella
+      ⇒ 3 para la mejora continua hay que adaptarse y optimizar
+      ⇒ 4 preocuparse profundamente acerca de la cultura de calidad
+      ⇒ 5 nosotroe creemos que el cliente es el unico capaz ded juzgar y evaluar la calidad
+      ⇒ 6 nosotros usamos datos de manera extensa y profunda para entender los casos de uso del cliente
+      ⇒ 7 expandir las habilidades de testing y el conocimiento en todo el equipo
+- especialidades del testing
+   → automation tester
+   → security tester
+   → data science tester
+   → SDET, es un desarrollador que hace pruebas, automatiza y hace uso de herramientas para automatizar la entrega
+   → devops
+   → qa engineer, mas enfocado en el producto y proceso
+   → qe, quality enginer, es un coach
+   → manual tester
+
+- presupuesto, recursos, tiempo y actividades clave
+   → presupuesto
+   → recursos
+   → tiempo
+   → una mala planeacion del proyecto puede hacer que los costos se incrementen y el proyecto puede ser cerrado
+   → ciclo de desarrollo del software
+      ⇒ definicion de necesidades
+      ⇒ analisis
+      ⇒ disenio
+      ⇒ codificacion
+      ⇒ pruebas
+      ⇒ validacion
+      ⇒ mantenimiento y evolucion
+      ⇒ se repite
+   → testing moderno
+      ⇒ se puede llevar en cada etapa del ciclo
+         • analisis: documentacion de especificacion, requerimientos ambiguos, que hace o no el software no cumple la peticion
+         • disenio, se establece lo que el cliente quiere ver, rango de los campos de captura, como deben de ser las reglas de estos mismo, que pasa si, se cumple o no cumple la condicion
+         • codigo, se pueden tener modulos o funciones, pruebas sobre datos de desarrollo, revisar si se esta haciendo bien el software
+         • pruebas, en el back-end, se puede testear en cada uno de los requerimientos o parte funcional que pidio el cliente
+            ◇ validacion
+            ◇ verificacion
+            ◇ aceptacion, usuario final
+- Estrategia de pruebas
+   → nos permite conocer por donde comenzar
+   → planearlas
+   → todos los tester necesitan saber por donde van a empezar
+   → escenarios, depende mucho de variables como costos
+      ⇒ arquitectura
+      ⇒ seguridad
+         • plataformas(dependera de las plataformas que este conectadas), SO, accesos(diferentes tipos de perfiles), datos, reportes(no todos deben de acceder, solo casos especiales)
+      ⇒ performance
+      ⇒ usabilidad
+      ⇒ escalabilidad
+- testing en desarrollo de software
+   → testing
+      ⇒ exploracion de una idea, como sucede el flujo, crean datos que generen nuevos resultados, este nunca termina, siempre hay escenarios nuevos
+   → checking
+      ⇒ saber que sucede y verificar que siga pasando
+      ⇒ liberacion de nuevo codigo
+      ⇒ pruebas duplicadas, pruebas similares, pruebas sin valor agregado, pruebas caducadas
+   → automatizacion de pruebas, es un checking repetitivo y automatizado, la exploracion manual se la mejor apra checar nuevos cambio
+   → desventajas
+      ⇒ pobre cobertura de pruebas
+      ⇒ falta de actualizacion
+      ⇒ mal manejo de versiones
+   → ventajas
+      ⇒ correr pruebas en paralelo
+      ⇒ reduccion de error humano
+      ⇒ probargrandes cantidades de datos
+   → el coverage es muy importante para saber que algo ya este probado y que no
+   → la automatizacion es escencial cuando las tareas no cambian, generalmente en la parte de operaciones, devops</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
