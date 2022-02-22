@@ -3016,7 +3016,7 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - ssh devops@192.17.0.3
 - se requiere ser el mismo usuario devops</rich_text>
     </node>
-    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645396881">
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645500264">
       <rich_text>-----
 
 
@@ -3301,9 +3301,32 @@ devops avanzado
    → unit + integration + acceptance
    → unit test using mocks
    → integration test usan dependencias reales con fixtures
-   → acceptance test usan un ambiente con todos los servicios, muy parecido a prod</rich_text>
+   → acceptance test usan un ambiente con todos los servicios, muy parecido a prod
+- Continuos integration y artifacts
+   → empieza con git
+   → unit test
+      ⇒ sirve como historial
+      ⇒ saber que ocurrio, como y quien
+   → code analysis
+      ⇒ se debe de tener codigo limpio
+      ⇒ codigo seguro
+   → test coverage
+   → release
+   → la salida de un CI es un artifact
+   → en auditoria se puede llegar a pedir hasta un año de artifacts
+   → tiene mas alcance un integration test que un unit test
+   → se requiere que el codigo tenga un X porcentaje de pruebas, puede ser bueno y malo a la vez
+   → pull requests reviews
+- jenkins
+   → el build no se hace local, por que queremos que sea centralizado, jenkins debe tener el cache
+- herramientas externas
+   → sonarqube
+   → plugis de jenkins
+   → circle CI
+   → tienen analisis de complejidad, de coverage
+   → ventaja de que jenkins corre localmente</rich_text>
     </node>
-    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645396138">
+    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645498035">
       <rich_text>
 - que son pruebas y por que deberiamos hacerlas
    → mejores practicas para no introducir errores
@@ -3420,7 +3443,76 @@ devops avanzado
       ⇒ reduccion de error humano
       ⇒ probargrandes cantidades de datos
    → el coverage es muy importante para saber que algo ya este probado y que no
-   → la automatizacion es escencial cuando las tareas no cambian, generalmente en la parte de operaciones, devops</rich_text>
+   → la automatizacion es escencial cuando las tareas no cambian, generalmente en la parte de operaciones, devops
+- Testing agile
+   → involucra a todos los miembros de un equipo, el tester e un experto multifuncional
+   → estrategias
+      ⇒ el testing es de todo el equipo
+      ⇒ debe ser independiente
+      ⇒ integracion continua
+      ⇒ testing guiado por pruebas
+      ⇒ desarrollo guido por comportamiento
+      ⇒ desarrollo guiado por pruebas de aceptacion
+- Niveles de pruebas
+   → nivel de pruebas de componentes
+      ⇒ aquella que se puede ver, que inteactua
+   → pruebas de integracion
+      ⇒ prueba entre sistemas, flujp completo, como entran y salen datos
+   → pruebas del sistema
+      ⇒  se tiene el contexto
+      ⇒ multiples sistemas
+   → prueba de aceptacion
+      ⇒ el entregable al cliente
+- tipos de pruebas
+   → tecnicas a emplear para encontrar defectos
+   → pruebas funcionales
+      ⇒ que debe de hacer el sistema
+      ⇒ de caja negra
+   → pruebas no funcionales
+      ⇒ lentitud
+      ⇒ otros colores
+      ⇒ no lee o no ve bien
+      ⇒ usabilidad y accesibilidad
+   → pruebas estructurales
+      ⇒ tecnologia y stack que se esta usando
+      ⇒ debe funcionar bien con la estructura
+      ⇒ de caja blanca
+   → pruebas de manejo de cambios
+      ⇒ verificando que impacta con un nuevo cambio
+- pruebas estaticas y dinamicas
+   → estaticas
+      ⇒ doc, software, comparacion, planteamiento o plan de pruebas
+      ⇒ contratos, planes, calendarios del proyecto
+      ⇒ examinacion manual
+      ⇒ analisis de requerimientos
+      ⇒ especififcaciones o reglas de negocio
+   → dinamicas
+      ⇒ demostrar en la ejecucion como esta funionando el software
+   → historias de usuario
+   → criterios de aceptacion
+   → mockups
+   → diseño arq.
+   → las pruebas
+   → guias de usuario
+   → evaluacion/revision del codigo
+   → beneficios
+      ⇒ detectar y corregir defectps
+      ⇒ identificar y priorizar
+      ⇒ prevenir defecto
+         • no tan facil en pruebas dinamicas
+         • durante la etapa de analisis y diseño
+      ⇒ cubrir aspectos que parecen inconsistentes o ambiguos
+      ⇒ se reduce el retrabajo
+      ⇒ reduce costo y el tiempo
+      ⇒ mejora la comunicacion entre todos los miembros del equipo
+- definicion y plan de pruebas
+   → si haces testing sabes para que se hacen
+   → encontrar problemas
+   → documentar problemas
+   → comunicar problemas
+   → si no sabes documentar, esto provocara retrabajo
+   → se debe de poder comunicar, servicio al cliente o usuario
+   → la ejecucion de pruebas debe de ser clara para todo el equipo</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
