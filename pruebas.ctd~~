@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <bookmarks list=""/>
+  <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1645577148">
+    <rich_text>- Pruebas de caja blanca, gris y negra
+   → negra
+      ⇒ no se ve como fue construida
+      ⇒ solo se tiene la interfaz con que se interactua
+      ⇒ en esta se trata de no tener sesgo por lo tanto a veces se busca a lguien externo
+      ⇒ particion de equivalencia
+         • grupos de datos que pueden entrar para casos exitosos y no exitosos
+      ⇒ valores limites
+         • se pueden tener valores como flotantes
+      ⇒ tabla de decisiones
+         • se tiene un ticpo de valor de checkboxes o listas
+         • son valores fijos que no puede introducir el usuario
+      ⇒ transicion de estados
+         • estados activos en formularios dependiendo de los otros campos
+      ⇒ casos de uso
+         • casos que ya se definieron
+      ⇒ back
+   → blanca
+      ⇒ es como una caja de cristal
+      ⇒ se puede ver todo lo que contiene el software
+      ⇒ cobertura de declaraciones
+         • todo lo que se tiene en el codigo que debe de hacer
+         • dependiendo del software y reqs. se establece un procentaje de cobertura
+         • todas las lineas de codigo deben ejecutarse al menos una vez
+      ⇒ cobertura de codigo
+         • sentencias
+         • decisiones
+         • condiciones
+         • no debe de tener codigo inutil
+      ⇒ front
+   → gris
+      ⇒ se pueden tener las integraciones
+      ⇒ datos de como fluyes
+      ⇒ no veo codigo o una interfaz
+      ⇒ casos de negocio
+      ⇒ pruebas end to end
+      ⇒ pruebas de integracion
+      ⇒ datos y servicios
+- gestion de monitoreo y control
+   → planeacion
+      ⇒ se deben definir el objetivo de las pruebas
+   → monitoreo y control
+      ⇒ se buscan las metricas para saber si estamos llevando avances o un retraso
+   → analisis
+      ⇒ decision de prioridades, las prioridades de cobertura son escenciales
+   → diseño
+      ⇒ diseño de casos de alto nivel
+      ⇒ diseñar y priorizar las pruebas
+      ⇒ identificar los datos de pruebas
+      ⇒ identificar el entorno de pruebas
+      ⇒ hacer trazabilidad entre pruebas y sus condiciones
+   → implementacion
+      ⇒ debemos contar con estructura suficiente para hacer las pruebas
+      ⇒ un ambiente de pruebas
+   → ejecucion
+      ⇒ los suites de pruebas se deben ejecutar de acuerdo al plan que se decidio
+   → finalizacion
+      ⇒ defectos con el estatus correcto
+      ⇒ reorte para comunicar los resultados de las pruebas
+      ⇒ finalizar y archivar el ambiente de pruebas y datos
+      ⇒ entregar el test
+   → solo es concentrado en las pruebas, cuando y quien las lleva</rich_text>
+  </node>
+</cherrytree>
