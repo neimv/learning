@@ -3016,7 +3016,7 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - ssh devops@192.17.0.3
 - se requiere ser el mismo usuario devops</rich_text>
     </node>
-    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645553840">
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645722283">
       <rich_text>-----
 
 
@@ -3333,9 +3333,43 @@ devops avanzado
       ⇒ tipos
          • blue/geen, uno actualiza mientras el otro sirve el trafico, este hace un update inmutable
          • canay, se tiene un pool de nodos, se van modificando de poco a poco, mientras se monitorea el cambio, se peude revertir rapidamente
-         • rolling</rich_text>
+         • rolling, el mas conocido y mas viejo, de una por una se hace el update
+- Incident response
+   → las personas que hacen la infraestructura no deben de resolver las incidencias, deberian de ser los que mandana prod
+   → pagerduty tiene una guia
+   → llega la llamada y debe verse quien
+   → se debe checar el tamanio del incidente
+   → se debe de llevar un historial de lo que se hizo, para no repetir
+   → se deben escribir postmorten
+      ⇒ que paso
+      ⇒ que aprendimos
+      ⇒ y que podemos mejorar
+- SLO/SLI
+   → es como las companias miden que el producto esta bien
+   → se puede aplicar ciertas partes dentro de las empresas
+   → Service level objectives/Service level indicator
+      ⇒ mide los success
+      ⇒ latencia, cantidad de errores, envio de email y respuesta
+      ⇒ son metricas que se pueden medir o se pueden definir
+   → si se rompe la metrica, se consume el uso de deploys por mes, se debe de tener cuidado con esto y tener un sla constante
+- uptime monitoring
+   → lo primero que se observa es si esta arriba o no
+   → pruebas de smokes
+   → se debe de usar un provedor externo que nos ayude a eso
+      ⇒ apex.sh
+      ⇒ pingdom
+- trackers y logs
+   → para debuggear
+   → en prod son menores
+   → se tiene que ser moderado con esos por que cuestan
+   → los level en los logs son sumanente importantes
+   → deben de tener una buena estructura
+   → sentry
+- metricas
+   → se deben mirar los logs cuando algo se hizo complemente mal
+   → se pasa mas tiempo viendo metricas</rich_text>
     </node>
-    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645498035">
+    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645720308">
       <rich_text>
 - que son pruebas y por que deberiamos hacerlas
    → mejores practicas para no introducir errores
@@ -3521,7 +3555,76 @@ devops avanzado
    → comunicar problemas
    → si no sabes documentar, esto provocara retrabajo
    → se debe de poder comunicar, servicio al cliente o usuario
-   → la ejecucion de pruebas debe de ser clara para todo el equipo</rich_text>
+   → la ejecucion de pruebas debe de ser clara para todo el equipo
+- Pruebas de caja blanca, gris y negra
+   → negra
+      ⇒ no se ve como fue construida
+      ⇒ solo se tiene la interfaz con que se interactua
+      ⇒ en esta se trata de no tener sesgo por lo tanto a veces se busca a lguien externo
+      ⇒ particion de equivalencia
+         • grupos de datos que pueden entrar para casos exitosos y no exitosos
+      ⇒ valores limites
+         • se pueden tener valores como flotantes
+      ⇒ tabla de decisiones
+         • se tiene un ticpo de valor de checkboxes o listas
+         • son valores fijos que no puede introducir el usuario
+      ⇒ transicion de estados
+         • estados activos en formularios dependiendo de los otros campos
+      ⇒ casos de uso
+         • casos que ya se definieron
+      ⇒ back
+   → blanca
+      ⇒ es como una caja de cristal
+      ⇒ se puede ver todo lo que contiene el software
+      ⇒ cobertura de declaraciones
+         • todo lo que se tiene en el codigo que debe de hacer
+         • dependiendo del software y reqs. se establece un procentaje de cobertura
+         • todas las lineas de codigo deben ejecutarse al menos una vez
+      ⇒ cobertura de codigo
+         • sentencias
+         • decisiones
+         • condiciones
+         • no debe de tener codigo inutil
+      ⇒ front
+   → gris
+      ⇒ se pueden tener las integraciones
+      ⇒ datos de como fluyes
+      ⇒ no veo codigo o una interfaz
+      ⇒ casos de negocio
+      ⇒ pruebas end to end
+      ⇒ pruebas de integracion
+      ⇒ datos y servicios
+- gestion de monitoreo y control
+   → planeacion
+      ⇒ se deben definir el objetivo de las pruebas
+   → monitoreo y control
+      ⇒ se buscan las metricas para saber si estamos llevando avances o un retraso
+   → analisis
+      ⇒ decision de prioridades, las prioridades de cobertura son escenciales
+   → diseño
+      ⇒ diseño de casos de alto nivel
+      ⇒ diseñar y priorizar las pruebas
+      ⇒ identificar los datos de pruebas
+      ⇒ identificar el entorno de pruebas
+      ⇒ hacer trazabilidad entre pruebas y sus condiciones
+   → implementacion
+      ⇒ debemos contar con estructura suficiente para hacer las pruebas
+      ⇒ un ambiente de pruebas
+   → ejecucion
+      ⇒ los suites de pruebas se deben ejecutar de acuerdo al plan que se decidio
+   → finalizacion
+      ⇒ defectos con el estatus correcto
+      ⇒ reorte para comunicar los resultados de las pruebas
+      ⇒ finalizar y archivar el ambiente de pruebas y datos
+      ⇒ entregar el testware al equipo de manto de pruebas
+      ⇒ analizar lecciones aprendidas
+      ⇒ recopilar la informacion para ayudar a la madurez del proceso de pruebas
+   → solo es concentrado en las pruebas, cuando y quien las lleva
+- Roles y Responsabilidades
+   → especialista en pruebas manueales
+   → pruebas tecnicas
+   → lider del equipo de preubas
+   → ingeniero de calidad</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
