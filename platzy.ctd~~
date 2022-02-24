@@ -3016,7 +3016,7 @@ Los plugins me ayudan a instalar herramientas exclusivas para Jenkins.</rich_tex
 - ssh devops@192.17.0.3
 - se requiere ser el mismo usuario devops</rich_text>
     </node>
-    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645500209">
+    <node name="Devops y Gitlab" unique_id="67" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643838980" ts_lastsave="1645553780">
       <rich_text>-----
 
 
@@ -3319,7 +3319,21 @@ devops avanzado
    → pull requests reviews
 - jenkins
    → el build no se hace local, por que queremos que sea centralizado, jenkins debe tener el cache
-- herramientas externas</rich_text>
+- herramientas externas
+   → sonarqube
+   → plugis de jenkins
+   → circle CI
+   → tienen analisis de complejidad, de coverage
+   → ventaja de que jenkins corre localmente
+- CD (continuos deployment)
+   → CD vs CD vs mano
+      ⇒ Delivery, es complemente manual el deploy a prod
+      ⇒ Deployment se envia a prod directamente
+      ⇒ move fast and brek less things
+      ⇒ tipos
+         • blue/geen, uno actualiza mientras el otro sirve el trafico, este hace un update inmutable
+         • canay, se tiene un pool de nodos
+         • rolling</rich_text>
     </node>
     <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645498035">
       <rich_text>
