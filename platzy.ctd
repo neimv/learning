@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1643578407">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1647208030">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -827,6 +827,79 @@ Son las dos principales categorÃ­as de estructuras de datos:
 En general, ¿qué se necesita para realizar operaciones como insertar o eliminar nodos de una linked list?
 </rich_text>
       </node>
+    </node>
+    <node name="por que aprender CDD" unique_id="70" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1647208030" ts_lastsave="1647209567">
+      <rich_text>que es data science:
+- es un proceso de descubrir infromacion valiosa de los datos
+- para tomar decisiones y crear estrategias
+- Crear productos basadps en inteligencia artificial
+- es un conjkuntos de pasos
+   → obtener datos
+   → transformar y limpiar datos
+   → explorar, analizar y visualizar datos
+   → usar modelos de mchine learning
+   → integrar datos e IA a productos de SF
+- es una interseccion de conocimientos
+   → mates
+   → ciencias computacionales
+   → conocimiento del dominio
+
+Que es inteligencia artificil?
+- va mas alla del analisis y manipulacion de datos
+- algoritmos para emular nuestra inteligencia natural
+- reconocer patrones en grandes cantidades de datos
+- generalmente solo tienen una funcion
+- se usa generalmente m,achine learning
+- se debn separar en datos de entrenamiento y de entrada, no pueden ser iguales
+   → aprende con los datos ded entrenamiento
+   → ya una vez hecho el algoritmo se le dan los datos de entrada
+   → se crea una prediccion
+- es una herramienta para el data science
+
+Que es big data?
+- grnades volumenes de datos, variados y veloces
+- resulta complicado procesarlos con metodos tradicionales
+- caracteristicas
+   → volumen, muchos datos
+   → velocidad, se procesan en tiempo real
+   → variedad, es de todo tipo de datos, estructurados y no estructurados
+   → veracidad, calidad y confibles
+   → valor, deben dar un valor a la empresa
+- se procesa al dividirla en partes pequenias
+- tecnologias como spacrk o hadoop
+- es un tipo de materia prima para data science
+
+que no es?
+- magia
+- inteligencia artificial
+- tener solamente metricas de algun dato sin hallazgos de valor
+- tampoco son puras matematicas
+- trabajar solo con big data
+- por que no aprender
+   → no quieres aprender constantemente
+   → no disfrutas el trabajo sucio
+   → no te gusta comunicar y negociar
+   → no te sientes motivado por ayudar a otras personas
+   → no te gusta hacer que las cosas pasen
+
+areas de aplicacion
+- machine learning
+- deep learning
+- RPA, automatizacion de procesos
+- vision artificial
+- procesamiento de lenguaje natural
+- robotica
+- areas
+   → salud
+   → procesos productivos
+   → procesos comerciales
+   → redes sociales
+
+Roles
+- data scientist
+- data analyst
+- data engineer
+- machine learning engineer</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1645384680">
@@ -3370,7 +3443,7 @@ devops avanzado
    → se pasa mas tiempo viendo metricas
    → generar metricas tambien cuesta</rich_text>
     </node>
-    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1645720308">
+    <node name="testing" unique_id="69" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645384680" ts_lastsave="1646033637">
       <rich_text>
 - que son pruebas y por que deberiamos hacerlas
    → mejores practicas para no introducir errores
@@ -3625,7 +3698,134 @@ devops avanzado
    → especialista en pruebas manueales
    → pruebas tecnicas
    → lider del equipo de preubas
-   → ingeniero de calidad</rich_text>
+   → ingeniero de calidad
+- Retrabajo
+   → un dashboard es bastante util para mantener informado a todo el equipo
+   → acciones de control
+      ⇒ si identificamos un riesgo
+      ⇒ siidentificamos falta de ambientes
+      ⇒ si el criterio de salida no se cumple
+   → resultado de las pruebas
+      ⇒ todo lo que va pasando
+   → desempeno del equipo del testing
+      ⇒ que pasa con la gente, equipo, internet, circunstancias personales
+   → es un esfuerzo adicional necesario apra la correccion de una inconformidad de algun producto
+   → falta o mala documentacion
+   → falta de capacitacion o dominio en las herramientas
+   → falta de capacidad o dominio en el software
+   → falta de comunicacion
+- Sistema seguimiento de bugs
+   → bugs o defectos
+   → hay presion de entrega del software
+   → descuidos en el disenio
+   → inexperiencia
+   → falta de comunicacion de reqs
+   → disno complejo de codigo
+   → desconocimiento de tecnologias
+   → como gestionar
+      ⇒ que se debe de hacer al encontrarlo
+      ⇒ que herramienta para documentar
+      ⇒ que informacion se necesita saber
+      ⇒ cual es el estatus
+      ⇒ como saber cuando ya se resolvio
+   → repositorio y monitoreo de dectos
+      ⇒ no cualquiera puede cambiar los estatus, debe de ser alguien responsable de revisar todo
+- defectos y sugerencias
+   → no siempre quieren que el qa de sugerencias solo buscar defectos
+   → defectos
+      ⇒ es aquello que no cumple requerimientos, consecuencia de un error humano
+   → sugerencia
+      ⇒ como la experiencia de usuario es afectada, velocidad, fluides de navegacion
+- depuracion
+   → es una tecnica como herramienta para saber como esta ocurriendo el defecto
+   → los errores de ejecucion es el tiempo que se pierde por cada cierto numero de lineas, un tiempo generalmetne por cada 10 lineas
+   → debuger es una herramienta que ayuda para checar esos errores
+   → encontrar, analizar y encontrar defectos
+   → se deben analizar, variables, como se transfieren los datos, como se transforma esa informacion
+   → siempre va a ver errores
+   → sintomas de errores
+      ⇒ salida incorrecta
+      ⇒ operacion fuera de lo normal
+      ⇒ no finalizacion del programa
+      ⇒ caidas del programa
+   → tipos de herramientas
+      ⇒ debugger
+      ⇒ manual
+      ⇒ local/remota
+   → mensajes de advertencia
+   → estandares de compilacion
+   → verificacion sintactica y logica
+- pruebas de verificacion
+   → sirve para confiramr que un cambio se hizo o un defecto se corrigio
+   → debe funcionar a los requerimientos
+   → se buscan nuevos escenadios donde se utilicen valores relativos
+   → pruebas de regresion
+      ⇒ la matriz de pruebas durante el debuggin, modulos impactados que requieres regresion
+      ⇒ las preubas de regresion ya fallaron la primera vez al no tener suficiente cobertura, se incorporan nuevos
+   → documentacion
+      ⇒ actualizar
+      ⇒ comentarios en el codigo
+      ⇒ documentacion tecnica
+      ⇒ pruebas unitarias
+      ⇒ pruebas especificas
+      ⇒ matrices de pruebas
+      ⇒ plan de pruebas
+- tecnicas de depuracion
+   → deben de cambiar de ser reactivas a preventivas
+   → debugging debe de ser la ultima tecnica en utilizarce
+   → debugging
+   → logs
+      ⇒ almacenar los valores
+      ⇒ rastreo de informacion
+   → historial
+      ⇒ capacidad de analisis forense
+      ⇒ agrupar informacion
+   → monitor reporter
+      ⇒ prevenir ataques o fallas
+      ⇒ observar anomalias
+      ⇒ acelerar tiempos de respuesta
+      ⇒ aplicar tecnicas de machine learning
+      ⇒ mejorar gestion y el control de la informacion
+      ⇒ detectar amenazas de red
+      ⇒ prevenir fugas de iinformacion
+- automatizacion de pruebas
+   → se tienen pruebas repetitivas
+   → script para que las haga un maquina
+   → se define un framework, se debe estandarizar
+   → falla si solo se crean scripts sin documentar las pruebas
+   → se puede automatizar
+      ⇒ pruebas unitarias
+      ⇒ pruebas de integracion
+      ⇒ funcionales o de aceptacion
+   → BDD
+      ⇒ desarrollo guiado por comportamiento
+      ⇒ son pruebas que se escriben para verificar que el comportamiento es correcto desde el punto de vista de negocio
+      ⇒ lenguaje sencillo y simple para que todos en el equipo comprendan el por que las pruebas
+- gherkin
+   → el retrabajo se deriva de malas practicas y no de tomar el trabajo enserio
+   → reduccion de tiempo de casos de pruebas manual a automatizada
+   → lenguaje de texto plano con estructura, facil de aprender
+   → ventajas
+      ⇒ simple
+      ⇒ palabras claves
+      ⇒ estandariza
+      ⇒ reduce tiempo de disenio
+   → principales keywords
+      ⇒ feature
+      ⇒ scenario
+      ⇒ given, when, then, and, but
+      ⇒ background
+      ⇒ scenario outline
+      ⇒ examples
+      ⇒ comentarios con #
+
+
+ERRORES
+¿Cuál es la forma correcta de pasar opciones a un programa?
+Utilizando un maxSurge y MaxUnavailable del 25% con 3 replicas. ¿Cuál es la cantidad máxima de contenedores que pueden haber corriendo en un momento determinado?
+¿Cuál de los siguiente tipos de servicio aloca una entrada de DNS para acceder al servicio?
+Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linux:
+¿Cuándo es útil la opción recovery en un droplet?</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -4466,7 +4666,12 @@ Un mÃ³dulo es un conjunto de paquetes
 ¿Cuántas veces puede iterarse un generador?
 </rich_text>
     </node>
-    <node name="python" unique_id="63" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642641418" ts_lastsave="1642694106">
+    <node name="python" unique_id="63" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642641418" ts_lastsave="1646234786">
+      <rich_text>Starlette permite:
+¿Qué es OpenAPI?
+La Ășltima parte de una URL, despuĂ©s del primer "/", recibe el nombre de:
+¿Con cuál de las siguientes operations no deberías enviar jamás un request body?
+</rich_text>
       <node name="selenium" unique_id="64" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1642694106" ts_lastsave="1643388034">
         <rich_text>- que es selenium
 - cominucar con el navegador web
