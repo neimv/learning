@@ -828,7 +828,7 @@ En general, ¿qué se necesita para realizar operaciones como insertar o elimina
 </rich_text>
       </node>
     </node>
-    <node name="por que aprender CDD" unique_id="70" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1647208030" ts_lastsave="1647209503">
+    <node name="por que aprender CDD" unique_id="70" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1647208030" ts_lastsave="1647813087">
       <rich_text>que es data science:
 - es un proceso de descubrir infromacion valiosa de los datos
 - para tomar decisiones y crear estrategias
@@ -893,7 +893,126 @@ areas de aplicacion
    → salud
    → procesos productivos
    → procesos comerciales
-   → redes sociales</rich_text>
+   → redes sociales
+
+Roles
+- data scientist
+- data analyst
+- data engineer
+- machine learning engineer
+
+Data Analyst
+- utiliza los datos para obtener insights, informacion de valor que permite y ayuda para la decision de toma de valores
+- extrae, analiza y reporta algo amigable para la gente de negocio
+- tiene mas contacto con las demas areas de la empresa
+- uso de sql y python
+   → limpiar y organizar datos
+   → analizar datos para identificar patrones y tendencias
+   → se deben comunicar a las personas de negocios, por medio de visualizaciones
+- bussiness analyst
+   → tiene un conocimiento mas profundo del negocio y tiene ma comunicacion con la otras areas
+- data visualization specialist
+   → son especialistas en como mostras las metricas en tableros
+- Herramientas y tecnologias
+   → consultas a bases de datos, SQL
+   → software de visualizacion de datos, power bi y tableu
+   → excel y google sheets
+   → usar R o Python
+   → usar jupyter notebooks
+   → pandas, numpy y matplotlib
+   → uso de matematicas, probabilidad y estadistica descriptiva
+   → saber como las organizacion usan los datos
+   → consultas en SQL
+   → herramientas de analisis y visualizacion
+   → estadistica aplicada a analisis de datos
+
+Data scientists
+- toma datos de diversas fuentes, y los usa para crear modelos de ML para encontrar informacion valiosa
+- se tomen decisiones basadas en datos
+- incorpora datos al software
+- obtiene limpia y procesa datos
+- dise;a y utiliza modelos de ML para generar predicciones de los datos
+- monitea la precision de los modelos y de los datos
+- automatiza los procesos de recoleccion y limpieza de datos
+- crear reportes de informacion
+- incorpora datos a los productos
+- programacion avanzada con POO
+- machine learning y estadistica avanzada
+- herramientas y tecnologias
+   → programacion con python o R
+   → jupyter notebooks
+   → pandas numpy y matplotlib
+   → algoritmos y librerias de ml como scikit-learn y tensorflow
+   → bases de SQL y NoSQL
+   → mates
+      ⇒ algebra
+      ⇒ estadistica descriptiva e inferencial
+      ⇒ probabilidad
+      ⇒ algebra lineal
+      ⇒ calculo
+- como empezar
+   → como se usan los datos en las organizaciones
+   → programacion con python
+   → jupyters
+   → estadistica y probabilidad aplicada a data science
+
+Data engineer
+- toma datos crudos y crea datos limpios para analisis
+- trabaja para que el equipo tenga datos para analisis
+- crea pipelines ETL
+- data pipelines de ETL y bases ded datos
+- extrae datos de diferentes fuentes
+- transforma datos y los almacena en bases de datos para analisis
+   → bases OLTP
+- se usan bases de datos OLAP, especializadas
+- crear las automatizaciones
+- variaciones
+   → data architect
+   → big data architect
+- herramientas y tecnologias
+   → programacion con python y bases de ingenieria de software, scala
+   → linux
+   → automatizacion y scripting
+   → jupyter notebook
+   → manejo avanzado de bases de datos SQL y NoSQL
+   → pandas, dask y apache spark
+   → airflow
+   → tecnologias cloud
+   → contenedores docker
+   → orquestadores kubernetes
+   → mates
+      ⇒ estadistica descriptiva
+
+Machine learning engineer
+- recibe el modelo que viene desde el DS y lo pone en produccion
+- crear productos basados en IA
+- escala los modelos
+- generar una evaluacion extensiva de metricas de los ML
+- contruye, escala y robustece sistemas de ML que funcionen en prod
+- colaborar con los DS y otros areas de SF
+- monitoreo del desempenio y funcionalidad de los sistemas de ML
+- herramientas y tecnologias
+   → programacion avanzada con python, java, C++
+   → bases solidas de ingeniera de software, conocimiento de devops y backend
+   → pandas, numpy, matplotlib
+   → frameworks y librerias de ML, tensorflow, keras, SKlearn
+   → despliegue de modelos
+      ⇒ flask, fastapi
+      ⇒ tecnologias cloud
+      ⇒ contenedores
+      ⇒ kubernetes
+   → mates
+      ⇒ estadistica descriptiva e inferencial
+      ⇒ probabilidad
+      ⇒ algebra lineal
+      ⇒ calculo
+
+Soft skills
+- ingles
+- comunicacion y storytelling
+- desarrollo de pensamiento critico, solicitudes sin impacto en el negocio
+- creatividad
+- </rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1645384680">
