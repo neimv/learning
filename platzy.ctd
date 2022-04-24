@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1647208030">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1650833576">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -1016,9 +1016,36 @@ Soft skills
 - trabajo en equipo
 - curiosidad</rich_text>
     </node>
+    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1650842708">
+      <rich_text>Consulta de informacion
+- BuscarV
+   → informacion incompleta
+   → contrastacion de hojas y libros diferentes
+   → tener todo en una “base de datos”
+   → evitar busqueda manual
+   → evita buscar manualmente e inserta a la base central
+   → formula =buscarv("celda o valor";"[file]hoja'celdas'";"columna donde esta la informacion";0(coincidencia exacta))
+   → en ingles:  VLOOKUP
+- valores absolutos y relativos en formulas
+   → F2 para mostrar la formula
+   → se mueve en la forma de una celda a la otra, por que los mueve en secuencia
+   → se cambia en la columna donde esta el data
+   → se pueden fijar en excel las columnas
+   → se va a la formula y se fija con $ para fijar solo las filas
+   → si se pone $A$2 no se movera el valor para ninguno de los datos
+   → se aniade una fila en la parte superior, esto como tip, se pone el numero de la columna a buscar, se cambia el numero hardcode por el numero que debe tomar en la celda de arriba, se tiene que fijar la columna de los numeros con E$1 (respectivamente)
+   → $let$num fija columnda y fila
+   → $letnum fija la fija la columna
+   → let$num fija la fila
+- checar orders_has_products, order, product, product_sold_vendor
+- BuscarH
+   → nombre_provedor, vendor.txt
+   → se modifica con T
+   → =buscarh("celda o valor";"[file]hoja'celdas'";"columna donde esta la informacion";0(coincidencia exacta))</rich_text>
+    </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1645384680">
-    <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1619718669">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1649794315">
+    <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
 - las AMI son imagenes preconfiguradas
@@ -1061,7 +1088,12 @@ Soft skills
 - l1 o mas EC2 instances
 - software de administración
 - tiene soporte para varios lenguajes
-- Soporte para docker, go, java se, tomcat, .net, nodejs, php, python, ruby</rich_text>
+- Soporte para docker, go, java se, tomcat, .net, nodejs, php, python, ruby
+
+
+-----------------------------------------------------------------
+# Version 2022
+</rich_text>
     </node>
     <node name="Curso de storage" unique_id="14" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617750952" ts_lastsave="1619722086">
       <rich_text>Storage en S3
@@ -3942,6 +3974,16 @@ Utilizando un maxSurge y MaxUnavailable del 25% con 3 replicas. ¿Cuál es la ca
 Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linux:
 ¿Cuándo es útil la opción recovery en un droplet?</rich_text>
     </node>
+    <node name="Gerencia de tecnologia" unique_id="71" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649170301" ts_lastsave="1649170306"/>
+    <node name="new-aws-platzi" unique_id="74" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649794315" ts_lastsave="1649799252">
+      <rich_text>TI tradicionales
+
+¿Cuál de las siguientes es una característica de la computación en la nube?
+Necesitas  concentrarte en el código y gestión de tu aplicación SIN preocuparte por  la infraestructura. ¿Qué tipo de cómputo en la nube recomendarías  utilizar?
+Necesitas tener control sobre el sistema operativo de tus servidores. ¿Qué tipo de cómputo en la nube recomendarías utilizar?
+¿Cuál de los siguientes servicios es de tipo SaaS?
+</rich_text>
+    </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
@@ -4112,7 +4154,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1641243242">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1649720590">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -4249,7 +4291,7 @@ asimilar dos frases diarias
 pensar 10 minutos en ingles
 aplicar lecturas en ingles</rich_text>
     </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1642555098">
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1649720295">
       <rich_text>
 In the morning
 In the afternoon
@@ -4740,7 +4782,29 @@ cook
 sister
 pizza
 
-I can dance, I can play guitar, I can sing</rich_text>
+I can dance, I can play guitar, I can sing
+
+
+--------
+</rich_text>
+    </node>
+    <node name="estrategias" unique_id="72" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649291591" ts_lastsave="1649448348">
+      <rich_text>Evaluar las competencias es importante porque:
+Son factores que determinan la importancia de las estrategias de estudio en el proceso de aprendizaje:
+
+</rich_text>
+    </node>
+    <node name="hours and requests" unique_id="73" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649720590" ts_lastsave="1649805908">
+      <rich_text>Basic connectors
+- And, addition
+- but, contrast, one option but another no
+- or, options, use one or another
+
+The, article
+- people, only one person or particle (unique), group of people, families
+- things, musical instruments, only one in the place, particular place, monuments, buildings, museums, hotels, bars, restaurants, unique things
+- situations, ordinal numbers, decades, geographical areas, countries
+- not use, name of cities and contries, years, professions, people's names and titles combined with names, meals, languages</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
