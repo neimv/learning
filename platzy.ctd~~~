@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1650833576">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1650904726">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -1016,7 +1016,7 @@ Soft skills
 - trabajo en equipo
 - curiosidad</rich_text>
     </node>
-    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1650842505">
+    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1650983229">
       <rich_text>Consulta de informacion
 - BuscarV
    → informacion incompleta
@@ -1039,10 +1039,93 @@ Soft skills
    → let$num fija la fila
 - checar orders_has_products, order, product, product_sold_vendor
 - BuscarH
-   → nombre_provedor, </rich_text>
+   → nombre_provedor, vendor.txt
+   → se modifica con T
+   → =buscarh("celda o valor";"[file]hoja'celdas'";"columna donde esta la informacion";0(coincidencia exacta))
+- copiar sin formulas (revisar en calc)
+- cambiar las fechas de formato
+- resta de fechas
+- resta de fecha de hoy a cuando llego, en dias
+- reemplazo de texto
+
+- listas desplegables
+   → psara hacerlas se tiene que crear una lista en otro hoja y desde datos traerla
+   → se pueden tener unos estados con dependencia de otra
+   → checar como se hacen listas en calc y listas dependientes
+
+- Separar texto y juntarlo
+   → MES() -&gt; MONTH() para obtener datos de fecha (mes)
+   → en datos, texto en columnas para separar el texto, se tiene que poner cual es el separador
+   → para concatenar, formula contatenar
+   → para obtener un slice, DERECHA(col, #Chars) o IZQUIERDA
+
+- Formulas Basicas
+   → sumar -&gt; suma
+   → promedio
+   → contar</rich_text>
+    </node>
+    <node name="notebooks" unique_id="76" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650904726" ts_lastsave="1650928253">
+      <rich_text>se pueded programar:
+- en local
+- en web broser
+- en servidor
+- en celular
+
+Colab:
+- tiempos de ejecucion y escalabilidad es uno de los temas mas importantes por los cuales usar nube
+- servicio en la nube
+- basado en jupyter notebooks
+- no requiere configuracion
+- trabajo a nivel de archivo
+- uso gratuito de GPU y TPU
+
+Deepnote
+- servicio en la nube
+- basado en JN
+- no requiere conf
+- trabajo a nivel de proyecto
+- colaboracion en tiempo real
+- integracion con multiple apps
+- acceso a una terminar o linea de comando
+- almacenamiento de variables de entorno
+- publicar proyectos
+
+#</rich_text>
+      <rich_text family="monospace">Crear ambiente
+conda create --name py39 python=3.9 pandas=1.2
+#Ir al ambiente
+conda activate py39
+# Instalar boltons
+conda install -c conda-forge boltons
+#Devolver a un punto anterio y asi no tener que remover
+conda list -r
+#Devolverme a larevision 0
+conda install --revision 0
+#Revisar si esta instalado
+conda list boltons
+#Exportar tu ambiente
+conda env export
+#Exportar tu ambiente pero sin las versiones
+conda env export --no-builds
+#Exportar tu ambiente LA MEJOR
+conda env export --from-history
+#Exportar tu ambiente a un archivo
+conda env export --from-history --file environment.yam
+#Remover ambiente 
+conda env remove --name py39
+#Importar el ambiente
+conda env create --file environment.yaml
+#Ir al ambiente 
+conda activate py39</rich_text>
+      <rich_text>
+
+
+VSCode a trav├ęs de extensiones te permite tener un ambiente de notebooks integrado. En ellos puedes:
+¿Cuál de los siguientes servicios/tipos de Jupyter Notebooks te permite crear gráficas sin necesidad de código?
+</rich_text>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1649794315">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -3982,6 +4065,7 @@ Necesitas tener control sobre el sistema operativo de tus servidores. ¿Qué tip
 ¿Cuál de los siguientes servicios es de tipo SaaS?
 </rich_text>
     </node>
+    <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">

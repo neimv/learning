@@ -79,4 +79,8 @@ func main() {
 	radio := 3.0
 	areaCirculo := pi * (radio * radio)
 	fmt.Println("El area del circulo es", areaCirculo)
+
+	var hello = []int(nil)
+
+	fmt.Print(hello)
 }

@@ -4,7 +4,12 @@ import "fmt"
 
 type car struct {
 	brand string
-	year int
+	year  int
+}
+
+type intDataset struct {
+	value int
+	isNil bool
 }
 
 func main() {
