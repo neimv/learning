@@ -1016,7 +1016,7 @@ Soft skills
 - trabajo en equipo
 - curiosidad</rich_text>
     </node>
-    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1650983327">
+    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1651186375">
       <rich_text>Consulta de informacion
 - BuscarV
    → informacion incompleta
@@ -1062,7 +1062,39 @@ Soft skills
 - Formulas Basicas
    → sumar -&gt; suma
    → promedio -&gt; promedio
-   → contar -&gt; contar</rich_text>
+   → contar -&gt; contar
+
+- mas formulas
+   → de manera relativa a los datos
+   → aleatorio para crear un numero aleatorio
+   → SUMAR.SI, (rango del criterio, “criterio”, rango de suma)
+   → PROMEDIO.SI, trabaja igual
+   → CONTAR.SI, same, el rango a contar es el del criterio
+
+Nombrar rangos y ahcer operaciones
+- se pueden nombrar rango para simplificar formulas, se seniala y se cambia el nombre en el cuadro de nombres
+
+Promedios ponderados
+- valor por el peso y sumar
+- sumaproducto
+
+las formulas condicionales trabajan como un if ternario
+se pueden agregar formato de colores a las columnas con condicionales
+
+- tablas dinamicas
+   → se pueden incluir campos desde la tabla source
+   → en las tablas dinamicas en medio se ponen valores con los que se pueden operar, ventas, ganancias
+   → cada campo se puede modificar la operacion, por ejemplo por default se suma, pero se puede cambiar a saber cuantos fueron
+   → se pueden hacer calculos con los datos que estan dentro de la tabla, esto para tablas dinamicas
+- graficas
+   → se usan para tener un mensaje mas claro
+   → datos procesados y agrupado, tiene que ser lo mas especifico y claro posible
+- minigraficas
+   → minis en 3.6.5
+
+- se peuden bloquear y proteger las hojas, se hacen por medio de password
+- tambien se puede proteger el libro
+- se puede mostrar informacion de manera interactiva tambien</rich_text>
     </node>
     <node name="notebooks" unique_id="76" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650904726" ts_lastsave="1650928253">
       <rich_text>se pueded programar:
@@ -5241,7 +5273,10 @@ En los frameworks web modernos existe el concepto de middleware,  que describe u
    → se debe desarrollar y saber para que sirve cada herramienta
 </rich_text>
     </node>
-    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651004263"/>
+    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651180666">
+      <rich_text>la ffrma de crear modulos cambio del 1.15 en adelante antes se tenia que agregar al path los datos de GO
+</rich_text>
+    </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
     <node name="Personalidad y productividad" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
