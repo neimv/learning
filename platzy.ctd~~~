@@ -1016,7 +1016,7 @@ Soft skills
 - trabajo en equipo
 - curiosidad</rich_text>
     </node>
-    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1651185468">
+    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1651186375">
       <rich_text>Consulta de informacion
 - BuscarV
    → informacion incompleta
@@ -1092,7 +1092,9 @@ se pueden agregar formato de colores a las columnas con condicionales
 - minigraficas
    → minis en 3.6.5
 
-- se peuden bloquear y proteger las hojas</rich_text>
+- se peuden bloquear y proteger las hojas, se hacen por medio de password
+- tambien se puede proteger el libro
+- se puede mostrar informacion de manera interactiva tambien</rich_text>
     </node>
     <node name="notebooks" unique_id="76" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650904726" ts_lastsave="1650928253">
       <rich_text>se pueded programar:
@@ -5768,7 +5770,7 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
 </rich_text>
     </node>
   </node>
-  <node name="Road to code" unique_id="48" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#a52a2a" ts_creation="1620311539" ts_lastsave="1622842506">
+  <node name="Road to code" unique_id="48" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#a52a2a" ts_creation="1620311539" ts_lastsave="1651193071">
     <node name="introducion al desarrollo web" unique_id="49" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1620311550" ts_lastsave="1621279593">
       <rich_text># Como empezo todo
 - se queria resolver calculos
@@ -5818,6 +5820,132 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
 ¿Cual es el método recomendando por la comunidad para manejar asincronismo en JavaScript?
 ¿Nos permite definir una función así­ncrona? 
 ¿Para qué nos sirve el método "catch()"?
+</rich_text>
+    </node>
+  </node>
+  <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1651197180">
+    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1651196842">
+      <rich_text>IAM
+- service global
+- root shouldn't be used or shared
+- User can be grouped and are people
+- permissions are JSON Document called policies
+   → This defines the permissions
+   → apply the least privilege principle
+- tags is for information of users
+- change num of account by alias
+- policies:
+   → Version, 2012-10-17
+   → ID, identifier optional
+   → Statement, one or more (required)
+      ⇒ Sid, identifier (optional)
+      ⇒ Effect (ALLOW; DENY)
+      ⇒ principal, account, user, role to applied
+      ⇒ action: action
+      ⇒ resources: list of resources
+      ⇒ condition: applies or not (optional)
+- MFA is for more security
+   → protects root and aws accounts
+   → you know + you own
+   → authy multidevice
+   → yubikey, multiple root and user
+- strong passwords, with expiration, not reuse
+- to access in AWS exists
+   → AWS managment console
+   → AWS CLI, command in the shell
+   → AWS SDK, for code, in C++, Python, Go, Java, Javascript, Php, Ruby, Nodejs, Android, Ios, Embedded C arduino
+- CloudShell
+   → icon in aws ui, is not in all regions
+   → is possible use the cli, and use v2
+- Roles for services
+   → some services need to perform actions
+   → assing role to services
+   → common
+      ⇒ EC2
+      ⇒ Lambda
+      ⇒ Cloudformation
+- IAM Security Tools
+   → IAM Credentials Report (account-level)
+      ⇒ lists all account's users and the status
+   → IAM Access Advisor (user-level)
+      ⇒ show the service permissions granted to a user, and last accessed
+      ⇒ use to check policies
+- Best practices
+   → don't use the root account
+   → phyisical user = aws user
+   → users in groups, permissions to groups
+   → strong password policyenforce MFA
+   → create and use roles to aws services
+   → use keys only for programmatic access
+   → audit permissions of tha accounts an reports
+   → never share IAM &amp; access keys
+- Responsability
+   → aws
+      ⇒ infraestructure
+      ⇒ configuration and vulnerability
+      ⇒ compliance validation
+   → you
+      ⇒ User, grouos, roles, policies
+      ⇒ enable MFA
+      ⇒ rotate all keys
+      ⇒ IAM to apply appropiate permissions
+      ⇒ Analyze access and review permissions</rich_text>
+    </node>
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199242">
+      <rich_text>JSON is horrible to CF
+is possible use CF and JSON
+-- YAML
+Key values pair
+Nested objects
+support arrays
+Multi line string with |
+can include comments
+
+for every resource in CF is necesary define in:
+</rich_text>
+      <rich_text foreground="#6262a0a0eaea">Resources:
+	Name:
+		type:
+		properties</rich_text>
+      <rich_text>:
+
+EC2 update with some interruption
+Iam with no interruption
+replacement
+	recreating the resource
+	creates the new resource or change logical ID
+	for example an RDS DB
+
+Options
+	tags
+	permission, specified by role
+	notifications options
+	timeout
+	rollback on failure
+	Rollback configuration
+	Stack policy
+	termination protection
+	quick start link
+	
+Designer
+	visualize a cloudformation stack
+	used to verify if template us well created
+	
+building blocks
+	AWSTemplateFormatVersion: 2010-09-09
+	Description: Comments
+	Transforma: specifies one or more Macros to process the template
+	Metadata
+	Resources: aws resources (mandatory)
+	Parameters: the dynamic inputs
+	Mappings: the static variables
+	Outputs: Referencies
+	condicionalust: list of conditions to perform resource creation
+	Rules: validate a parameters durin stack creation/update
+	helpers:
+		
+
+	
 </rich_text>
     </node>
   </node>
