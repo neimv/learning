@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1650904726">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1651261296">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -1016,7 +1016,7 @@ Soft skills
 - trabajo en equipo
 - curiosidad</rich_text>
     </node>
-    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1651186375">
+    <node name="excel" unique_id="75" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650833576" ts_lastsave="1651240815">
       <rich_text>Consulta de informacion
 - BuscarV
    → informacion incompleta
@@ -1035,7 +1035,7 @@ Soft skills
    → si se pone $A$2 no se movera el valor para ninguno de los datos
    → se aniade una fila en la parte superior, esto como tip, se pone el numero de la columna a buscar, se cambia el numero hardcode por el numero que debe tomar en la celda de arriba, se tiene que fijar la columna de los numeros con E$1 (respectivamente)
    → $let$num fija columnda y fila
-   → $letnum fija la fija la columna
+   → $letnum fija la columna
    → let$num fija la fila
 - checar orders_has_products, order, product, product_sold_vendor
 - BuscarH
@@ -1094,7 +1094,14 @@ se pueden agregar formato de colores a las columnas con condicionales
 
 - se peuden bloquear y proteger las hojas, se hacen por medio de password
 - tambien se puede proteger el libro
-- se puede mostrar informacion de manera interactiva tambien</rich_text>
+- se puede mostrar informacion de manera interactiva tambien
+
+
+La utilidad principal de Excel es:
+Dos de las malas pr├ícticas al trabajar con bases de datos son:
+Una técnica efectiva y rápida para verificar la efectividad de las funciones relativas es:
+El uso principal de los semáforos en Excel es dar diseño y armonía a la base de datos.
+</rich_text>
     </node>
     <node name="notebooks" unique_id="76" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650904726" ts_lastsave="1650928253">
       <rich_text>se pueded programar:
@@ -1155,6 +1162,108 @@ conda activate py39</rich_text>
 VSCode a trav├ęs de extensiones te permite tener un ambiente de notebooks integrado. En ellos puedes:
 ¿Cuál de los siguientes servicios/tipos de Jupyter Notebooks te permite crear gráficas sin necesidad de código?
 </rich_text>
+    </node>
+    <node name="bussiness intelligence" unique_id="83" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651261296" ts_lastsave="1651265592">
+      <rich_text>Introduccion
+- concepto: inteligencia del negocio, utilizar informacion dentro de la organizacion para tomar decisiones
+- pariente cercano de la ciencia de datos, analisis descriptivo, en pasado y presente
+- generacion de reporte y descubrimientos de la informacion
+- ETL, extract, transform y load
+- exploracion, que se puede encontrar que explica lo que esta pasando
+- descubrimientos, patrones
+- reporting, se concentra la informacion para la audiencia
+- como??
+   → visualizacion de datos
+   → storytelling
+   → recomendaciones
+- importancia
+   → ayuda para mejorar productos y procesos dentro ded la empresa
+
+Stakeholders
+- personas o grupos que rodean a la empresa, personas de interes
+- accionistas, clientes, empleados, proveedores, sociedad, gobierno
+- esto nos ayuda a tener mas claro a quien va dirigidos los intereses
+- se tienen que entender los intereses
+- se deben de priorizar
+   → empresa tradicional
+      ⇒ accionistas
+      ⇒ clientes
+      ⇒ empleados
+   → startup
+      ⇒ clientes
+      ⇒ empleados
+      ⇒ accionistas
+- el BI tiene que salvaguardar los intereses de los stakeholders
+
+Tipos de empresas
+- se hace el analisis por que es muy distinto una de otra
+- se tiene que entender la afectacion de cada una de las actividades cotidianas
+- utilidad bruta = ingresos - costos de venta
+- utilidad operativa = utilidad bruta - gastos de administracion (todo aquello que no esta relacionado con la produccion)
+- utilidad neta = utilidad operativa - otros gastos e inresos - impuestos
+- venta de productos
+   → costos de venta, son las ventas - costos de ventas
+- venta de servicios
+   → generalmente los costos de venta no afectan tanto, el software es un ejemplo, se gasta mas en nomina y gastos administrativos
+
+Income statement simplificado
+- si no hay utilidad bruta, se debe detener y arreglar o cerrar la empresa
+- si la operativa esta tan baja con la bruta, los gastos administrativos estan muy caros, se debe reducir la operativa con la bruta
+- como afecta cada actividad y saber que es lo que se quiere mejorar
+- afectacion distinta
+   → costo en materia prima, si aumenta utilidad bruta disminuye
+   → incremento en nomina, incremento en gastos operativos utilidad operativa disminuye
+   → cambios en oficina, si aumenta, disminuye la utilidad operativa
+   → aumento presupuesto de marketing, costos de operacion, utilidad operativa disminuye, se ve como un aumento de ventas
+   → cambio en el precio del producto, utilidades brutas, pueden aumentar o disminuir las ventas
+- se debe de pensar de lo particular a lo general
+
+- ingreso, es todo aquello que no se le ha sustraido los gastos o costos de los bienes
+- utilidad, es cuando al ingreso se le extraen los costos o gastos, mayort ingreso no significa mayor utilidad
+- costos
+   → costo fijo, costos que son constantes, por ejemplo la renta
+   → costo variable, se pueden identificar a una actividad, a mayor actividad mayor costo
+   → semivariable, puede cambiar o mantenerse
+   → mayor costo no siempre significa menos utilidad
+
+Margen de contribucion:
+- elemento con que podemos entender las cosas como un pequenio resumen
+- la diferencia entre el precio de los productos menos el costo de los productos
+- nos ayuda a encontrar un punto de equilibrio, no hay ganancias ni perdidas, cuanto se tiene que vendar para no perder ni ganar
+- PE = costos fijos / (precio venta - costo variable por unidad)
+
+Razones matematicas en los negocios
+- definicion, relacion entre dos magnitudes o valores
+- se debe pensar en porcentajes
+- utilidad / ingresos
+- margen de contribucion / precio
+- ventas de producto a / ventas totales</rich_text>
+    </node>
+    <node name="numpy-pandas" unique_id="82" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651261091" ts_lastsave="1651269180">
+      <rich_text>Numpy
+- es muy veloz, 50 veces que usar listas en python o en C
+- optimiza almacenamiento en memoria
+- maneja distintos tipos de datos
+Pandas
+- herada ventajas de numpy
+- maneja multiples archivos, formatos
+- alineacion inteligente
+- se puede hacer analitica, etls y mas
+
+Array
+- estructura central de NP
+- representa datos de manera estructurada
+- indexado
+- acceso a uno o muchos elementos
+
+Tipos de datos
+- ints
+
+Dimensiones
+- scalar dim 0
+- vector dim 1
+- matriz dim 2
+- tensor dim &gt;= 3</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5891,7 +6000,7 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
       ⇒ IAM to apply appropiate permissions
       ⇒ Analyze access and review permissions</rich_text>
     </node>
-    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199242">
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199459">
       <rich_text>JSON is horrible to CF
 is possible use CF and JSON
 -- YAML
@@ -5943,7 +6052,16 @@ building blocks
 	condicionalust: list of conditions to perform resource creation
 	Rules: validate a parameters durin stack creation/update
 	helpers:
+		references
+		functions
 		
+deploying:
+	manual way
+	automated way
+		using aws cli
+		
+Cost:
+	use the link stimated cost, sends to simple monthlu calculatos
 
 	
 </rich_text>
