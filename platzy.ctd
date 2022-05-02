@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1651261296">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1651530656">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -1163,7 +1163,7 @@ VSCode a trav├ęs de extensiones te permite tener un ambiente de notebooks int
 ¿Cuál de los siguientes servicios/tipos de Jupyter Notebooks te permite crear gráficas sin necesidad de código?
 </rich_text>
     </node>
-    <node name="bussiness intelligence" unique_id="83" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651261296" ts_lastsave="1651265592">
+    <node name="bussiness intelligence" unique_id="83" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651261296" ts_lastsave="1651514026">
       <rich_text>Introduccion
 - concepto: inteligencia del negocio, utilizar informacion dentro de la organizacion para tomar decisiones
 - pariente cercano de la ciencia de datos, analisis descriptivo, en pasado y presente
@@ -1237,9 +1237,68 @@ Razones matematicas en los negocios
 - se debe pensar en porcentajes
 - utilidad / ingresos
 - margen de contribucion / precio
-- ventas de producto a / ventas totales</rich_text>
+- ventas de producto a / ventas totales
+
+Extraccion de datos
+- se tiene que tener muy en cuenta los ETL
+   → se debe de ser cuidadoso con los extract, ya que no siempre hay informacion cierta
+   → se puede encontar la informacion de silos, no siempre lo que se encuentra en un departamente esta en otro departamento
+   → hay que tener cudadido con el uso de los software, SAP, Excel, Google Studio
+- tipos de archivos para extraccion
+   → excel, texto de csv
+
+Limpieza de datos
+- se debe procurar que todo lo que extrajimos es entendible
+- garbage in, garbage out
+- este es el primer acercamiento, donde se puede entender lo que tenemos de informacion
+
+Exploracion de datos
+- se hace para saber que nos dicen los datos
+- se hacen preguntas que no sabiamos que existian
+- que es lo que hace que sucede en ciertos patrones
+- pueden llegar a cambiar las preguntas e hipotesis sociales
+- software mas comunes
+   → se peude usar python o R
+   → programas como excel, tableu, power bi
+
+Descubrimientos, highlights,
+- los high nos ayudan a tomar las decisiones
+- siempre empezar con lo mas buscado y lo menos buscado (bottom and top data)
+- encontrar patrones o temporalidad
+- esfuerzate en enteder la data
+
+Reporting
+- pensar en la audiencia
+- pensar en el mensaje, como se va a transmitir
+- saber si el mensaje va a ser estatico o dinamico, impreso es un reporte estatico, usar power bi y tableu para reportes dinamicos
+- tener buenas practicas visuales
+- contexto, dashboards y storytelling, la audiencia debe de saber de que se habla
+- Descripcion, descubrimientos y sugerencias
+
+Alertas, automatizacion y live reporting
+- el li e reporting es el reporte en vivo, un problema es la falta de tiempo real al hacerse este analisis
+- se automatiza por medio de software
+- lertas, KPI, metrivas y colores (tomarle cierta atencion al reporte en el momento)
+
+Eficiencia, max profit y min cost
+- la eficiencia nos ayuda a mejorar un proceso, y los recursos dedicados a este proceso
+- siempre tenemos que buscar la utilidad
+- siempre se debe de intentar minimizar los costos
+- siempre pensar en la jerarquia ded los stakeholders
+
+
+La nĂ³mina es un ejemplo de costo...
+Elige la f√≥rmula para encontrar el punto de equilibrio, utilizando el margen de contribuci√≥n
+Podemos saber mucho sobre la empresa simplemente leyendo el estado de resultados. Esto es: 
+Si tu proveedor de materia prima decide aumentar el precio de los materiales con los que fabricas tus productos, ¿qué utilidad se vería afectada? Considera que todo lo demás permanece igual.
+
+
+¿Qué significa ETL?
+¿Cuáles son las fases del proceso de Business Intelligence?
+Si tu proveedor de materia prima decide aumentar el precio de los materiales con los que fabricas tus productos, ¿qué utilidad se vería afectada? Considera que todo lo demás permanece igual.
+</rich_text>
     </node>
-    <node name="numpy-pandas" unique_id="82" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651261091" ts_lastsave="1651269180">
+    <node name="numpy-pandas" unique_id="82" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651261091" ts_lastsave="1651528707">
       <rich_text>Numpy
 - es muy veloz, 50 veces que usar listas en python o en C
 - optimiza almacenamiento en memoria
@@ -1263,7 +1322,24 @@ Dimensiones
 - scalar dim 0
 - vector dim 1
 - matriz dim 2
-- tensor dim &gt;= 3</rich_text>
+- tensor dim &gt;= 3
+
+Se tienen series y dataframes
+las series es un arreglo unidimensional, busqueda por indice y slicing, operacion aritmeticas y manejo de varios tipos de datos
+dataframe, es una estructura matricial, estructura principal, de dos dimensiones, indices en filas y columnas</rich_text>
+    </node>
+    <node name="Visualizacion de datos" unique_id="84" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651530656" ts_lastsave="1651531347">
+      <rich_text>Por que es importante aprender
+- fundamental,representacion graficade informacion
+   → input: informacion (data)
+   → output: revelaciones (insights) e historias
+- se tiene muchos datos, la visualizacion nos ayuda a encontrar las historias dentro de esos datos
+
+Tableua:
+- excel es de las primeras herramientas donde se pueden visualizar datos
+- power BI, transicion natural del excel al BI
+- google analytics, para mercadotecnia, generalmente para campanias y anuncios
+- tableau, permite hacer dashboards, visualizaciones y narracion de datos</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5382,9 +5458,68 @@ En los frameworks web modernos existe el concepto de middleware,  que describe u
    → se debe desarrollar y saber para que sirve cada herramienta
 </rich_text>
     </node>
-    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651422630">
+    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651427667">
       <rich_text>la ffrma de crear modulos cambio del 1.15 en adelante antes se tenia que agregar al path los datos de GO
 
+Variables, funciones y constantes
+la declaracion de variables se hace:
+	const {nombre} {tipo de dato} = {valor} // para constante
+	const {nombre} = {valor} // se define por el valor el tipo
+	{nombre} := {valor}
+	var {nombre} {tipo} = {valor}
+	var {nombre} {tipo}
+	
+	los zero values son valores por defectos que tienen las variables
+		int -&gt; 0
+		float64 -&gt; 0
+		string -&gt; ‘’
+		bool -&gt; false
+		
+	el incremental se maneja igual que en C
+	
+	primivitos:
+		//Numeros enteros
+		//int = Depende del OS (32 o 64 bits)
+		//int8 = 8bits = -128 a 127
+		//int16 = 16bits = -2^15 a 2^15-1
+		//int32 = 32bits = -2^31 a 2^31-1
+		//int64 = 64bits = -2^63 a 2^63-1
+
+		//Optimizar memoria cuando sabemos que el dato simpre va ser positivo
+		//uint = Depende del OS (32 o 64 bits)
+		//uint8 = 8bits = 0 a 127
+		//uint16 = 16bits = 0 a 2^15-1
+		//uint32 = 32bits = 0 a 2^31-1
+		//uint64 = 64bits = 0 a 2^63-1
+
+		//numeros decimales
+		// float32 = 32 bits = +/- 1.18e^-38 +/- -3.4e^38
+		// float64 = 64 bits = +/- 2.23e^-308 +/- -1.8e^308
+
+		//textos y booleanos
+		//string = ""
+		//bool = true or false
+
+		//numeros complejos
+		//Complex64 = Real e Imaginario float32
+		//Complex128 = Real e Imaginario float64
+		//Ejemplo : c:=10 + 8i
+		
+		en go toas las cadenas siempre tiene que ser en comillas dobles
+		
+	fmt:
+		Printf, para usar en format, si se sab el tipo de se ve se usan los %tipo, si en dado caso no se sab ecual es se usa %v
+		Sprintf, genera un string pero no lo muestra en consola, regresa el string es como un format
+		printf mse sirve para saber el tipo de variable usando %T
+		
+	funciones
+		se declaran: fun {nombre}({variables}) {!retorno!} {}
+		si las variables son del mismo tipo se pueden declarar asi: a,b {tipo}
+		si se requieren regresar mas de un valor se guardan en un ()
+		una forma de ignorar un valor que no se requier usar se puede poner: _
+
+
+----------------------------------
 76.70, 1600
 100, 2050
 75, 1600
@@ -5938,7 +6073,7 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
     </node>
   </node>
   <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1651197180">
-    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1651196842">
+    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1651534947">
       <rich_text>IAM
 - service global
 - root shouldn't be used or shared
@@ -6003,7 +6138,53 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
       ⇒ enable MFA
       ⇒ rotate all keys
       ⇒ IAM to apply appropiate permissions
-      ⇒ Analyze access and review permissions</rich_text>
+      ⇒ Analyze access and review permissions
+
+EC2
+- billing, IAM user hasn't permissions in billing, is necesary root, or grant permissions to IAM
+- AWS free tier
+- create a budget to calculate use of costs, configure alerts, in percent use of budget to email
+- is one most popular aws offering
+- elastic compute cloud = IAAS
+- renting virtual machine
+- storing data EBS
+- Distributing load across machines ELB
+- Scaling services (ASG
+- this is fundamental to understand how cloud workd
+- operating system: linux, windows or macos
+- ram and CPU is selected
+- storage space:
+   → network attached (EBS &amp; EFS)
+   → hardware (EC2 instance Store)
+   → Network card speed of the card, Public Ip Address
+   → firewall rules: security groups
+- bootstrap script (configure at first launch), EC2 User Data
+- is possible use one script when is launched he first time the EC2 instance
+- EC2 data scripts runs as root
+- t2.micro is in free tier
+   → selecy user data in configure instance details to execute a script
+   → key pairs is required to conect is type RSA
+- the ip public is change when is sopped the manchine and restart
+- instances types:
+   → 7 types
+   → eveery type is for specific purpose
+   → nom (m5.2xlarge):
+      ⇒ m: instance class
+      ⇒ 5: generation
+      ⇒ 2xlarge: size of instance
+- security groups
+   → fundamentals of network security
+   → control how traffic is allowed in ec2
+   → only contains allow rules
+   → can refered by IP or by security group
+   → they regulate
+      ⇒ access to ports
+      ⇒ ip range
+      ⇒ control of inbound and outbound network
+      ⇒ can attached to multiple ionstance
+      ⇒ down to a region / vpc combination
+      ⇒ live outside the ec2
+      ⇒ all inbound traffic is blocked by default, all outbound traffic is authorised by default</rich_text>
     </node>
     <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199459">
       <rich_text>JSON is horrible to CF
