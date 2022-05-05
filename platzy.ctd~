@@ -5458,7 +5458,7 @@ En los frameworks web modernos existe el concepto de middleware,  que describe u
    → se debe desarrollar y saber para que sirve cada herramienta
 </rich_text>
     </node>
-    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651427667">
+    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651719645">
       <rich_text>la ffrma de crear modulos cambio del 1.15 en adelante antes se tenia que agregar al path los datos de GO
 
 Variables, funciones y constantes
@@ -5517,6 +5517,27 @@ la declaracion de variables se hace:
 		si las variables son del mismo tipo se pueden declarar asi: a,b {tipo}
 		si se requieren regresar mas de un valor se guardan en un ()
 		una forma de ignorar un valor que no se requier usar se puede poner: _
+
+Ciclos
+- cada lenguaje tiene un tipo de ciclo, en el caso de golang solo existe for:
+   → for condicional: for i:=0; i&lt;10; i++ {}
+   → for while: for {!condicion!} {}
+   → for forever: for {}
+- ifs
+   → if: if {condicion}
+   → if-else: if {condicion} {} else {}
+   → se usa &amp;&amp; para and
+   → || se usa para or
+- switch
+   → se usa para sentencias multiples
+   → switch {variable} {case value: {instruciones}  default: {instrucciones}}
+   → generalmente se usa: switch {declaracion de variable}; {variable} {}
+   → se puede usar: switch {case {variable-condicion} {}}
+   → siempre es buena practica usar un default al final del switch
+- defer
+   → se usa para que antes de morirse el main ejecuta el codigo que este en defer
+- break
+- continue
 
 
 ----------------------------------
@@ -6073,7 +6094,7 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
     </node>
   </node>
   <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1651197180">
-    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1651534865">
+    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1651534947">
       <rich_text>IAM
 - service global
 - root shouldn't be used or shared
@@ -6184,7 +6205,7 @@ EC2
       ⇒ can attached to multiple ionstance
       ⇒ down to a region / vpc combination
       ⇒ live outside the ec2
-      ⇒ </rich_text>
+      ⇒ all inbound traffic is blocked by default, all outbound traffic is authorised by default</rich_text>
     </node>
     <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199459">
       <rich_text>JSON is horrible to CF
