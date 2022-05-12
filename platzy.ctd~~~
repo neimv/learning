@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1651530656">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1652031812">
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -1328,18 +1328,163 @@ Se tienen series y dataframes
 las series es un arreglo unidimensional, busqueda por indice y slicing, operacion aritmeticas y manejo de varios tipos de datos
 dataframe, es una estructura matricial, estructura principal, de dos dimensiones, indices en filas y columnas</rich_text>
     </node>
-    <node name="Visualizacion de datos" unique_id="84" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651530656" ts_lastsave="1651531347">
+    <node name="Visualizacion de datos tableau" unique_id="84" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651530656" ts_lastsave="1652027094">
       <rich_text>Por que es importante aprender
 - fundamental,representacion graficade informacion
    → input: informacion (data)
    → output: revelaciones (insights) e historias
 - se tiene muchos datos, la visualizacion nos ayuda a encontrar las historias dentro de esos datos
 
-Tableua:
+Tableau:
 - excel es de las primeras herramientas donde se pueden visualizar datos
 - power BI, transicion natural del excel al BI
 - google analytics, para mercadotecnia, generalmente para campanias y anuncios
-- tableau, permite hacer dashboards, visualizaciones y narracion de datos</rich_text>
+- tableau, permite hacer dashboards, visualizaciones y narracion de datos
+- se maneja bastante arrastre y suelte
+- la comunidad es una de las mas importante en la visualizacion de datos
+   → cda lunes se tiene un makeoverMonday
+   → Viz o the day es la mas bonita de todos
+   → ironviz todos los nominados de makeoverMonday pasan a esta parte
+- errores mas comunes
+   → se deen de usar buenos colores, dependiendo del contexto
+   → los valores comparativos deben de ser identicos y estandarizados
+   → en un reporte se debe de hacer eficiente que se quiere demostrar
+   → rerevisar tipo de presentacion, dinamica o estatica
+   → se debe tener un color diferente para cada categoria
+   → grafica de arbol??
+- defiir proposito de las visualizacion
+   → cual es el mensaje
+   → se debe definir el tipo de perfil, se le debe de poner un nombre, predecir preguntas que podriamo tener
+   → como lo hare
+   → preguntas claves que debe responder la presentacion
+
+Storrytelling
+- story board en tableau
+- se presentan los descubrimientos en forma de historia
+- se debe definir la estructura de la historia
+   → contexto
+   → resumen
+   → puntos de interes
+   → conclusiones
+   → recomendaciones
+</rich_text>
+    </node>
+    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652230284">
+      <rich_text>Las matematicas son un lenguaje
+las funciones nor permiten modelar nuestra realidad
+
+que es una funcion?
+- funciones de una sola variable, es por que depende de una sola cosa para que varie
+- una funcion es copmo una maquina, donde entra un elemento x para que salgo una y
+- es una regla donde cada elemento de un conjunto A se le asina un conjunto de B
+- se puede representar:
+   → verbalemente, habladito che
+   → numericamente, generalmente una tabla de valores
+   → visualmente, por medio de grafica, donde represente los valores
+   → algebraicamente, la mas guapa, y = f(x) = x
+- tipos de variables
+   → variables cualitativas
+      ⇒ nominales, se les asigna una cualidad, por ejemplo los colores
+      ⇒ ordinales, representan un orden, como se puede acomodar un objeto
+      ⇒ binarias, solo tomand dos valores, unos y ceros
+   → variables cuantitativas
+      ⇒ discretas, representan un numero de valores finitos, son puramente enteras, se separan por pasos
+      ⇒ continuas sus valores pueden ser infinitos, toman valores dentro de los numero reales
+- dominio y rango
+   → que valores pueden tener las funciones?
+      ⇒ dominio, son los valores que toma x-independiente
+      ⇒ rango son los resultados que nos da una funcion
+- simbolos: </rich_text>
+      <rich_text link="webs https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm">https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm</rich_text>
+      <rich_text>
+- conjuntos:
+   → de forma grafica y circular
+   → el universo se representa con omega
+   → union, todos los elementos de los conjuntos se unen, se representan con U
+   → interseccion, son solo los elementos que se comparte: se representa con una U volteada
+   → perteneces es como una E: a E A, la E es curveada
+   → se tiene el conjunto vacio que se representa con una circulo con una linea enmedio o con {}
+   → conjuntos de numeros
+      ⇒ naturales, son todos los enteros sin incluir el cero, discreto
+      ⇒ enteros, son todos los enteros negativos y positivos, tambien es discreto
+      ⇒ racionales, incluyen decimales y fracciones, a/b pertenecen a los enteros, donde b es diferente de 0
+      ⇒ Irracionales, todos aquellos numero que tienen una expansion de decimal que no sse pueden escribir as: a/b, por ejemplo pi, euler
+      ⇒ naturales es la union de todos los demas conjuntos, hay naturales positivos y naturales negativos
+- Funciones y mas funciones (algebraicas y trascendentales)
+   → el notebook esta en visualizacion_matplot
+   → funcion lineal, tiene la forma f(x) = mx + b, solo depende de uno que es completamente lineal en este caso X
+      ⇒ el dominio y rango van de -inf a inf
+      ⇒ las funciones que grafican las computadoras son discretas
+      ⇒ b = bias, donde corta x
+   → polinomicas, es un polinomio de X, de x a la n hasta x a la cero
+      ⇒ el grado es el numero mas grande que tiene nuestra funcion
+      ⇒ generalmente los pares hacen curvas de concavas, los impares no
+   → funciones trascendentes, no se pueden hacer por medio de sumas de polinomios, el caso de funciones trigonometricas, exponenciales, logaritmicas
+   → funciones seccionadas, nciones que se comportan diferente dependiendo de los trozos, por ejemplo la funcion de Heaviside
+   → funciones compuestas, es la combinacion de varias funciones, es lo llamado (f o g ), pasa por una funcion primero y luego pasa por la otra, en f o g, siempre pasa primero la evaluacion de g luego la de f
+   → Funciones reales:
+      ⇒ sus dominio y rango estan contenidos en el conjunto de los reales
+- el perceptron
+   → es la forma de como se define una neurona artificial
+   → diferentes seniales de entrada, varios pesos, union sumadora, una funcion activadora y una salida
+   → pesos sinapticos, numeros encargados de ponderar lo que entra
+   → la funcion sumadora nos permite sumar el valor de entrada por su peso ponderado
+   → carlos alarcon redes neuronales
+- funciones de activacion
+   → sirven para dar funciones de salida diferentes al perceptron
+   → funcion lineal, lo que pasa lo regresa igual, sirve para mantener valores a travez de un proceso
+   → funcion Heaviside, sirve para hacer clasificaciones categoricas, un booleano
+   → sigmoide, sirve para un proceso de regresion logistica, sirve mucho pra probabilidades, los negativos siempre se acercaran al cero, al tocar el cero en x, se va la mitad mientras mas grande sea el valor tenderan al 1
+   → tangente hiperbolica, funcion de escalamiento, va de -1 a 1, tiene que ver muhco con back propagation, si se acerca a 0 va a valer cero, si son muy grandes tienden a ser 1 y si son negativos a -1
+   → ReLU, si el valor es 0 o menor que cero lo pone como cero, si es mayor que cero lo pondra como x, si exite lo tomo en cuenta si no no lo tomo en cuenta, existe una variacion llamada liquid ReLu
+- regresion lineal simple, 
+   → punto de corte es bias
+   → inclinacion es la pendiente
+- calculo del error:
+   → el error es que tan lejos estoy de valor original al de prediccion
+   → e = y_pred - y_real
+   → |e| = |y_pred - y_real|
+   → e**2 = (y_pred - y_real)**2
+   → E = SUM_i=i-N (y_pred - y_real)**2
+   → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
+
+
+Las variables discretas tienen un nĂºmero infinito de elementos dentro del conjunto que representan. 
+Si queremos lograr que una función se desplace a la izquierda ¿Cuál es la expresión correcta?
+</rich_text>
+    </node>
+    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1652232070">
+      <rich_text>la visualizacion de los datos es importante por que da respuesta  de preguntas que no sabiamos que teniamos, se pueden tener datos distintos con los mismo estadisticos
+ayuda a entontrar hallazgos en los datos de forma mas facil
+mucho uso en DS e IA para sabe que tan bueno es el modelo
+matplotlib
+	- 2003
+	- basada en numpy
+	- emula matlab
+	- escrita en python
+	- es bastante simple
+	- es rapida
+	- es personalizable
+seaborn
+	- esta montada sobre matplotlib
+	
+Metodo orientado a objetos:
+- pyplot
+   → rapido
+   → facil
+   → una sola figura
+- OO:
+   → mayor personalizacion
+   → mas amigable a multiples diagramas
+   → mas codigo
+
+Seaborn
+- construido sobre matplotylib
+- integrada para estructuras de pandas
+- velocidad
+- poco codigo
+- customizable
+- </rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5458,7 +5603,7 @@ En los frameworks web modernos existe el concepto de middleware,  que describe u
    → se debe desarrollar y saber para que sirve cada herramienta
 </rich_text>
     </node>
-    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1651719438">
+    <node name="basico" unique_id="78" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651004263" ts_lastsave="1652135240">
       <rich_text>la ffrma de crear modulos cambio del 1.15 en adelante antes se tenia que agregar al path los datos de GO
 
 Variables, funciones y constantes
@@ -5534,6 +5679,73 @@ Ciclos
    → generalmente se usa: switch {declaracion de variable}; {variable} {}
    → se puede usar: switch {case {variable-condicion} {}}
    → siempre es buena practica usar un default al final del switch
+- defer
+   → se usa para que antes de morirse el main ejecuta el codigo que este en defer
+- break
+   → sirve para romper un ciclo for
+- continue
+   → sirve para saltarse una iteracion en el ciclo for
+
+Estructuras de datos basicas
+- array y slices
+   → array: var {nombre} [{tamanio}]{tipo de dato}, es inmutable
+      ⇒ metodos: len() -&gt; tamanio y cap() -&gt; cuantos elementos puede guardar
+   → slice: {nombre var} := []{tipo}{{lista de valores}}, son mutables
+      ⇒ tiene los mismos metodos que el array
+   → slicing: se usa para interactuar con los elementos, se hace igual que con python slice[{inicio}:{fin}]
+   → para agregar un valor a un slice: slice = append(slice, {valor})
+   → para agregar otra lista: slice = append(slice, {nueva lista}...)
+   → se recorren usando un for: for index, value := range slice
+- Maps
+   → se creand: {nombre variable} := make(map[{tipo de dato:key}]{tipo de dato:value})
+   → con for: for i, v := range {nombre map}, es de forma concurrente
+   → obtencion de valores: value, err := {nombre map}[{key}], si la llave no existe en el diccionario el value es el zero value
+- Structs
+   → creacion type {nomre del struct} struct {atributos}
+   → se instancia: {nombre} := {nombre del struct}{atributos}
+- modificadores de acceso
+   → si es minuscula el metodo es publico
+   → si es mayuscula es privado
+   → todo lo publico debe de llevar comentario
+
+- structs and pointes
+   → los punteros son para el acceso a la memoria
+   → para dar el acceso se hace {nombre variable} := &amp;{otra variable}
+   → al imprimir este nos dara la direccion de memoria
+   → para acceder al valor se debe de poner: *{variable}
+   → si se modifica el *{variable}, se cambia el valor de la variable original
+   → se hace para hacer mas eficiente el codigo
+   → los metodos de clase se definen: func ({nombre struct} {struct}) {nombre funcion} ({parametros}) {logica}
+   → este modifica las variables de la clase: func ({nombre struct} *{struct}) {nombre funcion} ({parametros}) {logica}
+   → para el custom de un struct: func ({nombre struct} {struct}) String() string { return fmt.Sprintf("{formato}") }
+   → interfaces: es un metodo donde se pueden compartir entre varios structs
+      ⇒ sirve para poder compartir un nombre de funcion para varias structs
+      ⇒ se declaran: type {nombre interface} interface {{shared methods}}
+
+Concurrencia y channels
+- estar lidiando al mismo tiempo, paralelismo las hace
+- hilo = tarea que ejecuta el procesador
+- paralelo se usa los tres hilos
+- concurrencia tiene todo disponible, mientras empieza con uno el otro se va creando, cuando se crea puede pausar la tarea para la que sigue
+- en las gorutines, si muere primero el main que la rutina no la ejecuta
+- se puede agregar time.Sleep para esperar pero no es recomendable
+- para esperar se debe de agragar un WaitGroup: var wg sync.WaitGroup
+- se agrega al WaitGroup con: wg.Add(1), ese mismo se debe de agregar a la funcion como un pointer
+- en funcion se agrega: defer wg.Done()
+- en main se debe de decir que espere: wg.Wait()
+- generalmente las goroutines se usan con funciones anonimas
+- channels
+   → permiten compartir informacion entre rutinas
+   → es un conducto donde solo se puede manejar un tipo de dato
+   → se declaran: {name_channel} := make(chan {tipo de dato}, {cuantos valores puede manejar al momento})
+   → se envian los datos con {name_channel} &lt;- {value} y se debe de pasar a la funcion
+   → la salida se obtiene: &lt;-{name_channel}
+   → buena practica, se debe indicar si el canal es de entrada o de salida:
+      ⇒ channel &lt;-chan solo salida
+- range, ayuda a hacer recorrido en todos los mensajes que se quedan en el channel
+- select, sirve para buscar un mensaje desde un channel y hacer cierta operacion
+- close, sirve para cerrar un canal y no volverse a usar
+
 
 
 ----------------------------------
@@ -6090,7 +6302,7 @@ Se pueden agregar múltiples columnas a las páginas, toggles y botones de plant
     </node>
   </node>
   <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1651197180">
-    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1651534947">
+    <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1652038925">
       <rich_text>IAM
 - service global
 - root shouldn't be used or shared
@@ -6201,7 +6413,35 @@ EC2
       ⇒ can attached to multiple ionstance
       ⇒ down to a region / vpc combination
       ⇒ live outside the ec2
-      ⇒ all inbound traffic is blocked by default, all outbound traffic is authorised by default</rich_text>
+      ⇒ all inbound traffic is blocked by default, all outbound traffic is authorised by default
+- for linux server is important use the ssh, this is secure, it is a command line mac, linux and win 10 and latest, to minor version of windows is necesary Putty
+- in web browser is possible in all OS
+- is the most importante function to connect to EC2, generally is used the port 22
+- is necesary the pem key to connect to ssh: ssh -i pem user@ip
+- is required que key has the permission 0400
+- in windows is necessary save key to use with putty as PPk to connect
+- in windows 10 is possible use powershell, is necessary chenge teh security, the owneto change, and remove another users 
+- all instance has aws-cli
+- is necesary to cofigure a role to access the services, use key and secrets is not a good idea
+- instances pruchase options:
+   → On demand instances, short workloads, predicitble pricing, pay by second
+   → reserver (1 to 3 years), long workloads, flexible instances convertible, specific instance attributes, different types of payments
+   → saving plans (1 to 3 years), commitment to an amout of usage, is more specific time use, region and family
+   → spot, short workloads cheap can los instances, use with data process and not database
+   → dedicates hosts, book and entire physical serverl
+   → dedicated instance, no other customer will share your hardware
+   → capacity reservation, reserve capacity in a specific AZ no discounts
+- shared rsponsabilities
+   → aws
+      ⇒ insfraestrtructure
+      ⇒ isolation on physical hosts
+      ⇒ replacing faulty hardware
+      ⇒ compliance validation
+   → own
+      ⇒ security groups
+      ⇒ Os Patches and updates
+      ⇒ software and utilities installed
+      ⇒ AM roles in EC2</rich_text>
     </node>
     <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199459">
       <rich_text>JSON is horrible to CF
