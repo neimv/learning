@@ -726,7 +726,7 @@ Una distribuciÃ³n de probabilidad es:
       <rich_text weight="heavy">T</rich_text>
       <rich_text>ime-bound</rich_text>
     </node>
-    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1652736750">
+    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1652922663">
       <rich_text>- Curso para descifrar lo que es cierto y lo que no
 
 # Que es estadistica descriptiva
@@ -799,13 +799,15 @@ Un analisis exploratorio es la base de la estadistica descriptiva, identificar c
 
 # estadística en la ingesta de datos
 - pipelines de procesamiento de datos numericos:
+   → es muy necesario normalizarlos, por que los optimizadores son optimos mientras que todos los atributos que estan tienen las mismas magnitudes
    → escalamiento lineal o normalizar
-      ⇒ se deben de usar entre el rango de -1, 1
+      ⇒ se deben de usar entre el rango de -1, 1 (generalmente son mas eficientes los ML
+      ⇒ los escalamientos se hacen cuando estan uniformemente distribuidos o tiene una distribucion simetrica
       ⇒ existen diferentes tipos (se usan dependiendo de lo que se esta tratando de hacer con el modelo)
-         • max-min, se transforma a un valor normalizado donde se usa una transformacion para ir de un valor x a x_s, se puede defirnir como x_s = (2x - min - max) / (max - min)
-         • clipping, se toma la distribucion y se corta entre los valores limite inferior y superior, descarta valores por eso no es muy usable
+         • max-min, se transforma a un valor normalizado donde se usa una transformacion para ir de un valor x (es el valor a transformar que se toma) a x_s, se puede defirnir como x_s = (2x - min - max) / (max - min)
+         • clipping, se toma la distribucion y se corta entre los valores limite inferior y superior, descarta valores por eso no es muy usable, los que rebasan los valores superior e inferior se forzan a ser esos valores
          • z-score, es mas comun, esta basado en definicion de promedio y desviacion estandar, x_s = (x - prom) / desv. estandar
-         • winsorizing
+         • winsorizing, es como el clipping pero usando los quartiles
       ⇒ como usarlos:
          • data simetrica o uniformemente distribuida
 - transformacion no lineal (se usa cuando no estan con distribuciones simetricas)
@@ -815,6 +817,8 @@ Un analisis exploratorio es la base de la estadistica descriptiva, identificar c
       ⇒ sigmoides
       ⇒ polinomiales
    → se usan antes de escalar linealmente
+   → generalmente los datos dicen que tipo d etransformacion se requiere
+   → generalmente los valores uniformemente distribuidos se usa max min y con la distribucion tipo Gauss se usa z-score
 - Pipelines de procesamiento de datos categoricos
    → Dummy
       ⇒ representacion compacta
