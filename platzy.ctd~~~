@@ -1,7 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1652031812">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1652713315">
+    <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
+      <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1652640382">
+        <rich_text>simbolos
+- son importantes por que estan a nuestro alrededor
+- las mates se crearon o se inventaron:
+   → se cree que ambas son reales en cierta medida
+- nosotros entendemos el universo a travez de nuestra mente, somo parte del universo
+- elementos basicos:
+   → numeros
+   → letras, realmente son alfabetos, el griego es importante
+   → simbolos aritmeticos
+   → elementos comunes, los tres puntos generalmente tiene una expresion muy distinto
+- existen ciertas expresiones matematicas que se consideran bellas, por ejemplo la idedntidad de euler, se compone de elementos basicos dentro de las mates
+
+Lenguaje matematico
+- aritmetica //
+   → es la base de todo en las matematicas
+   → generalmente esto ya se da por sentado
+   → existen otros metodos numericos, como el base 60, es muy favorable para las divisiones (2, 3, 4, 6, 10), nuestro tiempo se basa en este
+- algebra
+   → concepto abstracto de la variable
+      ⇒ la variable puede tener varios valores
+   → nace del persa: al-jabr wa-l
+   → geometrizacion del algebra
+   → griegos: latus - lado (incognita)
+   → arabes: mal y jadhr - lado o base
+   → europeos: jadhr - base o raiz de una planta
+- se tiene 3 periodos:
+   → retorica, se comunicaban de voz a voz, no existian los escritos
+   → anotadas, se hacia escribiendo con palabras
+   → simbolica, es donde stamos parados en este momento
+
+Numero y varibles
+- sistema binario
+- sistema decimal
+- sistema hexadecimalseparador decimal, coma o punto decimal, separar dentro de la parte entere de la fraccionaria
+- numero naturales, son con los cuales contamos, existe una definicion con el 0, pero es raro
+- enteros se tiene los negativos, 0 y naturales
+- racionales, se pueden dividir en fracciones m/n donde n no puede ser 0
+- irracionales, no se pueden expresa como una fraccion, como por ejemplo pi
+- reales, incluyes todo lo anterior y todos los que no se pueden expresar como fraccion
+- completos, numeros reales con el numero imaginario _i_
+- alfabetos
+   → el mas usado es el romano o latin
+   → griego, se usa bastante para angulos y constantes
+   → gotico, por ejemplo la d gotica para derivadas parciales
+- por que x siempre es la incognita
+   → Rene Descartes, fue quien empezo a usar las ultimas letras del alfabeto latino como incognitas y las primeras como parametros conocidos y se reforzo con los ejes cartecianos (x, y, z)
+
+Notacion cientifica
+- subindices:
+   → enumeriones, x_1, x_2
+   → diferenciadores, E_m = E_p + E_c
+   → contadores de iteraciones, A = (a_i,j)_2x2
+- se usan los puntos en diagonal cuando se expande hacia columnas y filas
+- super indices
+   → potencias, x^4
+   → diferenciadores, por ejemplo segunda derivada de y
+   → enumeraciones, se usa mas en textos: identidad de euler^1
+- Notacion cientifica
+   → se usa mucho para representar cantidades muy grande (positivo) y muy pequenio (negativos) mas facil
+   → constante de avogrado, es un numero muy grande que se require expresar con 10 ^ 23
+   → se usan prefijos de unidades en SI</rich_text>
+      </node>
+    </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -661,13 +726,14 @@ Una distribuciÃ³n de probabilidad es:
       <rich_text weight="heavy">T</rich_text>
       <rich_text>ime-bound</rich_text>
     </node>
-    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1626820666">
+    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1652736750">
       <rich_text>- Curso para descifrar lo que es cierto y lo que no
 
 # Que es estadistica descriptiva
-- “resumir un historial deportivo”
+- descriptiva: “resumir un historial deportivo”
    → como es un desempeño despues de varios partidos
    → se crean metricas resumidas... en este tipo de estadistica
+- inferncial: predecir desempenio futuro del jugador
 - basicamente es resumir la informacion
 - como se define lo que es correcto o no, definición de metricas unicas
 - maked statistics, Charles Wheelan
@@ -676,7 +742,12 @@ Una distribuciÃ³n de probabilidad es:
    → tomar decisiones
    → responder preguntas con relevancia social
    → reconocer patrones en los datos
-   → descrubir neofitos
+   → descubir neofitos
+
+es mas comun que las primeras fases de la ciencia de datos se requiera mas de la estadistica descriptiva:
+- tipos de datos, pipeline de procesamiento, analisis exploratorio, estadistica descriptiva, correlacion, reducciones de datos
+
+Un analisis exploratorio es la base de la estadistica descriptiva, identificar correlacion, si se puede reducir el conjunto de datos
 
 # Tipos de datos
 - Categoricos (genero, categoria, metodos de pago), como tal no son números separan los datos en categorias
@@ -696,6 +767,10 @@ Una distribuciÃ³n de probabilidad es:
 - Moda (dato que mas se repite)
    → no aplica para datos numéricos continuos
 - Se usa generalmente la tabla de frecuencias
+- una tabla de frecuencias es para saber cada cuantas veces aparece un dato, que tan comun es
+- la media es muy susceptible a valores atipicos
+- la moda no aplica pada datos numericos continuos
+- con longitud impar se puede obtener el valor de enmedio, pero cuando es par se calcula la mediana sacando el promedio de los dos valores de enmedio
 
 # Medidas de dispersion
 - son un complemento para las medidas de tendencia central
@@ -710,6 +785,7 @@ Una distribuciÃ³n de probabilidad es:
    → la distancia entre el Q1 y el Q3 es el rango intercuartil
    → diagrama de caja sirve para visualizar los cuartiles
 - Desviacion estandar
+   → 
    → (punto - promedio)^2 -&gt; la suma de cada elemento entre su numero de elementos -&gt; es la varianza
    → la desviacion estandar es la raiz de la varianza
    → en el caso de que sea por medio de la muestra no se divide entre el numero de elementos sino de (numero de elementos - 1)
@@ -1369,7 +1445,7 @@ Storrytelling
    → recomendaciones
 </rich_text>
     </node>
-    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652230284">
+    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652291243">
       <rich_text>Las matematicas son un lenguaje
 las funciones nor permiten modelar nuestra realidad
 
@@ -1447,13 +1523,9 @@ que es una funcion?
    → e**2 = (y_pred - y_real)**2
    → E = SUM_i=i-N (y_pred - y_real)**2
    → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
-
-
-Las variables discretas tienen un nĂºmero infinito de elementos dentro del conjunto que representan. 
-Si queremos lograr que una función se desplace a la izquierda ¿Cuál es la expresión correcta?
 </rich_text>
     </node>
-    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1652232070">
+    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1652291249">
       <rich_text>la visualizacion de los datos es importante por que da respuesta  de preguntas que no sabiamos que teniamos, se pueden tener datos distintos con los mismo estadisticos
 ayuda a entontrar hallazgos en los datos de forma mas facil
 mucho uso en DS e IA para sabe que tan bueno es el modelo
@@ -1484,7 +1556,38 @@ Seaborn
 - velocidad
 - poco codigo
 - customizable
-- </rich_text>
+
+Set
+- sirve para definir temas, colores, paletas que se van a usar
+
+Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
+¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
+</rich_text>
+    </node>
+    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1652729243">
+      <rich_text>- first week
+   → putting ml in production
+      ⇒ good use of tools and practice
+      ⇒ goal: predict the duration of a taxi trip
+      ⇒ desing -&gt; train -&gt; operate, using an API to calculate aprox time of trip
+   → env. preparing
+      ⇒ use AWS platform
+      ⇒ creating an EC2 instance
+         • Ubuntu
+         • x86-64
+         • using t2.xlarge (4vcpu - 16 GiB ram - 30Gb rom)
+      ⇒ adding configuration to ssh/config to connect
+      ⇒ use anaconda with python, to avoid licence in anaconda push ‘q'
+      ⇒ another tolls is docker and docker compose
+      ⇒ export PATH="${HOME}/soft:${PATH}" to use docker-compose ?_?
+   → experience with programming (python)
+   → being comfortable with command line
+   → exposure to ML is helpful
+   → dataset used is NYC taxi
+   → only use of year 2011 and nexts
+   → D
+   → #66DaysOfMLOps
+   → </rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5360,7 +5463,7 @@ bloqueo</rich_text>
       </node>
     </node>
   </node>
-  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1651004263">
+  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1652631305">
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
@@ -5754,6 +5857,17 @@ Concurrencia y channels
 75, 1600
 
 5500</rich_text>
+    </node>
+    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1652740823">
+      <rich_text>comando Go:
+- go build: compila el archivo
+- go run: crea el binario y ejecuta
+- el package se le puede poner cualquier nombre, pero son usados para los modulos
+- main es una funcion principal y necesaria
+- se crean scanner para leer la entrada de los usuarios: scanner := bufio.NewScanner(os.Stdin); scanner.Scan(); []</rich_text>
+    </node>
+    <node name="intermedio" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652566734" ts_lastsave="1652566887">
+      <rich_text>es muy usado para escribir malware ?_?</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
