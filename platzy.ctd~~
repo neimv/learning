@@ -661,7 +661,7 @@ Una distribuciÃ³n de probabilidad es:
       <rich_text weight="heavy">T</rich_text>
       <rich_text>ime-bound</rich_text>
     </node>
-    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1626820666">
+    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1652921918">
       <rich_text>- Curso para descifrar lo que es cierto y lo que no
 
 # Que es estadistica descriptiva
@@ -723,13 +723,15 @@ Una distribuciÃ³n de probabilidad es:
 
 # estadística en la ingesta de datos
 - pipelines de procesamiento de datos numericos:
+   → es muy necesario normalizarlos, por que los optimizadores son optimos mientras que todos los atributos que estan tienen las mismas magnitudes
    → escalamiento lineal o normalizar
-      ⇒ se deben de usar entre el rango de -1, 1
+      ⇒ se deben de usar entre el rango de -1, 1 (generalmente son mas eficientes los ML
+      ⇒ los escalamientos se hacen cuando estan uniformemente distribuidos o tiene una distribucion simetrica
       ⇒ existen diferentes tipos (se usan dependiendo de lo que se esta tratando de hacer con el modelo)
-         • max-min, se transforma a un valor normalizado donde se usa una transformacion para ir de un valor x a x_s, se puede defirnir como x_s = (2x - min - max) / (max - min)
-         • clipping, se toma la distribucion y se corta entre los valores limite inferior y superior, descarta valores por eso no es muy usable
+         • max-min, se transforma a un valor normalizado donde se usa una transformacion para ir de un valor x (es el valor a transformar que se toma) a x_s, se puede defirnir como x_s = (2x - min - max) / (max - min)
+         • clipping, se toma la distribucion y se corta entre los valores limite inferior y superior, descarta valores por eso no es muy usable, los que rebasan los valores superior e inferior se forzan a ser esos valores
          • z-score, es mas comun, esta basado en definicion de promedio y desviacion estandar, x_s = (x - prom) / desv. estandar
-         • winsorizing
+         • winsorizing, es como el clipping pero usando los quartiles
       ⇒ como usarlos:
          • data simetrica o uniformemente distribuida
 - transformacion no lineal (se usa cuando no estan con distribuciones simetricas)
@@ -739,6 +741,7 @@ Una distribuciÃ³n de probabilidad es:
       ⇒ sigmoides
       ⇒ polinomiales
    → se usan antes de escalar linealmente
+   → generalmente los datos dicen que 
 - Pipelines de procesamiento de datos categoricos
    → Dummy
       ⇒ representacion compacta
@@ -1369,7 +1372,7 @@ Storrytelling
    → recomendaciones
 </rich_text>
     </node>
-    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652230284">
+    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652291243">
       <rich_text>Las matematicas son un lenguaje
 las funciones nor permiten modelar nuestra realidad
 
@@ -1447,13 +1450,9 @@ que es una funcion?
    → e**2 = (y_pred - y_real)**2
    → E = SUM_i=i-N (y_pred - y_real)**2
    → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
-
-
-Las variables discretas tienen un nĂºmero infinito de elementos dentro del conjunto que representan. 
-Si queremos lograr que una función se desplace a la izquierda ¿Cuál es la expresión correcta?
 </rich_text>
     </node>
-    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1652232119">
+    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1652291249">
       <rich_text>la visualizacion de los datos es importante por que da respuesta  de preguntas que no sabiamos que teniamos, se pueden tener datos distintos con los mismo estadisticos
 ayuda a entontrar hallazgos en los datos de forma mas facil
 mucho uso en DS e IA para sabe que tan bueno es el modelo
@@ -1486,7 +1485,11 @@ Seaborn
 - customizable
 
 Set
-- sirve para definir temas, colores, paletas que se v</rich_text>
+- sirve para definir temas, colores, paletas que se van a usar
+
+Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
+¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
+</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
