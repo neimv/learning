@@ -421,13 +421,16 @@ Aproximaciones:
    → w : w - {alpha}{grad}F
 - la limitacion es que si tienen muchas curvas puede caer en un minimo muy pequeño o puede variar mucho</rich_text>
     </node>
-    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1624453808">
+    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1653352723">
       <rich_text># Que es la probablidad?
 - se usa en situaciones donde hay incertidumbre
+- El azar no es mas que la medida de nuestra ignorancia. los fenomenos fortuitos son aquellos cuyas leyes o causas simplemente ignoramos
 - la toma de decisiones con informacion incompleta
 - lenguaje y conjunto de herramientas, para cuantificar la incertidumbre
+- axioma: P = N. de sucesos exitosos / N. de sucesos totales
 - escuelas:
-   → frecuentista
+   → frecuentista, son numero que solo se alcanzan en infinitas ocasiones, tiene tendencia a 1/2 por ejemplo la moneda
+      ⇒ espacio muestral, espacio donde estan todos los eventos elementales
    → bayesiana
 - sucesos:
    → elemental, que va a pasar sin restriccion
@@ -446,14 +449,26 @@ Aproximaciones:
    → datos, este es un proceso imperfecto, debido a los instrumentos que se usan
    → atributos del modelo, las variables preditores son un subconjunto reducido, lo que hace que halla mas incertidumbre
    → arquitectura del modelo, representación de la realidad
-- etapas del modelo:
+- modelo de clasificacion
+   → entrenamiento
+      ⇒ extractor de atributos
+      ⇒ atributos
+      ⇒ algoritmo de ML
+   → prediccion
+      ⇒ extractor de atributos
+      ⇒ atributos
+      ⇒ modelo de clasificacion
+      ⇒ etiqueta
+- etapas del modelo (no todos los modelos son probabilisticos):
    → arquitectura, que modelo se usa, si usa o no probabilidad
-   → parametros, entrenamiendo, aprendiendo por la distribucion de probabilidad
-   → calibracion, ajuste del modelo por medio de hiper parametros
+   → parametros, entrenamiendo, aprendiendo por la distribucion de probabilidad, MLE
+   → calibracion, ajuste del modelo por medio de hiper parametros, esto pasa mucho en las redes neuronales donde uno modifica los pesos para que sea ams exacto
    → interpretacion de la prediccioón
    → resultado
 
 # Tipos de probabilidad
+- regla del producto: P(A,B) = P(A|B)P(B)
+- marginal: P(A) = SUM_B(P(A,B))
 - conjunta
    → cuando se calcula la probabilidad de dos o mas sucesos
    → se calcula con un conteo al espacio muestral
@@ -726,7 +741,7 @@ Una distribuciÃ³n de probabilidad es:
       <rich_text weight="heavy">T</rich_text>
       <rich_text>ime-bound</rich_text>
     </node>
-    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1652921277">
+    <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1653320979">
       <rich_text>- Curso para descifrar lo que es cierto y lo que no
 
 # Que es estadistica descriptiva
@@ -817,6 +832,8 @@ Un analisis exploratorio es la base de la estadistica descriptiva, identificar c
       ⇒ sigmoides
       ⇒ polinomiales
    → se usan antes de escalar linealmente
+   → generalmente los datos dicen que tipo d etransformacion se requiere
+   → generalmente los valores uniformemente distribuidos se usa max min y con la distribucion tipo Gauss se usa z-score
 - Pipelines de procesamiento de datos categoricos
    → Dummy
       ⇒ representacion compacta
@@ -824,29 +841,38 @@ Un analisis exploratorio es la base de la estadistica descriptiva, identificar c
       ⇒ una correlacion no tan fuerte
       ⇒ cuando las categorias son independientes entre si
    → One-hot
+      ⇒ para algo mas grande
       ⇒ permite describir categorias no incluidas inicialmente
+      ⇒ no ordinales
+      ⇒ son representaciones categoricas
    → ambos se deben de mapear manualmente las categorias de los valores
    → categorias no ordinales, no tienen un orden entre ellas
+   → a veces se trata como Dummy y One Hot como lo mismo, aunque Dummy realemente no existe
 - se pueden tratar variables numericas como categorias: si, depende del caso del uso
 - Correlaciones:
    → cuando dos variables tienen un comportamiento identico se dice que estan correlacionadas
+   → si tienen una correlacion muy alta es posible no incluirlas ya que pueden estar aportando la misma informacion
    → se puede reducir el número de variables
    → mide las desviaciones de una variable x con relacion a otra variable
 - el coeficiente de correlacion
+   → p = (cov) / (std(x) * std(y))
    → es la medida especifica que cuantifica la intensidad de la relacion lineal entre dos varibales en un analisis
    → es el coeficiente P
 - la correlacion mide algo que puede ser casualidad que varie, al revisar el problema puede no ser causa-relación
+- causasion no esta asociado con correlacion, correlacion no implica causasion
 - matriz de covarianza:
    → cuando se obtienen todas las variables de covarianza entre ellas
+   → muhas veces se tienen que normalizar los datos
 
 # PCA
 - anáisis de componentes principales
    → proyección(sombra) de un vector sobre otro
       ⇒ es que se proyecta sobre la superficie del segundo vector (como una sobra), se desea calcular solo la longitud que tiene sobre el vector
-         • vec(a_p) = a_p^b = ((vec(a) * vec(b)) / |vec(b)|) uni(b)
+         • vec(a_p) = a_p vec(b) = ((vec(a) * vec(b)) / |vec(b)|) uni(b)
    → cada vector propio es una de las direcciones principales de la cual capturamos varianza de los datos originales
-
-</rich_text>
+   → hay que revisar todo lo que tenga que ver con los eigen values y eigen vectores para poder hacer el PCA
+   → al llegar a este punto generalmente es por que se piensa entrenar un modelo
+   → generalmente esto se hace para crear nuevas variables</rich_text>
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
     <node name="estructura de datos" unique_id="65" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578407" ts_lastsave="1643578415">
@@ -1565,7 +1591,8 @@ Set
 Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
-    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1652729243">
+    </node>
+    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1653606699">
       <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -1588,7 +1615,99 @@ Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
    → only use of year 2011 and nexts
    → D
    → #66DaysOfMLOps
-   → </rich_text>
+- is necesary the order in the notbook, for example:
+   → read_data
+   → train and validate data
+   → multiple ml
+   → save of model in bin
+   → the model contains experiment tracker and model registry
+- load an prepare data
+- vectorize the values -&gt; dct values
+- train in different values -&gt; model
+- machine learning services, to check time of trip
+- the model is deploy and before is necesary the monitoring, to check that model is effective, exclude de human using the pipeline to create model v2
+
+Experimenting Tracking
+- concepts:
+   → ML experiment: the process of building an ML model, A/B testing
+   → Experiment run: each trial in an ML experiment, start playin with data and hiperparameter
+   → Run artifact: any file that is associted with an ML run
+   → Experiment metadata
+- Experiment tracking:
+   → (using differents version of data, multiple experiments):
+   → process of keeping track of all relevant infromation
+      ⇒ Source code
+      ⇒ environment
+      ⇒ data
+      ⇒ model
+      ⇒ hyperparameters
+      ⇒ metrics
+   → why is important?:
+      ⇒ main, to get a history and know what changes have the model
+      ⇒ reproducibility
+      ⇒ organization
+      ⇒ optimization
+   → in spreadcheets:
+      ⇒ why is not enough?
+         • Error prone
+         • No standart format
+         • Visibility &amp; collaboration
+         • Copy and paste the values and results (human error)
+         • if a new DS read this, probably is very difficult to he
+         • the collaboration is fundamental
+   → MLFlow
+      ⇒ Open source platform for ML Lifecycle
+         • tracking
+         • models
+         • model registry
+         • projects
+      ⇒ allows you to organize experiments and track of:
+         • parameters
+         • metrics
+         • metadata, for example tags to search
+         • artifacts
+         • models
+      ⇒ extradata:
+         • source cide
+         • version of code (git commit)
+         • start and end time
+         • author
+- Getting started with MLFLOW
+   → is necesary requirements
+   → reqs is a good practice
+   → using conda to create env.
+   → pip install -r requirements.txt
+   → pip list to show packages and version
+   → to run mlflow:
+      ⇒ mlflow ui --backend-store-uri {str_conn}
+   → if the experiment does not exists is created
+- Experiment tracking
+   → add parameter tuning tieh notebook
+   → show how it looks
+   → select the best
+   → autolog
+   → more logging in this mlflow
+   → is possible see different visulization of runs
+- machine learning lifecycle:
+   → data sourcing
+   → data labeling
+   → data version
+   → Model Management:
+      ⇒ experiment tracking
+         • model training
+         • model evaluation
+         • model architecture
+      ⇒ model versioning
+      ⇒ model deployment
+      ⇒ **scaling hardware
+   → prediction monitoring
+   → folder system
+      ⇒ error prone
+      ⇒ no versioning
+      ⇒ no model lineage
+- model registry
+   → the new implementing model, and is necesary deploy the model</rich_text>
+    </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
@@ -5858,13 +5977,14 @@ Concurrencia y channels
 
 5500</rich_text>
     </node>
-    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1652740823">
+    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1652741242">
       <rich_text>comando Go:
 - go build: compila el archivo
 - go run: crea el binario y ejecuta
 - el package se le puede poner cualquier nombre, pero son usados para los modulos
 - main es una funcion principal y necesaria
-- se crean scanner para leer la entrada de los usuarios: scanner := bufio.NewScanner(os.Stdin); scanner.Scan(); []</rich_text>
+- se crean scanner para leer la entrada de los usuarios: {scanner} := bufio.NewScanner(os.Stdin); {scanner}.Scan(); {var} := {scanner}.Text()
+- al trabajar con cadenas hay que tener mucho cuidado con los errores, ya que Go no lanza un exception </rich_text>
     </node>
     <node name="intermedio" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652566734" ts_lastsave="1652566887">
       <rich_text>es muy usado para escribir malware ?_?</rich_text>
