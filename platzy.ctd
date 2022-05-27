@@ -421,7 +421,7 @@ Aproximaciones:
    → w : w - {alpha}{grad}F
 - la limitacion es que si tienen muchas curvas puede caer en un minimo muy pequeño o puede variar mucho</rich_text>
     </node>
-    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1653352723">
+    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1653618283">
       <rich_text># Que es la probablidad?
 - se usa en situaciones donde hay incertidumbre
 - El azar no es mas que la medida de nuestra ignorancia. los fenomenos fortuitos son aquellos cuyas leyes o causas simplemente ignoramos
@@ -480,23 +480,35 @@ Aproximaciones:
    → calculando el valor de la probabilidad condicional y multiplicandolo por la probabilidad nos dara la probabilidad conjunta, regla del producto
 
 # Que es una distribución o una densidad
-- P(X=x)
+- es una funcion en el sentido del calculo que toma una variable aleatoria y a cada uno de sus posibles estados le asigna una probabilidad
+- lineal = discreta
+- P(X=x) -&gt; densidad de probabilidad
    → X -&gt; variable aleatoria
    → x -&gt; posibles valores
    → El domino son todos los valores posibles que puede tener la variables aleatoria
    → se dividen en dos:
-      ⇒ funciones discretas
-      ⇒ funcion continuas
+      ⇒ funciones discretas, 1, 2, 3, 4, lanzar dado o una moneda, se pueden contar facilmente
+      ⇒ funcion continuas, 0 a infinito, la temperatura, dentro de los numero reales
+   → area bajo la curva, funcion de probabilidad acumulada
+   → en discreatas esta dada mas por un diagrama de barras, histograma
 
 # Distribuciones discretas
-- Distribución de Bernoulli
+- Distribución de Bernoulli P(X=1) = p, P(X=0) = 1 - p
+   → la suma de probabilidades debe de dar el 100%
    → ocurrencias binarias
    → se acompleja teniendo varias secuencias de eventos binarios -&gt; distribución binomial
    → combinatorio: (n k) = n! / k!(n-k)!
    → formula: p(k, n) = (n k) (p^k) * (1-p)^(n-k)
 - otras distribuciones, Poisson, geométrica, hipergeométrica, binomial negativa
+- multinomial es una distribucion donde se tiene mas de dos valores por ejemplo el caso de los dados
+
+revisar el metodo binom (parece ser una clase)
+algoritmos deterministicos aleatorios
 
 # Distribuciones continuas
+- data set seattlecentral
+- distribucion nomal o gaussiana, e muy comun en los datos
+- 
 - otras:
    → exponencial
    → pareto
