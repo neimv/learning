@@ -421,7 +421,7 @@ Aproximaciones:
    → w : w - {alpha}{grad}F
 - la limitacion es que si tienen muchas curvas puede caer en un minimo muy pequeño o puede variar mucho</rich_text>
     </node>
-    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1653618283">
+    <node name="Probablidad" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1622420216" ts_lastsave="1653857321">
       <rich_text># Que es la probablidad?
 - se usa en situaciones donde hay incertidumbre
 - El azar no es mas que la medida de nuestra ignorancia. los fenomenos fortuitos son aquellos cuyas leyes o causas simplemente ignoramos
@@ -513,17 +513,27 @@ algoritmos deterministicos aleatorios
    → exponencial
    → pareto
 
+Estimar una distribucion
+- ajustar una distribucion a un conjunto de datos, para poder hacer una prediccion
+- se crea una hipotesis para poder saber que tipo de distribucion es
+- no parametrica: no se forzan parametros de una funcion unica, son varias distribuciones, generalmente se combinan varias funciones, medoto de suavizado y funcion base
+- funciones en sklearn: kernels (kernel density estimation)
+
 # Que es MLE
 - Estimación de máxima verosimilitud
+- estimar densidades de probabilidad dentro de un esquema de trabajo muy general
 - framework para estimacion de densidades de un cojuntos de datos:
    → escoger la distribucion, teniendo solo una muestra de los datos
    → escoger los parametros de la distribucion, que ajustan mejor la distribucion
+- generalmente se tienen una distribucion mayor, pero en nuestro caso siempre tenemos una muestra de los datos
 - es un problema de optimización
    → se tienen muchos datos que pueden variar la salida
    → se toma el valor mas probable que pueda pasar calcular los valores
 
 # MLE en machine learning
+- ajustar densidades a datos
 - se ajustan densidades datos en ml
+- aqui es donde se busca el modelo que nos va a ayudar para los datos
 - regresion lineal con MLE:
    → se encuentra el modelo lineal
 - los minimos cuadrados son un problema de MLE
@@ -539,10 +549,11 @@ algoritmos deterministicos aleatorios
 - cross entropy: CE = -(sum)y_i * log ŷ + (1 -y_i) * log (1 - ŷ)
 
 # Teoria de Bayes
-- P(A|B) -&gt; posteriori
-- P(B|A) -&gt; Verosimil
-- P(A) -&gt; priori
-- P(B) -&gt; evidencia
+- refleja una filosofia diferente de los sucesos aleatorios
+- P(A|B) -&gt; posteriori, cual es la probabilidad de que pase A dando los elementos de B
+- P(B|A) -&gt; Verosimil, prueba de la evidencia de que pase A de acuerdo a B
+- P(A) -&gt; priori, creencia inicial que se tiene, puede no ser la realidad
+- P(B) -&gt; evidencia, esta es la realidad, modifica las probabilidades
 - por lo tanto P(A|B) = (P(B|A)P(A)) / P(B)
 - MAP sirve como MLE para bayesianos
 
@@ -1604,7 +1615,7 @@ Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
-    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1653606891">
+    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1653713355">
       <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -1722,7 +1733,21 @@ Experimenting Tracking
    → is very difficult if only gets one email with the model, for example if fails in prod is not posible the rollback
    → model registry, models with parameters, tracks
    → with the registry is possible know what model is used in that stage
-   → manage different stages, staging, production and archive</rich_text>
+   → manage different stages, staging, production and archive
+   → by default if one model is send to stage and exists another model in this state the existing is send to archived, but is possible send to stage, unmark when send another to archived
+   → model managment provides:
+      ⇒ model lineage
+      ⇒ model versioning,
+      ⇒ stage transitions
+      ⇒ annotations
+
+HomeWork 2
+- version: 1.26.0
+- num file in output folder: 4
+- parameters: 19
+- --default-artifact-root
+- best rmse: 6.628
+- best rmse: 6.55</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
