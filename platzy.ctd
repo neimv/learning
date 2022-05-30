@@ -3,7 +3,7 @@
   <bookmarks list=""/>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1652713315">
     <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
-      <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1652640382">
+      <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1653953856">
         <rich_text>simbolos
 - son importantes por que estan a nuestro alrededor
 - las mates se crearon o se inventaron:
@@ -64,7 +64,53 @@ Notacion cientifica
 - Notacion cientifica
    → se usa mucho para representar cantidades muy grande (positivo) y muy pequenio (negativos) mas facil
    → constante de avogrado, es un numero muy grande que se require expresar con 10 ^ 23
-   → se usan prefijos de unidades en SI</rich_text>
+   → se usan prefijos de unidades en SI
+
+Aritmeticos y de agrupacion
+- se hace el uso de simbolos +: suma, -: resta, /: division y *: multipicacion, hay otras formas de hacer estos mismos, pero se complica en la computadora
+- jerarquia (de izquierda a derecha cuando salen juntos)
+   → signos de agrupacion
+   → potencia y raiz
+   → division y multiplicacion
+   → suma y resta
+- operadores de agrupacion, {}, [], (), en 1399, se usaba por primera vez, y fue el punto, para lectura, en 1470 se usaron parentesis
+   → John Wallis, vinculum, paso a ser la raiz cuadrada
+- simbolos combinados o alterados, como mas-menos y menos-mas
+
+comparacion y desigualdad
+- simbologia basica
+   → menor que
+   → mayor que
+   → menor igual que
+   → mayor igual que
+- intervalos finitos
+   → [a, b], a &lt;= x &lt;= b 
+   → [a, b), a &lt;= x &lt; b
+   → (a, b], a &lt; x &lt;= b
+- intervalos infinitos
+   → [-inf, a], -inf &lt; x &lt;= b 
+   → [-inf, a), -inf &lt; x &lt; a
+   → (-inf, inf], -inf &lt; x &lt; inf
+- relacion
+   → &lt;&lt; mucho menor que
+   → &gt;&gt; mucho mayor que
+   → ~ similar
+   → ~= congruente
+   → (tres puntos) ppor lo tanto
+   → E -&gt; pertenece
+- geometricos
+   → paralelos ||
+   → perpendicular, lineas perpendiculares
+   → angulo, angulo de 45
+   → angulo recto, angulo de 90
+   → trinagulo
+   → angulo XYZ, repsentado con un angulo de 45 con XYZ
+   → triangulo ABC, un triangulo con letras ABC
+   → existe los de:
+      ⇒ segmentos de linea con AB
+      ⇒ vector, linea con flecha
+      ⇒ recta, flecha para los dos lados
+      ⇒ arco, un “sombrero”</rich_text>
       </node>
     </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
@@ -6018,14 +6064,23 @@ Concurrencia y channels
 
 5500</rich_text>
     </node>
-    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1652741242">
+    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1653946055">
       <rich_text>comando Go:
 - go build: compila el archivo
 - go run: crea el binario y ejecuta
 - el package se le puede poner cualquier nombre, pero son usados para los modulos
 - main es una funcion principal y necesaria
 - se crean scanner para leer la entrada de los usuarios: {scanner} := bufio.NewScanner(os.Stdin); {scanner}.Scan(); {var} := {scanner}.Text()
-- al trabajar con cadenas hay que tener mucho cuidado con los errores, ya que Go no lanza un exception </rich_text>
+- al trabajar con cadenas hay que tener mucho cuidado con los errores, ya que Go no lanza un exception
+
+Structs and receivers
+- las estructuras son tipos de datos que define el mismo usuario
+- type {name} struct {body}
+- method: func ({name} {name_struct}) {name_function} ({parameters}) {body}
+- cuando se pasa un valor a una funcion generalmente se pasa un valor con una direccion completamente diferente
+- para modificar valores de una estructura desde un metodo se requiere ahce por medio de apuntadores, pasando la struct con un *
+- en go las listas son estaticas para algo dinamico se requiere hacer un slice:
+   → type {name} struct {{name} []*{structure}}</rich_text>
     </node>
     <node name="intermedio" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652566734" ts_lastsave="1652566887">
       <rich_text>es muy usado para escribir malware ?_?</rich_text>
