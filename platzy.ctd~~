@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1652713315">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1654044994">
     <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
-      <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1653953735">
+      <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
         <rich_text>simbolos
 - son importantes por que estan a nuestro alrededor
 - las mates se crearon o se inventaron:
@@ -106,7 +106,14 @@ comparacion y desigualdad
    → trinagulo
    → angulo XYZ, repsentado con un angulo de 45 con XYZ
    → triangulo ABC, un triangulo con letras ABC
-   → </rich_text>
+   → existe los de:
+      ⇒ segmentos de linea con AB
+      ⇒ vector, linea con flecha
+      ⇒ recta, flecha para los dos lados
+      ⇒ arco, un “sombrero”
+
+Operadores logicos
+- </rich_text>
       </node>
     </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
@@ -1657,7 +1664,7 @@ Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
-    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1653713355">
+    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1654211737">
       <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -1789,7 +1796,144 @@ HomeWork 2
 - parameters: 19
 - --default-artifact-root
 - best rmse: 6.628
-- best rmse: 6.55</rich_text>
+- best rmse: 6.55
+
+MLFLOW in practice
+- different scenaries:
+   → a single data scientist, competition model
+   → a cross-functional team with one data scientist, one model
+   → multiple data scientist on multiple models
+- differnet configurations
+   → backend store
+      ⇒ local
+      ⇒ SQLAlchemy compatible
+   → artifacts store
+      ⇒ local
+      ⇒ remote (s3...)
+   → trackign server
+      ⇒ no tracking server
+      ⇒ localhost
+      ⇒ remote
+- in the folder 02/examples, exists files with the 3 scenaries
+   → in first scenario is created by default a folder with name mlruns, with folder 0 and using yml meta
+   → in case of new experiment is create folder with number 1 and save all data in artifacts
+   → if run mlflow ui with the folder created by default this load the files
+   → in scenario 2, this is using local database, and tracking server, is used if I need test with multiple hyper params in the model
+   → in this escenary is necesary use the mlflow server and add the artifacts-save
+   → created one folder artifacts_local, in this is saved the artifacts of model with metadata
+   → scenario 3, this multiple DS working in multiple models, the remote server is in EC2, s3 buckets and using postgres db
+   → in this scenario is used the url of server and the aws profile
+   → a good practice of devops is create a role for the instance that connect to s3, is not a good idea use a user IAM
+   → other good practice is: the db without external connection only for the ec2
+   → in this scenario the artifacts is saved in s3
+   → remote benefits:
+      ⇒ shared experiment
+      ⇒ collaborate
+      ⇒ give more visibility of the data
+   → issues
+      ⇒ security, restrict access to the server
+      ⇒ scalability
+         • check deploy mlflow on aws farget
+         • check mlflow at company scale
+      ⇒ isolation
+         • define standard for naming experiments, models and a ser of default tags
+         • restrict access to artifacts
+   → limitations
+      ⇒ Auth and User
+      ⇒ data versioning
+      ⇒ model/data monitoring &amp; alerting, this is outside of the scope of MLFlow
+   → alternatives:
+      ⇒ neptune
+      ⇒ comet
+      ⇒ weights &amp; biases
+
+- Negative engineering and workflow (orchestration)
+   → explain what is a orchestation
+   → set of tool to scheduled and monitoring, that work that you want yo accomplish, for example a ml pipeline
+   → 90% time spent, another 10% is for work in modeling:
+      ⇒ retries when api go down
+      ⇒ malformed data
+      ⇒ notification
+      ⇒ observability into failure
+      ⇒ conditional failure logic
+      ⇒ timeouts
+   → prefect is a solution to this negative </rich_text>
+    </node>
+    <node name="postgresql" unique_id="92" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654044994" ts_lastsave="1654124495">
+      <rich_text>postgres es un motor de base de datos,
+lenguaje, PL/PSQL
+servidor, es donde se instala el motor, fisico
+motor, es el que permite estrucutrar todo dentro del server
+
+ACID:
+A - atomocity, se peuden separar las funcion en pequenias tareas y unidas en un todo
+C - consistency, todo lo que se relaciono al objeto relacional, los datos tiene congruencia entre si
+I - isolation, se pueden tener varias tareas ejecutandose al mismo tiempo
+D - durability, se tiene la seguridad de que no se pierde la informacion
+
+se debe de crear la base: transporte_masivo, tabla viajero (id_viajero, nombre, fecha_registro)
+usar version 11.5
+
+consola, acceso por psql:
+- \l , lista todas las bases de datos
+- \dt, tablas que tiene la base de datos
+- \c {nombre base de datos}, para cambiar la base de datos
+- \d {tabla}, sirve para describir la tabla
+- \h, para obtener todas las funciones
+- \h {funcion}, nos muestra la documentacion de la funcion
+- \g, permite volver a ejecutar la consulta anterior
+- \timing, esto ayuda a saber cuanto se tardo en demorar los queries
+
+archivos de configuracion
+- tres archivos:
+   → postgresql.cong
+   → pg_hba.conf, aqui se modifica como sera el acceso para la base de datos
+   → pg_ident.conf, permite mapear usuarios del usuario con el usuario de la base de datos
+- en pgadmin:
+   → SHOW config_file;
+- el archivo esta generalment en la carpeta de configuracion
+- </rich_text>
+      <rich_text link="webs https://pgtune.leopard.in.ua/">https://pgtune.leopard.in.ua/</rich_text>
+      <rich_text>
+
+tipos de datos:
+- numericos
+- monetarios
+- texto
+- binarios
+- fecha/hora
+- boolean
+- geometricos
+- direccion de red
+- tipo bit
+- XML, JSON
+- arreglos
+
+Disenio de la base de datos:
+- estation
+   → id
+   → name
+   → direction
+- train
+   → id
+   → model
+   → capacity
+- pasajero
+   → id
+   → name
+   → address
+   → date
+- trayecto
+   → id
+   → name
+   → id_train
+   → id_station
+- viaje
+   → id
+   → id_pasajero
+   → id_trayecto
+   → inicio
+   → fin</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -6060,7 +6204,7 @@ Concurrencia y channels
 
 5500</rich_text>
     </node>
-    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1653946055">
+    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1654043795">
       <rich_text>comando Go:
 - go build: compila el archivo
 - go run: crea el binario y ejecuta
@@ -6076,7 +6220,12 @@ Structs and receivers
 - cuando se pasa un valor a una funcion generalmente se pasa un valor con una direccion completamente diferente
 - para modificar valores de una estructura desde un metodo se requiere ahce por medio de apuntadores, pasando la struct con un *
 - en go las listas son estaticas para algo dinamico se requiere hacer un slice:
-   → type {name} struct {{name} []*{structure}}</rich_text>
+   → type {name} struct {{name} []*{structure}}
+
+Interfaces
+- maps, son como diccionarios en python: {name} := make(map[{tipo llave}]{tipo de valores})
+- sirven para evitar la creacion de codigo de mas, los metodos deben de tener el mismo nombre para ser tomados por la interfaz
+- se declara la interfaz: type {nombre} interface { {funciones a meter} }</rich_text>
     </node>
     <node name="intermedio" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652566734" ts_lastsave="1652566887">
       <rich_text>es muy usado para escribir malware ?_?</rich_text>
@@ -6769,7 +6918,7 @@ EC2
       ⇒ software and utilities installed
       ⇒ AM roles in EC2</rich_text>
     </node>
-    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1651199459">
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1654213835">
       <rich_text>JSON is horrible to CF
 is possible use CF and JSON
 -- YAML
@@ -6832,8 +6981,44 @@ deploying:
 Cost:
 	use the link stimated cost, sends to simple monthlu calculatos
 
+what is a parameters
+	are a way to provide inputs to templates
+	they're important:
+		to reuse the templates across company
+		some inputs can not be determined ahead of time
+	controlled and can prevent errors from happening in your templates
+	parameters can be cross-validate using rules
 	
-</rich_text>
+Parameters:
+	{name}:
+		Type: {type}
+		Description: {description}
+		ConstraintDescription: {string}
+		Min/MaxLength: number
+		Min/MaxValue
+		AllowedValues: {array}
+		AllowedPattern: {regex}
+		NoEcho: {Boolean}
+	reference parameter:
+		with the function Fn::Ref
+	Not used in:
+		AWSTemplateFormatVersion
+		Description
+		Transform
+		Mappings
+	the shorthand for this in YAML is !Ref
+	
+SSMParameters:
+	references to SSM
+	specify ssm parameter key as the value
+	CF fetches the lastest value
+	CF doesn't store security string values
+	validation on ssm parameter keys, but no values
+	Supported ssm parameters
+		- AWS::SSM::Parameter::Name
+		- AWS::SSM::Parameter::Nam
+		- AWS::SSM::Parameter::Name
+		- AWS::SSM::Parameter::Name</rich_text>
     </node>
   </node>
 </cherrytree>
