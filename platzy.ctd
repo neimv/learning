@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1654044994">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1654889158">
     <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
       <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
         <rich_text>simbolos
@@ -1664,8 +1664,299 @@ Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
-    <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1654211737">
-      <rich_text>- first week
+    <node name="postgresql" unique_id="92" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654044994" ts_lastsave="1655318818">
+      <rich_text>postgres es un motor de base de datos,
+lenguaje, PL/PSQL
+servidor, es donde se instala el motor, fisico
+motor, es el que permite estrucutrar todo dentro del server
+
+ACID:
+A - atomocity, se peuden separar las funcion en pequenias tareas y unidas en un todo
+C - consistency, todo lo que se relaciono al objeto relacional, los datos tiene congruencia entre si
+I - isolation, se pueden tener varias tareas ejecutandose al mismo tiempo
+D - durability, se tiene la seguridad de que no se pierde la informacion
+
+se debe de crear la base: transporte_masivo, tabla viajero (id_viajero, nombre, fecha_registro)
+usar version 11.5
+
+consola, acceso por psql:
+- \l , lista todas las bases de datos
+- \dt, tablas que tiene la base de datos
+- \c {nombre base de datos}, para cambiar la base de datos
+- \d {tabla}, sirve para describir la tabla
+- \h, para obtener todas las funciones
+- \h {funcion}, nos muestra la documentacion de la funcion
+- \g, permite volver a ejecutar la consulta anterior
+- \timing, esto ayuda a saber cuanto se tardo en demorar los queries
+
+archivos de configuracion
+- tres archivos:
+   → postgresql.cong
+   → pg_hba.conf, aqui se modifica como sera el acceso para la base de datos
+   → pg_ident.conf, permite mapear usuarios del usuario con el usuario de la base de datos
+- en pgadmin:
+   → SHOW config_file;
+- el archivo esta generalment en la carpeta de configuracion
+- </rich_text>
+      <rich_text link="webs https://pgtune.leopard.in.ua/">https://pgtune.leopard.in.ua/</rich_text>
+      <rich_text>
+
+tipos de datos:
+- numericos
+- monetarios
+- texto
+- binarios
+- fecha/hora
+- boolean
+- geometricos
+- direccion de red
+- tipo bit
+- XML, JSON
+- arreglos
+
+Disenio de la base de datos:
+- estation
+   → id
+   → name
+   → direction
+- train
+   → id
+   → model
+   → capacity
+- pasajero
+   → id
+   → name
+   → address
+   → date
+- trayecto
+   → id
+   → name
+   → id_train
+   → id_station
+- viaje
+   → id
+   → id_pasajero
+   → id_trayecto
+   → inicio
+   → fin
+
+tablas
+- tiene la estructura e informacion de la base de datos
+   → CREATE, crear tabla
+   → ALTER, alterar la tabla
+   → DROP, borra la tabla
+
+particiones
+- sirven para cuando se tiene mucha informacion en una tabla
+   → separacion fisica de datos, se guardan varias partes de la tabla en el mismo o diferentes discos
+   → estructura logica, se puede usar el mismo select, pero se pueden separar por fechas por ejemplo
+
+Roles
+- que puede hacer:
+   → crear y eliminar
+   → asignar atributos
+   → agrupar con otros roles
+   → roles predeterminados
+- se debe de crear un usuario con los permisos necesarios para no borrar algo que no se deba de borrar
+
+LLaves foraneas
+- aqui deben de ser congruentes si existe en una tabla debe de existir en la otra
+- tabla de origen
+- tabla destino 
+- acciones
+
+SQL Join:
+- teoria de conjuntos implementada en sql
+- JOIN == INNER JOIN
+
+Funciones especiales:
+- On CONFLICT DO {action}, soluciona problemas para insertar datos o modificar, que no se puedan hacer y que despues podemos arreglar
+- RETURNING {campo}, devuelve todos los cambios que se hicieron
+- LIKE/ILIKE, busqueda estilo expresiones regulares
+- IS/IS NOT, permite comparar dos tipos de datos no estandar
+- COALESCE, compara dos valores, regresa el que no es nul
+- NULLIF, compara dos valores y si son iguales ergresa nulo
+- GREATEST, Compara un arreglo de valores, regresa el mayor
+- LEAST, Compara un arreglo de valores, regresa el menor
+- BLOQUES ANONIMOS permite agregar condicionales dentro de una consulta de datos
+
+VISTAS:
+- se usan mucho cuando la consulta se repite muchas veces
+- volatiles, valores mas constante de consultar, tiende a cambiar si cambian los datos
+- materializadas: persistente, sirve para datos de un dia atras
+- sirve para ejecutar algo mas simple
+- cuando la vista materializada no tiene datos, falla, se usa REFRESH para traer los datos
+
+PL/SQL
+- procedimientos almacenados
+- se desarrolla codigo dentro de la base de datos
+- para crealas se tiene que hacer
+   → DO $$ {codigo} $$
+   → RAISE NOTICE, lanza un error en consola
+   → DECLARE se usa para variables, {rec} {record|type} := {value}, con record se trae toda la fila
+   → FOR rec {SELECT} LOOP
+
+TRIGGER:
+- dispara acciones que se activan cuando pasa un insert, update o delete en una tabla
+- para trigger se debe de cambiar el retorno, se regresa un TRIGGER
+- si ponemos OLD no se hace el cambio
+- si se pone NEW si se permite el cambio
+
+Datos externos:
+- DBLink, conexion a datos remotos con una consulta
+
+Backups y restauracion
+- pg_dump, custom (formato unico), tar (comprimido), plain(sql plano), directory (estructura sin comprimir), se puede seleccionar todo lo que tiene la base o solo datos, tablas...
+- pg_restore
+
+Mantenimiento:
+- se hace sin nuestro concentimiento, trabajan en segundo plano
+- Vacuum, vaciado, quita lo que no esta funcionando
+   → liviano, lo hace constantemente
+   → full, bloquea las tablas para hacer la limpieza, en tablas muy grande
+- se puede hacer a nivel de base de datos o de tablas
+- vacuum, la mas importante
+   → full, quedara limpia en su total
+   → freeze, durante el tiempo se congela
+   → analyze, el mas suave, aplica revision y no aplica cambios
+- analyze, no hace cambios en la tabla, hace la revision y dice como esta la tabla
+- reindex, aplica para tablas que tienen indices entre ellos, pasa si los indices son mas grandes que las tablas 
+- cluster, reorganiza la informacion en el disco
+
+Replicas
+- mecanismos que permiten evitar probelmas de entrada y salida en los OS
+- piensa siempre en modo replica
+- IOPS, limitante a nivel de OS, 
+
+Crear dos servidores
+- master
+   → en configuracion
+      ⇒ wal_level = hot_standby
+      ⇒ max_wal_senders = 2
+      ⇒ archive_mode = on
+      ⇒ archive_command = ‘cp %p /tmp/%f’
+   → en pg_hba.conf
+      ⇒ host   replication   all   {ip}/32    trust
+   → se debe reiniciar
+- replica
+   → se debe de parar
+   → se borra rm -rf /var/lib/psql/data/*
+   → pg_basebackup -U {user} -R -D /var/lib/pgsql/data/ -- host={ip_master} --port={port}, se copia la base
+   → se modifica en configuracion
+      ⇒ hot_standby = on
+   → se reinicia
+
+
+POSTGRES para ciencia de datos
+
+historia de las bases de datos
+- se usaban de manera texto, manera plana un txt, obtener estos datos era complicado y mas procesarlos
+- es un esfuerzo matematico para hacer algo mas complejo
+
+Puntos fuertes:
+- se cree que estan un poco obsoletos, cosa no cierta
+- multiproposito
+- ampliamente utilizadas
+- informacion consistente
+- flexible
+- retrocomplatible
+- complemente programable, permite usar lenguajes para hacer algo ams complejo que un CRUD
+
+Conceptos:
+- entidades/tablas: cosas del mundo real
+- atributos: son los atributos que tienen las entidades
+- relaciones: conexiones entre entidades
+- trigger, son funciones a ligar los store procedur con un evento
+- store procedure, funciones o procedimientos que se guardan en el manejador de base de datos una y otra vez, sin repetir codigo
+
+Principales sentencias SQL
+- se usan las mismas que postgresql
+
+Que es la ciencia de datos:
+- el cientifico de datos comunmente lidera el equipo
+- se requiere saber cual es lo que el negocio require y las necesidades de datos, para accionar con los demas equipos
+- se debe entender el negocio, ya que lo ams grande que hace es el impacto que tiene sobre la empresa
+- generalmente en las startup se es one man army, que es el que hace todo con data
+- aplicacion:
+   → la parte mas fundamental es en la toma de decisiones
+   → data driven: se toman las decisiones basadas en datos, se debe de saber que representan
+   → informacion significativa, tiene que ver con la historia a contar de los datos, sabiendo que se puede aprovechar
+   → formato de acuerdo para el publico adecuado
+   → neutralidad de datos, tener cuidado con la discriminacion mas con los datos que se toman
+   → se tiene que contar una historia
+- equipos orientados a datos:
+   → DBA, el administrador de base de datos, es el primer rol creado
+   → Data warehouse, almacen de datos, cuando ya no es posible en 1 o 2 servidores, para guardar millones de datos
+   → ETL/Data pipelines, obtener datos, transformarlos y guardarlos en otro lado
+   → BI, inteligencia del negocio, precursor del data science, traer los datos y entender los patrones que nos estan dando
+   → ML, tecnica que ayuda para clasificacion de gran cantidad de datos o predecir basandose en data historica
+   → data science, entender a la organizacion e impactar de forma positiva, las necesidades de la organizacion y planear un camino
+- ds vs ml
+   → machine learning, es un conjunto de ciencias, estrategias y algoritmos para usar en la compu, con esto se pueden resolver varios problemas, existen 2 tipos:
+      ⇒ clasificacion, toma datos y encuentra en los datos grupos, patrones por medio de ciertas caracteristicas
+      ⇒ predicciones, toma datos historicos, con fecha y temporalidad, por medio de patrones busca la tendencia que hay en ellos
+   → ciencia de datos, tiene que ver mas con conocer a la organizacion o empresa, puede ser por medio de un equipo o uno solo
+      ⇒ debe de impactar de forma positiva a la organizacion
+   → ml es una herramienta fundamental para el data science
+   → la herramienta adecuada para el trabajo adecuado
+
+Diferencias entre manejadores
+- filosofia de codigo abierto y orientado a la comunidad
+- sumamente adaptable, manejo de documentos json, funciones orientadas a estdistica, lenguaje PSQL
+- se dedica a manejo de objetos OOB
+- se tienen particiones
+- common table expresion, tablas virtuales, se crean en momento
+- window function, encontrar relacion entre un row y el resto de registros
+
+PLPGSQL
+- programacion mas ordenada y procedural
+- para creacion de triggers
+- se ejecutan los pasos del procedimiento pero no se extrae ningun valor
+- existen stored procedure (son estandar y no regresan valor) y function (no son estandar, mas avanzadas y regresan un valor)
+
+en postgresql se tienen tipos de datos especiales, que son los datos que crea el usuario (aparte de los JSON)
+tipo de dato lista, sirve como validador
+
+Pensando en la presentacion de los datos
+- el reto es mas grande es saber que datos debemos extraer y como mostrarlos
+- planeacion
+   → es hacia donde queremos hacer todo lo demas
+   → saber que queremos probar con nuestros datos
+   → como obtener los datos de acuerdo al proposito que tenemos
+- la forma mas comun para este tipo de informacion son los dashboard
+   → tienen diferentes significados, dependera de l uso o lo que queremos saber
+   → la presentacion siempre es muy importante
+
+Trabajando con objetos (json)
+- generalmente se guarda un cadena, donde generalmente se vuelven mas lentas y complicadas
+- PG tiene dos implementacion JSON y JSONB (es mas veloz JSONB)
+- como extraer la data json
+
+Agregando objetos
+- sumarizacion de datos, obtener cosas como maximos, minimos, promedio y demas
+
+Common table expression
+- se usan para ahorrar memoria
+- lenguaje pensado para consulat de datos estructurado
+- no tiene estructuras de control ni iterativas, para eso se usan las common table expresion
+- manejo de WITH RECURSIVE
+
+Window Functions
+- relacionar un row con otros row dentro de la tabla
+- generalmente se usan para hacer ranking
+- dense rank, diferencia cuando se tiene un rango igual
+
+Particiones
+- son de manera explicita
+- casi todas lo hacen, pero lo hacen internamente para mejorar los datos
+- cada seccion contiene un rango
+- en las particiones no existen como tal las llaves primarias
+- aqui el indice y clave es por donde se particiono la tabla</rich_text>
+    </node>
+    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
+      <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
+      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1655143588">
+        <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
       ⇒ goal: predict the duration of a taxi trip
@@ -1857,83 +2148,214 @@ MLFLOW in practice
       ⇒ observability into failure
       ⇒ conditional failure logic
       ⇒ timeouts
-   → prefect is a solution to this negative </rich_text>
-    </node>
-    <node name="postgresql" unique_id="92" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654044994" ts_lastsave="1654124495">
-      <rich_text>postgres es un motor de base de datos,
-lenguaje, PL/PSQL
-servidor, es donde se instala el motor, fisico
-motor, es el que permite estrucutrar todo dentro del server
+   → prefect is a solution to this negative
 
-ACID:
-A - atomocity, se peuden separar las funcion en pequenias tareas y unidas en un todo
-C - consistency, todo lo que se relaciono al objeto relacional, los datos tiene congruencia entre si
-I - isolation, se pueden tener varias tareas ejecutandose al mismo tiempo
-D - durability, se tiene la seguridad de que no se pierde la informacion
+Prefect
+- open source workflow orchesttration
+- python base
+- modern data stack
+- native dask integration
+- use dag-free workflow
+- extraordinary developer experience
+- transparent and observable orchestration rules
+- a good practice: if __name__ == ‘__main__’:
+- to start prefect: prefect orion start
 
-se debe de crear la base: transporte_masivo, tabla viajero (id_viajero, nombre, fecha_registro)
-usar version 11.5
+Prefect on VM machine
+- is his lection is used EC2, in my case I treid to create a docker
+- is important that port 22 is open in SG rule, http/https and port tcp/upd in port 4200 to all
+- in machine is necesary run conda and install orion prefect
+- command: prefect orion start --host 0.0.0.0
+- configure in local:
+   → prefect config view
+   → prefect config set PREFECT_API_URL="http://{ip}:{port}/api"
+   → python {script}
 
-consola, acceso por psql:
-- \l , lista todas las bases de datos
-- \dt, tablas que tiene la base de datos
-- \c {nombre base de datos}, para cambiar la base de datos
-- \d {tabla}, sirve para describir la tabla
-- \h, para obtener todas las funciones
-- \h {funcion}, nos muestra la documentacion de la funcion
-- \g, permite volver a ejecutar la consulta anterior
-- \timing, esto ayuda a saber cuanto se tardo en demorar los queries
-
-archivos de configuracion
-- tres archivos:
-   → postgresql.cong
-   → pg_hba.conf, aqui se modifica como sera el acceso para la base de datos
-   → pg_ident.conf, permite mapear usuarios del usuario con el usuario de la base de datos
-- en pgadmin:
-   → SHOW config_file;
-- el archivo esta generalment en la carpeta de configuracion
+Deployment prefect flow
+- storage
+   → prefect storage ls
+   → prefect storage create
+- prefect deployment create {file.py}
 - </rich_text>
-      <rich_text link="webs https://pgtune.leopard.in.ua/">https://pgtune.leopard.in.ua/</rich_text>
-      <rich_text>
+        <rich_text style="italic" foreground="#fd5e53">SubprocessFlowRunner</rich_text>
+        <rich_text> is used to deploy in local storage
+- prefect work-queue preview {queue id}
+- prefect agent start {queue id}
 
-tipos de datos:
-- numericos
-- monetarios
-- texto
-- binarios
-- fecha/hora
-- boolean
-- geometricos
-- direccion de red
-- tipo bit
-- XML, JSON
-- arreglos
+Trhee ways of deploting a model
+- experiment tracking:
+   → desing
+   → train, training pipeline
+   → operate, deployment
+- deployment:
+   → batch, offline
+      ⇒ run regularly
+      ⇒ good when execute every time (hourly, daily, monthly)
+      ⇒ get data from database
+      ⇒ predicts, generally with last time used (hourly, daily or monthly)
+      ⇒ save the result in another site
+      ⇒ generate reports
+   → online
+      ⇒ running all the time
+      ⇒ variances:
+         • web service, http access
+            ◇ this is one to one client-server
+         • stream service, events listening
+            ◇ using producers and cosumers
+            ◇ this is possible many to many
+            ◇ multiple services multiple consumers in the same time
+            ◇ one example is a content moderation for example Youtube
+               ▪ check copyright violations
+               ▪ Porn explicity
+               ▪ violence
+- marketing:
+   → the user send a petition and get the result
 
-Disenio de la base de datos:
-- estation
-   → id
-   → name
-   → direction
-- train
-   → id
-   → model
-   → capacity
-- pasajero
-   → id
-   → name
-   → address
-   → date
-- trayecto
-   → id
-   → name
-   → id_train
-   → id_station
-- viaje
-   → id
-   → id_pasajero
-   → id_trayecto
-   → inicio
-   → fin</rich_text>
+Web services, using flask and docker
+- using the normal duration-prediction</rich_text>
+      </node>
+    </node>
+    <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
+    <node name="etica en el manejo de datos" unique_id="96" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="1" foreground="" ts_creation="1654889158" ts_lastsave="1655056410">
+      <rich_text>Que son los datos personales:
+- datos que permiten identificar a una persona de manera directa o indirecta
+- se pueden clasificar por jerarquia de importancia o riesgo, hay datos que son unicos y otros que permiten identificar a multiples personas
+   → datos ordinarios, nombre, direcciones, finanzas
+   → datos sensibles, origen etnico, opiniones politicas y religiosas, orientacion sexual
+   → datos especiales, genericos, biometricos, de salud
+- cuales no lo son
+   → informacion anonimizada
+   → datos de personas juridicas, aquellas que son de una institucion, solo los de individuos
+   → informacion que no permita la identificacion
+- en que diferencias los datos biometricos
+   → son un tipo de datos personales
+      ⇒ por naturaleza
+         • universal
+         • unico
+         • permanente
+      ⇒ segun sus caracteristicas
+         • rasgos fisicos y fisiologicos
+         • rasgos de comportamiento y personalidad
+
+Escandalos historicos
+- 1940, Holanda, por medio del censo se pudo saber datos de personas de origen judio, muerte del 75% de poblacion judia
+- 2016 Mexico, problema del INE en el S3 de amazon con datos de personas
+
+Intereses por la informacion
+- cada vez se pueden procesar datos mas facilmente
+- se puede analizar
+- se usa para predecir y saber quien es el usuario
+- el incremento de informacion se ha tenido que regular
+- tipo y volumen de informacion que puede recolectar la informacion, deben de tener motivos de por que lo hacen
+- de manera ilicita se compra y vende datos
+
+Bias y GIGO en datos
+- bias-&gt; sesgo, se toma una muestra que no es estadisticamente sifnificativa, extracto de nuestro universo
+   → debe ser suficientemente grande para tener una buena muestra
+   → un sesgo comun es cuando se trabaja con reconociemiento facial, se tiene mas fotos de personas blancas
+- Garbage in, garbage out
+   → la calidad del resultado depende de la calidad de entrada
+   → la fuente debe de ser veraz
+
+Advertencias de uso en marketing
+- se puede crear publicidad personalizada
+   → los usuario tiene el poder de decir y calificar los productos
+   → sesgos discriminatorios
+   → precios por informacion privilegiada
+   → minupulacion de campanias politicas
+   → formanto de conductas adictivas y ataques emocionales
+
+Advertencias de uso en campanias politicas
+- el gobierno se interesa en los datos
+- Cambridge analitica ofrecia como manipular el comportamiento de la audiencia
+   → datos propios a partir de cneutrnas
+   → datos de redes como facebook
+   → ciencia del comportamiento y modelos predictivos
+- la empresa identificaba quien era vulnerable o quient enia una conciencia politica determinada, se manipula o se distorciona la realidad para no votar en la otra persona
+
+Reglamentos
+- penalizacion por mal uso de datos
+- regulacion de datos
+- ley federal de proteccion de datos personales en posesion de particulares, en mexico y en LatAm, se debe de justificar el por que se hace uso y recoleccion de los datos
+   → todos los datos deben de ser de uso y seguros
+- sansiona la compra de bases de datos personales
+- GDPR, reglamente general de proteccion de datos
+   → ley de la union europea para proteccion de datos tanto estando o no estando en el pais
+   → permite tener un control de los usuario y de su control
+   → se buisca la estandarizacion
+   → aplica para cualquier empresa del mundo
+
+Etica y deep learning
+- vehiculos autonomos, reconocimiento de imagenes
+   → aun sigue en pruebas
+   → dilemas eticos hacen que no podemos ver o usar
+   → peligros de ataques ciberneticos sobre el codigo
+- reconocimiento facial
+   → se basa en datos biometricos
+   → del rostro completo o parcial
+   → se basa en reconocimiento de vectores
+   → se desarrolla para acceder a espacios fisicos con mayor facilidad
+   → como usuario se puede decidir si otorgarlo o no
+   → se debe de pensar tambien en el usuario y si es etico como proteger la informacion
+   → en Mexico ya existe uso de este tipo de accesos para el papeleo
+- etica en la pandemia
+   → la pandemia ha sido un gran reto
+   → uso de controles de acceso
+- relaciones interpersonales
+   → redes sociales, trabajo, uso de apps
+   → las interacciones en el trabajo han evolucionado
+   → ahora se conoce gente de manera no fisica
+   → como devs de tecnologia debemos de garantizar un espacio seguro
+   → funciones de audio, nosotros otorgamos acceso al microfono, se puede bloquear el acceso al microfono para que no nos muestre anuncios
+   → redes sociales despues de la vida, cuando uno muere deja toda su huella electronica, una persona debe de elegir que hacer con las redes sociales
+- etica en el NLP
+   → investigacion de la interaccion entre PC y lenguaje humano, por medio de lenguas naturales
+   → casi siempre es en ingles
+   → un modelo desarrollado es micrsoft-alibaba vs stanford
+      ⇒ el algoritmo gano la compresion lectora
+   → gpt-3
+      ⇒ lenguaje autoregresivo, aprendizaje profundo 
+      ⇒ tiene como reto identificar que es real y que es falso
+
+Data for good
+- Politicas publicas
+   → atencion del estado a una necesidad social
+   → se pueden implmentar a partir de normas, instituciones, prestaciones y servicios
+   → ayudan para alcanzar principios eticos e igualdad en sociedades
+   → tipos de clasificacion
+      ⇒ autoridad institucional, municipal, mundial, nacional
+      ⇒ sector, medico, medio ambiente, edcicacion
+      ⇒ destinatarios, a quien van dirigidas
+      ⇒ elaboracion, participativa o autoritaria
+      ⇒ planificacion, anticipativa o reactiva
+- Datos y prevencion de crimenes
+   → a partir de dos tipos de recoleccion
+      ⇒ en camaras, de tipo reactivo
+      ⇒ por medio de reportes
+      ⇒ preventiva a partir de donde pude suceder algun crimen
+- datos y salud
+   → por medio de prediccion se puede tener una oportunidad
+   → el uso de apple watch para ver como se esta comportando nuestro sistema
+- movilidad
+   → no solo tiene que ver con vehiculos motorizados
+   → se facilita la movilidad y recolectan informacion gracias a un radar
+   → lo datos que se recolectan se pueden analizar, para saber como es el flujo de la ciudad, esto ayuda a crear politicas publicas
+   → ciudades inteligentes a partir de los datos, emplean tecnologia para anticiparse
+   → la otra cara de la moneda
+      ⇒ dilema etico, muchas zonas pueden ser discriminadas, nos diriguen siempre por vias principales ya que son mas seguras, eso hace un flujo mayor
+- educacion
+   → las escuelas online permiten trackear los resultados
+   → nos ayuda a recomendarnos algunos cursos
+   → algoritmos para mejorar la experiencia
+- medio ambiente:
+   → reactivo, que se puede hacer despues de que algo ya sucedio
+   → por medio de predicciones podemos saber si se puede realizar alguna actividad de acuerdo a como esta el ambiente
+   → se puede evaluar para saber si algo esta en optimas condiciones
+
+
+¿Qué podría generar un anuncio sin planificación ética?
+La falta de estandarizaci√≥n de un protocolo ante la pandemia es un ejemplo de dilema √©tico y de debate. Esto es:
+</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5809,7 +6231,7 @@ bloqueo</rich_text>
       </node>
     </node>
   </node>
-  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1652631305">
+  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1655072393">
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
@@ -6204,7 +6626,7 @@ Concurrencia y channels
 
 5500</rich_text>
     </node>
-    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1654043795">
+    <node name="basic practico WS" unique_id="88" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652631305" ts_lastsave="1655058099">
       <rich_text>comando Go:
 - go build: compila el archivo
 - go run: crea el binario y ejecuta
@@ -6225,11 +6647,24 @@ Structs and receivers
 Interfaces
 - maps, son como diccionarios en python: {name} := make(map[{tipo llave}]{tipo de valores})
 - sirven para evitar la creacion de codigo de mas, los metodos deben de tener el mismo nombre para ser tomados por la interfaz
-- se declara la interfaz: type {nombre} interface { {funciones a meter} }</rich_text>
+- se declara la interfaz: type {nombre} interface { {funciones a meter} }
+
+Concurrencia
+- por medio de la palabra go se crean hilos o procesos de la funcion que se desea ejecutar
+- las subrutinas no se conocen, se debe de usar algo para que se comuniquen
+- channels
+   → tiene que ser definidos con el tipo que recibira
+   → se maneja el operador flecha para dar el mensaje
+   → se crean: {name} := make(chan {type})
+   → in function as parameter: {name} chan {datatype}
+   → se transmiten: canal&lt;- {respuesta}
+   → para leer: &lt;-canal
+   → se tiene que hacer la llamada del canal las veces que se espera la respuesta</rich_text>
     </node>
     <node name="intermedio" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652566734" ts_lastsave="1652566887">
       <rich_text>es muy usado para escribir malware ?_?</rich_text>
     </node>
+    <node name="POO y concurrencia" unique_id="97" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655072393" ts_lastsave="1655072393"/>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
     <node name="Personalidad y productividad" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
@@ -6918,7 +7353,7 @@ EC2
       ⇒ software and utilities installed
       ⇒ AM roles in EC2</rich_text>
     </node>
-    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1654213959">
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1655319151">
       <rich_text>JSON is horrible to CF
 is possible use CF and JSON
 -- YAML
@@ -7020,7 +7455,146 @@ SSMParameters:
 		- AWS::SSM::Parameter::Value&lt;List&lt;String&gt;&gt;
 		- AWS::SSM::Parameter::Value&lt;CommaDelimitedList&gt;
 		- AWS::SSM::Parameter::Value&lt;AWS-Specific Parameter&gt;
-		- AWS::SSM::Parameter::Value&lt;List&lt;AWS-Specific Parameter&gt;&gt;</rich_text>
+		- AWS::SSM::Parameter::Value&lt;List&lt;AWS-Specific Parameter&gt;&gt;
+		
+Resources
+	are the core of CF (Mandatory)
+	represent aws components, will be created and configured
+	resources are declarad and can reference
+	Specified creation, updates and deletes
+	more of 700 types
+	identifiers ar form:
+		AWS::aws-product-name::data-type-name
+	optional atts:
+		dependsOn:
+			use to draw a dependency between two resources
+			ex: create ecs after of ASG
+			use with any resource
+		deletionPolicy:
+			protect resource from being deleted even if CF stack is
+			 deleted (RDS)
+			control what happens if a resource or CF is delete from CF
+			Retain: resources is preserved or backup, to keep a resource
+			Snapshot: EBS Volume, ElastiCache cluster and ReplicationGroup, RDS DB Instance, Clusters, Redshitf, Neptune DBCluster
+			Delete: default, remove all, DBCluster and DBInstance default is Snapshot and in S3 is necesary that this is empty
+		updateReplacePolicy:
+			protects resources of being replacing
+			that happens if a resource is updated
+			updating RDS DB Avialability zon
+			Use with any resource
+			Delete: (default), delete old an create a new
+			Retain: Keeps the resource
+			Snapshot: EBS Volume, ElastiCache cluster and ReplicationGroup RDS DB Instance, Clusters, Redshitf, Neptune DBCluster, does not exists in CF scope
+		creationPolicy: more details in the CFN init section
+		updatePolicy: specific resources
+		Metadata: anything
+	is possible create dynamic number of resources, using macros and transform
+	almost services is soported by CF
+	
+Mappings:
+	are fixed varibles within CF
+	this is handy with different envs, regios, AMI types
+	all values are hardcoded
+	this is used when the values can be taken from variables, for exameple, regios, aws account
+	they allow safer control over the template
+	
+Funtion for mappings:
+	Fn::FindInMap = !FindInMap[ MapName, TopLevelKey, SecondLevelKey ]
+	
+Pseudo parameters in CF
+	parameters of type: “AWS::{something}”
+	
+Output:
+	delares optional outputs values that can import from another CF
+	is posible see the outputs in console of aws or by cli
+	very useful for example if is defined a network with CF, varibales as VPCID or subnet id
+	the best collaboration from cross stacks
+	is necesary the !ImportValue {name} to get the value of output
+	is not possible delete the stack until all references are deleted too
+
+conditions
+	are used to control the creation fo resources or outputs
+	can be whatever tou want them to be, but commons ones are:
+		environment
+		aws region
+		any parameter value
+	each condition can references anorther condition, parameter or mapping
+	define:
+		CreatesSome: !Equals [ !Ref EnvType, prod ]
+		is possible use:
+			Fn::And, Fn::Equals, Fn::If, Fn::Not, Fn::Or
+		
+		applied to resources/outpus/...
+		iif for example in mount point exists volume attach and the exists condition and is False this is not mounted
+		
+Rules
+	parmeter section gives us abality to validate within a single parameter
+	to perform parameter validations based in another parameters (crsoss parameter validation)
+	for example all subnets are within the same vpc
+	define:
+		Rule:
+			Rule Condition(optional): determines when rule take effect
+			Assertion: describe what value are allowed for a partivular paramter, one or more
+	support funtions(all with Fn::): And, Contains, EachMemeberEquals, EachMemberIn, Equals, If, Not, Or, RefAll, VoueOf, ValueOfAll
+	
+Metadata
+	optional, include details about the template or resource
+	does not provoque impacts
+	exist 4 metadata keys
+		AWS::CloudFormation::Designer, resources are laid out in template
+		AWS::CloudFormation::Interface, grouping an orderinf og input parameter, is possible change the ordering in AWS interface, and group with a label
+		AWS::CloudFormation::Authentication, specified auth credentials for files or sources this on Init
+		AWS::CloudFormation::Init, define configuration tasks for cfn-init, it is the more powerful
+	is possible overwritte the 4 metadata keys
+	
+CFN_Init and EC2 User Data
+	Many of CF templates will be about provisioning computing resources
+	resources can be either:
+		EC2 Instances
+		Auto Scaling Gtoups
+	The instance to be self configured, to execute the work
+	fully automate EC2 Fleet state with CF Init
+	this is execute the first boot of the instance
+	
+	the problem with User Data is
+		if the configuration is vere large
+		what append if exists a change and the previos EC2 without termintaion
+		make user-data more readable
+		how to know if script finished
+	Using helper scripts
+	using Init of CF and the flow: cfn-init, cfn-signal, cfn-get-metadata and cfn-up (this is optional)
+	
+	command are execute in alphebical order
+	
+Drift
+	the cf does not protect of manual configuration changes
+	to know if exists changes is used CF drift
+	detect drift on an entire stack or on individual
+	we can resolver stack/resources drift by using resource import
+	Not all resources are supported
+	
+Nested stack
+	stacks as part of another stack
+	allow isolate repeat patterns/common components and use from another stack
+	this is a best practice
+	is necessary to update a stack, update the parent stack
+	is possible have multiple nested stack in anohter nested stack
+	is important always apply the modification in root stack
+	nested vs cross
+		cross
+			when stacks have different lifecycles
+			use outputs exports
+			pass values to many stacks (VPC id, etc)
+		nested
+			when components must be re-used
+			only is important to the higher level (it's not shared)
+			
+			
+Stacks Sets
+	Create, update or delete stacks across multiple accounts and regions with one operation
+	only the administrator create stacksets
+	when the stack is updated all stack associeted is updated
+	is possible execute in all accounts</rich_text>
     </node>
   </node>
 </cherrytree>
