@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1654889158">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1655388312">
     <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
       <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
         <rich_text>simbolos
@@ -671,148 +671,6 @@ Una distribuciÃ³n de probabilidad es:
 - traza(ABC) = traza(ACB) = traza(CBA)
 - el determinante nos da el espejo del espacio</rich_text>
     </node>
-    <node name="visualizacion de datos" unique_id="9" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623292658" ts_lastsave="1623770620">
-      <rich_text># Que es la visualización
-- el input: es la parte donde se inicializa la visualizacion de datos, se pone de forma estructurada o no estructurada
-- el output: es el producto final que sirve para reconocer patrones de forma visual
-- para que se usa: reconocer patrones, historias...
-- es importante por que estamos en la era de la informacion
-
-### Florence Nightingale
-
-# Importancia
-- la dificultad para retener informacion del humano
-- carga cognitiva: es el esfuerzo para retener la informacion
-- nos ayuda a entender nuestra información
-- ben Shneiderman, la visualizacion da respuestas a preguntas que no sabias que tenias
-- sirve para comunicar mejor
-
-# Buenas practicas
-- define la audiencia y motivo
-- utilizar la percepción visual
-- estandariza, no usar tendencia engañosa, usar mismas medidas con compartivas, no cortar axis, alinear siempre
-- simplificar pero no recortar
-- disminuye el sesgo... no tener las preferencias personales
-- no al cherry-picking, retomar o tomar datos que solo muestran nuestro punto
-- principios gestalt, ley de proximidad, ley de similitud, ley de la continuidad
-
-# Conflictos de ética
-- la audiencia cree y escucha lo que mostramos
-- credibilidad y mensaje, si se pierde la confianza es dificil volver a obtenerla, los datos deben contar sus propias historias
-- segmentación
-
-# Graficas
-- son importantes para enviar mensajes, en especial para gente que no tiene tiempo de hacer interpretacion de los datos
-- dataviz, termino de visualizacion
-- de barras:
-   → es una representacion de barras
-   → hace comparacion rapida
-   → son datos por categorias, que se agrupan por frecuencias
-   → existen de diferentes formas, verticales, horizontales y de stack(aqui se une el 100%)
-   → se debe usar un color distinto para cada categoria
-   → representar de mayor a menos a menos que sea escala de tiempo
-- de pie (pastel):
-   → es un circulo, donde las categorias tienen una representacion por área
-   → debe de ser muy sencilla
-   → se puede simplificar en una grafica de dona
-   → se peuden poner anotaciones para ver el valor preciso
-   → no usar graficas en 3D afectan la percepsion visual
-   → no usar mas de 6 categorias
-- dispersion:
-   → es posicionar en un plano dos variables, es la mas comun en la ciencia de datos
-   → colores son importantes
-   → se debe entender la dispersion de los datos en lo plano
-      ⇒ correlacion positivo
-      ⇒ correlacion negativa
-      ⇒ sin correlacion
-   → no poner muchas anotaciones ya que ocupa muchos puntos
-- de burbujas:
-   → es una variacion de la scatter plot
-   → muestra el tamaño de la populacion
-   → no debe de tener necesariamente un grafico con correlacion de grafica
-   → uso de colores para definir categorias
-   → no usar graficos 3D
-- de mapas:
-   → datos ubicados geograficamente
-   → simplificar anotaciones
-- heatmap:
-   → permite sobreponer sobre otra visualizacion una paleta de colores, que nos ayuda a saber la frecuencia que tenemos
-   → nos muestra los lugares en donde mas se repiten sucesos
-   → se pueden usar dentro de graficas de tabla
-   → se usa mucho sobre paginas web, para saber por donde pasan mas los cursores
-   → calibrar la paleta de colores
-- tablas:
-   → representacion de manera ordenada
-   → se utiliza cuando se quiere entregar un mensaje acompañado de otro datavis
-   → solo si son expertos en la materia, no utilizar datos extensos
-
-# Como afecta en el bussiness
-- direccion y gerencia, estan corto de tiempo, entender en el menor tiempo posible, bajando la carga cognitiva
-- nos sirve para comunicarnos con el propio equipo
-- eficiencia y mejora
-
-# Explora, descubre y pregunta
-- los datos son numero o letras
-- ofrecer informaciòn relevante
-- explorar en las bases de datos o informacion para conocer que se tiene ahi
-- trabajar en equipo es fundamental
-- tomar decisiones por medio de lo anterior
-
-# Business intellingence
-- referido a informaciòn del negocio
-- data visualization, lo usa para interpretar desiciones para las altas gerencias
-- generalmente es gente que entienden el negocio
-- ellos identifican los movimientos principales y conocen cada medida para mejorar el negocio
-
-# Recoleccion de datos
-- los datos son muy diversos
-- se tienen bases publicas y privadas
-- la informacion puede venir de informacion estructurada y no estructurada
-- distintos tipos de archivos y fuentes
-
-# Limpieza de datos
-- estandarizar formato
-- GIGO / RIRO, entra basura, sale basura, se tiene que limpiar lo mejor que se puedan los datos
-- preparacion -&gt; visualizacion
-
-# Exploracion de datos
-- Descubrir, preguntar, reformular y analizar
-- es importante contar historias
-- evitar errores, bias, cherry picking
-
-# creacion de graficas
-- se usa para entregar mensaje a los altos mando
-- que quiero comunicar
-- que se adapta mejor a mi mensaje
-- quien es mi audiencia
-- no olvidar las buenas practicas
-
-# Generacion de reportes
-- son aglomerado de las data viz
-- son para la audiencia para que se tomen decisiones
-- concentrar los resultados, se debe enfocar en un solo mensaje
-- a mayor retencion menor esfuerzo, carga cognitiva baja
-
-# Definir KPI
-- sirven para saber si se puede mejorar o no
-- dependen del area donde se este, estos son especiales para cada area donde uno se encuentre
-- SMART:
-   → </rich_text>
-      <rich_text weight="heavy">S</rich_text>
-      <rich_text>pecific
-   → </rich_text>
-      <rich_text weight="heavy">M</rich_text>
-      <rich_text>easurable
-   → </rich_text>
-      <rich_text weight="heavy">A</rich_text>
-      <rich_text>chievable
-   → </rich_text>
-      <rich_text weight="heavy">R</rich_text>
-      <rich_text>elevant
-   → </rich_text>
-      <rich_text weight="heavy">T</rich_text>
-      <rich_text>ime-bound</rich_text>
-    </node>
     <node name="estadistica descriptiva" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624149121" ts_lastsave="1653320979">
       <rich_text>- Curso para descifrar lo que es cierto y lo que no
 
@@ -945,6 +803,88 @@ Un analisis exploratorio es la base de la estadistica descriptiva, identificar c
    → hay que revisar todo lo que tenga que ver con los eigen values y eigen vectores para poder hacer el PCA
    → al llegar a este punto generalmente es por que se piensa entrenar un modelo
    → generalmente esto se hace para crear nuevas variables</rich_text>
+    </node>
+    <node name="Estadistica inferencial" unique_id="98" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655388312" ts_lastsave="1655491564">
+      <rich_text>Descriptiva, nos ayuda a decribir y entender los datos, como se estan comportando en el presente
+	- como se comportan los datos, tendencia, variabilidad y distribucion
+Inferencial, inducciones se predice, para validar teorias
+	- la abstraccion, a partir de una poblacion se trae una muestra
+	- Muestreo
+	- intervalos de confianza, sacar conclusiones y deducciones
+	- validacion de hipotesis, teorias que nos cuestionaremos y se deben demostrar
+	- tecnicas para evitar sesgos
+	- sacar conclusiones a partir de los parametros que se tienen de la poblacion
+	- estudio del grado de fiabilidad
+	- se sintetiza, para entender una distribucion de la informacion, creacion y validacion de hipotesis, creacion de experimentos y modelos predictivos, para llegar a conclusiones y ver si son precisos
+	
+Estadisticos principales
+- experimento, procedimiento que puede pasar una, multiple o infinitas
+   → se puede entontrar diferentes resultados
+   → si es un resultado cambiante es aleatorio
+   → si no se modifican en el tiempo, son deterministas
+- poblacion y muestra
+   → poblacion es el denominador, es algo grande
+   → muestra, extraccion de los datos de poblacion
+      ⇒ este debe de ser una muestra representativa, suficiente grande para sacar una conclusion, no estadisticamente significativo
+      ⇒ elegir una poblacion sesgada, debe de adapatarse dentro de lo que se va a estudiar
+- Evento, resultados finales, cada uno de los resultaos posibles
+- variables, caracteristicas o atributos que se tienen de la poblacion o muestra
+   → cualitativos, categoricos
+   → cuantitativas
+      ⇒ discretos, numero enteros
+      ⇒ continuas, como le peso o altura
+- Probabilidad, que tan probable es obtener un evento determinado
+- probabilidad condicionada, teniendo un evento a y b, que tan probable es que pase algo tomando en cuenta el otro evento
+
+Poblaciones normales
+- se de las mas habituales
+- es simetrica en x y y
+- sigue una distribucion en campana
+- casi siempre esta la mayor concentracion en la media
+- se tiene la mayotia de la informacion en un punto centrico
+- moda = media = mediana
+
+Teorema Central del Limite
+- muestras
+   → son la extraccion de una poblacion
+      ⇒ deben de ser lo suficientemente grande para sacar una conclusion
+      ⇒ no debe de estar sesgada, debe de tener diferentes atributos
+   → tipos
+      ⇒ aleatorio simple, siempre tiene la misma posibilidad de ser elegidos
+      ⇒ sistematico, sigue un intervalo, regla o condicion
+      ⇒ estratificado, se hace un muestreo basado en una de las categorias o variables
+- teorema del limite central
+   → la mayoria de los eventos en el mundo se explican sobre una distribucion normal
+
+La media muestral
+- media, valor cual es el promedio, entre todas las observaciones, se puede usar en multiples contextos
+- moda, es el dato que mas se repite, el mas frecuente
+- mediana, es el valor que nos ayuda a dividir una distribucion entre dos
+- que es la media muestral, es lo mismo que la media aritmetica, la media entre todas las observaciones, es basado en la muestra tomada de la poblacion
+
+Varianza y desviacion estandar
+- nos ayuda a calcular que tan dispersa esta la poblacion o muestra, con respecto a la media
+- la desviacion estandar es la raiz cuadrada de la varianza
+
+Intervalos de confianza
+- son un par o varios pares de numeros donde se estima que estara cierto valor desconocido respecto de un parametro poblacional con un determinado nivel de confianza
+- nos muestran cuales son las poblacion o concentracion de numeros y con que probabilidad lo tenemos
+- un indice de confianza del 99% es muy estricto, o 68% que es tambien muy usado, tambien se usa el 95%, se comportan de una manera simtrica
+-  nivel de significacion
+   → donde se rechaza y donde no e rechaza la hipotesis nula
+   → cual es el alpha con el cual se puede encontrar el limite donde un resultado es o no es estadisticamente significativo
+   → cuando el valor es menor al indice de significacion, se acepta que es estadisticamente significativo
+   → se explora que no halla una anomalia de diferencia
+   → en los picos, se dice si si rechazar los dos parametros que son diferentes
+
+Calculo de intervalo de confianza
+- existen dos maneras
+   → conociendo los datos de la distribucion
+   → no conociendolos
+- calculo con un 95% de certidumbre, la concentracion lo tiene, el 5% se distribuye entre izquierda y derecha
+- tabla Z para indices de confianza, se busca el 97.5%
+- se sabe que que tenemos una distribucion de media de 28 y su desviacion de 4, con un indice del 80% de confianza
+   → formula de la z; Z = x - mu / desv</rich_text>
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
     <node name="estructura de datos" unique_id="65" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578407" ts_lastsave="1643578415">
@@ -1504,6 +1444,148 @@ Se tienen series y dataframes
 las series es un arreglo unidimensional, busqueda por indice y slicing, operacion aritmeticas y manejo de varios tipos de datos
 dataframe, es una estructura matricial, estructura principal, de dos dimensiones, indices en filas y columnas</rich_text>
     </node>
+    <node name="visualizacion de datos" unique_id="9" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623292658" ts_lastsave="1655388356">
+      <rich_text># Que es la visualización
+- el input: es la parte donde se inicializa la visualizacion de datos, se pone de forma estructurada o no estructurada
+- el output: es el producto final que sirve para reconocer patrones de forma visual
+- para que se usa: reconocer patrones, historias...
+- es importante por que estamos en la era de la informacion
+
+### Florence Nightingale
+
+# Importancia
+- la dificultad para retener informacion del humano
+- carga cognitiva: es el esfuerzo para retener la informacion
+- nos ayuda a entender nuestra información
+- ben Shneiderman, la visualizacion da respuestas a preguntas que no sabias que tenias
+- sirve para comunicar mejor
+
+# Buenas practicas
+- define la audiencia y motivo
+- utilizar la percepción visual
+- estandariza, no usar tendencia engañosa, usar mismas medidas con compartivas, no cortar axis, alinear siempre
+- simplificar pero no recortar
+- disminuye el sesgo... no tener las preferencias personales
+- no al cherry-picking, retomar o tomar datos que solo muestran nuestro punto
+- principios gestalt, ley de proximidad, ley de similitud, ley de la continuidad
+
+# Conflictos de ética
+- la audiencia cree y escucha lo que mostramos
+- credibilidad y mensaje, si se pierde la confianza es dificil volver a obtenerla, los datos deben contar sus propias historias
+- segmentación
+
+# Graficas
+- son importantes para enviar mensajes, en especial para gente que no tiene tiempo de hacer interpretacion de los datos
+- dataviz, termino de visualizacion
+- de barras:
+   → es una representacion de barras
+   → hace comparacion rapida
+   → son datos por categorias, que se agrupan por frecuencias
+   → existen de diferentes formas, verticales, horizontales y de stack(aqui se une el 100%)
+   → se debe usar un color distinto para cada categoria
+   → representar de mayor a menos a menos que sea escala de tiempo
+- de pie (pastel):
+   → es un circulo, donde las categorias tienen una representacion por área
+   → debe de ser muy sencilla
+   → se puede simplificar en una grafica de dona
+   → se peuden poner anotaciones para ver el valor preciso
+   → no usar graficas en 3D afectan la percepsion visual
+   → no usar mas de 6 categorias
+- dispersion:
+   → es posicionar en un plano dos variables, es la mas comun en la ciencia de datos
+   → colores son importantes
+   → se debe entender la dispersion de los datos en lo plano
+      ⇒ correlacion positivo
+      ⇒ correlacion negativa
+      ⇒ sin correlacion
+   → no poner muchas anotaciones ya que ocupa muchos puntos
+- de burbujas:
+   → es una variacion de la scatter plot
+   → muestra el tamaño de la populacion
+   → no debe de tener necesariamente un grafico con correlacion de grafica
+   → uso de colores para definir categorias
+   → no usar graficos 3D
+- de mapas:
+   → datos ubicados geograficamente
+   → simplificar anotaciones
+- heatmap:
+   → permite sobreponer sobre otra visualizacion una paleta de colores, que nos ayuda a saber la frecuencia que tenemos
+   → nos muestra los lugares en donde mas se repiten sucesos
+   → se pueden usar dentro de graficas de tabla
+   → se usa mucho sobre paginas web, para saber por donde pasan mas los cursores
+   → calibrar la paleta de colores
+- tablas:
+   → representacion de manera ordenada
+   → se utiliza cuando se quiere entregar un mensaje acompañado de otro datavis
+   → solo si son expertos en la materia, no utilizar datos extensos
+
+# Como afecta en el bussiness
+- direccion y gerencia, estan corto de tiempo, entender en el menor tiempo posible, bajando la carga cognitiva
+- nos sirve para comunicarnos con el propio equipo
+- eficiencia y mejora
+
+# Explora, descubre y pregunta
+- los datos son numero o letras
+- ofrecer informaciòn relevante
+- explorar en las bases de datos o informacion para conocer que se tiene ahi
+- trabajar en equipo es fundamental
+- tomar decisiones por medio de lo anterior
+
+# Business intellingence
+- referido a informaciòn del negocio
+- data visualization, lo usa para interpretar desiciones para las altas gerencias
+- generalmente es gente que entienden el negocio
+- ellos identifican los movimientos principales y conocen cada medida para mejorar el negocio
+
+# Recoleccion de datos
+- los datos son muy diversos
+- se tienen bases publicas y privadas
+- la informacion puede venir de informacion estructurada y no estructurada
+- distintos tipos de archivos y fuentes
+
+# Limpieza de datos
+- estandarizar formato
+- GIGO / RIRO, entra basura, sale basura, se tiene que limpiar lo mejor que se puedan los datos
+- preparacion -&gt; visualizacion
+
+# Exploracion de datos
+- Descubrir, preguntar, reformular y analizar
+- es importante contar historias
+- evitar errores, bias, cherry picking
+
+# creacion de graficas
+- se usa para entregar mensaje a los altos mando
+- que quiero comunicar
+- que se adapta mejor a mi mensaje
+- quien es mi audiencia
+- no olvidar las buenas practicas
+
+# Generacion de reportes
+- son aglomerado de las data viz
+- son para la audiencia para que se tomen decisiones
+- concentrar los resultados, se debe enfocar en un solo mensaje
+- a mayor retencion menor esfuerzo, carga cognitiva baja
+
+# Definir KPI
+- sirven para saber si se puede mejorar o no
+- dependen del area donde se este, estos son especiales para cada area donde uno se encuentre
+- SMART:
+   → </rich_text>
+      <rich_text weight="heavy">S</rich_text>
+      <rich_text>pecific
+   → </rich_text>
+      <rich_text weight="heavy">M</rich_text>
+      <rich_text>easurable
+   → </rich_text>
+      <rich_text weight="heavy">A</rich_text>
+      <rich_text>chievable
+   → </rich_text>
+      <rich_text weight="heavy">R</rich_text>
+      <rich_text>elevant
+   → </rich_text>
+      <rich_text weight="heavy">T</rich_text>
+      <rich_text>ime-bound</rich_text>
+    </node>
     <node name="Visualizacion de datos tableau" unique_id="84" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651530656" ts_lastsave="1652027094">
       <rich_text>Por que es importante aprender
 - fundamental,representacion graficade informacion
@@ -1543,6 +1625,45 @@ Storrytelling
    → puntos de interes
    → conclusiones
    → recomendaciones
+</rich_text>
+    </node>
+    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1655388334">
+      <rich_text>la visualizacion de los datos es importante por que da respuesta  de preguntas que no sabiamos que teniamos, se pueden tener datos distintos con los mismo estadisticos
+ayuda a entontrar hallazgos en los datos de forma mas facil
+mucho uso en DS e IA para sabe que tan bueno es el modelo
+matplotlib
+	- 2003
+	- basada en numpy
+	- emula matlab
+	- escrita en python
+	- es bastante simple
+	- es rapida
+	- es personalizable
+seaborn
+	- esta montada sobre matplotlib
+	
+Metodo orientado a objetos:
+- pyplot
+   → rapido
+   → facil
+   → una sola figura
+- OO:
+   → mayor personalizacion
+   → mas amigable a multiples diagramas
+   → mas codigo
+
+Seaborn
+- construido sobre matplotylib
+- integrada para estructuras de pandas
+- velocidad
+- poco codigo
+- customizable
+
+Set
+- sirve para definir temas, colores, paletas que se van a usar
+
+Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
+¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
     <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652291243">
@@ -1623,45 +1744,6 @@ que es una funcion?
    → e**2 = (y_pred - y_real)**2
    → E = SUM_i=i-N (y_pred - y_real)**2
    → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
-</rich_text>
-    </node>
-    <node name="visualizacion de datos python" unique_id="86" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652031812" ts_lastsave="1652291249">
-      <rich_text>la visualizacion de los datos es importante por que da respuesta  de preguntas que no sabiamos que teniamos, se pueden tener datos distintos con los mismo estadisticos
-ayuda a entontrar hallazgos en los datos de forma mas facil
-mucho uso en DS e IA para sabe que tan bueno es el modelo
-matplotlib
-	- 2003
-	- basada en numpy
-	- emula matlab
-	- escrita en python
-	- es bastante simple
-	- es rapida
-	- es personalizable
-seaborn
-	- esta montada sobre matplotlib
-	
-Metodo orientado a objetos:
-- pyplot
-   → rapido
-   → facil
-   → una sola figura
-- OO:
-   → mayor personalizacion
-   → mas amigable a multiples diagramas
-   → mas codigo
-
-Seaborn
-- construido sobre matplotylib
-- integrada para estructuras de pandas
-- velocidad
-- poco codigo
-- customizable
-
-Set
-- sirve para definir temas, colores, paletas que se van a usar
-
-Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
-¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
     <node name="postgresql" unique_id="92" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654044994" ts_lastsave="1655318818">
@@ -7353,7 +7435,7 @@ EC2
       ⇒ software and utilities installed
       ⇒ AM roles in EC2</rich_text>
     </node>
-    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1655252248">
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1655319151">
       <rich_text>JSON is horrible to CF
 is possible use CF and JSON
 -- YAML
@@ -7587,7 +7669,14 @@ Nested stack
 			pass values to many stacks (VPC id, etc)
 		nested
 			when components must be re-used
-			only is important to the higher level (it's not shared)</rich_text>
+			only is important to the higher level (it's not shared)
+			
+			
+Stacks Sets
+	Create, update or delete stacks across multiple accounts and regions with one operation
+	only the administrator create stacksets
+	when the stack is updated all stack associeted is updated
+	is possible execute in all accounts</rich_text>
     </node>
   </node>
 </cherrytree>
