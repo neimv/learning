@@ -2072,7 +2072,7 @@ Particiones
     </node>
     <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
-      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1655771166">
+      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1655790171">
         <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -2340,9 +2340,25 @@ Web Service from MLFlow
 - Is necesary start mlflow server with artifacts in s3
 - get id of model-run
 - set_tracking_uri to mlflow
-- check the forms ogf get the models
+- check the forms of get the models
 
-for the lamabda role is necesary create put and </rich_text>
+for the lambda role is necesary create PutRecord and PutRecords
+the steps are:
+- creating the role, this use the aws policy to lambdas, LambdaKinesisExecutionRole
+   → this is a serverless function
+   → in lambda handler, the event gets the data
+- creating the lambda function, this is created with the same aws console
+- creating the kinesis, with test is important the partition-key, with the command get the shard-id
+
+Batch deploy
+- turn the notebook for training a model into a notebook for applying the model
+   → only get the model
+   → the dataframe to predict
+   → prepare the features
+   → to big dataframe and with output in another location
+- turn the notebook into a script
+   → jupyter nbconvert --to script {name_notebook}
+- clean it and parametrize</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
