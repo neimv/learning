@@ -804,7 +804,7 @@ Un analisis exploratorio es la base de la estadistica descriptiva, identificar c
    → al llegar a este punto generalmente es por que se piensa entrenar un modelo
    → generalmente esto se hace para crear nuevas variables</rich_text>
     </node>
-    <node name="Estadistica inferencial" unique_id="98" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655388312" ts_lastsave="1655491589">
+    <node name="Estadistica inferencial" unique_id="98" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655388312" ts_lastsave="1655742204">
       <rich_text>Descriptiva, nos ayuda a decribir y entender los datos, como se estan comportando en el presente
 	- como se comportan los datos, tendencia, variabilidad y distribucion
 Inferencial, inducciones se predice, para validar teorias
@@ -884,7 +884,42 @@ Calculo de intervalo de confianza
 - calculo con un 95% de certidumbre, la concentracion lo tiene, el 5% se distribuye entre izquierda y derecha
 - tabla Z para indices de confianza, se busca el 97.5%
 - se sabe que que tenemos una distribucion de media de 28 y su desviacion de 4, con un indice del 80% de confianza
-   → formula de la z; Z = (x - mu) / desv, mu es el promedio de la poblacion</rich_text>
+   → formula de la z; Z = (x - mu) / desv, mu es el promedio de la poblacion
+   → se toma el valor de z usando la tabla y buscando el valor mas cercano al porcentaje de confianza que queremos, en este caso es 90 ya que se toma 10% del inicio y el 80% de confianza
+
+Prueba de Hipotesis
+- prueba de significacion, si existe una diferencia significativa entre el tamanio de la muestra y el parametro general
+- pasos a seguir:
+   → Se establece una hipotesis nula (H0), y una hipotesis alternativa (H1)
+   → seleccionar el nivel de significancia
+   → seleccionar el estadistico de prueba
+   → formular la relga de decision
+   → interpretar los resultados y tomar una decision
+
+Tipos de Pruebas de hipotesis
+- Distribucion de t de Student, se usa para estimar una media poblacional normalmente distribuida a partir de una muestra pequenia que sigue una distribucion normal y de la de que desconocemos la desviacion estandar, se usa cuando la muestra es pequenia
+- Coeficiente de pEarson, se usa para medir la dependencia lineal entre dos variables aleatorias cuantitativas
+- Analisis de la varianza (ANOVA), se usa para comprobar las varianzas entre las medias o promedios de diferentes grupos
+
+Errores tipicos
+- Contexto
+   → rechazar H0 si es verdadera, error de tipo 1, evasion (alpha)
+   → no rechazar H0 cuando es false, error de tipo 2, betha
+
+Bootstrapping
+- metodo de remuestro sobre una poblacion pequenia, o en distribuciones muy sesgadas
+- se obtienen varios remuestreos
+
+Validacion cruzada
+- se usa al final del analisis
+- para demostrar que los datos de prueba son independientes de los datos de entrenamiento
+- procedimiento
+   → se dividen los datos de forma aleatoria en k grupos de tamanio similar
+   → se usan k-1 grupos para entrenar el modelo y uno de ellos para validarlo
+   → el proceso se repite k veces usando un grupo distinto como validacion en cada iteracion
+
+¿Qué indica el valor de Z al calcular intervalos de confianza?
+</rich_text>
     </node>
     <node name="estadistica computacional" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1626023332" ts_lastsave="1626023332"/>
     <node name="estructura de datos" unique_id="65" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1643578407" ts_lastsave="1643578415">
@@ -2037,7 +2072,7 @@ Particiones
     </node>
     <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
-      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1655143588">
+      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1655771166">
         <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -2294,7 +2329,20 @@ Trhee ways of deploting a model
    → the user send a petition and get the result
 
 Web services, using flask and docker
-- using the normal duration-prediction</rich_text>
+- using the normal duration-prediction
+- to test install libraries: `</rich_text>
+        <rich_text foreground="#c0c0c0">pipenv install scikit-learn flask --python=3.9</rich_text>
+        <rich_text>` this use pipenv
+- to run: pipenv shell
+- to test dependencies: pipenv install --dev package
+
+Web Service from MLFlow
+- Is necesary start mlflow server with artifacts in s3
+- get id of model-run
+- set_tracking_uri to mlflow
+- check the forms ogf get the models
+
+for the lamabda role is necesary create put and </rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
