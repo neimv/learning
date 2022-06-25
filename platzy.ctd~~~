@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1655388312">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1655834724">
     <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
       <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
         <rich_text>simbolos
@@ -2072,7 +2072,7 @@ Particiones
     </node>
     <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
-      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1655789900">
+      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656016512">
         <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -2357,7 +2357,12 @@ Batch deploy
    → prepare the features
    → to big dataframe and with output in another location
 - turn the notebook into a script
-- clean it and parametrize</rich_text>
+   → jupyter nbconvert --to script {name_notebook}
+- clean it and parametrize
+   → with main
+   → using sys
+   → I prefer use click
+</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
@@ -2501,6 +2506,136 @@ Data for good
 ¿Qué podría generar un anuncio sin planificación ética?
 La falta de estandarizaci√≥n de un protocolo ante la pandemia es un ejemplo de dilema √©tico y de debate. Esto es:
 </rich_text>
+    </node>
+    <node name="curso EDA" unique_id="99" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655834724" ts_lastsave="1656018423">
+      <rich_text>Desarrollo de tecnicas para entender y explorar que dice un dataset, como plantear un modelo de machine learning, hacer un analisis de datos exploratorio completo
+
+Que es el analisis exploratorio de datos (EDA)
+- KDD knowledge discovery in databases
+- SEMMA, sample, explore, modify, model and assess
+- CRISP-DM, Cross industry standar process for data mining
+- esto nace por la mineria de datos, se busca conocimiento de todos los datos que tenemos
+- metodologia para poner un orden
+   → empiezan los requerimientos, necesidad a contestar
+   → que informacion se tiene para llegar al objetivo
+   → como se esta procesando, que tipos de datos, la data es correcta o no
+   → procesada y recolectada podemos entenderla
+   → tengo suficiente informacion o no
+- etapas:
+   → definicion del problema
+   → preparacion de los datos
+   → analisis de datos
+   → desarrollo y presentacion de los resultados
+   → * si se puede hacer con toda la base de datos es recomendable
+
+EDA vs Clasico vs Bayesiano
+- clasico, resultados directo a la comunicacion, lo saca y lo muestra, se hace el analisis y no se sabe que mas se puede o se va a hacer con el, no se da contexto del problema a resolver
+- bayesiano, Prior probability, que paso anteriormente para predecir el futuro, que puede pasar con este modelo y que se puede enterder
+- EDA, este se busca que sea totalmente dinamico, se lanza un modelo de machine learning o IA o automatizacion o un insight al negocio, este es el primer paso a la ciencia de datos
+
+Tools
+- python jupyter
+- AWS sagemaker, se puede llevar a prod por medio de este, se paga por lo que se usa
+- Spark usando EMR, esto es para grandes volumenes, si es para tiempo real se debe de pensar que se usara y que necesidades tengo
+- google tiene sus jupyter y jupyter-lab
+- azure notebooks, este solo se hace experimentacion, los modelos se deben de pasar directamente a plataforma
+- R - Rstudio, la mejor opcion si se necesitan librerias que esten con documentacion cientifica
+- KNIME, si sabes a nivel negocio que se requiere, pero no hay tecnicos
+
+Visualizaciones de EDA
+- se usa el dataset zoo.data
+- uso de altair para visualizar datos, se tiene que saber cual es la X y y la Y a usar, la ventaja es que se pueden exportar a PNG o a SVG, esta es visual
+   → mark_line para graficas con lineas
+   → mark_bar para tener una grafica de barras
+- uso de plotly, es de paga
+   → esta hace algunos calculos por si misma
+   → se usan pie para ver de manera general que estamos haciendo
+   → se le puede poner el title en la misma grafica
+
+Transformacion de datos
+- uso de chicago data, se usa map_plot
+- generalmente se hacen el cambio de fechas (en python con csv) o los cambios de tipos de datos float -&gt; int
+
+Estadistica descriptiva
+- se busca contar la historia de a que hora fueron los accidentes y donde
+- se trata de describir las variables para tener una solucion al problema dado
+- crosstab de pandas para saber que el dataset esta parejo para las variables que se usaran
+
+Distribucion de los datos
+- se debe de entender la naturaleza de los datos que se estan graficando o viendo
+- var continua, puede tomar cualquier valor dentro de un intervalo
+- var discreta, no puede tomar ningun valor entre dos consecutivos
+- que tipos de distribuciones pueden existir
+- en que nos puede ayudar en saber la distribucion, se puede coneocer por medio de la graficacion
+- obtencion de ajuste de curva
+
+Medidas de tendencia central
+- como se comporta una poblacion
+- no se puede predecir el comportamiento individual, pero sie el comportamiento promedio
+- ley de los grandes numero, bajo ciertas condiciones generales la media de n variables aleatorias se aproxima a la media de las n medias, se puede hacer una aproximacion de la distribucion
+- teorema del limite central
+   → cuando el tamanio de la muestra es lo suficientemente grande, la distribucion de las medias sigue a una distribucion normal
+- otras medidas
+   → media, moda, mediana, min, max, producto de valores, suma acumulada
+
+Medidas de dispersion
+- desviacion estandar, repasa la cantidad de dispersion de los datos de una poblacion entera
+   → que tan separados estan los datos
+- Varianza, encontrar que tan diferentes estan los datos
+- asimetria estadistica (skewness), ayuda a saber que forma hay de los datos sin necesidad de graficarlos, esta se puede saber de acuerdo a la moda, mediana y media
+   → moda &lt; mediana &lt; media, positivo skew
+   → moda = mediana = media, simetrico skew
+   → moda &gt; mediana &gt; media, negativa skew
+- kurtosis
+   → es una caracteristica para saber que tan acumulados estan los datos
+   → nos ayuda a saber que tan probable es que se tenga una variable
+
+tablas pivote y cross tabulations
+- puede sacar la varibilidad sobre todo el dataset, de acerudo a una agrupacion de campos
+- cross tab, se da un rango donde estan las condiciones dadas
+
+Correlacion
+- es la relacion que guarda entre una variable y otra
+- es un porcentaje donde se dice que corresponde un dato con otro dato
+
+Analisis de series de tiempo
+- como se comporta una variable a lo largo del tiempo
+- uso de quandl
+   → dataset FRED/GDP
+   → dataset CHRIS/CME_GC1
+- dataframe open power system data
+
+Desarrollo y evaluacion de modelo
+- se deben de tener pruebas de hipotesis (este depdnde de la ditribucion y tipos de datos)
+   → Anova, comprabacion muy especifica entre ciertos tipos de datos
+   → Z-test
+   → T-test
+   → chi squared test, si no se sabe la distribucion
+- p value, es el valor que esta entre el intervalo del 5%, si no cae aqui quiere decir que se tiene una probabilidad de exito, si es menor a esto se acepta o rechaza de acuerdo a que sea cierta, esto solo se hace dentro del analisis de datos de la muestra
+- siempre se deben de dividir los datos en dos, entrenamiento y testing
+- se entrena el modelo
+- se evalua
+   → presicion= VP / (VP + FP)
+   → exactitud= (VP + VN) / (VP + FP + FN + VN)
+      ⇒ sig: vp = verdadero positivo, fp = falso positivo, vn = verdadero negativo, fn = falso negativo
+- el modelo puede ser preciso pero no exacto
+
+Regresion y evaluacion de hipotesis
+- tipos de regresores
+   → NNR
+   → Decision Tree
+   → LASSO
+   → Ridge
+   → ElasticNet
+- uso de classification_report, esete da precision, recall (sensibilidad), f1-score, supponrt, se le envia la original contra la predicha
+- uso de confusion_matrix, y original contra y predicha, dice cuando falsos positivos y negativos se tienen
+
+Analisis exploratorio completo
+- uso de describe para saber que set tiene
+- se analiza la density
+- se debe de tener un objetivo a analizar, en el caso de los vinos la calidad
+- la correlacion nos ayuda para saber que variables usar
+- mucho tiene que ver el experto para saber tambien que variables se deben de analizar, no es siempre a como tenemos la idea</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
