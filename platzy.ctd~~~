@@ -2507,7 +2507,7 @@ Data for good
 La falta de estandarizaci√≥n de un protocolo ante la pandemia es un ejemplo de dilema √©tico y de debate. Esto es:
 </rich_text>
     </node>
-    <node name="curso EDA" unique_id="99" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655834724" ts_lastsave="1656018423">
+    <node name="curso EDA" unique_id="99" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655834724" ts_lastsave="1656024455">
       <rich_text>Desarrollo de tecnicas para entender y explorar que dice un dataset, como plantear un modelo de machine learning, hacer un analisis de datos exploratorio completo
 
 Que es el analisis exploratorio de datos (EDA)
@@ -2635,7 +2635,14 @@ Analisis exploratorio completo
 - se analiza la density
 - se debe de tener un objetivo a analizar, en el caso de los vinos la calidad
 - la correlacion nos ayuda para saber que variables usar
-- mucho tiene que ver el experto para saber tambien que variables se deben de analizar, no es siempre a como tenemos la idea</rich_text>
+- mucho tiene que ver el experto para saber tambien que variables se deben de analizar, no es siempre a como tenemos la idea
+- para hacer un ajuste de curva se debe de saber la distribucion
+
+
+¿Cuáles son algunas propiedades de una serie de tiempo?
+¿Qué es un análisis multivariable?
+¿Qué comandos usamos para agrupar datos?
+</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5749,7 +5756,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1649720590">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1656369145">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -6401,6 +6408,20 @@ The, article
 - situations, ordinal numbers, decades, geographical areas, countries
 - not use, name of cities and contries, years, professions, people's names and titles combined with names, meals, languages</rich_text>
     </node>
+    <node name="Basi A1" unique_id="100" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656369145" ts_lastsave="1656370123">
+      <rich_text>Introduction
+- Who am I?
+- Interesting facts
+- in english alphabet has 26 letters
+- A and An
+   → refer to only this or noun
+   → an is used as article with vowels
+   → a is used with consonants
+- It's sentences (it is)
+   → it's + article (a/and) + (person, place, thing or item)
+- Plural forms
+   → mean many thi</rich_text>
+    </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
     <node name="Arquitectura backend" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243251" ts_lastsave="1641243649">
@@ -6941,10 +6962,23 @@ Concurrencia
    → para leer: &lt;-canal
    → se tiene que hacer la llamada del canal las veces que se espera la respuesta</rich_text>
     </node>
-    <node name="intermedio" unique_id="87" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652566734" ts_lastsave="1652566887">
-      <rich_text>es muy usado para escribir malware ?_?</rich_text>
+    <node name="POO y concurrencia" unique_id="97" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655072393" ts_lastsave="1656368374">
+      <rich_text>Go es orientado a objetos
+- es un paradigma, uno de los predominantes en la industria
+- llega a ser muy riguroso, pero permite alta reutilizacion de codigo y muchos patrones de disenio
+- se puede alcanzar los conceptos de POO, pero muy diferente a Python y Java
+- el equivalente de clases en Go son las structs
+- para la modificacion de los datos de la estructura recordar que se debe de pasar como referencia
+- cuando se quiere usar como todo es un objeto a veces no es algo aplicable
+- se puede crear un objeto usando la palabra new, este retorna una referencia
+- por medio de una funcion donde se resivan los parametros y regrese el apuntador del objeto a crear
+- en la herencia solo se puede acceder a metodos publicos no a los privados
+   → se usa para imprimir un mensaje solo usando una misma funcion para multiples clases que heredan de la misma
+   → en go la herencia como tal no existe, se usa composicion, una clase contiene a la otra asi las clases son independientes
+   → declarando la composicion sin necesidad de asignar la otra estructura nos ayuda a llamar directamente a las propiedades
+- Interfaces
+   → para ejecutar la composicion entre clases, se usa la palabra interface para declarar las interfaces, cada struct debe de tener el nombre de las funciones que tiene la interface</rich_text>
     </node>
-    <node name="POO y concurrencia" unique_id="97" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655072393" ts_lastsave="1655072393"/>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
     <node name="Personalidad y productividad" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
