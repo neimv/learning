@@ -5756,7 +5756,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1656369145">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1656878011">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -6408,7 +6408,7 @@ The, article
 - situations, ordinal numbers, decades, geographical areas, countries
 - not use, name of cities and contries, years, professions, people's names and titles combined with names, meals, languages</rich_text>
     </node>
-    <node name="Basi A1" unique_id="100" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656369145" ts_lastsave="1656370123">
+    <node name="Basi A1" unique_id="100" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656369145" ts_lastsave="1656619420">
       <rich_text>Introduction
 - Who am I?
 - Interesting facts
@@ -6420,7 +6420,36 @@ The, article
 - It's sentences (it is)
    → it's + article (a/and) + (person, place, thing or item)
 - Plural forms
-   → mean many thi</rich_text>
+   → mean many things
+- there are
+   → this is a plural form
+   → there are + plural noun
+
+Second module
+- is very important from 1 to 20
+- 100 - one hundred
+- subject pronouns
+   → I am
+   → he/she/it is
+   → they/we/you are
+
+good morning
+good afternoon
+good evening</rich_text>
+    </node>
+    <node name="describing my house" unique_id="102" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656878011" ts_lastsave="1656879192">
+      <rich_text>Home Sweet home
+- Was, this ‘era’, be past, singular
+- Were, plural of be past
+- I didn't do that, irregualr verbs to past
+   → only is used when is negative or question
+- like doing, liked doing
+- love doing, loving “playing” - verb in ing
+- hate doing, hated
+
+Describe my child home
+things that I did in my child home and I didn't
+Actions that I like, love or hate doing</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
@@ -6532,7 +6561,7 @@ bloqueo</rich_text>
       </node>
     </node>
   </node>
-  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1655072393">
+  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1656612399">
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
@@ -6962,7 +6991,7 @@ Concurrencia
    → para leer: &lt;-canal
    → se tiene que hacer la llamada del canal las veces que se espera la respuesta</rich_text>
     </node>
-    <node name="POO y concurrencia" unique_id="97" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655072393" ts_lastsave="1656368374">
+    <node name="POO y concurrencia" unique_id="97" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1655072393" ts_lastsave="1656538415">
       <rich_text>Go es orientado a objetos
 - es un paradigma, uno de los predominantes en la industria
 - llega a ser muy riguroso, pero permite alta reutilizacion de codigo y muchos patrones de disenio
@@ -6977,7 +7006,71 @@ Concurrencia
    → en go la herencia como tal no existe, se usa composicion, una clase contiene a la otra asi las clases son independientes
    → declarando la composicion sin necesidad de asignar la otra estructura nos ayuda a llamar directamente a las propiedades
 - Interfaces
-   → para ejecutar la composicion entre clases, se usa la palabra interface para declarar las interfaces, cada struct debe de tener el nombre de las funciones que tiene la interface</rich_text>
+   → para ejecutar la composicion entre clases, se usa la palabra interface para declarar las interfaces, cada struct debe de tener el nombre de las funciones que tiene la interface
+- para el abstract solo es necesario crear la estructura la cual se le pasa una variable de cadena que por medio de un if decide cual regresara
+- Funciones anonimas, son solo para cuando se sta muy seguro que solo se usara una vez
+   → se crea con: func() {tipo_retorno} {cuerpo}()
+- Funciones variadicas y retornos con nombre
+   → varios parametros en una funcion se declara: func {nombre}({nombre} ...{tipo_valor}) {tipo_retorno} {cuerpo de la funcion}
+
+Testing:
+- se crean los archivos: {nombre_archivo}_test.go
+- para usar el testing se debe de estar dentro de un modulo
+- code coverage
+   → go test --cover, checa el porcentaje de cuanto codigo esta testeadp
+   → go test --coverprofile={file.out}, crea un archivo para saber que esta probado
+   → go tool cover --func={file.out}
+   → go tool cover --html={file.out}
+- profiling
+   → go test --cpuprofile={file.out}
+   → go tool pprof {file.out}
+
+Concurrencia
+- channels
+   → unbuffered, se debe de estar 100 seguros de que alguien va a recibir el valor, se crean con {nombre} := make(chan {tipo})
+   → buffered, se pueden usar en la misma funcion, se le da una cantidad limitada de valores, se crean con {nombre} := make(chan {tipo}, {number})
+- waitgroup
+   → se usa para tener una sincronizacion entre las rutinas
+   → la rutina principal solo se dedica a lanzar las goroutines pero no las monitorea
+   → para monitorearlas se puede usar un waitgroup
+   → la funcion debe de recibir el parametro waitgroup
+   → antes de llamar la rutina se dene de agregar uno al waitgruop
+   → se debe de poner con defer wg.Done() en la rutina para que sepa que ya se ejecuto
+   → para esperar: waitgroup.Wait()
+   → con los canales podemos limitar el numero de procesos concurrentes que se pueden ejecutar, para eso los canales buffered
+- Channels de lectura y escritura
+   → declaracion de escritura, {nombre} chan&lt;-
+   → declaracion de lectura, {nombre} &lt;-chan
+- Worker pools
+   → se crean trabajadores que hagan tareas especificas
+- multiplexacion con select y case
+   → se bloquean con canales si se quiere ver los datos
+   → para que las rutinas se ejecuten en paralelo sin importar cual termine primero, de los canales se usa select</rich_text>
+    </node>
+    <node name="Concurrencia y patrones" unique_id="101" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656612399" ts_lastsave="1656867608">
+      <rich_text>- las goruotines se inician con un stack de 2KB
+
+Race condition
+- pasa cuando varias rutinas tratan de entrar a la misma variable al mismo tiempo, puede que alguna operacion no sea exitosa
+- Sync mutex, Lock y Unlock
+   → para conocer el riesgo de carrera een el programa: go build --race {file.go}, crea un binario y se debe de executar para saber si existe el race condition
+   → se deve de crear un lock de tipo sync.Mutex
+   → se tiene que enviar a la funcion
+   → y en la funcion se debe de usar lock.Lock() y al finalizar el lock.Unlock
+- mutex lectura y escritura
+   → se usa cuando se tienen diferentes subrutinas, que pueden estar escribiendo y leyendo valores
+   → se crea usando sync.RWMutex, para lectura se usa RLock y RUnlock
+
+Patrones
+- ayudan a resolver problemas muy comunes, se pueden adaptar a nuestra necesidad y en el lenguaje de programacion de nuestro grusto
+- son conceptos generales que premiten resolver un problema
+- patrones de los GoF, se tiene 23 en la primer version del libro
+- estan por
+   → creacionales, se dice como crear nuevos objetos, flexibles y reutilizables
+   → estructurales, como  se crean los obejtos en estructuras mas grandes
+   → de comportamiento, comuniciacion entre objetos, para comunicar diferentes objetos
+- Factory, se pueden crear diferentes tipos y de acuerdo a lo que necesitamos regresamos el que sea especifico
+- singleton, se usan para tener una clase que sea accesible de manera global</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
@@ -7667,7 +7760,7 @@ EC2
       ⇒ software and utilities installed
       ⇒ AM roles in EC2</rich_text>
     </node>
-    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1655319151">
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1656880013">
       <rich_text>JSON is horrible to CF
 is possible use CF and JSON
 -- YAML
@@ -7908,7 +8001,26 @@ Stacks Sets
 	Create, update or delete stacks across multiple accounts and regions with one operation
 	only the administrator create stacksets
 	when the stack is updated all stack associeted is updated
-	is possible execute in all accounts</rich_text>
+	is possible execute in all accounts
+
+
+ChangeSets
+	when update the stack, to know what changes will happend before applying
+	won't say if the update will be successful
+	in nested stacks, is necesary changes across all stacks
+	is possible select if is appliying in nested
+	
+Stack creation failures
+	tried to create som resource
+	one resource failed
+	CF rolled back the resource
+	the status ROLLBACK_COMPLETE
+	to resolve is necesary delete and create new stack
+	
+Custom resources
+	enable you write custom provision logic, create, delete and update
+	define with:
+		</rich_text>
     </node>
   </node>
 </cherrytree>
