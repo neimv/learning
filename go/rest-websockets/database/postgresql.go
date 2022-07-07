@@ -41,12 +41,12 @@ func (repo *PostgresRepository) GetUserById(ctx context.Context, id int64) (*mod
 	var user = models.User{}
 
 	for rows.Next() {
-		if err = rows.Scan(&user.Id, &user.Email); err == nil {
+		if err := rows.Scan(&user.Id, &user.Email); err == nil {
 			return &user, nil
 		}
 	}
 
-	if err = rows.Err(); err != nil {
+	if err := rows.Err(); err != nil {
 		return nil, err
 	}
 
