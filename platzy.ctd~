@@ -2072,7 +2072,7 @@ Particiones
     </node>
     <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
-      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656016512">
+      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656961210">
         <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -2299,6 +2299,9 @@ Deployment prefect flow
 - prefect work-queue preview {queue id}
 - prefect agent start {queue id}
 
+Work Queues and agents
+- is possible separate by tags the deployments, is possible get more control
+
 Trhee ways of deploting a model
 - experiment tracking:
    → desing
@@ -2362,7 +2365,46 @@ Batch deploy
    → with main
    → using sys
    → I prefer use click
-</rich_text>
+
+Batch: scheduling batch
+- using prefect to deploy the batch
+- is necesary a depploy to execute one this
+- is possible send paramaters in deploy of prefect
+- is possible call another flow using another flow
+
+Monitoring of ML models
+- check the degrade and need monitoring of model
+- how to prepare:
+   → service health
+      ⇒ only uptime, mememory and latency
+      ⇒ in production services
+   → model performance
+      ⇒ check the prediction of model
+      ⇒ depending the type of problem
+      ⇒ how it performs
+      ⇒ did anything break
+   → data quality and integrity
+      ⇒ where it breaks
+      ⇒ where to dig further
+   → data and concept drift
+      ⇒ is the model still relevant
+   → performance by segment
+   → model bias/fairness
+   → outliers
+   → explainability
+- batch vs online service model
+   → how to:
+      ⇒ add ML metrics to service health monitoring
+      ⇒ build an ML-focused dashboard
+- monitoring:
+   → send data to mongo(results)
+   → send too monitoring service, metrics to prometheus and grafana
+   → form: mlservice + usage simulation + logging + online monitoring
+   → another: ML service + usage simulation + logging + online monitoring + batch monitoring, this create a HTML report
+   → comunication by containers
+
+Setting environment
+- is necesary to this module, docker and docker-compose</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
@@ -5756,7 +5798,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1656878011">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1657152267">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -6437,7 +6479,7 @@ good morning
 good afternoon
 good evening</rich_text>
     </node>
-    <node name="describing my house" unique_id="102" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656878011" ts_lastsave="1656879192">
+    <node name="describing my house" unique_id="102" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656878011" ts_lastsave="1656984966">
       <rich_text>Home Sweet home
 - Was, this ‘era’, be past, singular
 - Were, plural of be past
@@ -6449,7 +6491,42 @@ good evening</rich_text>
 
 Describe my child home
 things that I did in my child home and I didn't
-Actions that I like, love or hate doing</rich_text>
+Actions that I like, love or hate doing
+
+What are we doing here?
+- this is in the moment
+- verbs with be + verb(ing)
+- right on time:
+   → present simple
+   → present continues
+   → at - for time
+- count on me
+   → how many, contable nouns
+   → how much, uncontable nouns
+- we have com this far
+   → How long, time to execute a task
+   → how often, time between tasks
+   → how far, distance
+- things in my house
+   → prepositions:
+      ⇒ on
+      ⇒ in
+      ⇒ next to
+      ⇒ in front of
+      ⇒ behind
+
+My dream house
+- whose things are those in your dream house?
+- use of whose, de quien es
+- linking verbs
+   → how to describe your dream house, using adjectives</rich_text>
+    </node>
+    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1657152413">
+      <rich_text>Basic connectors:
+- connects two ideas
+- And, is for additions
+- But, contrast
+- or, show options</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
@@ -6460,7 +6537,7 @@ Actions that I like, love or hate doing</rich_text>
    → </rich_text>
     </node>
   </node>
-  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1617842349">
+  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1657140372">
     <node name="calculo" unique_id="39" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840076" ts_lastsave="1617842337">
       <rich_text>Funcion
 - es una relación entre dos conjuntos a traves de la cual cada elemento le corresponde un unico elemento ninguno del otro conjunto
@@ -6477,6 +6554,40 @@ Representación gráfica
 
 Que es una derivada?
 </rich_text>
+    </node>
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657141673">
+      <rich_text>base de la estaditica
+- que es una muestra?
+   → subconjunto de algo mas grande (poblacion)
+   → tiene que ser representativa
+- variable aleatoria
+   → es una caracteristica de la poblacion
+   → siguen un determinado comportamiento llamado distribucion
+   → dos tipos
+      ⇒ discreta, enteros, contables, opciones finitas
+      ⇒ continua, valores reales en un intervalo, dificilmente repetidos
+
+Los tres analisis descriptivos fundamentales
+- estadistica descriptiva, describe los datos que se tiene a mano
+   → resumir analizar y sacar conclusiones
+   → se divide en
+      ⇒ tablas de frecuencia
+         •  se tienen las clases
+         • frecuencia absoluta, total por clase
+         • frecuencia absoluta acumulativa, sumar una tras la otra
+         • frecuencia relativa, la frecuencia absoluta / total (porcentaje)
+         • frecuencia relativa acumulada, frecuencia absoluta acumulativa / total
+      ⇒ graficos
+         • torta o pastel
+         • histograma, se puede ver la distribucion de la variable
+      ⇒ resumenes numericos
+         • medidas de centralizacion
+            ◇ media, promedio
+            ◇ mediana, el numero que se tiene en medio
+            ◇ moda, el que mas se repite
+         • medidas de dispersion, cuan alejados estan los datos de la media
+            ◇ varianza, s^2=(Sum_i=1~n(x_i-X)^2)/n, ~=hasta
+            ◇ desviacion tipica, raiz cuadrada de la varianza</rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
@@ -7760,7 +7871,7 @@ EC2
       ⇒ software and utilities installed
       ⇒ AM roles in EC2</rich_text>
     </node>
-    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1656880127">
+    <node name="CloudFormation" unique_id="81" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651197180" ts_lastsave="1657057643">
       <rich_text>JSON is horrible to CF
 is possible use CF and JSON
 -- YAML
@@ -8026,7 +8137,64 @@ Custom resources
 		Aws SNS-backed
 		AWS lambda-backed
 	use cases:
-		when AWS reso</rich_text>
+		when AWS resource is not covered yet
+		an on premise resource
+		Running a lambda to empty an S3 bucket
+		fetch an AMI id
+		
+WaitConditions
+	pause tje creation of stack and wait for a signal before continues
+	ex. create another resource when is full config a ec2 with one app
+	props:
+		Count - deafult 1
+		Timeout - max 12hr.
+		Handle - ref to WaitConditionHandle
+	Handle is a presigned URL enable to send signal
+	for EC2 and ASG recomended CreationPolicy
+	use cfn-signal
+	make an HTTP put request
+	
+Dynamic references
+	references external values in SSM or in secrets
+	CF retrieves the value, and change set operation
+	master password in AWS secrets
+	ssm plaint text, ssm-secure
+	secretsmanager
+	up to 60 dynamics
+	
+Modules
+	package resources and configuration, use across templates
+	is used as best practices
+	use code written by experts
+	
+Resource import
+	import exisiting resources into existing and new stacks
+	is not necesary delete and recreate
+	is necesary that describe the entire stacl
+	a unique identifier for each target resource
+	each resource myst have a DeletePolicy
+	used when create a new stack from existing resources, move resource between stacks
+	
+SAM
+	serverless application model
+	framework for deploy and develop
+	generate complex cloudformation
+	
+CDK
+	Define the infra using a programming
+	is possible import migrate a CF template  into to CDK
+	
+Macreos
+	perform custom processing on CF template
+	for example AWS::Serverless
+	is necesary:
+		lambda function
+		a resource tupe AWS::CloudFormation::Macro
+	process:
+		the entire template
+		a snipper of a template
+		not macros witj macros
+		not support stacksets</rich_text>
     </node>
   </node>
 </cherrytree>
