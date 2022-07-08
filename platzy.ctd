@@ -6616,7 +6616,7 @@ Representación gráfica
 Que es una derivada?
 </rich_text>
     </node>
-    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657141673">
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657247452">
       <rich_text>base de la estaditica
 - que es una muestra?
    → subconjunto de algo mas grande (poblacion)
@@ -6648,7 +6648,26 @@ Los tres analisis descriptivos fundamentales
             ◇ moda, el que mas se repite
          • medidas de dispersion, cuan alejados estan los datos de la media
             ◇ varianza, s^2=(Sum_i=1~n(x_i-X)^2)/n, ~=hasta
-            ◇ desviacion tipica, raiz cuadrada de la varianza</rich_text>
+            ◇ desviacion tipica, raiz cuadrada de la varianza
+
+Datos agrupados con frecuencias
+- formas distintas de repesentar y analizar la informacion
+   → datos no agrupados, tal y cual vienen en su forma original
+   → los agrupados se tienen los valores o intervalos de valores que tomo la variable y la frecuencia de ocurrencia
+- Valores con frecuencia
+   → es mas facil calcular la media, la mediana y la moda, se tiene que multiplicar el numero de la frecuencia por el valor
+- valores por intervalos
+   → se puede crear una columna con marca de clase, suele ser el punto intermedio (promedio)
+   → columna de cada marca de clase por el total de frecuencias
+   → la mediana es:
+      ⇒ L_i + (((n/2) - N_(i-1))/ n_i) t_i
+         • L_i extrem inferior del intervalo
+         • n/2 la mitad del total
+         • N_(i-1) frecuencia absoluta acumulada de la clase anterior
+         • n_i frecuencia absoluta de la calse de la mediana
+         • t_i tamanio del intervalo
+   → Moda, el intervalo modal, donde se tiene mayor frecuencia absoluta
+      ⇒ M = L_i + ((n_i - n_(i-1)) / ((n_i - n_(i-1)) + (n_i - n_(i+1))))</rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
