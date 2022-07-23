@@ -5798,7 +5798,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1657152267">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1658543494">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -6521,7 +6521,7 @@ My dream house
 - linking verbs
    → how to describe your dream house, using adjectives</rich_text>
     </node>
-    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1657232703">
+    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1658532053">
       <rich_text>Basic connectors:
 - connects two ideas
 - And, is for additions
@@ -6587,7 +6587,113 @@ Frequency
    → time expresions
    → adverb of frequency
       ⇒ before the main verb
-      ⇒ after the verb be</rich_text>
+      ⇒ after the verb be
+
+Permission
+- Can and Can't, permissions and denied permission
+   → ask, structure Can + subject + action?
+   → give, subject + can + action
+   → deny, subject + can't + action
+- Offer, Request, suggestion
+   → is possible use can to offers, ex: Can I help you?
+   → request: can we finish this tomorrow?
+   → suggestions: can you tell her you're sorry?
+- decline offers and invitations
+   → use can't
+      ⇒ thanks, but I can't have any sugar
+   → invites:
+      ⇒ Sorry. We can't be there tomorrow
+
+Making requests
+- would like
+   → is used to offer or requests:
+      ⇒ offer, Would you like some coffee?
+      ⇒ requests: I would like a beer, please, contraction: I'd like a beer
+- Could
+   → is used to making requests
+      ⇒ is more polite, is more formal
+      ⇒ could we finish this tomorrow?</rich_text>
+    </node>
+  </node>
+  <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1658543502">
+    <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658603461">
+      <rich_text>Introduccion
+- como se pueden recolectar datos, trackear apps, visualizar la info y analizarla, para comprender un sistema digital complejo
+- hacer que los sistemas sean mas observables
+- mejor experiencia de usuario
+- no afectacion de la complejidad del desarrollo
+- la observabilidad es una habilidad muy necesaria para el ciclo de vida de una app
+- las companias de hoy en dia deberian de usar observabilidad para saber el estado de sus apps, sitios web mas robustos, no se es inmune a bug
+- desarrollo no a prueba de fallos sino con rapidez para encontrar y arreglar las fallas
+- implementacion de observabilidad en un proyecto ya hecho
+
+Como se pasa de paginas web a apps web?
+- antes teniamos paginas estaticas
+- manejo de cliente-servidor, el flujo simple que se ha usado hasta el momento
+- antes teniamos monolitos y se usaba metodologia waterfall
+- hoy se tienen mucho deploys y muchos stack tecnologicos
+- en velocidad de negocio si no se tienen varios despliegues quiere decir que se esta llendo lento
+- se tienen ya varios lenguajes y tecnologias para el desarrollo del negocio, dependiendo del problema se busca la tecnologia que sea util
+- desacoplamiento de la complejidad de solo tener un servidor potente, tener varias apps que viven en la nube
+- arquitectura de microservicios
+- uso y manejo de CI/CD
+- cada microservicio debe de usarse para una sola tarea especifica
+- todo debe de trabajar de modo orquestada
+
+Contenedores y alojamiento en la nube
+- un contenedor es donde se guardan los microservicios
+- se tiene todo lo necesario para que se ejcute el codigo
+- tener muchos contenedores discretos se conoce como contenerization
+- un tiempo atras se guardaban las apps en servidores, que estaban en la misma oficina
+- se tienen contenedores que se activan y mueren dependiendo que se requiera, estos viven en la nube
+- se vuelve algo complicado monitorear todos los contenedores
+- la observabilidad, que esta pasando en la app
+
+Cloud native
+- son las app y sistemas que han sido desarrolladas en los tiempos del computo de la nube
+- no existe algo como tal que diga que es cloud native
+- se repiten algunos elementos que los hacen cloud native
+
+Monitoreo de un sistema
+- como saber la salud de los contenedores y K8s
+- recolectar datos sobre los sistemas y el rendimiento, monitoreo
+- el monitoreo mas comun es el APM, application performance monitoring
+- se monitorean puntos de datos, por ejemplo que tanto computo se esta usando, cuanto tiempo de carga se tiene en las paginas
+- el monitore se usan estos 4 pasos:
+   → plan, se decide que forma de anticipada que debe ser monitoreado
+   → intrument, se crean de tal manera que se recolecte la informacion
+   → observe, se observan los datos, de lo que se intrumento
+   → detect and resolve, cuando el problema se detecta la persona encargada lo dice y se toman acciones
+- nucleo
+   → nuestro servicio esta en linea y disponible?
+   → esta funcionando correctamente?
+   → esta funcionando bien?
+- Mean time-to-detection (MTTD), este debe de ser el mas bajo, tiempo en que empieza el problema y el equipo lo detecto
+- Mean Time-to-resolution (MTTR), tiempo que se tardo uno en resolver el problema que se detecto
+
+Tipos de herramientas y limitaciones del monitoreo
+- software as a service
+   → se vende en un modelo de suscripcion
+   → herramientas para recolectar, almacenar, queries, visualizar, identificar problemas, resolver probelmas
+   → son faciles de implementar
+   → de acuerdo al negocio
+- open source software
+   → se especializan en algo especifico
+   → se pueden pagar por soporte
+- limitaciones:
+   → cuando se tienen muchas herramientas que se vuelven un caos, muchisimas herramientas, esto es por que monitorean diferente tipos de targets
+   → no conocer donde puede fallar nuestra aplicacion, se decide que se va a monitoreas, hoy son muy complejas las apps
+
+Que es observabilidad
+- es la mejora del monitoreo
+- dice que tan bien se puede entender el sistema complejo
+- instrumentar los sistemas, para datos accionables, te dice por que ocurren los problemas
+- es end to end
+
+Pilares de la observabilidad
+- Intrumentacion abierta, open instrumentation, los equipos recolectan la telemetria o datos y ponerlos en una locacion central, nos permite medir el rendimiento, se evita tener tantas herramientas para monitorear
+- entidades conectadas, connected entities, todos los datos recolectados se conectan de forma organizada, relaciones entre un sistema y sus muchas entidades y relaciones claves del negocio, clarificar que data se tiene y de donde viene, crear significado y contexto
+- Correlacion y contexto, correlation &amp; context, usar los datos recolectados para tener tablas custom que nos sirve para metricas y objetiv</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
@@ -6616,7 +6722,7 @@ Representación gráfica
 Que es una derivada?
 </rich_text>
     </node>
-    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657247304">
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657247452">
       <rich_text>base de la estaditica
 - que es una muestra?
    → subconjunto de algo mas grande (poblacion)
@@ -6666,7 +6772,8 @@ Datos agrupados con frecuencias
          • N_(i-1) frecuencia absoluta acumulada de la clase anterior
          • n_i frecuencia absoluta de la calse de la mediana
          • t_i tamanio del intervalo
-   → Moda, el intervalo modal, donde se tiene mayor frecuencia absoluta</rich_text>
+   → Moda, el intervalo modal, donde se tiene mayor frecuencia absoluta
+      ⇒ M = L_i + ((n_i - n_(i-1)) / ((n_i - n_(i-1)) + (n_i - n_(i+1))))</rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">

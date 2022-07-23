@@ -7,6 +7,9 @@ import (
 	"net/http"
 
 	"github.com/gorilla/mux"
+
+	"rest-ws/database"
+	"rest-ws/repository"
 )
 
 type Config struct {
@@ -51,6 +54,13 @@ func NewServer(ctx context.Context, config *Config) (*Broker, error) {
 
 func (b *Broker) Start(binder func(s Server, r *mux.Router)) {
 	b.router = mux.NewRouter()
+	repo, err := database.NewPostgresRepository(b.config.DataBaseUrl)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	repository.SetRepository(repo)
 	binder(b, b.router)
 	log.Println("Starting server on port", b.Config().Port)
 
