@@ -2070,9 +2070,9 @@ Particiones
 - en las particiones no existen como tal las llaves primarias
 - aqui el indice y clave es por donde se particiono la tabla</rich_text>
     </node>
-    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
+    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1657843005">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
-      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656961210">
+      <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1658186837">
         <rich_text>- first week
    → putting ml in production
       ⇒ good use of tools and practice
@@ -2373,10 +2373,12 @@ Batch: scheduling batch
 - is possible call another flow using another flow
 
 Monitoring of ML models
+- Generally when the model is wrong is because the data is wrong
+- is very important when the model is failing
 - check the degrade and need monitoring of model
 - how to prepare:
    → service health
-      ⇒ only uptime, mememory and latency
+      ⇒ only uptime, memmory and latency
       ⇒ in production services
    → model performance
       ⇒ check the prediction of model
@@ -2400,11 +2402,116 @@ Monitoring of ML models
    → send data to mongo(results)
    → send too monitoring service, metrics to prometheus and grafana
    → form: mlservice + usage simulation + logging + online monitoring
-   → another: ML service + usage simulation + logging + online monitoring + batch monitoring, this create a HTML report
+   → another: ML service + usage simulation + logging + online monitoring + batch monitoring, this create a HTML report, is important in this step is used prefect or airflow in combination with evidently AI
    → comunication by containers
+- is very usessful that send the monitoring to 2 ways on database (in this case mongo) and the realtime monitoring (in this case evidently (prometheus y grafana))
+- sending data from one endpoint to another endopoint that process evidently
 
 Setting environment
-- is necesary to this module, docker and docker-compose</rich_text>
+- is necesary to this module, docker and docker-compose
+- creation of online monitoring
+- evidently is a great tool to monitoring models, and ot create reports in HTML
+- with file prepare.py is possible download the files to process all
+- by security using 2 networks to communicate the services
+- running with docker-compose up {--build}
+   → build is to recreate all services
+
+Creating a prediction service and simulating traffic
+- using flask to prediction, this send data to mongodb and evidently
+- in evidently exists multiple examples of implemtantions with other platforms
+- the integration is generally by another flask application
+- WINDOW_SIZE is used to calculate by batch of data
+- using send_data.py to simulate data
+
+Realtime monitoring
+- is necesary the config to prmetheus and grafana
+- dashboard of grafana is created in json, and is used to show the information
+- use to yaml to configure the data and how to send this, is necesary add the monitor to save registers
+- windows size is in seconds
+- prometheus is very excelent to show what variables has drift, in grafana is more visual
+
+Batch monitoring
+- calculing a batch of data and check the performance
+- in this step is used prefect
+- this save the results in mongodb and is used to create the report in HTML
+- is created the dashboard from one task of prefect
+
+BEST PRACTICES
+Testing python with pytest
+- usin unit test in the project
+- in --dev install pytest (pipenv)
+- using testing of VSCode
+- configure pytest in VSCode using folder tests
+- pipenv run pytest test
+
+Testing on Docker
+- deepdiff library to compare dictionaries, is installed en dev libraries
+- in deepdiff constructor is posible send significant_digits=1 to check only one digit in float numbers
+- echo $? to check error of previous command, 0 is ok
+- using set -e uis when the error code != 0 this stop the bash with error code the last command
+
+Localstack to mock tests
+- to only start one service in environment is necesary: SERVICES=kinesis
+- aws --endpoint-url=http://localhost:4566 kinesis list-streams
+
+Code quality: linting and formatting
+- pep8, style guide for python
+- pylint is used to check errors and pep8
+- pipenv install --dev pylint
+- pylint {file.py}
+- pylint good style code in python files
+- exists 3 forms to configure:
+   → using .pylint file
+   → using pyproject.toml
+   → using a comment, this is only local (in file and function)
+- is very common in DS use X, n and this type of values is not a vlidate name
+- black and sort, this is used to code romatter
+- black --diff . to check difference between files, and check changes to do, wo good code
+- black . -&gt; to apply the changes in the files
+- isort --diff ., this is used to sort libraries in files python
+- isort . apply the changes
+- pylint --revursive=y
+- pytest test/
+
+Git pre-commit hooks
+- pre-commit python get the tools
+- pip install pre-commit, in .git/hooks, exists pre-commit.sample
+- pre-commit sample-config &gt; .pre-commit-config.yaml
+- create in .git/hooks: pre-commit install
+- to add tools:
+   → usign isrot with pre-commit exists docs
+   → args to check in specific folder with pytest
+
+Makefiles and make
+- Makefile to use make, using ex:
+   → make run, in makefile creating before the instruction run: {instruction}
+- to add commands of shell: 
+   → command:=$(shell command)
+
+IaC
+- using and configure the AWS CLI, usign secret and access key
+
+Terraform
+- is necesary to create a main.tf, variables.tf(optional) </rich_text>
+      </node>
+      <node name="MLOps AWS" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657843005" ts_lastsave="1657845747">
+        <rich_text>automatizacion de entrenamiento de modelos
+- se puede entranar con una imagen ya creada o crear nosotros nuestra propia imagen con todos los componentes que se necesitan
+- sagemake built in para saber que algoritmos pueden ser usados
+- los contenedores de sage maker tienen una ruta predefinida: /opt/ml/code
+- sage maker sube los artefactos a s3 de manera automatica
+- generalmente las imagenes propias se usan para hacer xbooster o algo mas complejo que no encontremos en sage maker
+- se pueden enviar hiperparametros
+- se usa estimator.Estimator para ejecutar el entrenamiento
+- se deben de enviar la cantidad de instancias para el entrenamiento
+- se usa sagemaker pipeline para conectar ambas partes
+- sagemaker estudio permite ver todos recursos de sagemaker
+- el pipeline contiene
+   → script de procesamiento
+   → se usa un algoritmo ya construido
+   → paso de evaluacion
+   → se tiene un script de pipeline
+   → se definen step</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
@@ -6616,7 +6723,7 @@ Representación gráfica
 Que es una derivada?
 </rich_text>
     </node>
-    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657247206">
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657247452">
       <rich_text>base de la estaditica
 - que es una muestra?
    → subconjunto de algo mas grande (poblacion)
@@ -6665,7 +6772,9 @@ Datos agrupados con frecuencias
          • n/2 la mitad del total
          • N_(i-1) frecuencia absoluta acumulada de la clase anterior
          • n_i frecuencia absoluta de la calse de la mediana
-         • </rich_text>
+         • t_i tamanio del intervalo
+   → Moda, el intervalo modal, donde se tiene mayor frecuencia absoluta
+      ⇒ M = L_i + ((n_i - n_(i-1)) / ((n_i - n_(i-1)) + (n_i - n_(i+1))))</rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
