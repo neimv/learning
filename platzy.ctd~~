@@ -6616,7 +6616,7 @@ Making requests
     </node>
   </node>
   <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1658543502">
-    <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658873002">
+    <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658873170">
       <rich_text>Introduccion
 - como se pueden recolectar datos, trackear apps, visualizar la info y analizarla, para comprender un sistema digital complejo
 - hacer que los sistemas sean mas observables
@@ -6782,7 +6782,8 @@ Apdex, application performance index
 - una tabla por defecto se crea
 - medicion de sentimientos del usuario
 - la medicion es entre 0 y 1, 0 no se tiene usuarios, los usuarios estan frustados con el software
-- experiencia de usuario o app como esta funcionando</rich_text>
+- experiencia de usuario o app como esta funcionando
+- apdex = (satisfied request + (Tolerating request / 2)) / Total number of requests</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
@@ -6947,7 +6948,7 @@ bloqueo</rich_text>
       </node>
     </node>
   </node>
-  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1656612399">
+  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1659297652">
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
@@ -7457,6 +7458,12 @@ Patrones
    → de comportamiento, comuniciacion entre objetos, para comunicar diferentes objetos
 - Factory, se pueden crear diferentes tipos y de acuerdo a lo que necesitamos regresamos el que sea especifico
 - singleton, se usan para tener una clase que sea accesible de manera global</rich_text>
+    </node>
+    <node name="grpc" unique_id="107" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659297652" ts_lastsave="1659297660">
+      <rich_text family="monospace">go install google.golang.org/protobuf/cmd/protoc-gen-go@latest</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text family="monospace">go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
