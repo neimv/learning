@@ -6521,7 +6521,7 @@ My dream house
 - linking verbs
    → how to describe your dream house, using adjectives</rich_text>
     </node>
-    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1658532053">
+    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1659389235">
       <rich_text>Basic connectors:
 - connects two ideas
 - And, is for additions
@@ -6612,7 +6612,27 @@ Making requests
 - Could
    → is used to making requests
       ⇒ is more polite, is more formal
-      ⇒ could we finish this tomorrow?</rich_text>
+      ⇒ could we finish this tomorrow?
+
+Time
+- What time is it?
+   → learn the time in english
+   → past, present, future
+   → numbers: It's seven o'clock
+   → past/to: it's ten to two
+   → divide the clock in two parts, from 0 to 6 is past/after minutes (word) hour, and 6 to 12 is “to” minutes left to next hour
+   → a quarter in 15 and 45, half in 30
+   → it's four oh five
+   → it's a quarter past six
+   → it's half past two
+   → it's a quartet to twelve
+- time expressions
+   → past, yesterday, last
+   → present, today, 
+   → future, tomorrow, later, next, this
+- prepossitions
+   → at, used in precise time, hours, dates for example holydays, mealtimes, specific times ex: at bedtime
+   → on, days and dates, , on april x or on saturday, parts of specific days, special dates ex: on my birthday</rich_text>
     </node>
   </node>
   <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1658543502">
@@ -7459,8 +7479,14 @@ Patrones
 - Factory, se pueden crear diferentes tipos y de acuerdo a lo que necesitamos regresamos el que sea especifico
 - singleton, se usan para tener una clase que sea accesible de manera global</rich_text>
     </node>
-    <node name="grpc" unique_id="107" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659297652" ts_lastsave="1659297940">
-      <rich_text>sudo apt install -y protobuf-compiler
+    <node name="grpc" unique_id="107" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659297652" ts_lastsave="1659298190">
+      <rich_text>Add to .bashrc
+</rich_text>
+      <rich_text family="monospace">export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin</rich_text>
+      <rich_text>
+
+sudo apt install -y protobuf-compiler
 </rich_text>
       <rich_text family="monospace">go install google.golang.org/protobuf/cmd/protoc-gen-go@latest</rich_text>
       <rich_text>
