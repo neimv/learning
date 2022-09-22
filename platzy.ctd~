@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1655834724">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1663875000">
     <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
       <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
         <rich_text>simbolos
@@ -2070,7 +2070,7 @@ Particiones
 - en las particiones no existen como tal las llaves primarias
 - aqui el indice y clave es por donde se particiono la tabla</rich_text>
     </node>
-    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1654702126">
+    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1663360401">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
       <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656961210">
         <rich_text>- first week
@@ -2406,6 +2406,10 @@ Monitoring of ML models
 Setting environment
 - is necesary to this module, docker and docker-compose</rich_text>
       </node>
+      <node name="ML Engineer" unique_id="110" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663360401" ts_lastsave="1663361604">
+        <rich_text>- Introduction to ML
+   → </rich_text>
+      </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
     <node name="etica en el manejo de datos" unique_id="96" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="1" foreground="" ts_creation="1654889158" ts_lastsave="1655056410">
@@ -2685,6 +2689,49 @@ Analisis exploratorio completo
 ¿Qué es un análisis multivariable?
 ¿Qué comandos usamos para agrupar datos?
 </rich_text>
+    </node>
+    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1663877563">
+      <rich_text>
+Introduccion
+- proceso de conocer en detalle y darle sentido a los datos
+- saber que tipos de datos son
+- aqui se sabe como tratar a los datos
+- se convierten en informacion util
+- que razones se tiene para hcer este analisis
+   → organizar y entender las variables
+   → establecer relaciones entre variables
+   → encontrar patrones ocultos en los datos
+   → ayuda a escoger el modelo correcto para la necesidad correcta
+   → ayudarte a tomar una decision informada
+- pasos (es un proceso ciclico):
+   → hacer preguntas
+   → determinar el tamanio de los datos
+   → categorizar las variables
+   → Limpieza y validacion de datos
+   → establecer relaciones entre los datos
+- Tipos de analitica de datos
+   → descriptiva: que sucedio, a pasado
+   → diagnostica: por que sucedio, a pasado
+   → predictiva: que podria pasar, a futuro
+   → prescriptiva: que deberia de hacerse, a futuro
+- Tipos de datos y analisis de variables
+   → categoricos, genero, categoria de pelis
+      ⇒ ordinal, un orden natural
+      ⇒ nominal, no importa el orden
+   → numericos
+      ⇒ discreto, numero de amigos, enteros
+      ⇒ continuo, altura, pero, longitud
+   → Tipos de analisis:
+      ⇒ univariado, obtener analisis de las variables solas
+      ⇒ bivariado, se buscan las relaciones entre variables
+      ⇒ multivariado, checar todas las variables que se tienen para saber como se relacionan
+- Que es la recoleccion de datos
+   → nos permite obtener informacion del tema de investigacion
+   → hay tipos diferentes
+      ⇒ primaria, se obtienen de primera mano, experimentos, entrevistas, se tiene el total control
+      ⇒ secundaria, se obtiene por medio de una fuente primaria externa, aqui no se tiene control de como se hizo el conjunto de datos
+      ⇒ terciaria, fuentes completamente extenas, se obtienen a travez de terceros como datos de otras empresas
+   → que es la validacion de datos, proceso de revisar que tengan consistencia y precision de los datos</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -6521,7 +6568,7 @@ My dream house
 - linking verbs
    → how to describe your dream house, using adjectives</rich_text>
     </node>
-    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1659389235">
+    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1663367835">
       <rich_text>Basic connectors:
 - connects two ideas
 - And, is for additions
@@ -6632,7 +6679,14 @@ Time
    → future, tomorrow, later, next, this
 - prepossitions
    → at, used in precise time, hours, dates for example holydays, mealtimes, specific times ex: at bedtime
-   → on, days and dates, , on april x or on saturday, parts of specific days, special dates ex: on my birthday</rich_text>
+   → on, days and dates, , on april x or on saturday, parts of specific days, special dates ex: on my birthday
+
+How to do things
+- how to create, execute things
+- ex:
+   → how do you open this?
+   → how do you say that in spanish?
+   → how do you spell your name?</rich_text>
     </node>
   </node>
   <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1658543502">
@@ -6832,7 +6886,7 @@ Representación gráfica
 Que es una derivada?
 </rich_text>
     </node>
-    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1657247452">
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1663530127">
       <rich_text>base de la estaditica
 - que es una muestra?
    → subconjunto de algo mas grande (poblacion)
@@ -6883,7 +6937,41 @@ Datos agrupados con frecuencias
          • n_i frecuencia absoluta de la calse de la mediana
          • t_i tamanio del intervalo
    → Moda, el intervalo modal, donde se tiene mayor frecuencia absoluta
-      ⇒ M = L_i + ((n_i - n_(i-1)) / ((n_i - n_(i-1)) + (n_i - n_(i+1))))</rich_text>
+      ⇒ M = L_i + ((n_i - n_(i-1)) / ((n_i - n_(i-1)) + (n_i - n_(i+1))))
+
+Cuantiles, Deciles y Percentiles
+- las medidas de posicion son los cuantiles y se clasifican en 
+   → cuartiles, dividos en 4 grupos
+      ⇒ se ordenan los datos de mayor a menor, primero el minimo y el ultimo el maximo
+      ⇒ se determina la posicion que ocupa cada cuartil
+      ⇒ el segundo cuartil coincide con la mediana de los datos
+      ⇒ estos se pueden calcular de diferentes formas
+      ⇒ se basa en la mediana, ya que esta parte a los datos en dos, en cada grupo que queda se pueden tomar la mediana y asi obtener los demas cuartiles
+      ⇒ si es un numero impar de variables se puede o no incluir la mediana, generalmente no se incluye
+      ⇒ formula = Q_k = (K * (n + 1))  / 4
+   → quintiles, en 5 partes
+   → Deciles, en las 10 partes
+   → percentiles, divididos en 100 partes
+      ⇒ formula = p * n / 100, donde p = percentil, n = numero de valores
+- los datos deben d estar ordenados
+
+Diagramas de cajas y bigotes (box and wisjers plot)
+- se usan los cuartiles
+- la caja que se ve nos muestra el primer, segun y tercer cuartile, los bigotes son el minimo y el maximo, formado de primer y tercer cuartil
+- la longitud de la caja se llama rango intercuartil  Ri = Q_3 - Q_1
+- valores atipicos, cuando hay valores muhco muy grande o muy pequenios, (outliers), son un punto o cuadrado pequenio en el grafico
+- para un valor atipico tiene que ser mayor a Q_3 + 1.5 * RI veces al rango intercuartil o menor a Q_1 - 1.5 * RI, se les puede llamar barreras
+
+Asimetria:
+- para cumplir simetria se tiene que la media, mediana y moda son iguales
+- la negativa es cuando la media va a estar por debajo de la media y asi de la moda
+- la positiva es cuando la media esta arriba de la medianada y esta de la moda
+- se puede calcular:
+   → Karl Pearson: A_s = (3(media - mediana)) / desviacion tipica, este varia entre -3 y 3, si es negativo es asimetrica negativa, 0 es simetrica, mayor que sera es simetria positivo
+   → Yule Bowley o medida cuartilica: A_s = (Q_1 + Q_3 - 2*Q_2) / Q_3 - Q_1 varia entre -1 y 1 y la regla aplica igual que con pearson
+   → Medida de Fisher (datos sin agrupar):  A_s = Sum_i^n(x_i - x_med)^3 / n*s^3 (n -&gt; total de datos, s -&gt; desviacion tipica)
+      ⇒ con datos agrupados con frecuencias: A_s = Sum_i^n n_i*(x_i - x_med)^3 / n*s^3 (n -&gt; total de datos, s -&gt; desviacion tipica)
+      ⇒ con datos agrupados por intervalos: A_s = Sum_i^n n_i*(x_mi - x_med)^3 / n*s^3 (n -&gt; total de datos, s -&gt; desviacion tipica, m_i marca de clase, n_i frecuencia por cada clase)</rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
@@ -6968,7 +7056,7 @@ bloqueo</rich_text>
       </node>
     </node>
   </node>
-  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1659297652">
+  <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1663354176">
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
@@ -7479,7 +7567,7 @@ Patrones
 - Factory, se pueden crear diferentes tipos y de acuerdo a lo que necesitamos regresamos el que sea especifico
 - singleton, se usan para tener una clase que sea accesible de manera global</rich_text>
     </node>
-    <node name="grpc" unique_id="107" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659297652" ts_lastsave="1659298190">
+    <node name="grpc" unique_id="107" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1659297652" ts_lastsave="1659651795">
       <rich_text>Add to .bashrc
 </rich_text>
       <rich_text family="monospace">export GOPATH=$HOME/go
@@ -7492,6 +7580,22 @@ sudo apt install -y protobuf-compiler
       <rich_text>
 </rich_text>
       <rich_text family="monospace">go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest</rich_text>
+      <rich_text>
+
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative proto/student.proto</rich_text>
+    </node>
+    <node name="CQRS" unique_id="108" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663354176" ts_lastsave="1663367712">
+      <rich_text>CQRS -&gt; command query responsability segregarion
+un manejo de colas para los servicios, no es necesario que se conecten entre ellos
+RS -&gt; habilidades unicas cada servicio de Q y de C
+C -&gt; solo se dedica a escribir en la base de datos, commands
+Q -&gt; solo se encarga de lecturas, queries
+esto sirve para solo escalar el servicio necesario, ya sea escalar solo la lectura o solo la escritura o ambos
+
+Heeramientas:
+- docker compose
+- elastic search
+- nats</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
