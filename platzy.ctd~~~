@@ -2690,7 +2690,7 @@ Analisis exploratorio completo
 ¿Qué comandos usamos para agrupar datos?
 </rich_text>
     </node>
-    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1663877448">
+    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1664006740">
       <rich_text>
 Introduccion
 - proceso de conocer en detalle y darle sentido a los datos
@@ -2728,9 +2728,41 @@ Introduccion
 - Que es la recoleccion de datos
    → nos permite obtener informacion del tema de investigacion
    → hay tipos diferentes
-      ⇒ primaria, se obtienen de primera mano, experimentos, entrevistas
-      ⇒ secundaria
-      ⇒ terci</rich_text>
+      ⇒ primaria, se obtienen de primera mano, experimentos, entrevistas, se tiene el total control
+      ⇒ secundaria, se obtiene por medio de una fuente primaria externa, aqui no se tiene control de como se hizo el conjunto de datos
+      ⇒ terciaria, fuentes completamente extenas, se obtienen a travez de terceros como datos de otras empresas
+   → que es la validacion de datos, proceso de revisar que tengan consistencia y precision de los datos
+      ⇒ se validan
+         • modelo de datos
+         • seguimiento de formato estandar de archivos
+         • tipos de datos
+         • rango de variables
+         • unicidad
+         • consistencia de expresiones
+         • valores nulos
+
+Analisis univariable
+- explorando una variable categorica
+   → conteos y proporciones
+      ⇒ se basan en la tabulacion
+      ⇒ contabiliza la frecuancia de aparicion de cada valor unico de una variable
+      ⇒ generalmente se ordenan por alfabeto o numero de aparicion
+      ⇒ despues se puede hacer un diagrama de frecuencias
+      ⇒ las proporciones es la relacion de correspondencia entre las partes del todo
+- medidas de tendencia central
+   → entienden comportamiento general de los datos
+   → media, promedio
+   → mediana, dato central
+   → moda, dato que mas se repite
+   → media ponderada, media armonica, media geometrica
+- medidas de dispersion
+   → que tan lejos o cerca se encuentran los datos
+   → rango, se toma el valor minimo y maximo de los datos
+   → rango intercuartilico, comprende el 25% arriba y abajo de la mediana
+   → desviacion estandar, ofrece la dispersion media de una variable
+      ⇒ la regla del 65, 95, 99, a una desviacion estandar ya tendremos el 65 de los datos a dos se tiene el 95 y a tres casi todos
+   → boxplot para visualizar los estadisticos del conjunto de datos
+   → existen la asimetria estadistica, sesgo negativo,simetrica, sesgo positivo</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">

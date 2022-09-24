@@ -2690,7 +2690,7 @@ Analisis exploratorio completo
 ¿Qué comandos usamos para agrupar datos?
 </rich_text>
     </node>
-    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1663877607">
+    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1664006910">
       <rich_text>
 Introduccion
 - proceso de conocer en detalle y darle sentido a los datos
@@ -2739,7 +2739,31 @@ Introduccion
          • rango de variables
          • unicidad
          • consistencia de expresiones
-         • valores nules</rich_text>
+         • valores nulos
+
+Analisis univariable
+- explorando una variable categorica
+   → conteos y proporciones
+      ⇒ se basan en la tabulacion
+      ⇒ contabiliza la frecuancia de aparicion de cada valor unico de una variable
+      ⇒ generalmente se ordenan por alfabeto o numero de aparicion
+      ⇒ despues se puede hacer un diagrama de frecuencias
+      ⇒ las proporciones es la relacion de correspondencia entre las partes del todo
+- medidas de tendencia central
+   → entienden comportamiento general de los datos
+   → media, promedio
+   → mediana, dato central
+   → moda, dato que mas se repite
+   → media ponderada, media armonica, media geometrica
+- medidas de dispersion
+   → que tan lejos o cerca se encuentran los datos
+   → rango, se toma el valor minimo y maximo de los datos
+   → rango intercuartilico, comprende el 25% arriba y abajo de la mediana
+   → desviacion estandar, ofrece la dispersion media de una variable
+      ⇒ la regla del 65, 95, 99, a una desviacion estandar ya tendremos el 65 de los datos a dos se tiene el 95 y a tres casi todos
+   → boxplot para visualizar los estadisticos del conjunto de datos
+   → existen la asimetria estadistica, sesgo negativo,simetrica, sesgo positivo
+   → otra medida es la curtusis, que tan juntos o dispersos estan los datos respecto a la media o promedio, si es cero estan distribuidos homogeniamente a la media, cuando es positivo, estan concentrados al rededor de la media, cuando es menor a cero, los datos se distribuyen a lo largo de la media</rich_text>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
