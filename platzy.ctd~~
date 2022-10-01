@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1663875000">
-    <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1652638020">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1664320597">
+    <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
+      <rich_text>¿Cuál es el orden correcto al solucionar una operación aritmética?
+La estructura adecuada de argumentos dentro de la función condicional "SI" es:
+La gráfica adecuada para mostrar participación por categoría es:
+¿Qué expresión simbólica es correcta para la relación “El triángulo ABC es congruente con el triángulo XYZ”?
+
+Un lienzo de  90 m se corta en 3 trozos: trozo A, trozo B y trozo C. Calcular cuánto  mide el trozo B; sabiendo que el trozo B y el trozo C miden el doble y  el triple que el trozo A, respectivamente., 30
+Es un método de solución de ecuaciones lineales:
+¿Cómo se relaciona data science con inteligencia artificial?
+Las aplicaciones de movilidad facilitan la integración social sugiriendo recorridos hacia todas las zonas sin distinción. Esto es:
+
+Es el resultado de elevar al cuadrado la expresión 5x²y
+Son los sumandos que forman los miembros:
+La utilidad principal de Excel es:
+En Excel la herramienta Filtro es Ăºtil para todas estas cosas, excepto para:
+</rich_text>
+    </node>
+    <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1664581715">
       <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
         <rich_text>simbolos
 - son importantes por que estan a nuestro alrededor
@@ -114,6 +131,16 @@ comparacion y desigualdad
 
 Operadores logicos
 - </rich_text>
+      </node>
+      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1664583299">
+        <rich_text>- la logica es todo aquello con lo que tomamos decisiones
+- aquello que tiene sentido para nosotros
+- es coherente, estructurado y tiene sentido
+- proposicion es dar un valor de verdadero o falso
+
+Valor de verdad
+- si se tiene p y q y alguna tiene un valor de verdadero, se pueden mezclar para obtener un valor resultado
+- se usa 2^n para saber cuantas </rich_text>
       </node>
     </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
@@ -2690,7 +2717,7 @@ Analisis exploratorio completo
 ¿Qué comandos usamos para agrupar datos?
 </rich_text>
     </node>
-    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1664006833">
+    <node name="Analisis exploratorio nuevo" unique_id="111" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663875000" ts_lastsave="1664407703">
       <rich_text>
 Introduccion
 - proceso de conocer en detalle y darle sentido a los datos
@@ -2763,7 +2790,40 @@ Analisis univariable
       ⇒ la regla del 65, 95, 99, a una desviacion estandar ya tendremos el 65 de los datos a dos se tiene el 95 y a tres casi todos
    → boxplot para visualizar los estadisticos del conjunto de datos
    → existen la asimetria estadistica, sesgo negativo,simetrica, sesgo positivo
-   → otra medida es la curtusis, que tan juntos o dispersos estan</rich_text>
+   → otra medida es la curtusis, que tan juntos o dispersos estan los datos respecto a la media o promedio, si es cero estan distribuidos homogeniamente a la media, cuando es positivo, estan concentrados al rededor de la media, cuando es menor a cero, los datos se distribuyen a lo largo de la media
+- distribuciones
+   → histogramas
+   → funcion de probabilidad de masas, nos dice la probabilidad de que una variable aleatoria discreta tome un valor determinado
+   → funcion de distribucion acumulada, devuelve la probabilidad de que una variable sea igual o menos que un valor determinado
+   → funcion de probabilidad de densidad, determina la probabilidad de que una probabilidad continua tome un valor determinado
+
+Analisis Bivariado
+- relaciones
+   → grafica de puntos
+      ⇒ como se distribuyen los puntos entre dos variables
+   → no siempre se tienen graficos que luzcan bien, mas cuando se tienen muchos datos
+   → se puede modificar la transparencia de la grafica para que se vean mejor
+   → histogramas de dos dimensiones, se pueden tener por colores la frecuencia, nos ayuda a ver mejor como se agrupan los datos, se pueden cambiar los colores para visualizar mejor
+   → graficos de violin y boxplot
+   → se pueden tener huecos o en lineas rectas, generalmente son en variables discretas, se puede agregar un ruido aleatorio
+   → se puede visualizar un diagrama de caja
+   → matrices de correlacion
+   → hasta que punto las variables estan relacionadas entre si, cambian conjuntamente
+   → se usa el coeficiente de correlacion, usualmente la de person, este sirve de forma lineal
+   → causalidad, cuando algo genera otra cosa
+   → correlacion no implica causalidad, no siempre dos eventos estan relacionados aunque lo paresca
+- generalmente en las regresiones lineales no son simetricas, a-b no es lo mismo que b-a
+
+Paradoja de simpson
+- es un fenomeno en el cual se pueden concluir dos cosas totalmente opuestas a partir de los mismos datos, dependiendo el como se clasifican estos</rich_text>
+    </node>
+    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1664229117">
+      <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664229970">
+        <rich_text>es un subdominio de la IA, proporciona a los sistemas la capacidad de aprender y mejorar automaticamente, sin ser programados para ellos, es generalmente crear un modelo que se va mejorando con mas datos hacia el modelo a lo largo del tiempo (experiencia en datos)
+se obtiene experiencia pasada, se determina un algoritmo de ML para el problema, se tomand los datos y se proporcionan al algoritmo que se decidio, este entrena y se construye el modelo
+si el modelo es correcto, se pone en produccion
+con el modelo, la base esta en los datos</rich_text>
+      </node>
     </node>
   </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
@@ -5877,7 +5937,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1658543494">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1664132487">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -6720,6 +6780,7 @@ How to do things
    → how do you say that in spanish?
    → how do you spell your name?</rich_text>
     </node>
+    <node name="elementos y expresiones de trabajo" unique_id="112" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664132487" ts_lastsave="1664132487"/>
   </node>
   <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1658543502">
     <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658873170">
