@@ -132,7 +132,7 @@ comparacion y desigualdad
 Operadores logicos
 - </rich_text>
       </node>
-      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1664583299">
+      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1664840096">
         <rich_text>- la logica es todo aquello con lo que tomamos decisiones
 - aquello que tiene sentido para nosotros
 - es coherente, estructurado y tiene sentido
@@ -140,7 +140,35 @@ Operadores logicos
 
 Valor de verdad
 - si se tiene p y q y alguna tiene un valor de verdadero, se pueden mezclar para obtener un valor resultado
-- se usa 2^n para saber cuantas </rich_text>
+- se usa 2^n para saber cuantos valores se tienen
+- de aqui se puede tener la tabla de verdad
+- si todo es verdadero se tiene una tautologia
+
+Teoria de graficas (grafos)
+- modelos mateamaticos que sirven para representar relaciones entre objetos de un conjunto
+- es un conjunto de vertices conectados atraves de aristas e = (v, w)
+- se pueden aplicar casi a todo
+- nos ayudan a identificar rutas optimas
+- tipos de grafos
+   → simple, solo hay un camino que une los grafos
+   → multigrafo, existen varios caminos unidos de los puntos
+   → pseudografo, se tienen caminos hacia el mismo nodo
+   → ponderado, tienen un numero de unidad asociada al nodo, nos dice que distancia se tiene o peso
+   → dirigido, dice hacia donde se puede ir, puede ser que solo tenga un camino
+   → multigrafo dirigido, se tienen distintas rutas y direcciones
+- grado:
+   → numero de aristas que inciden
+   → todos los grados se pueden calcular: Sum dev(v) = 2 |E|, dos veces el numero de aristas que se tienen en grafo
+   → para que se puede visitar un grafo donde se tengan mas de dos grados de tipo impar no se puede hacer sin pasar por un vertice 2 veces
+   → caminos, cadenas y ciclos:
+      ⇒ una cadena es una sucecion de aristas y suceciones donde se puede recorrer el grafico
+      ⇒ camino, sucecion donde no se puede repetir ningun vertice ni ninguna arista
+      ⇒ ciclo, es un camino, siempre se repite el vertice final
+      ⇒ cadena cerrada, se inicia en un nodo y termina en ese nodo, pero se pueden repiten los vertices
+      ⇒ grafo conexo, donde se tienen todos los vertices conectados entre si, si no se tiene la conexion entre los dos grafos es no conexo
+- Eulerianos
+   → en un camino euleriano se pueden repetir los vertices pero no se puede pasar por el mismo camino
+   → este dependera del grado de los vertices, </rich_text>
       </node>
     </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
@@ -2818,11 +2846,59 @@ Paradoja de simpson
 - es un fenomeno en el cual se pueden concluir dos cosas totalmente opuestas a partir de los mismos datos, dependiendo el como se clasifican estos</rich_text>
     </node>
     <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1664229117">
-      <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664229970">
+      <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664739247">
         <rich_text>es un subdominio de la IA, proporciona a los sistemas la capacidad de aprender y mejorar automaticamente, sin ser programados para ellos, es generalmente crear un modelo que se va mejorando con mas datos hacia el modelo a lo largo del tiempo (experiencia en datos)
 se obtiene experiencia pasada, se determina un algoritmo de ML para el problema, se tomand los datos y se proporcionan al algoritmo que se decidio, este entrena y se construye el modelo
 si el modelo es correcto, se pone en produccion
-con el modelo, la base esta en los datos</rich_text>
+con el modelo, la base esta en los datos
+
+Clasificacion de los sistemas de machine learning
+- en funcion e la manera que entrenan:
+   → supervisado
+   → no supervisado
+   → semi-supervisado
+   → reforzado
+- en la que aprenden en el tiempo, como lo van a traves del tiempo
+   → online
+   → batch
+- en la que realizan predicciones
+   → basado en instancias
+   → basado en modelos
+
+Aprendizaje supervisado y no supervisado
+- supervisado
+   → se mapea una entrada y una salida, en pares de ejemplo, se neceista un conjunto de datos de entrenamiento que estan etiquetados
+   → se tienen reglas de tipo regresion y clasificacion:
+      ⇒ regresion debe de ser un valor continuo
+      ⇒ los de clasificacion se usan para predecir valores dicretos (valores muy acotados)
+- no supervisado
+   → se infiere una funcion que describe la estructura de un conjunto de datos *sin etiquetar*
+   → generalmente se usan cuando se tienen muchos datos y es un poco dificil etiquetarlos por un analista
+
+Aprendizaje online y batch
+- aqui es como se ingiere la data a lo largo del tiempo
+- batch:
+   → no aprenden de manera incremental, se entrenan todos los datos disponibles en un momento especifico
+   → si se tiene un nuevo tipo de dato se debe de entrenar con todos los datos disponibles
+   → solucion sencilla
+   → funciona muy bien para conjunto de datos no muy grandes, ni que se requiera adaptar rapidamente
+   → restringido para dispositivos de capacidad limitada, como un smartphone
+- online
+   → se entrenan incrementalmente, pueden ser datos individuales o pequenios grupos
+   → solucion ideal para sistemas que reciben datos continuos y se requieren adapatar a ellos de forma rapida
+   → es capaz de lidiar con grandes conjuntos de datos, que puede que no entren en una sola maquina
+   → aparecen variables importantesque hay que determinar, como el ratio de aprendizaje
+   → pueden ser muy inestables, si hay datos de baja calidad
+
+Aprendizaje basado en instancias y basado en modelos
+- instancias
+   → el sistema aprende los ejemplos y luego intenta generalizar para nuevos ejemplares
+   → se requiere una medida de similitud
+   → la medida de similitud se usa para comprar con los ejemplos para ver si el ejemplo nuevo que tan cercano esta de los demas datos
+- modelos
+   → se crea un modelo que describe el conjunto de datos
+   → se requiere ajustar los parematros del modelo
+   → aqui no se valida la distancia, es a traves del modelo</rich_text>
       </node>
     </node>
   </node>
