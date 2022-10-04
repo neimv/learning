@@ -132,7 +132,7 @@ comparacion y desigualdad
 Operadores logicos
 - </rich_text>
       </node>
-      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1664840018">
+      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1664919974">
         <rich_text>- la logica es todo aquello con lo que tomamos decisiones
 - aquello que tiene sentido para nosotros
 - es coherente, estructurado y tiene sentido
@@ -166,8 +166,20 @@ Teoria de graficas (grafos)
       ⇒ ciclo, es un camino, siempre se repite el vertice final
       ⇒ cadena cerrada, se inicia en un nodo y termina en ese nodo, pero se pueden repiten los vertices
       ⇒ grafo conexo, donde se tienen todos los vertices conectados entre si, si no se tiene la conexion entre los dos grafos es no conexo
-- Eulerianos
-   → </rich_text>
+- Eulerianos (pasar por todos los caminos y aristas)
+   → en un camino euleriano se pueden repetir los vertices pero no se puede pasar por el mismo camino, se inicia en un punto termina en otro punto
+   → este dependera del grado de los vertices, no mas de dos vertices con grado impar, si existen, debe iniciar y terminar en los vertices de grado impar
+   → para un ciclo, todos los vertices deben de ser un grado par
+- hamiltoneanos
+   → recorrer todos los nodos solo una vez, sin importar cuantas veces pasemos por los caminos, puede que no pasen por todos los caminos, camino
+   → grado(u) - grado(v) &gt;= n - 1, u es inicio, v es final, n es numero de vertices, no es una condicion necesaria y suficiente
+   → puede ser camino pero no es ciclo, por ejemplo cuando lso vertices tienen grado 1
+- matriz de adyaciencia
+   → se usa para poner en una matriz los nodos cuantas conexiones tienen entre si, en dado caso de tener una conexion consigo mismo es representable a 1
+   → si se suman las filas se tiene el grado de cada vertice
+- matriz de incidencia
+   → este se tiene los nodos y las aristas nombradas
+   → se analiza columna por columna, por eso es llamado incidencia</rich_text>
       </node>
     </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
