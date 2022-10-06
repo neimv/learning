@@ -132,7 +132,7 @@ comparacion y desigualdad
 Operadores logicos
 - </rich_text>
       </node>
-      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1664920401">
+      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1665097514">
         <rich_text>- la logica es todo aquello con lo que tomamos decisiones
 - aquello que tiene sentido para nosotros
 - es coherente, estructurado y tiene sentido
@@ -181,7 +181,48 @@ Teoria de graficas (grafos)
    → este se tiene los nodos y las aristas nombradas
    → se analiza columna por columna, por eso es llamado incidencia
    → es una matriz exclusivamente de 0 y 1
-- para saber si un grafo es dirigido o no dirigido la matriz debe de ser no simetrica</rich_text>
+- para saber si un grafo es dirigido o no dirigido la matriz debe de ser no simetrica, las filas son iguales que las columnas
+
+Arboles
+- se usa bastante en machine learning
+- se organiza una atras de la otra
+- son los tipos de graficos ams usados en programacion
+- nos permiten organizar datos (objetos)
+- si se tiene un nodo a y b solo se tiene una conexion entre ellos
+- se usan para expresar relaciones de jerarquia
+- tipos
+   → libres, no e ve claro cual es el nodo raiz
+   → raiz, donde se ve una estructura clara
+   → expansion, se tiene una unidad o recurso asociados a las conexiones entre nodos
+   → binarios, aquellos donde solo se tienen dos conexiones en cada nivel
+- nivel y altura:
+   → los niveles empiezan en 0 siendo este el nodo raiz
+   → el nivel depende de cuantos nodos conectados existen de inicia hasta el total de nodos conectados, la altura es el numero de niveles
+- sub arboles, vertices terminales e internos
+   → es una parte de un arbol que existe en un arbol mas grande
+   → un vertice terminal es donde termina el arbol, los internos es donde, los internos son aquellos que tienen hijos dentro del arbol
+- Arbol de expansion minimo
+   → es donde se tienen todos los nodos conectados entre si, y en ellos se tienen ciertos pesos entre conexione de nodo
+   → un minimo es donde se busca un arbol donde la conexion entre todos debe de ser minimo de coste
+   → en estos se busca que sean los de menor coste sin importar si ya tiene otra conexion, no se debe de crear un circuito entre las conexiones
+- Arbol binario
+   → solo se tienen dos hijos por cada uno de los vertices
+   → tipos
+      ⇒ binario completo, tiene sus dos ramas bien definidas o no tiene ninguna
+      ⇒ binario lleno, es identico al completo, pero todos llegan hasta un mismo nivel
+      ⇒ degenerado, la mayoria de sus hijos solo tienen un hijo
+- recorrido de arboles
+   → pre orden, raiz - izq - der
+   → in orden, izq - raiz - der
+   → pos orden, izq - der - raiz
+- expresioenes aritmeticas
+   → los vertices terminales son operandos (numeros)
+   → los vertices internos son operadores
+   → la raiz siempre debe de ser un operador
+   → se puede obtener por medio de:
+      ⇒ pre fijo que es pre orden
+      ⇒ entre fijo que es pos orden
+      ⇒ </rich_text>
       </node>
     </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
