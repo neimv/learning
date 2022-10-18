@@ -19,212 +19,6 @@ La utilidad principal de Excel es:
 En Excel la herramienta Filtro es Ăºtil para todas estas cosas, excepto para:
 </rich_text>
     </node>
-    <node name="Mates" unique_id="89" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638017" ts_lastsave="1664581715">
-      <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1654029130">
-        <rich_text>simbolos
-- son importantes por que estan a nuestro alrededor
-- las mates se crearon o se inventaron:
-   → se cree que ambas son reales en cierta medida
-- nosotros entendemos el universo a travez de nuestra mente, somo parte del universo
-- elementos basicos:
-   → numeros
-   → letras, realmente son alfabetos, el griego es importante
-   → simbolos aritmeticos
-   → elementos comunes, los tres puntos generalmente tiene una expresion muy distinto
-- existen ciertas expresiones matematicas que se consideran bellas, por ejemplo la idedntidad de euler, se compone de elementos basicos dentro de las mates
-
-Lenguaje matematico
-- aritmetica //
-   → es la base de todo en las matematicas
-   → generalmente esto ya se da por sentado
-   → existen otros metodos numericos, como el base 60, es muy favorable para las divisiones (2, 3, 4, 6, 10), nuestro tiempo se basa en este
-- algebra
-   → concepto abstracto de la variable
-      ⇒ la variable puede tener varios valores
-   → nace del persa: al-jabr wa-l
-   → geometrizacion del algebra
-   → griegos: latus - lado (incognita)
-   → arabes: mal y jadhr - lado o base
-   → europeos: jadhr - base o raiz de una planta
-- se tiene 3 periodos:
-   → retorica, se comunicaban de voz a voz, no existian los escritos
-   → anotadas, se hacia escribiendo con palabras
-   → simbolica, es donde stamos parados en este momento
-
-Numero y varibles
-- sistema binario
-- sistema decimal
-- sistema hexadecimalseparador decimal, coma o punto decimal, separar dentro de la parte entere de la fraccionaria
-- numero naturales, son con los cuales contamos, existe una definicion con el 0, pero es raro
-- enteros se tiene los negativos, 0 y naturales
-- racionales, se pueden dividir en fracciones m/n donde n no puede ser 0
-- irracionales, no se pueden expresa como una fraccion, como por ejemplo pi
-- reales, incluyes todo lo anterior y todos los que no se pueden expresar como fraccion
-- completos, numeros reales con el numero imaginario _i_
-- alfabetos
-   → el mas usado es el romano o latin
-   → griego, se usa bastante para angulos y constantes
-   → gotico, por ejemplo la d gotica para derivadas parciales
-- por que x siempre es la incognita
-   → Rene Descartes, fue quien empezo a usar las ultimas letras del alfabeto latino como incognitas y las primeras como parametros conocidos y se reforzo con los ejes cartecianos (x, y, z)
-
-Notacion cientifica
-- subindices:
-   → enumeriones, x_1, x_2
-   → diferenciadores, E_m = E_p + E_c
-   → contadores de iteraciones, A = (a_i,j)_2x2
-- se usan los puntos en diagonal cuando se expande hacia columnas y filas
-- super indices
-   → potencias, x^4
-   → diferenciadores, por ejemplo segunda derivada de y
-   → enumeraciones, se usa mas en textos: identidad de euler^1
-- Notacion cientifica
-   → se usa mucho para representar cantidades muy grande (positivo) y muy pequenio (negativos) mas facil
-   → constante de avogrado, es un numero muy grande que se require expresar con 10 ^ 23
-   → se usan prefijos de unidades en SI
-
-Aritmeticos y de agrupacion
-- se hace el uso de simbolos +: suma, -: resta, /: division y *: multipicacion, hay otras formas de hacer estos mismos, pero se complica en la computadora
-- jerarquia (de izquierda a derecha cuando salen juntos)
-   → signos de agrupacion
-   → potencia y raiz
-   → division y multiplicacion
-   → suma y resta
-- operadores de agrupacion, {}, [], (), en 1399, se usaba por primera vez, y fue el punto, para lectura, en 1470 se usaron parentesis
-   → John Wallis, vinculum, paso a ser la raiz cuadrada
-- simbolos combinados o alterados, como mas-menos y menos-mas
-
-comparacion y desigualdad
-- simbologia basica
-   → menor que
-   → mayor que
-   → menor igual que
-   → mayor igual que
-- intervalos finitos
-   → [a, b], a &lt;= x &lt;= b 
-   → [a, b), a &lt;= x &lt; b
-   → (a, b], a &lt; x &lt;= b
-- intervalos infinitos
-   → [-inf, a], -inf &lt; x &lt;= b 
-   → [-inf, a), -inf &lt; x &lt; a
-   → (-inf, inf], -inf &lt; x &lt; inf
-- relacion
-   → &lt;&lt; mucho menor que
-   → &gt;&gt; mucho mayor que
-   → ~ similar
-   → ~= congruente
-   → (tres puntos) ppor lo tanto
-   → E -&gt; pertenece
-- geometricos
-   → paralelos ||
-   → perpendicular, lineas perpendiculares
-   → angulo, angulo de 45
-   → angulo recto, angulo de 90
-   → trinagulo
-   → angulo XYZ, repsentado con un angulo de 45 con XYZ
-   → triangulo ABC, un triangulo con letras ABC
-   → existe los de:
-      ⇒ segmentos de linea con AB
-      ⇒ vector, linea con flecha
-      ⇒ recta, flecha para los dos lados
-      ⇒ arco, un “sombrero”
-
-Operadores logicos
-- </rich_text>
-      </node>
-      <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1665097537">
-        <rich_text>- la logica es todo aquello con lo que tomamos decisiones
-- aquello que tiene sentido para nosotros
-- es coherente, estructurado y tiene sentido
-- proposicion es dar un valor de verdadero o falso
-
-Valor de verdad
-- si se tiene p y q y alguna tiene un valor de verdadero, se pueden mezclar para obtener un valor resultado
-- se usa 2^n para saber cuantos valores se tienen
-- de aqui se puede tener la tabla de verdad
-- si todo es verdadero se tiene una tautologia
-
-Teoria de graficas (grafos)
-- modelos mateamaticos que sirven para representar relaciones entre objetos de un conjunto
-- es un conjunto de vertices conectados atraves de aristas e = (v, w)
-- se pueden aplicar casi a todo
-- nos ayudan a identificar rutas optimas
-- tipos de grafos
-   → simple, solo hay un camino que une los grafos
-   → multigrafo, existen varios caminos unidos de los puntos
-   → pseudografo, se tienen caminos hacia el mismo nodo
-   → ponderado, tienen un numero de unidad asociada al nodo, nos dice que distancia se tiene o peso
-   → dirigido, dice hacia donde se puede ir, puede ser que solo tenga un camino
-   → multigrafo dirigido, se tienen distintas rutas y direcciones
-- grado:
-   → numero de aristas que inciden
-   → todos los grados se pueden calcular: Sum dev(v) = 2 |E|, dos veces el numero de aristas que se tienen en grafo
-   → para que se puede visitar un grafo donde se tengan mas de dos grados de tipo impar no se puede hacer sin pasar por un vertice 2 veces
-   → caminos, cadenas y ciclos:
-      ⇒ una cadena es una sucecion de aristas y suceciones donde se puede recorrer el grafico
-      ⇒ camino, sucecion donde no se puede repetir ningun vertice ni ninguna arista
-      ⇒ ciclo, es un camino, siempre se repite el vertice final
-      ⇒ cadena cerrada, se inicia en un nodo y termina en ese nodo, pero se pueden repiten los vertices
-      ⇒ grafo conexo, donde se tienen todos los vertices conectados entre si, si no se tiene la conexion entre los dos grafos es no conexo
-- Eulerianos (pasar por todos los caminos y aristas)
-   → en un camino euleriano se pueden repetir los vertices pero no se puede pasar por el mismo camino, se inicia en un punto termina en otro punto
-   → este dependera del grado de los vertices, no mas de dos vertices con grado impar, si existen, debe iniciar y terminar en los vertices de grado impar
-   → para un ciclo, todos los vertices deben de ser un grado par
-- hamiltoneanos
-   → recorrer todos los nodos solo una vez, sin importar cuantas veces pasemos por los caminos, puede que no pasen por todos los caminos, camino
-   → grado(u) - grado(v) &gt;= n - 1, u es inicio, v es final, n es numero de vertices, no es una condicion necesaria y suficiente
-   → puede ser camino pero no es ciclo, por ejemplo cuando lso vertices tienen grado 1
-- matriz de adyaciencia
-   → se usa para poner en una matriz los nodos cuantas conexiones tienen entre si, en dado caso de tener una conexion consigo mismo es representable a 1
-   → si se suman las filas se tiene el grado de cada vertice
-- matriz de incidencia
-   → este se tiene los nodos y las aristas nombradas
-   → se analiza columna por columna, por eso es llamado incidencia
-   → es una matriz exclusivamente de 0 y 1
-- para saber si un grafo es dirigido o no dirigido la matriz debe de ser no simetrica, las filas son iguales que las columnas
-
-Arboles
-- se usa bastante en machine learning
-- se organiza una atras de la otra
-- son los tipos de graficos ams usados en programacion
-- nos permiten organizar datos (objetos)
-- si se tiene un nodo a y b solo se tiene una conexion entre ellos
-- se usan para expresar relaciones de jerarquia
-- tipos
-   → libres, no e ve claro cual es el nodo raiz
-   → raiz, donde se ve una estructura clara
-   → expansion, se tiene una unidad o recurso asociados a las conexiones entre nodos
-   → binarios, aquellos donde solo se tienen dos conexiones en cada nivel
-- nivel y altura:
-   → los niveles empiezan en 0 siendo este el nodo raiz
-   → el nivel depende de cuantos nodos conectados existen de inicia hasta el total de nodos conectados, la altura es el numero de niveles
-- sub arboles, vertices terminales e internos
-   → es una parte de un arbol que existe en un arbol mas grande
-   → un vertice terminal es donde termina el arbol, los internos es donde, los internos son aquellos que tienen hijos dentro del arbol
-- Arbol de expansion minimo
-   → es donde se tienen todos los nodos conectados entre si, y en ellos se tienen ciertos pesos entre conexione de nodo
-   → un minimo es donde se busca un arbol donde la conexion entre todos debe de ser minimo de coste
-   → en estos se busca que sean los de menor coste sin importar si ya tiene otra conexion, no se debe de crear un circuito entre las conexiones
-- Arbol binario
-   → solo se tienen dos hijos por cada uno de los vertices
-   → tipos
-      ⇒ binario completo, tiene sus dos ramas bien definidas o no tiene ninguna
-      ⇒ binario lleno, es identico al completo, pero todos llegan hasta un mismo nivel
-      ⇒ degenerado, la mayoria de sus hijos solo tienen un hijo
-- recorrido de arboles
-   → pre orden, raiz - izq - der
-   → in orden, izq - raiz - der
-   → pos orden, izq - der - raiz
-- expresioenes aritmeticas
-   → los vertices terminales son operandos (numeros)
-   → los vertices internos son operadores
-   → la raiz siempre debe de ser un operador
-   → se puede obtener por medio de:
-      ⇒ pre fijo que es pre orden
-      ⇒ entre fijo que es in orden
-      ⇒ pos fijo que es pos orden</rich_text>
-      </node>
-    </node>
     <node name="Analisis de negocios" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689619" ts_lastsave="1618440726">
       <rich_text>¿Que es la ciencia de datos?
 - big data: gran volumen de información
@@ -1810,86 +1604,6 @@ Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
-    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652291243">
-      <rich_text>Las matematicas son un lenguaje
-las funciones nor permiten modelar nuestra realidad
-
-que es una funcion?
-- funciones de una sola variable, es por que depende de una sola cosa para que varie
-- una funcion es copmo una maquina, donde entra un elemento x para que salgo una y
-- es una regla donde cada elemento de un conjunto A se le asina un conjunto de B
-- se puede representar:
-   → verbalemente, habladito che
-   → numericamente, generalmente una tabla de valores
-   → visualmente, por medio de grafica, donde represente los valores
-   → algebraicamente, la mas guapa, y = f(x) = x
-- tipos de variables
-   → variables cualitativas
-      ⇒ nominales, se les asigna una cualidad, por ejemplo los colores
-      ⇒ ordinales, representan un orden, como se puede acomodar un objeto
-      ⇒ binarias, solo tomand dos valores, unos y ceros
-   → variables cuantitativas
-      ⇒ discretas, representan un numero de valores finitos, son puramente enteras, se separan por pasos
-      ⇒ continuas sus valores pueden ser infinitos, toman valores dentro de los numero reales
-- dominio y rango
-   → que valores pueden tener las funciones?
-      ⇒ dominio, son los valores que toma x-independiente
-      ⇒ rango son los resultados que nos da una funcion
-- simbolos: </rich_text>
-      <rich_text link="webs https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm">https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm</rich_text>
-      <rich_text>
-- conjuntos:
-   → de forma grafica y circular
-   → el universo se representa con omega
-   → union, todos los elementos de los conjuntos se unen, se representan con U
-   → interseccion, son solo los elementos que se comparte: se representa con una U volteada
-   → perteneces es como una E: a E A, la E es curveada
-   → se tiene el conjunto vacio que se representa con una circulo con una linea enmedio o con {}
-   → conjuntos de numeros
-      ⇒ naturales, son todos los enteros sin incluir el cero, discreto
-      ⇒ enteros, son todos los enteros negativos y positivos, tambien es discreto
-      ⇒ racionales, incluyen decimales y fracciones, a/b pertenecen a los enteros, donde b es diferente de 0
-      ⇒ Irracionales, todos aquellos numero que tienen una expansion de decimal que no sse pueden escribir as: a/b, por ejemplo pi, euler
-      ⇒ naturales es la union de todos los demas conjuntos, hay naturales positivos y naturales negativos
-- Funciones y mas funciones (algebraicas y trascendentales)
-   → el notebook esta en visualizacion_matplot
-   → funcion lineal, tiene la forma f(x) = mx + b, solo depende de uno que es completamente lineal en este caso X
-      ⇒ el dominio y rango van de -inf a inf
-      ⇒ las funciones que grafican las computadoras son discretas
-      ⇒ b = bias, donde corta x
-   → polinomicas, es un polinomio de X, de x a la n hasta x a la cero
-      ⇒ el grado es el numero mas grande que tiene nuestra funcion
-      ⇒ generalmente los pares hacen curvas de concavas, los impares no
-   → funciones trascendentes, no se pueden hacer por medio de sumas de polinomios, el caso de funciones trigonometricas, exponenciales, logaritmicas
-   → funciones seccionadas, nciones que se comportan diferente dependiendo de los trozos, por ejemplo la funcion de Heaviside
-   → funciones compuestas, es la combinacion de varias funciones, es lo llamado (f o g ), pasa por una funcion primero y luego pasa por la otra, en f o g, siempre pasa primero la evaluacion de g luego la de f
-   → Funciones reales:
-      ⇒ sus dominio y rango estan contenidos en el conjunto de los reales
-- el perceptron
-   → es la forma de como se define una neurona artificial
-   → diferentes seniales de entrada, varios pesos, union sumadora, una funcion activadora y una salida
-   → pesos sinapticos, numeros encargados de ponderar lo que entra
-   → la funcion sumadora nos permite sumar el valor de entrada por su peso ponderado
-   → carlos alarcon redes neuronales
-- funciones de activacion
-   → sirven para dar funciones de salida diferentes al perceptron
-   → funcion lineal, lo que pasa lo regresa igual, sirve para mantener valores a travez de un proceso
-   → funcion Heaviside, sirve para hacer clasificaciones categoricas, un booleano
-   → sigmoide, sirve para un proceso de regresion logistica, sirve mucho pra probabilidades, los negativos siempre se acercaran al cero, al tocar el cero en x, se va la mitad mientras mas grande sea el valor tenderan al 1
-   → tangente hiperbolica, funcion de escalamiento, va de -1 a 1, tiene que ver muhco con back propagation, si se acerca a 0 va a valer cero, si son muy grandes tienden a ser 1 y si son negativos a -1
-   → ReLU, si el valor es 0 o menor que cero lo pone como cero, si es mayor que cero lo pondra como x, si exite lo tomo en cuenta si no no lo tomo en cuenta, existe una variacion llamada liquid ReLu
-- regresion lineal simple, 
-   → punto de corte es bias
-   → inclinacion es la pendiente
-- calculo del error:
-   → el error es que tan lejos estoy de valor original al de prediccion
-   → e = y_pred - y_real
-   → |e| = |y_pred - y_real|
-   → e**2 = (y_pred - y_real)**2
-   → E = SUM_i=i-N (y_pred - y_real)**2
-   → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
-</rich_text>
-    </node>
     <node name="postgresql" unique_id="92" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654044994" ts_lastsave="1655318818">
       <rich_text>postgres es un motor de base de datos,
 lenguaje, PL/PSQL
@@ -2899,7 +2613,8 @@ Analisis Bivariado
 Paradoja de simpson
 - es un fenomeno en el cual se pueden concluir dos cosas totalmente opuestas a partir de los mismos datos, dependiendo el como se clasifican estos</rich_text>
     </node>
-    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1664229117">
+    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1665437609">
+      <rich_text>p = t</rich_text>
       <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664739247">
         <rich_text>es un subdominio de la IA, proporciona a los sistemas la capacidad de aprender y mejorar automaticamente, sin ser programados para ellos, es generalmente crear un modelo que se va mejorando con mas datos hacia el modelo a lo largo del tiempo (experiencia en datos)
 se obtiene experiencia pasada, se determina un algoritmo de ML para el problema, se tomand los datos y se proporcionan al algoritmo que se decidio, este entrena y se construye el modelo
@@ -6067,7 +5782,7 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1664132487">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1665440693">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -6911,6 +6626,25 @@ How to do things
    → how do you spell your name?</rich_text>
     </node>
     <node name="elementos y expresiones de trabajo" unique_id="112" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664132487" ts_lastsave="1664132487"/>
+    <node name="miembros de la familia" unique_id="118" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1665440693" ts_lastsave="1665441748">
+      <rich_text>family members
+- close family
+   → mother
+   → father
+   → sister, brother or siblings
+- extend family
+   → grandmother
+   → grandfather
+   → aunts and uncles
+   → cousins
+   → niece or nephew, (sobrinos)
+- in laws
+   → family members of husbando or wife
+
+Nice to meet you
+- this is a monologue of me
+- My name, my age, what I am, what is my profession, my hobbies, what I love, my favorite food</rich_text>
+    </node>
   </node>
   <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1658543502">
     <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658873170">
@@ -7091,7 +6825,316 @@ Apdex, application performance index
    → </rich_text>
     </node>
   </node>
-  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1657140372">
+  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1665438687">
+    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1666052420">
+      <rich_text>Las matematicas son un lenguaje
+las funciones nor permiten modelar nuestra realidad
+
+que es una funcion?
+- funciones de una sola variable, es por que depende de una sola cosa para que varie
+- una funcion es copmo una maquina, donde entra un elemento x para que salgo una y
+- es una regla donde cada elemento de un conjunto A se le asina un conjunto de B
+- se puede representar:
+   → verbalemente, habladito che
+   → numericamente, generalmente una tabla de valores
+   → visualmente, por medio de grafica, donde represente los valores
+   → algebraicamente, la mas guapa, y = f(x) = x
+- tipos de variables
+   → variables cualitativas
+      ⇒ nominales, se les asigna una cualidad, por ejemplo los colores
+      ⇒ ordinales, representan un orden, como se puede acomodar un objeto
+      ⇒ binarias, solo tomand dos valores, unos y ceros
+   → variables cuantitativas
+      ⇒ discretas, representan un numero de valores finitos, son puramente enteras, se separan por pasos
+      ⇒ continuas sus valores pueden ser infinitos, toman valores dentro de los numero reales
+- dominio y rango
+   → que valores pueden tener las funciones?
+      ⇒ dominio, son los valores que toma x-independiente
+      ⇒ rango son los resultados que nos da una funcion
+- simbolos: </rich_text>
+      <rich_text link="webs https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm">https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm</rich_text>
+      <rich_text>
+- conjuntos:
+   → de forma grafica y circular
+   → el universo se representa con omega
+   → union, todos los elementos de los conjuntos se unen, se representan con U
+   → interseccion, son solo los elementos que se comparte: se representa con una U volteada
+   → perteneces es como una E: a E A, la E es curveada
+   → se tiene el conjunto vacio que se representa con una circulo con una linea enmedio o con {}
+   → conjuntos de numeros
+      ⇒ naturales, son todos los enteros sin incluir el cero, discreto
+      ⇒ enteros, son todos los enteros negativos y positivos, tambien es discreto
+      ⇒ racionales, incluyen decimales y fracciones, a/b pertenecen a los enteros, donde b es diferente de 0
+      ⇒ Irracionales, todos aquellos numero que tienen una expansion de decimal que no sse pueden escribir as: a/b, por ejemplo pi, euler
+      ⇒ naturales es la union de todos los demas conjuntos, hay naturales positivos y naturales negativos
+- Funciones y mas funciones (algebraicas y trascendentales)
+   → el notebook esta en visualizacion_matplot
+   → funcion lineal, tiene la forma f(x) = mx + b, solo depende de uno que es completamente lineal en este caso X
+      ⇒ el dominio y rango van de -inf a inf
+      ⇒ las funciones que grafican las computadoras son discretas
+      ⇒ b = bias, donde corta x
+   → polinomicas, es un polinomio de X, de x a la n hasta x a la cero
+      ⇒ el grado es el numero mas grande que tiene nuestra funcion
+      ⇒ generalmente los pares hacen curvas de concavas, los impares no
+   → funciones trascendentes, no se pueden hacer por medio de sumas de polinomios, el caso de funciones trigonometricas, exponenciales, logaritmicas
+   → funciones seccionadas, nciones que se comportan diferente dependiendo de los trozos, por ejemplo la funcion de Heaviside
+   → funciones compuestas, es la combinacion de varias funciones, es lo llamado (f o g ), pasa por una funcion primero y luego pasa por la otra, en f o g, siempre pasa primero la evaluacion de g luego la de f
+   → Funciones reales:
+      ⇒ sus dominio y rango estan contenidos en el conjunto de los reales
+- el perceptron
+   → es la forma de como se define una neurona artificial
+   → diferentes seniales de entrada, varios pesos, union sumadora, una funcion activadora y una salida
+   → pesos sinapticos, numeros encargados de ponderar lo que entra
+   → la funcion sumadora nos permite sumar el valor de entrada por su peso ponderado
+   → carlos alarcon redes neuronales
+- funciones de activacion
+   → sirven para dar funciones de salida diferentes al perceptron
+   → funcion lineal, lo que pasa lo regresa igual, sirve para mantener valores a travez de un proceso
+   → funcion Heaviside, sirve para hacer clasificaciones categoricas, un booleano
+   → sigmoide, sirve para un proceso de regresion logistica, sirve mucho pra probabilidades, los negativos siempre se acercaran al cero, al tocar el cero en x, se va la mitad mientras mas grande sea el valor tenderan al 1
+   → tangente hiperbolica, funcion de escalamiento, va de -1 a 1, tiene que ver muhco con back propagation, si se acerca a 0 va a valer cero, si son muy grandes tienden a ser 1 y si son negativos a -1
+   → ReLU, si el valor es 0 o menor que cero lo pone como cero, si es mayor que cero lo pondra como x, si exite lo tomo en cuenta si no no lo tomo en cuenta, existe una variacion llamada liquid ReLu
+- regresion lineal simple, 
+   → punto de corte es bias
+   → inclinacion es la pendiente
+- calculo del error:
+   → el error es que tan lejos estoy de valor original al de prediccion
+   → e = y_pred - y_real
+   → |e| = |y_pred - y_real|
+   → e**2 = (y_pred - y_real)**2
+   → E = SUM_i=i-N (y_pred - y_real)**2
+   → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
+</rich_text>
+    </node>
+    <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1665438600">
+      <rich_text>- la logica es todo aquello con lo que tomamos decisiones
+- aquello que tiene sentido para nosotros
+- es coherente, estructurado y tiene sentido
+- proposicion es dar un valor de verdadero o falso
+
+Valor de verdad
+- si se tiene p y q y alguna tiene un valor de verdadero, se pueden mezclar para obtener un valor resultado
+- se usa 2^n para saber cuantos valores se tienen
+- de aqui se puede tener la tabla de verdad
+- si todo es verdadero se tiene una tautologia
+
+Teoria de graficas (grafos)
+- modelos mateamaticos que sirven para representar relaciones entre objetos de un conjunto
+- es un conjunto de vertices conectados atraves de aristas e = (v, w)
+- se pueden aplicar casi a todo
+- nos ayudan a identificar rutas optimas
+- tipos de grafos
+   → simple, solo hay un camino que une los grafos
+   → multigrafo, existen varios caminos unidos de los puntos
+   → pseudografo, se tienen caminos hacia el mismo nodo
+   → ponderado, tienen un numero de unidad asociada al nodo, nos dice que distancia se tiene o peso
+   → dirigido, dice hacia donde se puede ir, puede ser que solo tenga un camino
+   → multigrafo dirigido, se tienen distintas rutas y direcciones
+- grado:
+   → numero de aristas que inciden
+   → todos los grados se pueden calcular: Sum dev(v) = 2 |E|, dos veces el numero de aristas que se tienen en grafo
+   → para que se puede visitar un grafo donde se tengan mas de dos grados de tipo impar no se puede hacer sin pasar por un vertice 2 veces
+   → caminos, cadenas y ciclos:
+      ⇒ una cadena es una sucecion de aristas y suceciones donde se puede recorrer el grafico
+      ⇒ camino, sucecion donde no se puede repetir ningun vertice ni ninguna arista
+      ⇒ ciclo, es un camino, siempre se repite el vertice final
+      ⇒ cadena cerrada, se inicia en un nodo y termina en ese nodo, pero se pueden repiten los vertices
+      ⇒ grafo conexo, donde se tienen todos los vertices conectados entre si, si no se tiene la conexion entre los dos grafos es no conexo
+- Eulerianos (pasar por todos los caminos y aristas)
+   → en un camino euleriano se pueden repetir los vertices pero no se puede pasar por el mismo camino, se inicia en un punto termina en otro punto
+   → este dependera del grado de los vertices, no mas de dos vertices con grado impar, si existen, debe iniciar y terminar en los vertices de grado impar
+   → para un ciclo, todos los vertices deben de ser un grado par
+- hamiltoneanos
+   → recorrer todos los nodos solo una vez, sin importar cuantas veces pasemos por los caminos, puede que no pasen por todos los caminos, camino
+   → grado(u) - grado(v) &gt;= n - 1, u es inicio, v es final, n es numero de vertices, no es una condicion necesaria y suficiente
+   → puede ser camino pero no es ciclo, por ejemplo cuando lso vertices tienen grado 1
+- matriz de adyaciencia
+   → se usa para poner en una matriz los nodos cuantas conexiones tienen entre si, en dado caso de tener una conexion consigo mismo es representable a 1
+   → si se suman las filas se tiene el grado de cada vertice
+- matriz de incidencia
+   → este se tiene los nodos y las aristas nombradas
+   → se analiza columna por columna, por eso es llamado incidencia
+   → es una matriz exclusivamente de 0 y 1
+- para saber si un grafo es dirigido o no dirigido la matriz debe de ser no simetrica, las filas son iguales que las columnas
+
+Arboles
+- se usa bastante en machine learning
+- se organiza una atras de la otra
+- son los tipos de graficos ams usados en programacion
+- nos permiten organizar datos (objetos)
+- si se tiene un nodo a y b solo se tiene una conexion entre ellos
+- se usan para expresar relaciones de jerarquia
+- tipos
+   → libres, no e ve claro cual es el nodo raiz
+   → raiz, donde se ve una estructura clara
+   → expansion, se tiene una unidad o recurso asociados a las conexiones entre nodos
+   → binarios, aquellos donde solo se tienen dos conexiones en cada nivel
+- nivel y altura:
+   → los niveles empiezan en 0 siendo este el nodo raiz
+   → el nivel depende de cuantos nodos conectados existen de inicia hasta el total de nodos conectados, la altura es el numero de niveles
+- sub arboles, vertices terminales e internos
+   → es una parte de un arbol que existe en un arbol mas grande
+   → un vertice terminal es donde termina el arbol, los internos es donde, los internos son aquellos que tienen hijos dentro del arbol
+- Arbol de expansion minimo
+   → es donde se tienen todos los nodos conectados entre si, y en ellos se tienen ciertos pesos entre conexione de nodo
+   → un minimo es donde se busca un arbol donde la conexion entre todos debe de ser minimo de coste
+   → en estos se busca que sean los de menor coste sin importar si ya tiene otra conexion, no se debe de crear un circuito entre las conexiones
+- Arbol binario
+   → solo se tienen dos hijos por cada uno de los vertices
+   → tipos
+      ⇒ binario completo, tiene sus dos ramas bien definidas o no tiene ninguna
+      ⇒ binario lleno, es identico al completo, pero todos llegan hasta un mismo nivel
+      ⇒ degenerado, la mayoria de sus hijos solo tienen un hijo
+- recorrido de arboles
+   → pre orden, raiz - izq - der
+   → in orden, izq - raiz - der
+   → pos orden, izq - der - raiz
+- expresioenes aritmeticas
+   → los vertices terminales son operandos (numeros)
+   → los vertices internos son operadores
+   → la raiz siempre debe de ser un operador
+   → se puede obtener por medio de:
+      ⇒ pre fijo que es pre orden
+      ⇒ entre fijo que es in orden
+      ⇒ pos fijo que es pos orden
+
+ALGORITMOS
+- algoritmo de Prim
+   → encontrar el arbol de expansion minimo en una representacion grafica
+   → inicio -&gt; selecciona un vertice -&gt; selecciona la arista de menor peso conectada al vertice seleccionado -&gt; en cada iteracion selecciona la arista de menor perso relacionado con los vertices conectados -&gt; el algoritmo finaliza cuando todos los vertices estan conectados con n-1 aristas -&gt; fin
+   → debido a que es un arbol, se pueden tomar cualquiera de las aristas de los nodos conectados, por ejemplo si tenemos dos nodos y en uno de ellos se tiene una arista menor no importa si fue el primero que el otro, se puede tomar el de menor costo, CUIDADO: no se deben de formar circuitos
+- algoritmo de DIJKSTRA
+   → busca la ruta optima o coste optimo entre conectar un punto de inicio con uno final
+   → Inicio -&gt; asignar para cada nodo no visitado infinito -&gt; mantener un registo de los nodos visitados -&gt; calcular distancias a cada nuevo nodo sumando la distancia anterior -&gt; si la distancia nueva calculada es menor que la anterior, reemplazarla, sino ignorarlo -&gt; el algoritmo finaliza cuando se llega al nodo final -&gt; fin
+   → se hacen multiples iteraciones para ir probando varios caminos apra llegar el nodo que se busca
+- algoritmo de Kruskal
+   → se busca conectar el minimo coste, se basa en las conexiones que se tienen, se busca de principio la conexion con menor coste
+   → Inicio -&gt; selecciona arista menor -&gt; en cada iteracion agregue la arista de menor longitud del conjunto de arcos disponibles -&gt; el algoritmo finaliza cuando todos los vertices estan conectado con n-1 arcos -&gt; inicio
+   → se buscan conectar los nodos primero por las menores conexiones, sin importar si aun no estan conectados con el primer nodo
+- algoritmo de FLEURY
+   → este sirve para obtener un circuito euleriano
+   → se crean subciclos para irlos uniendo, se unen donde el nodo es tocado por el anterior subciclo, como si se hiciera una substitucion
+   → inicio -&gt; verificar grado de mi grafico -&gt; realizar un circuito cerrado -&gt; en cada iteracion contruye un nuevo camino cerrado visitando aristas incidentes que no han sido visitados -&gt; reemplaza cada nuevo circuito en el inicial hasta visitar todas las aristas -&gt; fin
+- algoritmo de flujo maximo
+   → se aplica sobre un grafo dirigido
+   → es saber que tanto se puede enviar por un grafo dirigido
+   → se busca donde se tenga mas flujo
+   → se selecciona por caminos del punto de inicio hasta donde es el final
+   → se busca por donde enviar toda la informacion, pasando por todo el grafo
+   → Inicio -&gt; direccionar flujos e iniciar en ceros -&gt; obtener trayectoras buscando siempre el mayor flujo -&gt; escoger el menor flujo de la trayectoria -&gt; actualizar el grafico con las capacidades minimas -&gt; buscar nueva trayectoria en aumento y repetir hasta que no exista mas -&gt; fin</rich_text>
+    </node>
+    <node name="simbolos matematicos" unique_id="90" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652638040" ts_lastsave="1665438595">
+      <rich_text>simbolos
+- son importantes por que estan a nuestro alrededor
+- las mates se crearon o se inventaron:
+   → se cree que ambas son reales en cierta medida
+- nosotros entendemos el universo a travez de nuestra mente, somo parte del universo
+- elementos basicos:
+   → numeros
+   → letras, realmente son alfabetos, el griego es importante
+   → simbolos aritmeticos
+   → elementos comunes, los tres puntos generalmente tiene una expresion muy distinto
+- existen ciertas expresiones matematicas que se consideran bellas, por ejemplo la idedntidad de euler, se compone de elementos basicos dentro de las mates
+
+Lenguaje matematico
+- aritmetica //
+   → es la base de todo en las matematicas
+   → generalmente esto ya se da por sentado
+   → existen otros metodos numericos, como el base 60, es muy favorable para las divisiones (2, 3, 4, 6, 10), nuestro tiempo se basa en este
+- algebra
+   → concepto abstracto de la variable
+      ⇒ la variable puede tener varios valores
+   → nace del persa: al-jabr wa-l
+   → geometrizacion del algebra
+   → griegos: latus - lado (incognita)
+   → arabes: mal y jadhr - lado o base
+   → europeos: jadhr - base o raiz de una planta
+- se tiene 3 periodos:
+   → retorica, se comunicaban de voz a voz, no existian los escritos
+   → anotadas, se hacia escribiendo con palabras
+   → simbolica, es donde stamos parados en este momento
+
+Numero y varibles
+- sistema binario
+- sistema decimal
+- sistema hexadecimalseparador decimal, coma o punto decimal, separar dentro de la parte entere de la fraccionaria
+- numero naturales, son con los cuales contamos, existe una definicion con el 0, pero es raro
+- enteros se tiene los negativos, 0 y naturales
+- racionales, se pueden dividir en fracciones m/n donde n no puede ser 0
+- irracionales, no se pueden expresa como una fraccion, como por ejemplo pi
+- reales, incluyes todo lo anterior y todos los que no se pueden expresar como fraccion
+- completos, numeros reales con el numero imaginario _i_
+- alfabetos
+   → el mas usado es el romano o latin
+   → griego, se usa bastante para angulos y constantes
+   → gotico, por ejemplo la d gotica para derivadas parciales
+- por que x siempre es la incognita
+   → Rene Descartes, fue quien empezo a usar las ultimas letras del alfabeto latino como incognitas y las primeras como parametros conocidos y se reforzo con los ejes cartecianos (x, y, z)
+
+Notacion cientifica
+- subindices:
+   → enumeriones, x_1, x_2
+   → diferenciadores, E_m = E_p + E_c
+   → contadores de iteraciones, A = (a_i,j)_2x2
+- se usan los puntos en diagonal cuando se expande hacia columnas y filas
+- super indices
+   → potencias, x^4
+   → diferenciadores, por ejemplo segunda derivada de y
+   → enumeraciones, se usa mas en textos: identidad de euler^1
+- Notacion cientifica
+   → se usa mucho para representar cantidades muy grande (positivo) y muy pequenio (negativos) mas facil
+   → constante de avogrado, es un numero muy grande que se require expresar con 10 ^ 23
+   → se usan prefijos de unidades en SI
+
+Aritmeticos y de agrupacion
+- se hace el uso de simbolos +: suma, -: resta, /: division y *: multipicacion, hay otras formas de hacer estos mismos, pero se complica en la computadora
+- jerarquia (de izquierda a derecha cuando salen juntos)
+   → signos de agrupacion
+   → potencia y raiz
+   → division y multiplicacion
+   → suma y resta
+- operadores de agrupacion, {}, [], (), en 1399, se usaba por primera vez, y fue el punto, para lectura, en 1470 se usaron parentesis
+   → John Wallis, vinculum, paso a ser la raiz cuadrada
+- simbolos combinados o alterados, como mas-menos y menos-mas
+
+comparacion y desigualdad
+- simbologia basica
+   → menor que
+   → mayor que
+   → menor igual que
+   → mayor igual que
+- intervalos finitos
+   → [a, b], a &lt;= x &lt;= b 
+   → [a, b), a &lt;= x &lt; b
+   → (a, b], a &lt; x &lt;= b
+- intervalos infinitos
+   → [-inf, a], -inf &lt; x &lt;= b 
+   → [-inf, a), -inf &lt; x &lt; a
+   → (-inf, inf], -inf &lt; x &lt; inf
+- relacion
+   → &lt;&lt; mucho menor que
+   → &gt;&gt; mucho mayor que
+   → ~ similar
+   → ~= congruente
+   → (tres puntos) ppor lo tanto
+   → E -&gt; pertenece
+- geometricos
+   → paralelos ||
+   → perpendicular, lineas perpendiculares
+   → angulo, angulo de 45
+   → angulo recto, angulo de 90
+   → trinagulo
+   → angulo XYZ, repsentado con un angulo de 45 con XYZ
+   → triangulo ABC, un triangulo con letras ABC
+   → existe los de:
+      ⇒ segmentos de linea con AB
+      ⇒ vector, linea con flecha
+      ⇒ recta, flecha para los dos lados
+      ⇒ arco, un “sombrero”
+
+Operadores logicos
+- </rich_text>
+    </node>
     <node name="calculo" unique_id="39" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840076" ts_lastsave="1617842337">
       <rich_text>Funcion
 - es una relación entre dos conjuntos a traves de la cual cada elemento le corresponde un unico elemento ninguno del otro conjunto
@@ -7195,6 +7238,38 @@ Asimetria:
    → Medida de Fisher (datos sin agrupar):  A_s = Sum_i^n(x_i - x_med)^3 / n*s^3 (n -&gt; total de datos, s -&gt; desviacion tipica)
       ⇒ con datos agrupados con frecuencias: A_s = Sum_i^n n_i*(x_i - x_med)^3 / n*s^3 (n -&gt; total de datos, s -&gt; desviacion tipica)
       ⇒ con datos agrupados por intervalos: A_s = Sum_i^n n_i*(x_mi - x_med)^3 / n*s^3 (n -&gt; total de datos, s -&gt; desviacion tipica, m_i marca de clase, n_i frecuencia por cada clase)</rich_text>
+    </node>
+    <node name="calculo diferencial" unique_id="117" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1665438687" ts_lastsave="1666050317">
+      <rich_text>que es el calculo
+- es una rama de las matematicas que es el calculo infinitesimal
+   → es la variacion de las funciones cuando se tienen cambios muy pequenios
+   → existen dos divisiones
+      ⇒ calculo diferencial: estudia la tasa de cambio de las funciones cuando esos cambios son muy pequenios (se aproximan a cero)
+      ⇒ calculo integral: estudia el proceso de integracion o de antiderivacion
+
+Que es un limite?
+- el limite es cuando la funcion f(x) si x tienda a ‘a’ es igual a ‘L’, se conoce si nos va a retornar un valor o no
+- si el limite por izquierda y por la derecha son iguales cuando se tiene a ‘a’, entonces el limite ‘L’ existe
+
+Definicion de la derivada
+- nace entre fisicos la recta tangente
+- nace de una secante, funcion que corta una curva en dos puntos
+- la pendiente se calcula con y = mx + b
+- pendiente de la recta tangente es la derivada
+
+La derivada como razon de cambio
+- nos ayuda a identificar la rapidez de cambio de algo'
+- se usa mucho para cuestiones de optimizacion dentro del machine learning
+
+La regla de la cadena
+- es cuando se tiene la composicion de funcion
+- la composicion de funciones es mas como un proceso de algo que va a pasar
+
+Maximos y minimos
+- si la pendiente es positiva va a crecer, la derivada mayor a 0,
+- la derivada es menor que 0 entonces esta decreciendo
+- si la derivada es igual a cero este puede ser un maximo y un minimo, puntos criticos
+- si a la derecha es positivo y a la izquierda negativa es un minimo de forma inversa es un punto maximo</rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
