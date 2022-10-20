@@ -1893,7 +1893,7 @@ Particiones
 - en las particiones no existen como tal las llaves primarias
 - aqui el indice y clave es por donde se particiono la tabla</rich_text>
     </node>
-    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1663360401">
+    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1666130308">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
       <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656961210">
         <rich_text>- first week
@@ -2232,6 +2232,48 @@ Setting environment
       <node name="ML Engineer" unique_id="110" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663360401" ts_lastsave="1663361604">
         <rich_text>- Introduction to ML
    → </rich_text>
+      </node>
+      <node name="introduccion al ML por MindsDB" unique_id="119" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1666130308" ts_lastsave="1666132071">
+        <rich_text>- aprender a preparar dats y visualizarlos
+- entender diferentes algoritmos de machine learning
+- explorar deep learning y redes neuronales
+
+Historia del machine learning
+- uso de algoritmos tpara identificar patrones en datos con el fin de resolver un problema de interes
+- existen dos tipos
+   → aprendizaje supervisado
+   → aprendizaje no supervisado
+- es usado actualmente en la vida de todo el mundo, spam de correos por ejemplo
+- los modelos aprenden patrones de los features
+- ml es un campo en crecimiento
+
+herramientas para machine learning
+- terminologia
+   → data, unidades de informacion
+   → features, tipos de informacion acerca de tus variables
+   → filas, observaciones individuales o muestras
+   → columnas, features que describen tus observaciones
+   → outlier, puntos de datos que se comporta de forma extrania
+   → pre-processing, preparar los datos para us uso en un modelo de ML
+   → ETL pipeline, framework de data science para hacer ETL
+- tipos de datos
+   → numericos, de tipo entero o flotante
+   → categoria, representan una clase o tipo, se representa con mapeo de numeros o un ohe-hot vector
+   → image, se representa por una imagen
+   → texto, es en forma de texto corto o largo
+   → NaN, este tipo de datos es desconocido o perdido
+- generalmente se usa 1-hot enconder para etiquets categoricas
+- es muy importante poder saber que relacion tienen los features para poder saber que ML usar
+- histogramas para ver la distribucion de un feature
+- de dispersion permiten ver la relacion entre dos features
+
+Tipos de modelos de machine learning
+- aprendizaje no supervisado, objetivo desconocido, queremos encontrar estructura y grupos dentro de los datos
+   → clustering, queremos encontrar grupos en los datos, k-means
+   → dimesionality reduction, se busca encontrar que features de entrada en los datos son de ayuda, PCA
+- aprendizaje supervisado, un objetivo a predecir
+   → regresion, este es numerico, regresion lineal
+   → clasificacion, este es una etiqueta, algo categorico, regresion logistica</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>

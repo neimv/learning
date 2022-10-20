@@ -1604,86 +1604,6 @@ Sentencia de Matplotlib para crear un lineplot de x, y con puntos azules:
 ¿En la sentencia de Matplotlib "fig, axes = plt.subplots(nrows=1, ncols=2)" axes de qué tipo se le asigna un objeto?
 </rich_text>
     </node>
-    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1652291243">
-      <rich_text>Las matematicas son un lenguaje
-las funciones nor permiten modelar nuestra realidad
-
-que es una funcion?
-- funciones de una sola variable, es por que depende de una sola cosa para que varie
-- una funcion es copmo una maquina, donde entra un elemento x para que salgo una y
-- es una regla donde cada elemento de un conjunto A se le asina un conjunto de B
-- se puede representar:
-   → verbalemente, habladito che
-   → numericamente, generalmente una tabla de valores
-   → visualmente, por medio de grafica, donde represente los valores
-   → algebraicamente, la mas guapa, y = f(x) = x
-- tipos de variables
-   → variables cualitativas
-      ⇒ nominales, se les asigna una cualidad, por ejemplo los colores
-      ⇒ ordinales, representan un orden, como se puede acomodar un objeto
-      ⇒ binarias, solo tomand dos valores, unos y ceros
-   → variables cuantitativas
-      ⇒ discretas, representan un numero de valores finitos, son puramente enteras, se separan por pasos
-      ⇒ continuas sus valores pueden ser infinitos, toman valores dentro de los numero reales
-- dominio y rango
-   → que valores pueden tener las funciones?
-      ⇒ dominio, son los valores que toma x-independiente
-      ⇒ rango son los resultados que nos da una funcion
-- simbolos: </rich_text>
-      <rich_text link="webs https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm">https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm</rich_text>
-      <rich_text>
-- conjuntos:
-   → de forma grafica y circular
-   → el universo se representa con omega
-   → union, todos los elementos de los conjuntos se unen, se representan con U
-   → interseccion, son solo los elementos que se comparte: se representa con una U volteada
-   → perteneces es como una E: a E A, la E es curveada
-   → se tiene el conjunto vacio que se representa con una circulo con una linea enmedio o con {}
-   → conjuntos de numeros
-      ⇒ naturales, son todos los enteros sin incluir el cero, discreto
-      ⇒ enteros, son todos los enteros negativos y positivos, tambien es discreto
-      ⇒ racionales, incluyen decimales y fracciones, a/b pertenecen a los enteros, donde b es diferente de 0
-      ⇒ Irracionales, todos aquellos numero que tienen una expansion de decimal que no sse pueden escribir as: a/b, por ejemplo pi, euler
-      ⇒ naturales es la union de todos los demas conjuntos, hay naturales positivos y naturales negativos
-- Funciones y mas funciones (algebraicas y trascendentales)
-   → el notebook esta en visualizacion_matplot
-   → funcion lineal, tiene la forma f(x) = mx + b, solo depende de uno que es completamente lineal en este caso X
-      ⇒ el dominio y rango van de -inf a inf
-      ⇒ las funciones que grafican las computadoras son discretas
-      ⇒ b = bias, donde corta x
-   → polinomicas, es un polinomio de X, de x a la n hasta x a la cero
-      ⇒ el grado es el numero mas grande que tiene nuestra funcion
-      ⇒ generalmente los pares hacen curvas de concavas, los impares no
-   → funciones trascendentes, no se pueden hacer por medio de sumas de polinomios, el caso de funciones trigonometricas, exponenciales, logaritmicas
-   → funciones seccionadas, nciones que se comportan diferente dependiendo de los trozos, por ejemplo la funcion de Heaviside
-   → funciones compuestas, es la combinacion de varias funciones, es lo llamado (f o g ), pasa por una funcion primero y luego pasa por la otra, en f o g, siempre pasa primero la evaluacion de g luego la de f
-   → Funciones reales:
-      ⇒ sus dominio y rango estan contenidos en el conjunto de los reales
-- el perceptron
-   → es la forma de como se define una neurona artificial
-   → diferentes seniales de entrada, varios pesos, union sumadora, una funcion activadora y una salida
-   → pesos sinapticos, numeros encargados de ponderar lo que entra
-   → la funcion sumadora nos permite sumar el valor de entrada por su peso ponderado
-   → carlos alarcon redes neuronales
-- funciones de activacion
-   → sirven para dar funciones de salida diferentes al perceptron
-   → funcion lineal, lo que pasa lo regresa igual, sirve para mantener valores a travez de un proceso
-   → funcion Heaviside, sirve para hacer clasificaciones categoricas, un booleano
-   → sigmoide, sirve para un proceso de regresion logistica, sirve mucho pra probabilidades, los negativos siempre se acercaran al cero, al tocar el cero en x, se va la mitad mientras mas grande sea el valor tenderan al 1
-   → tangente hiperbolica, funcion de escalamiento, va de -1 a 1, tiene que ver muhco con back propagation, si se acerca a 0 va a valer cero, si son muy grandes tienden a ser 1 y si son negativos a -1
-   → ReLU, si el valor es 0 o menor que cero lo pone como cero, si es mayor que cero lo pondra como x, si exite lo tomo en cuenta si no no lo tomo en cuenta, existe una variacion llamada liquid ReLu
-- regresion lineal simple, 
-   → punto de corte es bias
-   → inclinacion es la pendiente
-- calculo del error:
-   → el error es que tan lejos estoy de valor original al de prediccion
-   → e = y_pred - y_real
-   → |e| = |y_pred - y_real|
-   → e**2 = (y_pred - y_real)**2
-   → E = SUM_i=i-N (y_pred - y_real)**2
-   → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
-</rich_text>
-    </node>
     <node name="postgresql" unique_id="92" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654044994" ts_lastsave="1655318818">
       <rich_text>postgres es un motor de base de datos,
 lenguaje, PL/PSQL
@@ -1973,7 +1893,7 @@ Particiones
 - en las particiones no existen como tal las llaves primarias
 - aqui el indice y clave es por donde se particiono la tabla</rich_text>
     </node>
-    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1663360401">
+    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1666130308">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
       <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656961210">
         <rich_text>- first week
@@ -2312,6 +2232,48 @@ Setting environment
       <node name="ML Engineer" unique_id="110" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1663360401" ts_lastsave="1663361604">
         <rich_text>- Introduction to ML
    → </rich_text>
+      </node>
+      <node name="introduccion al ML por MindsDB" unique_id="119" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1666130308" ts_lastsave="1666132048">
+        <rich_text>- aprender a preparar dats y visualizarlos
+- entender diferentes algoritmos de machine learning
+- explorar deep learning y redes neuronales
+
+Historia del machine learning
+- uso de algoritmos tpara identificar patrones en datos con el fin de resolver un problema de interes
+- existen dos tipos
+   → aprendizaje supervisado
+   → aprendizaje no supervisado
+- es usado actualmente en la vida de todo el mundo, spam de correos por ejemplo
+- los modelos aprenden patrones de los features
+- ml es un campo en crecimiento
+
+herramientas para machine learning
+- terminologia
+   → data, unidades de informacion
+   → features, tipos de informacion acerca de tus variables
+   → filas, observaciones individuales o muestras
+   → columnas, features que describen tus observaciones
+   → outlier, puntos de datos que se comporta de forma extrania
+   → pre-processing, preparar los datos para us uso en un modelo de ML
+   → ETL pipeline, framework de data science para hacer ETL
+- tipos de datos
+   → numericos, de tipo entero o flotante
+   → categoria, representan una clase o tipo, se representa con mapeo de numeros o un ohe-hot vector
+   → image, se representa por una imagen
+   → texto, es en forma de texto corto o largo
+   → NaN, este tipo de datos es desconocido o perdido
+- generalmente se usa 1-hot enconder para etiquets categoricas
+- es muy importante poder saber que relacion tienen los features para poder saber que ML usar
+- histogramas para ver la distribucion de un feature
+- de dispersion permiten ver la relacion entre dos features
+
+Tipos de modelos de machine learning
+- aprendizaje no supervisado, objetivo desconocido, queremos encontrar estructura y grupos dentro de los datos
+   → clustering, queremos encontrar grupos en los datos, k-means
+   → dimesionality reduction, se busca encontrar que features de entrada en los datos son de ayuda, PCA
+- aprendizaje supervisado, un objetivo a predecir
+   → regresion, este es numerico, regresion 
+   → clasificacion, este es una etiqueta, algo categorico</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
@@ -6906,6 +6868,86 @@ Apdex, application performance index
     </node>
   </node>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1665438687">
+    <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1666052420">
+      <rich_text>Las matematicas son un lenguaje
+las funciones nor permiten modelar nuestra realidad
+
+que es una funcion?
+- funciones de una sola variable, es por que depende de una sola cosa para que varie
+- una funcion es copmo una maquina, donde entra un elemento x para que salgo una y
+- es una regla donde cada elemento de un conjunto A se le asina un conjunto de B
+- se puede representar:
+   → verbalemente, habladito che
+   → numericamente, generalmente una tabla de valores
+   → visualmente, por medio de grafica, donde represente los valores
+   → algebraicamente, la mas guapa, y = f(x) = x
+- tipos de variables
+   → variables cualitativas
+      ⇒ nominales, se les asigna una cualidad, por ejemplo los colores
+      ⇒ ordinales, representan un orden, como se puede acomodar un objeto
+      ⇒ binarias, solo tomand dos valores, unos y ceros
+   → variables cuantitativas
+      ⇒ discretas, representan un numero de valores finitos, son puramente enteras, se separan por pasos
+      ⇒ continuas sus valores pueden ser infinitos, toman valores dentro de los numero reales
+- dominio y rango
+   → que valores pueden tener las funciones?
+      ⇒ dominio, son los valores que toma x-independiente
+      ⇒ rango son los resultados que nos da una funcion
+- simbolos: </rich_text>
+      <rich_text link="webs https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm">https://laboratoriomatematicas.uniandes.edu.co/semarquitec/simbolosmat.htm</rich_text>
+      <rich_text>
+- conjuntos:
+   → de forma grafica y circular
+   → el universo se representa con omega
+   → union, todos los elementos de los conjuntos se unen, se representan con U
+   → interseccion, son solo los elementos que se comparte: se representa con una U volteada
+   → perteneces es como una E: a E A, la E es curveada
+   → se tiene el conjunto vacio que se representa con una circulo con una linea enmedio o con {}
+   → conjuntos de numeros
+      ⇒ naturales, son todos los enteros sin incluir el cero, discreto
+      ⇒ enteros, son todos los enteros negativos y positivos, tambien es discreto
+      ⇒ racionales, incluyen decimales y fracciones, a/b pertenecen a los enteros, donde b es diferente de 0
+      ⇒ Irracionales, todos aquellos numero que tienen una expansion de decimal que no sse pueden escribir as: a/b, por ejemplo pi, euler
+      ⇒ naturales es la union de todos los demas conjuntos, hay naturales positivos y naturales negativos
+- Funciones y mas funciones (algebraicas y trascendentales)
+   → el notebook esta en visualizacion_matplot
+   → funcion lineal, tiene la forma f(x) = mx + b, solo depende de uno que es completamente lineal en este caso X
+      ⇒ el dominio y rango van de -inf a inf
+      ⇒ las funciones que grafican las computadoras son discretas
+      ⇒ b = bias, donde corta x
+   → polinomicas, es un polinomio de X, de x a la n hasta x a la cero
+      ⇒ el grado es el numero mas grande que tiene nuestra funcion
+      ⇒ generalmente los pares hacen curvas de concavas, los impares no
+   → funciones trascendentes, no se pueden hacer por medio de sumas de polinomios, el caso de funciones trigonometricas, exponenciales, logaritmicas
+   → funciones seccionadas, nciones que se comportan diferente dependiendo de los trozos, por ejemplo la funcion de Heaviside
+   → funciones compuestas, es la combinacion de varias funciones, es lo llamado (f o g ), pasa por una funcion primero y luego pasa por la otra, en f o g, siempre pasa primero la evaluacion de g luego la de f
+   → Funciones reales:
+      ⇒ sus dominio y rango estan contenidos en el conjunto de los reales
+- el perceptron
+   → es la forma de como se define una neurona artificial
+   → diferentes seniales de entrada, varios pesos, union sumadora, una funcion activadora y una salida
+   → pesos sinapticos, numeros encargados de ponderar lo que entra
+   → la funcion sumadora nos permite sumar el valor de entrada por su peso ponderado
+   → carlos alarcon redes neuronales
+- funciones de activacion
+   → sirven para dar funciones de salida diferentes al perceptron
+   → funcion lineal, lo que pasa lo regresa igual, sirve para mantener valores a travez de un proceso
+   → funcion Heaviside, sirve para hacer clasificaciones categoricas, un booleano
+   → sigmoide, sirve para un proceso de regresion logistica, sirve mucho pra probabilidades, los negativos siempre se acercaran al cero, al tocar el cero en x, se va la mitad mientras mas grande sea el valor tenderan al 1
+   → tangente hiperbolica, funcion de escalamiento, va de -1 a 1, tiene que ver muhco con back propagation, si se acerca a 0 va a valer cero, si son muy grandes tienden a ser 1 y si son negativos a -1
+   → ReLU, si el valor es 0 o menor que cero lo pone como cero, si es mayor que cero lo pondra como x, si exite lo tomo en cuenta si no no lo tomo en cuenta, existe una variacion llamada liquid ReLu
+- regresion lineal simple, 
+   → punto de corte es bias
+   → inclinacion es la pendiente
+- calculo del error:
+   → el error es que tan lejos estoy de valor original al de prediccion
+   → e = y_pred - y_real
+   → |e| = |y_pred - y_real|
+   → e**2 = (y_pred - y_real)**2
+   → E = SUM_i=i-N (y_pred - y_real)**2
+   → ECM = 1 / N (SUM_i=i-N (y_pred - y_real)**2)
+</rich_text>
+    </node>
     <node name="discretas" unique_id="116" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664581715" ts_lastsave="1665438600">
       <rich_text>- la logica es todo aquello con lo que tomamos decisiones
 - aquello que tiene sentido para nosotros
