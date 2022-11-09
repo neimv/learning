@@ -1893,7 +1893,7 @@ Particiones
 - en las particiones no existen como tal las llaves primarias
 - aqui el indice y clave es por donde se particiono la tabla</rich_text>
     </node>
-    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1666130308">
+    <node name="Machine learning" unique_id="93" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702111" ts_lastsave="1667764572">
       <node name="ML y DS en python3" unique_id="94" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1654702126" ts_lastsave="1654702126"/>
       <node name="MLOps" unique_id="91" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="11" is_bold="0" foreground="" ts_creation="1652713315" ts_lastsave="1656961210">
         <rich_text>- first week
@@ -2233,7 +2233,7 @@ Setting environment
         <rich_text>- Introduction to ML
    → </rich_text>
       </node>
-      <node name="introduccion al ML por MindsDB" unique_id="119" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1666130308" ts_lastsave="1666132071">
+      <node name="introduccion al ML por MindsDB" unique_id="119" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1666130308" ts_lastsave="1667156245">
         <rich_text>- aprender a preparar dats y visualizarlos
 - entender diferentes algoritmos de machine learning
 - explorar deep learning y redes neuronales
@@ -2273,7 +2273,127 @@ Tipos de modelos de machine learning
    → dimesionality reduction, se busca encontrar que features de entrada en los datos son de ayuda, PCA
 - aprendizaje supervisado, un objetivo a predecir
    → regresion, este es numerico, regresion lineal
-   → clasificacion, este es una etiqueta, algo categorico, regresion logistica</rich_text>
+   → clasificacion, este es una etiqueta, algo categorico, regresion logistica
+
+La “receta” para aplicar algoritmos de ML
+- ingredientes de los algoritmos de ml
+- aprendizaje supervisado
+- aprendizaje n supervisado
+- proceso de decision, como los modelos hacen una prediccion o retornan una respuiesta
+- funcion de error/coste como evaluar si los parametros enb el modelo generan buenas predicciones
+- regla de actualizacion, como mejorar los parametros para hacer mejores predicciones
+- normazizar datos numericos
+   → para cada columan del dataset con valores numericos
+      ⇒ calcular el promedio de los datos
+      ⇒ calcular la desviacion estandar
+- separar el dataset en 3
+   → training, 60 a 80 para aprender patrones
+   → validation, 0 a 20 verificacion que el modelo aprender
+   → testing, 0 a 20 se apartan para revisar si el modelo fue exitoso al predecir
+
+Algoritmos supervisados, regresion lineal
+- existen tres:
+   → lineal positivo, si x crece y crece
+   → lineal negativa, si x crece y disminuye
+   → no lineal
+- el costo es la diferencia entre el valor del target y el valor predicho por nuestra linea
+- regla de actualizacion, es la busqueda de minimizar la distancia entre lo predico y cada punto de datos en entrenamiento
+- MSE y R^2, ayudan a identificar la fortaleza de la relacion entre features de entrada y de salida
+
+Regresion logistica
+- predice una clase/etiqueta
+- la salida es la probabilidad para cada entrada, cualquiera arriba de 0.5 pasara
+- usar el accuracy para el rendimiento
+
+Arboles de decision
+- mas arboles menos variacion pero ams computo
+- max features, numero de features usados para partir
+- max depth, el numero de niveles del arboles
+
+aprendizaje no supervisado
+- k-means
+   → inertia, que tan cerca estan los puntos de datos al centroide, debe ser pequenio
+   → silhouette score, que tan lejanos son los cluster de [-1, 1], este numeor debe ser cercano a 1
+
+Redes neuronales
+- entender la arquitectura basica de una red neuronal
+- como funciona el entrenamiento de redes neuronales
+- explorar como mejorar las redes neuronales
+- es un modelo que usa neuronas y conexiones entre ellos para hacer predicciones tiene 3 capas base
+   → capa de entrada
+   → capa oculta
+   → capa de salida
+- capa de entrada, los pesos gobiernan la fuerza de conexion entre nodos, pesos altos == conexion fuerte
+- la unidad escondida acepta una combinacion lineal de nmodos adjuntos a el
+- la unidad oculta ejecuta una funcion en la combinacion lineal, esta es conocida como funcion de activacion
+- para la capa de salida hay varias funciones de activacion algunas tienen rango limitado (softmax/sigmoid), mientras otras se extienden idefinidamente (ReLUs, Lineal)
+- deep learning es aniadir mas capas
+
+Como es el entrenamiento:
+- se escoge una arquitectura
+   → DNNs, Deep Feed-forward
+      ⇒ funciones activacion
+      ⇒ usada en muchos problemas complejos
+   → CNNs, Convolucional
+      ⇒ operador convucional, pool y kernels
+      ⇒ usada en imagenes y genomicos
+   → RNNs, Recurrentes
+      ⇒ celdas de memoria/puerta
+      ⇒ representa secuencias
+      ⇒ usada en lenguaje
+- receta de entrenamiento
+   → preparar datos
+   → computar la prediccion hacia adeltante
+      ⇒ se evaluan las funciones en cada nodo
+   → calcular la perdida
+      ⇒ uso del error cuadratico medio (MSE), para regresion
+      ⇒ uso de binary cross-entropy para clasificacion
+      ⇒ categorical cross-entropy para clasificacion
+   → backpropagation para ajustar los pesos
+      ⇒ es la regla de actualizacion usada para ajustar los pesos en redes neuronales
+      ⇒ se usa la derivada parcial, de ellos con respecto a cada nodo
+   → cambiar desempenio de perdida, si es si se empieza desde la computacion
+   → revisar el desempenio del equipo de prueba si el anterior es NO
+- ajustar la tasa de entrenamiento
+
+Mejorar las prediccion de redes neuronales
+- dropout protege ante el overfitting
+- las redes neuronales tienden al oerfitting debido a que tienen mucho parametros
+- dropout es “ignoorar” algunos nodos mientras entrena</rich_text>
+      </node>
+      <node name="regresion lineal" unique_id="120" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667334251" ts_lastsave="1667349933">
+        <rich_text>que es la regresion lineal
+- a un valor de x se le asigna un valor de Y
+- se le tiene que ajustar una linea recta que mejor pase por los datos
+- y = w_o + w_1 * x, w_0, es el intercepto y w_1 es la pendiente
+- la variable a predecir es numerica?
+- las variables independientes son primordialemente numericas?
+- se cuenta con muchas variables categoricas y/o tienen muchos niveles?
+- se empieza siempre con regresion lineal, si no funciona se pasa a otros
+- reducir las variables lo mas que se pueda
+- evitar multicolinealidad
+- no se predice fuera del dominio de la variable independiente
+- pasos del algoritmo:
+   → se ajusta un modelo
+   → se comparan resultados con reales
+   → se ajustan pesos en el modelo
+   → regreso a paso inicial si no se converge
+- funcion de perdida: metodo de minimos cuadrados
+- algoritmo de optimizacion: descenso del gradiente
+- MSE: mean square error, se usa para evaluar funcion de perdida, si esta metrica desde el inicio es mala, el modelo puede que no se este ajustando, hay que revisar cual fue el minimo hallado por el modelo, a valores grandes peor se ajusta el mdelo
+- R^2, coeficiente de determinacion, intenta mostrar que tan bien se ajusta el modelo con la varianza de los modelos, entre mas cerca de 1 es mejor
+
+Regresion lineal multivariable
+- es identico solo que con mas variables para obtenr el valor de y</rich_text>
+      </node>
+      <node name="fundamentos practicos de ML" unique_id="123" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667764572" ts_lastsave="1667764757">
+        <rich_text>IA -&gt; ML -&gt; Deep Learning
+Provee capacidad a un algoritmo de aprendizaje, ya sea por aprendizaje supervisado o no supervisado
+
+Que es ML?
+- definir un problema
+- construccion del modelo y evaluacion
+- deploy y mejoras</rich_text>
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
@@ -2713,7 +2833,7 @@ Aprendizaje basado en instancias y basado en modelos
       </node>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1650935953">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1667418547">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5644,16 +5764,41 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 ¿Cuándo es útil la opción recovery en un droplet?</rich_text>
     </node>
     <node name="Gerencia de tecnologia" unique_id="71" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649170301" ts_lastsave="1649170306"/>
-    <node name="new-aws-platzi" unique_id="74" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649794315" ts_lastsave="1649799252">
+    <node name="new-aws-platzi" unique_id="74" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649794315" ts_lastsave="1667505181">
       <rich_text>TI tradicionales
 
-¿Cuál de las siguientes es una característica de la computación en la nube?
-Necesitas  concentrarte en el código y gestión de tu aplicación SIN preocuparte por  la infraestructura. ¿Qué tipo de cómputo en la nube recomendarías  utilizar?
-Necesitas tener control sobre el sistema operativo de tus servidores. ¿Qué tipo de cómputo en la nube recomendarías utilizar?
-¿Cuál de los siguientes servicios es de tipo SaaS?
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1667846613">
+      <rich_text>Commands minikube:
+- minikube -&gt; da la salida de que se puede hacer con minikube
+- minikube status -&gt; comprobar que el minikube esta funcionando
+- minikube logs -&gt; genera la informacion de que esta haciendo minikube
+- minikube ip -&gt; nos permite saber a que ip nos debemos conectar
+- minikube start, status, stop y delete, son los mas basicos
+- minikube dashboard, nos ayuda a ver como se esta comportando el cluster
+- pause and unpause, sirve para pausar y continuar el minikube
+- Comando avanzados
+   → mount, monta un directorio
+   → ssh, para conectarse al minikube
+   → kubectl, se puede usar para conectarse
+   → node, nos ayuda a ver los nodos
+   → cp, copia un fichero dentro de minikube
+- minikube profile list, nos muestra los cluster que tenemos dentro
+- minikube start --driver=docker -p clusterDev --nodes={num-nodos}, para crear un cluster con muchos nodos
+- minikube config set memory 4G -p minikube
+
+PODS:
+- es la unidad minima
+- un pod puede tener mas de un contenedor, pero no siempre es lo habitual
+- kubectl get pods
+- kubectl get pods -o wide -&gt; nos da mas descripcion
+- kubectl describe pod/{nombre_pod}
+- kubectl exec {nombre_pod} -it -- ls
+- kubectl logs {pod} con -f se va viendo el log en tiempo real
+- port forwading es hacer que un puerto de la maquina se le asigne a la maquina local</rich_text>
+    </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
     <node name="fontend-dev" unique_id="27" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688395" ts_lastsave="1626215724">
@@ -6867,7 +7012,7 @@ Apdex, application performance index
    → </rich_text>
     </node>
   </node>
-  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1665438687">
+  <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1667337877">
     <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1666052420">
       <rich_text>Las matematicas son un lenguaje
 las funciones nor permiten modelar nuestra realidad
@@ -7312,6 +7457,17 @@ Maximos y minimos
 - la derivada es menor que 0 entonces esta decreciendo
 - si la derivada es igual a cero este puede ser un maximo y un minimo, puntos criticos
 - si a la derecha es positivo y a la izquierda negativa es un minimo de forma inversa es un punto maximo</rich_text>
+    </node>
+    <node name="calculo diferencial" unique_id="121" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667337877" ts_lastsave="1667339085">
+      <rich_text>surge de Leibniz e Isaac Newton, son los que llegaron al desarrollo del calculo, lo que se usa en estos momentos es mucho de Leibniz
+
+Funciones, dominio y rango
+- es una regla que relaciona a un conjunto de entradas con un conjunto de posibles salidas
+- el dominio son todos los valores que se les puede dat a la funcion y puede procesar
+- el rango todos los posibles valores que resulten de la funcion
+
+Tipos de funciones
+- </rich_text>
     </node>
   </node>
   <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1619532722">
