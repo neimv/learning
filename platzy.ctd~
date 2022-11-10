@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1667845455">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668111905">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5796,7 +5796,14 @@ PODS:
 - kubectl get pods -o wide -&gt; nos da mas descripcion
 - kubectl describe pod/{nombre_pod}
 - kubectl exec {nombre_pod} -it -- ls
-- kubectl logs {pod} con -f se va viendo el log en tiempo real</rich_text>
+- kubectl logs {pod} con -f se va viendo el log en tiempo real
+- port forwading es hacer que un puerto de la maquina se le asigne a la maquina local
+- kubectl port-forward nginx 9999:80
+- kubectl get pod {nombre} -o yaml
+- kubectl delete pod {nombre pod} // --grace-period=5, para esperar 5 minutos
+- kubectl delete pods --all, este borra todos los pods
+- kubectl logs {pod} -c {contenedor}
+- s</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
