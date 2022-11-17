@@ -2833,7 +2833,7 @@ Aprendizaje basado en instancias y basado en modelos
       </node>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1667418547">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1668619411">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668111085">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668724218">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5802,7 +5802,118 @@ PODS:
 - kubectl get pod {nombre} -o yaml
 - kubectl delete pod {nombre pod} // --grace-period=5, para esperar 5 minutos
 - kubectl delete pods --all, este borra todos los pods
-- kubectl logs {pod} -c {contenedor}</rich_text>
+- kubectl logs {pod} -c {contenedor}
+- reboot: always, OnFailure, Never
+
+LABELS:
+- son propiedades muy importantes
+- se hacen relaciones entre recursos
+- son inventados
+- kubectl get pod {name} --show-labels -L “{nombre}”, -L sirve para mostrar el valor de la etiqueta en otra columna, se pueden poner varias con coma y si se agrega una que no existe creara la columna sin valor
+- kubectl label, agrega o modifica etiquetas, con --overwrite {etiqueta}={valor}, se cambia, con {label}- se borra la etiqueta
+- selectors: son condiciones que se tienen para encontrar objetos que tienen ciertas etiquetas
+- kubectl get pods --show-labels -l {label}={valor}, muestra los objetos que tienen de valor la label, se pueden condiciones de tipo and usando la coma, para ver los que no tienen la etiqueta se usa !=, se puede usar in estilo python
+- anotaciones: sirven para poner descripciones en los componentes, permite poner descripciones largas
+- kubectl get pod {pod name} -o jsonpath={.metadata.annotations}, busca anotaciones
+
+DEPLOYMENTS:
+- workloads: sirve para desplegar contenedores, por ej. los pods, todos los componentes envuelven a los pods, deployments, replica set (replication controllers), stateful set, daemon set, job, cron job
+- controllers: el cluster este correcto y que todo este trabajando como debe
+- engloba las propiedades para los pods, update y rollbacks, escalamiento, recuperacion ante caidas
+- con un deployment se crea un replicaset, que gestiona todo ante caidas y escala los pods
+- kubectl create deployment {nombre} --image={image}
+- kubectl get deploy, lista despliegues
+- kubectl get rs, lista las replicaset
+- kubectl get pods
+- kubectl describe deploy {nombre}, con -o yaml|json nos da las propiedades en yaml o json
+- en los deployment tiene matchLabels que sirve para encontrar los objetos que ya tienen cierta etiqueta, a los contenedores se les pone una etiqueta para las busquedas
+- se pueden traer varios objectos usando: kubectl get deploy, pods, rs -&gt; separados por comas
+- kubectl edit deploy {name}, este permite modificar al momento directamente en el entorno
+- kubectl scale deploy {nombre} --replicas={num-replicas}
+- kubectl scale deploy {nombre} -l {label}={valor} --replicas={num-replicas}
+
+SERVICIOS
+- ayudan a conectarnos de forma externa a los pods
+- tipos
+   → cluster ip, por defecto, accesible solo dentro del cluster
+   → nodeport, accesible desde afuera del cluster, a este se le debe aniadir el puerto desde el cual se quiere acceder
+   → loadbalancer, accesible desde fuera del cluster integrado con LB de terceros
+- busca sus pods por medio del selector
+- kubectl expose deploy {name} --port={port} --type={type: default cluster ip}
+- kubectl get svc
+- kubectl get endpoints {name}
+- kubectl describe endpoints {name}
+
+NAMESPACES
+- se pueden tomar como particiones
+- es una division logica del cluster de K8s
+- kubectl get namespace
+- kubectl get namespace {name}
+- kubectl describe namespace {name}
+- kubectl get {elemento} -n {namespace}
+- kubectl create namespace {name}
+- kubectl delete namespace {name}
+- kubectl apply -f {file} --namespace={name}
+- kubectl config view
+- kubectl config set-context --current --namespace={name}
+- LimitRange en un YAML sirve para poner limites de recursos en el cluster general
+- kubectl get events --namespace {name}
+- kubectl get events --field-selector {campo}="{propiedad a buscar}", con -w se queda esperando viendo los eventos
+
+ROLLING UPDATES
+- al modificar la plantilla, los pods se destruyen y construyen de nuevo
+- RollingUpdate, modifica los pods de manera evolutiva, siempre tiene que tener uno dando servicio
+- Recreate, borra todos los de la antigua version
+- para el rolling se puede decidi cuantos pods se pueden tener de la vieja version mientras llega la nueva
+- deshacer cambios:
+   → kubectl rollout history deploy {name}, con --revision={revision} se describe una revision especifica
+   → kubectl rollout status
+   → kubectl rollout undo deployment {name} --to-revision={revision}
+
+
+
+
+
+
+
+---------------------------KUBE 0 TO 100--------------------------------------
+correr apps contenerizadas
+instancias como ganado
+es declarativo
+trata de arreglar los errores por si mismos
+control plane - servidores de k8s
+nodos - corre el kubelet y k-proxy (recibe el trafico y lo manda a los pods que les corresponde el trafico)
+scheduler
+etcd, base de datos basada en key-value
+cloud-controller-manager, este se conecta al cloud
+- kubectl version --client=true
+- kubectl get nodes
+- kubectl get ns, trae los namespaces
+- kubectl exec -it {pod} -- sh
+- existen variables que se pueden heredar desde los k8s
+- redinessProbe, esta listo para recibir trafico
+- livenessProbe, el pod esta vivo
+- lo ideal es crear deployments que son los que cubren a los pods
+- daemonset permite ejecutar un pod en cada nodo
+- statefulset, estos crean pods con volumenes persistentes, se usa storageClassName: do-block-storage, para crear un disco en el provedor de aws
+- kubectl describe pod {name pod}
+- kubectl get pvc (para volumenes persistentes)
+- kubectl get statefulsets|sts
+NETWORKING
+se tiene el ETCD
+CNI sirve para crear una vpn entre los nodos (pods), el agente se llama calico
+los servicios en K8s son formas de poder contactar apps, se manejan por kube-proxy
+- cluster-ip, ip fija dentro del cluster que no cambia, sirve como load balancer entre todos los pods
+- node port, crea un puerto en cada nodo para enviar el trafico a los servicios
+- load balancer, este esta configurado para la nube, sirve par redireccionar tambien el trafico
+cluster ip es el default
+ingress sirve para pasar servicios de acuerdo al path que se les pase
+nginx-ingress
+buscar stern</rich_text>
+    </node>
+    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1668619471">
+      <rich_text>Service of automatization by github
+Use of CI/CD (Continuos Delivery)</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
