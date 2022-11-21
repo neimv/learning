@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668724154">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668968807">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5868,7 +5868,59 @@ ROLLING UPDATES
 - deshacer cambios:
    → kubectl rollout history deploy {name}, con --revision={revision} se describe una revision especifica
    → kubectl rollout status
-   → 
+   → kubectl rollout undo deployment {name} --to-revision={revision}
+- Recreate
+   → elimina completamente y recrea todo
+
+VARIABLES, CONFIGMAPS, SECRETS
+- se usan en envs como si de variables de entorno se tratara
+- las variables quedan dentro del contenedor
+- ConfigMaps
+   → son ficheros que permite poner propiedades valor de forma sencilla y de forma automatica sin tener que poner todo en el contenedor
+   → kubectl create configmap cf1 --from-literal={llave}={valor}, se puede usar varias veces el from literal
+   → kubectl get cm
+   → kubectl describe cm {name}
+   → kubectl create configmap {name} --from-file={file}
+   → se pueden manejar con volumenes
+   → con volumemounts se define el nombre y donde se monta
+   → en volumenes se pasa el configMap por su nombre
+   → *hay ciertos campos de un pod que no se pueden eliminar*
+- Secrets
+   → recurso que guarda informacion confidencial
+   → pueden servir como metodos de autenticacion
+   → existen diferentes tipos
+      ⇒ opaque: normales o genericos, se guarda cualquier tipo de informacion
+         • kubectl secret generic password --from-literal={llave}={valor}
+      ⇒ service account token: almacena un token que identifica un service account
+      ⇒ docker config: almacenan las credenciales necesarias para poder acceder a un registro de docker
+         • kubectl create secret docker-registry {name} --docker-server={server} --docker-username={user} --docker-password={password} --docker-email={email}
+      ⇒ Basic Auth: Usuario y password
+      ⇒ ssh: autenticacion a travez de ssh, se usa una ssh-privatekey que en realidad es un par clave-valor
+      ⇒ TLS: almacenan un certificado y su clave asociada que se usan para TLS
+      ⇒ Bootstrap: tokens especiales para los nodos
+
+KUBECONFIG
+- fichero en formato YAML, sirve para saber como conectarse al servidor de k8s
+- kubectl --kubeconfig
+- se pueden tener varios ficheros
+- variable de entorno $KUBECONFIG
+- contiene
+   → certificado
+   → servidor
+   → usuario
+   → token de usuario
+- no se puede usar cliente/password con token
+- kubectl config view -o json
+- kubectl config current-context
+- kubectl config use-context {contexto}
+- kubectl conifg set-cluster {name} --server={ip_server}
+- kubectl --kubeconfig={filename} conifg set-cluster {name} --server={ip_server}, crea un archivo nuevo de configuracion
+- kubectl config set-cluster {name} --certificate-authority={file.crt}
+- kubectl config set-credencials {cluster name} --username={usuario} --password={pass|base64}
+- kubectl config set-credencials {cluster name} --client-certificate={file.crt}
+- kubectl config set-credencials {cluster name} --client-key={file.key}
+- kubectl config set-context {name context} --cluster={cluster} --user={user} --namespace={namespace}
+
 
 
 
@@ -5911,9 +5963,34 @@ ingress sirve para pasar servicios de acuerdo al path que se les pase
 nginx-ingress
 buscar stern</rich_text>
     </node>
-    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1668619471">
+    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669009802">
       <rich_text>Service of automatization by github
-Use of CI/CD (Continuos Delivery)</rich_text>
+Use of CI/CD (Continuos Delivery)
+
+git add {files}
+git commit
+git checkout {id}, to change by another previous commit
+git revert {id}, this create a new commit with the previous changes
+git reset --hard {id}, delete all commits since {id}
+git log
+git branch
+git branch {name}
+git checkout {branch}
+git branch -D {branch}, to delete
+git checkout -b {branch}, to create and change to branch
+git merge {branch}
+git remote add {url}
+git push origin {branch}
+git pull origin {branch}
+git clone {url-repo} {name folder}
+git remote get-url {origin}
+
+GITHUB ACTION
+Key Elements:
+- workflow: this includes jobs, this is added to code repository, this is the first thing in github actions, triggered by events
+- job: this contains one or more steps, defined a runner
+- step: this is actions to execute
+- is posible create multiple workflows</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
