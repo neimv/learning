@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668968807">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669077458">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5920,6 +5920,27 @@ KUBECONFIG
 - kubectl config set-credencials {cluster name} --client-certificate={file.crt}
 - kubectl config set-credencials {cluster name} --client-key={file.key}
 - kubectl config set-context {name context} --cluster={cluster} --user={user} --namespace={namespace}
+
+SCHEDULER
+- Trabajar con nodos
+- verifica que las cosas funcionen de forma correcta, decide en que nodo va a quedar cada pod, esta echo en Go y es bastante complejo
+- paso de filtrado, checa que los nodos cumplan con lo necesario para el pod
+- se puede elegir a que nodo se va a ir el pod
+- scoring, determina cual tiene la puntuacion mas alta de los que quedan
+- checa afinidad, existencia de imagen y carga de trabajo
+- forma manual de asignar: en los specs se debe definir nodeName: {nombre del nodo}
+- se puede por medio de nodeSelector: {clave}: {valor}, para esto el nodo debe de tener las etiquetas si no, no sabra en donde se desplegara
+- well-know labes, annotations and traints, existen ya unas predefinidas ya asignadas de forma automatica dentro de k8s, existen etiquetas que son por defecto y recomendadas
+- afinidad:
+   → se puede aplicar para la planificacion (scheduling)
+   → o para la ejecucion
+   → se puede decir si es preferida u obligatoria
+- existe la antiafinidad
+- se puede agregar en los spec el affinity y las reglas que se requieren
+- un traint permite que un nodo acepte uno o varios pods
+- traints es aplicable para los nodos
+- los tolerations a los PODS
+- kubectl taint nodes {nodo} {clave}:{valor}
 
 
 

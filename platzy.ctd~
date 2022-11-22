@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1668968807">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669077257">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5921,6 +5921,26 @@ KUBECONFIG
 - kubectl config set-credencials {cluster name} --client-key={file.key}
 - kubectl config set-context {name context} --cluster={cluster} --user={user} --namespace={namespace}
 
+SCHEDULER
+- Trabajar con nodos
+- verifica que las cosas funcionen de forma correcta, decide en que nodo va a quedar cada pod, esta echo en Go y es bastante complejo
+- paso de filtrado, checa que los nodos cumplan con lo necesario para el pod
+- se puede elegir a que nodo se va a ir el pod
+- scoring, determina cual tiene la puntuacion mas alta de los que quedan
+- checa afinidad, existencia de imagen y carga de trabajo
+- forma manual de asignar: en los specs se debe definir nodeName: {nombre del nodo}
+- se puede por medio de nodeSelector: {clave}: {valor}, para esto el nodo debe de tener las etiquetas si no, no sabra en donde se desplegara
+- well-know labes, annotations and traints, existen ya unas predefinidas ya asignadas de forma automatica dentro de k8s, existen etiquetas que son por defecto y recomendadas
+- afinidad:
+   → se puede aplicar para la planificacion (scheduling)
+   → o para la ejecucion
+   → se puede decir si es preferida u obligatoria
+- existe la antiafinidad
+- se puede agregar en los spec el affinity y las reglas que se requieren
+- un traint permite que un nodo acepte uno o varios pods
+- traints es aplicable para los nodos
+- los tolerations a los PODS
+
 
 
 
@@ -5963,7 +5983,7 @@ ingress sirve para pasar servicios de acuerdo al path que se les pase
 nginx-ingress
 buscar stern</rich_text>
     </node>
-    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669009914">
+    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669009966">
       <rich_text>Service of automatization by github
 Use of CI/CD (Continuos Delivery)
 
@@ -5989,7 +6009,7 @@ GITHUB ACTION
 Key Elements:
 - workflow: this includes jobs, this is added to code repository, this is the first thing in github actions, triggered by events
 - job: this contains one or more steps, defined a runner, is possible run un parallel or sequential, can be conditional
-- step: this is actions to execute, execute a shell script, custom or third-party actions, this is executed in order, can be conditio
+- step: this is actions to execute, execute a shell script, custom or third-party actions, this is executed in order, can be conditionals
 - is posible create multiple workflows</rich_text>
     </node>
   </node>
