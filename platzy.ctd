@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669077458">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669173299">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5942,6 +5942,14 @@ SCHEDULER
 - los tolerations a los PODS
 - kubectl taint nodes {nodo} {clave}:{valor}
 
+GESTION DE RECURSOS
+- en los specs del pod se agrega una etiqueta de resources que sirve para ponre los limites de memoria, se puede tener una peticion de requests y una de limits, tambien se pueiden limitar de acuerdo al CPU
+- kubectl get pods
+- kubectl describe pods {nombre}
+- kubectl top
+- kubernetes metrics server
+- minikube addons enable metrics-server -p {cluster profile}
+
 
 
 
@@ -5984,7 +5992,7 @@ ingress sirve para pasar servicios de acuerdo al path que se les pase
 nginx-ingress
 buscar stern</rich_text>
     </node>
-    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669009966">
+    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669177559">
       <rich_text>Service of automatization by github
 Use of CI/CD (Continuos Delivery)
 
@@ -6011,7 +6019,11 @@ Key Elements:
 - workflow: this includes jobs, this is added to code repository, this is the first thing in github actions, triggered by events
 - job: this contains one or more steps, defined a runner, is possible run un parallel or sequential, can be conditional
 - step: this is actions to execute, execute a shell script, custom or third-party actions, this is executed in order, can be conditionals
-- is posible create multiple workflows</rich_text>
+- is posible create multiple workflows
+
+EVENTS
+- filter is based on target branch, is possible to use in some actions
+- is possible avoid some actions using in the commit message: [skip ci]</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
