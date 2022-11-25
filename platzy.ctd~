@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669173299">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669225058">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5949,6 +5949,36 @@ GESTION DE RECURSOS
 - kubectl top
 - kubernetes metrics server
 - minikube addons enable metrics-server -p {cluster profile}
+- para los namespace se puede usar:
+   → LimitRange, limites y el uso de los pod
+   → ResourceQuota: limita los recursos totales utilizados dentro de un ns, se puede decir cuanto elementos se pueden tener por tipo, con este se deben de decir tambien en los resources cuanto va a requerir de acuerdo a los limites que tenga
+- prioridades:
+   → kubectl get pc
+   → se puede dar prioridad a cada pod, esto nos sirve para que arranquen unos y se apaguen otros dependiendo de la necesitdad
+- kubectl top nodes, se requiere el metrics
+- kubectl decribe node {nodo}
+- huge pages:
+   → permite manejar paginas de memoria mas grandes
+   → el kernel soporto 4k ded tamanio
+   → con este se puede tener tamanios de 2MB o de 1GB
+   → esto depende del software que se ejecute
+   → se usan para tener los datos mas contiguos o cercanos
+   → se debe de hacer a nivel de SO
+   → despues se configura en el pod
+   → se deben de montar
+   → en los request se deben de especificar los hugepages
+   → el volume debe de ser un emptydir
+   → cd /proc &amp;&amp; ls meminfo &amp;&amp; cat meminfo # este guarda los hugepages
+   → sysctl -a
+   → se modifica todo con el root, vi sysctl.conf, sysctl -p
+- autoescalado
+   → puede aumentar o reducir recursos
+   → tiene tre tipos
+      ⇒ HPA, horizontal, escala el numero de pods, es gestionado por el porioop controller manager, se hace una comparacion de lo que se tiene configurado para levantar nuevos pods, se deben de tener los requests de recursos
+      ⇒ VPA, vertical, este aun esta en beta, asigna mas pc y memoria a los pods
+      ⇒ CA , cluster, este solo funciona en determinadas plataformas, aumenta el numero de nodos, generalmente es usado en cloud
+   → kubectl autoscale {recurso} --min={num} --max={num} --cpu-percent={percent of cpu}
+
 
 
 
@@ -5992,7 +6022,7 @@ ingress sirve para pasar servicios de acuerdo al path que se les pase
 nginx-ingress
 buscar stern</rich_text>
     </node>
-    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669177538">
+    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669177559">
       <rich_text>Service of automatization by github
 Use of CI/CD (Continuos Delivery)
 
@@ -6023,7 +6053,7 @@ Key Elements:
 
 EVENTS
 - filter is based on target branch, is possible to use in some actions
-- is possible avoid some actions using in the commit message: []</rich_text>
+- is possible avoid some actions using in the commit message: [skip ci]</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
