@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1669225292">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1670181015">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -5979,6 +5979,29 @@ GESTION DE RECURSOS
       ⇒ CA , cluster, este solo funciona en determinadas plataformas, aumenta el numero de nodos, generalmente es usado en cloud
    → kubectl autoscale {recurso} --min={num} --max={num} --cpu-percent={percent of cpu}
    → kubectl get htp
+
+VOLUMENES
+- todo lo que se crea en un pod es efimero
+- objeto que persiste el almacenamiento
+- soporta de distintos tipos:
+   → locales
+   → externos, nfs por ejemplo
+   → de tipo cloud
+- csi-container, dispone de un estandar que expone almacenamiento a los workloads, esto es externo a k8s, implementa una arquitectura extensible de plugins
+- kubectl describe pod volumes
+- PV, se deben crear por los administradores
+- storage class, tipo de discos
+- se pueden tener almacenamientos de tipo:
+   → estatico, de forma estatica al que esta
+   → dinamico, de acuerdo a la etiqueta de storage
+- tipos de reciclaje:
+   → retain: manual
+   → reccycle: reutilizar contenido
+   → delete: borra todo
+- hostPath no se debe de usar en produccion
+- estos se deben de crear por medio de un archivo yaml, no se tiene comando
+- kubectl get pv
+- kubectl get pvc
 
 
 
@@ -6356,12 +6379,26 @@ I wake up at 7:30 am, I get up at 8:00 am, I have breakfast at 9:00 am, usually 
 describe family
 We are three in my family, my son, my wife and I, my son is a little boy, his name is Leo, he has various play doh of color blue, green, yellow and white, my wife is student of gastronomy, her name is Stephani, I'm engineer, I'm work in my house and I have one computer of color grey</rich_text>
     </node>
-    <node name="metas" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1629764319">
+    <node name="metas" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1669772397">
       <rich_text>asimilar 10 palabras
 anotar palabras nuevas
 asimilar dos frases diarias
 pensar 10 minutos en ingles
-aplicar lecturas en ingles</rich_text>
+aplicar lecturas en ingles
+
+
+
+Italy
+
+incremented
+internet
+
+
+
+Denmark
+
+devolve -&gt; devolved
+disk</rich_text>
     </node>
     <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1649720295">
       <rich_text>
