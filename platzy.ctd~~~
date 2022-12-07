@@ -2833,7 +2833,7 @@ Aprendizaje basado en instancias y basado en modelos
       </node>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1668619411">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1670266110">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1670180177">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1670357789">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -6000,6 +6000,23 @@ VOLUMENES
    → delete: borra todo
 - hostPath no se debe de usar en produccion
 - estos se deben de crear por medio de un archivo yaml, no se tiene comando
+- kubectl get pv
+- kubectl get pvc
+
+CLASES DE ALMACENAMIENTO
+- es una definicion de una serie de tipo de almacenamiento
+- no se denomina un PV como tal, se asigna uno de forma dinamica
+
+OTROS WORKLOADS
+- Deployment son de stateless
+- replicaset, asociados al deployment
+- StatefulSet, premite tener aplicaciones con estado, para alta disponibilidad
+   → es parecido a los deployment, sirven para gestionar aplicaciones con estado
+   → almacenan datos, se usan muhco para bases de datos, data persistente y altamente confiable, tambien para CRMs
+   → a los pods se les asigna un nombre unico, no aleatorio
+- daemonSet, utiles para entornos de tipo log o monitorizacion
+- job y cronjob, worloads que se lanzan de manera planificada
+- Custom Resource, son de tipo personalizado
 
 
 
@@ -6044,7 +6061,7 @@ ingress sirve para pasar servicios de acuerdo al path que se les pase
 nginx-ingress
 buscar stern</rich_text>
     </node>
-    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1669177559">
+    <node name="github action" unique_id="124" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1668619411" ts_lastsave="1670266096">
       <rich_text>Service of automatization by github
 Use of CI/CD (Continuos Delivery)
 
@@ -6075,7 +6092,159 @@ Key Elements:
 
 EVENTS
 - filter is based on target branch, is possible to use in some actions
-- is possible avoid some actions using in the commit message: [skip ci]</rich_text>
+- is possible avoid some actions using in the commit message: [skip ci]
+
+
+</rich_text>
+    </node>
+    <node name="Terraform" unique_id="125" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1670266110" ts_lastsave="1670355755">
+      <rich_text>terraform import {resource name} {id resource created}
+
+$ terraform plan                                  # plan
+$ terraform apply                                 # shortcut for plan &amp; apply - avoid this in production
+$ terraform plan -out out.terraform      # terraform plan and write the plan to out file
+$ terraform apply out.terraform            # apply terraform plan using out file
+$ terraform show                                  # show current state
+$ cat terraform.tfstate                           # show state in JSON format
+
+
+Infrastructure as code
+version control Infra</rich_text>
+    </node>
+    <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1670282834">
+      <rich_text>Que es?
+Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
+Entender el rol del arquitecto
+
+# Etapas del proceso
+- Analisis de requerimientos, nace de una idea o problema, aqui se entiende que se va a construir, requerimientos de negocio, usuario, funcionales y no funcionales
+- Diseño de la solucion, Analisis profundo de los problemas, ya se tiene una propuesta de esas soluciones, aqui empieza el arquitecto
+- Desarrollo y evaluacion, programacion y pruebas, criterios de aceptacion, set necesario para construirla
+- Despliegue, infraestructura y roles de operacion para que este disponible
+- Mantenimiento y evolucion, Arreglo de errores y agregado de nuevas funcionalidades
+
+# Dificultades en el desarrollo
+- Esenciales, Entender el diseño y concepto
+   → complejidad, que tan dificil se vuelve, por ejemplo el calculo de rutas
+   → conformidad, el contexto que se va a usar y como adaptarlo, por ejemplo la efectividad del software
+   → tolerancia al cambio, se puede cambiar o ya no, que tanto cambia el problema que se resolvio
+   → invisibilidad, se vuelve dificil al no ser tangible
+- Accidentales, tecnologia y plaforma que se usara, conexiones entre tecnologias o resoluciones en esa tecnologia
+   → Lenguajes de alto nivel, elmismo lenguahe se vuelve una dificultad
+   → multiprocesamiento, el poder hacer mas de una tarea en la computadora
+   → Entornos de programación, algo asi como el que nos ayude con las propiedades que tengan clases o funciones del lenguaje
+como se resuelve?? No desarrollar, comprar OSS, Prototipado rapido, Desarrollo evolutivo, Grandes diseñadores (arquitectos)
+
+# Roles
+- Experto del dominio, es elq ue sabia que se requeria del dominio, en las nuevas metodologias son las partes interesadas
+- Analista, es el que indaga en que se debe de resolver, este es el cliente/dueño del producto, en las nuevas metodologias
+- Admininistrador de sistemas, los viejos sysadmin, hoy DevOps/SRE
+- Equipo de desarrollo, los qa, desarrollador, arquitecto
+- gestor del proyeco, se encarga de las entregas y que se cumpla con el plan, facilitador
+
+# Que es la arquitectura de software
+- modelos y diagramas con conexiones entre cajas
+- este es muy sesgado, pero se deben de hacer analisis profundos sobre que es lo que hay que contruir, y como es que el sistema los va a resolver
+- la arquitectura es algo estructural, por medio de objetos ocultando propiedades, es un conjunto de decisiones para el diseño del sistema
+- la arquitectura se reduce a cuaqluier cosa importante
+
+# La importancia de la comunicación (ley de conway)
+- la comunicación es fundamental para la arquitectura del software
+- la comunicación dara estructura
+
+# Objetivos del arquitecto
+- tiene varias partes interesadas:
+   → cliente, quiere un sistema en presupuesto y a tiempo
+   → desarrollador, facil de implementar y mantener
+   → manager, desarrollar software de forma independiente, asi como lo mismo que el usuario
+   → qa, facil de probar
+   → usuario, debe de ser disponible y confiable
+
+# Arquitectura y metodologías
+- nace en metodologias tradicionales, para encontrar problemas y solucionar a gran escala, las agiles emerge de un equipo autogestionado
+- En la tradicional se toman la definicion, restricciones, requerimientos, riesgos, le falta feedback, este se viene hasta que se termina la solución
+- en metodologia agil, se puede planear en el planteamiento del sprint, se debe de poder medir, se pueden hacer esqueletos de solución
+- lo mas importante para ser agiles es el feedback
+
+# Entender el problema
+- Separar la comprension del problema de la propuesta
+- Espacio del problema, idea, criterios de exito, historias de usuario
+- Espacio de la solucion, diseño, desarrollo, evaluacion, criterios de aceptacion, despliegue
+- se narran historias para llegar a eso
+- es la limitante del problema
+
+# Requerimientos
+- despues de entender el problema
+- de producto, que es lo que necesita
+   → negocio, consta de reglas de negocio
+   → usuario, como el usuario usa el sistema, atributos de calidad, garantia de que tenga calidad y es enfatizado
+   → funcionales, se alimentan de todo, para saber que se debe de hacer especificamente, tambien tienen requerimientos de sistemas, son afectados por las restricciones
+- de proyecto, no tiene que ver con la arquitectura
+   → recursos
+   → capacitacion
+   → certificaciones
+   → documentacion de usuario
+   → infraestructura
+   → licencias
+   → plan de despliegue
+   → plan de transicion
+   → acuerdos de servicio
+- funcionales, como se va a comportar el sistema
+- no funciones, tiene que ver mas con calidad, son parte de los funcionales, siempre los vinculaban con la arquitectura
+- requerimientos significativos, afectan el diseño la arquitectura
+
+# Riesgos
+- para describir, usar escenarios de fracaso que sean medibles y accionables
+- de ingenieria, se mitiga a traves de diseño e implementacion
+- de gestion de proyecto, relacinados mas con la planeacion
+- se identifican con la toma de requerimientos (difcultad y complejidad), atributos de calidad (insertidumbre) y conocimiento del dominio (riesgo prototipico)
+- Se priorizan riesgos y se solucionan los mas criticos, no se pueden solucionar todos
+
+# Restricciones
+- limita las opciones de diseño o implementacion
+- las partes interesadas, integraciones con otros sistemas, ciclo de vida del producto
+
+# Arquitectura, panorama y definición
+- se debe de saber que pasa en el software
+- verificacion de sacrificios y beneficios
+- un estilo de arquitectura es algo generico, resolución a nivel de conectores
+- es una coleccion de decisiones de diseño
+
+# Llamada y retorno
+- hacen invocaciones a otros componentes y espera una respuesta
+- programa principal y subrutinas, estilo C
+- OOP, para aplicaciones que se van a mantener mucho tiempo
+- Multinivel, se tienen diferentes niveles que se van a comunicar por nivel
+
+# Flujo de datos
+- Lote secuencial, lo importante es ejecutar una pieza de codigo y cuando termine pase a otra etapa
+- Tubos y filtros, es un streaming
+
+# Centrada en datos
+- Pizarron, se tienen diferentes componentes que interractuan con un componente principal, cada componente recibe y procesa los datos y envia al pizarron, también el pizarron puede tener procesamiento y dar una salida
+- Centrada en base de datos, generalmente es usado con una base de datos y los componentes comparten esa base de datos, los componentes no se comunican entre si, la base es el puente
+- Sistema experto, estilo basado en reglas, un cliente se comunica con otro que infiere las reglas o consultas, este se comunica con un tercero que es una base de datos de conocimiento
+
+# Componentes independientes
+- Invocación implicita, basada en eventos, aplicaciones que se mandan mensajes entre si, sin que sepan quien invoca a aquien, se usa un bus para comunicarse
+- Invocación explicita, aqui se sabe que se invoca, pero no son dependientes uno del otro, su comunicación es directa, hay un registro central que le dice quien puede rexolver un problema
+
+# Como se elije?
+- Monoliticos, eficiencia, curva de aprendizaje, capacidad de prueba, capacidad de modificacion
+- Distribuidos, mocularidad, disopnibilidad, uso de recursos, adaptabilidad
+
+Errores:
+¿Por qué no existe la bala de plata que resuelva las dificultades del desarrollo de software?
+¿Cuál de los siguientes requerimientos funcionales incluye explícitamente un requerimiento no funcional?
+De las formas en las que podemos trabajar con las dificultades esenciales, ¿cuál es la que más involucra a los arquitectos de software?
+El usuario podrá comprar con tarjeta de crédito a través del sistema, ¿qué tipo de requerimiento es?
+En los frameworks web modernos existe el concepto de middleware,  que describe una forma de interceptar el pedido o la respuesta del  sistema con componentes desarrollados independientes uno del otro. ¿Qué  estilo de arquitectura están implementando?</rich_text>
+    </node>
+    <node name="Arquitectura backend" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243251" ts_lastsave="1670282858">
+      <rich_text>- Que es backend
+   → es el sofware que se ejecuta en el servidor
+- sistemas distribuidos
+   → </rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -7296,14 +7465,7 @@ Apdex, application performance index
 - apdex = (satisfied request + (Tolerating request / 2)) / Total number of requests</rich_text>
     </node>
   </node>
-  <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251">
-    <node name="Arquitectura backend" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243251" ts_lastsave="1641243649">
-      <rich_text>- Que es backend
-   → es el sofware que se ejecuta en el servidor
-- sistemas distribuidos
-   → </rich_text>
-    </node>
-  </node>
+  <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251"/>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1667337877">
     <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1666052420">
       <rich_text>Las matematicas son un lenguaje
@@ -7845,135 +8007,6 @@ bloqueo</rich_text>
     </node>
   </node>
   <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1663354176">
-    <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1619638128">
-      <rich_text>Que es?
-Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
-Entender el rol del arquitecto
-
-# Etapas del proceso
-- Analisis de requerimientos, nace de una idea o problema, aqui se entiende que se va a construir, requerimientos de negocio, usuario, funcionales y no funcionales
-- Diseño de la solucion, Analisis profundo de los problemas, ya se tiene una propuesta de esas soluciones, aqui empieza el arquitecto
-- Desarrollo y evaluacion, programacion y pruebas, criterios de aceptacion, set necesario para construirla
-- Despliegue, infraestructura y roles de operacion para que este disponible
-- Mantenimiento y evolucion, Arreglo de errores y agregado de nuevas funcionalidades
-
-# Dificultades en el desarrollo
-- Esenciales, Entender el diseño y concepto
-   → complejidad, que tan dificil se vuelve, por ejemplo el calculo de rutas
-   → conformidad, el contexto que se va a usar y como adaptarlo, por ejemplo la efectividad del software
-   → tolerancia al cambio, se puede cambiar o ya no, que tanto cambia el problema que se resolvio
-   → invisibilidad, se vuelve dificil al no ser tangible
-- Accidentales, tecnologia y plaforma que se usara, conexiones entre tecnologias o resoluciones en esa tecnologia
-   → Lenguajes de alto nivel, elmismo lenguahe se vuelve una dificultad
-   → multiprocesamiento, el poder hacer mas de una tarea en la computadora
-   → Entornos de programación, algo asi como el que nos ayude con las propiedades que tengan clases o funciones del lenguaje
-como se resuelve?? No desarrollar, comprar OSS, Prototipado rapido, Desarrollo evolutivo, Grandes diseñadores (arquitectos)
-
-# Roles
-- Experto del dominio, es elq ue sabia que se requeria del dominio, en las nuevas metodologias son las partes interesadas
-- Analista, es el que indaga en que se debe de resolver, este es el cliente/dueño del producto, en las nuevas metodologias
-- Admininistrador de sistemas, los viejos sysadmin, hoy DevOps/SRE
-- Equipo de desarrollo, los qa, desarrollador, arquitecto
-- gestor del proyeco, se encarga de las entregas y que se cumpla con el plan, facilitador
-
-# Que es la arquitectura de software
-- modelos y diagramas con conexiones entre cajas
-- este es muy sesgado, pero se deben de hacer analisis profundos sobre que es lo que hay que contruir, y como es que el sistema los va a resolver
-- la arquitectura es algo estructural, por medio de objetos ocultando propiedades, es un conjunto de decisiones para el diseño del sistema
-- la arquitectura se reduce a cuaqluier cosa importante
-
-# La importancia de la comunicación (ley de conway)
-- la comunicación es fundamental para la arquitectura del software
-- la comunicación dara estructura
-
-# Objetivos del arquitecto
-- tiene varias partes interesadas:
-   → cliente, quiere un sistema en presupuesto y a tiempo
-   → desarrollador, facil de implementar y mantener
-   → manager, desarrollar software de forma independiente, asi como lo mismo que el usuario
-   → qa, facil de probar
-   → usuario, debe de ser disponible y confiable
-
-# Arquitectura y metodologías
-- nace en metodologias tradicionales, para encontrar problemas y solucionar a gran escala, las agiles emerge de un equipo autogestionado
-- En la tradicional se toman la definicion, restricciones, requerimientos, riesgos, le falta feedback, este se viene hasta que se termina la solución
-- en metodologia agil, se puede planear en el planteamiento del sprint, se debe de poder medir, se pueden hacer esqueletos de solución
-- lo mas importante para ser agiles es el feedback
-
-# Entender el problema
-- Separar la comprension del problema de la propuesta
-- Espacio del problema, idea, criterios de exito, historias de usuario
-- Espacio de la solucion, diseño, desarrollo, evaluacion, criterios de aceptacion, despliegue
-- se narran historias para llegar a eso
-- es la limitante del problema
-
-# Requerimientos
-- despues de entender el problema
-- de producto, que es lo que necesita
-   → negocio, consta de reglas de negocio
-   → usuario, como el usuario usa el sistema, atributos de calidad, garantia de que tenga calidad y es enfatizado
-   → funcionales, se alimentan de todo, para saber que se debe de hacer especificamente, tambien tienen requerimientos de sistemas, son afectados por las restricciones
-- de proyecto, no tiene que ver con la arquitectura
-   → recursos
-   → capacitacion
-   → certificaciones
-   → documentacion de usuario
-   → infraestructura
-   → licencias
-   → plan de despliegue
-   → plan de transicion
-   → acuerdos de servicio
-- funcionales, como se va a comportar el sistema
-- no funciones, tiene que ver mas con calidad, son parte de los funcionales, siempre los vinculaban con la arquitectura
-- requerimientos significativos, afectan el diseño la arquitectura
-
-# Riesgos
-- para describir, usar escenarios de fracaso que sean medibles y accionables
-- de ingenieria, se mitiga a traves de diseño e implementacion
-- de gestion de proyecto, relacinados mas con la planeacion
-- se identifican con la toma de requerimientos (difcultad y complejidad), atributos de calidad (insertidumbre) y conocimiento del dominio (riesgo prototipico)
-- Se priorizan riesgos y se solucionan los mas criticos, no se pueden solucionar todos
-
-# Restricciones
-- limita las opciones de diseño o implementacion
-- las partes interesadas, integraciones con otros sistemas, ciclo de vida del producto
-
-# Arquitectura, panorama y definición
-- se debe de saber que pasa en el software
-- verificacion de sacrificios y beneficios
-- un estilo de arquitectura es algo generico, resolución a nivel de conectores
-- es una coleccion de decisiones de diseño
-
-# Llamada y retorno
-- hacen invocaciones a otros componentes y espera una respuesta
-- programa principal y subrutinas, estilo C
-- OOP, para aplicaciones que se van a mantener mucho tiempo
-- Multinivel, se tienen diferentes niveles que se van a comunicar por nivel
-
-# Flujo de datos
-- Lote secuencial, lo importante es ejecutar una pieza de codigo y cuando termine pase a otra etapa
-- Tubos y filtros, es un streaming
-
-# Centrada en datos
-- Pizarron, se tienen diferentes componentes que interractuan con un componente principal, cada componente recibe y procesa los datos y envia al pizarron, también el pizarron puede tener procesamiento y dar una salida
-- Centrada en base de datos, generalmente es usado con una base de datos y los componentes comparten esa base de datos, los componentes no se comunican entre si, la base es el puente
-- Sistema experto, estilo basado en reglas, un cliente se comunica con otro que infiere las reglas o consultas, este se comunica con un tercero que es una base de datos de conocimiento
-
-# Componentes independientes
-- Invocación implicita, basada en eventos, aplicaciones que se mandan mensajes entre si, sin que sepan quien invoca a aquien, se usa un bus para comunicarse
-- Invocación explicita, aqui se sabe que se invoca, pero no son dependientes uno del otro, su comunicación es directa, hay un registro central que le dice quien puede rexolver un problema
-
-# Como se elije?
-- Monoliticos, eficiencia, curva de aprendizaje, capacidad de prueba, capacidad de modificacion
-- Distribuidos, mocularidad, disopnibilidad, uso de recursos, adaptabilidad
-
-Errores:
-¿Por qué no existe la bala de plata que resuelva las dificultades del desarrollo de software?
-¿Cuál de los siguientes requerimientos funcionales incluye explícitamente un requerimiento no funcional?
-De las formas en las que podemos trabajar con las dificultades esenciales, ¿cuál es la que más involucra a los arquitectos de software?
-El usuario podrá comprar con tarjeta de crédito a través del sistema, ¿qué tipo de requerimiento es?
-En los frameworks web modernos existe el concepto de middleware,  que describe una forma de interceptar el pedido o la respuesta del  sistema con componentes desarrollados independientes uno del otro. ¿Qué  estilo de arquitectura están implementando?</rich_text>
-    </node>
     <node name="bases de datos" unique_id="44" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801007" ts_lastsave="1625170789">
       <rich_text>## Necesitamos crear un proyecto que haga de GO el backend y si es posible de front con angular... dockers o kubernetes
 
