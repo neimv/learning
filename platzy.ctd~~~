@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1670357789">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1670456126">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -6014,9 +6014,38 @@ OTROS WORKLOADS
    → es parecido a los deployment, sirven para gestionar aplicaciones con estado
    → almacenan datos, se usan muhco para bases de datos, data persistente y altamente confiable, tambien para CRMs
    → a los pods se les asigna un nombre unico, no aleatorio
+   → se incrementan de forma secuencial
+   → estos no son intercambiables
+   → si se borra se vuelve a recrear
+   → se aniaden en orden y se disminuyen en orden
+   → los pods no comparten datos, cada uno de ellos maneja su propio volumen
 - daemonSet, utiles para entornos de tipo log o monitorizacion
+   → genera un pod en cada nodo del cluster
+   → se usan para procesos que se requieren en cada nodo, por ej. backups. monitoreo
 - job y cronjob, worloads que se lanzan de manera planificada
+   → se lanza en un momento determinado, hace su trabajo y muere
+   → para lanzar de nuevo un job se tiene que borrar el anterior si no no se puede actualizar
+   → si se envian varios, se ejecutan de forma secuencial
+   → se pueden trabajar en paralelismo, pero se tiene que decir cuantos jobs deben de ejecutarse
+   → los jobs se reintentan hasta el infinito si fallan, se debe de decir cuantas veces se debe ejecutar
+   → los cronjob se planifican
 - Custom Resource, son de tipo personalizado
+
+SONDAS
+- sirve para saber si lo que esta funcionando adentro esta correctamente
+- dos tipos
+   → liveness, saber si el contenedor esta funcionando, si falla el contenedor es eliminado, se pone en el contenedor livenessProbe
+   → readiness, si el contenedor esta listo para dar servicio, es para saber si el servicio dentro del pod esta sirviendo, este deja el pod inaccesible
+   → startup, lo que dicen es si el app dentro del contenedor esta lista
+- de tipo command
+- de tipo socket
+- de tipo http
+- dependiendo del tipo se puede hacer una u otra cosa
+- se pueden tener tres tipos de respuesta:
+   → success
+   → failure
+   → unknown, este es el mas dificil
+- 
 
 
 
@@ -6097,7 +6126,7 @@ EVENTS
 
 </rich_text>
     </node>
-    <node name="Terraform" unique_id="125" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1670266110" ts_lastsave="1670355755">
+    <node name="Terraform" unique_id="125" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1670266110" ts_lastsave="1670543800">
       <rich_text>terraform import {resource name} {id resource created}
 
 $ terraform plan                                  # plan
@@ -6109,7 +6138,33 @@ $ cat terraform.tfstate                           # show state in
 
 
 Infrastructure as code
-version control Infra</rich_text>
+version control Infra
+para las variables se usa .tfvars, se acostumbra no subir este archivo a git con credenciales
+lookup para buscar la variable a usar en un map
+con provisioner “file”, se puede subir un archivo a una instancia de aws
+para sobreescribir ssh se puede usar connection en instace aws
+
+terraform state
+este guarda los datos en terraform.tfstate
+hace un backup de estaado previo
+con cada apply, este crea un nuevo state y hacec el backup
+con este es como se mantiene un track de los cambios realizados
+se puede mantener en un controlador de versionamientos
+se pueden usar varios backend para guardalos como;
+	s3
+	consul
+	terraform enterprise
+se usa vantante para trabajar con colaboradores
+
+para cambiar el backend del terraform:
+	- se crea el archivo backend.tf donde se configura el bucket name y la llave con la que se guarda
+	- con terraform init es suficiente para que funcione
+	
+data sources se usa para poder obtener valores, por ejemplo los rangos de ips dependiendo de la zona
+
+terraform fmt, sirve para dar formato y estilo a los archivos
+get, dedscarga y actualiza los modulos
+graph</rich_text>
     </node>
     <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1670282834">
       <rich_text>Que es?
