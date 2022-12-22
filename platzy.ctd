@@ -2833,7 +2833,7 @@ Aprendizaje basado en instancias y basado en modelos
       </node>
     </node>
   </node>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1670266110">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1671579555">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5770,7 +5770,7 @@ Sistema numÃ©rico utilizado para cambiar permisos de forma numÃ©rica en Linu
 </rich_text>
     </node>
     <node name="cloudformation" unique_id="77" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1650935953" ts_lastsave="1650935953"/>
-    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1670456126">
+    <node name="K8s - zebrands" unique_id="122" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1667418547" ts_lastsave="1671225919">
       <rich_text>Commands minikube:
 - minikube -&gt; da la salida de que se puede hacer con minikube
 - minikube status -&gt; comprobar que el minikube esta funcionando
@@ -6045,11 +6045,54 @@ SONDAS
    → success
    → failure
    → unknown, este es el mas dificil
-- 
 
+RBAC
+- no tiene un api para la creacion de usuarios
+- esto se maneja de forma externa
+   → certificados
+   → tokens
+   → basic authentication
+   → oauth2
+- un rol es un conjunto de permisos, para usuario o service account tengan a un acceso a un namespace
+- kubectl get roles -n {namespace}, los que dicen system son roles internos del sistema
+- kubectl describe role {role} -n {namespace}
+- es obligatorio tener un namespace para la creacion de roles
+- los roles son acumulativos, no existe un deny
+- kubectl api-resources
+- los cluster role, nos ayudan a trabajar con permisos a nivel de cluster
+- kubectl get clusterroles
+- kubectl describe clusterrole {name}
+- `openssl genrsa -out {nombre} 4096` -- para crear certificados
+- `openssl req -config {nomre}.crs.cnf - new -key {name}.key -out {nomre}.csr`
+- se debe de enviar el certificado para que sea firmado por el mismo cluster de k8s
+- kubectl get csr
+- kubectl certificate approve {nombre}
+- kubectl get csr {name} -o jsonpath='{.status.certificate}' | base64 --decode &gt; {name}.crt
+- son necesarios los certificados para poder tener los accesos correctos
+- se debe de crear un role-binding al usuario para que puede acceder a los elementos
+- kubectl get rolebindings -n {namespace}
+- para agregar permisos sob rel el cluster se debe de usar un clusterrolebinding
+- kubectl get clusterrolebinding {name}
+- service account, gestionados por el mismo k8s, darle una identidad a un pod para que pueda acceder al api server, son gestionados por el api de k8s, generalmente se asocian a un namespace, estan asociados a un objeto secrets pra las credenciales, se montan dentro de un pod, se asocian por medio de un rolebinding
+- kubectl get sa {--all-namespace}
+- se monta el volumen en el pod como si fuera un secret
+- kubectl create serviceaccount
+- kubectl get sa
+- se deben de crear los service account y los secrets aparte
 
-
-
+INGRESS CONTROLER
+- recurso que permite acceder a los servicios de k8s, de manera externa
+- estos vienen de terceros
+- se debe activar en minikube
+- balancea el trafico desde los endpoints
+- se puede implementar encriptacion https
+- estos van a un servicio de k8s
+- existen algunos genericos que se pueden usar dentro de la propia infra
+- para minikube:
+   → minikube addons enabled ingress
+   → kubectl get pods -n kube-system, debe de tener un nginx
+   → kubectl get all -n ingress-nginx
+- se tienen IngressClass
 
 
 
@@ -6168,7 +6211,7 @@ graph crea una grafico de la infra
 remote, configura los estados remotos
 taint sirve para marcar una instancia la cual se va a recrear la proxima vez</rich_text>
     </node>
-    <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1670282834">
+    <node name="Arquitectura de software" unique_id="43" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532733" ts_lastsave="1671058511">
       <rich_text>Que es?
 Estructuras, modelos con daigramas, comunicacion entre diferentes modulos del sistema
 Entender el rol del arquitecto
@@ -6290,18 +6333,170 @@ como se resuelve?? No desarrollar, comprar OSS, Prototipado rapido, Desarrollo e
 - Monoliticos, eficiencia, curva de aprendizaje, capacidad de prueba, capacidad de modificacion
 - Distribuidos, mocularidad, disopnibilidad, uso de recursos, adaptabilidad
 
-Errores:
-¿Por qué no existe la bala de plata que resuelva las dificultades del desarrollo de software?
-¿Cuál de los siguientes requerimientos funcionales incluye explícitamente un requerimiento no funcional?
-De las formas en las que podemos trabajar con las dificultades esenciales, ¿cuál es la que más involucra a los arquitectos de software?
-El usuario podrá comprar con tarjeta de crédito a través del sistema, ¿qué tipo de requerimiento es?
-En los frameworks web modernos existe el concepto de middleware,  que describe una forma de interceptar el pedido o la respuesta del  sistema con componentes desarrollados independientes uno del otro. ¿Qué  estilo de arquitectura están implementando?</rich_text>
+--- parte profesional
+# Atributos
+- son cualidades de que tan bueno o malo es un sistema en si mismo, expectativas del usuario, de que tan bien funciona un sistema
+   → idoneidad funcional, conecta a lo que el usuario queire hacer y como esta implementadas en el sistema
+      ⇒ completitud funcional, cuan completa esta la implementacion
+      ⇒ exactitud funciona, cuan preciso es el sistema
+      ⇒ pertinencia funcional, cuan alineado esta lo que se implemento con lo que se requeria
+   → Eficiencia de ejecucion, que tan bueno y eficiente el sistema a la hora de responder al usuario, a la vez que tan bueno es con los recursos
+      ⇒ tiempo a comportamiento, cuan bueno es el sistema respondiendo al usuario
+      ⇒ uso de recursos, cuanto aprovecha el sistema los recursos de tipo hardware
+      ⇒ capacidad, cuantos soporta el sistema en cantidad de peticiones, carga, lectura y escritura
+   → compatibilidad, cuanto puede el sistema vivir en un contexto mas grande, que tanto otros sistemas puede convivir con el
+      ⇒ interoperabilidad, cuan facil es comunicarse con el sistema, y con otros
+      ⇒ coexistencia, cuanto el sistema soporta estar con otros sistemas, medible a travez del numero de fallos por razones externas
+   → Usabilidad
+      ⇒ reconocimiento de idoneidad, cuando nos damos cuenta que el sistema nos ayuda a resolver nuestro objetivo, el dominio del problema esta asociado al sistema
+      ⇒ curva de aprendizaje, cuan facil o dificil es aprender a usar un sistema
+      ⇒ operabilidad, cual es la cantidad de pasos para lograr un objetivo
+      ⇒ proteccion a errores, cuanto feedback se le da al usuario (400)
+      ⇒ estatica de interfaz, es algo abstracto, este se mide con encuestas
+      ⇒ accesibilidad, capacidad de ser usado por personas con discapacidades
+   → Confiabilidad, cuanto el sistema nos permite a travez del tiempo usarlo de forma normal
+      ⇒ Madurez, cuanto falla el sistema en su uso normal, tiempo medio entre averias
+      ⇒ disponibilidad, cantidad de tiempo fuera del servicio
+      ⇒ tolerancia a fallos, como el sistema puede seguir dando servicios si es que tuvo un fallo
+      ⇒ capacidad de recuperacion, cuanto tiempo tarda en regresar a estar disponible despues del fallo
+   → seguridad, cuanto el sistema protege la informacion del usuario, la identificacion y a que puede y no acceder
+      ⇒ confidencialidad, autorizacion del sistema para que un usuario pueda ver o no algo de la informacion del sistema 
+      ⇒ traza de responsabilidad, comprobacion de hechos, como se conecta cada accion del sistema, ya sea de parte del usuario o del sistema
+      ⇒ integridad, cuanto el sistema toma recaudos para proteger la informacion de atacantes
+      ⇒ comprobacion de hechos, garantizar que algo realmente paso
+      ⇒ autenticidad, como se logra identifcar al usuario
+   → Mantenibilidad, eso que hace que un sistema pueda evolucionar con nuevas funcionalidad y que sea reparable
+      ⇒ modularidad, capacidad de un sistema se poder ser separado en partes
+      ⇒ reusabilidad, cuanto se puede usar un modulo o pieza de software pra usar en otro lado
+      ⇒ capacidad ded analisis, es sobre cuanto se puede entender el problema y conectarlo al sistema en codigo
+      ⇒ capacidad de modificacion, cuan facil o dificil es ir al codigo y cambiar el codigo
+      ⇒ capacidad de prueba, cuan facil o dificil es crear los test para garantizar que el sistema hace lo que debe de hacer
+   → portabilidad
+      ⇒ adaptabilidad, de cuanto depende nuestro sistema de un entorno especifico
+      ⇒ capacidad de instalacion, cuan fuertemente se tienen requerimientos del entorno del despliegue, que tan complejo se hace el despliegue
+      ⇒ capacidad de reemplazo, cuales son los requerimientos que hoy se cumple y como el sistema puede ser reemplazado efectivamente, retrocompatibilidad
+- tensiones entre atributos</rich_text>
     </node>
     <node name="Arquitectura backend" unique_id="57" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243251" ts_lastsave="1670282858">
       <rich_text>- Que es backend
    → es el sofware que se ejecuta en el servidor
 - sistemas distribuidos
    → </rich_text>
+    </node>
+    <node name="DevOps Basico" unique_id="126" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1670889552" ts_lastsave="1670891571">
+      <rich_text>aws ec2 describe-instances \
+--filters </rich_text>
+      <rich_text foreground="#dd1144">"Name=instance-state-code,Values=80"</rich_text>
+      <rich_text>  \
+--query </rich_text>
+      <rich_text foreground="#dd1144">'Reservations[].Instances[].[Tags[?Key==`Name`] | [0].Value, InstanceId, PublicIpAddress,  State.Name, StateTransitionReason]'</rich_text>
+      <rich_text>  \
+--output table</rich_text>
+    </node>
+    <node name="AWS - Speciality" unique_id="127" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671579555" ts_lastsave="1671582045">
+      <node name="IAM" unique_id="128" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671579581" ts_lastsave="1671752107">
+        <rich_text>AWS accounts
+- exists account root user, has full control over account
+- IAM is used to create users, groups, roles and policies
+- access by conole, api or CLI
+
+What is cloud computing
+- server is composed of CPU and RAM, Storage
+- database store data in a structure way
+- Networks: routers, switch, DNS server
+- tradicionally the infrastructure begins in garage before move to office and before in data center (servers that scale)
+- me pays for this servers and services
+- is necesary a team that monitor infra 24/7
+- is the on deman delivery of computer power, database storage, application and other IT resources
+- use only of necessary for my apps
+- is possible ger resources as is necesary
+- this is used with servers, storages, databases or set of apps services
+- exists:
+   → private, in the same enterprise
+   → public, cloud resources owner and operated by thid
+      ⇒ Six advantages of cloud computing
+   → hybrid, use servers on premise and extend capabilities to the cloud
+- Five characteristics
+   → on demand self services
+      ⇒ Users can provision resources
+   → Broad network access
+      ⇒ is possible accessed by diverse client platforms
+   → Multi tenancy and resources pooling
+      ⇒ multiple customer can share the same infra
+      ⇒ multiple customer are serviced from the same phisical resources
+   → rapid elasticity and scability
+      ⇒ automatically and qquickly acquire and sipose resources
+      ⇒ scaled on demand
+   → measured services
+      ⇒ use pay by use
+- Six advantges of cloud computing
+   → Trade capital expense (CAPX) for operational expense (OPEX)
+   → Benefit from massive economies of scale
+   → Stop guessing capacity
+   → Increase speed and agility
+   → Stop spending money running and maintaining data centers
+   → go global in minutes: leverage the aws global infra
+- problems solved:
+   → flexibility
+   → cost effectiveness
+   → scability
+   → elasticity
+   → high availibility and fault tolerance
+   → agility
+- types of cloud computing
+   → IaaS
+      ⇒ networking, computers, data storage
+      ⇒ highest level of flexibility
+      ⇒ EC2
+   → PaaS
+      ⇒ removes manage the underlying infra
+      ⇒ focus on the deployment and management of your apps
+      ⇒ Elastic Beanstalk
+   → SaaS
+      ⇒ product managed by service provider
+      ⇒ rekognition for ML</rich_text>
+      </node>
+      <node name="Security" unique_id="129" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671582045" ts_lastsave="1671657569">
+        <rich_text>AWS Fundamentals
+- IAM is used to autehnticated to send requests
+- for person or applications, make a request for an action or operation
+- Identity - based policy, uses a roles
+- Resource - based policy, apply of resources (ex s3 buckets)
+- Roles are used for delegation and are assumed
+- Roles are assumed by users, applications and services (sts:AssumeRole)
+- Methods of authentication:
+   → Username, password, MFA token(optional)
+   → CLI, API = Access key and secret key
+   → Signing Certificate -&gt; ec2
+   → SSh key -&gt; AWS CodeCommit
+   → Keyspaces credencial -&gt; Amazon Keyspaces
+
+IAM Access Control:
+- Identity based policies
+   → are jsons permissions policy that contrik what actions an identity can perform 
+- resource - based policies
+   → are jsons policy that you attach a resource
+- Methods
+   → RBAC (role based access control)
+      ⇒ good practice is to grant the minimum permissions required to perform the job
+      ⇒ job function policies:
+         • Administrator
+         • Billing
+         • Database administrator
+         • Data scientist
+         • Developer power user
+         • Network administrator
+         • Security auditor
+         • Support user
+         • System administrator
+         • View-only user
+   → ABAC (attribute based access control)
+      ⇒ is generally using tags
+- Permissions Boundaries
+   → sets the maximun permission that the entity can have
+   → Privilege Escalation (it very importante use Permission boundary to avoid create innecesaries resources), permissions boundary is used to limit creation of IAM user with elevated permission
+- deny &gt; allow</rich_text>
+      </node>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">

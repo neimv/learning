@@ -72,58 +72,5 @@
    → lider del equipo de preubas
    → ingeniero de calidad</rich_text>
   </node>
-  <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671681549">
-    <rich_text>What is cloud computing
-- server is composed of CPU and RAM, Storage
-- database store data in a structure way
-- Networks: routers, switch, DNS server
-- tradicionally the infrastructure begins in garage before move to office and before in data center (servers that scale)
-- me pays for this servers and services
-- is necesary a team that monitor infra 24/7
-- is the on deman delivery of computer power, database storage, application and other IT resources
-- use only of necessary for my apps
-- is possible ger resources as is necesary
-- this is used with servers, storages, databases or set of apps services
-- exists:
-   → private, in the same enterprise
-   → public, cloud resources owner and operated by thid
-      ⇒ Six advantages of cloud computing
-   → hybrid, use servers on premise and extend capabilities to the cloud
-- Five characteristics
-   → on demand self services
-      ⇒ Users can provision resources
-   → Broad network access
-      ⇒ is possible accessed by diverse client platforms
-   → Multi tenancy and resources pooling
-      ⇒ multiple customer can share the same infra
-      ⇒ multiple customer are serviced from the same phisical resources
-   → rapid elasticity and scability
-      ⇒ automatically and qquickly acquire and sipose resources
-      ⇒ scaled on demand
-   → measured services
-      ⇒ use pay by use
-- Six advantges of cloud computing
-   → Trade capital expense (CAPX) for operational expense (OPEX)
-   → Benefit from massive economies of scale
-   → Stop guessing capacity
-   → Increase speed and agility
-   → Stop spending money running and maintaining data centers
-   → go global in minutes: leverage the aws global infra
-- problems solved:
-   → flexibility
-   → cost effectiveness
-   → scability
-   → elasticity
-   → high availibility and fault tolerance
-   → agility
-- types of cloud computing
-   → IaaS
-      ⇒ networking, computers, data storage
-      ⇒ highest level of flexibility
-   → PaaS
-      ⇒ removes manage the underlying infra
-      ⇒ focus on the deployment and management of your apps
-   → SaaS
-      ⇒ product managed by service provider</rich_text>
-  </node>
+  <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671752092"/>
 </cherrytree>
