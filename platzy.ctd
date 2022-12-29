@@ -6456,7 +6456,7 @@ What is cloud computing
       ⇒ product managed by service provider
       ⇒ rekognition for ML</rich_text>
       </node>
-      <node name="Security" unique_id="129" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671582045" ts_lastsave="1671657569">
+      <node name="Security" unique_id="129" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671582045" ts_lastsave="1672275145">
         <rich_text>AWS Fundamentals
 - IAM is used to autehnticated to send requests
 - for person or applications, make a request for an action or operation
@@ -6495,7 +6495,17 @@ IAM Access Control:
 - Permissions Boundaries
    → sets the maximun permission that the entity can have
    → Privilege Escalation (it very importante use Permission boundary to avoid create innecesaries resources), permissions boundary is used to limit creation of IAM user with elevated permission
-- deny &gt; allow</rich_text>
+- deny &gt; allow
+
+AWS Organization
+- is a service to manage multiple acounts
+- cross account
+- used with organization with multiple schemas
+- is necesary a management account, AWS management to create organization
+
+IAM Roles
+- very uses with across accounts
+- is necesary use a eternal ID in conditions to assume role</rich_text>
       </node>
     </node>
   </node>
