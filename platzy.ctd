@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673047333">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673288560">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -3967,9 +3967,34 @@ Linux Fundamentals
    → cmp
       ⇒ compare byte to byte
    → tar
+      ⇒ puts in one container or one fie
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tar cvf {file_output}.tar {directory}</rich_text>
+      <rich_text>, compress and save in one file
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tar xvf {file}.tar</rich_text>
+      <rich_text>, to decompress
    → gzip
+      ⇒ compress files
+      ⇒ </rich_text>
+      <rich_text weight="heavy">gzip {file}.tar</rich_text>
+      <rich_text>, to compress
    → gunzip
-   → truncate</rich_text>
+      ⇒ compress files, identical to gzip -d
+   → truncate
+      ⇒ used tt shrink or extend the size of a file
+      ⇒ </rich_text>
+      <rich_text weight="heavy">truncate -s 10 filename</rich_text>
+      <rich_text>, this eliminate data
+   → cat
+      ⇒ used to combine multiple files
+      ⇒ </rich_text>
+      <rich_text weight="heavy">cat {files} &gt; file_out</rich_text>
+      <rich_text>
+   → split
+      ⇒ </rich_text>
+      <rich_text weight="heavy">split -l 300 file.txt childfile</rich_text>
+      <rich_text>, split file into 300 lines perfile and output in childfile</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
