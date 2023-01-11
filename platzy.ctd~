@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673288537">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673382706">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -3991,7 +3991,84 @@ Linux Fundamentals
       ⇒ </rich_text>
       <rich_text weight="heavy">cat {files} &gt; file_out</rich_text>
       <rich_text>
-   → split</rich_text>
+   → split
+      ⇒ </rich_text>
+      <rich_text weight="heavy">split -l 300 file.txt childfile</rich_text>
+      <rich_text>, split file into 300 lines perfile and output in childfile
+   → seed
+      ⇒ replace a string in file text
+      ⇒ find and delete a line
+      ⇒ remove empty lines
+      ⇒ remove the first or n lines
+      ⇒ replace tabs with spaces
+      ⇒ show defined lines from a files
+      ⇒ substitute within vi editor
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘s/string/replace/g’ {filename}</rich_text>
+      <rich_text>
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘s/string/replace/g’ {filename}</rich_text>
+      <rich_text>, this replace and change in the file
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘s/string//g’ {filename}</rich_text>
+      <rich_text>, delete string
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘s/string/d’ {filename}</rich_text>
+      <rich_text>, delete lines with string
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘/^$/d’ {filename}</rich_text>
+      <rich_text>, this delete empty lines
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘1,2d’ {filename}</rich_text>
+      <rich_text>, delete 1 and 2 lines
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed ‘s/\t/ /g’ {filename}</rich_text>
+      <rich_text>, replace tabs with spaces
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed -n 12,18p {filename}</rich_text>
+      <rich_text>, show lines 12-18, if is used d, this delete
+      ⇒ </rich_text>
+      <rich_text weight="heavy">sed G {filename}</rich_text>
+      <rich_text>, this add one space between lines
+   → useradd
+      ⇒ useradd -g {group} -s {shell} -c “user description” -m -d {home} {name}
+   → groupadd
+      ⇒ groupadd {name}
+   → userdel
+      ⇒ userdel -r {username}
+   → groupdel
+      ⇒ groupdel {name}
+   → usermod
+      ⇒ usermod -G {group} {username}
+   → files:
+      ⇒ /etc/passwd
+      ⇒ /etc/group
+      ⇒ /etc/shadow
+   → chage
+      ⇒ is the /etc/login.def file
+      ⇒ policies of users, this apply by user
+- Change user
+   → </rich_text>
+      <rich_text weight="heavy">su - username</rich_text>
+      <rich_text>
+   → </rich_text>
+      <rich_text weight="heavy">sudo command</rich_text>
+      <rich_text>
+   → </rich_text>
+      <rich_text weight="heavy">visudo</rich_text>
+      <rich_text>, config of sudo
+   → file: /etc/sudoers
+- monitor user
+   → who, users connected, terminal used and ip 
+   → last, historical of connected users
+   → w, prints the same that who with more details
+   → finger - pinky, 
+   → id, information of user
+- talking with users
+   → users, who is logged in the system
+   → wall, broadcast users message, ctrl + d to send message
+   → write, dedicate user message
+      ⇒ write </rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
