@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673382557">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673735936">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4066,8 +4066,111 @@ Linux Fundamentals
    → id, information of user
 - talking with users
    → users, who is logged in the system
-   → wall, broadcast users message
-   → write, dedicate user message</rich_text>
+   → wall, broadcast users message, ctrl + d to send message
+   → write, dedicate user message
+      ⇒ write {username}, mesage is in real time
+- Linux account auth
+   → with miles of users
+   → accounts
+      ⇒ local
+      ⇒ domain/directory
+   → is a client - server, if user is auth reedirect to client
+   → in windows is active directory
+   → ldap is a protocol used by servers (linux, windows or mac)
+   → for redhat is Identity Manager
+   → WinBIND used in linux to communicate with windows
+   → OpenLDAP is open product like IDM
+- System utility commands
+   → date, date
+   → uptime, time is used the system (on) and users loggeds and load average of work of CPU
+   → hostname, name of computer in network
+   → uname, environment is working (Linux), with -a show all information of system
+   → which, where is the command
+   → cal, calendar
+   → bc, this is a calculator
+- process and jobs
+   → applications = service, this is a program like firefox
+   → script, commands are list of intructions, ex adduser, cp, pwd
+   → process, this is created when run apps
+   → daemon, this is process that is executed in background
+   → threads, the process is possible that have multiple threads
+   → job, run a service or process at a scheduled time
+   → process = systemctl or service
+      ⇒ this is for start application
+      ⇒ systemctl is a new tool
+      ⇒ systemctl is a eplace of service
+      ⇒ usage: </rich_text>
+      <rich_text weight="heavy">systemctl {action} servicename.service</rich_text>
+      <rich_text>
+      ⇒ </rich_text>
+      <rich_text weight="heavy">systemctl list-units --all</rich_text>
+      <rich_text>
+   → ps, this see what process running
+      ⇒ displays the currently running process in the system
+      ⇒ with ps only show my process
+      ⇒ </rich_text>
+      <rich_text weight="heavy">ps -e</rich_text>
+      <rich_text>, show all running processes
+      ⇒ </rich_text>
+      <rich_text weight="heavy">ps aux</rich_text>
+      <rich_text>, show process in BSD format
+      ⇒ </rich_text>
+      <rich_text weight="heavy">ps -ef</rich_text>
+      <rich_text>, show process in full format listing
+      ⇒ </rich_text>
+      <rich_text weight="heavy">ps -u username</rich_text>
+      <rich_text>, show process by username
+   → top, all process is running like a top 10
+      ⇒ this is real time process check
+      ⇒ </rich_text>
+      <rich_text weight="heavy">top -u {user}</rich_text>
+      <rich_text>, show process of user
+      ⇒ </rich_text>
+      <rich_text weight="heavy">top then press c</rich_text>
+      <rich_text>, shows commands absolute path
+      ⇒ </rich_text>
+      <rich_text weight="heavy">top then press k</rich_text>
+      <rich_text>, kill a process by PID within top session
+      ⇒ </rich_text>
+      <rich_text weight="heavy">top then M and P</rich_text>
+      <rich_text>, to sort all linux running processes by memory usage
+      ⇒ 
+   → kill, kill the process with name or id
+      ⇒ terminate processes manually, kill process or group of processes
+      ⇒ </rich_text>
+      <rich_text weight="heavy">kill {option} {process ID}</rich_text>
+      <rich_text>
+      ⇒ </rich_text>
+      <rich_text weight="heavy">kill -l</rich_text>
+      <rich_text>, show all signals option
+      ⇒ </rich_text>
+      <rich_text weight="heavy">kill -1</rich_text>
+      <rich_text>, restart
+      ⇒ </rich_text>
+      <rich_text weight="heavy">kill -2</rich_text>
+      <rich_text>, interrupt from the keyboard
+      ⇒ </rich_text>
+      <rich_text weight="heavy">kill -9</rich_text>
+      <rich_text>, force kill process
+      ⇒ </rich_text>
+      <rich_text weight="heavy">kill -15</rich_text>
+      <rich_text>, kill a process gracefully
+      ⇒ killall, kill all
+      ⇒ pkill, kill by name
+   → crontab is for scheduled process in the system
+      ⇒ crontab -e, edit the contrab
+      ⇒ crontab -l, list contrab entries
+      ⇒ crontab -r, remove the crontab
+      ⇒ crond, crontab daemon
+      ⇒ minute/hour/day of month/month/day of week
+   → at, like a crontab, on time basic
+      ⇒ like crontab but onle once
+      ⇒ this enger to interactive mode and out with ctrl + d
+      ⇒ at HH:MM PM = schedule a job
+      ⇒ atq, list th at entries
+      ⇒ atrm #, remove at entry
+      ⇒ atd = at daemon/service that manges scheduling
+      ⇒ at {time}</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
