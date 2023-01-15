@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673735996">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673817968">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4163,6 +4163,14 @@ Linux Fundamentals
       ⇒ crontab -r, remove the crontab
       ⇒ crond, crontab daemon
       ⇒ minute/hour/day of month/month/day of week
+      ⇒ exists more crontabs
+      ⇒ hourly
+      ⇒ daily
+      ⇒ weekly
+      ⇒ monthly
+      ⇒ /etc/cron.d__
+      ⇒ /etc/anacontab
+      ⇒ /etc/cront.d/hour
    → at, like a crontab, on time basic
       ⇒ like crontab but onle once
       ⇒ this enger to interactive mode and out with ctrl + d
@@ -4170,7 +4178,45 @@ Linux Fundamentals
       ⇒ atq, list th at entries
       ⇒ atrm #, remove at entry
       ⇒ atd = at daemon/service that manges scheduling
-      ⇒ at {time} -&gt; enter \n {task} -&gt; ctrl + D</rich_text>
+      ⇒ at {time} -&gt; enter \n {task} -&gt; ctrl + D
+- process management, running in terminar
+   → background
+      ⇒ ctrl z, this send command to background
+      ⇒ jobs, this list jobs in background
+      ⇒ bg, start jobs in background
+   → foreground
+      ⇒ fg
+   → run process even after exit
+      ⇒ nohup process &amp;, this create a file nohup.out
+         • nohup process &gt; /dev/null 2&gt;&amp;1 &amp;
+   → kill a process by name = pkill
+   → process priority = nice (-20 to 19), lower number more priority
+      ⇒ nice -n 5 process
+- System monitoring
+   → top, show process and information in interactive mode
+   → df, report of use of disk or disks
+   → du, is for check size of files
+   → dmesg, show warnings in the system
+   → iostat 1, show information of input and output devices statistics, with number refresh every {number} seconds
+   → netstat, information ot network
+      ⇒ netstat -rnv, show information of Iface of network
+   → free, show physical memory and swap
+   → cat /proc/cpuinfo, cpu info from file
+   → cat /proc/meminfo, mem info from file
+- logs monitoring
+      ⇒ log directory=/var/log
+         • boot
+         • chronyd = NTP
+         • cron
+         • maillog
+         • secure
+         • messages
+         • httpd
+- system maintenance commands
+   → shutdown
+   → init 0-6, depending option is different action
+   → reboot
+   → halt</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
