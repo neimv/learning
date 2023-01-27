@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1672680771">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1674670145">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1673817968">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1674776656">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4213,10 +4213,369 @@ Linux Fundamentals
          • messages
          • httpd
 - system maintenance commands
-   → shutdown
+   → shutdown, halt or reboot the machine
    → init 0-6, depending option is different action
    → reboot
-   → halt</rich_text>
+   → halt
+- change system hostname
+   → hostname set-hostname {name}
+   → edit:
+      ⇒ /etc/hostname
+      ⇒ /etc/sysconfig/network
+- system information
+   → cat /etc/redhat-release
+   → cat /etc/lsb-release
+   → uname -a
+   → dmidecod, large information of cpu, processor, memory and others
+   → arch - get architecture of machine
+- terminal control keys (CTRL)
+   → u, erase al typed on the command line 
+   → c, stop/kill a command
+   → z, suspend a command
+   → d, exit from an interactive program
+- terminal commands
+   → clear, clear screen
+   → exit, exit of session terminal
+   → script. stores terminal activities in a log file can be named by user
+      ⇒ script {name}
+- variables
+   → printenv or env, to get all variables
+   → echo ${variable name}
+   → export {variable_name}={value}
+- special permissions
+   → setuid, tells linux to run a program with the effective userid of the owner
+   → setgid,  similar to setuid, but for group
+   → sticky bit, set on files/directories that allows only the owner or root to delet those files
+   → </rich_text>
+      <rich_text weight="heavy">find / -perm /6000 -type -f</rich_text>
+      <rich_text>, find all executables with setuid and setgid permissions, represents with a “s”
+   → works in c programming executables not on bash shell
+   → </rich_text>
+      <rich_text weight="heavy">chmod +t {file}</rich_text>
+      <rich_text>, to protect
+
+Bash
+- shell
+   → its like a container
+   → interface between users and kernel
+   → CLI is a shell
+   → echo $0, to check shell
+   → /etc/shells
+   → /etc/passwd, to check my shell
+- Aliases
+   → short name to commands
+   → alias {name}="{command}"
+   → to create aliases:
+      ⇒ /home/user/.bashrc -&gt; user
+      ⇒ /etc/bashrc  | /etc/bash.bashrc-&gt; global
+- history
+   → show all commands that was executed
+
+Networking
+- components
+   → IP
+   → subnet mask
+   → switch/gateway
+   → static vs DHCP
+   → interface
+   → interface MAC
+- files and commands
+   → interface configs
+      ⇒ /etc/nsswitch.conf
+      ⇒ /etc/hosts
+      ⇒ /etc/sysconfig/network
+      ⇒ /etc/sysconfig/network-scripts/ifcfg-nic
+      ⇒ /etc/resolv.conf
+- commands
+   → ping
+   → ifconfig, show interfaces
+   → ifup, 
+   → ifdown
+   → netstat -rnv, to show stats
+   → tcpdump, create traces, and opening listenings
+- NIC information
+   → ethtool {interface}
+   → lo, is spetial interface is used with self-comunication
+   → virb0, is used to NAT, virtual environments
+- NIC or port bonding
+   → this is defined by as the aggregation or combination of multiple NIC into a single bond interface
+   → modprobe bonding, get configuration
+   → modinfo bonding
+   → create /etc/sysconfig/network-scripts/ifcfg-bond0
+   → edit /etc/sysconfig/network-scripts/ethernet1
+   → edit /etc/sysconfig/network-scripts/ethernet2
+   → systemctl restart network
+- new network utilities
+   → network manager, is a new service that provides set of tools desinegnd to make it easier to manage the networking
+   → nmcli, grapical environment to make network configuration, is possible assing 2 ip address with this command
+   → nmtui, short of networl manager text user interface
+   → nm-connection-editor, a full graphical management tool, of configurations
+   → GNOME Settings, network screen of GNOME
+- downloading files
+   → wget, wget {website}/filename
+   → curl, this and ping is used to check issues, curl -O {website}/file
+   → ping, to check connection with other ip address, ping {website}
+- protocols
+   → FTP, standard to transfer files, this is a client-server
+      ⇒ default port: 21
+      ⇒ vsftpd
+      ⇒ conf:
+         • /ect/vsftpd/vsftpd.conf
+         • disable anonymous login: anonymous_enable=NO
+         • uncomment: ascii_{upload|download}_enable=YES
+         • uncomment: ftpd_banner={message}
+         • add to end of file: use_localtime=YES
+         • restart service vsftpd
+         • ftp {direction} - bin -hash 
+   → SCP, help to transfer files securely
+      ⇒ default port = 22, same as SSH
+      ⇒ scp file {user}@ip:{path to copy}
+   → rsync, remote synchronization
+      ⇒ efficientlyto transfer and synch files in the same computer or a remote computer
+      ⇒ is a lot faster that ftp or scp
+      ⇒ is used with backups
+      ⇒ default port is 22
+      ⇒ syntax: rsync options source destination
+      ⇒ local machine: rsync -zvh {file} {path}
+      ⇒ sync a directory: rsync -azhv {path} {path}
+      ⇒ to remote machine, rsync -avz {file} {user}@{ip}:{path}
+      ⇒ from remote machine, rsync -avzh {user}@{ip}:{path} {file}
+- in yum upgrade, delete packages and update preserves
+- createrepo, this work only in redhat sabor
+- yum history undo &lt;id&gt; // rollback package or rollback an update
+- yum history, show all updates in the system
+- telnet, unsecure connection between computers
+- ssh secured
+- DNS
+   → Domain Name system
+   → porpuse -&gt; traslate name to ip address
+   → hostname to ip, a record
+   → ip to hostname, PTR record
+   → hostname to hostname, CNAME record
+   → files
+      ⇒ /etc/named.conf
+      ⇒ /var/named
+   → services
+      ⇒ systemctl restart named
+   → installing
+      ⇒ install bind and bind-utils
+      ⇒ modify /etc/named.conf in debian is /etc/default/named and /etc/bind/named.conf.options
+      ⇒ create two zones
+      ⇒ modify dns permission and start services
+- more tools
+   → nslookup
+      ⇒ get ip of hostname
+      ⇒ nslookup {hostname}
+   → dig
+      ⇒ get the response more specific
+- ntp
+   → time synchronization
+   → /etc/ntp.conf
+   → ntpq
+   → systemctl restart ntpd
+   → port: 123
+- chronyd
+   → same as ntp
+   → /etc/chronyd.conf
+   → log: /var/log/chrony
+   → systemctl start chronyd
+   → chronyc
+- timedatectl
+   → is a new utilitie
+   → replace of date command
+   → show/changes date, time, timezone
+   → synchronizes the time with ntp
+   → timedatectl list-timezone
+   → timedatectl set-timezone {time zon}
+   → timedatectl set-time YYYY-MM_DD
+   → timedatectl set-time ‘datetime’
+   → timedatectl set-ntp true
+- sendmail
+   → to send and receive mails
+   → files: /etc/mail/sendmail.mc, /etc/mail/sendmail.cf
+   → command: mail -s “subject line” email@mydomain.com
+- web server
+   → serve webpages
+   → httpd this is an apache server
+- rsyslog
+   → central logger
+   → rsyslog is package
+   → /etc/rsyslog.conf
+   → systemctl restart rsyslog
+- OS Hardening
+   → this is for secure
+   → very very important topic
+   → user account, manage policies of passwords, se of chage
+   → remove un wanted packages, get number of packages in system, delete innecesaries packages
+   → stop un used services
+   → check on listening ports, netstat -tunlp
+   → secure SSH configuration, in file
+   → Enable firewall, firewall-config, iptables
+   → Enable SELinux, sestatus, stat to files and check permission, checkpolicy, chcon
+   → change listening services port numbers
+   → keep os updated
+- OpenLDAP
+   → slapd
+   → systemctl start slapd
+   → /etc/openldap/slapd.d
+- traceroute
+   → to map the journey that a packet of information undertakes from its source to its destination
+   → helps to identify slow points
+   → ex: traceroute {ip|host}
+   → netstat -rnv, to check my gateway
+- open imagefile
+   → imagemagick program
+   → display -- command
+- SSH
+   → timeout in /etc/ssh/sshd_config
+      ⇒ ClientAliveInterval 600
+      ⇒ ClientActiveCountMax 0
+- SSH-keys
+   → repetitive logins
+   → automation through scripts
+   → this is generated at user level
+   → ssh-keygen
+   → ssh-copy-id root@ip
+   → login to ssh
+- cockpit
+   → server adminitration tool modern looking and user friendly
+   → this contains a web based interface
+   → is used in multiple distros
+   → this can monitor systems
+   → apt install cockpit
+   → systemctl status cockpit
+   → to access is in port :9090
+- Firewall
+   → a wall that prevents the spread of firecheck if packets against the firewall rules
+   → exist two types
+      ⇒ software = runs on OS
+      ⇒ Hardware = dedicated appliance with firewall software
+   → iptables, for older linux version, in ubuntu to start iptable: </rich_text>
+      <rich_text weight="heavy">sudo ufw enable</rich_text>
+      <rich_text>
+   → firewalld, for newer versions
+   → </rich_text>
+      <rich_text weight="heavy">iptables -L</rich_text>
+      <rich_text> check the rules
+   → </rich_text>
+      <rich_text weight="heavy">iptables -F</rich_text>
+      <rich_text>, flush iptables
+   → </rich_text>
+      <rich_text weight="heavy">sudo systemctl status iptables</rich_text>
+      <rich_text>
+   → tables, is something that allows you to process packets in specific ways
+   → chains: are attached to tables, to specific traffic at various points: exists 3:
+      ⇒ INPUT: incoming trafic
+      ⇒ FORWARD: going to route, from one devive to another
+      ⇒ OUTPUT: outgoing traffic
+         • chains allos you filter traffic adding ruels to them
+         • Rule = if traffic is coming from x then go to defined target
+   → targets: decides the fate of a package, such as allowing or rejecting it, exists 3:
+      ⇒ ACCEPT: accepted
+      ⇒ REJECT: is rejected
+      ⇒ DROP: drop connection without send response
+   → firewalld is similar, this define som services rules is easy turno on or tunr off:
+      ⇒ NFS
+      ⇒ NTPD
+      ⇒ HTTP
+      ⇒ has the following services:
+         • Table
+         • Chains
+         • Rules
+         • Targets
+   → firewalld commands
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewalld-cmd --list-all</rich_text>
+      <rich_text>, check rules
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --get-services</rich_text>
+      <rich_text>, list of all servicees of firewall d
+      ⇒ f</rich_text>
+      <rich_text weight="heavy">irewall-cmd --reload</rich_text>
+      <rich_text>, reload config file
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --get-zones</rich_text>
+      <rich_text>, get all zones of firewall
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --get-active-zones</rich_text>
+      <rich_text>
+      ⇒ f</rich_text>
+      <rich_text weight="heavy">irewall-cmd --zone=public --list-all</rich_text>
+      <rich_text>, get rules for public zone
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --add-service=http</rich_text>
+      <rich_text>, to add services access
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --add-service=http</rich_text>
+      <rich_text> </rich_text>
+      <rich_text weight="heavy">--permanent</rich_text>
+      <rich_text>
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --add-port={port}/{protocol}</rich_text>
+      <rich_text>, to add by port and protocol
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --remove-port={port}/{protocol}</rich_text>
+      <rich_text>, to remove by port and protocol
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.0.25" reject'</rich_text>
+      <rich_text>, to reject incoming traffic
+      ⇒ </rich_text>
+      <rich_text weight="heavy">firewall-cmd --{add|remove}-icmp-block-inversion</rich_text>
+      <rich_text>, block and unblock ICMP traffic, ping traffic
+- Tune system
+   → performance system
+   → nice and renice
+   → tuned:
+      ⇒ this contains some profiles and settings predefined
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tuned-adm</rich_text>
+      <rich_text>
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tuned-adm</rich_text>
+      <rich_text> </rich_text>
+      <rich_text weight="heavy">active</rich_text>
+      <rich_text>, to check profile
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tuned-adm</rich_text>
+      <rich_text> </rich_text>
+      <rich_text weight="heavy">list</rich_text>
+      <rich_text>, to list all profiles
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tuned-adm profile {name}</rich_text>
+      <rich_text>, to change profile
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tuned-adm recommend</rich_text>
+      <rich_text>, to check recommendation
+      ⇒ </rich_text>
+      <rich_text weight="heavy">tuned-adm off</rich_text>
+      <rich_text>, to stop
+   → nice and renice
+      ⇒ system fine-tuned command
+      ⇒ for 1 cpu
+      ⇒ exists 40 leves to priority, -20 to 19 (highest to lowest)
+      ⇒ to check is used top
+      ⇒ </rich_text>
+      <rich_text weight="heavy">nice -n {priority} {process-name}</rich_text>
+      <rich_text>, set the priority
+      ⇒ </rich_text>
+      <rich_text weight="heavy">renice -n {priority} {process-name}</rich_text>
+      <rich_text>, change the process priority
+- kickstart
+   → to auto installitaion without intervention from user
+   → kickstart server and create a kickstart file
+   → file available on a network location
+   → make installation osurce
+   → make boot media available for client
+   → start kickstart installation
+   → network = NFS, FTP, HTTP, HTTPS
+   → yum install system-config-kickstart
+   → use of ansible
+- DHCP
+   → Dynamic Host Comfiguration Protocol
+   → assings IP address to servers, laptops and others
+   → dhcp-server to install
+   → /etc/dhcp/dhcp.conf
+   → for this is necesary change options in router </rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -4419,8 +4778,148 @@ Apdex, application performance index
 - apdex = (satisfied request + (Tolerating request / 2)) / Total number of requests</rich_text>
       </node>
     </node>
+    <node name="Helm" unique_id="134" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674670145" ts_lastsave="1674760238">
+      <rich_text>helm es un package manager para kubernetes
+simplifica la creacion de contenedores en k8s
+se podria decir que es como un apt/yum/homebrew
+se olvida de la complejidad del cluster, mas para devs
+todo se almacena en el paquete de instalacion
+permite gestionar versiones
+permite hacer rollback de una forma mas rapida
+
+Componentes
+- chart, es el paquete de helm, trae toda la info
+- repositorio, es donde se guardan los chart
+- release, es una ejecucion de un chart
+
+Arquitectura
+- por medio de seguridad RBAC se crean los servicios, usando el k8s api
+
+los charts estan empaquetados en .tar.gz
+los repos se crean con el archivo index.yaml
+de principio no se tiene ningun repo, se deben de instalar: helm repo add stable </rich_text>
+      <rich_text link="webs https://charts.helm.sh/stable">https://charts.helm.sh/stable</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text weight="heavy">helm repo list</rich_text>
+      <rich_text>, muestra todos los repos agregados
+</rich_text>
+      <rich_text weight="heavy">helm search repo stable</rich_text>
+      <rich_text>, mustra todos los charts que se puede usar en el repo
+</rich_text>
+      <rich_text weight="heavy">helm env</rich_text>
+      <rich_text>, muetra las variables que se usaran para el despliegue del cluster
+</rich_text>
+      <rich_text weight="heavy">helm search hub</rich_text>
+      <rich_text>, dentro del repo de la nube
+</rich_text>
+      <rich_text weight="heavy">helm search repo {repo} -o yaml</rich_text>
+      <rich_text>, lo obtiene en formato yaml, json o tabla
+</rich_text>
+      <rich_text weight="heavy">helm search repo {repo} -l</rich_text>
+      <rich_text>, se obtiene un historico del repo
+</rich_text>
+      <rich_text weight="heavy">helm search repo {repo} --version {version}</rich_text>
+      <rich_text>, si se busca un paquete con determinada version
+</rich_text>
+      <rich_text weight="heavy">helm repo remove {repo}</rich_text>
+      <rich_text>, para eliminar los repos
+</rich_text>
+      <rich_text weight="heavy">helm ls</rich_text>
+      <rich_text>, muestra los charts que estan desplegados
+</rich_text>
+      <rich_text weight="heavy">helm status {nombre}</rich_text>
+      <rich_text>, obtiene el status del helm
+</rich_text>
+      <rich_text weight="heavy">helm get manifest {chart}</rich_text>
+      <rich_text>, obtiene el manifest del chart que esta desplegado
+</rich_text>
+      <rich_text weight="heavy">helm get notes</rich_text>
+      <rich_text> </rich_text>
+      <rich_text weight="heavy">{release}</rich_text>
+      <rich_text>, notas del release
+</rich_text>
+      <rich_text weight="heavy">helm get values {release}</rich_text>
+      <rich_text>, obtiene los valores que pone uno mismo
+</rich_text>
+      <rich_text weight="heavy">helm get all {release}</rich_text>
+      <rich_text>, recupera todo
+</rich_text>
+      <rich_text weight="heavy">helm show all|chart|readme|values {chart}</rich_text>
+      <rich_text>, toda la info del charts, el de values muestra lo que se puede usar de valores
+</rich_text>
+      <rich_text weight="heavy">helm upgrade {release} {chart}</rich_text>
+      <rich_text>, para actualizar a la version reciente
+</rich_text>
+      <rich_text weight="heavy">helm show values {chart}</rich_text>
+      <rich_text>, obtiene los valores en formato yaml
+</rich_text>
+      <rich_text weight="heavy">helm upgrade -f {file} {relase} {chart}</rich_text>
+      <rich_text>, para modificar usando el fichero
+</rich_text>
+      <rich_text weight="heavy">helm history {release}</rich_text>
+      <rich_text>, paa ver todos los releases hechos
+</rich_text>
+      <rich_text weight="heavy">helm rollback {release} {version}</rich_text>
+      <rich_text>, crea una nueva version con al anterior
+</rich_text>
+      <rich_text weight="heavy">helm uninstall {release}</rich_text>
+      <rich_text>, para borrar, si se quiere mantener el historial de despliegues: “--kepp-history”
+
+
+Fichero index.yaml
+- contiene, un apiVersion, entries
+
+Trabajando con los charts
+- puede ser muy complejo o muy sencillo
+
+PARA REDIS:
+helm install redis-test --set persistence.storageClass=nfs-client,redis.replicas.persistence.storageClass=nfs-client bitnami/redis --set volumePermissions.enabled=true
+
+
+Creacion de charts
+- Chart.yaml, contiene toda la informacion del chart
+- LICENSE - opcional
+- README.md - opciona;
+- values.yaml, valores por defecto
+- values.schema.json, opcional, esquema json del values
+- charts/, directorio de charts dependientes
+- templates/, directorio de plantillas que combinado con los valores genera los manifest
+- templates/NOTES.txt, opcional ficherso sobre el uso del chart
+- existen 2 tipos de charts
+- para crear: </rich_text>
+      <rich_text weight="heavy">helm create {name}</rich_text>
+      <rich_text>
+- </rich_text>
+      <rich_text weight="heavy">helm install --dry-run</rich_text>
+      <rich_text>, sirve para saber que va a hacer helm
+- </rich_text>
+      <rich_text weight="heavy">helm install --debug  --dry-run</rich_text>
+      <rich_text>, nos da mas valores de que se hara
+- tiene su </rich_text>
+      <rich_text weight="heavy">.helmignore</rich_text>
+      <rich_text> que nos ayuda para evitar algunos ficheros dentro del chart
+- objetos
+   → componentes que se pasan a las plantillas
+   → nos ayudan a gestionar la template
+   → Release, objeto primario, parte es el name
+   → Values, nos ayuda a recuperar los valores del values.yaml
+   → Chart, nos trae el chart yaml
+   → Files, datos de ficheros adicionales
+   → Capabilties, distintas capacidades y fucionalidades de helm
+   → Templates, properties de las propias templates
+- objeto Release
+   → es un objeto built in, se construyo dentro del mismo helm
+- se tiene que tener cuidado con las expresiones nulas, ya que estas provocan errores
+
+Values
+- la prioridad de carga es:
+   → directamente del values.yaml
+   → pasar el fichero con -f
+   → se puede usar los parametros --set: --set {llave}={valor}</rich_text>
+    </node>
   </node>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1664320597">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
       <rich_text>¿Cuál es el orden correcto al solucionar una operación aritmética?
 La estructura adecuada de argumentos dentro de la función condicional "SI" es:
@@ -7250,6 +7749,14 @@ Aprendizaje basado en instancias y basado en modelos
    → se requiere ajustar los parematros del modelo
    → aqui no se valida la distancia, es a traves del modelo</rich_text>
       </node>
+    </node>
+    <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1674746824">
+      <rich_text>--iidfile string
+3
+20530
+2019-01-15
+2: 1282 ; 3: 254
+Long Island City/Queens Plaza</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
