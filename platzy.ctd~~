@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1674776656">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1675367669">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4348,6 +4348,7 @@ Networking
 - ssh secured
 - DNS
    → Domain Name system
+   → port: 53
    → porpuse -&gt; traslate name to ip address
    → hostname to ip, a record
    → ip to hostname, PTR record
@@ -4575,7 +4576,196 @@ Networking
    → assings IP address to servers, laptops and others
    → dhcp-server to install
    → /etc/dhcp/dhcp.conf
-   → for this is necesary change options in router </rich_text>
+   → for this is necesary change options in router (is not possible in all routers)
+
+
+Management and run levels
+- Run levels
+   → main run levels:
+      ⇒ 0 shutdown or halt the system
+      ⇒ 1 single-user mode, aliased as s
+      ⇒ 6 reboot system
+   → other
+      ⇒ 2 multiuser mode without network
+      ⇒ 3 multiuser mode with network
+      ⇒ 4 multiuser mode with networking and GUI
+- computer boot process
+   → frst sector is MBR on disc
+   → in linux
+      ⇒ bios, input and output basic system
+      ⇒ MBR, executes GRUB
+      ⇒ GRUB, executes kernel
+      ⇒ Kernel, execute /sbin/init
+      ⇒ Init, executes run level programs
+      ⇒ Runlevel, this is executes from /etc/rc.d/rc.*.d
+   → new versions:
+      ⇒ changes because is used systemd
+      ⇒ before is used SysV
+      ⇒ in this executes systemD as PID 1
+- message of the day
+   → /etc/motd, this executes every login in the machine
+   → customize
+      ⇒ create /etc/profile.d/motd.sh
+      ⇒ add desired commands in motd.sh
+      ⇒ modify /etc/ssh/sshd_config to edit PrintMotd yes to no
+      ⇒ restart ssh
+- storage
+   → local storage, inside computer
+   → DAS, direct attached storage, CD/DVD, USB
+   → SAN, storage area network, iSCI or fiber cable
+   → NAS, network attached storage, used TCP?IP, Samba, NFS
+- df
+   → df -h, the most common
+- fdisk
+   → fidsk -l
+- Adding disk and creatin partition
+   → to adding more hard disks
+   → </rich_text>
+      <rich_text weight="heavy">fdisk {name of disk}</rich_text>
+      <rich_text>, like slackware
+   → </rich_text>
+      <rich_text weight="heavy">mkfs.xfs {name of disk}</rich_text>
+      <rich_text>, to format
+   → </rich_text>
+      <rich_text weight="heavy">mount {name of disk} {folder}</rich_text>
+      <rich_text>
+   → modify /etc/fstab -&gt; </rich_text>
+      <rich_text weight="heavy">{name of disk} \t {folder} \t {format} \t defaults \t 0 \t 0</rich_text>
+      <rich_text>
+- LVM
+   → allows disks to be combined together
+   → is a logical volume management
+   → to add:
+      ⇒ </rich_text>
+      <rich_text weight="heavy">fdisk {disk}</rich_text>
+      <rich_text>, select type as </rich_text>
+      <rich_text weight="heavy">8e</rich_text>
+      <rich_text>, Linux LVM
+      ⇒ </rich_text>
+      <rich_text weight="heavy">pvcreate {name of disk}</rich_text>
+      <rich_text>, to create the volume
+      ⇒ </rich_text>
+      <rich_text weight="heavy">pvdisplay</rich_text>
+      <rich_text>, to show volumnes
+      ⇒ </rich_text>
+      <rich_text weight="heavy">vgcreate {name} {name of disk}</rich_text>
+      <rich_text>, create volume
+      ⇒ </rich_text>
+      <rich_text weight="heavy">vgdisplay</rich_text>
+      <rich_text> </rich_text>
+      <rich_text weight="heavy">{name}</rich_text>
+      <rich_text>, to show logical volumes
+      ⇒ </rich_text>
+      <rich_text weight="heavy">lvcreate -n {name of volume} --size {size} {name of vg}</rich_text>
+      <rich_text>
+      ⇒ </rich_text>
+      <rich_text weight="heavy">lvdisplay</rich_text>
+      <rich_text>, to show all logical volumes
+      ⇒ </rich_text>
+      <rich_text weight="heavy">mkfs.xfe {logical volume} </rich_text>
+      <rich_text>-&gt; /dev/{logical vg}/{logical volume}
+      ⇒ mount volume in folder
+   → to extends
+      ⇒ create new volume of type 8e
+      ⇒ pvdisplay
+      ⇒ pvs
+      ⇒ vgdisplay {name_vg}
+      ⇒ pvcreate {new volume}
+      ⇒ vgextend {group vg} {new volume}
+      ⇒ lvextend -L+1024 {/dev/mapper}/{logical volume}
+      ⇒ xfs_growfs
+- Swap
+   → amount fo physical memory
+   → recommend: 
+      ⇒ if M &lt; 2; S = M* 2; else S = M + 2
+   → commands
+      ⇒ dd
+         • dd if=/dev/zero of=/{name file} bs=1M count-1024, this create new file
+         • chmod go-r {name file}, only read/write to user owner
+      ⇒ mkswap
+         • mkswap {name file}
+      ⇒ swapon and swapoff
+      ⇒ free -m
+- stratis
+   → this is a volume mangement
+   → combines creation of LVM and filesystem into one mangement
+   → this manage by pool
+   → systemctl start stratisd
+   → stratis pool create {name} {disk}
+   → stratis list
+   → stratis pool add-data {name} {disk}, add more space from another disk
+   → stratis filesystem list
+- RAID
+   → Redudant array of independent disks
+   → types
+      ⇒ 0
+         • adding disk to add space, for datawarehousing to create disk more greates
+      ⇒ 1
+         • this is a copy of another disk, this is slow because is a replicate
+      ⇒ 5
+         • three or more disk
+         • olerancia a fallos, alta capacidad y eficacia de almacenamiento
+- file system check
+   → fsck
+      ⇒ used to chec ext2, ext3, ext4 and somes
+   → xfs_repair
+      ⇒ used to repair xfs filesystem
+   → during boot the system runs fsck to check filesystem
+   → is necesary use manually for system administrator
+   → to check is necesary unmounted file systems to avoid any data corruption issues
+   → force with -f
+   → to get error is used option -y
+   → the xsf_repair s highly scalable, xfs_repair does not run at boot time
+   → steps
+      ⇒ df -T, show the type of disk
+      ⇒ fsck {disk}, this fails if type is xfs
+      ⇒ xfs_repair needs umount disk to check
+- dd (system backup)
+   → 5 different types of backups
+      ⇒ system backu (entire image)
+      ⇒ application backup (third party application backup)
+      ⇒ database backup (for databases)
+      ⇒ filesystem backup (tar, gzip drectories)
+      ⇒ disk backup or dick cloning (dd command)
+         • this is a command line of unix
+         • to clone:
+            ◇ dd if={source} of={target} [options]
+- NFS (Network file system)
+   → development by sun microsystem
+   → it is a clien/server system
+   → linked 2 computers by network connecting for NFS shared filesystem
+   → conf:
+      ⇒ install nfs-utils libnfsidmap (in centos)
+      ⇒ enable rpcbind
+      ⇒ enable nfs-server
+      ⇒ start rpcbind, nfs-server, rpc-statd, nfs-idmapd
+      ⇒ mkdir {folder}
+      ⇒ chmod a+rwx {folder}
+      ⇒ modify /etc/exports
+         • {folder} {ip client} (rw,sync,no_roor_squash) = for only 1 host, in ip client with * is for everyone
+      ⇒ exportfs -rv
+   → in client:
+      ⇒ install nfs-utils rpcbind
+      ⇒ start rpcbind
+      ⇒ showmount -e {ip server}, this show filesystem to use
+      ⇒ mount {ip server}:{folder} {folder to mount}
+- Samba
+   → tool to sharing resources such as files and prints with other OS
+   → this work like NFS, but with more options of OS
+   → this works with protocol called SMB (server message block)
+   → another is CIFS (common internet file system)
+   → CIFS is a extension of SMB
+   → This is simple
+   → install and conf:
+      ⇒ modify /etc/samba/smb.conf
+      ⇒ start samba
+      ⇒ install samba samba-client and samba-common
+      ⇒ make directory to share
+      ⇒ chmod a+xwr {folder}
+      ⇒ chown -R nobody:nobody {folder}ajajaja
+      ⇒ to mount in linux: mount -t cifs //{ip server}:{Anonymoun/} {path to mount}
+- Sata and SAS
+   → </rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -4778,7 +4968,7 @@ Apdex, application performance index
 - apdex = (satisfied request + (Tolerating request / 2)) / Total number of requests</rich_text>
       </node>
     </node>
-    <node name="Helm" unique_id="134" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674670145" ts_lastsave="1674760238">
+    <node name="Helm" unique_id="134" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674670145" ts_lastsave="1675115810">
       <rich_text>helm es un package manager para kubernetes
 simplifica la creacion de contenedores en k8s
 se podria decir que es como un apt/yum/homebrew
@@ -4916,7 +5106,37 @@ Values
 - la prioridad de carga es:
    → directamente del values.yaml
    → pasar el fichero con -f
-   → se puede usar los parametros --set: --set {llave}={valor}</rich_text>
+   → se puede usar los parametros --set: --set {llave}={valor}
+
+Variables
+- sirven identicas a cualquier variable en cualquier otro lenguaje de programacion
+- comantarios helm para las plantillas (tipo C), comentarios Yaml para el objeto a trabajar
+- estan basadas en lenguaje Golang
+- ;los if son muy parecidos a las plantullas de Django
+- operadores logicos, son identicos a los de bash
+- se puede usar “acceso de tipo objetos” para obtener valores {.Values.favorite.drinks}
+- </rich_text>
+      <rich_text foreground="#2aa198">el - elimina el espacio en</rich_text>
+      <rich_text> los templates
+- para usar varias condiciones se debe de usar:
+   → `if and (primer validacion) (segunda validacion)...`
+- para los bucles se usan slices de YAML, valor de listas con - por cada valor,
+- se usa el range en los bucles, dentro de este se puede obtener el indice y el valor, estilo go: $indice,$valor:={lista}
+- WITH: establece un ambito dentro de las plantillas, sirve para simplificar, se elige la lista y el valor es pasado como un . (punto)
+
+Funciones:
+- se tienen vatias funciones dentro de la pagina
+- permite hacer tareas que de otra forma no se podrian hacer
+- son funciones predefinidas
+- existen pipelines que hacen la funcion identica a las de linux | recogen una salida para transfromarla
+
+Subpantillas (patials)
+- sirve para guardar bloques completos para usar en otras plantllas
+- seirven para tener ma sordenado el codigo
+- pueden ser usados para que no vallan al k8s, se usan para tareas mas livianas
+- se crean con define “nombre” y debe terminar en end
+- se invocan con {{- template “nombre plantilla” }}
+- {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -9759,7 +9979,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1672941811">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675297930">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -9787,7 +10007,16 @@ Operators:
    → better to do an explicit converson
    → is possible use (int) {value}
    → sizeof is special jeyword in C, to get byte are occupied in memory
-   → sizeof is an operator, and not a function</rich_text>
+   → sizeof is an operator, and not a function
+
+Control flow
+- desicion makings
+- loopings statements
+- branching statements (break, continue, return)
+- goto is available in C
+   → goto {label}
+   → is a bad practice
+   → </rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
