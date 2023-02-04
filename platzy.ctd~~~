@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1675367129">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1675475210">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4764,8 +4764,58 @@ Management and run levels
       ⇒ chmod a+xwr {folder}
       ⇒ chown -R nobody:nobody {folder}ajajaja
       ⇒ to mount in linux: mount -t cifs //{ip server}:{Anonymoun/} {path to mount}
-- NAS device for NFS or SAMBA
-   → </rich_text>
+- Sata and SAS
+   → SAS for servers
+   → SATA for desktop
+
+
+OFFTOPICS
+- fmt
+   → formatting and optimizing contents in text files:
+      ⇒ fmt {-width} {option} {file}
+      ⇒ fmt -u {file}, use one space between words and 2 spaces between setences
+- tr
+   → copies the standar input to the standar ouput with substitution or deletion of selected characters
+   → traslate or delete characters
+   → replace some range of letter by another in one text
+   → with the -c flags this replace all chars except the selected: echo “GNULinux” | tf -c “GNU” “abc”
+   → with -d this delete the chars selected: echo “GNU/Linux” | tr -d “/Linux”
+   → this can delete repeated characters
+   → is possible create case conversion using tr “[:lower:]” “[:upper:]”
+   → prints every word on a single line: tr “:” “\n”
+   → remove new lines: tr “\n” “ ” &lt; {file}
+- nl
+   → read lines from the named file or the standard input, applies a configurable line numbering filter operatin and write the result to the standard out
+   → number lines
+- atop
+   → interactive monitor to view the load on a linux system.
+   → shows the ccupation oof the most critical hardware respurces
+- lsof
+   → list on its standard ouput file information about files opened by processes
+   → is possible show processes running on specific port: lsof -i TPC:22
+   → or by user: lsof -u {user}
+- strace
+   → for diagnostic, debugging tool for unix. Traces the system call and signals a process uses during its lifetime
+   → strace -p {[rpcess id}
+- dtrace
+   → dynamic tracing framwork ported from solaris. 
+   → troubleshooting kernel
+- systemtap
+   → find in network
+- Nmon
+   → interactive performance monitoring command line utility
+   → it is a benchmark tool to display performance
+- iostat
+   → is used for monitoring system input and output statistics for devices and partitions
+- sar
+   → System activity report, shows a report of different information about the usage and activity of resources in the os
+- vmstat
+   → virtual memory static reporter, report variuos information about the os as memory paging processes, I/O, cpu and disk usage
+- mtr
+   → this combines the functionality of tracerout and ping
+   → this prints the internet routes with response times
+- nmap
+   → stands network maper, to explore and audit the network's security, checks firewalls and scanning ports</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -9979,7 +10029,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675297930">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675478449">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10011,12 +10061,20 @@ Operators:
 
 Control flow
 - desicion makings
+   → for create bifurcations
 - loopings statements
+   → for repeat code
 - branching statements (break, continue, return)
 - goto is available in C
    → goto {label}
    → is a bad practice
-   → </rich_text>
+
+Arrays
+- this is used to storage many data values of a specific type
+- this is very used in videogames
+- this is storage in the same name
+- the same type
+- declaration: {type} {name}[{size}]</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
