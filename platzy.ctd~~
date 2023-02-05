@@ -10029,7 +10029,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675630259">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675633955">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10086,7 +10086,20 @@ Functions
 - is same subroutines or procedures
 - some actions causes action
 - other find values
-- divide and conquer</rich_text>
+- divide and conquer
+- reduce duplication code
+- programs is better organized
+- easier to read
+
+write 3 function:
+- finds the gratest common divisor of two non-negative integer, takes 2 ints
+- calculate aboslute valio of a number, if takes float return floats if int ints
+- compute the squeare root of a number
+   → if negative, display message
+   → use absolute function
+- tic tac toe game
+   → grid 3x3
+   → create array to represent the board</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
