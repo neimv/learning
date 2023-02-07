@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1675475210">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1675744526">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4016,7 +4016,7 @@ Linux Fundamentals
       <rich_text weight="heavy">sed ‘s/string/d’ {filename}</rich_text>
       <rich_text>, delete lines with string
       ⇒ </rich_text>
-      <rich_text weight="heavy">sed ‘/^$/d’ {filename}</rich_text>
+      <rich_text weight="heavy">sed -i ‘/^$/d’ {filename}</rich_text>
       <rich_text>, this delete empty lines
       ⇒ </rich_text>
       <rich_text weight="heavy">sed ‘1,2d’ {filename}</rich_text>
@@ -4815,7 +4815,15 @@ OFFTOPICS
    → this combines the functionality of tracerout and ping
    → this prints the internet routes with response times
 - nmap
-   → stands network maper, to explore and audit the network's security, checks firewalls and scanning ports</rich_text>
+   → stands network maper, to explore and audit the network's security, checks firewalls and scanning ports
+
+Questions
+run-level -&gt; A y C
+52, permissions is A
+72, variables with export
+selinux stats, a and c
+httpd is /etc/httpd/conf/httpd.conf
+default page: /var/www/html/index.html</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1672708083">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -8020,13 +8028,18 @@ Aprendizaje basado en instancias y basado en modelos
    → aqui no se valida la distancia, es a traves del modelo</rich_text>
       </node>
     </node>
-    <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1674746824">
+    <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1675719767">
       <rich_text>--iidfile string
 3
 20530
 2019-01-15
 2: 1282 ; 3: 254
-Long Island City/Queens Plaza</rich_text>
+Long Island City/Queens Plaza
+
+---
+447,770
+</rich_text>
+      <rich_text family="monospace">0 5 1 * *</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -10099,7 +10112,12 @@ write 3 function:
    → use absolute function
 - tic tac toe game
    → grid 3x3
-   → create array to represent the board</rich_text>
+   → create array to represent the board
+   → type char and consiste of 10 elements
+   → functions
+      ⇒ checkforwin
+      ⇒ drawboard
+      ⇒ markboard</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
