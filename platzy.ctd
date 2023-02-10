@@ -4827,7 +4827,7 @@ default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
 98 -&gt; 1</rich_text>
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1675811422">
+      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1675985363">
         <rich_text>what is security and Hardering
 - any type of protection against harm
 - hardening  is used when making the OS so hard to break
@@ -4858,7 +4858,111 @@ tools
       ⇒ Attack on CPU, memory
 
 Security Users
-- </rich_text>
+- /etc/password
+   → is a user configuration file
+   → /etc all configurations
+   → etc = etcetera
+   → all in etc are editable and customizable
+   → username:pass:uid:guid:user info:home dir:shell
+- /etc/group
+   → that has information about user group
+   → user can not created without group
+   → each user belongs to a group or multiple
+   → groupname:group password:group ID:group list
+- /etc/shadow
+   → store actual password in encrypted format with additional info
+   → user:password:last Password change:minimum:maximum:warn:inactive:expire
+   → in pass:
+      ⇒ $1$ MD5
+      ⇒ $2a$ blowfish
+      ⇒ $2y$ blowfish
+      ⇒ $5$ SHA-256
+      ⇒ $6$ SHA-512
+- /etc/login.defs
+   → chage command to manage login by user
+   → this file is apply for all users
+   → UMASK is used to default permission by user
+- commands
+   → useradd and passwd
+- chage
+   → command per user to manage policies of password
+- setting password policy
+   → exists 3 files
+      ⇒ /etc/login.defs
+      ⇒ /etc/pam.d/system-auth
+      ⇒ /etc/security/pwquality.conf, password quality
+- lock or disable users
+   → by security disable inactive accounts
+   → /etc/default/useradd, default configuration of a user
+      ⇒ is this is possible specify the number of days a password expires
+      ⇒ 35 days is recommended
+   → lastlog -b 90 check user status
+   → lastlog -b 90 | tail -n+2 | grep -v ‘Never log’
+- to disble user:
+   → usermod -L username
+   → passwd -l username
+   → Change user shell to /bin/nologin in /etc/passwd
+- to enable:
+   → usermod -U username
+   → passwd -u username
+- failed 3 times
+   → auth require pam_tally2.so deny=3 onerr=fail unlock_time=600, add in /etc/pam.d/system-auth and /etc/pam.d/password-auth
+   → account required pam_tally2.so, in account section of same files
+   → pam_tally2 --user=username, check number of failed logins
+   → pam_tally2 -r -u username, this is for unlock
+- restrict root login
+   → this is very powerful account
+   → is not restricted 
+   → is important that you have a regular user account
+   → cp /etc/ssh/sshd_config
+   → replace
+      ⇒ #PermitRootLogin yes to no
+- disable access ssh for a specific user
+   → add DenyUsers {username}
+- ulimit
+   → memory, cpu, disk
+   → is possible as admin restrict resources utilization
+   → is possible limit at global, user and by group
+   → exist two types soft and hard, this is like docker
+   → ulimit -a, show current config of user
+   → /etc/security/limits.conf
+   → is possible adjust the limits for the session with ulimit -u 2000 for process
+- UID/GID policy
+   → range from 0-99
+   → separate user UID/GIU from application
+   → user accounts start above 100+
+   → this is assigned when running useradd
+- centralize auth
+   → use of OpenLDAP
+   → Redhat IDM
+   → Winbind
+   → micrsoft active directory
+- sudo access
+   → regular user to run root commands
+   → used to normal user execute progam as root user
+   → file: /etc/sudoers
+   → example: root ALL=(ALL) ALL
+      ⇒ all is the users allowed
+      ⇒ is the hosts
+      ⇒ ths user as you are runnng the command
+      ⇒ the commands allowed
+   → specific command:
+      ⇒ user ALL=(ALL) NOPASSWD: /sbin/fdisk
+   → wheel group in fedora
+- Monitor user activity
+   → logging = log or record the activity
+   → auditing = validate the activity
+   → default:
+      ⇒ /var/log/messages
+      ⇒ /var/log/secure
+      ⇒ last command
+      ⇒ lastb
+      ⇒ who or w
+      ⇒ /home/user/.bash_history user command history
+      ⇒ tcpdump = server incoming and outging
+      ⇒ /etc/rsyslog.conf logging confgs
+      ⇒ ps -ef | grep username monitor user running processes
+      ⇒ </rich_text>
       </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
@@ -10048,7 +10152,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675634183">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675968502">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10123,7 +10227,45 @@ write 3 function:
    → functions
       ⇒ checkforwin
       ⇒ drawboard
-      ⇒ markboard</rich_text>
+      ⇒ markboard
+
+Strings
+- char is for one character
+- def: plusSign = ‘+’: not use "
+- the " is used to string
+- null char the code value is 0 this is with \0
+- has no special variable type for strings
+- strings are stored in an array of type char
+- char myString[20] -&gt; string
+- the compiler adds \0 of form automatic
+- is not possible assing values before, is necesary use strncopy
+- is not necessary &amp; on a string
+- constant strings, const char message[] = “{string}”
+- common functions in string.h
+   → strlen
+   → strcpy and strncopy
+   → strcat and strncat
+   → strcmp and strncmp
+- searching, tokenizing and analyzing
+   → searching
+      ⇒ strchr and str str
+   → tokenizing
+      ⇒ a word limit by a limiter
+      ⇒ breaking a sentence into words is called tokenizing
+      ⇒ strtok
+   → analyzing
+      ⇒ islower, isupper, isalpha, isdigit, etc
+   → use of pointer, is where is saved an address
+   → this returns pointer where is found the values
+
+ex:
+	wirte function to count number of characters in a string
+	rewrite strlen
+	rewrite function concat, get 3 paremeter, result, str1, str2, return void
+	rewirite if 2 strings are equals
+	
+	wirte another that display a string in reverse order
+	is necesary use strcmp and strcpy for bubble sort</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
