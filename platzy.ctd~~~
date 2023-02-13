@@ -4827,7 +4827,7 @@ default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
 98 -&gt; 1</rich_text>
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1675985153">
+      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676068452">
         <rich_text>what is security and Hardering
 - any type of protection against harm
 - hardening  is used when making the OS so hard to break
@@ -4955,7 +4955,52 @@ Security Users
    → default:
       ⇒ /var/log/messages
       ⇒ /var/log/secure
-      ⇒ last command</rich_text>
+      ⇒ last command
+      ⇒ lastb
+      ⇒ who or w
+      ⇒ /home/user/.bash_history user command history
+      ⇒ tcpdump = server incoming and outging
+      ⇒ /etc/rsyslog.conf logging confgs
+      ⇒ ps -ef | grep username monitor user running processes
+
+PAM
+- pluggable authentication module, provide dynamic auth support tat sits between apps and native auth system
+- easy use when sysadmin needs integrate services or programs with different auth mechanism
+- ex: su, password, ssh, logging in FTP, telnet
+- conf:
+   → /etc/pam.conf or /etc/pam.d (to split confs by ind services), if pam.d exists pam.conf is ignored
+   → pam send to:
+      ⇒ /var/log/messages
+      ⇒ /var/log/secure
+- conf:
+   → mangement group
+   → control flags
+   → module (SO File) in /lib/security or /lib64/security
+- groups:
+   → authentication, checking a password with other
+   → account: check iff account is valid, includes conditions like expiration, time of day, and user access to the request service
+   → password: responsible for updating password, force policies in passwords
+   → session: manage actions in session
+- control flags:
+   → four control flags
+   → requisite, the strongest flag, if is is flagged as requisite and it fails
+   → required: in case of failure execution is not stopped but continues to the next module, if on failed or more PAM return failure
+   → sufficient: if returns OK the processing of modules willbe stop
+   → optional: in case of failure the stack of modules continues executing and return code is ignored
+   → additional exist two more
+   → include: include all lines of given type
+   → substrack: same as above
+- modules:
+   → this is loaded in /lib o /lib64 /security
+   → is possible use any backend like /etc/password or database
+   → each module can be pulled from man pages
+   → the main module is pam_unix.so
+   → fourth column is module args
+- check if program is PAM-aware
+   → ldd /usr/sbin/sshd | grep pam
+   → ldd /bin/su | grep pam
+- modules order:
+   → stack are tried on</rich_text>
       </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
@@ -10145,7 +10190,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1675968502">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676066245">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10258,7 +10303,8 @@ ex:
 	rewirite if 2 strings are equals
 	
 	wirte another that display a string in reverse order
-	is necesary use strcmp and strcpy for bubble sort</rich_text>
+	is necesary use strcmp and strcpy for bubble sort
+</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
