@@ -1,6 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1671752142"/>
+  <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1676229131"/>
+  <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1676305539">
+    <rich_text>Security linux filesystem
+- Linux file types
+- different types:
+   → - regular file
+   → d directory
+   → l link
+   → c special file or device files in /dev
+   → s scoket /dev/log
+   → p named pipe, similiar to sockets allow comunication between 2 processes
+   → b block device like /dev/sda
+- file attributes
+   → total column: 9
+   → type
+   → # of links
+   → owner
+   → group
+   → size
+   → month
+   → day
+   → time
+   → name
+- exists two owners, user and group
+- commands: chown, change user owner, chgrp, change group owner
+- is responsability of user for controlling access to their files
+- ACL
+   → additional layer of permissions to allow and assing permissions by user
+   → user is not a member of group create, but is necesary access (RW)
+   → permission to user: setfacl -m u:user:rwx {path to file}
+   → permission to group: setfacl -m g:group:rw {path to file}
+   → Allow in cascade: setfacl -dm “entry” {path}
+   → remove a specific entry: setfacl -x u:user {path to file}
+   → remove all entries: setfacl -b {path to file}
+   → with ACL add + at the end of permission
+   → to get permissions in file: getfacl {path to file}
+
+Securiting Linux System
+- MOTD
+   → message of day
+   → information about the system os just message from the sysadmin
+   → used to alert users that activity is monitored
+   → file: /etc/motd
+- customize message of day
+   → is the first message when users connect
+   → create file in /etc/profile.d/motd.sh
+   → add commands in motd.sh
+   → modify /etc/ssh/ssh_config in PrintMotd Yes to no
+   → restart ssh services
+- remove un necesary or orphan packages
+   → the first rule is: install only necesary
+   → pay attention to the add-on packages
+   → get a list of all packages: rqm --qa
+   → apt list --installed
+   → rpm --e package name to remove
+   → apt-get remove package name
+   → yum utils to check orhphaned packges
+   → rpm -qa | grep yum-utils to check if is installed
+   → package-cleanup --leaves, show all orphan packages
+   → apt-get autoremove
+- kernel an system up to date
+   → register to OS provider
+   → stay connected with the technical news feeds and os community
+   → run package management software
+   → yum update or upgrade
+   → apt-get update
+   → two types of upgrades
+      ⇒ major version = 5, 6, 7
+      ⇒ minor version = 7.3 to 7.4
+      ⇒ mayor version not yum command
+      ⇒ minor version = yum update
+- Stop and sdisable unwanted services
+   → </rich_text>
+    <rich_text weight="heavy">netstat -l</rich_text>
+    <rich_text> to check what services is running
+   → </rich_text>
+    <rich_text weight="heavy">netstat -tulpn</rich_text>
+    <rich_text> to more especifig
+   → </rich_text>
+    <rich_text weight="heavy">systemctl</rich_text>
+    <rich_text>
+   → </rich_text>
+    <rich_text weight="heavy">chkconfig --list</rich_text>
+    <rich_text>, older versions of centos
+   → </rich_text>
+    <rich_text weight="heavy">service --status-all | grep running</rich_text>
+    <rich_text> (centros or ubuntu) this is deprecated
+   → </rich_text>
+    <rich_text weight="heavy">ps -ef</rich_text>
+    <rich_text>, to show all processes
+   → disabled /etc/pam.d for programas that is not used</rich_text>
+  </node>
+  <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676308208">
+    <rich_text>Pointers
+- similar to indirection
+- referencion something using name, reference or container
+- manipulation of value from memory addess
+- poiter access value by memory address
+- this is the more powerful tools available in the C language
+- the compilers needs how much memory needs
+- every pointer will beassociated with a specific varaible
+- pointer is used to arrays and strings
+- pointers allow functions to modify data passed to them as variables
+- used to optimize programs to use more or minus memory
+- is possible create dynamic memory
+- allow desing and develop complex data structures
+- provides direct memory access
+- defining pointers
+   → is not decalred like normal variables
+   → declare {type} *pointer;
+   → the space between the * and pointer name is optional
+   → the value is an unsigned integer on most systems
+   → the %p represents type pointer
+   → this is not initialized
+   → is very important always initialize a pointer when is declared
+   → null pointer to initialize pointer to NULL
+   → this is equivalent to zero = NULL
+   → NULL is used to point any location in memory
+   → is necesary stddef.h to NULL
+   → to initialize with varaible is necesary &amp;
+   → is possible declare normal variables and pointer in the same statement
+   → is good idea use p in name of pointer
+- accesing pointers
+   → is used the * to access the value of the variable pointed, dereferences
+   → pointer occupy 8 bytes</rich_text>
+  </node>
   <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671752092"/>
 </cherrytree>
