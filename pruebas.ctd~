@@ -93,7 +93,7 @@ Securiting Linux System
     <rich_text>, to show all processes
    → disabled /etc/pam.d for programas that is not used</rich_text>
   </node>
-  <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676308203">
+  <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676308208">
     <rich_text>Pointers
 - similar to indirection
 - referencion something using name, reference or container
@@ -125,7 +125,7 @@ Securiting Linux System
    → is good idea use p in name of pointer
 - accesing pointers
    → is used the * to access the value of the variable pointed, dereferences
-   → pointer occupy </rich_text>
+   → pointer occupy 8 bytes</rich_text>
   </node>
   <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671752092"/>
 </cherrytree>

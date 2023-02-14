@@ -21,18 +21,18 @@ int main() {
     char result[BUFFER_SIZE];
     int sizeStr;
 
-    // for (int i = 0; i < 4; i++)
-    // {
-    //     sizeStr = strownlen(arr[i]);
-    //     printf("The size of string is: %d\n", sizeStr);
-    // }
+    for (int i = 0; i < 4; i++)
+    {
+        sizeStr = strownlen(arr[i]);
+        printf("The size of string is: %d\n", sizeStr);
+    }
 
-    // strowncat(result, arr[0], arr[1]);
-    // printf("The string result is: %s\n", result);
+    strowncat(result, arr[0], arr[1]);
+    printf("The string result is: %s\n", result);
 
-    // printf("Check the string: %s vs %s: %d\n", arrCmp[0], arrCmp[0], strowncmp(arrCmp[0], arrCmp[0]));
-    // printf("Check the string: %s vs %s: %d\n", arrCmp[0], arrCmp[1], strowncmp(arrCmp[0], arrCmp[1]));
-    // printf("Check the string: %s vs %s: %d\n", arrCmp[0], arr[1], strowncmp(arrCmp[0], arr[1]));
+    printf("Check the string: %s vs %s: %d\n", arrCmp[0], arrCmp[0], strowncmp(arrCmp[0], arrCmp[0]));
+    printf("Check the string: %s vs %s: %d\n", arrCmp[0], arrCmp[1], strowncmp(arrCmp[0], arrCmp[1]));
+    printf("Check the string: %s vs %s: %d\n", arrCmp[0], arr[1], strowncmp(arrCmp[0], arr[1]));
 
     for (int i = 0; i < 4; i++) 
     {
