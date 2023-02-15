@@ -10282,7 +10282,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676335444">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676390367">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10431,11 +10431,42 @@ Pointers
    → pointer occupy 8 bytes
    → to get address: (void*)&amp;pointer
    → sizeof to obtain the number of bytes a pointer occupies
+- Using pointer
+   → address to pointer
+   → dereference a pointer
+   → the * operator gives the values stored
+   → the &amp; opearator tell you where the pointer itself is stored
+   → exists pointer arithmetic
+   → is possible increment and decrement a pointer
+   → add and substract values of pointer
+   → get the difference between two pointer
+   → to compare the pointers must be the same type
+   → substract pointer get integer
+   → substract a integer to pointer get a pointer
+- Pointers and constants
+   → const is not possible change the value
+   → is possible use const with pointers to indicate that value must not be changed
+- void pointer
+   → means absece of any type
+   → can contain the address of a data item of any type
+   → use void* to return type in function with data in a type-indepedent way
+   → this must first cast to annother pointer type
+- arrays
+   → the arrays is a collection of objects of same type that is possible reference using a single name
+   → are differents to pointer but thay are very closely related
+   → the most common use of pointer is with arrays
+   → with pointer the program is very efficient
+   → with pointers the code uses less memory
+   → ar[i] == *(ar+i)
+- Pointer arithmetic
+   → 
 
 Challenge
 - create, initialize, assign and access to pointer
 - create int and assing to pointer
-- display the output of variable, value of pointer and address</rich_text>
+- display the output of variable, value of pointer and address
+
+</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
