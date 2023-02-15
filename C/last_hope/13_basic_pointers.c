@@ -17,7 +17,7 @@ int main()
     printf("Showing pointer things\n");
     printf("the value is: %d\n", number);
     printf("the value of pointer is: %d\n", *pNumber);
-    printf("The address of pointer is: %p\n", pNumber);
+    printf("The address of pointer is: %p\n", &pNumber);
     printf("The address of variable is: %p\n", &number);
 
     return EXIT_SUCCESS;

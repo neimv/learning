@@ -4827,7 +4827,7 @@ default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
 98 -&gt; 1</rich_text>
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676311859">
+      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676397227">
         <rich_text>what is security and Hardering
 - any type of protection against harm
 - hardening  is used when making the OS so hard to break
@@ -5073,7 +5073,7 @@ Securiting Linux System
       ⇒ minor version = 7.3 to 7.4
       ⇒ mayor version not yum command
       ⇒ minor version = yum update
-- Stop and sdisable unwanted services
+- Stop and disable unwanted services
    → </rich_text>
         <rich_text weight="heavy">netstat -l</rich_text>
         <rich_text> to check what services is running
@@ -5092,7 +5092,30 @@ Securiting Linux System
    → </rich_text>
         <rich_text weight="heavy">ps -ef</rich_text>
         <rich_text>, to show all processes
-   → disabled /etc/pam.d for programas that is not used</rich_text>
+   → disabled /etc/pam.d for programas that is not used
+- Separate disk partition
+   → the best partition is:
+      ⇒ /
+      ⇒ /boot
+      ⇒ /usr
+      ⇒ /home
+      ⇒ /tmp
+      ⇒ /var
+      ⇒ /opt
+   → keep data safer froom malware attacks
+   → this is easy extends with LVM
+   → multiple filesystem for each partition
+- disable alt + ctrl + del
+   → command to check the status: systemctl status ctrl-alt-del.target
+   → ddisabled systemctl disable ctrl-alt-del.target
+- running one service per system
+   → use one service by service, is used to protect the server
+- disable usb stick detection
+   → create file /etc/modprobe.d/no-usn
+   → add: install usb-storage /bin/true
+- lockdown cronjobs
+   → used to schedule command at specific time
+   → used to create backups, monitoring dis</rich_text>
       </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
@@ -10282,7 +10305,11 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
+<<<<<<< HEAD
     <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676390303">
+=======
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676335466">
+>>>>>>> e63f305296651f9ce61306469d9c34f4a1ccc387
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10462,9 +10489,13 @@ Pointers
 Challenge
 - create, initialize, assign and access to pointer
 - create int and assing to pointer
+<<<<<<< HEAD
 - display the output of variable, value of pointer and address
 
 </rich_text>
+=======
+- display the output of variable, value of pointer and address</rich_text>
+>>>>>>> e63f305296651f9ce61306469d9c34f4a1ccc387
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
