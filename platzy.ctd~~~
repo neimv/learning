@@ -4827,7 +4827,7 @@ default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
 98 -&gt; 1</rich_text>
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676397118">
+      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676483567">
         <rich_text>what is security and Hardering
 - any type of protection against harm
 - hardening  is used when making the OS so hard to break
@@ -5107,14 +5107,53 @@ Securiting Linux System
    → multiple filesystem for each partition
 - disable alt + ctrl + del
    → command to check the status: systemctl status ctrl-alt-del.target
-   → ddisabled systemctl disable ctrl-alt-del.target
+   → ddisabled systemctl disable ctrl-alt-del.target, systemctl mask ctrl-alt-del.target
 - running one service per system
    → use one service by service, is used to protect the server
 - disable usb stick detection
    → create file /etc/modprobe.d/no-usn
    → add: install usb-storage /bin/true
 - lockdown cronjobs
-   → </rich_text>
+   → used to schedule command at specific time
+   → used to create backups, monitoring disk space, deleting files, system mantain and others
+   → files
+      ⇒ /etc/cron.allow, allow users to use crons
+      ⇒ /etc/cron.deny, to lock users using crons
+- change ssh port
+   → used port 22
+   → listing of ports: /etc/services
+   → rdp = 3389
+   → /etc/ssh/sshd_config
+   → change Port 22 = Port 1110
+- SELinux
+   → security enhanced linux
+   → linux security kernel provides a mechanism for supporting access control security polies
+   → this is provided by NSA and the SELinux community
+   → enforcing = enable, by default
+   → Permissive = enable, diabled logs the activity
+   → Disable = Disabled, not activiy logs
+   → sestatus or getenforce - check status
+   → setenforce = 0 permissive/Disable, setenforce = 1 Enable
+   → config: /etx/selinux/config
+   → two concepts"
+      ⇒ labeling
+      ⇒ type enforcing
+   → ls -lZ {file} to chec the label of a directory
+   → booleans
+      ⇒ getsebool -a or semange boolean -l, list all booleans
+      ⇒ to enable or turn on: setsebool -P {boolean_name} on
+      ⇒ check error message related: journalctl
+      ⇒ chcon -t {label} {FILENAME}, semanage -t {label} {FILENAME}, to change type of label
+- system backup
+   → backuping the OS
+   → is used in case of hardware, os apps failure
+   → 5 types
+      ⇒ physical system (entire image using acronis, veeam)
+      ⇒ virtual system (snapshots)
+      ⇒ application backup, third party apps backup
+      ⇒ database backup
+      ⇒ filesystem backup (tar, gzip dirs)
+      ⇒ disk backup or disk clonning (dd)</rich_text>
       </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
@@ -10304,7 +10343,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676335466">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676486093">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10453,11 +10492,13 @@ Pointers
    → pointer occupy 8 bytes
    → to get address: (void*)&amp;pointer
    → sizeof to obtain the number of bytes a pointer occupies
+- Pointer and arrays
+   → use of pointer arithmetic
+   → use *str in arguments and use ++str in for
+   → use while(*str) where null char is weequal to 0
 
 Challenge
-- create, initialize, assign and access to pointer
-- create int and assing to pointer
-- display the output of variable, value of pointer and address</rich_text>
+- </rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
