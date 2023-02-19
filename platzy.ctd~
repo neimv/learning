@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1674670145">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1676838307">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -4827,11 +4827,7 @@ default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
 98 -&gt; 1</rich_text>
-<<<<<<< HEAD
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676826841">
-=======
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676483567">
->>>>>>> f0c924ca3603e70adf5df74577b5493443dc2eac
+      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676836219">
         <rich_text>what is security and Hardering
 - any type of protection against harm
 - hardening  is used when making the OS so hard to break
@@ -5123,7 +5119,42 @@ Securiting Linux System
    → files
       ⇒ /etc/cron.allow, allow users to use crons
       ⇒ /etc/cron.deny, to lock users using crons
-<<<<<<< HEAD
+
+- change ssh port
+   → used port 22
+   → listing of ports: /etc/services
+   → rdp = 3389
+   → /etc/ssh/sshd_config
+   → change Port 22 = Port 1110
+- SELinux
+   → security enhanced linux
+   → linux security kernel provides a mechanism for supporting access control security polies
+   → this is provided by NSA and the SELinux community
+   → enforcing = enable, by default
+   → Permissive = enable, diabled logs the activity
+   → Disable = Disabled, not activiy logs
+   → sestatus or getenforce - check status
+   → setenforce = 0 permissive/Disable, setenforce = 1 Enable
+   → config: /etx/selinux/config
+   → two concepts"
+      ⇒ labeling
+      ⇒ type enforcing
+   → ls -lZ {file} to chec the label of a directory
+   → booleans
+      ⇒ getsebool -a or semange boolean -l, list all booleans
+      ⇒ to enable or turn on: setsebool -P {boolean_name} on
+      ⇒ check error message related: journalctl
+      ⇒ chcon -t {label} {FILENAME}, semanage -t {label} {FILENAME}, to change type of label
+- system backup
+   → backuping the OS
+   → is used in case of hardware, os apps failure
+   → 5 types
+      ⇒ physical system (entire image using acronis, veeam)
+      ⇒ virtual system (snapshots)
+      ⇒ application backup, third party apps backup
+      ⇒ database backup
+      ⇒ filesystem backup (tar, gzip dirs)
+      ⇒ disk backup or disk clonning (dd)
 
 Linux System Network
 - firewall
@@ -5179,44 +5210,70 @@ Linux System Network
    → firewall-cmd reload, reload configuration added
    → exist multiple zones: firewall-cmd --get-zones, this is used to defined rules
    → firewall-cmd --get-active-zones, to check active rule
-   → firewall-cmd --zone={zone} --list-all, to get rules for zone</rich_text>
-=======
-- change ssh port
-   → used port 22
-   → listing of ports: /etc/services
-   → rdp = 3389
-   → /etc/ssh/sshd_config
-   → change Port 22 = Port 1110
-- SELinux
-   → security enhanced linux
-   → linux security kernel provides a mechanism for supporting access control security polies
-   → this is provided by NSA and the SELinux community
-   → enforcing = enable, by default
-   → Permissive = enable, diabled logs the activity
-   → Disable = Disabled, not activiy logs
-   → sestatus or getenforce - check status
-   → setenforce = 0 permissive/Disable, setenforce = 1 Enable
-   → config: /etx/selinux/config
-   → two concepts"
-      ⇒ labeling
-      ⇒ type enforcing
-   → ls -lZ {file} to chec the label of a directory
-   → booleans
-      ⇒ getsebool -a or semange boolean -l, list all booleans
-      ⇒ to enable or turn on: setsebool -P {boolean_name} on
-      ⇒ check error message related: journalctl
-      ⇒ chcon -t {label} {FILENAME}, semanage -t {label} {FILENAME}, to change type of label
-- system backup
-   → backuping the OS
-   → is used in case of hardware, os apps failure
-   → 5 types
-      ⇒ physical system (entire image using acronis, veeam)
-      ⇒ virtual system (snapshots)
-      ⇒ application backup, third party apps backup
-      ⇒ database backup
-      ⇒ filesystem backup (tar, gzip dirs)
-      ⇒ disk backup or disk clonning (dd)</rich_text>
->>>>>>> f0c924ca3603e70adf5df74577b5493443dc2eac
+   → firewall-cmd --zone={zone} --list-all, to get rules for zone
+   → ALL SERVICES ARE DEFINED IN /usr/lib/firewalld/services/allservices.xml
+   → add service: firewall-cmd --add-service={service}, exist --permanet, for add or remove
+   → firewall-cmd --remove-service={service}, to remove service
+   → firewal-cmd --reload, is necesary before add or remove
+   → firewall-cmd --add-port={port}/{protocol}, to add port
+   → firewall-cmd --remove-port={port}/{protocol}, to remove port
+   → </rich_text>
+        <rich_text weight="heavy">firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.0.25" reject'</rich_text>
+        <rich_text>, to reject incoming traffic
+   →  </rich_text>
+        <rich_text weight="heavy">firewall-cmd --{add|remove}-icmp-block-inversion</rich_text>
+        <rich_text>, block and unblock ICMP traffic, ping traffic
+   → to block website:
+      ⇒ get ip address: host -t a {host}
+      ⇒ firewall-cmd --direct --add-rule ipv4 filter OUTPUT 0 -d {ip} -j DROP
+- firewall GUI
+   → managing firewall using gui
+- encrypt trafic
+   → hide the content of message or data
+   → ssh vs telnet
+   → sftp vs ftp
+   → scp vs cp
+   → https vs http
+   → mount remote server file system with sshfs and fuse tool
+- telnet does not encrytp data
+   → systemctl status telnet.socket
+   → service xinetd start (older version)
+   → chkconfig telnet off (older version)
+- turn off IPV6
+   → ifconfig | grep inet6, to check if is enabled
+   → in /etc/default/grub add: GRUB_CMD_LINUX="ipv6.disable=1 ..."
+   → update grub conf, grub2-mkconfig -o /boot/grub2/grub.cfg
+   → and reboot
+
+Securing environment around linux
+- hardware/network firewall
+   → same like linux networking
+   → in hardwqare is posible decide which traffic should and not reach server
+- NAT
+   → network address translation
+   → method to remapping one IP address space into another
+   → add another layer of security, with destination hidden
+   → prevent the depletion of IPV4 address
+   → provides increased flexibility when connecting to the public internet
+   → allows use of own private IPv4 addressing
+- VPN tunnel
+   → virtual private network, encrypt connection by hidding location
+- app and database encryption
+- types of security threats
+   → distributed denial of service (DDoS)
+      ⇒ zombie computers
+   → hacking 
+   → malware
+   → pharming
+   → phising
+   → ransomware
+   → spam
+   → spoofing
+   → spyware
+   → trojan horse
+   → wifi eaverdropping
+   → viruses
+   → worms</rich_text>
       </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
@@ -5560,6 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1676838307"/>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
@@ -10406,19 +10464,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-<<<<<<< HEAD
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676390585">
-=======
-<<<<<<< HEAD
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676486170">
-=======
-<<<<<<< HEAD
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676390367">
-=======
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676335466">
->>>>>>> e63f305296651f9ce61306469d9c34f4a1ccc387
->>>>>>> 639799e726fee7892a9cf18d08636750f9467040
->>>>>>> f0c924ca3603e70adf5df74577b5493443dc2eac
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676842566">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10567,21 +10613,10 @@ Pointers
    → pointer occupy 8 bytes
    → to get address: (void*)&amp;pointer
    → sizeof to obtain the number of bytes a pointer occupies
-<<<<<<< HEAD
 - Pointer and arrays
    → use of pointer arithmetic
    → use *str in arguments and use ++str in for
    → use while(*str) where null char is weequal to 0
-
-Challenge
-- function that calculate the lenght of a string
-   → use const char pointer
-   → using pointer arithmetic only determinate the length
-   → increment operator ++p
-   → use while loop
-   → should substract two pointer
-   → the function should return an int that is the len</rich_text>
-=======
 - Using pointer
    → address to pointer
    → dereference a pointer
@@ -10611,14 +10646,61 @@ Challenge
    → ar[i] == *(ar+i)
 - Pointer arithmetic
    → use ++ and -- to get the next value
+- pass by reference
+   → copy by address
+   → change value of references
+   → this is not a deafult in C, the default is passing by value
+   → is possible send pointer as an argument
+   → the function can return pointer as return
+   → const only useful when the parameter is a pointer, is not possible change the original pointer
+   → with pointer return is to send multiple values
+- dynamic memory allocation
+   → exists three choices:
+      ⇒ define array to contain the maximum number
+      ⇒ use a variable-lenght array to dimension
+      ⇒ allocate the array dynamically
+      ⇒ this is allocation reserves apaces called the heap
+      ⇒ the sack is another place
+         • functions and local variables are stored here
+         • when execution ends the spaces is freed
+      ⇒ in the head is controlled by you
+         • track when the memory is no longer required
+         • you must free the spaces
+- malloc, calloc, realloc
+   → malloc
+      ⇒ the simple standard libnrary function
+      ⇒ is in stdlib
+      ⇒ specify the number of bytes of memory
+      ⇒ returns the address of the first byte
+      ⇒ a pointer is the only place to put it
+      ⇒ int *pNumber = (int*)malloc(100); // this allocate 25 ints is similar to int *pNumber = (int*)malloc(25 * sizeof(int));
+      ⇒ return apointer of type void, is necesary the cast
+      ⇒ request any number of bytes
+      ⇒ is possible that allocation failes, check with if
+      ⇒ always release memory
+      ⇒ use free or NULL to liberate memory
+      ⇒ always put the pointer in NULL
+      ⇒ returns 0 if fails
+   → calloc
+      ⇒ it allocates memory as a number of elements of a given size
+      ⇒ initialized the bytes in zero
+      ⇒ requires two arguments, number of data items, size of each data item
+      ⇒ is declared in stdlib.h
+      ⇒ int *pNumber = (int*) calloc(75 sizeof(int))
+      ⇒ the return error is NULL
+   → realloc
+      ⇒ reuse or extend memory that previously allocated with malloc or calloc
+      ⇒ expects, a pointer containing an address that was proviuosly returned with c or m
+      ⇒ the size in bytes of the new memory
+      ⇒ allocates the amount of memory you specify by the second argument
+      ⇒ transfer the content
+      ⇒ return void* pointer with new memory or NULL if the operation fails
+      ⇒ this preserves the content of original area
 
-Challenge
-- create, initialize, assign and access to pointer
-- create int and assing to pointer
-- display the output of variable, value of pointer and address
-
-</rich_text>
->>>>>>> 639799e726fee7892a9cf18d08636750f9467040
+Challenge:
+	allow user input a text the program will be print the text that was inputted, the program will utilize dynamic memory
+	the user can enter the limit of the string
+	the program should create a char pointer only, no char arrays</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
