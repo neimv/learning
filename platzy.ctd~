@@ -4827,7 +4827,7 @@ default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
 98 -&gt; 1</rich_text>
-      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676397284">
+      <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676826841">
         <rich_text>what is security and Hardering
 - any type of protection against harm
 - hardening  is used when making the OS so hard to break
@@ -5117,8 +5117,64 @@ Securiting Linux System
    → used to schedule command at specific time
    → used to create backups, monitoring disk space, deleting files, system mantain and others
    → files
-      ⇒ /etc/cron.allow
-      ⇒ /etc/cron.deny, to lock users </rich_text>
+      ⇒ /etc/cron.allow, allow users to use crons
+      ⇒ /etc/cron.deny, to lock users using crons
+
+Linux System Network
+- firewall
+   → spread of fire
+   → chekc if packages information is tested againts the firewall rules
+   → firewall is a watchman, bouncer or a shield
+   → exists two types
+      ⇒ software, run on operating system
+      ⇒ hardware, a dedicated appliance with firewall software
+- there are 2 tools
+   → iptables, for older linux versions
+   → firewalld, , for new version
+- iptables -L, to check iptables rules
+- iptables -F, to flush iptables
+- exists in iptables:
+   → tables, is something that allows you to process packets in specific ways, are 4 types: gilter, mangle, nat and raw
+   → chains: are attached to tables, these chains allos you yo inspect traffic at variuos points, exists 3
+      ⇒ Input, incomming trafic
+      ⇒ forward, going to router, form one device to another
+      ⇒ ouput, outgoing traffic
+   → target, decides the fate of a package, such allowing or rejecting:
+      ⇒ ACCEPT
+      ⇒ REJECT
+      ⇒ DROP, drop connection wihtout message of reject
+   → the format is: target, protocol, options, source, destination
+- iptables -A INPUT -s {ip} -j DROP, drop all trafic coming a specific IP
+- iptables -A INPUT -s {ip}/{mask} -j DROP, drop all trafic for a range of IP
+- iptables -L --line-num, list all rules by lines
+- iptables -D INPUT 1, delete a specific rule by line
+- iptables -F, flush entire table
+- iptables -A INPUT -p {protocol} -j REJECT, reject specific protocol
+- iptables -A INPUT -p {protocol} -j DROP, drop connection
+- iptables -A INPUT -p {protocol} --dport {port} -j DROP, to block specific port
+- iptables -A INPUT -i {interface} -s {ip} -j DROP, block a network interface
+- to block some specific domain
+   → get ip address: host -t a {host}
+   → and block by ip
+- iptables-save, save all changes in /etc/sysconfig/iptables
+- iptables-restore {path to file} to get saved conf
+- by default is logged in /var/log/messages
+- DROP is over ACCEPT
+- FirewallD
+   → is similar to iptables, firewall-cmd
+   → few a pre-defined services rules, to easy admin
+   → exists
+      ⇒ tables
+      ⇒ chains
+      ⇒ rules
+      ⇒ targets
+   → is not recommend run both
+   → firewall-cmd --list-all to check all rules
+   → firewall-cmd --get-services, services is aware of
+   → firewall-cmd reload, reload configuration added
+   → exist multiple zones: firewall-cmd --get-zones, this is used to defined rules
+   → firewall-cmd --get-active-zones, to check active rule
+   → firewall-cmd --zone={zone} --list-all, to get rules for zone</rich_text>
       </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
@@ -10308,11 +10364,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-<<<<<<< HEAD
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676390367">
-=======
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676335466">
->>>>>>> e63f305296651f9ce61306469d9c34f4a1ccc387
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676390585">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10489,7 +10541,7 @@ Pointers
    → with pointers the code uses less memory
    → ar[i] == *(ar+i)
 - Pointer arithmetic
-   → 
+   → use ++ and -- to get the next value
 
 Challenge
 - create, initialize, assign and access to pointer
