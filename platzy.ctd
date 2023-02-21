@@ -10476,7 +10476,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676842639">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676950970">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10709,11 +10709,17 @@ Pointers
       ⇒ return void* pointer with new memory or NULL if the operation fails
       ⇒ this preserves the content of original area
 
-Challenge:
-	allow user input a text the program will be print the text that was inputted, the program will utilize dynamic memory
-	the user can enter the limit of the string
-	the program should create a char pointer only, no char arrays
-	be sure to release the memory</rich_text>
+Structs
+- tool for grouping elements together
+- a powerful concept
+- declaration describes how a structure is put together
+- the variables is trat as a single unit
+- struct is the word to create
+- the members are fields
+- to access the members: use .
+- initialize structs is like arrays, is not necesary initialize all
+- with {.member = value}, initialize the member
+- </rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">

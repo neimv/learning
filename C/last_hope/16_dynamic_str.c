@@ -8,17 +8,31 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define TRUE 1
+#define FALSE 0
+
 
 int main()
 {
-    char c;
-    char *str = (char*) calloc(1, sizeof(char));
+    int size;
+    char *text = NULL;
 
-    printf("The size of char is: %ld\n", sizeof(c));
-    printf("The pointer of string is: %p\n", &str);
-    printf("The value of string is: %s\n", str);
+    printf("Enter limit of text ");
+    scanf("%d", &size);
 
-    while ()
+    text = (char *) malloc(size * sizeof(char));
+
+    if (text != NULL)
+    {
+        printf("Enter som text:\n ");
+        scanf(" ");
+        gets(text);
+
+        printf("inputted text is: %s\n", text);
+    }
+
+    free(text);
+    text = NULL;
 
     return EXIT_SUCCESS;
 }
