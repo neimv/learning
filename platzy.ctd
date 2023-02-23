@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1676926506">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1677108142">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5628,7 +5628,51 @@ Subpantillas (patials)
       ⇒ Cache
       ⇒ Register
 - CPU copies data from HDD to RAM for most speed access data
-- OS is always present in ram, OS space, other space in for programs (user space)</rich_text>
+- OS is always present in ram, OS space, other space in for programs (user space)
+
+Concepts
+- program vs process
+   → cpu checks the program and load in ram
+   → the programs contains multiples stages
+   → the process is present in ram
+   → states
+      ⇒ new state
+      ⇒ ready state
+      ⇒ running state
+      ⇒ waiting state / IO state
+      ⇒ terminated state
+      ⇒ suspend ready state
+      ⇒ suspend wait state
+- multiprograming
+   → maximum number of processes in RAM, assuming RAM in PC
+   → size of ram/size of single process
+- types of OS
+   → cpu efficience = useful of cpu/total time of cpu
+   → batch os, execute one process in cpu efficiente and before another
+   → multiprogramming, this is only on CPU, for this course
+   → multiprocessing, in this exists multiple CPU
+- process control block
+   → passive entity
+   → active entity
+   → process is created when program is open
+   → this contain
+      ⇒ stack, how to execution is processed
+      ⇒ heap, where is used the dynamic memory like C using malloc or calloc
+      ⇒ datapost. where is saved static variables and global variables
+   → attributes
+      ⇒ process ID
+      ⇒ Program counter, number of intructions of program
+      ⇒ Process state
+      ⇒ general purpose registers
+      ⇒ priority
+      ⇒ list of open files
+      ⇒ list of open devices
+      ⇒ protection
+   → cpu scheduling
+      ⇒ done by scheduler. which is part of os code
+   → preemption
+      ⇒ forcefully stopping the execution of process by CPU
+   → using properties is like create CPU order execution</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -10476,7 +10520,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1676950970">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677099126">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10719,7 +10763,30 @@ Structs
 - to access the members: use .
 - initialize structs is like arrays, is not necesary initialize all
 - with {.member = value}, initialize the member
-- </rich_text>
+- nested:
+   → to add structures is similar to declare a struct, struct {type} {name}
+   → to access is {struct}.{nested struct}.{var}
+- pointer:
+   → in some older implementation structure cannot be passed as agument
+   → with pointer is most efficient that structure
+   → access to elements:
+      ⇒ (*pointer).{var} = {value}
+      ⇒ another sintax: {pointer}-&gt;{var} = {value}
+- functions
+   → in parameters struct {type} {name}
+   → should be use pointer
+   → using -&gt; is not necesary get again the original struct, the indirection operator
+
+CH:
+	create structure named employee with, name, hireDate, salary
+	declare and initialize an instance
+	read second employee
+	prints content
+	
+	create structure named item, itemname, quantity, price, amount
+	create function named readItem with pointer to item, this read name, price and quantity, this will passed to structure
+	create funcion named print takes pointer and print of content
+	in main declare pointer and item, allocate memory for item name</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
