@@ -10520,7 +10520,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677099126">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677296680">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10777,16 +10777,8 @@ Structs
    → should be use pointer
    → using -&gt; is not necesary get again the original struct, the indirection operator
 
-CH:
-	create structure named employee with, name, hireDate, salary
-	declare and initialize an instance
-	read second employee
-	prints content
-	
-	create structure named item, itemname, quantity, price, amount
-	create function named readItem with pointer to item, this read name, price and quantity, this will passed to structure
-	create funcion named print takes pointer and print of content
-	in main declare pointer and item, allocate memory for item name</rich_text>
+FILES
+- </rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">

@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BUFFER_SIZE 200
+#define BUFFER_SIZE 1000
 
 typedef struct Item
 {
@@ -29,21 +29,38 @@ int main()
 
     ptrItem = &item;
 
+    readItem(ptrItem);
+    printItem(ptrItem);
+
     return EXIT_SUCCESS;
 }
 
 void readItem(stcItem *item)
 {
     char buffer[BUFFER_SIZE];
+    size_t sizeStr;
 
     printf("Get values of item\n");
-    printf("what is the name of item\n");
-    scanf("%s", buffer);
-    printf("")
+    printf("name of item\n");
+    fgets(buffer, BUFFER_SIZE, stdin);
+    printf("quantity\n");
+    scanf("%d", &item->quantity);
+    printf("price\n");
+    scanf("%f", &item->price);
+
+    sizeStr = strlen(buffer);
+    item->itemName = (char *)malloc(sizeStr);
+
+    strcpy(item->itemName, buffer);
+    item->amount = item->quantity * item->price;
 }
 
 void printItem(stcItem *item)
 {
-
+    printf("The item values is:\n");
+    printf("The name is: %s", item->itemName);
+    printf("The price is: %f\n", item->price);
+    printf("The quantity is: %d\n", item->quantity);
+    printf("The amount is: %f\n", item->amount);
 }
 
