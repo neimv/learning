@@ -10520,7 +10520,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677099126">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677376330">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10777,16 +10777,57 @@ Structs
    → should be use pointer
    → using -&gt; is not necesary get again the original struct, the indirection operator
 
+FILES
+- for some apps is necessary not only data in memory, needs persistent and soted data like HDD
+- C views a file as a continuos sequence of bytes
+- each bytes can be read individually
+- corresponds to the file structure in UNIX
+- exists two types of files
+   → text
+   → binary, like data, music encoding
+- automatically open three files
+   → standard input
+   → standard output
+   → standard error
+- Accessing files
+   → file pointer or stream pointer
+   → is associate a file pointer with a file programmatically
+   → for every file is necesary one poniter
+   → exists limit of number of files to open in FOPEN_MAX in stdio.h
+   → fopen returns NULL
+   → always fclose when use files
+- Reading file
+   → the fgetc read a character from a text file
+   → rewind to specific position
+   → fscanf to files, multiple chars or strings
+- writing a file
+   → simple function is fputc, write a single char
+   → return EOF if failure
+   → fputs to write a string
+   → fprintf to format in file
+- file positioning
+   → random position in a file
+   → ftell, get position
+   → fgetpos, get position is more complicated
+   → fseek to set a position
+      ⇒ SEEK_SET, start file
+      ⇒ SEEK_CUR, current position
+      ⇒ SEEK_END, end file
+   → fsetpos
+
 CH:
-	create structure named employee with, name, hireDate, salary
-	declare and initialize an instance
-	read second employee
-	prints content
+	create program to find total of lines
+	use fgetc to parse character in a file unil EOF
+	display output the total number of lines
 	
-	create structure named item, itemname, quantity, price, amount
-	create function named readItem with pointer to item, this read name, price and quantity, this will passed to structure
-	create funcion named print takes pointer and print of content
-	in main declare pointer and item, allocate memory for item name</rich_text>
+	create program that converts all chars of a file to uppercase and write the result out to a temporary file, rename temporary file to the original filename and remove the temporary file
+	use fgetc and fputc
+	rename and remove functions
+	use islower function
+	to convert substract 32 
+	display the content of original file
+	
+	</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">

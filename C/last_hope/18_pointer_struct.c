@@ -32,6 +32,8 @@ int main()
     readItem(ptrItem);
     printItem(ptrItem);
 
+    free(ptrItem->itemName);
+
     return EXIT_SUCCESS;
 }
 
@@ -50,6 +52,8 @@ void readItem(stcItem *item)
 
     sizeStr = strlen(buffer);
     item->itemName = (char *)malloc(sizeStr);
+
+    if(item->itemName == NULL) exit(-1);
 
     strcpy(item->itemName, buffer);
     item->amount = item->quantity * item->price;
