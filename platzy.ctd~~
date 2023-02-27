@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1677108142">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1677447775">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5672,7 +5672,51 @@ Concepts
       ⇒ done by scheduler. which is part of os code
    → preemption
       ⇒ forcefully stopping the execution of process by CPU
-   → using properties is like create CPU order execution</rich_text>
+   → using properties is like create CPU order execution
+
+CPU scheduling algot
+- Types of schedulers
+   → The PCB and attributes of a program is called as context
+   → long term scheduler, how many process to move to ram
+   → short term scheduler, how many process is moved to cpu or wich
+   → medium term scheduler, this is swapping from hdd to ram
+   → context switching means changing the status of CPU
+   → swap in ram and swap on to disk
+- times of process
+   → arrival time
+   → burts time, like execution time
+   → completion time
+   → turn arounf time
+   → waiting time
+   → response time
+   → i/O time
+- types of scheduling algotrithms
+   → preemptive, this change between process using priority
+   → non preemptive, this complete process
+   → this is onlu applied to processes which are in state ready
+   → the process I/O will be blockedand so those process will not be consired
+- SJF
+   → Shortest job first
+   → among the arrived processes with the least burst time
+   → non-preemptive, also it is a priority based algo
+   → find the average TAT, WT, throughtpu and scheduling time
+   → TAT = completion time - arrival time
+   → if time of execution in lowest to another this is execute first
+   → get the avg of execution of process
+   → wt = tat - burst time
+   → throughput = no. of process / schedule time
+- Shortest remaning time fitsrt scheduling algo, SRTF
+   → preemptive version of SJF
+   → is possible stop some processes if another use minor time of execution
+   → reponse time = waiting time for preemption schedulers
+   → select the minor times and put the process in execution, depending of time of execution
+- FCFS scheduling algo
+   → the process which has the least arrrival time will be scheduled first
+   → is a nonpreemptive
+   → is not a priority based
+- FCFS with context switching
+   → context switching overhead = 1 time unit
+   → in this change between process exists 1 time unit</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -10520,7 +10564,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677376254">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677434609">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10825,8 +10869,13 @@ CH:
 	rename and remove functions
 	use islower function
 	to convert substract 32 
+	display the content of original file
 	
-	</rich_text>
+	write program that print content of a file in reverse order
+	use fseek
+	use ftell
+	display output</rich_text>
+      <node name="advanced C" unique_id="137" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1677434609" ts_lastsave="1677434609"/>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
