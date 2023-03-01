@@ -13,6 +13,7 @@
 
 size_t totalNums(FILE*);
 void convertToUpper(char*);
+void printInverse(char*);
 
 int main()
 {
@@ -27,13 +28,14 @@ int main()
         return EXIT_FAILURE;
     }
 
-    lenNum = totalNums(pFile);
+    // lenNum = totalNums(pFile);
 
-    printf("\nthe file %s, contains %lu lines\n", filename, lenNum);
+    // printf("\nthe file %s, contains %lu lines\n", filename, lenNum);
     fclose(pFile);
     pFile = NULL;
 
-    convertToUpper(filename);
+    // convertToUpper(filename);
+    printInverse(filename);
 
     return EXIT_SUCCESS;
 }
@@ -55,7 +57,7 @@ size_t totalNums(FILE *file)
 void convertToUpper(char *filename)
 {
     FILE *pFile, *pCopy;
-    int stop = 0;
+    int stop = 0, result;
     char ch, *nameBuffer = "tmp.program.c";
     pFile = fopen(filename, "r");
     pCopy = fopen(nameBuffer, "w");
@@ -89,4 +91,45 @@ void convertToUpper(char *filename)
     fclose(pCopy);
     pFile = NULL;
     pCopy = NULL;
+
+    result = rename(nameBuffer, filename);
+
+    if (result == 0) {
+        printf("The file is renamed successfully.");
+    } else {
+        printf("The file could not be renamed.");
+    }
+}
+
+void printInverse(char *filename)
+{
+    FILE *pFile;
+    int pos = 0, lastPosition;
+    char ch;
+    pFile = fopen(filename, "r");
+
+    if (pFile == NULL)
+    {
+        printf("Error opening file %s", filename);
+        exit(EXIT_FAILURE);
+    }
+
+    while (1)
+    {
+        fseek(pFile, pos, SEEK_END);
+
+        if (pos == 0) lastPosition = -1 * (ftell(pFile) + 1);
+
+        pos--;
+
+        ch = fgetc(pFile);
+        printf("%c", ch);
+
+        if (pos == lastPosition) break;
+    }
+
+    fclose(pFile);
+    pFile = NULL;
+
+    printf("\n");
 }
