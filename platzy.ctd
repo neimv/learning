@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1677447942">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1678753424">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5710,14 +5710,63 @@ CPU scheduling algot
    → is possible stop some processes if another use minor time of execution
    → reponse time = waiting time for preemption schedulers
    → select the minor times and put the process in execution, depending of time of execution
-- FCFS scheduling algo
+- FCFS scheduling algo, first come first serve
    → the process which has the least arrrival time will be scheduled first
    → is a nonpreemptive
    → is not a priority based
 - FCFS with context switching
    → context switching overhead = 1 time unit
    → in this change between process exists 1 time unit
-   → the switching is inefficienty CPU use</rich_text>
+   → the switching is inefficienty CPU use
+
+Comprations of algos
+- starvation
+   → if there is a chance for a process in th ready state to wait indefinitely to get the cpu
+   → is possible when create multiple process with higher priority and another does not executed
+   → is common in SJF algo, in SRFT, no in FCFS
+   → any priority based scheduled algorithm
+- Convoy effect
+   → smaller process, waiting for one big process to get off the cpu
+   → FCFS 
+- implement
+   → SJF and SRTF is very very dificult
+   → FCFS, this is easy implement
+- Throughput
+   → no. of processes executed per unit time
+
+CPU scheduling algos
+- LJF, longest job first
+   → process with the largest burst time is scheduled first
+   → non preemtive
+   → priority based algorithm
+   → disavantages:
+      ⇒ starvation
+      ⇒ convoy efect
+      ⇒ throughtput is very less
+      ⇒ pratical very dificilt to implement
+- LRTF, longests remaining time first SA
+   → amoung all arrived process, process with the longest burst time will be scheduled first
+   → preemtive
+   → dis:
+      ⇒ startvation
+      ⇒ convoy effect
+      ⇒ throughtpu is very less
+      ⇒ practical is dificult to implment
+   → prefer process with longest burst time
+   → finally prefer last process id
+- Round Robin scheduling
+   → time quantum: maximum allowable time a process can run without getting preempted
+   → it works on the basics of a paticular time quantum
+   → uses queue data strcutures
+   → very popular and used in popular os
+   → observations:
+      ⇒ when time q is minor the queue is biggest when the q time is mayor
+   → advantages and limitations
+      ⇒ no starvation
+      ⇒ no convoy effect
+      ⇒ practically implementable
+      ⇒ throughput is goob but no as good as SJF or SRTF
+      ⇒ response time is good</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -10565,7 +10614,7 @@ Heeramientas:
 - nats</rich_text>
       </node>
     </node>
-    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1677541241">
+    <node name="C" unique_id="132" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672690232" ts_lastsave="1678466411">
       <rich_text>Variables and data types
 - the information is stored in memory (RAM)
 - RAM data is lost whe computer is off
@@ -10877,6 +10926,10 @@ CH:
 	use ftell
 	display output</rich_text>
       <node name="advanced C" unique_id="137" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1677434609" ts_lastsave="1677434609"/>
+      <node name="pointers" unique_id="138" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1678466411" ts_lastsave="1678753508">
+        <rich_text>arithmetic &amp; sizeof
+- </rich_text>
+      </node>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
