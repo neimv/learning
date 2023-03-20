@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679096517">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679283465">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5804,10 +5804,15 @@ Memory Allocation Techniques
    → next fit
       ⇒ is similar to first fit
       ⇒ this check the next hold to save process
+      ⇒ use the next before select one with another process
    → best fit, invest
       ⇒ find one hole with the smallest size
    → worst fit, invest
-      ⇒ </rich_text>
+      ⇒ this search the largest hole to execute the process
+- Binary addressing visited
+   → represent direction divided by parts of binary numbers
+   → this is used to partitions
+- paging</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
