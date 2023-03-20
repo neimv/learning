@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1678753208">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679096379">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5765,7 +5765,48 @@ CPU scheduling algos
       ⇒ no starvation
       ⇒ no convoy effect
       ⇒ practically implementable
-      ⇒ throughput is goob but no as good as SJF or SRTF</rich_text>
+      ⇒ throughput is goob but no as good as SJF or SRTF
+      ⇒ response time is good
+- priority based scheduling algorithm
+   → use priority number to execute
+- Highest response ratio next scheduling
+   → non preemtive
+   → response ratio = (w + b) / b
+      ⇒ w = waiting time of process so far
+      ⇒ b = burst time
+   → favours not only shorter processes but also limits the waiting time of longer processes
+
+Memory Allocation Techniques
+- 1 word by registers in CPU, is one instruction and data
+- contiguos, 
+   → fixed partitioning
+   → variable partitioning
+- non contiguos
+   → address sapce
+- logical address space, where is saved the data of process
+- physical address space, where is saved the data in the ram
+- methods used to loa the process to main memory
+   → fixed partiotioning, static
+      ⇒ internal fragmentation exists
+      ⇒ process size is limited by the size of the longest partition
+      ⇒ degre of multiprograming is limited by no. of partitoins
+   → varibale partitioning, dynamic
+      ⇒ no internal fragmentation problem
+      ⇒ degree of multiprograming us not limited
+      ⇒ size of process is not limited by size of largest partition, it is limited by the size of ram
+   → a partition can hold only one process data, fixed partition
+   → a process can be placed in only one partition and it cannot span across 2 or more partitions, fixed partition
+- algotiyhms
+   → first fit
+      ⇒ this accomodate the first process to execute
+      ⇒ put process in the holds
+      ⇒ when the process is ok send to hdd
+   → next fit
+      ⇒ is similar to first fit
+      ⇒ this check the next hold to save process
+   → best fit, invest
+      ⇒ find one hole with the smallest size
+   → worst fit, invest</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -10925,8 +10966,8 @@ CH:
 	use ftell
 	display output</rich_text>
       <node name="advanced C" unique_id="137" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1677434609" ts_lastsave="1677434609"/>
-      <node name="pointers" unique_id="138" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1678466411" ts_lastsave="1678468968">
-        <rich_text>Introduction
+      <node name="pointers" unique_id="138" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1678466411" ts_lastsave="1678753508">
+        <rich_text>arithmetic &amp; sizeof
 - </rich_text>
       </node>
     </node>
