@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679097357">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679616360">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5808,7 +5808,16 @@ Memory Allocation Techniques
    → best fit, invest
       ⇒ find one hole with the smallest size
    → worst fit, invest
-      ⇒ this search the largest hole to execute the process</rich_text>
+      ⇒ this search the largest hole to execute the process
+
+Paging
+- compactation, is when used in dynamic partition is order the memory, this avoid internal fragmentation of static partition
+- in random assing of memory
+- the logical an physical address can be different
+- cpu always work with logical address
+- pagesize, size of page in program separations
+- framesize, this is the size of every frame
+- pagetable is soterd in where is saved page in ram</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
