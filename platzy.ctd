@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679616360">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679767876">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
