@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1676838307">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1679861282">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679615453">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1679855370">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5814,7 +5814,22 @@ Paging
 - compactation, is when used in dynamic partition is order the memory, this avoid internal fragmentation of static partition
 - in random assing of memory
 - the logical an physical address can be different
-- cpu always work with logical address</rich_text>
+- cpu always work with logical address
+- pagesize, size of page in program separations
+- framesize, this is the size of every frame
+- pagetable is soterd in where is saved page in ram
+
+Multilevel paging
+- the normal paging is used the ram in different location, but the page table knows where is saved the program, use index to access the data
+- page table is largest of frame
+- places in random frame of ram
+- used multiple pages
+- multiple pages entries in frame
+- work like pointers to frames, with multiple levels like tree</rich_text>
+    </node>
+    <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679862268">
+      <rich_text>el primer circuito, Acrive low S-R latch tiene un acceso set y un reset
+existe un estado no permitido en la tabla, cuando s=0, r=0 y 1 y q y nq son 1</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
