@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1679861282">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1681070548">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1680981016">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681073344">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5883,13 +5883,29 @@ Frame Allocation
    → equal allocation, divided the frame by number of process, is not the better method
    → allocation based on process size, is divided the number of frame between all process and multiply by umber of frame in the system, normally is used the double of frames
 - dynamic vs static
-   → </rich_text>
+   → dynamic, change acording situation
+
+Page replacement algos
+- local vs global page replacement policies
+   → is not possible touch another pages of another process this is in local
+   → in global is possible replace with another page of every process
+   → local is more importante that global
+   → is preferred local because is possible complete another process, while the biggest process is executed in the same memory
+- demand paging: we will </rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
 existe un estado no permitido en la tabla, cuando s=0, r=0 y 1 y q y nq son 1
 el segundo es Active High with Enable, contiene una entrada mas que es enable, sirve para apagar el circuito
 en el tercero a menos que este activo funciona a comparacion del segundo que se puede descomponer</rich_text>
+    </node>
+    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1681071191">
+      <rich_text>Base
+- need gaining unauthorized access
+- hacking machine
+- other machines to hack
+- websites to hack
+- networks</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
