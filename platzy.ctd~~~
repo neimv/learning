@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1680981435">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1680980767">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5881,10 +5881,7 @@ Frame Allocation
 - thrasing, delete innecesaries page and mantein only necessaries pages
 - types:
    → equal allocation, divided the frame by number of process, is not the better method
-   → allocation based on process size, is divided the number of frame between all process and multiply by umber of frame in the system, normally is used the double of frames
-- dynamic vs static
-   → dynamic, change acording situation
-   → </rich_text>
+   → allocation based on process size, is divided the number of frame between all process and multiply by umber of frame in the system</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
