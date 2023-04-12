@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681073351">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681312293">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5891,7 +5891,14 @@ Page replacement algos
    → in global is possible replace with another page of every process
    → local is more importante that global
    → is preferred local because is possible complete another process, while the biggest process is executed in the same memory
-- demand paging: we will not load any page of a process until CPU requests for a byte ain that page</rich_text>
+- demand paging: we will not load any page of a process until CPU requests for a byte ain that page
+
+Process Synchronization
+- shared memory, code segment is a process of program
+- p2 can not access the PCB of p1
+- shared memory is when multiple process is related
+- given and taken data between process
+- </rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
