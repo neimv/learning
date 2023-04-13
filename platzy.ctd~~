@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681312120">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681341436">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5896,7 +5896,24 @@ Page replacement algos
 Process Synchronization
 - shared memory, code segment is a process of program
 - p2 can not access the PCB of p1
-- shared memory is when multiple process is related</rich_text>
+- shared memory is when multiple process is related
+- given and taken data between process
+
+Critical section and non critical
+- section where is possible create race condition
+- critical section is when 2 process use the shared memory
+
+Variuos conditions of synchronization
+- mutal exclusion, a way of making sure that if one process is executing the cs, then other procecsses cannot enter the cs until executing process come out of the cs
+- progress: a way of making sure that ia a process is not inside the cs, then it will not block other process from entering the cs
+- bounded waiting: a way of making sure that there exists a bound or limit on the number of times other process are allowed to enter the cs after a process has made a request to enterthe cs and before that request is granted
+
+Lock Synchronization mechanism
+- Lock variable, lock is a boolean variable which indicates no. of process inside CS at any poiny in time
+- multiprocess solution
+- busy waiting solution
+- implemented at user mode
+- no hardware </rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
