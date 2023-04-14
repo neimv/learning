@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681341436">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681432094">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5910,10 +5910,18 @@ Variuos conditions of synchronization
 
 Lock Synchronization mechanism
 - Lock variable, lock is a boolean variable which indicates no. of process inside CS at any poiny in time
-- multiprocess solution
-- busy waiting solution
-- implemented at user mode
-- no hardware </rich_text>
+- multiprocess solution: t
+- busy waiting solution: x
+- implemented at user mode: 
+- no hardware support
+
+TSL Synchronization mechanism
+- in this mechanism is necesary another flags called Z in assamble code, this is to block CS (critial section)
+- test and set lock
+
+Strict alternation Synchronization mechanism
+- limited two processes
+- 0 is for non critical and 1 is for critical</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
