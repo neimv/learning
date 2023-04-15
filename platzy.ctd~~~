@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681431946">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681514685">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5920,7 +5920,15 @@ TSL Synchronization mechanism
 - test and set lock
 
 Strict alternation Synchronization mechanism
-- limited two processes</rich_text>
+- limited two processes
+- 0 is for non critical and 1 is for critical, reverse of Lock variable
+- switch between 2 process
+
+Disable Interrupts Syncronization mechanism
+- used interruptions between process
+- this need hardware support
+- this is a user mode
+- in kernel mode, interruption never </rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
