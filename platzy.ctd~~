@@ -5617,7 +5617,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681514704">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681681591">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5928,7 +5928,14 @@ Disable Interrupts Syncronization mechanism
 - used interruptions between process
 - this need hardware support
 - this is a user mode
-- in kernel mode, interruption never happen</rich_text>
+- in kernel mode, interruption never happen
+
+Interesed Synchronization mechanism
+- instead of one varibale
+- in turn variable synch mechanism, rare we use 2 variables
+- interested, indicates whether process, Pi is interested in entering the CS or not
+
+</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
