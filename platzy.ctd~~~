@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1675744742">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682038656">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4826,7 +4826,9 @@ httpd is /etc/httpd/conf/httpd.conf
 default page: /var/www/html/index.html
 nfs: /etc/sysconfig/nfs
 92 -&gt; 1
-98 -&gt; 1</rich_text>
+98 -&gt; 1
+
+count words in one file: more data.txt | sort | uniq -c | sort</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676836219">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -5617,7 +5619,11 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
+<<<<<<< HEAD
     <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681514883">
+=======
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1682277274">
+>>>>>>> 24a24f3 (play bandit)
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5933,7 +5939,23 @@ Disable Interrupts Syncronization mechanism
 Interesed Synchronization mechanism
 - instead of one varibale
 - in turn variable synch mechanism, rare we use 2 variables
+<<<<<<< HEAD
 - interested, indicates whether process, Pi is interested in entering the CS or not</rich_text>
+=======
+- interested, indicates whether process, Pi is interested in entering the CS or not
+- local and global variables
+   → local used only in the functions
+   → global in all program
+- no hardware is necessesary
+- implement in user mode
+- 2 process solution
+- busy waiting solution
+
+
+--------------------------------------------------------------
+PRACTICAL
+</rich_text>
+>>>>>>> 24a24f3 (play bandit)
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
