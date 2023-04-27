@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682372677">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682625410">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4829,7 +4829,9 @@ nfs: /etc/sysconfig/nfs
 98 -&gt; 1
 
 count words in one file: more data.txt | sort | uniq -c | sort
-tr 'A-Za-z' 'N-ZA-Mn-za-m' ## to use rot13</rich_text>
+tr 'A-Za-z' 'N-ZA-Mn-za-m' ## to use rot13
+cat &lt; -file_name, read dashed file
+openssl s_client -connect localhost:30001, to send cypher message</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676836219">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -5941,7 +5943,7 @@ Interesed Synchronization mechanism
 Peterson Synchronyzation mechanism
 - toun + interested
 - separeted in entry section, critical section and exit section
-- with global variables, interested bool[2], int toun</rich_text>
+- with global variables, interested bool[2], int toun
 - local and global variables
    → local used only in the functions
    → global in all program
@@ -5951,9 +5953,9 @@ Peterson Synchronyzation mechanism
 - busy waiting solution
 
 
+
 --------------------------------------------------------------
-PRACTICAL
-</rich_text>
+PRACTICAL</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
