@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1681070548">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1682727110">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682625410">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682724050">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4831,7 +4831,8 @@ nfs: /etc/sysconfig/nfs
 count words in one file: more data.txt | sort | uniq -c | sort
 tr 'A-Za-z' 'N-ZA-Mn-za-m' ## to use rot13
 cat &lt; -file_name, read dashed file
-openssl s_client -connect localhost:30001, to send cypher message</rich_text>
+openssl s_client -connect localhost:30001, to send cypher message
+for b21 is necesary create a temporal server and connec with the file</rich_text>
       <node name="security" unique_id="133" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672706317" ts_lastsave="1676836219">
         <rich_text>what is security and Hardering
 - any type of protection against harm
@@ -5622,7 +5623,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1681682362">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1682892465">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5952,10 +5953,71 @@ Peterson Synchronyzation mechanism
 - 2 process solution
 - busy waiting solution
 
+Producer-Consumer problem
+- contains slots in buffer, a buffer is a space in memory for ex. cache, ram or registers
+- is famous problem
+- count, number of slots filled
+- when all sloys is filled, the produces enter to sleep mode
+- if slots is empty the consumer enter in sleep mode
+- existe block state and ready state
+- this work in user mode
+- in kernel block, exists deadlock
+- using semaphore to avoid deadlock, this access in kernel mode
+
 
 
 --------------------------------------------------------------
-PRACTICAL</rich_text>
+PRACTICAL
+Creating machine
+gcc, nasm, bochs
+Creating:
+- </rich_text>
+      <rich_text weight="heavy">bximage</rich_text>
+      <rich_text>, creates te images
+- select option 1
+- option hd - by defualt
+- the kind of image is flat
+- the sextor size: 512
+- the hard disk: 10
+- name image: boot.img
+- values in output: CHS=20/16/63
+- </rich_text>
+      <rich_text weight="heavy">bochs:</rich_text>
+      <rich_text>
+- select option 3
+- option 6
+- option 26
+- in long mode select yes
+- return to Bochs Options Menu
+- select option 7
+- before option 1
+- option 1: memory ram
+- enter size: 1024
+- host memory 1024
+- return to bochs options menu
+- select option 12
+- select first channel 0, 3
+- channel is enable: yes
+- ioaddr1: 0x1f0
+- ioaddr2: 0x3f0
+- IRQ: 14
+- select option 4
+- in type ATA: disk
+- filename: boot.img
+- mode: flat
+- number of cylinders: 20
+- headers: 16
+- sectors per track: 63
+- sector size: 512
+- model name: Generic 1234
+- bios detection: auto
+- translation type: auto
+- select option 15
+- change floppy drive #1, option 1
+- enter disk
+- return to Bosh Configuration Main Menu
+- select 4, to save configuration file: bochsrc
+</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -5971,6 +6033,7 @@ en el tercero a menos que este activo funciona a comparacion del segundo que se 
 - websites to hack
 - networks</rich_text>
     </node>
+    <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
