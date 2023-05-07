@@ -3,7 +3,7 @@
   <bookmarks list=""/>
   <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1676229131"/>
   <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1683400107"/>
-  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683404828">
+  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683404880">
     <rich_text>que es
 - conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
 - para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
@@ -118,6 +118,7 @@ Diferentes campos de accion de la seguridad
       ⇒ hacerlo parte de la evaluacion de los empleados
       ⇒ realizar simulacros</rich_text>
   </node>
+  <node name="Curso de FastAPI" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683404880" ts_lastsave="1683404880"/>
   <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676311868"/>
   <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671752092"/>
 </cherrytree>

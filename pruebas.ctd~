@@ -120,5 +120,14 @@ Diferentes campos de accion de la seguridad
   </node>
   <node name="Curso de FastAPI" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683404880" ts_lastsave="1683404880"/>
   <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676311868"/>
-  <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671752092"/>
+  <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1683405842"/>
+  <node name="errores devops" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683405842" ts_lastsave="1683405843">
+    <rich_text>¿Qué es un cluster?
+¿A qué llama kubernetes un "minion"?
+¿Cuál de los siguientes no es un mecanismo de autenticación?
+¿Qué tipo de lenguaje utiliza Terraform?
+¿Qué es el escalamiento vertical?
+Entras a una empresa como especialista DevOps y te piden evaluar que tipo de herramientas de orquestación  necesitan la empresa y te comenta lo siguiente: no puedes levantar ninguna virtual machine o instancias de EC2 en AWS porque no hay equipo que la mantenga. ¿Qué herramienta propondrías?
+</rich_text>
+  </node>
 </cherrytree>

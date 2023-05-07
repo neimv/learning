@@ -6062,7 +6062,7 @@ existe un estado no permitido en la tabla, cuando s=0, r=0 y 1 y q y nq son 1
 el segundo es Active High with Enable, contiene una entrada mas que es enable, sirve para apagar el circuito
 en el tercero a menos que este activo funciona a comparacion del segundo que se puede descomponer</rich_text>
     </node>
-    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1683257575">
+    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1683257719">
       <rich_text>Base
 - need gaining unauthorized access
 - hacking machine
@@ -6161,7 +6161,8 @@ Seguridad en redes
 - redes de computadoras, Tanenbaum y zero trust networks
 - se tiene control del modem hacia adentro
 - usando un firewall para tener mayor proteccion
-- es recomendado tener varias politicas</rich_text>
+- es recomendado tener varias politicas
+- con lo remoto, se usan vpn</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
   </node>
