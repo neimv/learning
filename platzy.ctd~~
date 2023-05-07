@@ -5623,7 +5623,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1682892345">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1682975828">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5964,6 +5964,18 @@ Producer-Consumer problem
 - in kernel block, exists deadlock
 - using semaphore to avoid deadlock, this access in kernel mode
 
+Binary semaphores
+- use of struct semaphore
+- use of mutes, mutual exclution, syncronization mechanism
+- use of wait and signal functions of operating system, system calls
+- in structure change the value to 1 or 0 depending if is in critical section or not
+- in the value L puts the process in the moment
+- is independing of hardware
+- wait = P = down function, signal = V = up
+- is know as binary semaphore of mutex
+- exists a variable named mutex
+- is possible use a and b like mutex
+
 
 
 --------------------------------------------------------------
@@ -6011,7 +6023,38 @@ Creating:
 - sector size: 512
 - model name: Generic 1234
 - bios detection: auto
-- translation type: auto</rich_text>
+- translation type: auto
+- select option 15
+- change floppy drive #1, option 1
+- enter disk
+- return to Bosh Configuration Main Menu
+- select 4, to save configuration file: bochsrc
+
+BIOS
+- this initialize all hardware
+- the first sector to use is 0x7c00
+- this write in this first sector the program
+- this enter in protected mode and long mode
+- long mode is two modes, 64-bit mode and compatibility mode
+- in compatibility mode, run 16 or 32 bit programs under 64 bit
+- this is designed in 64 bits
+- UEFI, this replace BIOS
+- real mode:
+   → load kernel
+   → retrive information aboutr hardware
+   → contains 4 segment registers:
+      ⇒ cs, code segment
+      ⇒ ds, data segment
+      ⇒ es, extra segment
+      ⇒ ss, stack segment
+   → address format:
+      ⇒ segment register: offset (logical address)
+      ⇒ segment register X 16 + Offset = physical address
+   → general purpose register
+      ⇒ 8 bit: al, ah, bl, bh
+      ⇒ 16 bit: ax, bx, cx, dx
+      ⇒ 32 bit: eax, ebx, ecx, edx
+      ⇒ 64 bit: rax, rbx, rcx, rdx, are not available</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -6019,13 +6062,107 @@ existe un estado no permitido en la tabla, cuando s=0, r=0 y 1 y q y nq son 1
 el segundo es Active High with Enable, contiene una entrada mas que es enable, sirve para apagar el circuito
 en el tercero a menos que este activo funciona a comparacion del segundo que se puede descomponer</rich_text>
     </node>
-    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1681071191">
+    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1683257719">
       <rich_text>Base
 - need gaining unauthorized access
 - hacking machine
 - other machines to hack
 - websites to hack
-- networks</rich_text>
+- networks
+
+
+------ Paltzi
+- todo lo que implica proteger el acceso o uso no autorizado de datos
+- prerequisitos:
+   → redes computacionales
+   → desarrollo de software
+   → sistemas computacionales
+   → normativa y legislacion
+- Roles:
+   → seguridad de la informacion, governance, proteccion de datos personales, ISO 27001, data loss prevention, continuidad del negocio (ISO 22301)
+   → seguridad de codigo seguro, auth, buenas practicas, OWASP, arquitectura de seguridad en apps
+   → seguridad aplicativa
+      ⇒ web
+      ⇒ mobile
+      ⇒ redes
+   → criptografia
+      ⇒ esteganografia
+      ⇒ criptografia
+   → redes:
+      ⇒ hardware
+      ⇒ software
+   → ingenieria social
+      ⇒ phising
+      ⇒ vishing
+   → ciberinteligencia
+      ⇒ OSINT
+   → forensics
+   → Ethics
+      ⇒ Hacktivism
+      ⇒ Ethical hacking
+   → scripting
+      ⇒ bash
+      ⇒ payloading
+      ⇒ exploits
+      ⇒ backdoor
+   → malware
+
+InfoSec
+- manejo de politicas con empleados, pruebas de seguridad sobre la informacion
+- esta protege la confidencialidad, la disponibilidad e integridad de los datos
+- vulnerabilidad de dia cero, no hay manera de protegerse a la vulnerabilidad
+- se debe tener un plan de contigencia si llega a violarse esta seguridad
+
+Ciberinteligencia
+- hacking team, remote control system
+- se tiene el software espia y en otro el command &amp; control
+- adquisicion y analisis de informacion para identificar, rastrear y predecir las capacidades, intenciones y actividades ciberneticas que ayuden a identificar amenazas
+
+Malware
+- wanna cry, uno de los peores cibertaques de la historia
+- es un software malicioso
+
+Criptografia
+- es transversal en todas las demas areas
+- criptografia, cifra datos
+- esteganografia, oculta datos
+- generalmente se combinan tecnicas de ambas areas
+- caracteristicas:
+   → capacidad, cantidad de bits incrustados
+   → robustes, cuantos ataques puede soportar un algoritmo
+   → transparencia o imperceptiilidad, que tanto afecta la calidad del archivo con nuevos datos
+   → seguridad, que tan seguros son los algoritmos
+
+codigo seguro
+- se debe de tener la nociones de seguridad sobre el codigo
+- escenarios de ataque posibles
+- se debe de preocupar por:
+   → confidencialidad de datos
+   → integridad de los datos
+   → disponibilidad
+- manejo de owasp
+
+Pentesting y solarwinds
+- inyectar codigo malisioso en algo normal
+- hace cosas que no debe de hacer
+- un backdoor es una puerta de acceso para los hackers, es secreta y esta oculta
+- vectores de ataque:
+   → inyeccion de codigo
+   → perdida de auth
+   → perdida de controles de acceso
+   → uso de componentetes con vulnerabilidades
+   → registros y monitoreo insuficientes
+   → deserializacion insegura
+
+Seguridad forence:
+- consiste en identificar la causa en el fallo de un sistema ya sea para mejorarlo o encontrar a los responsables
+
+Seguridad en redes
+- redes de computadoras, Tanenbaum y zero trust networks
+- se tiene control del modem hacia adentro
+- usando un firewall para tener mayor proteccion
+- es recomendado tener varias politicas
+- con lo remoto, se usan vpn</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
   </node>
