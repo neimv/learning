@@ -2,129 +2,122 @@
 <cherrytree>
   <bookmarks list=""/>
   <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1676229131"/>
-  <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1676305539">
-    <rich_text>Security linux filesystem
-- Linux file types
-- different types:
-   → - regular file
-   → d directory
-   → l link
-   → c special file or device files in /dev
-   → s scoket /dev/log
-   → p named pipe, similiar to sockets allow comunication between 2 processes
-   → b block device like /dev/sda
-- file attributes
-   → total column: 9
-   → type
-   → # of links
-   → owner
-   → group
-   → size
-   → month
-   → day
-   → time
-   → name
-- exists two owners, user and group
-- commands: chown, change user owner, chgrp, change group owner
-- is responsability of user for controlling access to their files
-- ACL
-   → additional layer of permissions to allow and assing permissions by user
-   → user is not a member of group create, but is necesary access (RW)
-   → permission to user: setfacl -m u:user:rwx {path to file}
-   → permission to group: setfacl -m g:group:rw {path to file}
-   → Allow in cascade: setfacl -dm “entry” {path}
-   → remove a specific entry: setfacl -x u:user {path to file}
-   → remove all entries: setfacl -b {path to file}
-   → with ACL add + at the end of permission
-   → to get permissions in file: getfacl {path to file}
+  <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1683400107"/>
+  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683404327">
+    <rich_text>que es
+- conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
+- para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
+- todo se basa en los ciberriesgos
+- sirve para mitigacion de riesgos
+   → financiero
+   → reputacional
+   → regulatorio
+- exigencias
+   → gobiernos
+   → inversionistas
+   → usuarios
+- beneficios
+   → aumento del nivel de confianza hacia mi empresa por la gestion segura de la informacion
+   → compliance, incremento en nivel de cumplimiento en normativas de ciberseguridad
+   → data privacy, correcto tratamiento de datos sensibles
+   → availability, optimizar la disponibilidad de servicio tecnologico
+   → evolution, mmejorar la imagen corporativa e ingreso a nuevos mercados
+- retos
+   → innovacion constante
+      ⇒ nuevas tecnologias
+      ⇒ zero days
+   → esto es un proceso continuo, se debe de verificar constantemente
+   → atacantes
+      ⇒ script kiddies
+      ⇒ grupos criminales
+      ⇒ naciones-estado
+      ⇒ hacktivistas
+      ⇒ competidores
+      ⇒ internos
+   → implementar una cultura de seguridad en la empresa
+- riesgos
+   → analisis de brecha o de GAP
+   → analisis de procesos internos
+   → autoevaluacion
+      ⇒ amenazas, tengo claras las ciber amenazas que podrian afectar la informacion de la empresa
+      ⇒ alcances, que activos de informacion debo proteger de ciberataques
+      ⇒ transferencia del riesgo, podria buscar apoyo en el tratamiento de riesgos identificados
+      ⇒ apoyo, cuento con respaldo para implementear ciber-controles
+- herramientas
+   → NIST cybersecurity framework
+      ⇒ identificar, comprension de la organizacion de la empresa
 
-Securiting Linux System
-- MOTD
-   → message of day
-   → information about the system os just message from the sysadmin
-   → used to alert users that activity is monitored
-   → file: /etc/motd
-- customize message of day
-   → is the first message when users connect
-   → create file in /etc/profile.d/motd.sh
-   → add commands in motd.sh
-   → modify /etc/ssh/ssh_config in PrintMotd Yes to no
-   → restart ssh services
-- remove un necesary or orphan packages
-   → the first rule is: install only necesary
-   → pay attention to the add-on packages
-   → get a list of all packages: rqm --qa
-   → apt list --installed
-   → rpm --e package name to remove
-   → apt-get remove package name
-   → yum utils to check orhphaned packges
-   → rpm -qa | grep yum-utils to check if is installed
-   → package-cleanup --leaves, show all orphan packages
-   → apt-get autoremove
-- kernel an system up to date
-   → register to OS provider
-   → stay connected with the technical news feeds and os community
-   → run package management software
-   → yum update or upgrade
-   → apt-get update
-   → two types of upgrades
-      ⇒ major version = 5, 6, 7
-      ⇒ minor version = 7.3 to 7.4
-      ⇒ mayor version not yum command
-      ⇒ minor version = yum update
-- Stop and sdisable unwanted services
-   → </rich_text>
-    <rich_text weight="heavy">netstat -l</rich_text>
-    <rich_text> to check what services is running
-   → </rich_text>
-    <rich_text weight="heavy">netstat -tulpn</rich_text>
-    <rich_text> to more especifig
-   → </rich_text>
-    <rich_text weight="heavy">systemctl</rich_text>
-    <rich_text>
-   → </rich_text>
-    <rich_text weight="heavy">chkconfig --list</rich_text>
-    <rich_text>, older versions of centos
-   → </rich_text>
-    <rich_text weight="heavy">service --status-all | grep running</rich_text>
-    <rich_text> (centros or ubuntu) this is deprecated
-   → </rich_text>
-    <rich_text weight="heavy">ps -ef</rich_text>
-    <rich_text>, to show all processes
-   → disabled /etc/pam.d for programas that is not used</rich_text>
+Diferentes campos de accion de la seguridad
+- seguridad en la informacion
+   → protege la informacion, su confidencialidad, la integridad y la disponibilidad
+   → confidencialidad, la info solo es accesible para aquellos tengan permiso
+   → disponibilidad, la informacion es accesibre y utilizable por solicitud, cuando este la requiere
+   → ntegridad, la informacion debe mantenerse inalterada, a menos que se requiera
+- seguridad de aplicaciones
+   → una rama de la seguridad que se preocupa por introducir practicas seguras en cada uno de los ciclos de desarrollo del software
+   → principales
+      ⇒ entrenamiento OWASP Top 10
+      ⇒ analisis estatico de codigo
+      ⇒ analisis dinamico de codigo
+      ⇒ arquitecturas seguras
+      ⇒ owasp samm, madurez de aseguramiento de software
+- seguridad en redes
+   → estudia la infraestrucutra de red, su conectividad y seguridad
+   → se puede estudiar usando el modelo OSI
+   → principales controles
+      ⇒ firewalls
+      ⇒ control de acceso
+      ⇒ segmentacion de redes
+      ⇒ DLP
+      ⇒ IPS
+      ⇒ VPN
+      ⇒ SIEM
+      ⇒ seguridad inalambrica
+      ⇒ proteccion corre
+- seguridad en la nube
+   → se encarga especificamente de asegurar los sistemas de computacion en la nube. tiene varias intersecciones con las demas ramas de la seguridad, seguridad es de responsabilidad compartida
+   → controles
+      ⇒ perimetro de seguridad corto
+      ⇒ IAM
+      ⇒ Replicacion, uso de multinube
+      ⇒ Observabilidad
+      ⇒ Gobernanza
+      ⇒ Compliance
+      ⇒ Manejo de datos
+- seguridad fisica
+   → es la proteccion de activos fisicos de la organizacion, mediante diferentes mecanismos y acciones de deteccion y prevencion de riesgos
+   → controles de seguridad
+      ⇒ seguridad perimetral
+      ⇒ seguridad de guardias
+      ⇒ entrada de llave
+      ⇒ entrada a los racks
+      ⇒ uso de control de accesos
+      ⇒ sistemas de vigilancia
+      ⇒ eliminacion segura de la informacion
+      ⇒ controles medioambientales
+- cultura de ciberseguridad
+   → son ideas, costumbres y comportamientos sociales dn una organizacion
+   → principales elementos:
+      ⇒ actitudes
+      ⇒ comportamientos
+      ⇒ conocimiento
+      ⇒ comunicacion
+      ⇒ cumplimiento
+      ⇒ normas
+      ⇒ responsabilidades
+   → el factor humano estuvo involucrado en ms del 85% de brechas de seguridad
+   → pasos
+      ⇒ crear objetivos estrategicos claros
+      ⇒ medir el estado actual de la cultura
+      ⇒ diseñar una estrategia de cambio cultural
+      ⇒ revision y mejora continua del proceso
+   → recomendaciones
+      ⇒ proceso constante y sin fin para crear resonancia
+      ⇒ tener un responsable directo de cuidar la cultura
+      ⇒ debe involucrar todos los niveles de la empresa
+      ⇒ hacerlo parte de la evaluacion de los empleados
+      ⇒ realizar simulacros</rich_text>
   </node>
-  <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676308028">
-    <rich_text>Pointers
-- similar to indirection
-- referencion something using name, reference or container
-- manipulation of value from memory addess
-- poiter access value by memory address
-- this is the more powerful tools available in the C language
-- the compilers needs how much memory needs
-- every pointer will beassociated with a specific varaible
-- pointer is used to arrays and strings
-- pointers allow functions to modify data passed to them as variables
-- used to optimize programs to use more or minus memory
-- is possible create dynamic memory
-- allow desing and develop complex data structures
-- provides direct memory access
-- defining pointers
-   → is not decalred like normal variables
-   → declare {type} *pointer;
-   → the space between the * and pointer name is optional
-   → the value is an unsigned integer on most systems
-   → the %p represents type pointer
-   → this is not initialized
-   → is very important always initialize a pointer when is declared
-   → null pointer to initialize pointer to NULL
-   → this is equivalent to zero = NULL
-   → NULL is used to point any location in memory
-   → is necesary stddef.h to NULL
-   → to initialize with varaible is necesary &amp;
-   → is possible declare normal variables and pointer in the same statement
-   → is good idea use p in name of pointer
-- accesing pointers
-   → is used the * to access the value of the variable pointed, dereferences</rich_text>
-  </node>
+  <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676311868"/>
   <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1671752092"/>
 </cherrytree>
