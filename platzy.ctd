@@ -5623,7 +5623,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1682975828">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1683493113">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5976,6 +5976,25 @@ Binary semaphores
 - exists a variable named mutex
 - is possible use a and b like mutex
 
+Dinning philosopher problem
+- let multiple mutexes in array
+- and multiple processe in executes
+- depending of processes exists semaphores
+- process can take multiple semaphores
+- this work like a linked list, this produced deadlock
+- with reverse order is possible avoid the deadlock, getting the mutexes
+- take the forks:
+   → take the left fork
+   → take the right fork
+   → eat
+   → drop the left fork
+   → drop the right fork
+
+
+x</rich_text>
+      <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
+      <rich_text>
+
 
 
 --------------------------------------------------------------
@@ -6172,7 +6191,7 @@ ec-council
 isc2</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
-    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683474495">
+    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683485909">
       <rich_text>que es
 - conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
 - para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
@@ -6285,7 +6304,104 @@ Diferentes campos de accion de la seguridad
       ⇒ tener un responsable directo de cuidar la cultura
       ⇒ debe involucrar todos los niveles de la empresa
       ⇒ hacerlo parte de la evaluacion de los empleados
-      ⇒ realizar simulacros</rich_text>
+      ⇒ realizar simulacros
+
+Ciberamenazas
+- malware
+   → software malisioso creado para causar danio
+   → afecta todo tipo de dispositivos y sistemas operativos
+   → puede hacer:
+      ⇒ crack passwords
+      ⇒ instrusion, acceso a sistemas critico por linea de comando o similar
+      ⇒ movimiento lateral, replicarse y actuar en un mismo segmento de red o VLAN
+      ⇒ disponibilidad, afectar la operatividad de sistemas vitales para la empresa
+      ⇒ cryptojacking, aprovechamiento del hardware del cpu
+      ⇒ secuestro de datos, alterar la integridad de informacion y/o datos personales
+      ⇒ zombie, controlar equipos remotamente para generar ciberataques (BotNet)
+   → tipos
+      ⇒ virus, modifica otros programas para difundirse
+      ⇒ ransomware, cifra archivos y cobra por rescate
+      ⇒ spyware, accede a passwords, keystrokes o similares
+      ⇒ bots, ejecutan ciberataques dirigidos
+- ransomware
+   → malware que utiliza tecnicas de cifrado altamente robusto
+   → muy lucrativo para ciberdelincuentes y casi siempre es dirigido a empresas
+   → puede llevar desde un email, exploit o gusan
+   → el ransomware contacta al atacante con el command and control
+   → crea una llave para cifrar los datos
+   → puede que despues de eso el atacante mande la llave, auqneu no es seguro
+   → factores de riesgo:
+      ⇒ direccione IP publicas sin auditar
+      ⇒ firewall ausente o sin tunning
+      ⇒ carencia de endpoint protection
+      ⇒ no existen practicas de hardening
+      ⇒ falta de cultura en seguridad
+   → ciber controles
+      ⇒ respaldar informacion de alta importancia
+      ⇒ nunca pagar el rescate
+- ingenieria social
+   → conjunto de interacciones y tecnicas que se usan para manipular psicologicamente por gustos o tendencias
+   → ciclo de vida
+      ⇒ investigacion
+         • identificacion de la victima
+         • captura de informacion
+         • metodo de ataque
+      ⇒ hook
+         • enlace exitoso con victiam
+         • control de la interaccion
+      ⇒ play
+         • ejecuta el ataque
+         • obtencion de informacion
+      ⇒ exit
+         • cierre de interaccion
+         • eliminacion de evidencia
+   → ciber controles
+      ⇒ validacion de origen
+      ⇒ 2FA o MFA
+      ⇒ cultura en ciberseguridad
+- phishing
+   → tecnica de ingenieria social para el robo de datos personales y financieros, suplanta la identidad digital de empresas o bancos
+   → tecnicas
+      ⇒ emails scams, miles de correos falsos a usuario y empresas con datos comprometidos
+      ⇒ sprear phishing, ciberataque dirigido a empresas o sectores con previo conocimiento organizacional
+   → ciber controles
+      ⇒ security-education, uso de gophish
+      ⇒ 2FA o MFA
+      ⇒ denuncia enlaces
+- denegacion de servicios
+   → ciberataque que afecta la disponibilidad de servicios tecnologicos por inundacion de peticiones, generacion de trafico excesivo
+   → tipos
+      ⇒ basados en volumen: satura el ancho de banda del sitio, se mide en bits por segundo, protocolos: UDP &amp; ICMP
+      ⇒ de protocolo: consume recursos del servidor: SYN o ping de la muerte, medible en paquetes por segundo (Pps)
+      ⇒ de capa de aplicacion: generados por requests masivos hacia servicios web, ahs que colapsen, se mide en requests por segundo (Rps)
+   → aplicacion
+      ⇒ BotNet y DDos
+         • uso de redes zombies, o ataques distribuidos hacia objetivos especificos
+   → ciber controles
+      ⇒ seguridad como servicio
+         • adquirir soluciones integrales de seguridad
+      ⇒ hardening de servicios, aplicar robustes de servicio + endpoint protection y evitar configuraciones por defecto
+- man in the middle
+   → ciberataque que permite interceptar la comunicacion user-app
+   → su objetivo es capturar informacion sensible y/o alto riesgo
+   → workflow
+      ⇒ se tiene una maquina intermedia entre el usuario y el server
+   → tipos
+      ⇒ IP Spoofing
+         • se altern packets headers para suplantar una direccion IP
+         • simula la peticion como si fuera confiable
+      ⇒ ARP Spoofing
+         • enlaza la mac address con la direccion IP de usuario legitimo
+         • se conecta la victima al atacante
+         • se hace envenamiento ARP
+      ⇒ DNS Spooging, infiltra un DNS server, alternado los registros de direcciones web
+         • altera registros que pertenecen al DNS
+         • se suplantan sitios web
+   → ciber controles
+      ⇒ alertas en navegadores, no omitir las alertas ofrecidas por los browser
+      ⇒ logging-out obligatorio, si no utilizas una app, cierra la sesion
+      ⇒ uso de VPN, utilizar las bondades de las redes privadas
+      ⇒ cifrar comunicaciones, utilizar TLS 1.3+ con algortimos de cifrado robusto</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">

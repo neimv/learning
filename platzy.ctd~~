@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1682727110">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1683474491">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5623,7 +5623,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1682975828">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1683491683">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5976,6 +5976,20 @@ Binary semaphores
 - exists a variable named mutex
 - is possible use a and b like mutex
 
+Dinning philosopher problem
+- let multiple mutexes in array
+- and multiple processe in executes
+- depending of processes exists semaphores
+- process can take multiple semaphores
+- this work like a linked list, this produced deadlock
+- with reverse order is possible avoid the deadlock, getting the mutexes
+- take the forks:
+   → take the left fork
+   → take the right fork
+   → eat
+   → drop the left fork
+   → drop the right fork
+
 
 
 --------------------------------------------------------------
@@ -6062,7 +6076,7 @@ existe un estado no permitido en la tabla, cuando s=0, r=0 y 1 y q y nq son 1
 el segundo es Active High with Enable, contiene una entrada mas que es enable, sirve para apagar el circuito
 en el tercero a menos que este activo funciona a comparacion del segundo que se puede descomponer</rich_text>
     </node>
-    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1683257883">
+    <node name="Ethical hacking" unique_id="140" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1681070548" ts_lastsave="1683258366">
       <rich_text>Base
 - need gaining unauthorized access
 - hacking machine
@@ -6164,9 +6178,226 @@ Seguridad en redes
 - es recomendado tener varias politicas
 - con lo remoto, se usan vpn
 - estudio del trafico de red interno y externo
-- </rich_text>
+
+
+Comptia
+offense security
+ec-council
+isc2</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
+    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683485909">
+      <rich_text>que es
+- conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
+- para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
+- todo se basa en los ciberriesgos
+- sirve para mitigacion de riesgos
+   → financiero
+   → reputacional
+   → regulatorio
+- exigencias
+   → gobiernos
+   → inversionistas
+   → usuarios
+- beneficios
+   → aumento del nivel de confianza hacia mi empresa por la gestion segura de la informacion
+   → compliance, incremento en nivel de cumplimiento en normativas de ciberseguridad
+   → data privacy, correcto tratamiento de datos sensibles
+   → availability, optimizar la disponibilidad de servicio tecnologico
+   → evolution, mmejorar la imagen corporativa e ingreso a nuevos mercados
+- retos
+   → innovacion constante
+      ⇒ nuevas tecnologias
+      ⇒ zero days
+   → esto es un proceso continuo, se debe de verificar constantemente
+   → atacantes
+      ⇒ script kiddies
+      ⇒ grupos criminales
+      ⇒ naciones-estado
+      ⇒ hacktivistas
+      ⇒ competidores
+      ⇒ internos
+   → implementar una cultura de seguridad en la empresa
+- riesgos
+   → analisis de brecha o de GAP
+   → analisis de procesos internos
+   → autoevaluacion
+      ⇒ amenazas, tengo claras las ciber amenazas que podrian afectar la informacion de la empresa
+      ⇒ alcances, que activos de informacion debo proteger de ciberataques
+      ⇒ transferencia del riesgo, podria buscar apoyo en el tratamiento de riesgos identificados
+      ⇒ apoyo, cuento con respaldo para implementear ciber-controles
+- herramientas
+   → NIST cybersecurity framework
+      ⇒ identificar, comprension de la organizacion de la empresa
+
+Diferentes campos de accion de la seguridad
+- seguridad en la informacion
+   → protege la informacion, su confidencialidad, la integridad y la disponibilidad
+   → confidencialidad, la info solo es accesible para aquellos tengan permiso
+   → disponibilidad, la informacion es accesibre y utilizable por solicitud, cuando este la requiere
+   → ntegridad, la informacion debe mantenerse inalterada, a menos que se requiera
+- seguridad de aplicaciones
+   → una rama de la seguridad que se preocupa por introducir practicas seguras en cada uno de los ciclos de desarrollo del software
+   → principales
+      ⇒ entrenamiento OWASP Top 10
+      ⇒ analisis estatico de codigo
+      ⇒ analisis dinamico de codigo
+      ⇒ arquitecturas seguras
+      ⇒ owasp samm, madurez de aseguramiento de software
+- seguridad en redes
+   → estudia la infraestrucutra de red, su conectividad y seguridad
+   → se puede estudiar usando el modelo OSI
+   → principales controles
+      ⇒ firewalls
+      ⇒ control de acceso
+      ⇒ segmentacion de redes
+      ⇒ DLP
+      ⇒ IPS
+      ⇒ VPN
+      ⇒ SIEM
+      ⇒ seguridad inalambrica
+      ⇒ proteccion corre
+- seguridad en la nube
+   → se encarga especificamente de asegurar los sistemas de computacion en la nube. tiene varias intersecciones con las demas ramas de la seguridad, seguridad es de responsabilidad compartida
+   → controles
+      ⇒ perimetro de seguridad corto
+      ⇒ IAM
+      ⇒ Replicacion, uso de multinube
+      ⇒ Observabilidad
+      ⇒ Gobernanza
+      ⇒ Compliance
+      ⇒ Manejo de datos
+- seguridad fisica
+   → es la proteccion de activos fisicos de la organizacion, mediante diferentes mecanismos y acciones de deteccion y prevencion de riesgos
+   → controles de seguridad
+      ⇒ seguridad perimetral
+      ⇒ seguridad de guardias
+      ⇒ entrada de llave
+      ⇒ entrada a los racks
+      ⇒ uso de control de accesos
+      ⇒ sistemas de vigilancia
+      ⇒ eliminacion segura de la informacion
+      ⇒ controles medioambientales
+- cultura de ciberseguridad
+   → son ideas, costumbres y comportamientos sociales dn una organizacion
+   → principales elementos:
+      ⇒ actitudes
+      ⇒ comportamientos
+      ⇒ conocimiento
+      ⇒ comunicacion
+      ⇒ cumplimiento
+      ⇒ normas
+      ⇒ responsabilidades
+   → el factor humano estuvo involucrado en ms del 85% de brechas de seguridad
+   → pasos
+      ⇒ crear objetivos estrategicos claros
+      ⇒ medir el estado actual de la cultura
+      ⇒ diseñar una estrategia de cambio cultural
+      ⇒ revision y mejora continua del proceso
+   → recomendaciones
+      ⇒ proceso constante y sin fin para crear resonancia
+      ⇒ tener un responsable directo de cuidar la cultura
+      ⇒ debe involucrar todos los niveles de la empresa
+      ⇒ hacerlo parte de la evaluacion de los empleados
+      ⇒ realizar simulacros
+
+Ciberamenazas
+- malware
+   → software malisioso creado para causar danio
+   → afecta todo tipo de dispositivos y sistemas operativos
+   → puede hacer:
+      ⇒ crack passwords
+      ⇒ instrusion, acceso a sistemas critico por linea de comando o similar
+      ⇒ movimiento lateral, replicarse y actuar en un mismo segmento de red o VLAN
+      ⇒ disponibilidad, afectar la operatividad de sistemas vitales para la empresa
+      ⇒ cryptojacking, aprovechamiento del hardware del cpu
+      ⇒ secuestro de datos, alterar la integridad de informacion y/o datos personales
+      ⇒ zombie, controlar equipos remotamente para generar ciberataques (BotNet)
+   → tipos
+      ⇒ virus, modifica otros programas para difundirse
+      ⇒ ransomware, cifra archivos y cobra por rescate
+      ⇒ spyware, accede a passwords, keystrokes o similares
+      ⇒ bots, ejecutan ciberataques dirigidos
+- ransomware
+   → malware que utiliza tecnicas de cifrado altamente robusto
+   → muy lucrativo para ciberdelincuentes y casi siempre es dirigido a empresas
+   → puede llevar desde un email, exploit o gusan
+   → el ransomware contacta al atacante con el command and control
+   → crea una llave para cifrar los datos
+   → puede que despues de eso el atacante mande la llave, auqneu no es seguro
+   → factores de riesgo:
+      ⇒ direccione IP publicas sin auditar
+      ⇒ firewall ausente o sin tunning
+      ⇒ carencia de endpoint protection
+      ⇒ no existen practicas de hardening
+      ⇒ falta de cultura en seguridad
+   → ciber controles
+      ⇒ respaldar informacion de alta importancia
+      ⇒ nunca pagar el rescate
+- ingenieria social
+   → conjunto de interacciones y tecnicas que se usan para manipular psicologicamente por gustos o tendencias
+   → ciclo de vida
+      ⇒ investigacion
+         • identificacion de la victima
+         • captura de informacion
+         • metodo de ataque
+      ⇒ hook
+         • enlace exitoso con victiam
+         • control de la interaccion
+      ⇒ play
+         • ejecuta el ataque
+         • obtencion de informacion
+      ⇒ exit
+         • cierre de interaccion
+         • eliminacion de evidencia
+   → ciber controles
+      ⇒ validacion de origen
+      ⇒ 2FA o MFA
+      ⇒ cultura en ciberseguridad
+- phishing
+   → tecnica de ingenieria social para el robo de datos personales y financieros, suplanta la identidad digital de empresas o bancos
+   → tecnicas
+      ⇒ emails scams, miles de correos falsos a usuario y empresas con datos comprometidos
+      ⇒ sprear phishing, ciberataque dirigido a empresas o sectores con previo conocimiento organizacional
+   → ciber controles
+      ⇒ security-education, uso de gophish
+      ⇒ 2FA o MFA
+      ⇒ denuncia enlaces
+- denegacion de servicios
+   → ciberataque que afecta la disponibilidad de servicios tecnologicos por inundacion de peticiones, generacion de trafico excesivo
+   → tipos
+      ⇒ basados en volumen: satura el ancho de banda del sitio, se mide en bits por segundo, protocolos: UDP &amp; ICMP
+      ⇒ de protocolo: consume recursos del servidor: SYN o ping de la muerte, medible en paquetes por segundo (Pps)
+      ⇒ de capa de aplicacion: generados por requests masivos hacia servicios web, ahs que colapsen, se mide en requests por segundo (Rps)
+   → aplicacion
+      ⇒ BotNet y DDos
+         • uso de redes zombies, o ataques distribuidos hacia objetivos especificos
+   → ciber controles
+      ⇒ seguridad como servicio
+         • adquirir soluciones integrales de seguridad
+      ⇒ hardening de servicios, aplicar robustes de servicio + endpoint protection y evitar configuraciones por defecto
+- man in the middle
+   → ciberataque que permite interceptar la comunicacion user-app
+   → su objetivo es capturar informacion sensible y/o alto riesgo
+   → workflow
+      ⇒ se tiene una maquina intermedia entre el usuario y el server
+   → tipos
+      ⇒ IP Spoofing
+         • se altern packets headers para suplantar una direccion IP
+         • simula la peticion como si fuera confiable
+      ⇒ ARP Spoofing
+         • enlaza la mac address con la direccion IP de usuario legitimo
+         • se conecta la victima al atacante
+         • se hace envenamiento ARP
+      ⇒ DNS Spooging, infiltra un DNS server, alternado los registros de direcciones web
+         • altera registros que pertenecen al DNS
+         • se suplantan sitios web
+   → ciber controles
+      ⇒ alertas en navegadores, no omitir las alertas ofrecidas por los browser
+      ⇒ logging-out obligatorio, si no utilizas una app, cierra la sesion
+      ⇒ uso de VPN, utilizar las bondades de las redes privadas
+      ⇒ cifrar comunicaciones, utilizar TLS 1.3+ con algortimos de cifrado robusto</rich_text>
+    </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
