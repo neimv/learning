@@ -3,14 +3,16 @@
   <bookmarks list=""/>
   <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1676229131"/>
   <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1683400107"/>
-  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683583123">
+  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683585981">
     <rich_text>controles en ciberseguridad
 - Gestion de accesos
    → tratamiento de que se brinda a credenciales de acceso, token o cualquier recurso que permita autenticarse
    → clasificacion
       ⇒ locales: offiline, permiten la adeministracion de accesos en archivo local
       ⇒ servicio web, online: permite la sincronia de accesos en diferentes dispositivos
-      ⇒ basada en token, permite autenticacion con compoente hardware</rich_text>
+      ⇒ basada en token, permite autenticacion con compoente hardware
+   → beneficios
+      ⇒ uso de</rich_text>
   </node>
   <node name="Curso de FastAPI" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683404880" ts_lastsave="1683404880"/>
   <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676311868"/>

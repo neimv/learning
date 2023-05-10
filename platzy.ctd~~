@@ -5623,7 +5623,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1683491683">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1683493113">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -5991,6 +5991,11 @@ Dinning philosopher problem
    → drop the right fork
 
 
+x</rich_text>
+      <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
+      <rich_text>
+
+
 
 --------------------------------------------------------------
 PRACTICAL
@@ -6186,7 +6191,7 @@ ec-council
 isc2</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
-    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683485909">
+    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683676432">
       <rich_text>que es
 - conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
 - para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
@@ -6396,7 +6401,224 @@ Ciberamenazas
       ⇒ alertas en navegadores, no omitir las alertas ofrecidas por los browser
       ⇒ logging-out obligatorio, si no utilizas una app, cierra la sesion
       ⇒ uso de VPN, utilizar las bondades de las redes privadas
-      ⇒ cifrar comunicaciones, utilizar TLS 1.3+ con algortimos de cifrado robusto</rich_text>
+      ⇒ cifrar comunicaciones, utilizar TLS 1.3+ con algortimos de cifrado robusto
+
+controles en ciberseguridad
+- Gestion de accesos
+   → tratamiento de que se brinda a credenciales de acceso, token o cualquier recurso que permita autenticarse
+   → clasificacion
+      ⇒ locales: offiline, permiten la adeministracion de accesos en archivo local
+      ⇒ servicio web, online: permite la sincronia de accesos en diferentes dispositivos
+      ⇒ basada en token, permite autenticacion con compoente hardware
+   → beneficios
+      ⇒ uso de contraseña maestra con token file
+      ⇒ promueven el fortalecimiento de claves
+      ⇒ son repositorios de claves debidamente cifrados
+      ⇒ algunos implementan passwordless option
+      ⇒ cuentan con generadores de contraseñas
+      ⇒ permiten la gestion de accesos en equipos de trabajo
+- Firewall
+   → dispositivo o software que monitorea todo el trafico que entra o sale
+   → aporta zero-trust
+   → dos tipos
+      ⇒ appliance en sitio, hardware instalado y configurado de acuerdo a la necesidad de la empresa
+      ⇒ cloud security mode, servicio de seguridad adquiridos por demand, modulares y escalables segun necesidad
+   → beneficios
+      ⇒ panorama de seguridad, permite visualizar eventos en el trafico de red para la toma de decisiones
+      ⇒ QoS, calidad en el servicio de la red empresarial
+      ⇒ control permanente, bloquear ciberamenazas emergentes y nuevos modelos de ataque
+      ⇒ canales de red seguros, permite la implementacion de VPN o tuneles dpara usos diversos
+- IPS/IDS, Instrusion prevention/detection system
+   → ids, es una herramienta de seguridad en la red que analiza el trafico interno para detectar actividad maliciosa y alertar al admin del sistema
+   → ips, es la evolucion del IDS, este ademas de alertar, puede bloquear, capturar o eliminar paquetes malisiosos
+   → funcionamiento
+      ⇒ estan inline para analizar todo el trafico. identifican amenazas cmo:
+         • firmas
+         • anomalias
+         • politicas
+   → el firewall solo revisa una pequenia parte del paquete, el ids revisa todo el trafico
+   → clasificacion
+      ⇒ NIPS, sistema basado en la red, despues del firewall
+      ⇒ HIPS, existe un software en cada computadora
+      ⇒ NBA, analisa trafico inusual de tipo DDoS
+      ⇒ WIPS, escanea redes WIFI, identico al NBA
+   → beneficios
+      ⇒ integracion con otras soluciones
+      ⇒ mayor eficiencia en otros controles de seguridad
+      ⇒ ahorro de tiempo
+      ⇒ compliance
+      ⇒ personalizable
+- Correlacion y gestion de eventos (SIEM)
+   → soluciones centralizadas los logs de los sistemas que se tengan (trazas)
+   → como funciona
+      ⇒ gestion de registros
+      ⇒ correlacion de eventos y analisis
+      ⇒ monitoreo de incidentes y alertas de seguridad
+      ⇒ gestion de compliance e informes'
+   → capacidades
+      ⇒ agregacion de la informacion
+      ⇒ correlacion
+      ⇒ alerta
+      ⇒ dashboard
+      ⇒ compliance
+      ⇒ retencion
+      ⇒ analisis forence
+   → por que usarlo
+      ⇒ detectar ataques de zero day
+      ⇒ normalizacion y categorizacion de logs
+      ⇒ visualizacion de eventos
+      ⇒ deteccion de malas configuraciones
+      ⇒ puede detectar comunicaciones maliciosas y canales encriptados
+- Copias de seguridad
+   → copias de la informacion original, para recuperar los sistemas
+   → que la puede perder
+      ⇒ desastre natural
+      ⇒ eliminacion accidental
+      ⇒ robo
+      ⇒ corrupcion de informacion
+      ⇒ virus informatico
+   → metodos
+      ⇒ copia completa/espejo
+      ⇒ copia incremental
+      ⇒ copia en tiempo real
+   → consideraciones
+      ⇒ redundancia/replicacion de las copias de seguridad
+      ⇒ cifrado de datos
+      ⇒ refactorizacion
+      ⇒ compresion
+      ⇒ limpieza automatica de datos
+      ⇒ seguridad de las copias de seguridad
+      ⇒ periodo de retencion de la informacion
+      ⇒ validacion de integridad
+      ⇒ monitoreo
+   → conceptos clave
+   → RPO, punto objetivo de recuperacion, periodo maximo del que se peude tolerar perdida de informacion
+   → RTOP, cantidad de tiempo entre un desastre y la recuperacion de las funciones de negocio
+- cifrado
+   → es el proceso de convertir informacion legible, donde queda ilegible usando procesos matematicos
+   → tipos
+      ⇒ simetrico
+         • se usa la misma llave para cifrar y descifrar
+      ⇒ asimetrico
+         • se tiene dos llaves una privada y una publica
+         • lo que se cifra con la publica solo puede ser descifrada con la privada y viceversa
+   → consideraciones
+      ⇒ tamanio de la llave, entre mas grande mas tardado
+      ⇒ algoritmo de cifrado, entre mas fuerte mas recursos ocupa
+- VPN
+   → tecnologia que nos permite realizar conexion en una red publica como si fuera privada, esta estara cifrada
+   → existe un intermediario que recibe las peticiones y la reenvia
+   → por que usar:
+      ⇒ por si se tiene una app que solo deba de ser interna
+      ⇒ cifrar datos enviados en redes no confiables
+      ⇒ ocultar tu identidad a sitios que visites
+      ⇒ se pueden conectar a paginas restringidas
+- endpoint protection
+   → practica de proteger dispositivos, usando integracion de varias herramientas, es la evolucion de los antivirus
+   → se compone de
+      ⇒ clasificacion con ML
+      ⇒ proteccion avanzada de multiples dispositivos
+      ⇒ proteccion de navegacion web
+      ⇒ DLP, data loss prevention
+      ⇒ firewall integrado
+      ⇒ bloqueo de phishing y ataques de correo
+      ⇒ proteccion de amenazas internas
+      ⇒ vista centralizadad de todos los dispositivos
+      ⇒ cifrado de datos
+   → con funciona
+      ⇒ es un cliente servidor (EPP), este administra todos los servicios de la red
+      ⇒ los clientes se pueden instalar en cada dispositivo
+- BCP, plan de continuidad del negocio
+   → capacidad de continuar operando y entregando productos y servicios, despues de un incidente
+   → es un documento que contiene toda la informacion para continuar con este proceso
+   → que se hace:
+      ⇒ BIA (analisis de impacto de negocio)
+         • principales funciones de negocio
+         • RTO y RPO por funcion de negocio
+         • Recursos requeridos por funcion de negocio
+         • impacto/costo financiero
+         • “           ”       operacional
+         • “           ”       legal
+      ⇒ analisis de riesgos
+         • se busca identificar amenazas, vulnerabilidades y riesgos de la informacion
+         • por cada amenaza identificada se considera su probabilidad y el impacto
+         • las amenazas se pueden clasificar en naturales, causadas por el hombre o fallas de infra estrucutura
+         • se pueden identificar controles y costos para cada riesgo
+      ⇒ plan de recuperacion
+         • desarrollar una guia que permita al negocio volver al nivel de operacion
+         • eventos que desencadenan el plan
+         • equipo responsable de atencion de incidentes
+         • plan de recuperacion de incidentes
+         • lista de contactos
+      ⇒ DRP
+         • inventario de infrraestructura vital
+         • manual de procedimientos para restablecimiento
+         • operaciones manuales para reemplazar sistemas temporalmente
+      ⇒ pruebas y mantenimiento
+         • probar la efectividad del plan regularmente
+         • entrenar al personal para que conozca el plan
+         • actualizar el plan continuamente
+- DLP, data loss prevention
+   → soluciones que detectan fugas de informacion en la red interna, evitan que halla extraccion de datos, en uso, movimiento y alamcenada
+   → por que usarlo
+      ⇒ previene fugas de informacion
+      ⇒ protege informacion sensitiva personal (PII)
+      ⇒ protege propiedad intelectual (IP)
+      ⇒ ayuda al cumplimiento de regulaciones como CCPA, GDPR, HIPAA, entre otros
+- gestion de incidentes de ciberseguridad
+   → es un proceso que permite actuar de manera rapida y efectiva ante un ciberataque, es un documento o serie de documentos
+   → se debe de basar en estandares internacionales, NIST 800-61r2
+   → existen 4 fases
+      ⇒ preparacion
+         • estimamos las necesidades y establecemos procedimientos
+      ⇒ deteccion y analisis
+         • es identificar los signos inusuales que pueden generar dicho incidente
+      ⇒ identificacion
+         • identificamos que tipo de incidente fue y ocurrio, que tan grave fue
+      ⇒ notificacion
+         • reportamos y notificacmos a los encargados del incidente
+      ⇒ clasificacion y priorizacion
+         • determinar el tipo de incidente, se clasifica y se sabe que tanto afecto
+      ⇒ contener, eradicar y recuperar
+         • detenemos el ataque y evitar que se propague resolvemos el incidente, recuperamos los datos
+      ⇒ post incidentes
+         • lecciones aprendidas, identificacion del ataque, que se puede hacer para prevenir
+- BYOD, bring your own device
+   → sofware pirata y activadores usualmente con troyanos
+   → se debe restringit su instalacion
+   → considerar opciones open source o de pago
+   → incluir parches de seguridad
+   → mejora rendimiento
+   → nuevas funcionalidades
+   → evitar uso de redes publicas
+   → uso de vpn si es necesario usar la vpn
+   → cifrado de disco duro, en caso de perdida o robo
+   → cambiar los dns
+
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Mi empresa ha sido víctima de Ransomware en su red local, como Chief Security Officer debo evitar que esto vuelva a ocurrir. A nivel de tráfico hacia la WAN. ¿Qué es lo primero que haría?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">El CEO de cierta empresa solicita a su Chief Security Officer conocer el porcentaje de sus empleados que serían víctimas de phishing empresarial, ¿qué haría el CSO?</rich_text>
+      <rich_text>
+no son todas
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Si al ejecutar el comando nslookup </rich_text>
+      <rich_text>detecto que la dirección destino tiene asociada dirección IP sospechosa, he detectado un:
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Mi empresa utiliza cierto ERP instalado y funcional en data center in-site, si la aplicaci√≥n es web y de alta crticidad para el negocio, implementar√≠a en primera instancia:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">El rol al interior de la empresa que define como alta prioridad la cultura basada en riesgos, especialmente los asociados a Cybersecurity es:</rich_text>
+      <rich_text> CEO
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Cuando se habla de Gestión de Seguridad de la Información en la empresa, definición de roles y establecimiento de políticas, nos referimos a:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Actualmente se planea ejecutar el proyecto "Replicación y garantía de disponibilidad a bases de datos críticas", ¿qué rol es el encargado de gestionar el proyecto?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">¿Cuál rol consulta los requerimientos de ciberseguridad para un nuevo activo de información y reserva presupuesto para controles?</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">

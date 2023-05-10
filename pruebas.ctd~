@@ -3,7 +3,7 @@
   <bookmarks list=""/>
   <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1676229131"/>
   <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1683400107"/>
-  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683585983">
+  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683586082">
     <rich_text>controles en ciberseguridad
 - Gestion de accesos
    → tratamiento de que se brinda a credenciales de acceso, token o cualquier recurso que permita autenticarse
@@ -15,7 +15,9 @@
       ⇒ uso de contraseña maestra con token file
       ⇒ promueven el fortalecimiento de claves
       ⇒ son repositorios de claves debidamente cifrados
-      ⇒ algunos implementan passwordless option</rich_text>
+      ⇒ algunos implementan passwordless option
+      ⇒ cuentan con generadores de contraseñas
+      ⇒ permiten la gestion de accesos en equipos de trabajo</rich_text>
   </node>
   <node name="Curso de FastAPI" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683404880" ts_lastsave="1683404880"/>
   <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676311868"/>
