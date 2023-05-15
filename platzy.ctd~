@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682724050">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1683764972">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -5281,6 +5281,29 @@ Securing environment around linux
    → viruses
    → worms</rich_text>
       </node>
+      <node name="platzi" unique_id="143" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683764972" ts_lastsave="1683765857">
+        <rich_text>Habilidades clave
+- control de accesos
+- monitoreo del sistema
+- administracion del sistema
+- troubleshooting
+- instalacion y mantenimiento de software
+- creacion de respaldos
+- documentacion
+
+Roles:
+- devops engineer, se enfoca en los procesos y metodologias para liberacion en el proceso de software
+- SRE, se enfoca en que los sistemas operen de manera correcta
+- SOE, se enfoca a que los servidores sean seguros, nivel red y de apps
+- Network engineer
+- database admin
+- Network operatior center engineer, los NOC, dan manteniento
+- MLOps engineer
+- Cloud engineer
+
+Servidores
+- grupo de recursos tecnologicos, que cumplen con uno o varios propositos, se hacen peticiones y devuelve una respuesta</rich_text>
+      </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
       <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658873170">
@@ -6191,7 +6214,7 @@ ec-council
 isc2</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
-    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683676526">
+    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683823118">
       <rich_text>que es
 - conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
 - para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
@@ -6593,32 +6616,7 @@ controles en ciberseguridad
    → evitar uso de redes publicas
    → uso de vpn si es necesario usar la vpn
    → cifrado de disco duro, en caso de perdida o robo
-   → cambiar los dns
-
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">Mi empresa ha sido víctima de Ransomware en su red local, como Chief Security Officer debo evitar que esto vuelva a ocurrir. A nivel de tráfico hacia la WAN. ¿Qué es lo primero que haría?</rich_text>
-      <rich_text>
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">El CEO de cierta empresa solicita a su Chief Security Officer conocer el porcentaje de sus empleados que serían víctimas de phishing empresarial, ¿qué haría el CSO?</rich_text>
-      <rich_text>
-no son todas
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">Si al ejecutar el comando nslookup </rich_text>
-      <rich_text>detecto que la dirección destino tiene asociada dirección IP sospechosa, he detectado un:
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">Mi empresa utiliza cierto ERP instalado y funcional en data center in-site, si la aplicaci√≥n es web y de alta crticidad para el negocio, implementar√≠a en primera instancia:</rich_text>
-      <rich_text>
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">El rol al interior de la empresa que define como alta prioridad la cultura basada en riesgos, especialmente los asociados a Cybersecurity es:</rich_text>
-      <rich_text> CEO
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">Cuando se habla de Gestión de Seguridad de la Información en la empresa, definición de roles y establecimiento de políticas, nos referimos a:</rich_text>
-      <rich_text> CISO
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">Actualmente se planea ejecutar el proyecto "Replicación y garantía de disponibilidad a bases de datos críticas", ¿qué rol es el encargado de gestionar el proyecto?</rich_text>
-      <rich_text>
-</rich_text>
-      <rich_text scale="h3" foreground="#eff3f8">¿Cuál rol consulta los requerimientos de ciberseguridad para un nuevo activo de información y reserva presupuesto para controles?</rich_text>
+   → cambiar los dns</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -11053,7 +11051,14 @@ explicita utiliza condiciones de espera, continua hasta que la ecnuetnra
 bloqueo</rich_text>
       </node>
     </node>
-    <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1672690198">
+    <node name="Go" unique_id="42" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619532722" ts_lastsave="1683823133">
+      <rich_text scale="h3" foreground="#eff3f8">¿Cómo declararías un map en Go que según el año guarde el nombre de los graduados del Curso?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">¿Cuál es la forma correcta de editar código de librerías externas?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">¿Qué sucede si buscamos un key que no existe en un map?</rich_text>
       <node name="bases de datos" unique_id="44" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1623801007" ts_lastsave="1625170789">
         <rich_text>## Necesitamos crear un proyecto que haga de GO el backend y si es posible de front con angular... dockers o kubernetes
 

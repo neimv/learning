@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1682724050">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1683764972">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -5281,6 +5281,29 @@ Securing environment around linux
    → viruses
    → worms</rich_text>
       </node>
+      <node name="platzi" unique_id="143" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683764972" ts_lastsave="1683765838">
+        <rich_text>Habilidades clave
+- control de accesos
+- monitoreo del sistema
+- administracion del sistema
+- troubleshooting
+- instalacion y mantenimiento de software
+- creacion de respaldos
+- documentacion
+
+Roles:
+- devops engineer, se enfoca en los procesos y metodologias para liberacion en el proceso de software
+- SRE, se enfoca en que los sistemas operen de manera correcta
+- SOE, se enfoca a que los servidores sean seguros, nivel red y de apps
+- Network engineer
+- database admin
+- Network operatior center engineer, los NOC, dan manteniento
+- MLOps engineer
+- Cloud engineer
+
+Servidores
+- </rich_text>
+      </node>
     </node>
     <node name="New Relic" unique_id="105" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543494" ts_lastsave="1672690220">
       <node name="Observabilidad" unique_id="106" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1658543502" ts_lastsave="1658873170">
@@ -6191,7 +6214,7 @@ ec-council
 isc2</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
-    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683672553">
+    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683734667">
       <rich_text>que es
 - conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
 - para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
@@ -6610,15 +6633,27 @@ no son todas
       <rich_text>
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">El rol al interior de la empresa que define como alta prioridad la cultura basada en riesgos, especialmente los asociados a Cybersecurity es:</rich_text>
-      <rich_text>
+      <rich_text> CEO
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Cuando se habla de Gestión de Seguridad de la Información en la empresa, definición de roles y establecimiento de políticas, nos referimos a:</rich_text>
-      <rich_text>
+      <rich_text> CISO
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Actualmente se planea ejecutar el proyecto "Replicación y garantía de disponibilidad a bases de datos críticas", ¿qué rol es el encargado de gestionar el proyecto?</rich_text>
-      <rich_text>
+      <rich_text>, cso
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">¿Cuál rol consulta los requerimientos de ciberseguridad para un nuevo activo de información y reserva presupuesto para controles?</rich_text>
+      <rich_text> cio
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">¿Qué tipos de riesgos se mitigan mediante la aplicación correcta de la Ciberseguridad?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Una de las primeras acciones que debo realizar antes de aplicar cualquier framework para Risk Management es:</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Si al ejecutar el comando nslookup </rich_text>
+      <rich_text>detecto que la dirección destino tiene asociada dirección IP sospechosa, he detectado un:
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Actualmente se planea ejecutar el proyecto "Replicación y garantía de disponibilidad a bases de datos críticas", ¿qué rol es el encargado de gestionar el proyecto</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
