@@ -2,13 +2,14 @@
 <cherrytree>
   <bookmarks list=""/>
   <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1684111679"/>
-  <node name="OS" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684111679" ts_lastsave="1684111828">
+  <node name="OS" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684111679" ts_lastsave="1684111972">
     <rich_text>Counting Semaphore
 - like a binary semaphore but with a queue
 - the element in queue contains:
    → int value
    → queue type L
-- </rich_text>
+- the initial values is S, this is where process is possible in critical section
+- is used when is possible get multiple process in critical section</rich_text>
   </node>
   <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1683400107"/>
   <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683589890"/>

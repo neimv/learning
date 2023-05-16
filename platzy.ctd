@@ -5646,7 +5646,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1683493113">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1684164726">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6013,6 +6013,14 @@ Dinning philosopher problem
    → drop the left fork
    → drop the right fork
 
+Counting Semaphore
+- like a binary semaphore but with a queue
+- the element in queue contains:
+   → int value
+   → queue type L
+- the initial values is S, this is where process is possible in critical section
+- is used when is possible get multiple process in critical section
+
 
 x</rich_text>
       <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
@@ -6096,7 +6104,8 @@ BIOS
       ⇒ 8 bit: al, ah, bl, bh
       ⇒ 16 bit: ax, bx, cx, dx
       ⇒ 32 bit: eax, ebx, ecx, edx
-      ⇒ 64 bit: rax, rbx, rcx, rdx, are not available</rich_text>
+      ⇒ 64 bit: rax, rbx, rcx, rdx, are not available
+      ⇒ </rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -6617,6 +6626,930 @@ controles en ciberseguridad
    → uso de vpn si es necesario usar la vpn
    → cifrado de disco duro, en caso de perdida o robo
    → cambiar los dns</rich_text>
+    </node>
+  </node>
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1684175435">
+    <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
+      <rich_text>Discovery learning
+	fill in the gaps
+	Guessing
+	Match columns
+	Organize words
+complete sentences
+play games
+use pen and paper
+play and pause is very important
+interactive discution panel (Q&amp;A)
+uses of like
+places
+weather
+peaple
+character and personality
+describe pictures
+using descriptive language to compare
+
+What is it like? (como es, description, forma de ser) != what does your best friend like? (comments, interests)
+what does your best friend like? (comments, interests)
+Intelligent, friendly, 
+what does you best friend look like? (description of physical aparience)
+############
+1-b
+2-a
+3-d
+4-c
+############
+Class 2 ex 2
+1-d
+2-c
+3-b
+4-a
+############
+
+# The weather
+good, great, nice, fine, lovely, beautiful, wonderful, excellent, gorgeous, fair, pleasant, balmy;
+bad, awful, terrible, nasty, lousy, foul, rotten, miserable, unpleasant, dull, gloomy, ugly;
+sunny, warm, hot, mild, cool, chilly, cold, freezing, icy, frosty; very cold; bitter cold;
+rainy, wet, humid, dry, arid, frigid, foggy, windy, stormy, breezy, windless, calm, still;
+a spell of good weather; a two-day spell of sunny weather; a spell of rainy weather;
+Sky: cloudy, overcast, cloudless, clear, bright, blue, gray (BrE grey), dark; a patch of blue sky.
+
+rainy - lluvioso
+foogy - niebla
+cloudy - cielo nublado
+warm - caluroso
+
+class 3 ex 1
+caluroso
+1-warm
+2-boiling
+3-mild
+4-
+frio
+1-cool
+2-freezing
+3-chilly
+4-icy
+--
+1-windy
+2-breezy
+3-cool
+4-icy
+
+places:
+bright
+dark
+big
+small
+Noise - ruidoso
+Quiet - silencioso
+
+more advance
+crowded: (of a space) full of people, leaving little or no room for movement; packed
+expensive
+famous
+fascinating
+lively - full of life and energy; active and outgoing
+spectacular
+
+ancient
+boring
+charming - special place
+exciting
+dangerous
+awesomw
+
+Describir el clima de la ciudad
+Describir tu hogar
+
+</rich_text>
+    </node>
+    <node name="reto" unique_id="34" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627231811" ts_lastsave="1627232346">
+      <rich_text>What is your favorite place? Describe it below in the comments!
+In this moment my favorite place is my house, especially my “office”, it is a special room in my house where I have my computer, my controls, my chair, one large desktop in L and other things. It is a medium room, whit 3 windows, one door, it very bright and quiet, the weather is little warm, this is caused by the computer when is worked.
+
+
+
+bright
+dark
+big
+small
+Noise - ruidoso
+Quiet - silencioso</rich_text>
+    </node>
+    <node name="reto" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627536290" ts_lastsave="1627539650">
+      <rich_text>• Wake up (Despertarse)
+• Get up (Levantarse)
+• Take a shower ( tomar una ducha)
+• Check email (Revisar email)
+• Have breakfast (Desayunar)
+• Go to work ( ir al trabajo)
+• Have lunch (Almorzar)
+• Have coffee (Tomar un cafe)
+• Drive ( Conducir)
+• Have dinner (Cenar)
+• Watch TV (Mirar Television)
+• Chat (Platicar o charlar)
+• Go to bed ( ir a la cama)
+• Sleep (dormir)
+
+describe daily routine
+I wake up at 7:30 am, I get up at 8:00 am, I have breakfast at 9:00 am, usually I study from 8:00 am to 10:30 am, I take a meet at 10:30 am, I have lunch at 11:00 am, I work from 12:00 pm to 6:00 pm and from 6:00 pm to 7:00 pm I study basic courses of programming or I review some themes of libraries, I have another lunch at 5:00pm, I take shower at 7:00 pm, I have dinner at 9:00 pm and I go to bed at 12:00 am
+
+describe family
+We are three in my family, my son, my wife and I, my son is a little boy, his name is Leo, he has various play doh of color blue, green, yellow and white, my wife is student of gastronomy, her name is Stephani, I'm engineer, I'm work in my house and I have one computer of color grey</rich_text>
+    </node>
+    <node name="metas" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1669772397">
+      <rich_text>asimilar 10 palabras
+anotar palabras nuevas
+asimilar dos frases diarias
+pensar 10 minutos en ingles
+aplicar lecturas en ingles
+
+
+
+Italy
+
+incremented
+internet
+
+
+
+Denmark
+
+devolve -&gt; devolved
+disk</rich_text>
+    </node>
+    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1649720295">
+      <rich_text>
+In the morning
+In the afternoon
+In the evening
+at night
+
+In, On &amp; At
+ I go to the park ON saturday AT ten IN THE MORNING
+ I go to school ON monday AT nine IN THE MORNING
+ 
+introducing yourself
+"(Greeting)!
+My name is  (Your name) .
+My last name is spelled  (spell your last name) .
+I am _____ years old. I am from (your country)
+(Farewell)!"
+
+how are you?
+
+See you later, take care
+
+bakery
+hospital
+airport
+school
+pharmacy
+
+Prepositions of place
+	- on - arriba
+	- between - entre
+	- behind - detras
+	- in front of - delante de
+	- next to - al lado de
+
+What do you like? (hobbies)
+- I like to ...
+- in dislike use I don't like
+
+Adverbs of frecuenct
+- never - 0%
+- rarely - 5%
+- seldom - 10%
+- occasionally - 30%
+- sometimes - 50%
+- often - 70%
+- frequenly - 80%
+- usually - 90%
+- alway - 100%
+- Noun + frequency + action, ex: I never drink coffe
+- Exception: Sometimes I go to the beach
+- hardly ever, casi nunca
+
+tarea
+- numeros
+- spell de palabras que nos aventamos
+
+----------------------------------------------------------------------------------
+---
+----------------------------------------------------------------------------------
+Can you speak slowly please? *
+Can you repeat please? *
+nice to meet you * to *
+It's a plaesure to meet you
+
+I'm well | great | fine | sad | sad
+
+how old are you?
+How do you spell that?
+I´m twenty-eight years old. I´m 28.
+
+what do you do?
+this, cerca (mio)
+that, lejos (no mio)
+theese, cerca (mio)
+those, lejos (no mio)
+
+I
+You
+We
+They
+He
+She
+It
+
+My
+your
+his
+her
+Its
+Their
+Our
+
+
+# When is your birthday?
+- my birthday is in June
+- my birthday is on June 21st
+
+formats of dates is
+- most countries: dd/mm/yyyy
+- USA mm/dd/yy
+
+Telling time
+- o' clock
+- quarter past
+- prepositions past between 0 and half
+- prepositions to between half and 0
+- it's five past four
+- it's quarter past four
+- it's half past four
+- it's twnety-five to five
+- it's quarter to five
+- it's five o'clock
+- se usa para para cuartos de horas, para los pasados, para numero mas puntuales, it's nine four, it's nine ‘ou’ four
+
+What time is your country?
+
+Which - Cuál -option
+Who - Quién
+What - Qué -- tjhis is more general
+When - Cuándo 
+Where - Dónde -- 
+Why - Por qué -- reason
+How - Cómo
+	old
+	far
+	long
+	many -- quantities
+	much -- cost of something
+	
+Prepositions
+- beside
+- behind
+- under
+- over
+
+- in - more general use with countries/cities
+- on - use with streets/avenues
+- at - is more especific, fro example addresses
+
+# Wants and Wishes
+- i would like -&gt; i'd like, more formal
+- I want, is more direct as boss be careful
+
+# have or have got
+- is very similar
+- have, I have a car
+- have got, is very more informal, I've got a car
+- use with Illnesses
+- for third person or it is used with has, for another is used have
+- is used with do and does with question and negatives
+
+# Can vs Can't
+- is used to:
+   → Ability
+   → Permission
+   → Requests
+   → Possibility
+- POSSESSION ('s)
+   → when the word ends with s ex: *the dogs' plates are full* or *James's office is spacious*, the pronuntiotion is necesary
+   → when exists two sustantives and only one 's the possession is of both
+   → when exists more 's each one has a one personal possession
+- there is and there are
+   → something exists or not exists
+   → there is for singular or incontable nouns
+   → there are for plural
+- subject and object pronouns
+   → subjects as I, you, he, she..., used with person animal or thing that does the action
+   → objects as me, you, her, it...., receives the action
+- Likes dislikes and opinios
+   → express feelings
+      ⇒ like, love, enjoy to likes
+      ⇒ don't like, hate, dislike to dislikes
+      ⇒ think, consider or believe to express opinion
+- present simple vs present continuos
+   → things that are always true (present simple) or habits or repeated actions
+   → action happening at the momento of speaking, use verb to be + ing
+
+boot
+but
+bot
+both
+
+four aspects:
+- Name
+- Nationality
+- Job/Occupation
+- Age
+
+Hi!, My name is Pedro, I'm Mexician, I'm SysAdmin, I'm 33 years old
+
+introducing others:
+- use of this: this is my friend Ana
+- with multiple people is used these are
+
+Simple present:
+- two options:
+   → Verb to be
+      ⇒ caracteristics of people (am, is are), details
+   → other verbs
+      ⇒ use ‘s’, ‘es’, ‘ies (when ends with y)’ when is the third person
+      ⇒ use of do in negative and questions
+
+# Wh questions
+- who - people
+- where - places
+- when - times
+- what - things
+- why - reasons
+- which - options
+
+Places:
+- in - dentro
+- on - sobre
+- in front of - en frente de
+- next to - al lado
+- behind - detras
+- under - debajo
+- over - sobre
+
+# have or has
+- deppending of pronoun, (irregular verb), with thid persons is used has, with negative and question form is used have, changing only do -&gt; does
+
+Irregular plural nouns
+- book -&gt; books
+- apple -&gt; apples
+- man -&gt; men
+- life -&gt; lives
+- foot -&gt; feet
+- hero -&gt; heroes
+- child -&gt; children
+- fish -&gt; fish  ?_?
+- knife -&gt; knives
+
+Imperative form
+- use to: instructions, order or advices
+
+And vs but:
+- and, similar ideas
+- but, show contrast
+
+A vs An:
+- this is similar, but the use is depending of first sound of new word
+
+I got late -&gt; llegue tarde
+
+may - permission not can
+restroom =&gt; caoque tenga WC, bathroom =&gt; cuanto tiene regadera, bedroom =&gt; habitacion
+
+as, like -&gt; check differences
+
+# Descriptions and comparatives
+What is it like?
+- what is your best friend like? - this is for descriptions, this is a description in personality
+- what does your best friend like? - this for likes as food or music, interest
+- what does you best friend look like? - this for phisical aparience
+- what is your bedroom like? - this is used with profesions and places
+
+The weather
+
+yesterdar, I was only documenting regarding this point, checar los “ando endo” del ingles
+I'm Swiss knife
+I am sleepy
+verify to check
+generate
+
+-- new words to use with reflexive pronouns
+- blame, culpar
+- cur, cortar
+- enjoy, disfrutar
+- help, ayudar
+- hurt, lastimar
+- introduce, presentarse
+- prepare, preparar
+- teach, enseñar
+
+this is possible change the mean of verb: Help </rich_text>
+      <rich_text weight="heavy">yourself</rich_text>
+      <rich_text> to some coffee.(Sírvete un café tú mismo.)
+
+preposition of time
+- at is used for a specific time
+- exception:
+   → at night, I go to sleep
+   → at christmas, we eat a lot of food (for holydays)
+
+Use of ing
+- I like|love|hate + verb+ing
+
+expressing intentions
+- I want to + verb (intention)
+   → I want to swim
+- I don't want to... (negative)
+
+How far, long and often?
+- long for duration of time
+- far is for distance (kilometers)
+- often is for frequency (every 15 mins)
+
+Common past verbs
+- eat  -- ate
+- give   -- gave
+- write  -- wrote
+- go  -- went
+- see  -- saw
+- feel  -- felt
+- make  -- made
+- do  -- did
+- drink  -- drank
+- know  -- knew
+- fly  -- flew
+- Another
+   → put, cut, read and hit
+- To be, feeling states and physical places:
+   → was, i she and he
+   → were, we they and you
+
+Did and Didn't
+- is an auxiliar verb in past, negatives and questions
+
+Preposition
+- in - dentro
+- on - sobre de algo
+- above - encima algo
+- between - entre
+- under (belove)- abajo
+- next to - al lado
+- near - cerca
+
+- past = after
+- to = before
+
+Wh question:
+- what, asking about things or information
+- where, location or place
+- why, reason of something
+- when, for time
+- which, two options or objects
+- who. a person o people
+
+# A2 - preguntas y respuestas
+- Determiners singular and plural:
+   → this, is for singular and close distances
+   → that, is for singular and far distances
+   → these, plural and near
+   → those, plural and far
+- Present continuos
+   → at the moment
+   → subject + verb-be = verb(ing)
+- Contables an uncountables
+   → contables
+      ⇒ 
+   → uncontables
+      ⇒ sugar
+      ⇒ beer
+      ⇒ food
+      ⇒ money
+      ⇒ time
+      ⇒ fruit
+   → quantifiers
+      ⇒ any: questions and negative
+      ⇒ some: affirmative
+- how much and how many:
+   → much:
+      ⇒ for uncontable nouns
+      ⇒ price of something
+      ⇒ with singular and plural nouns
+   → many:
+      ⇒ contable nouns
+      ⇒ quantity of something
+      ⇒ only with plural nouns
+- At as preposition of time
+   → for specific time
+      ⇒ used with at night:
+         • at night, i go to sleep
+         • at christmas, we eat a lot of food
+- references using ing
+   → used with like, love and hate + verb-ing
+   → or used with like, love and hate + to + verb (without ing)
+- Expressing intentions
+   → I want to + verb (intention)
+      ⇒ I want to swim
+      ⇒ I wanto to eat pizza
+   → Negative: I don't want to...
+- How long, far and often
+   → How long
+      ⇒ use for duration or time 
+   → How far
+      ⇒ is use for distances
+   → How often
+      ⇒ is for frequency
+- especial words: “lift-and-shift”, “lift, tinker, and shift,”
+- past verbs include was and were
+   →  Eat, ate
+   → give, gave
+   → write, wrote
+   → go, went
+   → see, saw
+   → feel, felt
+   → make, made
+   → do, did
+   → drink, drank
+   → know, knew
+   → fly, flew
+   → other interesting
+      ⇒ put, cut, read and hit
+      ⇒ was: I, she and he, it
+      ⇒ were: we, they and you
+- do and did
+   → is an auxiliar verb, in negative form is necesary
+   → with positive is posible use “I did go to the park” or “I went to the park”
+- with possessives “estructure”: that|those is|are {person}'s {object}
+- Preposition of place
+   → In, dentro
+   → on, sobre algo
+   → above, encima de algo
+   → between, entre
+   → under o below, bajo
+   → next to, al lado de, de formar cercana
+   → near, al lado de de forma lejana
+- Past == after
+- to == before
+- Wh questions:
+   → What, asking about things or information
+   → where, location or place
+   → why, reason for something
+   → when, for time
+   → which, two options or objects
+   → who, a person or people
+
+Which question is correct?
+Did you finish your homework?
+
+
+# Basic connectors
+- connects ideas
+- and, is used by addition
+- but, is used to contrast
+- or, is used for multiple options
+
+# Articles
+- the, refer to specific, people, things or situations
+   → specific people:
+      ⇒ only one or unique person
+      ⇒ particular person
+      ⇒ groups of people
+      ⇒ families
+   → things:
+      ⇒ musical instruments
+      ⇒ only one in the place
+      ⇒ particular place
+      ⇒ famouse monuments, builds, museums
+      ⇒ hotels, bars and restaurants
+      ⇒ unique things
+   → situations
+   → ordinal numbers
+   → decades
+   → geografical areas
+   → countries (plural names, republic, kingdom, states)
+- Not use:
+   → name of cities or countries
+   → years
+   → professions
+   → people's names and titles combined wirh names
+   → meals
+   → languages
+
+kick boxing
+korn flakes
+
+kill
+killed
+laidback - relajado
+
+blue
+megaman
+switch
+share button
+sad
+innocence
+sky
+
+
+park
+cat
+plump
+father in law
+cook
+sister
+pizza
+
+I can dance, I can play guitar, I can sing
+
+
+--------
+</rich_text>
+    </node>
+    <node name="estrategias" unique_id="72" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649291591" ts_lastsave="1649448348">
+      <rich_text>Evaluar las competencias es importante porque:
+Son factores que determinan la importancia de las estrategias de estudio en el proceso de aprendizaje:
+
+</rich_text>
+    </node>
+    <node name="hours and requests" unique_id="73" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649720590" ts_lastsave="1649805908">
+      <rich_text>Basic connectors
+- And, addition
+- but, contrast, one option but another no
+- or, options, use one or another
+
+The, article
+- people, only one person or particle (unique), group of people, families
+- things, musical instruments, only one in the place, particular place, monuments, buildings, museums, hotels, bars, restaurants, unique things
+- situations, ordinal numbers, decades, geographical areas, countries
+- not use, name of cities and contries, years, professions, people's names and titles combined with names, meals, languages</rich_text>
+    </node>
+    <node name="Basi A1" unique_id="100" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656369145" ts_lastsave="1656619420">
+      <rich_text>Introduction
+- Who am I?
+- Interesting facts
+- in english alphabet has 26 letters
+- A and An
+   → refer to only this or noun
+   → an is used as article with vowels
+   → a is used with consonants
+- It's sentences (it is)
+   → it's + article (a/and) + (person, place, thing or item)
+- Plural forms
+   → mean many things
+- there are
+   → this is a plural form
+   → there are + plural noun
+
+Second module
+- is very important from 1 to 20
+- 100 - one hundred
+- subject pronouns
+   → I am
+   → he/she/it is
+   → they/we/you are
+
+good morning
+good afternoon
+good evening</rich_text>
+    </node>
+    <node name="describing my house" unique_id="102" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656878011" ts_lastsave="1656984966">
+      <rich_text>Home Sweet home
+- Was, this ‘era’, be past, singular
+- Were, plural of be past
+- I didn't do that, irregualr verbs to past
+   → only is used when is negative or question
+- like doing, liked doing
+- love doing, loving “playing” - verb in ing
+- hate doing, hated
+
+Describe my child home
+things that I did in my child home and I didn't
+Actions that I like, love or hate doing
+
+What are we doing here?
+- this is in the moment
+- verbs with be + verb(ing)
+- right on time:
+   → present simple
+   → present continues
+   → at - for time
+- count on me
+   → how many, contable nouns
+   → how much, uncontable nouns
+- we have com this far
+   → How long, time to execute a task
+   → how often, time between tasks
+   → how far, distance
+- things in my house
+   → prepositions:
+      ⇒ on
+      ⇒ in
+      ⇒ next to
+      ⇒ in front of
+      ⇒ behind
+
+My dream house
+- whose things are those in your dream house?
+- use of whose, de quien es
+- linking verbs
+   → how to describe your dream house, using adjectives</rich_text>
+    </node>
+    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1663367835">
+      <rich_text>Basic connectors:
+- connects two ideas
+- And, is for additions
+- But, contrast
+- or, show options
+
+article THE
+- refer to specific
+   → people
+      ⇒ only one person
+      ⇒ particular person
+      ⇒ groups of people
+      ⇒ families
+   → things
+      ⇒ musical instruments
+      ⇒ only one in the place
+      ⇒ particular place
+      ⇒ famous monuments, buildings, museums, etc
+      ⇒ hotels, bars and restaurant
+      ⇒ unique things
+   → situations
+      ⇒ ordinal numbers
+      ⇒ decades
+      ⇒ gegraphical areas, groups of rivers, mountains ranges, oseans
+      ⇒ Countries, plural names
+- not use:
+   → name of cities and countries
+   → years
+   → professions
+   → people`s names and titles combined with names
+   → meals
+   → languages
+
+Weather coonditions
+- it's
+   → it's + condition (inpersonal subject)
+   → use with distance or time
+   → ex
+      ⇒ It's sunny
+      ⇒ it's cloudy
+      ⇒ it's rainy
+      ⇒ it's windy
+
+Not Here/There
+- adverbs of place
+   → here, speaker point of view
+   → there, listener point of view
+
+Frequency
+- forming question
+   → how often + do/does + subject + verb?
+- Adverbs of frequency
+   → - never - 0%
+   → rarely - 5%, hardly ever
+   → seldom - 10%
+   → occasionally - 30%
+   → sometimes - 50%
+   → often - 70%
+   → frequenly - 80%
+   → usually - 90%
+   → alway - 100%
+- frequency
+   → time expresions
+   → adverb of frequency
+      ⇒ before the main verb
+      ⇒ after the verb be
+
+Permission
+- Can and Can't, permissions and denied permission
+   → ask, structure Can + subject + action?
+   → give, subject + can + action
+   → deny, subject + can't + action
+- Offer, Request, suggestion
+   → is possible use can to offers, ex: Can I help you?
+   → request: can we finish this tomorrow?
+   → suggestions: can you tell her you're sorry?
+- decline offers and invitations
+   → use can't
+      ⇒ thanks, but I can't have any sugar
+   → invites:
+      ⇒ Sorry. We can't be there tomorrow
+
+Making requests
+- would like
+   → is used to offer or requests:
+      ⇒ offer, Would you like some coffee?
+      ⇒ requests: I would like a beer, please, contraction: I'd like a beer
+- Could
+   → is used to making requests
+      ⇒ is more polite, is more formal
+      ⇒ could we finish this tomorrow?
+
+Time
+- What time is it?
+   → learn the time in english
+   → past, present, future
+   → numbers: It's seven o'clock
+   → past/to: it's ten to two
+   → divide the clock in two parts, from 0 to 6 is past/after minutes (word) hour, and 6 to 12 is “to” minutes left to next hour
+   → a quarter in 15 and 45, half in 30
+   → it's four oh five
+   → it's a quarter past six
+   → it's half past two
+   → it's a quartet to twelve
+- time expressions
+   → past, yesterday, last
+   → present, today, 
+   → future, tomorrow, later, next, this
+- prepossitions
+   → at, used in precise time, hours, dates for example holydays, mealtimes, specific times ex: at bedtime
+   → on, days and dates, , on april x or on saturday, parts of specific days, special dates ex: on my birthday
+
+How to do things
+- how to create, execute things
+- ex:
+   → how do you open this?
+   → how do you say that in spanish?
+   → how do you spell your name?</rich_text>
+    </node>
+    <node name="elementos y expresiones de trabajo" unique_id="112" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664132487" ts_lastsave="1664132487"/>
+    <node name="miembros de la familia" unique_id="118" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1665440693" ts_lastsave="1684177364">
+      <rich_text>family members
+- close family
+   → mother
+   → father
+   → sister, brother or siblings
+- extend family
+   → grandmother
+   → grandfather
+   → aunts and uncles
+   → cousins
+   → niece or nephew, (sobrinos)
+- in laws
+   → family members of husbando or wife
+
+Nice to meet you
+- this is a monologue of me
+- My name, my age, what I am, what is my profession, my hobbies, what I love, my favorite food
+
+Description of family members
+- family members
+   → close family
+      ⇒ mother
+      ⇒ father
+      ⇒ sister, brother or siblings
+   → extended family
+      ⇒ grandmother, mathernal o pathernal
+      ⇒ grandfather, “      ”
+      ⇒ aints and uncles, brother or sisters of father or mother
+      ⇒ cousins, primos
+      ⇒ nephew, sobrinos
+   → in laws
+      ⇒ housband or wife family
+      ⇒ mother and father  in law
+      ⇒ sister or brother in law
+- presentation
+   → my name is, years old, I'm student, profesion, hobbies, favorite things, favorite food
+
+Describing people and routines
+- who are they?
+- physical characteristics
+- how to looks
+- look like?
+- write 5 sentences to describe member of my family
+- my daily routine
+   → i wake up at {hour}
+   → I take a shower and get dressed
+   → I have breakfast at {hour} I usually eat a sandwich and drink coffee
+   → I brush my teeth and leave my house, so I can go to {destination}
+   → I have lunch at {hour}
+   → then I get ready to practice guitar after classes
+   → before I go home, I like to spend time with my friends
+   → We sometimes go for a walk aroung the university campus or maybe get something to eat
+   → after that, I go home at {hour}, I rarely clean the entire house, but I help my parents to take out the trash
+   → I also take turns to take tje dog for a walk in the evenings
+   → I do my homework and surf the internet before I go to bed
+   → I listen to music and relax right before I sleep
+   → </rich_text>
+      <rich_text weight="heavy">write 8 actions of your daily routine</rich_text>
+      <rich_text>
+   → </rich_text>
+      <rich_text weight="heavy">Create a list of 8 actions of the daily routine of a family member</rich_text>
+      <rich_text>
+   → </rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -9633,884 +10566,6 @@ Los métodos mas populares de un Readable stream son:
     </node>
   </node>
   <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1665440693">
-    <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
-      <rich_text>Discovery learning
-	fill in the gaps
-	Guessing
-	Match columns
-	Organize words
-complete sentences
-play games
-use pen and paper
-play and pause is very important
-interactive discution panel (Q&amp;A)
-uses of like
-places
-weather
-peaple
-character and personality
-describe pictures
-using descriptive language to compare
-
-What is it like? (como es, description, forma de ser) != what does your best friend like? (comments, interests)
-what does your best friend like? (comments, interests)
-Intelligent, friendly, 
-what does you best friend look like? (description of physical aparience)
-############
-1-b
-2-a
-3-d
-4-c
-############
-Class 2 ex 2
-1-d
-2-c
-3-b
-4-a
-############
-
-# The weather
-good, great, nice, fine, lovely, beautiful, wonderful, excellent, gorgeous, fair, pleasant, balmy;
-bad, awful, terrible, nasty, lousy, foul, rotten, miserable, unpleasant, dull, gloomy, ugly;
-sunny, warm, hot, mild, cool, chilly, cold, freezing, icy, frosty; very cold; bitter cold;
-rainy, wet, humid, dry, arid, frigid, foggy, windy, stormy, breezy, windless, calm, still;
-a spell of good weather; a two-day spell of sunny weather; a spell of rainy weather;
-Sky: cloudy, overcast, cloudless, clear, bright, blue, gray (BrE grey), dark; a patch of blue sky.
-
-rainy - lluvioso
-foogy - niebla
-cloudy - cielo nublado
-warm - caluroso
-
-class 3 ex 1
-caluroso
-1-warm
-2-boiling
-3-mild
-4-
-frio
-1-cool
-2-freezing
-3-chilly
-4-icy
---
-1-windy
-2-breezy
-3-cool
-4-icy
-
-places:
-bright
-dark
-big
-small
-Noise - ruidoso
-Quiet - silencioso
-
-more advance
-crowded: (of a space) full of people, leaving little or no room for movement; packed
-expensive
-famous
-fascinating
-lively - full of life and energy; active and outgoing
-spectacular
-
-ancient
-boring
-charming - special place
-exciting
-dangerous
-awesomw
-
-Describir el clima de la ciudad
-Describir tu hogar
-
-</rich_text>
-    </node>
-    <node name="reto" unique_id="34" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627231811" ts_lastsave="1627232346">
-      <rich_text>What is your favorite place? Describe it below in the comments!
-In this moment my favorite place is my house, especially my “office”, it is a special room in my house where I have my computer, my controls, my chair, one large desktop in L and other things. It is a medium room, whit 3 windows, one door, it very bright and quiet, the weather is little warm, this is caused by the computer when is worked.
-
-
-
-bright
-dark
-big
-small
-Noise - ruidoso
-Quiet - silencioso</rich_text>
-    </node>
-    <node name="reto" unique_id="35" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1627536290" ts_lastsave="1627539650">
-      <rich_text>• Wake up (Despertarse)
-• Get up (Levantarse)
-• Take a shower ( tomar una ducha)
-• Check email (Revisar email)
-• Have breakfast (Desayunar)
-• Go to work ( ir al trabajo)
-• Have lunch (Almorzar)
-• Have coffee (Tomar un cafe)
-• Drive ( Conducir)
-• Have dinner (Cenar)
-• Watch TV (Mirar Television)
-• Chat (Platicar o charlar)
-• Go to bed ( ir a la cama)
-• Sleep (dormir)
-
-describe daily routine
-I wake up at 7:30 am, I get up at 8:00 am, I have breakfast at 9:00 am, usually I study from 8:00 am to 10:30 am, I take a meet at 10:30 am, I have lunch at 11:00 am, I work from 12:00 pm to 6:00 pm and from 6:00 pm to 7:00 pm I study basic courses of programming or I review some themes of libraries, I have another lunch at 5:00pm, I take shower at 7:00 pm, I have dinner at 9:00 pm and I go to bed at 12:00 am
-
-describe family
-We are three in my family, my son, my wife and I, my son is a little boy, his name is Leo, he has various play doh of color blue, green, yellow and white, my wife is student of gastronomy, her name is Stephani, I'm engineer, I'm work in my house and I have one computer of color grey</rich_text>
-    </node>
-    <node name="metas" unique_id="36" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1629764315" ts_lastsave="1669772397">
-      <rich_text>asimilar 10 palabras
-anotar palabras nuevas
-asimilar dos frases diarias
-pensar 10 minutos en ingles
-aplicar lecturas en ingles
-
-
-
-Italy
-
-incremented
-internet
-
-
-
-Denmark
-
-devolve -&gt; devolved
-disk</rich_text>
-    </node>
-    <node name="JJ" unique_id="37" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1631657919" ts_lastsave="1649720295">
-      <rich_text>
-In the morning
-In the afternoon
-In the evening
-at night
-
-In, On &amp; At
- I go to the park ON saturday AT ten IN THE MORNING
- I go to school ON monday AT nine IN THE MORNING
- 
-introducing yourself
-"(Greeting)!
-My name is  (Your name) .
-My last name is spelled  (spell your last name) .
-I am _____ years old. I am from (your country)
-(Farewell)!"
-
-how are you?
-
-See you later, take care
-
-bakery
-hospital
-airport
-school
-pharmacy
-
-Prepositions of place
-	- on - arriba
-	- between - entre
-	- behind - detras
-	- in front of - delante de
-	- next to - al lado de
-
-What do you like? (hobbies)
-- I like to ...
-- in dislike use I don't like
-
-Adverbs of frecuenct
-- never - 0%
-- rarely - 5%
-- seldom - 10%
-- occasionally - 30%
-- sometimes - 50%
-- often - 70%
-- frequenly - 80%
-- usually - 90%
-- alway - 100%
-- Noun + frequency + action, ex: I never drink coffe
-- Exception: Sometimes I go to the beach
-- hardly ever, casi nunca
-
-tarea
-- numeros
-- spell de palabras que nos aventamos
-
-----------------------------------------------------------------------------------
----
-----------------------------------------------------------------------------------
-Can you speak slowly please? *
-Can you repeat please? *
-nice to meet you * to *
-It's a plaesure to meet you
-
-I'm well | great | fine | sad | sad
-
-how old are you?
-How do you spell that?
-I´m twenty-eight years old. I´m 28.
-
-what do you do?
-this, cerca (mio)
-that, lejos (no mio)
-theese, cerca (mio)
-those, lejos (no mio)
-
-I
-You
-We
-They
-He
-She
-It
-
-My
-your
-his
-her
-Its
-Their
-Our
-
-
-# When is your birthday?
-- my birthday is in June
-- my birthday is on June 21st
-
-formats of dates is
-- most countries: dd/mm/yyyy
-- USA mm/dd/yy
-
-Telling time
-- o' clock
-- quarter past
-- prepositions past between 0 and half
-- prepositions to between half and 0
-- it's five past four
-- it's quarter past four
-- it's half past four
-- it's twnety-five to five
-- it's quarter to five
-- it's five o'clock
-- se usa para para cuartos de horas, para los pasados, para numero mas puntuales, it's nine four, it's nine ‘ou’ four
-
-What time is your country?
-
-Which - Cuál -option
-Who - Quién
-What - Qué -- tjhis is more general
-When - Cuándo 
-Where - Dónde -- 
-Why - Por qué -- reason
-How - Cómo
-	old
-	far
-	long
-	many -- quantities
-	much -- cost of something
-	
-Prepositions
-- beside
-- behind
-- under
-- over
-
-- in - more general use with countries/cities
-- on - use with streets/avenues
-- at - is more especific, fro example addresses
-
-# Wants and Wishes
-- i would like -&gt; i'd like, more formal
-- I want, is more direct as boss be careful
-
-# have or have got
-- is very similar
-- have, I have a car
-- have got, is very more informal, I've got a car
-- use with Illnesses
-- for third person or it is used with has, for another is used have
-- is used with do and does with question and negatives
-
-# Can vs Can't
-- is used to:
-   → Ability
-   → Permission
-   → Requests
-   → Possibility
-- POSSESSION ('s)
-   → when the word ends with s ex: *the dogs' plates are full* or *James's office is spacious*, the pronuntiotion is necesary
-   → when exists two sustantives and only one 's the possession is of both
-   → when exists more 's each one has a one personal possession
-- there is and there are
-   → something exists or not exists
-   → there is for singular or incontable nouns
-   → there are for plural
-- subject and object pronouns
-   → subjects as I, you, he, she..., used with person animal or thing that does the action
-   → objects as me, you, her, it...., receives the action
-- Likes dislikes and opinios
-   → express feelings
-      ⇒ like, love, enjoy to likes
-      ⇒ don't like, hate, dislike to dislikes
-      ⇒ think, consider or believe to express opinion
-- present simple vs present continuos
-   → things that are always true (present simple) or habits or repeated actions
-   → action happening at the momento of speaking, use verb to be + ing
-
-boot
-but
-bot
-both
-
-four aspects:
-- Name
-- Nationality
-- Job/Occupation
-- Age
-
-Hi!, My name is Pedro, I'm Mexician, I'm SysAdmin, I'm 33 years old
-
-introducing others:
-- use of this: this is my friend Ana
-- with multiple people is used these are
-
-Simple present:
-- two options:
-   → Verb to be
-      ⇒ caracteristics of people (am, is are), details
-   → other verbs
-      ⇒ use ‘s’, ‘es’, ‘ies (when ends with y)’ when is the third person
-      ⇒ use of do in negative and questions
-
-# Wh questions
-- who - people
-- where - places
-- when - times
-- what - things
-- why - reasons
-- which - options
-
-Places:
-- in - dentro
-- on - sobre
-- in front of - en frente de
-- next to - al lado
-- behind - detras
-- under - debajo
-- over - sobre
-
-# have or has
-- deppending of pronoun, (irregular verb), with thid persons is used has, with negative and question form is used have, changing only do -&gt; does
-
-Irregular plural nouns
-- book -&gt; books
-- apple -&gt; apples
-- man -&gt; men
-- life -&gt; lives
-- foot -&gt; feet
-- hero -&gt; heroes
-- child -&gt; children
-- fish -&gt; fish  ?_?
-- knife -&gt; knives
-
-Imperative form
-- use to: instructions, order or advices
-
-And vs but:
-- and, similar ideas
-- but, show contrast
-
-A vs An:
-- this is similar, but the use is depending of first sound of new word
-
-I got late -&gt; llegue tarde
-
-may - permission not can
-restroom =&gt; caoque tenga WC, bathroom =&gt; cuanto tiene regadera, bedroom =&gt; habitacion
-
-as, like -&gt; check differences
-
-# Descriptions and comparatives
-What is it like?
-- what is your best friend like? - this is for descriptions, this is a description in personality
-- what does your best friend like? - this for likes as food or music, interest
-- what does you best friend look like? - this for phisical aparience
-- what is your bedroom like? - this is used with profesions and places
-
-The weather
-
-yesterdar, I was only documenting regarding this point, checar los “ando endo” del ingles
-I'm Swiss knife
-I am sleepy
-verify to check
-generate
-
--- new words to use with reflexive pronouns
-- blame, culpar
-- cur, cortar
-- enjoy, disfrutar
-- help, ayudar
-- hurt, lastimar
-- introduce, presentarse
-- prepare, preparar
-- teach, enseñar
-
-this is possible change the mean of verb: Help </rich_text>
-      <rich_text weight="heavy">yourself</rich_text>
-      <rich_text> to some coffee.(Sírvete un café tú mismo.)
-
-preposition of time
-- at is used for a specific time
-- exception:
-   → at night, I go to sleep
-   → at christmas, we eat a lot of food (for holydays)
-
-Use of ing
-- I like|love|hate + verb+ing
-
-expressing intentions
-- I want to + verb (intention)
-   → I want to swim
-- I don't want to... (negative)
-
-How far, long and often?
-- long for duration of time
-- far is for distance (kilometers)
-- often is for frequency (every 15 mins)
-
-Common past verbs
-- eat  -- ate
-- give   -- gave
-- write  -- wrote
-- go  -- went
-- see  -- saw
-- feel  -- felt
-- make  -- made
-- do  -- did
-- drink  -- drank
-- know  -- knew
-- fly  -- flew
-- Another
-   → put, cut, read and hit
-- To be, feeling states and physical places:
-   → was, i she and he
-   → were, we they and you
-
-Did and Didn't
-- is an auxiliar verb in past, negatives and questions
-
-Preposition
-- in - dentro
-- on - sobre de algo
-- above - encima algo
-- between - entre
-- under (belove)- abajo
-- next to - al lado
-- near - cerca
-
-- past = after
-- to = before
-
-Wh question:
-- what, asking about things or information
-- where, location or place
-- why, reason of something
-- when, for time
-- which, two options or objects
-- who. a person o people
-
-# A2 - preguntas y respuestas
-- Determiners singular and plural:
-   → this, is for singular and close distances
-   → that, is for singular and far distances
-   → these, plural and near
-   → those, plural and far
-- Present continuos
-   → at the moment
-   → subject + verb-be = verb(ing)
-- Contables an uncountables
-   → contables
-      ⇒ 
-   → uncontables
-      ⇒ sugar
-      ⇒ beer
-      ⇒ food
-      ⇒ money
-      ⇒ time
-      ⇒ fruit
-   → quantifiers
-      ⇒ any: questions and negative
-      ⇒ some: affirmative
-- how much and how many:
-   → much:
-      ⇒ for uncontable nouns
-      ⇒ price of something
-      ⇒ with singular and plural nouns
-   → many:
-      ⇒ contable nouns
-      ⇒ quantity of something
-      ⇒ only with plural nouns
-- At as preposition of time
-   → for specific time
-      ⇒ used with at night:
-         • at night, i go to sleep
-         • at christmas, we eat a lot of food
-- references using ing
-   → used with like, love and hate + verb-ing
-   → or used with like, love and hate + to + verb (without ing)
-- Expressing intentions
-   → I want to + verb (intention)
-      ⇒ I want to swim
-      ⇒ I wanto to eat pizza
-   → Negative: I don't want to...
-- How long, far and often
-   → How long
-      ⇒ use for duration or time 
-   → How far
-      ⇒ is use for distances
-   → How often
-      ⇒ is for frequency
-- especial words: “lift-and-shift”, “lift, tinker, and shift,”
-- past verbs include was and were
-   →  Eat, ate
-   → give, gave
-   → write, wrote
-   → go, went
-   → see, saw
-   → feel, felt
-   → make, made
-   → do, did
-   → drink, drank
-   → know, knew
-   → fly, flew
-   → other interesting
-      ⇒ put, cut, read and hit
-      ⇒ was: I, she and he, it
-      ⇒ were: we, they and you
-- do and did
-   → is an auxiliar verb, in negative form is necesary
-   → with positive is posible use “I did go to the park” or “I went to the park”
-- with possessives “estructure”: that|those is|are {person}'s {object}
-- Preposition of place
-   → In, dentro
-   → on, sobre algo
-   → above, encima de algo
-   → between, entre
-   → under o below, bajo
-   → next to, al lado de, de formar cercana
-   → near, al lado de de forma lejana
-- Past == after
-- to == before
-- Wh questions:
-   → What, asking about things or information
-   → where, location or place
-   → why, reason for something
-   → when, for time
-   → which, two options or objects
-   → who, a person or people
-
-Which question is correct?
-Did you finish your homework?
-
-
-# Basic connectors
-- connects ideas
-- and, is used by addition
-- but, is used to contrast
-- or, is used for multiple options
-
-# Articles
-- the, refer to specific, people, things or situations
-   → specific people:
-      ⇒ only one or unique person
-      ⇒ particular person
-      ⇒ groups of people
-      ⇒ families
-   → things:
-      ⇒ musical instruments
-      ⇒ only one in the place
-      ⇒ particular place
-      ⇒ famouse monuments, builds, museums
-      ⇒ hotels, bars and restaurants
-      ⇒ unique things
-   → situations
-   → ordinal numbers
-   → decades
-   → geografical areas
-   → countries (plural names, republic, kingdom, states)
-- Not use:
-   → name of cities or countries
-   → years
-   → professions
-   → people's names and titles combined wirh names
-   → meals
-   → languages
-
-kick boxing
-korn flakes
-
-kill
-killed
-laidback - relajado
-
-blue
-megaman
-switch
-share button
-sad
-innocence
-sky
-
-
-park
-cat
-plump
-father in law
-cook
-sister
-pizza
-
-I can dance, I can play guitar, I can sing
-
-
---------
-</rich_text>
-    </node>
-    <node name="estrategias" unique_id="72" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649291591" ts_lastsave="1649448348">
-      <rich_text>Evaluar las competencias es importante porque:
-Son factores que determinan la importancia de las estrategias de estudio en el proceso de aprendizaje:
-
-</rich_text>
-    </node>
-    <node name="hours and requests" unique_id="73" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1649720590" ts_lastsave="1649805908">
-      <rich_text>Basic connectors
-- And, addition
-- but, contrast, one option but another no
-- or, options, use one or another
-
-The, article
-- people, only one person or particle (unique), group of people, families
-- things, musical instruments, only one in the place, particular place, monuments, buildings, museums, hotels, bars, restaurants, unique things
-- situations, ordinal numbers, decades, geographical areas, countries
-- not use, name of cities and contries, years, professions, people's names and titles combined with names, meals, languages</rich_text>
-    </node>
-    <node name="Basi A1" unique_id="100" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656369145" ts_lastsave="1656619420">
-      <rich_text>Introduction
-- Who am I?
-- Interesting facts
-- in english alphabet has 26 letters
-- A and An
-   → refer to only this or noun
-   → an is used as article with vowels
-   → a is used with consonants
-- It's sentences (it is)
-   → it's + article (a/and) + (person, place, thing or item)
-- Plural forms
-   → mean many things
-- there are
-   → this is a plural form
-   → there are + plural noun
-
-Second module
-- is very important from 1 to 20
-- 100 - one hundred
-- subject pronouns
-   → I am
-   → he/she/it is
-   → they/we/you are
-
-good morning
-good afternoon
-good evening</rich_text>
-    </node>
-    <node name="describing my house" unique_id="102" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1656878011" ts_lastsave="1656984966">
-      <rich_text>Home Sweet home
-- Was, this ‘era’, be past, singular
-- Were, plural of be past
-- I didn't do that, irregualr verbs to past
-   → only is used when is negative or question
-- like doing, liked doing
-- love doing, loving “playing” - verb in ing
-- hate doing, hated
-
-Describe my child home
-things that I did in my child home and I didn't
-Actions that I like, love or hate doing
-
-What are we doing here?
-- this is in the moment
-- verbs with be + verb(ing)
-- right on time:
-   → present simple
-   → present continues
-   → at - for time
-- count on me
-   → how many, contable nouns
-   → how much, uncontable nouns
-- we have com this far
-   → How long, time to execute a task
-   → how often, time between tasks
-   → how far, distance
-- things in my house
-   → prepositions:
-      ⇒ on
-      ⇒ in
-      ⇒ next to
-      ⇒ in front of
-      ⇒ behind
-
-My dream house
-- whose things are those in your dream house?
-- use of whose, de quien es
-- linking verbs
-   → how to describe your dream house, using adjectives</rich_text>
-    </node>
-    <node name="Articles and modal verbs" unique_id="104" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657152267" ts_lastsave="1663367835">
-      <rich_text>Basic connectors:
-- connects two ideas
-- And, is for additions
-- But, contrast
-- or, show options
-
-article THE
-- refer to specific
-   → people
-      ⇒ only one person
-      ⇒ particular person
-      ⇒ groups of people
-      ⇒ families
-   → things
-      ⇒ musical instruments
-      ⇒ only one in the place
-      ⇒ particular place
-      ⇒ famous monuments, buildings, museums, etc
-      ⇒ hotels, bars and restaurant
-      ⇒ unique things
-   → situations
-      ⇒ ordinal numbers
-      ⇒ decades
-      ⇒ gegraphical areas, groups of rivers, mountains ranges, oseans
-      ⇒ Countries, plural names
-- not use:
-   → name of cities and countries
-   → years
-   → professions
-   → people`s names and titles combined with names
-   → meals
-   → languages
-
-Weather coonditions
-- it's
-   → it's + condition (inpersonal subject)
-   → use with distance or time
-   → ex
-      ⇒ It's sunny
-      ⇒ it's cloudy
-      ⇒ it's rainy
-      ⇒ it's windy
-
-Not Here/There
-- adverbs of place
-   → here, speaker point of view
-   → there, listener point of view
-
-Frequency
-- forming question
-   → how often + do/does + subject + verb?
-- Adverbs of frequency
-   → - never - 0%
-   → rarely - 5%, hardly ever
-   → seldom - 10%
-   → occasionally - 30%
-   → sometimes - 50%
-   → often - 70%
-   → frequenly - 80%
-   → usually - 90%
-   → alway - 100%
-- frequency
-   → time expresions
-   → adverb of frequency
-      ⇒ before the main verb
-      ⇒ after the verb be
-
-Permission
-- Can and Can't, permissions and denied permission
-   → ask, structure Can + subject + action?
-   → give, subject + can + action
-   → deny, subject + can't + action
-- Offer, Request, suggestion
-   → is possible use can to offers, ex: Can I help you?
-   → request: can we finish this tomorrow?
-   → suggestions: can you tell her you're sorry?
-- decline offers and invitations
-   → use can't
-      ⇒ thanks, but I can't have any sugar
-   → invites:
-      ⇒ Sorry. We can't be there tomorrow
-
-Making requests
-- would like
-   → is used to offer or requests:
-      ⇒ offer, Would you like some coffee?
-      ⇒ requests: I would like a beer, please, contraction: I'd like a beer
-- Could
-   → is used to making requests
-      ⇒ is more polite, is more formal
-      ⇒ could we finish this tomorrow?
-
-Time
-- What time is it?
-   → learn the time in english
-   → past, present, future
-   → numbers: It's seven o'clock
-   → past/to: it's ten to two
-   → divide the clock in two parts, from 0 to 6 is past/after minutes (word) hour, and 6 to 12 is “to” minutes left to next hour
-   → a quarter in 15 and 45, half in 30
-   → it's four oh five
-   → it's a quarter past six
-   → it's half past two
-   → it's a quartet to twelve
-- time expressions
-   → past, yesterday, last
-   → present, today, 
-   → future, tomorrow, later, next, this
-- prepossitions
-   → at, used in precise time, hours, dates for example holydays, mealtimes, specific times ex: at bedtime
-   → on, days and dates, , on april x or on saturday, parts of specific days, special dates ex: on my birthday
-
-How to do things
-- how to create, execute things
-- ex:
-   → how do you open this?
-   → how do you say that in spanish?
-   → how do you spell your name?</rich_text>
-    </node>
-    <node name="elementos y expresiones de trabajo" unique_id="112" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664132487" ts_lastsave="1664132487"/>
-    <node name="miembros de la familia" unique_id="118" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1665440693" ts_lastsave="1665441748">
-      <rich_text>family members
-- close family
-   → mother
-   → father
-   → sister, brother or siblings
-- extend family
-   → grandmother
-   → grandfather
-   → aunts and uncles
-   → cousins
-   → niece or nephew, (sobrinos)
-- in laws
-   → family members of husbando or wife
-
-Nice to meet you
-- this is a monologue of me
-- My name, my age, what I am, what is my profession, my hobbies, what I love, my favorite food</rich_text>
-    </node>
-  </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251"/>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1667337877">
     <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1666052420">
