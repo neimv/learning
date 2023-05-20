@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1683474491">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1684292553">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -6223,7 +6223,7 @@ ec-council
 isc2</rich_text>
     </node>
     <node name="seguridad informatica" unique_id="141" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1682727110" ts_lastsave="1682727110"/>
-    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1683823118">
+    <node name="Ciberseguridad" unique_id="142" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683474491" ts_lastsave="1684375391">
       <rich_text>que es
 - conjunto de practicas para desarrollar, personas, politicas, procesos, tecnologias
 - para proteger la empresa, sus sistemas criticos e informacion sensible de ataques digitales
@@ -6625,10 +6625,128 @@ controles en ciberseguridad
    → evitar uso de redes publicas
    → uso de vpn si es necesario usar la vpn
    → cifrado de disco duro, en caso de perdida o robo
-   → cambiar los dns</rich_text>
+   → cambiar los dns
+
+----------------------------------------------
+Norma ISO 27001
+- norma para auditor interno
+- muy usado para el trabajo a la casa
+- octubre del 2005
+- organizacion internacional de estandares y por la comision electronica internacional
+- 1995 - BS7799-1, mejores practicas para seguridad de la informacion
+- 1998 - BS7799-2, revision a la anterior, se habla de un sistema de gestion de seguridad de la informacion
+- 2000, ISO/IEC 17799, se toma la norma britanica y da lugar a la ISO 17799
+- 2002, BS7799-2, ya tenia certificacion para empresas, tanto para reino unido y en otros paises
+- 2005, ISO/IEC 27001, toma ambas la certificada y la propia de ellos y crea la ISO 27001:2005
+- 2007, ISO 17799, se renombra a ser la ISO 27002:2005 y la ISO/IEC 27001 se publca una nueva version
+- 2013, nueva version ISO/IEC 27001, evaluacion y tratamientos de los riesgos son agregados
+- 2019, ISO 27001:2013: la ISO es estandar certificable
+
+Principios generales:
+- origen son los datos
+- para que sean informacion se debe de hacer un proceso a los datos
+- seguridad de la informacion, es la aplicacion de medidas, gestion y proteccion de los datos
+- triada de la seguridad: disponibilidad, confidencialidad, integridad
+
+sistema de gestion de seguridad
+- este es el fin de la norma
+- conjunto de politicas, procedimientos, guias, recursos y actividades asociadas
+- el fin es:
+   → establecer
+   → implementar
+   → operar
+   → monitorizar
+   → revisar
+   → mantener
+   → mejorar
+- se deben de tener factores criticos definidos, los objetivos y actividades de seguridad deben estar alineadas con los objetivos de la organizacion
+- el apoyo visible y el compromiso de todos los niveles de la organizacion, empezando desde alta direccion
+- programas de concienciacion, formacion y educacion sbre seguridad de la informacion
+- un proceso eficaz de gestion de incidentes
+- un sistema de medicion, se evaluan los cambios y se van ajustando de acuerdo a la necesidad
+- beneficios
+   → aumentar la confianza en la organizacion
+   → ayuda a la alta direccion a tomar decisiones de negocio
+
+Terminos y definiciones
+- Control de acceso, por donde se accede que este autorizado y restringido, dependiendo del negocio y seguridad, es un ciclo de vida tambien para el usuario
+- auditoria, proceso de revision independiente y objetiva para la mejora continua del proceso
+- alcance de auditoria, extensiones y limites a donde llegar
+- conformidad, cumplimiento de un requisito
+- competencia, capacidad para evaluar, eso es del auditor que va a hacer las pruebas
+- mejora continua, revisar continuamente para que el sistema de seguridad debe de ser mas robusto
+- control, medida que modifica un riesgo
+- objetivo de control, lograr el objetivo al que se queire llegar con la norma
+- accion correctiva, cuando se tiene una no conformidad, se debe de corregir
+- evento, ocurrencia o cambio en un sistema
+- incidente de SI, algo que puede afectar los elementos principales del sistema
+
+Que es la ISO 27001
+- norma internacional se ha preparado para proporcionar los requisitos para el establecimeinto, implementacion, mantenimiento y mejora continua de un sistema de gestion de la seguridad de la informacion
+- generalidades
+   → puede ser utilizada por partes internas y externas, para evaluarse a si mismos
+   → describe el conjunto y el vocabulario de los sistemas de gestion de ls SI
+   → el orden en que la norma presenta los requisitos no indica su importancia ni implica el orden en el cual deben implementarse
+- la norma se divide en 14 grupos en 114 controles
+- hay una seccion adicional sobre la subcontratacion
+- la ISO 27000 abarca todo lo que tiene que ver con sistemas de la informacion, toda norma de seguridad es estar citando a esta misma norma
+
+Liderazgo y planificacion
+- contexto de la organizacion, entender donde estoy yo ubicado en al compania y que tipo de compania es, saber que necesita la organizacion, se debe de entender el negocio
+- items
+   → comprension de la organizacion y su contexto
+   → comprension de las necesidades y expectativas de las partes interesadas
+   → determinacion del alcance del sistema de gestion de la seguridad de la informacion
+   → sistema de gestion de la seguridad de la informacion
+- liderazgo
+   → la alta direccion debe demostrar liderazgo y compromiso
+   → generacion de la politica
+   → roles, responsabilidades y autoridades en la organizacion, es complicado que una persona lleve todo el proceso
+- planificacion, se debe de saber por donde se va a ir avanzando, alcance y que queremos lograr
+   → acciones para tratar los riesgos y oportunidades
+   → objetivos de seguridad de la informacion y planificacion para su consecucion
+
+Soporte, operacion, evaluacion y mejora
+- soporte, la organizacion debe de entregar los recursos para poder efectuar las mejoras
+   → recursos
+   → competencias
+   → concienciacion
+   → comunicacion
+   → informacion documentada
+- operacion, ya se tiene la planificacion, aqui se implementa todo
+   → planificacion y control operacional
+   → apreciacion de los riesgos de seguridad de la informacion
+   → tratamiento de los riesgos de seguridad de la informacion
+- evaluacion del desempenio
+   → la organizacion debe evauar el desempenio de la seguridad de la informacion
+   → seguimiento, medicion, analisis y evaluacion
+   → auditoria interna, lo mejor es que sea alguien externo quien lo cheque
+   → revision por la direccion
+- mejora, siempre se debe de evaluar la necesidad de acciones
+   → no conformidad y acciones correctivas
+
+Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
+- provee una herramienta esencial apra la gestion de la seguridad, una lista de los controles de seguridad que pueden ser usados para la mejora
+- contiene dos controles, como deben de ser escritas y revisadas las politicas
+- organizacion de la seguridad de la informacion, como se asigna responsabilidades, se tiene 7 controles
+- seguridad de los recursos humanos, son 6, estos son a niveles generales cuando contratas
+- gestion de activos, se tienen 10, se tiene que tener un inventario de todos los recursos que se tiene, se debe de capacitar para que el trabajo sea propio de la organizacion
+- control de acceso, se tienen 14, como se debe de gestionar el ciclo de vida de los usuario, monitoreo constante de los usuarios
+- criptografia, se tienen 2, tener en cuenta todo lo que es intercambio de cambios de informacion
+- seguridad fisica y del entorno, se tienen 15, como se debe de tener en ceunta las instalaciones, zonas restringidas, se debe de asegurar un borrado a bajo nivel cuando se deshace de uno de los equipos
+- seguridad de las operaciones, 15, operacion pura deTI, se debe de tener segregacion de entornos, habla de herramientas a aplicar
+- seguridad de las comunicaciones, 7, aqui se maneja las redes, como deben de estar seguras las redes de la organizacion
+- adquisicion, desarrollo y mantenimiento de los sistemas de informacion, 13, todo lo que se tiene que tener en cuenta en el desarrollo de un sistema de informacion, se puede tener el software de un tercero, ciclo de vida correcto del desarrollo
+- relacion con proveedores, 5, que se debe de tener en cuenta al generar un contrato, cual debe de ser la relacion
+- gestion de incidentes de seguridad de la informacion, 7, que se debe de hacer cuando pasa algun incidente
+- aspectos de seguridad de la informacion para la gestion de la continuidad de negocio, 4, habla que se debe de hacer para garantizar que a operacion debe de seguir trabajando
+- cumplimiento, 8, aqui se debe alinear a lo que pide la certificacion de toda la normatividad</rich_text>
+    </node>
+    <node name="intro al Backend" unique_id="144" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684292553" ts_lastsave="1684292837">
+      <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1684175435">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1684541659">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -7486,7 +7604,7 @@ How to do things
    → how do you spell your name?</rich_text>
     </node>
     <node name="elementos y expresiones de trabajo" unique_id="112" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664132487" ts_lastsave="1664132487"/>
-    <node name="miembros de la familia" unique_id="118" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1665440693" ts_lastsave="1684176845">
+    <node name="miembros de la familia" unique_id="118" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1665440693" ts_lastsave="1684372228">
       <rich_text>family members
 - close family
    → mother
@@ -7540,7 +7658,116 @@ Describing people and routines
    → before I go home, I like to spend time with my friends
    → We sometimes go for a walk aroung the university campus or maybe get something to eat
    → after that, I go home at {hour}, I rarely clean the entire house, but I help my parents to take out the trash
-   → I also turn</rich_text>
+   → I also take turns to take tje dog for a walk in the evenings
+   → I do my homework and surf the internet before I go to bed
+   → I listen to music and relax right before I sleep
+   → </rich_text>
+      <rich_text weight="heavy">write 8 actions of your daily routine</rich_text>
+      <rich_text>
+   → </rich_text>
+      <rich_text weight="heavy">Create a list of 8 actions of the daily routine of a family member</rich_text>
+      <rich_text>
+
+Irregular Plurals
+- one or many
+- one man or many men
+- several Mice, muchos ratones
+- prepositions
+   → where is it?
+   → above, arriba
+   → next to, al lado
+   → between, entre
+   → on, sobre algo
+   → behind, detras
+   → in front of, delante de algo
+   → to the left, al lado izquierdo
+   → </rich_text>
+      <rich_text weight="heavy">Write 5 sentences to practice</rich_text>
+      <rich_text>
+- members of family
+   → who is that
+   → guess who - the daughter of my mother is, my sister
+   → niece, sobrina
+   → my nephew, sobrino
+   → my son 
+- what's that and where is it
+   → que es eso?, what is that? It is an apple
+   → who is that?, quien es?, she is a woman
+   → what are those?, que son esos?, those are fish
+   → where is the woman?, donde esta la mujer
+
+Household chores
+- my mom says... {to person}
+   → sweep the kitchen
+   → vacuum the living room
+   → do the dishes
+   → walk the dog
+   → mow the lawn
+   → take the trash out
+   → make the bed
+   → </rich_text>
+      <rich_text weight="heavy">write 7 imperative sentences</rich_text>
+      <rich_text>
+- activities of birthday
+- writing exercise
+   → have -&gt; has
+   → is, does not work, looks takes
+   → is, works, likes, loves
+   → is, works, loves
+   → live, is, does not have
+   → lives, visit, have, do not like
+
+ERRORES:
+What adjectives can we use to describe </rich_text>
+      <rich_text weight="heavy">physical characteristics</rich_text>
+      <rich_text>?
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Which of these phrases </rich_text>
+      <rich_text weight="heavy">belong to an afternoon routine</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Which of these sentences is </rich_text>
+      <rich_text weight="heavy">NOT</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8"> correct?</rich_text>
+    </node>
+    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1684542974">
+      <rich_text>What are your likes and dislikes?
+- like, love and hate
+- Like, some things that is positive
+- Love, emotions is stronged
+- Hate, things that I don't like
+- use:
+   → I like + (verb)-ing
+   → I love + (verb)-ing
+   → I hate + (verb)-ing
+- he/she/it, likes|loves|hates
+
+What are your hobbies?
+- linking word and
+   → to link similar ideas, thoughts and actions
+- I like exercising and going out with my friends
+
+What was your childhood like?
+- Irregular and regular verbs
+- irregular
+   → change complete, when use in past
+   → eat, Ate
+   → drink, drank
+   → sing, sang
+   → become, became
+   → choose, chose
+   → do, did
+   → feel, felt
+   → give, gave
+   → have, had
+   → in third person doesn't add s
+- was/were - irregular verb of “to be”
+   → I was at a concert yesterday
+   → I was
+   → he, she, it -&gt; was
+   → you, we. they -&gt; were
+   → in negative use wasn't</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
