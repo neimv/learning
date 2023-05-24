@@ -5646,7 +5646,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1684164726">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1684694211">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6020,6 +6020,11 @@ Counting Semaphore
    → queue type L
 - the initial values is S, this is where process is possible in critical section
 - is used when is possible get multiple process in critical section
+
+Deadlocks
+- resource, any physica or virtual component in a computer
+- deadlock, a situation in which two or more process are unable to proceed because each one of them is waiting for one of the others to do something
+- starvation, a situation in which a runnable process is overlooked indefinitely by the schedules
 
 
 x</rich_text>
@@ -6746,7 +6751,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1684541659">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1684704473">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -7731,7 +7736,7 @@ What adjectives can we use to describe </rich_text>
       <rich_text weight="heavy">NOT</rich_text>
       <rich_text scale="h3" foreground="#eff3f8"> correct?</rich_text>
     </node>
-    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1684543205">
+    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1684780802">
       <rich_text>What are your likes and dislikes?
 - like, love and hate
 - Like, some things that is positive
@@ -7777,7 +7782,366 @@ What was your childhood like?
    → change, changed
    → decide, decided
    → imagine, imagined
-   → talk, talked</rich_text>
+   → talk, talked
+
+Where do you live
+- locations or placements, prepositions of place
+   → on, sobre tocando
+   → in
+   → above, arriba sin tocar
+   → below, abajo sin tocar
+   → over, toma todo el espacio, arriba
+   → under, todo el espacio, pero abajo
+   → in front of, adelante del objeto
+   → across from, se usa mas para cuando se tiene que cruzar la calle
+   → behind, detras de
+   → between
+   → next to, al lado de
+   → to the left of
+   → to the right of
+
+Who is that?
+- how to use 's, to express
+   → something or someone belongs toa person
+   → is coneected to a place
+   → to show the relationship between people
+   → s', use with regular pluran nouns
+      ⇒ ex: My brothers
+
+What is your family like?
+- use of present continous
+   → my siblings like playing together
+   → use of verbs with s in third person (likes)
+
+What is your style
+- her style appears colorful
+- she looks beautiful
+- her accessories are cut
+- linking verbs, connect the subject of a sentence to an adjective, noun or pronoun:
+   → </rich_text>
+      <rich_text weight="heavy">looks</rich_text>
+      <rich_text>
+   → </rich_text>
+      <rich_text weight="heavy">appears</rich_text>
+      <rich_text>
+   → verb to be in all forms
+   → became
+   → seem
+   → appear
+   → get
+   → feel
+   → sound
+   → taste
+   → look
+- his clothes look casual
+
+What do you have in your closet?
+- order of adjectives
+   → beautiful, opinion
+   → small, size
+   → sharp, physical quality
+   → square, shape
+   → young, age
+   → blue, color
+   → brazilian, origin
+   → wool, material
+
+What are you wearing to the party?
+- this and these
+   → this, something that is close to the speaker
+   → these, sme things that are close to the speaker
+- that and those
+   → that, something that is away from the speaker
+   → those, sme things that are away from the speaker</rich_text>
+    </node>
+    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949701">
+      <rich_text>
+Cover letter: 1 page document that you should send with your resume to persuade the hiring manager to read it.
+
+Complimentary closing: a word or words that come immediately before the signature of a letter to express the sender’s respect for the recipient. For example: Sincerely or Regards.
+
+Professional experience: an experience that you obtain from a profession. It should be included in your resume in order from current to previous.
+
+Hiring manager: the person responsible for hiring employees, to fill open job positions in a company.
+
+LinkedIn: a social networking site that helps you create professional connections according to common areas and interests, as well as you find job opportunities.
+
+Professional Profile: it is a brief summary of your skills, qualifications, strengths, and relevant professional experience.
+
+Resume or Resumé: a formal presentation in a 1 or 2 page document, in which a job applicant showcases his or her contact information, professional summary, relevant work experience, education, skills and qualifications.
+
+Improve the english
+- objective and tips
+   → learn how to prepare for a job interview
+   → be prepared to answer interview questions
+   → know the types of interviews
+   → identify best practice youi can apply during interviews
+- with postits
+- get a plan
+- review each day the progress
+
+Prepare your professional profile
+- for a looking a new job
+- resume:
+   → personal information and contact details
+   → your professional summary
+   → relevant experience (your current hob should go first)
+   → education
+   → skills (soft and hard skills)
+   → languages
+- choose a legible font such as arial or tahoma
+- double check spelling and punctuation
+- your resume should be 1 or 2 pages max
+- do not include a photograph
+- send it in PDF format
+
+Cover letter and linkdin profile
+- first page document that you should send with your resume to persuade the hiring manager
+   → personal information, contact details and the date
+   → recipient's name and address
+   → professional greeting
+   → opening paragraph that include your skills
+   → include why you are the right person for the job and viceversa
+   → conclusion with a call to action
+   → complimentary closing and your signature
+- linkedin
+   → professional photo
+   → a descriptive but short headline
+   → ncluding your professional summary
+   → highloghting projects and content you have created
+   → select your strongest skills
+   → expand your network and be present
+   → share relevant content
+   → have a personalized URL with your name and last name
+
+Tips to prepare for the interview
+- research about the company (website, social media, news)
+- review the job description
+- check the interview's profile
+- anticipate possible questions and practice answering questions
+- write down any question that you might have for the interviewer
+- sleep well the night before the interview
+
+Advantages: features that make something better than other things, and a condition that is more favorable and could give more possibilities to have a positive experience and success.
+
+Disadvantages: the opposite of advantages; a disadvantage is an unfavorable position or condition.
+
+Face to face Interview: an interview in which you talk directly to your interviewer in the same place, not by phone or online.
+
+Online Interview: an interview in which the interviewer and interviewee connect through an online platform.
+
+Phone Interview: an interview which is done over the phone.
+
+Requirements: something that is wanted or needed, it could also be a necessary condition.
+
+Soft solid colors: a color that has muted chroma, that was greyed, softened, or lightened, which has no patterns; a solid color is having the same color all over.
+
+Technical Interview: an interview to test technical abilities and knowledge for a job. Usually if you apply for a job in engineering, science, or IT you may face a technical interview.
+
+Things you should consider in an online or phone interview
+- advantages
+   → you save time and money
+   → yuo might feel more cmfortable
+   → you can have more interviews with international companies
+- disadvantages
+   → they are more impersonal than face to face interviews
+   → there could be issues regarding the internet speed
+   → you might not have enough time to expand your answers
+   → if it is a phne interview you could have issues with the call or incoming calls and messages that could distract you
+- tools for online inter
+   → a laptop or desktop computer
+   → webcam
+   → headphones an microphone
+   → good internet connection
+- tips
+   → make sure you have the link
+   → sit in quiet place where you will have privacy
+   → connect to the internet using a cable
+   → test audio and video setting
+   → be on time
+   → dress professionally, use soft solid colors
+   → have a neutral background
+   → have a printed copy of your resume
+   → close any unnecessary web browser tabs and applications
+   → place your phone in silent mode
+   → be calm
+   → keep eye contact
+   → don't excuse yourself on not having used the tool before
+   → nod to show you are engaged while are actively listening
+   → don't interrupt your interviewer
+   → speak clearly and confidently
+   → when appropriate use hand gestures and smile
+   → if it's a phone interview you can't see body language so you need to work on your tine of voice
+   → remember to thank the interviewer
+
+Face to face interview
+- advantages
+   → more personal contact
+   → you can expand your answers freely
+   → you might get the opportunity to see the offices and get an idea of the work environment
+- disadvantages
+   → you need more time
+   → you have to think more about your body language and facial expressions
+   → if you are an introvert you might not feel as comfortable as in an onlne or phone interview
+- tips
+   → make sure you have the address and the name your interviewer
+   → take a printed copy of your resume
+   → arrive early
+   → dress professionally
+   → shake hands firmly
+   → avoid looking around the room
+   → sit upright and show interes
+   → listen actively
+   → make eye contact
+   → smile when appropriate
+   → speak clearly and confidently
+   → answer what you are asked
+   → don't interrupt your interviewer
+   → be genuine
+   → be polite
+   → remember to thank the interviewer
+
+Technical interview
+- practice practice
+
+Competencies: the abilities to perform a task efficiently. Competencies involve skills, abilities and knowledge. They are your qualifications for a job.
+
+Hard Skills: learned abilities that are acquired and enhanced through practice, repetition, and education. They are teachable and measurable technical abilities that fit the job position.
+
+Soft Skills: they are non-technical skills that relate to how you work and which are not related to a specific job.
+
+Plain language: Clear and effective communication with straightforward expression or using only as many words as are necessary.
+
+Pair Coding or Programming: an Agile technique originating from extreme programming in which two developers get together and code using the same screen.
+
+Portfolio: a portable showcase of your work and talents which represent your skills and achievements.
+
+Tell me about yourself
+- professional pitch, it is a summary of the best things about you
+   → whou you are
+   → what you do
+   → what makes you unique
+   → what you have done
+   → qhat you are looking for
+
+talk about your past work experiences
+- tips
+   → review the experience you included in your resume
+   → share what you lerned in each role and how it relates to the position you are applying for
+   → be positive about previous experiences, never give a negative reason
+
+why do you want to work for this company and why should we hire you?
+- tipos
+   → research the company
+   → include in your answer skills and competencies that you know the company values
+   → identify what the company needs
+   → mention what you like about the company and why you would be a good fit for the role
+   → focus on the value you will bring to your company with your skills, experience and achievements
+   → give examples on how you achieved goals
+
+Talking about your skills and competencies
+- know the differences
+   → competencies are much broader than skills
+   → kills are specific to a task. A skill is the ability to solve problems and perform tasks
+   → competencies involve skills, abilities and knowledge
+- tips
+   → review the job description again
+   → include in your answe the skills and competencies that are relevant to the job
+   → use the start method (Situation, Task, Action and Result)
+   → keep your answer clear and concise
+   → demostrate how you will benefit the company
+
+Strengths and weaknesses?
+- be prepared
+- be brief
+- be honest
+- give an example
+
+Behavioral questions: questions that have to do with how you handled past work situations.
+
+Call someone out: an expression which has to do with telling someone about something they did or said and asking them for an explanation.
+
+Job setting / Work setting: your work environment, the place where you work.
+
+Role play: A dramatization in which you perform or act out the part of a person or character in a situation in order to make the topic more clear.
+
+Situational questions: questions about hypothetical work situations. They allow the interviewer to know how you would act if they happened.
+
+the salary expectation question
+- tips
+   → don't ask about the salary before you are asked about it
+   → you could divert the question by saying yu neer more information about the role requirements and expectations
+   → be aware of your market value and cost of living
+   → be ready to specify your required salary range and explain why
+   → be prepared to negotiate
+   → you could say you are open to negotiationg depending on the benefits, commissions or bonuses
+
+Where do you see yourself in 5 years/
+- tips
+   → think of your long-term goals and your career path
+   → show confidence and a positive attitude
+   → demostrate how the role will help you reach your goals
+   → talk about mentoring
+   → show enthusiam and passion
+
+Answering situational questions
+- problem, how to solve and benefit the company
+- consider the skills required for rol
+- benefist for the company
+
+Being late: Not being on time for a scheduled meeting or event.
+
+Follow up: to investigate closely in order to have a status or more information as a response to something.
+
+If applicable: It expresses that you should consider if something has to do with you, if it is relevant or if it applies.
+
+Mistake: an act or judgment that is not right; something that you are wrong about.
+
+Role: a purpose or position that a person has in a company, a situation, society, or in a relationship; it is related to a duty or obligation that the person has.
+
+Write down: to record something in written form in a piece of paper.
+
+Question for the interviewer
+- show activily listening
+- examples
+   → how would you describe the company culture
+   → what do you like most about working here
+   → how do you define and measure success for this role
+   → what are the three most important things that you would like me to accomplish in the first six months if I were hired
+   → what do you think is the mos challenging aspect of this position
+   → will I have the opportunity to meet the team during the interview process
+   → are thre opportunities for professional growth
+
+HOw to close the job interview effectively and what to do after the interview
+- all question were answered
+- state your interest and why you are the right person for the job
+- you ask for the next steps and how you should follow up
+- get the contact information you need
+- close the interview on a positive note
+- thank the hiring manager
+- after the interview
+   → analyze your answer and how you felt
+   → write down things you want to remember from the interview
+   → contact the references you proveded (if applicable)
+   → connec with your interviewer
+   → send an email thanking for the interview
+   → follow up on the process
+   → be prepared to wait
+   → do not stop the job search
+
+Common mistakes
+- being late
+- lying
+- not being prepared
+- having your cell phone with notifications on
+- not making any eye contact
+- bad posture
+- not dressing appropriately
+- not asking questions
+- asking about holidays or bonuses at the initial interview
+- saying that you have applied to a lot of jobs
+- making negative comments about your current job
+- not following up agter an interview</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -12090,7 +12454,7 @@ CH:
       </node>
     </node>
   </node>
-  <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1625837110">
+  <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
     <node name="Personalidad y productividad" unique_id="46" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947195" ts_lastsave="1620506007">
       <rich_text>Que es ser productivo??
 - no es ser una persona que trabaja mucho, implica tener mas cuidado de uno que del trabajo como tal
@@ -12579,6 +12943,136 @@ Una tabla, una lista y un calendario son diferentes ejemplos de bases de datos
 Al usar un toggle para darle color a una base de datos, si luego saco la base de datos del toggle, no mantendrĂ¡ su color -- verdadero
 Se pueden agregar múltiples columnas a las páginas, toggles y botones de plantilla arrastrando los bloques hacia la izquierda o derecha de otros bloques -- falso
 
+</rich_text>
+    </node>
+    <node name="Optimizacio del perfil de linkedin" unique_id="146" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684703124" ts_lastsave="1684859999">
+      <rich_text>Reputacion virtual
+- Opinion que tiene alguien de algo
+- la reputacion es la moneda que vale
+- no podemos controlar lo que los demas piensan de nosotros
+- 70% de los empleadores usan las redes sociales como filtro
+- 70% de los profesionales de RRHH descartan candidatos por motivos relacionados a una mala reputacion online
+- no publicar no es la solucion.. 57% no aceptan candidatos si no encuentran info de la persona
+- eliminacion de ontenido controversial
+- cambiar configuracion de privacidad
+- desequitarse de publicaciones no deseadas
+- cura tus redes
+   → actua como una marca
+   → participa en eventos relacionados con tus intereses
+   → haz voluntariado
+   → comenta en linkedin
+   → crear una red profesional
+- en linkedin existe una herramienta para reputacion, indice de ventas con redes sociales
+- se debe de ser consistente
+
+posicionamiento profesional
+busqueda laboral efectiva
+
+como usan linkedin los reclutadores
+- es la plataforma #1 para crear una red profesional
+- base de datos gigante de candidatos, se aplican filtros y tiene mas alcance que otras plataformas
+- 20 segundos para convencer si nos interesa o no
+- no son detectives, entre mas info es mejor para ellos, el quiere llenar vacantes abiertas
+- trabajan para clientes no para ti
+- se tienen varias herramientas, recruiter lite, permite 20 filtros para encontrar talento, contactos de primer, segundo y tercer grado
+
+Define tu objetivo profesional
+- area laboral, eleccion de solo uno
+- geografia, cada lugar del mundo es diferente
+- industria
+- tipo de organizaciones,
+   → ong
+   → privadas
+   → publicas
+   → startups
+   → grandes comporaciones
+- tipo de empleo
+   → jornada completa/parcial
+   → remoto
+   → en oficina
+
+palabras claves
+- habilidad, conocimiento, experiencia diferenciadora en base a tu objeto profesional
+- evitar usar keyword stuffing, no usar mucho una palabra
+- usando el buscador de empleos ayuda a buscar que palabras claves se pueden usar para ser mas atractivo
+- jobscan, copia perfil de linkedin y se puede comparar con el trabajo que andas buscando
+- identificar las brechas de conocimiento
+
+identifica tus secciones clave
+- a donde se tiene que enforcar la energia
+- cual es la propuesta unica de valor
+- ponerse en los pies de las personas que miran en el perfil, sobre todo en educacion
+- cual es la contribucion desde el rol que tengo (en zeb esta en blanco)
+- metodologias y tecnologias que se usan
+- sin pena por escribir todo lo que se hace
+- en linkedin es mejor ser lo mas especifico posible
+- verbos de accion
+   → desarrollar
+   → crear
+   → liderar
+   → implementar
+   → diseniar
+   → producir
+   → mejorar
+- usar licencias y certificacion como accion clave
+- es importante saber en que idioma sera el perfil
+
+Preferencias de empleo
+- se ponen 5 opciones en tengo “interes en”
+- editacion de ubicacion donde se busca empleo
+- fecha de inicio, de manera inmediata o flexible
+- tipo de empleo, tiempo para laborar
+- se agrega el marco opentowork si se da a todos los miembros de linkedin
+
+Crea marca personal acorde al proposito
+- es lo que dice la gente de ti cuando no estas en la sala
+- partes
+   → foto de perfil
+   → titular
+   → foto de fondo
+   → acerca de
+   → contenido digital
+- como se persive
+   → especialista vs generalista
+   → lider
+   → experto
+   → organizaciones a atraer
+
+Elabora tu elevador pitch
+- discurso de ascensor
+- oportunidad de venta
+- 3 parrafos de maximo 4 lineas
+- en primer persona
+- estructura
+   → quien soy y a quien ayudo
+   → que me apasiona
+   → que hace unico a mi perfil
+
+Alimenta tu pagina de inicio con contenido relevante
+- contratar es una inversion
+- los empleadores quieren candidatos informados
+
+Implementa una busqueda laboral equilibrada
+- cuales van a ser mis canales
+- pequenia investigacion de acuerdo a lo que uno quiere y donde quiere trabajar
+- interactuar con el sector a donde uno quiere entrar, eventos
+- leer articulos de la industria, seguir influencers
+
+Conectar con los empleadores de tus suenios
+- haciendo contacto directo con las empresas
+- existe un mercado laboral oculto, que ocupa el 75%
+- equipos creados por personas referidas
+- uso de la tecnica de la cascada
+   → CEO si es pequenia
+   → Manager del area, si no es tan pequenia
+   → Recursos humanos, si es muy grande
+- tres tpos de personas
+   → antipaticos, no contestan el mensaje
+   → obligados, solo para sentirse bien
+   → potenciadores, querer ayudar de manera genuina
+
+mensajes efectivos de contacto
+- calidad mata cantidad
 </rich_text>
     </node>
   </node>
