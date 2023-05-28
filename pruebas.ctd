@@ -11,5 +11,44 @@
 Entras a una empresa como especialista DevOps y te piden evaluar que tipo de herramientas de orquestación  necesitan la empresa y te comenta lo siguiente: no puedes levantar ninguna virtual machine o instancias de EC2 en AWS porque no hay equipo que la mantenga. ¿Qué herramienta propondrías?
 </rich_text>
   </node>
-  <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1684164750"/>
+  <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1685141603">
+    <rich_text>How often, how far, how long?
+- places in the city
+- how often
+   → we use it to express the frequency of an action
+   → how often do you go to the gym?
+   → use of adverbs of frequency
+- how far
+   → we use it to express distance
+   → how far is the bank
+   → use of measureaments
+- how long
+   → we use it express length, duration of an action
+   → how long does it take you to get to work?
+
+What is on your shopping list?
+- what do you want to include?
+   → I want to buy cheese and bread
+   → I want to get fresh produce
+- Countable nouns
+   → egg(s)
+   → cookie(s)
+   → apple(s)
+- Uncountable nouns and quantifiers
+   → milk
+   → bread
+   → cheese
+   → meat
+
+How much, how many?
+- how much
+   → refer to uncountable things
+   → how much bread do you want to buy?
+      ⇒ one loaf
+   → use of price of something
+      ⇒ how much is the bread?
+- how many
+   → to refer ro countable things
+   → how many cookies would you like?</rich_text>
+  </node>
 </cherrytree>

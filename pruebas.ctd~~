@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="cont. pruebas" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1645575605" ts_lastsave="1684111679"/>
-  <node name="linux security cont." unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676229131" ts_lastsave="1683400107"/>
-  <node name="Ciberseguridad" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683400107" ts_lastsave="1683589890"/>
-  <node name="Curso de FastAPI" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683404880" ts_lastsave="1683404880"/>
-  <node name="C cont." unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676231224" ts_lastsave="1676311868"/>
-  <node name="cont. certiification" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1671680142" ts_lastsave="1683405842"/>
-  <node name="OS" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684111679" ts_lastsave="1684113235">
-    <rich_text>Counting Semaphore
-- like a binary semaphore but with a queue
-- the element in queue contains:
-   → int value
-   → queue type L
-- the initial values is S, this is where process is possible in critical section
-- is used when is possible get multiple process in critical section</rich_text>
-  </node>
+  <node name="OS" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684111679" ts_lastsave="1684164713"/>
   <node name="errores devops" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1683405842" ts_lastsave="1684110004">
     <rich_text>¿Qué es un cluster?
 ¿A qué llama kubernetes un "minion"?
@@ -25,24 +11,40 @@
 Entras a una empresa como especialista DevOps y te piden evaluar que tipo de herramientas de orquestación  necesitan la empresa y te comenta lo siguiente: no puedes levantar ninguna virtual machine o instancias de EC2 en AWS porque no hay equipo que la mantenga. ¿Qué herramienta propondrías?
 </rich_text>
   </node>
-  <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1684110512">
-    <rich_text>Description of family members
-- family members
-   → close family
-      ⇒ mother
-      ⇒ father
-      ⇒ sister, brother or siblings
-   → extended family
-      ⇒ grandmother, mathernal o pathernal
-      ⇒ grandfather, “      ”
-      ⇒ aints and uncles, brother or sisters of father or mother
-      ⇒ cousins, primos
-      ⇒ nephew, sobrinos
-   → in laws
-      ⇒ housband or wife family
-      ⇒ mother and father  in law
-      ⇒ sister or brother in law
-- presentation
-   → my name is, years old, I'm student, profesion, hobbies, favorite things, favorite food</rich_text>
+  <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1685141531">
+    <rich_text>How often, how far, how long?
+- places in the city
+- how often
+   → we use it to express the frequency of an action
+   → how often do you go to the gym?
+   → use of adverbs of frequency
+- how far
+   → we use it to express distance
+   → how far is the bank
+   → use of measureaments
+- how long
+   → we use it express length, duration of an action
+   → how long does it take you to get to work?
+
+What is on your shopping list?
+- what do you want to include?
+   → I want to buy cheese and bread
+   → I want to get fresh produce
+- Countable nouns
+   → egg(s)
+   → cookie(s)
+   → apple(s)
+- Uncountable nouns and quantifiers
+   → milk
+   → bread
+   → cheese
+   → meat
+
+How much, how many?
+- how much
+   → refer to uncountable things
+   → how much bread do you want to buy?
+      ⇒ one loaf
+      ⇒ </rich_text>
   </node>
 </cherrytree>
