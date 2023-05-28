@@ -7736,7 +7736,7 @@ What adjectives can we use to describe </rich_text>
       <rich_text weight="heavy">NOT</rich_text>
       <rich_text scale="h3" foreground="#eff3f8"> correct?</rich_text>
     </node>
-    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1684780802">
+    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1685061595">
       <rich_text>What are your likes and dislikes?
 - like, love and hate
 - Like, some things that is positive
@@ -7852,9 +7852,35 @@ What are you wearing to the party?
    → these, sme things that are close to the speaker
 - that and those
    → that, something that is away from the speaker
-   → those, sme things that are away from the speaker</rich_text>
+   → those, some things that are away from the speaker
+
+What is your day like?
+- let's talk about my day
+- I wake up at 6:00, </rich_text>
+      <rich_text weight="heavy">at is for specific time</rich_text>
+      <rich_text>
+- After I get up, I make my bed
+- questions:
+   → What time do you wake up?
+   → What do you do after you wake up?
+   → What time do you have breakfast
+   → What other activities do you do?
+
+What time is it?
+- 4 key expresion
+   → o'clock, en punto
+   → quarter past, a los 15 minutos
+   → half past, a la media hora, half past nine
+   → quarter to, quarter to ten
+   → past is used before 30
+   → to is used after 30
+
+Who, what, where
+- formula questions about the past
+   → wh + did + person + verb + complement?
+   → who did you go with?</rich_text>
     </node>
-    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949572">
+    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949701">
       <rich_text>
 Cover letter: 1 page document that you should send with your resume to persuade the hiring manager to read it.
 
@@ -8135,7 +8161,13 @@ Common mistakes
 - not being prepared
 - having your cell phone with notifications on
 - not making any eye contact
-- bad posture</rich_text>
+- bad posture
+- not dressing appropriately
+- not asking questions
+- asking about holidays or bonuses at the initial interview
+- saying that you have applied to a lot of jobs
+- making negative comments about your current job
+- not following up agter an interview</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
