@@ -6752,7 +6752,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1685940622">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686034016">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -6786,7 +6786,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
    → stand for tactics, techniques and procedures
    → if you response to the TTPs quickly, you leave the adversaries almost no chence to fight back</rich_text>
     </node>
-    <node name="Cyber kill Chain" unique_id="151" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685940622" ts_lastsave="1685947983">
+    <node name="Cyber kill Chain" unique_id="151" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685940622" ts_lastsave="1685948135">
       <rich_text>Military conceptrelated to the structure of an attack
 consist of target identificacion, decision and order to attack the target and finally the target destruction 
 
@@ -6833,8 +6833,33 @@ Command and control
 - before to estableshing the connection, tha attacker has full contorl of the victim's machine
 - the most common used is:
    → the protocol on the port 80 and 443
-   → DNS, makes constant 
-Actions on objectives</rich_text>
+   → DNS, makes constant DNS requests to the DNS server that the belongs to an attacker, DNS tunneling
+
+Actions on objectives (exfiltration)
+- collect the credentials from users
+- perform privilege escalation
+- internal reconnaissance
+- lateral movement through the company's environment
+- collect and exfiltrate sensitive data
+- deleting the backups and shadow copies
+- overwrite or corrupt data</rich_text>
+    </node>
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686034151">
+      <rich_text>this is a framework to understand how cyber attacs occur</rich_text>
+    </node>
+    <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
+      <rich_text>Use of nmap to scan machine:
+nmap -sV {ip}
+gobuster, to brute-force URIs, directories and files, DNS subdomains and virtual host names
+in kali is possible install with apt install gobuster
+execute with gobuster dir -u </rich_text>
+      <rich_text link="webs http://{ip}:{port">http://{ip}:{port</rich_text>
+      <rich_text>} -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt
+</rich_text>
+    </node>
+    <node name="Burp suite" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686032173" ts_lastsave="1686032435">
+      <rich_text>is aframework written in Java to web application penetretion testing, this is a standard tool, used to testing APIs
+this can capture and manipulate all of the traffic between an attacker and a webserver</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
@@ -8491,7 +8516,26 @@ using “because” with verb phrases
 
 </rich_text>
     </node>
-    <node name="Quantities and gerunds" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685941303" ts_lastsave="1685941303"/>
+    <node name="Quantities and gerunds" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685941303" ts_lastsave="1686027078">
+      <rich_text>superlative using most and -est
+- the highest or lowest limit of a quality
+- adjective and adverbs, adjectives describe an anoun, places or something, adverbs are actions
+- the + superlative adjective + noun
+- one syllable
+   → big, biggest
+   → nice, nicest
+- two syllable
+   → happy, happiest
+   → simple, most simple
+- three or more syllables
+   → beautiful, use of most
+   → expensive, “       ”
+- irregular
+   → good, the best
+   → bad, the worst
+
+</rich_text>
+    </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
