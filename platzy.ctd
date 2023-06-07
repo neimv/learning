@@ -6844,11 +6844,54 @@ Actions on objectives (exfiltration)
 - deleting the backups and shadow copies
 - overwrite or corrupt data</rich_text>
     </node>
-    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686034295">
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686119077">
       <rich_text>this is a framework to understand how cyber attacs occur
 this framework is used to complement anothers
 
-used to explain the vairous stages of an attack, used to describe the methodology/path attackers such as hackers or APTs</rich_text>
+used to explain the vairous stages of an attack, used to describe the methodology/path attackers such as hackers or APTs
+
+Threat Modelling
+- serie of steps to ultimate improve the security of a system, identify risk and essentially boils down to:
+   → identify that system and apps need to be secureand what function they serve in the environment, critical or sensitive information
+   → check vulnerabilities and weakness may have and how they could be potentially exploited
+   → Creating a plan of action
+   → Putting policies to prevent theses vulnerabilities
+- this is important to reduce risk within a system or ap
+- another frameworks: STRIDE, DREAD and CVSS
+
+Introduction the inified kill chain
+- published in 2017
+- used to complement another frameowrks
+- has 18 states to an attack
+   → reconnaissance
+   → weaponization
+   → delivery
+   → social engineering
+   → exploitation
+   → persistence
+   → defese evasion
+   → command &amp; control
+   → pivoting
+   → discovery
+   → privilege escalation
+   → execution
+   → credential access
+   → lateral movement
+   → collection
+   → exfiltration
+   → impact
+   → objective
+
+Phase: In (initial foothold)
+- the main focus is the access to system or network
+- investigate vulnerabilities of the system that can be exploited to gain foothold
+- reconnaissance
+   → techniques that an adversary employs to gather information
+   → exists passive an active
+   → discover what systems and services running on the target
+   → finding contact lists of employees, social engineering or phishing attack
+   → looking for potencial credentials
+   → understanding the network topology and other networked systems</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
