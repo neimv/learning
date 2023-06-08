@@ -7854,7 +7854,7 @@ What are you wearing to the party?
    → that, something that is away from the speaker
    → those, sme things that are away from the speaker</rich_text>
     </node>
-    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949530">
+    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949572">
       <rich_text>
 Cover letter: 1 page document that you should send with your resume to persuade the hiring manager to read it.
 
@@ -8131,7 +8131,11 @@ HOw to close the job interview effectively and what to do after the interview
 
 Common mistakes
 - being late
-- lyingnot being p</rich_text>
+- lying
+- not being prepared
+- having your cell phone with notifications on
+- not making any eye contact
+- bad posture</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">

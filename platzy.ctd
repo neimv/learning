@@ -13129,7 +13129,7 @@ mensajes efectivos de contacto
 </rich_text>
     </node>
   </node>
-  <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1651197180">
+  <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1685390640">
     <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1652038925">
       <rich_text>IAM
 - service global
@@ -13596,5 +13596,25 @@ Macreos
 		not macros witj macros
 		not support stacksets</rich_text>
     </node>
+  </node>
+  <node name="notes" unique_id="148" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1685390651">
+    <rich_text>
+*	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
+*	Comprobante de domicilio, no mayor a dos meses 
+*	Acta de Nacimiento
+*	Acta de matrimonio (En caso de aplicar; si el régimen es bienes mancomunados necesitaríamos INE y Acta de Nacimiento del conyugue)
+*	CURP 
+*	Constancia de situación fiscal del mes en curso (Para asalariados es opcional, pero si podemos conseguirla mucho mejor)
+
+
+*Últimos 3 meses de estados de cuenta donde depositen la nómina.  (Si escogemos Banamex como opción de banco, nos pedirán 6 meses)
+*Últimos 3 meses de recibos de Nómina. (Si escogemos como banco Banamex, ellos nos piden 6 meses de recibos de nòmina)
+*	Comprobante de estabilidad laboral: Si los recibos de nómina tienen su fecha de ingreso, con eso ya se está validando este requisito, en caso de que   no tengan ese dato, una carta laboral validando tu antigüedad en el trabajo.
+
+
+**En caso de que el cliente tramite su crédito como Cofinavit, se le pide lo siguiente:
+*	Precalificación a la fecha de Cofinavit (con datos del cliente: RFC, numero de seguridad social y nombre completo)
+*Pantallas de cuenta Infonavit (Pantalla de sin crédito Vigente y cuanto ahorro Tengo)
+*Tabla de amortización de crédito modalidad Cofinavit</rich_text>
   </node>
 </cherrytree>

@@ -7854,7 +7854,7 @@ What are you wearing to the party?
    → that, something that is away from the speaker
    → those, sme things that are away from the speaker</rich_text>
     </node>
-    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949572">
+    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949634">
       <rich_text>
 Cover letter: 1 page document that you should send with your resume to persuade the hiring manager to read it.
 
@@ -8135,7 +8135,11 @@ Common mistakes
 - not being prepared
 - having your cell phone with notifications on
 - not making any eye contact
-- bad posture</rich_text>
+- bad posture
+- not dressing appropriately
+- not asking questions
+- asking about holidays or bonuses at the initial interview
+- saying that you have applied to a lot of jobs</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
