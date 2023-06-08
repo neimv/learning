@@ -11,7 +11,7 @@
 Entras a una empresa como especialista DevOps y te piden evaluar que tipo de herramientas de orquestación  necesitan la empresa y te comenta lo siguiente: no puedes levantar ninguna virtual machine o instancias de EC2 en AWS porque no hay equipo que la mantenga. ¿Qué herramienta propondrías?
 </rich_text>
   </node>
-  <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1685141482">
+  <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1685141531">
     <rich_text>How often, how far, how long?
 - places in the city
 - how often
@@ -40,6 +40,11 @@ What is on your shopping list?
    → cheese
    → meat
 
-</rich_text>
+How much, how many?
+- how much
+   → refer to uncountable things
+   → how much bread do you want to buy?
+      ⇒ one loaf
+      ⇒ </rich_text>
   </node>
 </cherrytree>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1684292553">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1685939072">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5646,7 +5646,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1684694211">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1685307184">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6025,6 +6025,7 @@ Deadlocks
 - resource, any physica or virtual component in a computer
 - deadlock, a situation in which two or more process are unable to proceed because each one of them is waiting for one of the others to do something
 - starvation, a situation in which a runnable process is overlooked indefinitely by the schedules
+
 
 
 x</rich_text>
@@ -6751,7 +6752,158 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1684704473">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686034016">
+    <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
+      <rich_text>6 levels:
+- Hash Values (Trivial)
+   → use of numeric values in files:
+      ⇒ MD5
+      ⇒ SHA-1
+      ⇒ SHA-2
+   → modifying a file by even a single bit is trivial, with a simple bit the hash changes
+- IP Addresses (Easy)
+   → In attack before of find the IP of machine is possible block, drop or deny inbound
+   → In this comments about Fast Flux that is a technique used by botnets to hide phishing
+      ⇒ this technique consist in use comprimised hosts acting as proxies
+- Domain Names (Simple)
+   → In this is used with buy, register and modify DNS
+   → Is possible the easier change using API of provider
+   → In this is possible use the tecnique Punycode this use Unicode ASCII encoding to hide the URL
+   → In shortnes a good practice is use + to check the redict
+- Network / Host Artifacts (annoying)
+   → Host
+      ⇒ In this the attacker feels annoyed and frustrated, possible change the attack tools and methodologies
+      ⇒ in this checks the traces or observables that attacker leave on the system, such as registry values, suspicious process execution, attack patterns or IOCs (indicators of compromise, files dropped by malicious applications, or anything exclusive to the current threat
+   → Network
+      ⇒ In this is used the user-agent, C2 information or URI patters followed by HTTP POST requests
+      ⇒ is possible use tshark to check this headers
+- Tools (Challenging)
+   → Antivirus signatures, detection rules, and YARA rules can be great weapons for you to use against attackers at this stage.
+   → is possible that attacker create malicious macro documents, any .EXE and .DDL files
+   → Fuzzy Hashing is also a strong weapon against the attacker's tools
+   → use of SSDeep
+- TTPS (Tough)
+   → stand for tactics, techniques and procedures
+   → if you response to the TTPs quickly, you leave the adversaries almost no chence to fight back</rich_text>
+    </node>
+    <node name="Cyber kill Chain" unique_id="151" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685940622" ts_lastsave="1685948135">
+      <rich_text>Military conceptrelated to the structure of an attack
+consist of target identificacion, decision and order to attack the target and finally the target destruction 
+
+
+Reconnaissance
+- discovering and collecting information on the system and the victim
+- email harvesting, process to obtain email from public, paid or free services, this create phishing attack
+
+Weaponization
+- this is combination of tools like malware and exploit into deliverable payload
+- malware is a program or software that is designed, disrupt or gain unauthorized access to computer
+- explort is a program or a code that takes advantage of the vulnerability of flaw in the app or system
+- payload is a molicous code that attackers run on the system
+- is possible that attacker buys the malicious software, or create
+
+Delivery
+- in this moment is decides the method for transmiting the payload or the malware
+   → phishing email:
+      ⇒ specific person by email
+      ⇒ the email contains payload or malware
+   → distributing uinfected USB drives in public places
+      ⇒ use USB like a gift
+   → Watering hole attack
+      ⇒ this is using a redirect them to the malicious website of an attacker's choice
+      ⇒ the attacker know vulnerability for the website and try to exploit it
+
+Exploitation
+- to gain access is necesary access to the system, is necessary exploiit the vulnerability
+- in this moment is when escalate the privileges or move laterally
+- lateral movement refers to the techniques that a malocious actori uses after gaining initial access
+- is possible apply a Zero-day exploit
+
+Installation
+- exists an access point or backdoor 
+- if is patched the software is lost the connection, the attacker needs install a persistent backdoor
+- is possible use:
+   → web shell on the webserver, is a script to mainten access to the compromised system, this is difficult to detect
+   → installing a backdoor on the victim's machine, like meterpreter
+   → creating or modifying windows services. know as T1543.003
+   → adding the entry to the “run keys” for the malicious payload in the registry or the startup folder
+
+Command and control
+- C2 is channel through the malware to remotely control and manipulate the victim, this is know as C&amp;C or C2 Beaconing
+- before to estableshing the connection, tha attacker has full contorl of the victim's machine
+- the most common used is:
+   → the protocol on the port 80 and 443
+   → DNS, makes constant DNS requests to the DNS server that the belongs to an attacker, DNS tunneling
+
+Actions on objectives (exfiltration)
+- collect the credentials from users
+- perform privilege escalation
+- internal reconnaissance
+- lateral movement through the company's environment
+- collect and exfiltrate sensitive data
+- deleting the backups and shadow copies
+- overwrite or corrupt data</rich_text>
+    </node>
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686119001">
+      <rich_text>this is a framework to understand how cyber attacs occur
+this framework is used to complement anothers
+
+used to explain the vairous stages of an attack, used to describe the methodology/path attackers such as hackers or APTs
+
+Threat Modelling
+- serie of steps to ultimate improve the security of a system, identify risk and essentially boils down to:
+   → identify that system and apps need to be secureand what function they serve in the environment, critical or sensitive information
+   → check vulnerabilities and weakness may have and how they could be potentially exploited
+   → Creating a plan of action
+   → Putting policies to prevent theses vulnerabilities
+- this is important to reduce risk within a system or ap
+- another frameworks: STRIDE, DREAD and CVSS
+
+Introduction the inified kill chain
+- published in 2017
+- used to complement another frameowrks
+- has 18 states to an attack
+   → reconnaissance
+   → weaponization
+   → delivery
+   → social engineering
+   → exploitation
+   → persistence
+   → defese evasion
+   → command &amp; control
+   → pivoting
+   → discovery
+   → privilege escalation
+   → execution
+   → credential access
+   → lateral movement
+   → collection
+   → exfiltration
+   → impact
+   → objective
+
+Phase: In (initial foothold)
+- the main focus is the access to system or network
+- investigate vulnerabilities of the system that can be exploited to gain foothold
+- reconnaissance
+   → techniques that an adversary employs</rich_text>
+    </node>
+    <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
+      <rich_text>Use of nmap to scan machine:
+nmap -sV {ip}
+gobuster, to brute-force URIs, directories and files, DNS subdomains and virtual host names
+in kali is possible install with apt install gobuster
+execute with gobuster dir -u </rich_text>
+      <rich_text link="webs http://{ip}:{port">http://{ip}:{port</rich_text>
+      <rich_text>} -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt
+</rich_text>
+    </node>
+    <node name="Burp suite" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686032173" ts_lastsave="1686032435">
+      <rich_text>is aframework written in Java to web application penetretion testing, this is a standard tool, used to testing APIs
+this can capture and manipulate all of the traffic between an attacker and a webserver</rich_text>
+    </node>
+  </node>
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -7736,7 +7888,7 @@ What adjectives can we use to describe </rich_text>
       <rich_text weight="heavy">NOT</rich_text>
       <rich_text scale="h3" foreground="#eff3f8"> correct?</rich_text>
     </node>
-    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1684780802">
+    <node name="Question and answer" unique_id="145" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684541659" ts_lastsave="1685304994">
       <rich_text>What are your likes and dislikes?
 - like, love and hate
 - Like, some things that is positive
@@ -7852,9 +8004,81 @@ What are you wearing to the party?
    → these, sme things that are close to the speaker
 - that and those
    → that, something that is away from the speaker
-   → those, sme things that are away from the speaker</rich_text>
+   → those, some things that are away from the speaker
+
+What is your day like?
+- let's talk about my day
+- I wake up at 6:00, </rich_text>
+      <rich_text weight="heavy">at is for specific time</rich_text>
+      <rich_text>
+- After I get up, I make my bed
+- questions:
+   → What time do you wake up?
+   → What do you do after you wake up?
+   → What time do you have breakfast
+   → What other activities do you do?
+
+What time is it?
+- 4 key expresion
+   → o'clock, en punto
+   → quarter past, a los 15 minutos
+   → half past, a la media hora, half past nine
+   → quarter to, quarter to ten
+   → past is used before 30
+   → to is used after 30
+
+Who, what, where
+- formula questions about the past
+   → wh + did + person + verb + complement?
+   → who did you go with?
+   → what did you do last weekend?
+   → where did you go?
+   → why did you go to that place?
+
+How often, how far, how long?
+- places in the city
+- how often
+   → we use it to express the frequency of an action
+   → how often do you go to the gym?
+   → use of adverbs of frequency
+- how far
+   → we use it to express distance
+   → how far is the bank
+   → use of measureaments
+- how long
+   → we use it express length, duration of an action
+   → how long does it take you to get to work?
+
+What is on your shopping list?
+- what do you want to include?
+   → I want to buy cheese and bread
+   → I want to get fresh produce
+- Countable nouns
+   → egg(s)
+   → cookie(s)
+   → apple(s)
+- Uncountable nouns and quantifiers
+   → milk
+   → bread
+   → cheese
+   → meat
+
+How much, how many?
+- how much
+   → refer to uncountable things
+   → how much bread do you want to buy?
+      ⇒ one loaf
+   → use of price of something
+      ⇒ how much is the bread?
+- how many
+   → to refer ro countable things
+   → how many cookies would you like?</rich_text>
     </node>
+<<<<<<< HEAD
     <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949634">
+=======
+    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949701">
+>>>>>>> eb20a0b3f35e8431a7984aa70b2fddec843612d2
       <rich_text>
 Cover letter: 1 page document that you should send with your resume to persuade the hiring manager to read it.
 
@@ -8139,7 +8363,227 @@ Common mistakes
 - not dressing appropriately
 - not asking questions
 - asking about holidays or bonuses at the initial interview
+<<<<<<< HEAD
 - saying that you have applied to a lot of jobs</rich_text>
+=======
+- saying that you have applied to a lot of jobs
+- making negative comments about your current job
+- not following up agter an interview</rich_text>
+    </node>
+    <node name="Adverbs and nouns" unique_id="148" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685419547" ts_lastsave="1685757050">
+      <rich_text>Questions using what and which
+- what, multiple possible answers
+- which, possible answers are limited, is possible limit as example: which color do you prefer, </rich_text>
+      <rich_text style="italic">blue or red?</rich_text>
+      <rich_text>, with context is used
+
+Questions using whose
+- asking to whom something belongs
+- in singular
+   → whose computer is it?
+   → it's jack's computer
+- in plural
+   → whose shoes are they?
+   → they're Sara's shoes
+
+Verbs of perception using can and can't
+- verbs of perception (physical senses)
+   → touch
+   → sight, see, look at, watch
+   → hearing, hear, listen to
+   → smell
+   → taste, probar
+- ability to do something in the present
+
+Vocabulary: Leisure (ocio) activities
+- hang out with friends
+- relax at the beach
+- meditate
+- go hiking
+- go snorkeling
+- go camping
+- play board games
+- go fishing
+- chill out
+- go parting
+- go bike riding
+- go for a walk
+- </rich_text>
+      <rich_text weight="heavy">RECORDING</rich_text>
+      <rich_text>
+
+Common time expressions
+- present
+   → today
+   → now - right now
+   → at the moment
+- past
+   → yesterday, the day before yesterday
+   → last (week, weekend, month, year, friday...)
+   → one, two, three (years, months, weeks, days) ago
+- future
+   → tomorrow, the day after tomorrow - tonight
+   → next (week, weekend, month, year, friday...)
+   → In one, two, three (years, months, weeks, days, hours)
+
+Personal plans and intentions for the future using “going to”
+- subject + verb to + going to + verb
+- verb + subject + going to + verb?
+- how to use:
+   → we're going to go hiking next week
+
+Talking about the future using “will”
+- is is used to talk about future possibilities
+- structure
+   → subject + (will|will not|won't) + verb
+   → will + subject + verb?
+- how to use
+   → hummanity will live on the moon in 100 years
+
+Using let's for invitations and suggestions
+- it's the short for “Let us”
+- let's + invitation/suggestion
+   → ex: let's have a drink
+
+Countable and uncountable nouns
+- countables
+   → oranges
+   → apple
+   → cookies
+   → burger
+   → carrot
+   → french fries
+- uncountable
+   → rice
+   → cheese
+   → water
+   → pasta
+   → milk
+   → cereal
+
+How many and how much
+- many
+   → use with countable nouns
+   → there are many apples
+   → are there many eggs?
+- much
+   → uncountable nouns
+   → there is much water
+   → Is there much milk?
+
+Countable plural nouns
+- form a plural noun it's necessary to add -s at the end
+- is some cases is necesary use es, when finish in consonant
+- when finish with Y replace with ies
+- wolf is wolves
+- exists exceptions:
+   → person - people
+   → woman - women
+   → man - men
+   → child - children
+   → mouse - mice
+   → foot - feet
+
+Using the article THE
+- used when you refer to something previously mentioned
+- with vowels and consonants sound different, with vowels is like i and with consonants is like e
+
+Using “would like to” to place orders and offers
+- it is used in specific orders or orders
+- would like to + offer or order
+- contraction “I'd like to”
+
+Adverbs and prepositions
+- adverbs:
+   → abroad
+   → away
+   → here
+   → there
+   → inside
+   → outside
+   → in
+   → out
+   → up
+   → down
+   → upstairs
+   → downstairs
+   → anywhere
+   → somewhore
+- Prepositions
+   → onto
+   → off
+   → over
+   → away
+   → toward
+   → past
+   → into
+   → out
+   → around
+   → under
+   → though
+   → across
+   → up
+   → down
+
+Adverbs of place and motion
+- place
+   → where something happens
+- motion
+   → specific direction of movement, is more especific
+
+Prepositions of motion
+- they show movement from one place to another
+   → onto
+   → off
+   → over, sobre
+   → away
+   → toward
+   → past
+   → into
+   → out
+   → around
+   → under
+   → through
+   → across
+   → up
+   → down
+
+using “please” with imperative verbs
+- they are used to make requests
+- help me, + please, requests
+- listen to me, + please
+- add don't for a negative requests
+
+using “because” with verb phrases
+- why? -&gt; because
+- to refer to causes and reasons
+- verb to be|can|could|must|should|will|have/has + verb = verb phrases
+   → can paint
+   → are meditating
+   → must do
+
+</rich_text>
+    </node>
+    <node name="Quantities and gerunds" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685941303" ts_lastsave="1686027078">
+      <rich_text>superlative using most and -est
+- the highest or lowest limit of a quality
+- adjective and adverbs, adjectives describe an anoun, places or something, adverbs are actions
+- the + superlative adjective + noun
+- one syllable
+   → big, biggest
+   → nice, nicest
+- two syllable
+   → happy, happiest
+   → simple, most simple
+- three or more syllables
+   → beautiful, use of most
+   → expensive, “       ”
+- irregular
+   → good, the best
+   → bad, the worst
+
+</rich_text>
+>>>>>>> eb20a0b3f35e8431a7984aa70b2fddec843612d2
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
