@@ -6844,7 +6844,7 @@ Actions on objectives (exfiltration)
 - deleting the backups and shadow copies
 - overwrite or corrupt data</rich_text>
     </node>
-    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686119077">
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686189477">
       <rich_text>this is a framework to understand how cyber attacs occur
 this framework is used to complement anothers
 
@@ -6885,13 +6885,43 @@ Introduction the inified kill chain
 Phase: In (initial foothold)
 - the main focus is the access to system or network
 - investigate vulnerabilities of the system that can be exploited to gain foothold
-- reconnaissance
+- reconnaissance, MITRE Tactic TA0043
    → techniques that an adversary employs to gather information
    → exists passive an active
    → discover what systems and services running on the target
    → finding contact lists of employees, social engineering or phishing attack
    → looking for potencial credentials
-   → understanding the network topology and other networked systems</rich_text>
+   → understanding the network topology and other networked systems
+- Weaponization MITRE Tactic TA0001
+   → set up the necessary infrastructure to perform the attack, what tools use
+- Social Engineering, MITRE Tactic TA0001
+   → manipulation of employees:
+      ⇒ getting user to open a malicious attachment
+      ⇒ Impersonating a web page and having the user enter their credentials
+      ⇒ calling or visiting the target and impersonating a user, access of a site
+- exploitation MITRE Tactic TA0002
+   → takes advantage of weakness or vulnerabilities
+      ⇒ uploading and executing a reverse shell
+      ⇒ interfering with an automated script
+      ⇒ abusing a web application vulnerability
+- Persistence
+   → mantain access to the system
+      ⇒ creating a service on the target system
+      ⇒ adding the target system to a command &amp; control
+      ⇒ Leaving other forms of backdoors
+- Defence Evasion, MITRE Tactic TA0005
+   → understand defensive techniques used in the system:
+      ⇒ web apps firewalls
+      ⇒ network firewalls
+      ⇒ anti-virus
+      ⇒ intrusion detection systems
+- Command &amp; control, MITRE Tactic TA0011
+   → combines the efforts an adversaty made during the weaponization to estabish communications
+      ⇒ execute commands
+      ⇒ steal data, credentials and other information
+      ⇒ use the controlled server to pivot to other systems
+- Pivoting, MITRE Tactic TA0008
+   → reach other systems within a network</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -14036,7 +14066,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="148" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1685390651">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1685390651">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 

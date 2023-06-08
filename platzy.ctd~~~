@@ -6844,7 +6844,7 @@ Actions on objectives (exfiltration)
 - deleting the backups and shadow copies
 - overwrite or corrupt data</rich_text>
     </node>
-    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686118902">
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686189261">
       <rich_text>this is a framework to understand how cyber attacs occur
 this framework is used to complement anothers
 
@@ -6884,7 +6884,38 @@ Introduction the inified kill chain
 
 Phase: In (initial foothold)
 - the main focus is the access to system or network
-- investigate vulnerabilities of the system that can be exploited to gain foothold</rich_text>
+- investigate vulnerabilities of the system that can be exploited to gain foothold
+- reconnaissance, MITRE Tactic TA0043
+   → techniques that an adversary employs to gather information
+   → exists passive an active
+   → discover what systems and services running on the target
+   → finding contact lists of employees, social engineering or phishing attack
+   → looking for potencial credentials
+   → understanding the network topology and other networked systems
+- Weaponization MITRE Tactic TA0001
+   → set up the necessary infrastructure to perform the attack, what tools use
+- Social Engineering, MITRE Tactic TA0001
+   → manipulation of employees:
+      ⇒ getting user to open a malicious attachment
+      ⇒ Impersonating a web page and having the user enter their credentials
+      ⇒ calling or visiting the target and impersonating a user, access of a site
+- exploitation MITRE Tactic TA0002
+   → takes advantage of weakness or vulnerabilities
+      ⇒ uploading and executing a reverse shell
+      ⇒ interfering with an automated script
+      ⇒ abusing a web application vulnerability
+- Persistence
+   → mantain access to the system
+      ⇒ creating a service on the target system
+      ⇒ adding the target system to a command &amp; control
+      ⇒ Leaving other forms of backdoors
+- Defence Evasion, MITRE Tactic TA0005
+   → understand defensive techniques used in the system:
+      ⇒ web apps firewalls
+      ⇒ network firewalls
+      ⇒ anti-virus
+      ⇒ intrusion detection systems
+- Command &amp; control</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -8072,11 +8103,7 @@ How much, how many?
    → to refer ro countable things
    → how many cookies would you like?</rich_text>
     </node>
-<<<<<<< HEAD
-    <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949572">
-=======
     <node name="interview to new work" unique_id="147" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684704473" ts_lastsave="1684949701">
->>>>>>> eb20a0b3f35e8431a7984aa70b2fddec843612d2
       <rich_text>
 Cover letter: 1 page document that you should send with your resume to persuade the hiring manager to read it.
 
@@ -8357,9 +8384,6 @@ Common mistakes
 - not being prepared
 - having your cell phone with notifications on
 - not making any eye contact
-<<<<<<< HEAD
-- bad posture</rich_text>
-=======
 - bad posture
 - not dressing appropriately
 - not asking questions
@@ -8581,7 +8605,6 @@ using “because” with verb phrases
    → bad, the worst
 
 </rich_text>
->>>>>>> eb20a0b3f35e8431a7984aa70b2fddec843612d2
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -13569,7 +13592,7 @@ mensajes efectivos de contacto
 </rich_text>
     </node>
   </node>
-  <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1651197180">
+  <node name="AWS" unique_id="79" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193071" ts_lastsave="1685390640">
     <node name="Basic" unique_id="80" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1651193078" ts_lastsave="1652038925">
       <rich_text>IAM
 - service global
@@ -14036,5 +14059,25 @@ Macreos
 		not macros witj macros
 		not support stacksets</rich_text>
     </node>
+  </node>
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1685390651">
+    <rich_text>
+*	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
+*	Comprobante de domicilio, no mayor a dos meses 
+*	Acta de Nacimiento
+*	Acta de matrimonio (En caso de aplicar; si el régimen es bienes mancomunados necesitaríamos INE y Acta de Nacimiento del conyugue)
+*	CURP 
+*	Constancia de situación fiscal del mes en curso (Para asalariados es opcional, pero si podemos conseguirla mucho mejor)
+
+
+*Últimos 3 meses de estados de cuenta donde depositen la nómina.  (Si escogemos Banamex como opción de banco, nos pedirán 6 meses)
+*Últimos 3 meses de recibos de Nómina. (Si escogemos como banco Banamex, ellos nos piden 6 meses de recibos de nòmina)
+*	Comprobante de estabilidad laboral: Si los recibos de nómina tienen su fecha de ingreso, con eso ya se está validando este requisito, en caso de que   no tengan ese dato, una carta laboral validando tu antigüedad en el trabajo.
+
+
+**En caso de que el cliente tramite su crédito como Cofinavit, se le pide lo siguiente:
+*	Precalificación a la fecha de Cofinavit (con datos del cliente: RFC, numero de seguridad social y nombre completo)
+*Pantallas de cuenta Infonavit (Pantalla de sin crédito Vigente y cuanto ahorro Tengo)
+*Tabla de amortización de crédito modalidad Cofinavit</rich_text>
   </node>
 </cherrytree>
