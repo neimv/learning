@@ -6844,7 +6844,7 @@ Actions on objectives (exfiltration)
 - deleting the backups and shadow copies
 - overwrite or corrupt data</rich_text>
     </node>
-    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686189477">
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686269870">
       <rich_text>this is a framework to understand how cyber attacs occur
 this framework is used to complement anothers
 
@@ -6921,7 +6921,45 @@ Phase: In (initial foothold)
       ⇒ steal data, credentials and other information
       ⇒ use the controlled server to pivot to other systems
 - Pivoting, MITRE Tactic TA0008
-   → reach other systems within a network</rich_text>
+   → reach other systems within a network
+
+Phase: Through (network propagation)
+- successful foothold being establishing on the target.
+- gain additional access and privileges to system and data to fulfil their goals
+- generally in internal network
+- Pivoting, MITRE Tactic TA0008
+   → in this point is necesary a tunnel between command operations and the victim's network
+   → use of malware and backdoors
+- Discovery, MITRE Tactic TA0007
+   → in this recolect data about of system and networks
+- Privilege Escalation, MITRE Tactic TA0004
+   → try gain more permissions within pivot system
+      ⇒ system/root
+      ⇒ local admin
+      ⇒ user ith admin-like access
+      ⇒ account with specific access or functions
+- Execution, MITRE Tactic TA0002
+   → connection between command operations and the victim
+   → in this moment is distribution for all malware and backdoors
+- Credential Access, MITRE Tactic TA0006
+   → working with privilege escalation, get names and passwords using multiple methods
+- Lateral Movement, MITRE Tactic TA0008
+   → moving between network and get other targeted systems
+
+Phase: Out (action on objectives)
+- in this moment the CIA is affected, exists critical asset access
+- Collection, MITRE Tactic TA0009
+   → get valuable data of interest
+   → main target sources include drives, browsers, audio, video and emial
+- Exfiltration, MITRE Tactic TA0010
+   → used of encryption measures and compression to avoid any detection
+- Impact, MITRE Tactic TA0040
+   → in this moment the data is comprimised
+   → remove accounts
+   → disk wipes
+   → and data encryption such as ransomware, defacement and DoS attack
+- objectives
+   → depending the attacker get differents objectives, money, release private and confidential information</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
