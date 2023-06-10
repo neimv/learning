@@ -6844,7 +6844,7 @@ Actions on objectives (exfiltration)
 - deleting the backups and shadow copies
 - overwrite or corrupt data</rich_text>
     </node>
-    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686269543">
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686269594">
       <rich_text>this is a framework to understand how cyber attacs occur
 this framework is used to complement anothers
 
@@ -6954,8 +6954,12 @@ Phase: Out (action on objectives)
 - Exfiltration, MITRE Tactic TA0010
    → used of encryption measures and compression to avoid any detection
 - Impact, MITRE Tactic TA0040
-   → in this moment the data is comprimised, r
-- objectives</rich_text>
+   → in this moment the data is comprimised
+   → remove accounts
+   → disk wipes
+   → and data encryption such as ransomware, defacement and DoS attack
+- objectives
+   → depending the attacker get </rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
