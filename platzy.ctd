@@ -6961,7 +6961,28 @@ Phase: Out (action on objectives)
 - objectives
    → depending the attacker get differents objectives, money, release private and confidential information</rich_text>
     </node>
-    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686332465"/>
+    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686534865">
+      <rich_text>Created by cibersecurity professionals in 2013
+four core features:
+- adversary
+- infrastructure
+- capability
+- victim
+axes:
+- social
+- political
+- technology
+
+help identify the elements of an intrusion
+analyze an Advanced Persistent threat
+
+Adversary
+- named attacker, enemy, cyber threat actor or hacker
+- is an actor or organization responsible for utilizing a capability against the civtim to achieve their intent
+- is difficult identify an adversary during the first stages
+- adversary operator: hacker or person(s) conducting the instrusion activity
+- adversary customer, entity that stands to benefit from the activity conducted in the intrusion</rich_text>
+    </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
 nmap -sV {ip}

@@ -6752,7 +6752,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686034016">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686332462">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -6844,7 +6844,7 @@ Actions on objectives (exfiltration)
 - deleting the backups and shadow copies
 - overwrite or corrupt data</rich_text>
     </node>
-    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686269594">
+    <node name="Unified kill chain" unique_id="155" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686034016" ts_lastsave="1686269870">
       <rich_text>this is a framework to understand how cyber attacs occur
 this framework is used to complement anothers
 
@@ -6959,7 +6959,26 @@ Phase: Out (action on objectives)
    → disk wipes
    → and data encryption such as ransomware, defacement and DoS attack
 - objectives
-   → depending the attacker get </rich_text>
+   → depending the attacker get differents objectives, money, release private and confidential information</rich_text>
+    </node>
+    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686534682">
+      <rich_text>Created by cibersecurity professionals in 2013
+four core features:
+- adversary
+- infrastructure
+- capability
+- victim
+axes:
+- social
+- political
+- technology
+
+help identify the elements of an intrusion
+analyze an Advanced Persistent threat
+
+Adversary
+- named attacker, enemy, cyber threat actor or hacker
+- is an actor or organization responsible for utilizing a capability against the civtim to a</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
