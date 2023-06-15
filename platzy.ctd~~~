@@ -6962,7 +6962,7 @@ Phase: Out (action on objectives)
 - objectives
    → depending the attacker get differents objectives, money, release private and confidential information</rich_text>
     </node>
-    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686794511">
+    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686794533">
       <rich_text>Created by cibersecurity professionals in 2013
 four core features:
 - adversary
@@ -7033,7 +7033,11 @@ Event meta features
       ⇒ example of use:
          • software
          • knowledge
-         • information</rich_text>
+         • information
+         • hardware
+         • funds
+         • facilties
+         • access</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
