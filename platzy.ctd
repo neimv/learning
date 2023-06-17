@@ -7047,7 +7047,25 @@ Technology component
 - describes how the adversary operates and comunicates
 - use of watering-hole, compromises legitimate websites</rich_text>
     </node>
-    <node name="MITRE" unique_id="159" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686962698" ts_lastsave="1686962702"/>
+    <node name="MITRE" unique_id="159" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686962698" ts_lastsave="1687034452">
+      <rich_text>Is associated with CVEs (common vulnerability and exposures)
+resource possible check when searching for an exploit for a given vulnerability
+is used in many areas, outside of cybersecurity
+includes artificial intelligence, health informatics, space security
+solve problems for a safer world
+APT is an acronym for advanced persistent threat
+TTP -&gt; Tactics, Techniques and Procedures
+- Tactics, adversary's goal or objective
+- Techniques, how adversary achieves
+- Procedures, how the technique is executed
+
+Frameworks:
+- ATT&amp;CK
+- CAR
+- ENGAGE
+- D3FEND
+- AEP</rich_text>
+    </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
 nmap -sV {ip}

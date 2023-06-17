@@ -6753,7 +6753,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686592370">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686962698">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7047,6 +7047,20 @@ Technology component
 - describes how the adversary operates and comunicates
 - use of watering-hole, compromises legitimate websites</rich_text>
     </node>
+    <node name="MITRE" unique_id="159" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686962698" ts_lastsave="1687033325">
+      <rich_text>Is associated with CVEs (common vulnerability and exposures)
+resource possible check when searching for an exploit for a given vulnerability
+is used in many areas, outside of cybersecurity
+includes artificial intelligence, health informatics, space security
+solve problems for a safer world
+
+Frameworks:
+- ATT&amp;CK
+- CAR
+- ENGAGE
+- D3FEND
+- AEP</rich_text>
+    </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
 nmap -sV {ip}
@@ -7057,13 +7071,16 @@ execute with gobuster dir -u </rich_text>
       <rich_text>} -w /usr/share/wordlists/dirbuster/directory-list-1.0.txt
 </rich_text>
     </node>
-    <node name="Burp suite" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686032173" ts_lastsave="1686943710">
+    <node name="Burp suite" unique_id="154" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686032173" ts_lastsave="1686959630">
       <rich_text>is aframework written in Java to web application penetretion testing, this is a standard tool, used to testing APIs
 this can capture and manipulate all of the traffic between an attacker and a webserver
 
 Burn proxy
 - the most fundamental and mos important
-- allows capture requests and responses between selves and tarr</rich_text>
+- allows capture requests and responses between selves and target
+- can manipulate or sent to other tools
+
+set owner userId upon execution) is a particular type of file permission given to a file</rich_text>
     </node>
     <node name="The Docker Rodeo" unique_id="158" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686592370" ts_lastsave="1686875172">
       <rich_text>to get data from docker registry
