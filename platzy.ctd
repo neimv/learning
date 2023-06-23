@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1685307184">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1687121650">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6027,12 +6027,30 @@ Deadlocks
 - deadlock, a situation in which two or more process are unable to proceed because each one of them is waiting for one of the others to do something
 - starvation, a situation in which a runnable process is overlooked indefinitely by the schedules
 
+Deadlock Handling methods
+- Prevention
+   → disable one or more of the necessary conditions of deadloxk
+   → necesary conditions
+      ⇒ Mutual exclusion, x
+      ⇒ hold and wait, x
+      ⇒ no preemption, x
+      ⇒ circular wait, 
+- avoidance
+   → banker algorithm
+   → in this is necessary predicts data
+- ignorance
+- detection and recovery
 
 
 x</rich_text>
       <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
       <rich_text>
+/amateur-channels/the2001xperience
 
+msg  db 'Como modelo predictivo', 0x0d, 0x0a, '$'
+msg  db 'No tengo la capacidad de', 0x0d, 0x0a, '$'
+msg  db 'Abrir ningun explorador de internet', 0x0d, 0x0a, '$'
+msg  db 'En que puedo ayudarle?', 0x0d, 0x0a, '$'
 
 
 --------------------------------------------------------------
@@ -6046,7 +6064,7 @@ Creating:
 - select option 1
 - option hd - by defualt
 - the kind of image is flat
-- the sextor size: 512
+- the sector size: 512
 - the hard disk: 10
 - name image: boot.img
 - values in output: CHS=20/16/63
@@ -6753,7 +6771,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1686962698">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687458672">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7047,7 +7065,7 @@ Technology component
 - describes how the adversary operates and comunicates
 - use of watering-hole, compromises legitimate websites</rich_text>
     </node>
-    <node name="MITRE" unique_id="159" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686962698" ts_lastsave="1687034452">
+    <node name="MITRE" unique_id="159" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686962698" ts_lastsave="1687306634">
       <rich_text>Is associated with CVEs (common vulnerability and exposures)
 resource possible check when searching for an exploit for a given vulnerability
 is used in many areas, outside of cybersecurity
@@ -7061,10 +7079,164 @@ TTP -&gt; Tactics, Techniques and Procedures
 
 Frameworks:
 - ATT&amp;CK
+   → globally-accessible knowledge base of adversary tactics and techniques based on real-world observation
+   → 2013 record and document common TTPs
+   → this was a internal project known as FMX (Fort Meade Experiment)
+   → In this emulated adversarial TTPs
+   → in begins is used with windows platform
+   → tool for blue and red team
+   → contains 14 categories
+   → is used to map a threat group to their tactics and techniques
 - CAR
+   → Cyber analytics repository
+   → is a knowledge base of analytics, this is based in ATT&amp;CK
+   → defines a data model
+   → pseudocode representation but with implementations (Splunk, EQL)
 - ENGAGE
+   → per the web site
+   → framework for planning and discussing adeversary engagement operations
+   → implementation of Cyber denial and cyber deception
+   → cyber denial, prevent the adversary's ability their operation
+   → cyber deception, intetionally plant artifacts to mislead the adversary
+   → use of engage matrix, </rich_text>
+      <rich_text link="webs https://engage.mitre.org/">https://engage.mitre.org/</rich_text>
+      <rich_text>
+   → categories:
+      ⇒ prepare, set of operational actions that will lead to youir desired outcome
+      ⇒ expose, adversaries when they trigger your deployed deception activities
+      ⇒ affect, adversaries by performing actions that will have a negative impact on their operations
+      ⇒ elicit, infomation by observing the adversary and learn more about their modus operandi (TTPs)
+      ⇒ understand, the outcome of the operational actions (output)
 - D3FEND
-- AEP</rich_text>
+   → per the D3FEND website, a knowledge graph of cybersecurity countermeasures
+   → is still in beta and funded by NSA
+   → stands: Detection, Denial and Disruption Framework Empowering Network Defense
+   → there are 408 artifacts in matrix
+   → provides:
+      ⇒ definition of technique
+      ⇒ how it works
+      ⇒ implements the technique (considerations)
+      ⇒ how to utilize the technique (example)
+- AEP
+   → ATT&amp;CK Emulation plans
+   → Adversary Emulation Library
+   → CTID, center of Threat-informed defense
+      ⇒ various companies and vendors
+      ⇒ conduct research on cyber threats and their TTPs
+   → some of companies:
+      ⇒ AttackQI (founder)
+      ⇒ Verizon
+      ⇒ Microsoft (founder)
+      ⇒ red canary (founder)
+      ⇒ splunk
+   → use of open source, methodologies and frameworks
+   → is a public library making adversary emulation plans a free resource
+   → used by blue and red teamers
+
+Threat Intelligence or Cyber threat Intelligence
+- </rich_text>
+    </node>
+    <node name="Intro to Cyber threat Intel" unique_id="160" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687379480" ts_lastsave="1687382339">
+      <rich_text>Cyber Threat Intelligence
+- evidence-based knowledge about adversaries, including:
+   → indicators
+   → tactics
+   → motivations
+   → actionable advice against them
+- use of data, information and intelligence
+   → data: discrete indicators associated with an adversary, IP, URL, hashes
+   → information: combination of multiple data points, response of questions
+   → Intelligence: correlation of data and information to extract patterns
+- understand the relationship between your operational environment and your adversary, and how to defend
+- different sources:
+   → Internal
+      ⇒ corporate security events such as vulnerability assessments and incident response reports
+      ⇒ cyber awareness training reports
+      ⇒ system logs and events
+   → community
+      ⇒ open web forums
+      ⇒ dark web comminities for cybercriminals
+   → external
+      ⇒ threat intel feed
+      ⇒ online marketplces
+      ⇒ public sources
+- threat intelligence classifications, understand the relationship between your operationa environment and your advesary, classifications:
+   → Strategic Intel, high-level intel
+   → Technical Intel, looks into evidence and artefacts of attack used by an adversary, baseline attack surface to analyze and develop defence mechanisms
+   → Tactical Intel, can strengthen secuity controls and address vulnerabilities though real-time investigations
+   → Operational Intel, looks into an adversary's specific motives and intent to perform an attack
+
+CTI Lifecycle
+- obtain from a data-churning process, transform from raw, contains 6 phases:
+- Direction
+   → objectives and goals defined
+   → information assets and business that require defending
+   → potential impact to be experienced on losing the assets or through process interruptions
+   → sources of data and intel to be used towards protection
+   → tools and resources that are arequired to defend the assets
+- Collection
+   → required data to address them
+   → it is recommended to automate this phase to provide time for triaging incidents
+- Analysis
+   → must derive insights
+   → investigating a potencional threat threat through uncovering indicators and attack patterns
+   → Defining an action plan to avert an attack and defend the infra
+   → strengthening security controls or justifying investment for additional reources
+- Dissemination
+   → use of different languages and formats
+   → technical or financial
+- Feedback
+   → implments of security controls
+   → regular interaction between teams to keep the lifecycl3 working
+
+CTI Standards &amp; Frameworks
+- MITRE ATT&amp;CK
+- TAXII
+   → the trusted automated exchange of indicator information
+   → defines protocols for securely exchanging
+   → supports two sharing models:
+      ⇒ collection: collected and hosted bu a producer upon request by users using a request-response model
+      ⇒ channel: pushed to users from a central server through a publish-subscibe model
+- STIX
+   → Structured trheat information expression
+   → language developed for the: specification, capture, characterisation and communication of standardised CTI
+- Cyber kill chain</rich_text>
+    </node>
+    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687462159">
+      <rich_text>Threat Intelligence
+- analysis of data and information using tools and techniques
+- generate meaning patterns
+- to mitigate:
+   → who's attacking you?
+   → what's their motivation?
+   → what are their capabilities?
+   → what artefacts and indicators of compromise should you look out for?
+- classifications:
+   → Strategic intel
+   → technical intel
+   → tactical intel
+   → operational intel
+
+UrlScan.io
+- use to scanning and analysing websites
+- get metadata about of the website
+- Scan Results:
+   → Summary, general information the URL, ranging IP address, domain, page history and a screenshot of the site
+   → HTTP, information of HTTP connections made by the scanner to the site
+   → Redirects, identifies redirects in the web-site
+   → Links, show all the identified links outgoing from the site's homepage
+   → Behaviour, details of the variables and cookies found on the site, indentify the frameworks used in developing the site
+   → Indicators, Lists all IPs, domains and hashes associated with the site
+
+Abuse.ch
+- research project hosted by the institute of cybersecurity and engineering
+- developed to identify and track malware and botnets
+- these platforms are:
+   → malware bazaar, sharing malware samples
+   → feodo tracker, used to track botnet commands and control, infrastructure linked with emotet, dridex and trickbot
+   → ssl blacklist, collecting and providing a blocklist of malicious SSL certificates and JA3/JA3s fingerprints
+   → url haus, sharing malware distribution sites
+   → threat fox, sharing indicatos of comprimise</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -8918,7 +9090,7 @@ using “because” with verb phrases
 
 </rich_text>
     </node>
-    <node name="Quantities and gerunds" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685941303" ts_lastsave="1686027078">
+    <node name="Quantities and gerunds" unique_id="152" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685941303" ts_lastsave="1687311206">
       <rich_text>superlative using most and -est
 - the highest or lowest limit of a quality
 - adjective and adverbs, adjectives describe an anoun, places or something, adverbs are actions
@@ -8936,7 +9108,94 @@ using “because” with verb phrases
    → good, the best
    → bad, the worst
 
-</rich_text>
+Nouns without articles
+- structures
+   → nouns - article
+- countables
+   → egg
+   → tomato
+   → box
+   → chair
+   → dog
+   → penguin
+   → child
+   → foot
+- uncountable
+   → food and drinks
+   → weather
+   → general
+   → abstract
+- zero dummy quantifier
+   → uncountable without articles
+   → people, things or situations
+   → examples:
+      ⇒ life is beautiful
+      ⇒ I don't like homework
+      ⇒ peaple are kind (amable)
+      ⇒ sunny likes apples, but not oranges
+
+Some, a lot of, lots of
+- countable and uncountables
+- affirmative, negative and questios
+- some: unspecified amount or number of something
+- a lot of/ lots of: large amount or number of something, this is interchangable
+- example:
+   → he drinks a lot of water
+   → he is drinking some water
+   → he has a lot of money
+   → he has som money
+
+Nouns with countable and uncountable meanings
+- what are the top 10 cheeses? - types
+- I'd like three coffees to go, please - cups of coffee
+- context is very important
+
+Quantifiers with of (lots, some. a bit, a lot)
+- followed by nouns, pronouns, determiners, or a possessive form before a noun
+- some, smaller
+- bit, smollest
+
+Comparative with longer adjectives
+- comparison between two or a groups of things
+- adjectives and adverbs
+- more + adjective + than
+- adjectives
+   → beautiful
+   → interesting
+   → expensive
+   → dangerous
+   → intelligent
+   → difficult
+- example:
+   → maths is more difficult than english
+
+rules:
+- general add -er
+- if ends with e add -r
+- if ends in consonant + single vowel + consonant, double consonant and add -er
+- if ends with consonant + y change to -ier
+- more of 2 syllables add more in front
+- irregulars:
+   → bad - worse
+   → far - farther/further
+   → good - better
+   → little - less
+   → much - more
+
+Adverbs of frequency
+- always
+- usually
+- sometimes
+- hardly ever
+- never
+- usually go in the mid position
+- always, never and ever don't usually go in the front position
+
+Adverbs and adjectives
+- -ly
+- adjectives describe things
+- adverbs, describes perform actions, describe adjectives
+- adverbs = adjectives + -ly</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
@@ -14392,7 +14651,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1685390651">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687476259">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 
@@ -14410,6 +14669,8 @@ Macreos
 **En caso de que el cliente tramite su crédito como Cofinavit, se le pide lo siguiente:
 *	Precalificación a la fecha de Cofinavit (con datos del cliente: RFC, numero de seguridad social y nombre completo)
 *Pantallas de cuenta Infonavit (Pantalla de sin crédito Vigente y cuanto ahorro Tengo)
-*Tabla de amortización de crédito modalidad Cofinavit</rich_text>
+*Tabla de amortización de crédito modalidad Cofinavit
+
+</rich_text>
   </node>
 </cherrytree>
