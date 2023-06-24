@@ -7202,7 +7202,7 @@ CTI Standards &amp; Frameworks
    → language developed for the: specification, capture, characterisation and communication of standardised CTI
 - Cyber kill chain</rich_text>
     </node>
-    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687558981">
+    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687558918">
       <rich_text>Threat Intelligence
 - analysis of data and information using tools and techniques
 - generate meaning patterns
@@ -7264,8 +7264,7 @@ PhishTool
    → Received Lines: track of SMTP servers for tracing purposes
    → X-headers: extension of headers, additional information
    → Security: Detail on emial, Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication, Reporting and Conformance (DMARC)
-   → Attachnments: files found in the email
-   → Message URLs: Associated external URLs found in the email</rich_text>
+   → Attachnments: files found in the email</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -14680,7 +14679,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687589713">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687476259">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 
@@ -14700,8 +14699,6 @@ Macreos
 *Pantallas de cuenta Infonavit (Pantalla de sin crédito Vigente y cuanto ahorro Tengo)
 *Tabla de amortización de crédito modalidad Cofinavit
 
-bin/SSHcrack.exe
-admin
-1212</rich_text>
+</rich_text>
   </node>
 </cherrytree>
