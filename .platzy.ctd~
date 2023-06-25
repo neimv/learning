@@ -6771,7 +6771,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687458672">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687637289">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7202,7 +7202,7 @@ CTI Standards &amp; Frameworks
    → language developed for the: specification, capture, characterisation and communication of standardised CTI
 - Cyber kill chain</rich_text>
     </node>
-    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687558981">
+    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687633710">
       <rich_text>Threat Intelligence
 - analysis of data and information using tools and techniques
 - generate meaning patterns
@@ -7265,7 +7265,72 @@ PhishTool
    → X-headers: extension of headers, additional information
    → Security: Detail on emial, Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication, Reporting and Conformance (DMARC)
    → Attachnments: files found in the email
-   → Message URLs: Associated external URLs found in the email</rich_text>
+   → Message URLs: Associated external URLs found in the email
+
+Cisco Talos Intelligence
+- this is a large team of security practicioners
+- provide actionable intelligence, visibility on indicators and proteccion agains emerging threats
+- six key teams:
+   → Threat intelligence &amp; interdiction: quick correlation and tracking of threats
+   → Detection Research: vulnerability and malware analysis, create rules and content
+   → Engineering &amp; Development: provides the maintenance support
+   → vulnerability research &amp; discovery: working with service and software vendors to develop repeatable means of identifying and reporting security vulnerabilities
+   → Communities: maintains the image of the team and the open-source solutions
+   → global outreach: disseminates intelligence to costumers and the security community through publications</rich_text>
+    </node>
+    <node name="Yara" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687637289" ts_lastsave="1687643910">
+      <rich_text>Yet Another Ridiculous Acronym
+
+What is
+- the pattern matching swiss knife form malware researchers
+- use of rules to label patterns
+- strings is fundamental to search the patterns
+
+Yara rules
+- use rules
+- only effectives when understarnding of the patterns to search
+- requires two arguments
+   → the rule file
+   → name of of file, directory or process ID to use the rule for
+- every rule must have a name and condition
+- .yar is standard file extension
+- conditions in yara:
+   → Desc
+      ⇒ short of description
+   → Meta
+      ⇒ reserved for descriptive information
+      ⇒ does not influence the rule itself
+   → Strings
+      ⇒ use of strings to search for specific text or hexadecimal in files or programs
+      ⇒ the variables defined as $VAR
+      ⇒ is necessary add condition to search
+      ⇒ with multiple values use in condition: any of them
+   → Conditions
+      ⇒ in this is possible use relational operators to match or use any of then to use all or true to check if file exists
+   → Weight
+
+Yara Modules
+- Cuckoo sandbox or python's PE module allow improve the technicality of yara rules
+- Cuckoo is an automated malware analysis environment
+- Python PE: allow crete Yara rules from the various sections and elements of the windows portable executable structure
+
+Other tools and Yara
+- exists multiple github resoureces and open-source tools to be utilized
+- LOKI
+   → free open-source IOS (Indicator of Compromise)
+   → based in 4 methods:
+      ⇒ File name ioc check
+      ⇒ yara rule check
+      ⇒ hash check
+      ⇒ c2 back connect check
+   → is possible use in win and linux
+- THOR
+   → multi-platform IOC and YARA scanner
+   → exists precompiled versions for windows, linux and macos
+- FENRIR
+   → is a bash script; it will run on any system capable of running bash
+- YAYA (Yet another Yara Automation)
+   → is a new open source tool to help researchers manage multiple YARA rule repositories. YAYA starts by importing a set of high-quality YARA rules and then lets reserchers add their own rules, dia</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -14680,7 +14745,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687589678">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687589713">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 
@@ -14700,6 +14765,8 @@ Macreos
 *Pantallas de cuenta Infonavit (Pantalla de sin crédito Vigente y cuanto ahorro Tengo)
 *Tabla de amortización de crédito modalidad Cofinavit
 
-bin/SSHcrack.exe</rich_text>
+bin/SSHcrack.exe
+admin
+1212</rich_text>
   </node>
 </cherrytree>
