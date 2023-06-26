@@ -7278,7 +7278,7 @@ Cisco Talos Intelligence
    → Communities: maintains the image of the team and the open-source solutions
    → global outreach: disseminates intelligence to costumers and the security community through publications</rich_text>
     </node>
-    <node name="Yara" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687637289" ts_lastsave="1687643910">
+    <node name="Yara" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687637289" ts_lastsave="1687724108">
       <rich_text>Yet Another Ridiculous Acronym
 
 What is
@@ -7330,7 +7330,19 @@ Other tools and Yara
 - FENRIR
    → is a bash script; it will run on any system capable of running bash
 - YAYA (Yet another Yara Automation)
-   → is a new open source tool to help researchers manage multiple YARA rule repositories. YAYA starts by importing a set of high-quality YARA rules and then lets reserchers add their own rules, dia</rich_text>
+   → is a new open source tool to help researchers manage multiple YARA rule repositories. YAYA starts by importing a set of high-quality YARA rules and then lets reserchers add their own rules, disable specific rulesets, and run scans of files
+
+Using loki and its Yara rule set
+- Loki contains some rules created to use
+- Is possible add own rules based in my forensics reports
+
+Creating Yara rules with yarGen
+- used to create own rules
+- this is a generator for YARA rules
+
+Valhalla
+- online yara feed created and hosted
+- </rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
