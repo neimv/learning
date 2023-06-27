@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1687121650">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1687827217">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6041,16 +6041,26 @@ Deadlock Handling methods
 - ignorance
 - detection and recovery
 
+Introduction to File systems
+- any data in hard disk is a file
+- files con be various formats
+- no. blocks = HD size / block size
+- the files are diveded in blocks
+- files use complete blocks, if the data is lowest of space is used this space and it is free the space, el espacio es restado y nos quedamos con el restante
+- all OS contains functions to manage files using languages of programming
+- attributes:
+   → name of a file
+   → type of a file
+   → location of a file
+   → size of a file
+   → protection information o a file
+   → time and date
+
 
 x</rich_text>
       <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
       <rich_text>
 /amateur-channels/the2001xperience
-
-msg  db 'Como modelo predictivo', 0x0d, 0x0a, '$'
-msg  db 'No tengo la capacidad de', 0x0d, 0x0a, '$'
-msg  db 'Abrir ningun explorador de internet', 0x0d, 0x0a, '$'
-msg  db 'En que puedo ayudarle?', 0x0d, 0x0a, '$'
 
 
 --------------------------------------------------------------
@@ -6771,7 +6781,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687637289">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687811761">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7278,7 +7288,7 @@ Cisco Talos Intelligence
    → Communities: maintains the image of the team and the open-source solutions
    → global outreach: disseminates intelligence to costumers and the security community through publications</rich_text>
     </node>
-    <node name="Yara" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687637289" ts_lastsave="1687724077">
+    <node name="Yara" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687637289" ts_lastsave="1687749304">
       <rich_text>Yet Another Ridiculous Acronym
 
 What is
@@ -7342,6 +7352,37 @@ Creating Yara rules with yarGen
 
 Valhalla
 - online yara feed created and hosted</rich_text>
+    </node>
+    <node name="OpenCTI" unique_id="163" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811604" ts_lastsave="1687811607">
+      <rich_text>open-source threat intelligence platform</rich_text>
+    </node>
+    <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
+      <rich_text>Security Incident Response Platform
+
+Introdution
+- scalable, open-source and freely available security incident response platform
+- assist security analysts and practitioners working in SOCs, CSIRTs and CERTs
+- core functions:
+   → Collaborate, multiple analyst from one organisation can work together, real time
+   → Elaborate, Investigations correspond to cases, broken down into associated tasks, created from scratch or using a template
+   → Act, quick traiging process can be supported by allowing analyst to add observables to their case
+
+Features and Integrations
+- support analyst workflows, faetures
+   → Case/task Management, Every investigation is meant to correspond to a case that has been created, broken down into one or more tasks for added granularity
+   → Alert triage, Cases can be imported from SIEM alerts, email reports and other security event sources
+   → Observable Enrichment with cortex, supports cortex, an observable analysis and active response engine.
+   → Active response, allos analystys to use responders and run active actions to communicate, share information about incidents and prevent or contain a threat
+   → Custom dashboard, Statistics on cases, tasks, observables, metrics and more can be compiled and distributed on dashboards
+   → Built-in MISP Integration, useful integration is with MISP, platform for sharing, storing and correlating indicators of compromise of targeted attacks and other threats
+
+User profiles and permissions
+- create an organisation group to identfy the analysts and assign different roles based on a list of pre-configured user profiles
+- preconfigured user profiles:
+   → admin, full administrative permissions on the platform; limited to cases or investigations
+   → org-admin, manage users and all organisation-level configuration, can create and edit cases, tasks, observables and run analysers and responders
+   → analyst, can create and edit cases, tasks, observables and run analysers and reponders
+   → read-only, can only read, cases, tasks and observables details</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
