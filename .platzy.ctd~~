@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1687827217">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163644">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6053,8 +6053,59 @@ Introduction to File systems
    → type of a file
    → location of a file
    → size of a file
-   → protection information o a file
+   → protection information o a file, read/write/delete
    → time and date
+- contains logical and phisical address
+
+Understanding File Access using System calls
+- firts is created in ram, system call the application to create files
+- use of create(file) to save file in HDD
+- the file is split in blocks
+- is possible that file is in contigous allocation or not
+- File control block, manage a attributes in ram, does not exists filename, only location, size, access, type
+- open(), this is a system call, return a pointer
+- per process open file table
+- read and write calls, read use a pointer (dir of file)
+- operations:
+   → creating
+   → reading
+   → writing
+   → repositioning
+   → deleting
+   → truncating
+
+File allocation methods
+- Contigous method
+   → simple to implement
+   → time taken to read a file is very less
+   → random access is very access
+   → dis: size declaration problem
+   → dis: external fragmentation problem, empty blocks when delete a files
+   → dis: internal fragmentation problem
+
+Linked list allocation
+- non contiguos
+- every file contains the address of next file block, in the begining or end
+- the last file contain a null
+- advantages:
+   → no size declaration problem
+   → no external fragmentation
+- disadvantages
+   → time to read/write a file is very high
+   → random access takes lot of time
+   → pointers waste few bytes in every block
+   → internal fragmentation
+
+Fat allocation method
+- file allocation table
+   → number of entries in fat = number of disk blocks in hard disk
+- advantages:
+   → no size declaration problem
+   → no external fragmentation problem
+   → random access is easier
+- size of FAT = no. of entries in FAT * Size of a single entry
+   → no. entries FAT = of disk blocks * size of single entry
+   → 
 
 
 x</rich_text>
@@ -6781,7 +6832,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687811761">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1688145986">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7353,8 +7404,104 @@ Creating Yara rules with yarGen
 Valhalla
 - online yara feed created and hosted</rich_text>
     </node>
-    <node name="OpenCTI" unique_id="163" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811604" ts_lastsave="1687811607">
-      <rich_text>open-source threat intelligence platform</rich_text>
+    <node name="OpenCTI" unique_id="163" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811604" ts_lastsave="1687999015">
+      <rich_text>open-source threat intelligence platform
+
+Data model
+- uses a variety of knowledge schemas in structuring data
+- STIX us a serialised and standardised language format
+- implemented as entities and relationships
+- highlight services:
+   → GraphQL API: to connect clients to the database and the messaging system
+   → Write workers: write queries asynchronously from RabbitMQ, use python
+   → Connectors: set of Python processes used to ingest, enrich or export data on the platform
+</rich_text>
+    </node>
+    <node name="MISP" unique_id="165" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687886078" ts_lastsave="1687886640">
+      <rich_text>Malware Information Sharing Platform
+
+What is?
+- an open source threat information platform that facilities the collection, storage and distribution of threat IOCs
+- distributed model, with supported closed, semi-private and open communities
+- uses:
+   → Malware reverse engineering
+   → security investigations
+   → intelligence analysis
+   → law enforcement
+   → risk analysis
+   → fraud analysis
+- support:
+   → IOC database, technical and non-technical information
+   → automatic correlation
+   → data sharing
+   → import and export features
+   → event graph
+   → API support
+- common terms:
+   → event
+   → attributes
+   → objects
+   → object references
+   → sightings
+   → tags
+   → taxonomies
+   → galaxies
+   → indicators</rich_text>
+    </node>
+    <node name="Traffic Analysis Essencials" unique_id="166" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688053049" ts_lastsave="1688063745">
+      <rich_text>Network security and Network Data
+- use of authentication and authorisation
+- three base control levels:
+   → physical, prevent unauthorised physical access to networking devices
+   → technical, data security controls, use of tunnels and security layers
+   → administrative, creation of policies, access level and authentication processes
+- access control, controls to ensure authenticacion and authorisation
+- threat control, detecting and preventing anomalous/malicious activities
+- managed security services:
+   → Network penetration testing, simulation of external and internal attacker
+   → vulnerability assesment, discovering and analysing vulnerabilities in the environment
+   → incident response, set of actions to identify, contain and eliminate incidents
+   → behavioural analysis, use of specific patterns to detect anomalies, threats, vulnerabilities and attacks
+
+Traffic Analysis
+- method to intercepting, recording/monitoring and analysing network data and communication
+- detect and response to system health issues, network anomalies and threats
+- use of two techniques:
+   → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case
+   → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>
+    </node>
+    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688147864">
+      <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)
+
+Introduction to IDS/IPS
+- Intrusion detection system
+   → passive monitoring
+   → two types of IDS:
+      ⇒ Network intrusion detection system, monitors the traffic flow from various areas of network, investigate the traffic on the entire subnet
+      ⇒ Host-based intrusion detection system, monitors the traffic flow from a single endpoint
+- Intrusion prevention system
+   → active protecting solution
+   → responsible for stopping/preventing/terminating the suspicous event
+   → exists 4 main types of IPS systems:
+      ⇒ Network intrusion prevention system, monitors the traffic flow from various areas of the network
+      ⇒ Behavious-based intrusion prevention system, monitor the traffic flow from various areas of the network, this required time of training ("baselining")
+      ⇒ wireless intrusion prevention system, monitors the traffic from of wireless network
+      ⇒ host-based intrusion prevention system, wireless from a single endpoint
+- Techniques:
+   → signature-based, relies on rules that identify the specific patterns, use to known threats
+   → behaviour-based, new threats and new patterns, models compare the known/normal with unknown/abnormal behaviours
+   → Policy-based, detected activities with system configuration and security policies
+- snort has three primary uses: as a packet sniffer like tcpdump, packet logger - for network traffic debugging, full-blown network intrusion prevention system.
+- snort is a NIDS and NIPS
+- capabilities:
+   → live traffic analysis
+   → attack and probe detection
+   → packet logging
+   → protocol analysis
+   → real-time alerting
+   → modules &amp; plugins
+   → pre-processors
+   → cross-platform support</rich_text>
     </node>
     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
       <rich_text>Security Incident Response Platform
