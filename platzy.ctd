@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163768">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688416633">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6106,7 +6106,8 @@ Fat allocation method
 - size of FAT = no. of entries in FAT * Size of a single entry
    → no. entries FAT = of disk blocks * size of single entry
    → (m * log_2 m) bits
-- 
+
+
 
 
 x</rich_text>
@@ -7471,7 +7472,7 @@ Traffic Analysis
    → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case
    → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>
     </node>
-    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688147864">
+    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688412004">
       <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)
 
 Introduction to IDS/IPS
@@ -7502,7 +7503,10 @@ Introduction to IDS/IPS
    → real-time alerting
    → modules &amp; plugins
    → pre-processors
-   → cross-platform support</rich_text>
+   → cross-platform support
+
+Snort in IDS/IPS mode
+- </rich_text>
     </node>
     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
       <rich_text>Security Incident Response Platform

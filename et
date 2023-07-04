@@ -1,0 +1,153 @@
+[1mdiff --git a/.platzy.ctd~ b/.platzy.ctd~[m
+[1mindex 4ca438b..95469fd 100644[m
+[1m--- a/.platzy.ctd~[m
+[1m+++ b/.platzy.ctd~[m
+[36m@@ -5647,7 +5647,7 @@[m [mSubpantillas (patials)[m
+ - se invocan con {{- template “nombre plantilla” }}[m
+ - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>[m
+     </node>[m
+[31m-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163721">[m
+[32m+[m[32m    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163768">[m
+       <rich_text>Introduction[m
+ - combination of hardware, software and data used to solve problems[m
+ - level of important[m
+[36m@@ -6106,6 +6106,7 @@[m [mFat allocation method[m
+ - size of FAT = no. of entries in FAT * Size of a single entry[m
+    → no. entries FAT = of disk blocks * size of single entry[m
+    → (m * log_2 m) bits[m
+[32m+[m[32m-[m[41m [m
+ [m
+ [m
+ x</rich_text>[m
+[36m@@ -7470,7 +7471,7 @@[m [mTraffic Analysis[m
+    → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case[m
+    → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>[m
+     </node>[m
+[31m-    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688147864">[m
+[32m+[m[32m    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688412004">[m
+       <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)[m
+ [m
+ Introduction to IDS/IPS[m
+[36m@@ -7501,7 +7502,10 @@[m [mIntroduction to IDS/IPS[m
+    → real-time alerting[m
+    → modules &amp; plugins[m
+    → pre-processors[m
+[31m-   → cross-platform support</rich_text>[m
+[32m+[m[32m   → cross-platform support[m
+[32m+[m
+[32m+[m[32mSnort in IDS/IPS mode[m
+[32m+[m[32m- </rich_text>[m
+     </node>[m
+     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">[m
+       <rich_text>Security Incident Response Platform[m
+[1mdiff --git a/.platzy.ctd~~ b/.platzy.ctd~~[m
+[1mindex 6a7772d..bc93687 100644[m
+[1m--- a/.platzy.ctd~~[m
+[1m+++ b/.platzy.ctd~~[m
+[36m@@ -5647,7 +5647,7 @@[m [mSubpantillas (patials)[m
+ - se invocan con {{- template “nombre plantilla” }}[m
+ - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>[m
+     </node>[m
+[31m-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163644">[m
+[32m+[m[32m    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163768">[m
+       <rich_text>Introduction[m
+ - combination of hardware, software and data used to solve problems[m
+ - level of important[m
+[36m@@ -6105,7 +6105,8 @@[m [mFat allocation method[m
+    → random access is easier[m
+ - size of FAT = no. of entries in FAT * Size of a single entry[m
+    → no. entries FAT = of disk blocks * size of single entry[m
+[31m-   → [m
+[32m+[m[32m   → (m * log_2 m) bits[m
+[32m+[m[32m-[m[41m [m
+ [m
+ [m
+ x</rich_text>[m
+[36m@@ -7470,7 +7471,7 @@[m [mTraffic Analysis[m
+    → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case[m
+    → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>[m
+     </node>[m
+[31m-    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688147864">[m
+[32m+[m[32m    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688406856">[m
+       <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)[m
+ [m
+ Introduction to IDS/IPS[m
+[36m@@ -7501,7 +7502,9 @@[m [mIntroduction to IDS/IPS[m
+    → real-time alerting[m
+    → modules &amp; plugins[m
+    → pre-processors[m
+[31m-   → cross-platform support</rich_text>[m
+[32m+[m[32m   → cross-platform support[m
+[32m+[m
+[32m+[m[32m</rich_text>[m
+     </node>[m
+     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">[m
+       <rich_text>Security Incident Response Platform[m
+[1mdiff --git a/.platzy.ctd~~~ b/.platzy.ctd~~~[m
+[1mindex ea4050b..9a50561 100644[m
+[1m--- a/.platzy.ctd~~~[m
+[1m+++ b/.platzy.ctd~~~[m
+[36m@@ -5647,7 +5647,7 @@[m [mSubpantillas (patials)[m
+ - se invocan con {{- template “nombre plantilla” }}[m
+ - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>[m
+     </node>[m
+[31m-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163624">[m
+[32m+[m[32m    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163768">[m
+       <rich_text>Introduction[m
+ - combination of hardware, software and data used to solve problems[m
+ - level of important[m
+[36m@@ -6104,7 +6104,9 @@[m [mFat allocation method[m
+    → no external fragmentation problem[m
+    → random access is easier[m
+ - size of FAT = no. of entries in FAT * Size of a single entry[m
+[31m-   → = no. entries FAT = of disk[m
+[32m+[m[32m   → no. entries FAT = of disk blocks * size of single entry[m
+[32m+[m[32m   → (m * log_2 m) bits[m
+[32m+[m[32m-[m[41m [m
+ [m
+ [m
+ x</rich_text>[m
+[1mdiff --git a/platzy.ctd b/platzy.ctd[m
+[1mindex 9a50561..0375742 100644[m
+[1m--- a/platzy.ctd[m
+[1m+++ b/platzy.ctd[m
+[36m@@ -5647,7 +5647,7 @@[m [mSubpantillas (patials)[m
+ - se invocan con {{- template “nombre plantilla” }}[m
+ - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>[m
+     </node>[m
+[31m-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163768">[m
+[32m+[m[32m    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688416633">[m
+       <rich_text>Introduction[m
+ - combination of hardware, software and data used to solve problems[m
+ - level of important[m
+[36m@@ -6106,7 +6106,8 @@[m [mFat allocation method[m
+ - size of FAT = no. of entries in FAT * Size of a single entry[m
+    → no. entries FAT = of disk blocks * size of single entry[m
+    → (m * log_2 m) bits[m
+[31m-- [m
+[32m+[m
+[32m+[m
+ [m
+ [m
+ x</rich_text>[m
+[36m@@ -7471,7 +7472,7 @@[m [mTraffic Analysis[m
+    → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case[m
+    → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>[m
+     </node>[m
+[31m-    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688147864">[m
+[32m+[m[32m    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688412004">[m
+       <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)[m
+ [m
+ Introduction to IDS/IPS[m
+[36m@@ -7502,7 +7503,10 @@[m [mIntroduction to IDS/IPS[m
+    → real-time alerting[m
+    → modules &amp; plugins[m
+    → pre-processors[m
+[31m-   → cross-platform support</rich_text>[m
+[32m+[m[32m   → cross-platform support[m
+[32m+[m
+[32m+[m[32mSnort in IDS/IPS mode[m
+[32m+[m[32m- </rich_text>[m
+     </node>[m
+     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">[m
+       <rich_text>Security Incident Response Platform[m
