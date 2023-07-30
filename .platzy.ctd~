@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1685939072">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1688584989">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1686616588">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4662,7 +4662,7 @@ Management and run levels
       <rich_text weight="heavy">lvdisplay</rich_text>
       <rich_text>, to show all logical volumes
       ⇒ </rich_text>
-      <rich_text weight="heavy">mkfs.xfe {logical volume} </rich_text>
+      <rich_text weight="heavy">mkfs.xfs {logical volume} </rich_text>
       <rich_text>-&gt; /dev/{logical vg}/{logical volume}
       ⇒ mount volume in folder
    → to extends
@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688163768">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688931116">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6106,7 +6106,13 @@ Fat allocation method
 - size of FAT = no. of entries in FAT * Size of a single entry
    → no. entries FAT = of disk blocks * size of single entry
    → (m * log_2 m) bits
+
+Indexed allocation Method
+- FAT table to entries of direction of “file”
+- with random access is very fast to access to files
+- use of Inode to index files in linux
 - 
+
 
 
 x</rich_text>
@@ -6832,8 +6838,36 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
     <node name="intro al Backend" unique_id="144" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684292553" ts_lastsave="1684292837">
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
+    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1688524216"/>
+    <node name="docker-security" unique_id="169" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688584989" ts_lastsave="1688587132">
+      <rich_text>tools:
+	AQUA, Prisma Cloud, Snyk, commercial tools
+	free or open source: snyk community edition, trivy
+	GIT secrets, security plugins in any IDE, trufflehog
+		sonarqube - quality code
+		sast - fortify, veracode, checkmarx
+		sca - fortify, veracode, blackduck, snyk
+		dast - owasp zap, webinspect, veracode, dast, acunetix
+		iac - bridfecrew, synk
+		containers - aqua, qualys, prismacloud
+	pipeline tools, jenkins, aws, github actions, gitlab
+	cloud security posture management tools - aqua, bridgecrew
+	container registry scanning tools - aqua, aws native registry scanning
+	infrastructure scanning tools - chef inspect, nessus
+	cloud security tools - aws security hub, azure defender
+	
+	
+basic terms
+- SAST, static application security testing, whitebox
+- SCA, software composition analysis
+- DAST, dynamic application security testing, black-box security testing
+- IAST, interactive application security testing, inlcude sast and dast
+- IAC, infrastructure as code
+- API security, process to identify security issues in API
+- shift left approach is devsecops</rich_text>
+    </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1688145986">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1690415989">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7471,7 +7505,7 @@ Traffic Analysis
    → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case
    → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>
     </node>
-    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1688412004">
+    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1690330125">
       <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)
 
 Introduction to IDS/IPS
@@ -7504,8 +7538,47 @@ Introduction to IDS/IPS
    → pre-processors
    → cross-platform support
 
-Snort in IDS/IPS mode
-- </rich_text>
+Use snort
+- sudo snort -c /etc/snort/snort.conf -T -&gt; testing configuration
+- snort -V -&gt; show version
+- rules:
+   → action: Alert | Drop | Reject | Log
+   → Protocol: TCP | UDP | ICMP
+   → Source IP
+   → Source Port
+   → Direction: &lt;&gt; | -&gt;
+   → Destination IP
+   → Destination Port
+   → Options: (msg;flags;References;Sid;Rev)
+- possible filter using flags:
+   → F - FIN
+   → S - SYN
+   → R - RST
+   → P - PSH
+   → A - ACK
+   → U - URG
+- or using dsize: dsize:min&lt;&gt;max
+- using in references the sameip is to check if is same ip source and destination
+
+####
+Challenge
+- commands:
+   → snort -c local.rules -A full -l . -r mx-3.pcap
+   → snort -r {logfile}
+   → snort -r {logfile} -n {port}
+   → snort -r {logfile} -X -n {port} | to show more information, get name of FTP
+   → in rules use of content: “{string to search}” to search strings
+   → mode sniffer: sudo snort -v -l . &amp;&amp; sudo snort -r {logs} -X</rich_text>
+    </node>
+    <node name="network minner" unique_id="170" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1690415989" ts_lastsave="1690416408">
+      <rich_text>Open source traffic snipper, pcap handler and protocol analyzer
+Network Forensic Analysis Tool for windows
+is used as a passive network sniffer/packet capturing tool to detect OS, sessions, hostnames, open ports, without putting any traffic on the network
+release 2007
+answer the 5W:
+- who (source IP and port)
+- what (data/payload)
+- where </rich_text>
     </node>
     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
       <rich_text>Security Incident Response Platform
@@ -14948,7 +15021,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687589713">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1689612800">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 
@@ -14958,9 +15031,9 @@ Macreos
 *	Constancia de situación fiscal del mes en curso (Para asalariados es opcional, pero si podemos conseguirla mucho mejor)
 
 
-*Últimos 3 meses de estados de cuenta donde depositen la nómina.  (Si escogemos Banamex como opción de banco, nos pedirán 6 meses)
-*Últimos 3 meses de recibos de Nómina. (Si escogemos como banco Banamex, ellos nos piden 6 meses de recibos de nòmina)
-*	Comprobante de estabilidad laboral: Si los recibos de nómina tienen su fecha de ingreso, con eso ya se está validando este requisito, en caso de que   no tengan ese dato, una carta laboral validando tu antigüedad en el trabajo.
+• Últimos 3 meses de estados de cuenta donde depositen la nómina.  (Si escogemos Banamex como opción de banco, nos pedirán 6 meses)
+• Últimos 3 meses de recibos de Nómina. (Si escogemos como banco Banamex, ellos nos piden 6 meses de recibos de nòmina)
+• Comprobante de estabilidad laboral: Si los recibos de nómina tienen su fecha de ingreso, con eso ya se está validando este requisito, en caso de que   no tengan ese dato, una carta laboral validando tu antigüedad en el trabajo.
 
 
 **En caso de que el cliente tramite su crédito como Cofinavit, se le pide lo siguiente:
@@ -14970,6 +15043,10 @@ Macreos
 
 bin/SSHcrack.exe
 admin
-1212</rich_text>
+1212
+
+
+bench update --reset
+bench --site zecore-dev.localhost migrate</rich_text>
   </node>
 </cherrytree>
