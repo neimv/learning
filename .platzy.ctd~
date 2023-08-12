@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1688931116">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1691711252">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6111,9 +6111,25 @@ Indexed allocation Method
 - FAT table to entries of direction of “file”
 - with random access is very fast to access to files
 - use of Inode to index files in linux
-- 
 
+Free space managment
+- main responsability of file system is to allocate disk blocks to blocks of files and keep track of these files
 
+Understanding the structure of hard disk
+- exists multiple platters
+- divided in tracks and tracks in blocks, cylinder is a set of tracks in the same space
+- seek time, read/write head move between tracks
+- rotational latency, change between blocks
+- data transfer latency, reading the complete block
+- the algortithm to process requests depending of track moments
+
+Disk Scheduling algorithms
+- FCFS, requests I/O first will be satisfied first by the hd
+   → adv: no starvation of a request
+   → depending of time of execution to scheduling the task
+- total seek time = no. of cylinders movenment * total time of cross 1 cylinder
+- SSTF (shortest seek time first), select the requests that requires the least movement of the disk arm from its current position,regardless of th eposition
+   → adv: starvation problem
 
 x</rich_text>
       <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
@@ -6867,7 +6883,7 @@ basic terms
 - shift left approach is devsecops</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1690415989">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1691629270">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7570,7 +7586,7 @@ Challenge
    → in rules use of content: “{string to search}” to search strings
    → mode sniffer: sudo snort -v -l . &amp;&amp; sudo snort -r {logs} -X</rich_text>
     </node>
-    <node name="network minner" unique_id="170" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1690415989" ts_lastsave="1690416408">
+    <node name="network minner" unique_id="170" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1690415989" ts_lastsave="1690416445">
       <rich_text>Open source traffic snipper, pcap handler and protocol analyzer
 Network Forensic Analysis Tool for windows
 is used as a passive network sniffer/packet capturing tool to detect OS, sessions, hostnames, open ports, without putting any traffic on the network
@@ -7578,7 +7594,9 @@ release 2007
 answer the 5W:
 - who (source IP and port)
 - what (data/payload)
-- where </rich_text>
+- where (destination IP and port)
+- when (time and data)
+- why (how/what happend)</rich_text>
     </node>
     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
       <rich_text>Security Incident Response Platform
@@ -7805,6 +7823,7 @@ Defenses:
    → images with verified publisher tag
    → docker certified images</rich_text>
     </node>
+    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1691629270"/>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
