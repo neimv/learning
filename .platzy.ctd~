@@ -6854,7 +6854,9 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
     <node name="intro al Backend" unique_id="144" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684292553" ts_lastsave="1684292837">
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
-    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1688524216"/>
+    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1691712126">
+      <rich_text>Password maquina virtual: </rich_text>
+    </node>
     <node name="docker-security" unique_id="169" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688584989" ts_lastsave="1688587132">
       <rich_text>tools:
 	AQUA, Prisma Cloud, Snyk, commercial tools
@@ -7823,7 +7825,32 @@ Defenses:
    → images with verified publisher tag
    → docker certified images</rich_text>
     </node>
-    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1691629270"/>
+    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1691868458">
+      <rich_text>Broken access control
+- access to page without authorization
+- view sensitive information from other users
+- accesing unauthorized functionality
+
+IDOR
+- Insecure direct object reference
+- accesing using id or another identifier
+
+Cryptographic failures
+- misuse or lack of use of cryp algo for protecting sensitive information
+- use of encrypting data in transit, connect between user and pages
+- encrypting data at rest, save data in server using cyphers
+- common use of the techniques like man in he middle attacks
+- does not necesary adavenced networking knowledge
+
+Injection
+- interpreted user-controlled input as commands or parameters
+- depending of technology and how these technologies interpret the input
+- SQL injection: use of sql queries in input, use to get, modify and delete information
+- command Injection: use of system commands
+- how to avoid:
+   → using an allow list: input is compared to a list of safe inputs or characters, launch errors if is not secure
+   → stripping input: contains dangerous charac</rich_text>
+    </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
