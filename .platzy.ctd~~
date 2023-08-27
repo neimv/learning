@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1691711252">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1692741140">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6130,11 +6130,51 @@ Disk Scheduling algorithms
 - total seek time = no. of cylinders movenment * total time of cross 1 cylinder
 - SSTF (shortest seek time first), select the requests that requires the least movement of the disk arm from its current position,regardless of th eposition
    → adv: starvation problem
+- SCAN algorithm (Elevator algorithm)
+   → works exactly like an elevator
+   → goes in one direction satisfying all the requests and then goes back in the other direction satisfaying the remaining requests
+- C-SCAN, circular-scan
+- LOOK
+   → is like Scan
+   → this avoid the edges if does not necesary
+- C-LOOK, use of C-SCAN + LOOK
+
+Kernel, system calls, modes of execution
+- kernel is function more important and very use to execute the system, device drivers
+- 2 modes, user mode and kernel mode
+- programs execute en user mode
+- kernel mode only execute OS
+
+fork()
+- used by a process to create a copy of itself (same address space except process id)
+- parent and child process
+- the executions of child is before of fork
+- the child can create children if exist before fork or another fork... counter program
+- disv:
+   → context switching overhead
+   → wastage of memory due to the maintainance of multiple copies of the same process
+
+Threads
+- heap segment
+   → only save entries of stack segment
+   → dynamic memory
+- stack segment
+   → adding one funtions
+   → this is created varibales
+   → local variables
+   → remember the order of fn calls
+   → static memory
+- data segment
+- code segment
+- the process by default is single thread
+
+
 
 x</rich_text>
       <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
       <rich_text>
 /amateur-channels/the2001xperience
+amateur-channels/romulo_pontess
 
 
 --------------------------------------------------------------
@@ -6854,8 +6894,19 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
     <node name="intro al Backend" unique_id="144" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684292553" ts_lastsave="1684292837">
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
-    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1691712126">
-      <rich_text>Password maquina virtual: </rich_text>
+    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1692855639">
+      <rich_text>Password maquina virtual: 12345678 o master
+
+plataforma de software libre para configurar y administrar servidores
+instalacion multinodo
+ejecucion de tareas ad hoc y administracion de servidores
+se usa atravez de ssh, necesita python2.4+
+uso de JSON o YAML
+
+inline: ansible -m shell -a ‘cmmand’ -i inventory {servers}
+ansible -m ping -i inventory {servers}
+para ejecutart comandos como root se usa la bandera -b o --become 
+checar los playbook: ansible-playbook -C {playbook} -i {invenoty}</rich_text>
     </node>
     <node name="docker-security" unique_id="169" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688584989" ts_lastsave="1688587132">
       <rich_text>tools:
@@ -7825,7 +7876,7 @@ Defenses:
    → images with verified publisher tag
    → docker certified images</rich_text>
     </node>
-    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1691868382">
+    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1692648451">
       <rich_text>Broken access control
 - access to page without authorization
 - view sensitive information from other users
@@ -7848,7 +7899,78 @@ Injection
 - SQL injection: use of sql queries in input, use to get, modify and delete information
 - command Injection: use of system commands
 - how to avoid:
-   → using an allow list: input is compared to a list of safe inputs or ch</rich_text>
+   → using an allow list: input is compared to a list of safe inputs or characters, launch errors if is not secure
+   → stripping input: contains dangerous characters, these are removed
+
+Insecure Desing
+- vulnerabilities which are inherent to the application's architecture
+- bad implementations or configurations
+- shortcuts by developers
+- insecure password resets
+   → use of brute force with code for validation
+
+Security Misconfiguration
+- distint of top 10
+- poor configuration on cloud services
+- unnecesary faetures enabled
+- default accounts
+- error messages that are overly
+- not using http security headers
+
+Vulnerable and outdated components
+- don't update software of company
+- found in exploit-DB
+
+Identification and authentication failures
+- common use username and password
+- use of:
+   → brute force attacks: using username and password, use of multiple auth attemps
+   → weak credentials: use of common passwords is possible access to apps
+   → weak session cookies: predectible values
+
+software and data integrity failures
+- malicious modifications
+- hash is used to check modifications
+- software integrity failures:
+   → change of code by hackers
+   → injection of malicious code
+   → is possible use integrity={hash} in script tag to avoid errors
+- data integrity failures
+   → avoid use of usernames in cookies
+   → good solution is JWT
+
+security logging and monitoring failures
+- logging is esencial to check incidents
+- significant impacts:
+   → regulatory damage: attacker has gained access to personally identifiable user information
+   → risk of further attacks: presence may be undetected without logging
+
+Server-Side Request Forgery (SSRF)
+- attacker can coerce a web application into sending request on their behalf to arbitrary destinations
+
+PRATICAL TOP 10 ---------
+Inyection
+- user input is interpreted as commands
+- exists 2:
+   → SQL injection, passed like sql queries
+   → Command injection, passed like system command
+
+API SECURITY -------
+- BOLA (Broken Object Level Authorisation)
+   → refers to Insecure Direct Object Reference, using input to get access to the resource they are not authorised
+- BUA (Broken User Authentication)
+   → api with sensitive data
+   → access to database or adquire higher privilege
+- Excesive Data Exposure
+   → disclose more than desired information
+   → not consideration sensitivity level
+- Lack of Resources &amp; Rate Limiting
+   → any restriction on the frequency of clients' requested
+   → uso to avoid DoS
+   → excesive resource utilisation in network, storage, compute, etc
+- Broken function Level Authorisation
+   → access to confidential data by impersonating a high privileged user (admin)
+   → access to administrative functions</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
@@ -13086,7 +13208,7 @@ Tipos de funciones
 - </rich_text>
     </node>
   </node>
-  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1672690232">
+  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1692850245">
     <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1641884633">
       <rich_text>en python con () se hace un generator expresion que es como una lista pero mas potente, ocupa menos memoria
 
@@ -13921,6 +14043,19 @@ CH:
         <rich_text>arithmetic &amp; sizeof
 - helo</rich_text>
       </node>
+    </node>
+    <node name="estructuras de datos" unique_id="172" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1692850245" ts_lastsave="1692852718">
+      <rich_text>Arrays
+- basic data structure
+- store one more value
+- does not increase table of symbol table, this is complex
+- exists:
+   → one dimensional
+   → multidimensional
+      ⇒ two
+      ⇒ three
+- formula for index: A[i] = Base Address + i * datasize
+   → in C the formula is pointer</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
