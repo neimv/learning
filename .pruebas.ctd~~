@@ -12,8 +12,5 @@ Entras a una empresa como especialista DevOps y te piden evaluar que tipo de her
 </rich_text>
   </node>
   <node name="ingles" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684110004" ts_lastsave="1693105993"/>
-  <node name="THM" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693105993" ts_lastsave="1693106164">
-    <rich_text>Mass Assigment
-- submit more data of necesary, for example change username because the model is not well filtered </rich_text>
-  </node>
+  <node name="THM" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693105993" ts_lastsave="1693105993"/>
 </cherrytree>
