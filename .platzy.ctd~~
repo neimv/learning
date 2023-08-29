@@ -6894,7 +6894,7 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
     <node name="intro al Backend" unique_id="144" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684292553" ts_lastsave="1684292837">
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
-    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1692855639">
+    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1692993730">
       <rich_text>Password maquina virtual: 12345678 o master
 
 plataforma de software libre para configurar y administrar servidores
@@ -6906,7 +6906,9 @@ uso de JSON o YAML
 inline: ansible -m shell -a ‘cmmand’ -i inventory {servers}
 ansible -m ping -i inventory {servers}
 para ejecutart comandos como root se usa la bandera -b o --become 
-checar los playbook: ansible-playbook -C {playbook} -i {invenoty}</rich_text>
+checar los playbook: ansible-playbook -C {playbook} -i {inventory}, para ejecutar se quita la bandera -C
+
+ansible -m setup -i inventory {server}, para obtener un setup del servidor, se usa generalmente para saber que tipo de os es</rich_text>
     </node>
     <node name="docker-security" unique_id="169" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688584989" ts_lastsave="1688587132">
       <rich_text>tools:
@@ -7876,7 +7878,7 @@ Defenses:
    → images with verified publisher tag
    → docker certified images</rich_text>
     </node>
-    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1692648451">
+    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1693268477">
       <rich_text>Broken access control
 - access to page without authorization
 - view sensitive information from other users
@@ -7970,7 +7972,22 @@ API SECURITY -------
    → excesive resource utilisation in network, storage, compute, etc
 - Broken function Level Authorisation
    → access to confidential data by impersonating a high privileged user (admin)
-   → access to administrative functions</rich_text>
+   → access to administrative functions
+- Mass Assigment
+   → submit more data of necesary, for example change username because the model is not well filtered 
+- Security Misconfiguration
+   → incorrect and poorly configured security controls
+   → incomplete default configuration
+   → publically accessible cloud storage
+   → Cross-Origin resource sharing
+   → error message with displayed sesitive data
+- Injection
+   → user input is not filtered and is directly processed by an API
+   → use of SQL Injection or OS injection
+- Improper Assets Management
+   → use of tweo version of an API available in our system
+   → V1 is active with V2
+   → in V1 security is not updated</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
