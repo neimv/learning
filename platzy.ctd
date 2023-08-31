@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1692741140">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1693335147">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6175,6 +6175,7 @@ x</rich_text>
       <rich_text>
 /amateur-channels/the2001xperience
 amateur-channels/romulo_pontess
+amateur-channels/ivana_montana
 
 
 --------------------------------------------------------------
@@ -6938,7 +6939,7 @@ basic terms
 - shift left approach is devsecops</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1691629270">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1693355854">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7990,6 +7991,9 @@ API SECURITY -------
    → in V1 security is not updated
 - Insufficient Logging &amp; Monitoring
    → there is not anough evidence available due to the absence of logging and monitoring mechanims</rich_text>
+    </node>
+    <node name="SAST" unique_id="173" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693355854" ts_lastsave="1693355859">
+      <rich_text>Automatization of testing for code analysis</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
