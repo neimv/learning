@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1692741140">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1693497998">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6175,6 +6175,8 @@ x</rich_text>
       <rich_text>
 /amateur-channels/the2001xperience
 amateur-channels/romulo_pontess
+amateur-channels/ivana_montana
+pornstar-channels/tommy_wood_official
 
 
 --------------------------------------------------------------
@@ -6938,7 +6940,7 @@ basic terms
 - shift left approach is devsecops</rich_text>
     </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1691629270">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1694048638">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7653,6 +7655,43 @@ answer the 5W:
 - when (time and data)
 - why (how/what happend)</rich_text>
     </node>
+    <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
+      <rich_text>open source and commercial network monitoring tool
+passive
+used to network security monitor
+
+Network monitoring and Zeek
+- set of management actions to watch/continuosly overview and optionally save the network traffic
+- network security is focused on network anomalies like rogue hosts, encrypted traffic, suspicous service and port usage, and malicious/suspicious traffic patterns
+- zeek provides a wide range of detailed logs ready to investigate both for forensics and data analysis actions
+
+Zeek logs
+- 50+ logs in 7 categories
+- use cat {file} | zeek-cut {fields}
+
+CLI Kung fu recall
+-- use of CLI commands in linux
+
+Zeek signatures
+- signatures to have rules and event correlations
+- low-level pattern matching and cover conditions similar to snort rules
+- exists a scriptng language to find events
+- is composed of:
+   → id
+   → conditions
+   → actions
+
+Zeek Script
+- own event-driven scripting language, high-level languahes and allows us to investigate and correlate the detected events</rich_text>
+    </node>
+    <node name="BRIM" unique_id="175" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694048638" ts_lastsave="1694048802">
+      <rich_text>open source desktop application
+search and analytics
+support zeek signatures and suricata rules
+Two types of inputs:
+	Packet Capture FIles: pcap files with tcpdump, tshark and wireshark
+	Log Files:</rich_text>
+    </node>
     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
       <rich_text>Security Incident Response Platform
 
@@ -7990,6 +8029,9 @@ API SECURITY -------
    → in V1 security is not updated
 - Insufficient Logging &amp; Monitoring
    → there is not anough evidence available due to the absence of logging and monitoring mechanims</rich_text>
+    </node>
+    <node name="SAST" unique_id="173" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693355854" ts_lastsave="1693355859">
+      <rich_text>Automatization of testing for code analysis</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
