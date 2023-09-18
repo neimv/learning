@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1693497998">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1694974896">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6177,6 +6177,8 @@ x</rich_text>
 amateur-channels/romulo_pontess
 amateur-channels/ivana_montana
 pornstar-channels/tommy_wood_official
+amateur-channels/allinika
+pornstars/piper-perri-1
 
 
 --------------------------------------------------------------
@@ -6256,7 +6258,12 @@ BIOS
       ⇒ 16 bit: ax, bx, cx, dx
       ⇒ 32 bit: eax, ebx, ecx, edx
       ⇒ 64 bit: rax, rbx, rcx, rdx, are not available
-      ⇒ </rich_text>
+
+To use image is necesary install </rich_text>
+      <rich_text family="monospace">bochs-x</rich_text>
+      <rich_text> and </rich_text>
+      <rich_text family="monospace">bochs-</rich_text>
+      <rich_text>sdl</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -7684,13 +7691,13 @@ Zeek signatures
 Zeek Script
 - own event-driven scripting language, high-level languahes and allows us to investigate and correlate the detected events</rich_text>
     </node>
-    <node name="BRIM" unique_id="175" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694048638" ts_lastsave="1694048802">
+    <node name="BRIM" unique_id="175" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694048638" ts_lastsave="1694048863">
       <rich_text>open source desktop application
 search and analytics
 support zeek signatures and suricata rules
 Two types of inputs:
 	Packet Capture FIles: pcap files with tcpdump, tshark and wireshark
-	Log Files:</rich_text>
+	Log Files: strucutred log files like zeek logs</rich_text>
     </node>
     <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
       <rich_text>Security Incident Response Platform

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1688584989">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1694987488">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1694113784">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1694975028">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6258,7 +6258,13 @@ BIOS
       ⇒ 16 bit: ax, bx, cx, dx
       ⇒ 32 bit: eax, ebx, ecx, edx
       ⇒ 64 bit: rax, rbx, rcx, rdx, are not available
-      ⇒ </rich_text>
+
+To use image is necesary install </rich_text>
+      <rich_text family="monospace">bochs-x</rich_text>
+      <rich_text> and </rich_text>
+      <rich_text family="monospace">bochs-</rich_text>
+      <rich_text>sdl
+in execution before bochs enter c</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -6941,6 +6947,7 @@ basic terms
 - API security, process to identify security issues in API
 - shift left approach is devsecops</rich_text>
     </node>
+    <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
   <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1694048638">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">

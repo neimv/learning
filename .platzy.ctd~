@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1693497998">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1694975028">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6177,6 +6177,8 @@ x</rich_text>
 amateur-channels/romulo_pontess
 amateur-channels/ivana_montana
 pornstar-channels/tommy_wood_official
+amateur-channels/allinika
+pornstars/piper-perri-1
 
 
 --------------------------------------------------------------
@@ -6256,7 +6258,13 @@ BIOS
       ⇒ 16 bit: ax, bx, cx, dx
       ⇒ 32 bit: eax, ebx, ecx, edx
       ⇒ 64 bit: rax, rbx, rcx, rdx, are not available
-      ⇒ </rich_text>
+
+To use image is necesary install </rich_text>
+      <rich_text family="monospace">bochs-x</rich_text>
+      <rich_text> and </rich_text>
+      <rich_text family="monospace">bochs-</rich_text>
+      <rich_text>sdl
+in execution before bochs enter c</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
