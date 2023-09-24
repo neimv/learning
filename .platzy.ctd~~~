@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1688584989">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1694987488">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1694974894">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1694975028">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6259,7 +6259,12 @@ BIOS
       ⇒ 32 bit: eax, ebx, ecx, edx
       ⇒ 64 bit: rax, rbx, rcx, rdx, are not available
 
-To use</rich_text>
+To use image is necesary install </rich_text>
+      <rich_text family="monospace">bochs-x</rich_text>
+      <rich_text> and </rich_text>
+      <rich_text family="monospace">bochs-</rich_text>
+      <rich_text>sdl
+in execution before bochs enter c</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -6942,8 +6947,9 @@ basic terms
 - API security, process to identify security issues in API
 - shift left approach is devsecops</rich_text>
     </node>
+    <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1694048638">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1695536698">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7658,6 +7664,41 @@ answer the 5W:
 - when (time and data)
 - why (how/what happend)</rich_text>
     </node>
+    <node name="Endpoint Security" unique_id="177" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695053526" ts_lastsave="1695056259">
+      <rich_text>Topics:
+- endpoint security fundamentals
+- endpoint logging and monitoring
+- endpoint log analysis
+
+Security fundamentals:
+- Core windows process, is necesary learn how to works windows
+- knowledges about core windows processes
+- manage of task manager
+- sysinternals, is a compilation of over 70+ tools
+- the most important is: TCPView and process explorer
+- TCPView, this shows detailed listing all TCP and UDP endpoints in the system
+- Process Explorer, shows a list of the currently active processes, including names and owner
+
+Logging and monitoring
+- windows event logs, are not a text files that can viewed using a text editor
+- three ways:
+   → Event viewer, GUI
+   → Wevutil.exe, command line
+   → Get-WinEvent, PowerShell cmdlet
+- sysmon, used to monitor and log events on windows, detail and granular control
+- OSQuery, open-source tool, query using SQL syntax, can be installed on various platforms: win, linux, macos and freebsd
+- only used inside of machine
+- Wazuh, open source and extensible EDR solution
+
+Log analisys
+- Event correlation, relationship from multiple logs sources
+- Baselining, </rich_text>
+    </node>
+    <node name="Sysinternals" unique_id="178" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695442603" ts_lastsave="1695442661">
+      <rich_text>compilation of over 70+ windows based tools
+adquired in 2006</rich_text>
+    </node>
+    <node name="Windows Event Logs" unique_id="179" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695536698" ts_lastsave="1695536702"/>
     <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
       <rich_text>open source and commercial network monitoring tool
 passive
