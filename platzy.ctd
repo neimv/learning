@@ -7700,8 +7700,25 @@ Log analisys
       <rich_text>compilation of over 70+ windows based tools
 adquired in 2006</rich_text>
     </node>
-    <node name="Windows Event Logs" unique_id="179" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695536698" ts_lastsave="1695536714">
-      <rich_text>tools to audit trail</rich_text>
+    <node name="Windows Event Logs" unique_id="179" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695536698" ts_lastsave="1696121811">
+      <rich_text>tools to audit trail
+used to sysadmins, IT technicians, desktop engineers, etc.
+
+Event Viewer
+- possible see using tex editor
+- raw data is possible translate to XML
+- elements:
+   → system logs, associeated with OS segments, information of devices
+   → security logs, logon and logoff activities on a device
+   → application logs, related to applications installed on a system, error, events and warnings
+   → Directory service events, used with active directory, domain controllers
+   → File Replication Service Events, associated with windows servers
+   → DNS Event logs, record domain events
+   → Custom logs, custom data storage
+- ways:
+   → Event viewer, GUI
+   → Wevutil.exe, cli tool
+   → Get-WinEvent, powershell cmdlet</rich_text>
     </node>
     <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
       <rich_text>open source and commercial network monitoring tool
