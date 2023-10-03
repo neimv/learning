@@ -6951,7 +6951,7 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1695536698">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1696303227">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7700,7 +7700,7 @@ Log analisys
       <rich_text>compilation of over 70+ windows based tools
 adquired in 2006</rich_text>
     </node>
-    <node name="Windows Event Logs" unique_id="179" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695536698" ts_lastsave="1696121619">
+    <node name="Windows Event Logs" unique_id="179" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695536698" ts_lastsave="1696121811">
       <rich_text>tools to audit trail
 used to sysadmins, IT technicians, desktop engineers, etc.
 
@@ -7712,7 +7712,16 @@ Event Viewer
    → security logs, logon and logoff activities on a device
    → application logs, related to applications installed on a system, error, events and warnings
    → Directory service events, used with active directory, domain controllers
-   → File Replication Service Events, associated with windows servers</rich_text>
+   → File Replication Service Events, associated with windows servers
+   → DNS Event logs, record domain events
+   → Custom logs, custom data storage
+- ways:
+   → Event viewer, GUI
+   → Wevutil.exe, cli tool
+   → Get-WinEvent, powershell cmdlet</rich_text>
+    </node>
+    <node name="Sysmon" unique_id="180" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303227" ts_lastsave="1696303282">
+      <rich_text>tool to monitor and log events on win</rich_text>
     </node>
     <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
       <rich_text>open source and commercial network monitoring tool
