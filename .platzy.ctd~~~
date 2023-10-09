@@ -7720,7 +7720,9 @@ Event Viewer
    → Wevutil.exe, cli tool
    → Get-WinEvent, powershell cmdlet</rich_text>
     </node>
-    <node name="Sysmon" unique_id="180" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303227" ts_lastsave="1696303232"/>
+    <node name="Sysmon" unique_id="180" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303227" ts_lastsave="1696303282">
+      <rich_text>tool to monitor and log events on win</rich_text>
+    </node>
     <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
       <rich_text>open source and commercial network monitoring tool
 passive
