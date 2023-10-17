@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1695586750">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1696824191">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6181,6 +6181,9 @@ amateur-channels/allinika
 pornstars/piper-perri-1
 amateur-channels/polysweet
 /models/catherine-count
+</rich_text>
+      <rich_text link="webs https://www.xvideos.com/video36076647/geisha_full_movies_">https://www.xvideos.com/video36076647/geisha_full_movies_</rich_text>
+      <rich_text>
 
 
 --------------------------------------------------------------
@@ -6951,7 +6954,7 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1696303470">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1696906198">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7720,8 +7723,25 @@ Event Viewer
    → Wevutil.exe, cli tool
    → Get-WinEvent, powershell cmdlet</rich_text>
     </node>
-    <node name="Sysmon" unique_id="180" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303227" ts_lastsave="1696303282">
-      <rich_text>tool to monitor and log events on win</rich_text>
+    <node name="Sysmon" unique_id="180" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303227" ts_lastsave="1696378007">
+      <rich_text>tool to monitor and log events on win
+detailed information about process creation, network connection and changes to file creation time</rich_text>
+    </node>
+    <node name="Osquery" unique_id="183" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696816774" ts_lastsave="1696817220">
+      <rich_text>open-source agent created by facebook in 2014
+convert os in relational database
+is like sqlite</rich_text>
+    </node>
+    <node name="Wazuh" unique_id="184" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696906198" ts_lastsave="1696906469">
+      <rich_text>is a EDR (endpoint detection and response), series of tools and applications that monitor devices for an activity
+fetures:
+- auditing a device for common vulnerabilities
+- Proactively monitoring a device for suspicious activity such as unautorised login, brute force attascks or privileges escalations
+- visualing complex data and events into neat and trendy graphs
+- recording a device's normal operating behaviour to help with detecting anomalies
+
+created in 2015 is an open-source
+device called agent</rich_text>
     </node>
     <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
       <rich_text>open source and commercial network monitoring tool
@@ -8104,6 +8124,7 @@ API SECURITY -------
     <node name="Eternal Blue" unique_id="181" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303470" ts_lastsave="1696303477">
       <rich_text>Scan and learn what exploit this machine is vulnerable to</rich_text>
     </node>
+    <node name="NMAP" unique_id="182" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303602" ts_lastsave="1696303602"/>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
@@ -9867,7 +9888,7 @@ Adverbs and adjectives
 - adverbs = adjectives + -ly</rich_text>
     </node>
   </node>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1697502469">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
       <rich_text>¿Cuál es el orden correcto al solucionar una operación aritmética?
 La estructura adecuada de argumentos dentro de la función condicional "SI" es:
@@ -12641,7 +12662,7 @@ Analisis Bivariado
 Paradoja de simpson
 - es un fenomeno en el cual se pueden concluir dos cosas totalmente opuestas a partir de los mismos datos, dependiendo el como se clasifican estos</rich_text>
     </node>
-    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1665437609">
+    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1697509064">
       <rich_text>p = t</rich_text>
       <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664739247">
         <rich_text>es un subdominio de la IA, proporciona a los sistemas la capacidad de aprender y mejorar automaticamente, sin ser programados para ellos, es generalmente crear un modelo que se va mejorando con mas datos hacia el modelo a lo largo del tiempo (experiencia en datos)
@@ -12697,6 +12718,18 @@ Aprendizaje basado en instancias y basado en modelos
    → se requiere ajustar los parematros del modelo
    → aqui no se valida la distancia, es a traves del modelo</rich_text>
       </node>
+      <node name="regresion y clasificacion" unique_id="186" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1697508639" ts_lastsave="1697509865">
+        <rich_text>Regresion Lineal
+- de aprendizaje supervisado, datos etiquetados
+- basado en modelos, funcion hipotesis de funcion lineal
+- es un modelo lineal
+- computa suma ponderada de las caracteristicas de entrada y sumando una variable llamada bias
+- predice valores continuos
+- linea que se ajusta a los datos que se dieron, es llamada funcion hipotesis
+- x variables de entrada (features), y variables de salida (target value), (x, y) ejemplo de entrenamiento (dataset)
+- h_omega(x) = theta_0 + theta(_1)x, es igual a la funcion de la recta, y = mx + n, 
+- theta cero dice donde cortara en las “y” y theta uno es la inclinacion </rich_text>
+      </node>
     </node>
     <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1675719767">
       <rich_text>--iidfile string
@@ -12710,6 +12743,35 @@ Long Island City/Queens Plaza
 447,770
 </rich_text>
       <rich_text family="monospace">0 5 1 * *</rich_text>
+    </node>
+    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1697509076">
+      <rich_text># Tipos de variables
+- cualquier caracteristica, numero o cantidad que puede ser medida o contada
+- se pueden clasificar en dos:
+   → Numericas
+      ⇒ discretas
+      ⇒ continuas
+   → Categoricas
+      ⇒ nominales
+      ⇒ ordinales
+      ⇒ fecha/hora
+- Variables numericas
+   → variables que son numeros
+   → numeros enteros son variables discretas
+   → cualquier valor en un rango, son variables continuas
+- variables categoricas
+   → tambien conocidas como etiquetas
+   → pueden o no tener un orden logico
+   → pueden ser cadenas o numeros
+   → ordinal
+      ⇒ categoricas que representan una catagoria o grupo con alguna clasificacion intrinseca, toma una escala preestablecida que tiene sentido
+   → nominal
+      ⇒ valores representan catagorias que no obedecen a una clasificacion u orden logico
+- variables de fecha y hora
+   → uso de fechas, horas o fechas y horas
+- variables mixtas
+   → numeros y categorias entre sus valores
+   → </rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
