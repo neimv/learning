@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1696824191">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1698087959">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6183,6 +6183,9 @@ amateur-channels/polysweet
 /models/catherine-count
 </rich_text>
       <rich_text link="webs https://www.xvideos.com/video36076647/geisha_full_movies_">https://www.xvideos.com/video36076647/geisha_full_movies_</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text link="webs https://www.xvideos.com/channels/big_ass_teens1#_tabVideos">https://www.xvideos.com/channels/big_ass_teens1#_tabVideos</rich_text>
       <rich_text>
 
 
@@ -12718,7 +12721,7 @@ Aprendizaje basado en instancias y basado en modelos
    → se requiere ajustar los parematros del modelo
    → aqui no se valida la distancia, es a traves del modelo</rich_text>
       </node>
-      <node name="regresion y clasificacion" unique_id="186" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1697508639" ts_lastsave="1697509865">
+      <node name="regresion y clasificacion" unique_id="186" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1697508639" ts_lastsave="1698189800">
         <rich_text>Regresion Lineal
 - de aprendizaje supervisado, datos etiquetados
 - basado en modelos, funcion hipotesis de funcion lineal
@@ -12727,8 +12730,32 @@ Aprendizaje basado en instancias y basado en modelos
 - predice valores continuos
 - linea que se ajusta a los datos que se dieron, es llamada funcion hipotesis
 - x variables de entrada (features), y variables de salida (target value), (x, y) ejemplo de entrenamiento (dataset)
-- h_omega(x) = theta_0 + theta(_1)x, es igual a la funcion de la recta, y = mx + n, 
-- theta cero dice donde cortara en las “y” y theta uno es la inclinacion </rich_text>
+- h_theta(x) = theta_0 + theta(_1)x, es igual a la funcion de la recta, y = mx + n, 
+- theta cero dice donde cortara en las “y” y theta uno es la inclinacion
+- construccion del modelo, es buscar los parametros que generen la funcion hipotesis que mejor se adapte al conjunto de datos
+- se minimiza una funcion de coste (j_theta) para obtener los parametros optimos
+- funcion de coste, estas pueden variar, se pueden aplicar varias a los modelos
+- en regresion lineal generalmente se aplica MSE (mean squared error)
+- funcion de optimizacion, gradiente descendiente
+- esta muy ligada a la funcion de coste del algoritmo
+- se busca una funcion convexa, donde hay un minimo global... derivadas
+- se debe de buscar el minimo global de la funcion
+
+Regresion Logistica
+- predice un valor discreto, una clasificacion
+- supervisado, basado en modelos, modelo lineal generalizado
+- suma ponderada de las caracteristicas de entrada y sumando variable BIAS, se le aplica una funcion logistica
+- predice valores discretos
+- funcion hipotesis
+- se usa la funcion sigmoide g(z) = (1) / (1 + e^-z), donde z es la funcion lineal
+- problema de clasificacion binaria, aqui debe de encontrarse entre 0 y 1
+- se maneja por la probabilidad de que algo ocurra
+- se usa un threshold para decir si es cierto o falso
+- funcion de coste
+   → no se usa la misma que la de la regresion lineal
+   → se toma un grupo de los etiquetados como 1, se inicializa theta 0 y 1 de forma aleatoria y se crea una prediccion hasta encontrar el valor que se desea, se hace lo mismo con los valores de 1
+- funcion de optimizacion
+   → se usa la misma para la regresion lineal, gradiente descendiente</rich_text>
       </node>
     </node>
     <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1675719767">
@@ -12744,7 +12771,7 @@ Long Island City/Queens Plaza
 </rich_text>
       <rich_text family="monospace">0 5 1 * *</rich_text>
     </node>
-    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1697509076">
+    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1698190629">
       <rich_text># Tipos de variables
 - cualquier caracteristica, numero o cantidad que puede ser medida o contada
 - se pueden clasificar en dos:
@@ -12771,7 +12798,165 @@ Long Island City/Queens Plaza
    → uso de fechas, horas o fechas y horas
 - variables mixtas
    → numeros y categorias entre sus valores
-   → </rich_text>
+
+Caracteristicas de las variables
+- datos faltantes
+   → datos ausentes o valores vacios, no estan disponibles para observaciones de variables
+   → son un problema en la mayoria de las fuentes de datos
+   → tienen un gran impacto en las conclusiones
+   → razones por incompletos:
+      ⇒ no se guardo apropiadamente
+      ⇒ se divide entre 0
+      ⇒ no estan disponibles o no se identifican
+   → impacto:
+      ⇒ incompatibles con sklearn
+      ⇒ la sustitucion puede distorcionar la distribucion de la variable
+      ⇒ afecta a todos los modelos de ML
+   → mecanismos:
+      ⇒ MCAR, completamente aleatorios, la probabilidad de que un valor falta es la misma para todas las relaciones, no hay relacion entre este y otro valor, omitir los valores no sesga ninguna inferencia o conclusiones hechas
+      ⇒ MNAR, faltantes no aleatorios, mecanismo o razon por la cual los valores son introducidos en los datos, es algo externo lo que los afecta
+      ⇒ MAR, faltantes aleatorios, la probabilidad de ocurrencia de los datos depende la informacion disponible
+- cardinalidad
+   → variables categoricas, estas etiquetas se conocen como cardinalidad
+   → si numero de etiquetas es alto tiene alta cardinalidad
+   → efectos:
+      ⇒ strings incompatibles con SKLearn
+      ⇒ distribucion desigual entre sets de training y test
+      ⇒ sobre ajustes en algoritmos basados en arboles
+      ⇒ probelmas operacionales
+   → variables con muchas etiquetes tienden a dominar algunas con menos
+   → muchas etiquetas puede introducir mucho ruido y poca informacion
+   → reduccion de cardinalidad para mejorar el ML
+   → problemas operacionales:
+      ⇒ con etiquetas nuevas en el segmento de prueba, no se puede calcular estas nuevas, aqui lanza un error
+- Categorias poco comunes
+   → aparecen solo en una pequenia proporcion de los datos
+   → se tiene las mismas consideracion que con las categorias de alta cardinalidad
+   → se agrupan las categorias poco comunes para que no afecte tanto o eliminarlas
+- distribuciones
+   → funcion que describe como se espera que dicho suceso ocurra
+   → la suma de las probabilidades debe ser 1
+   → la probabilidad para un valor debe de estar entre 0 y 1
+   → distribucion normal, la mas conocida, muchas observaciones la tiene, es simetrica, la probabilidad decrece en ambas colas
+   → para una distribucion normal podemos aplicar la media para la imputacion
+   → si es asimetrica, se debe usar la mediana
+   → modelos lineales, normalmente distribuidas
+   → otros modelos no imponen condiciones
+   → una buena distribucion puede mejorar el desempenio
+   → transformacion para mejorar la distribucion, apliicando transformacion matematicas o discretizando las variables (binning) agrupando los valores de las variables
+- valores extremos
+   → outlier, significativamente diferente al resto de los datos
+   → son completamente diferentes
+   → dependen del contexto pueden tratarse o ignorarse
+   → los outliers salen del alcance del curso
+   → los que mas afectan son las regresiones lineales
+   → adaboost es otro modelo que le afecta
+- magnitud o escala de las variables
+   → en los modelos lineales esto influye en los modelos, variables con rango mayor de valores tienden a dominar
+   → descenso de gradiente, converge mas rapido
+   → svm, encuentr mas rapido los vectores de soporte
+   → medidas de distancia, son sensibles a la escala
+   → afectan mas a los que son en distancia
+   → afectan menos a los que tienen que ver con arboles
+
+Datos faltantes
+- tratamiento de casos completos, eliminacion por lista
+   → descartar todas las observaciones donde faltan alguno de los datos
+   → solamente se invluyen los asos que tienen observaciones completas
+   → MCAR, solo de falta aleatoria
+   → facil de implementar
+   → no requiere manipulacion de datos
+   → mantiene distribucion de variables
+   → excluye gran proporcion de los datos
+   → observaciones importantes son eliminadas
+   → genera un sesgo si los datos no son representativos
+   → modelos no podran predecir cuando esten los datos faltantes 
+   → solo si el 5% de los datos contiene observaciones incompletas
+- sustitucion de datos faltantes por la media o mediana
+   → se usa la media si la variable esta normalmente distribuida o la mediana si la variable tiene una distribucion sesgada
+   → se puede usar con variables numericas
+   → se usan con datos faltantes de forma aleatoria
+   → el valor original sea el que muestran la mayoria de las observaciones
+   → facil de implementar
+   → forma rapida de obtener conjuntos completos de datos
+   → puede ser integrado en produccion
+   → distorcion de la distorcion original
+   → distocion de la varianza y covarianza con las otras variables
+   → solo el 5% tiene datos faltantes
+- imputacion con valor arbitrario
+   → consiste en reemplazar todas las ocurrencias por un valor cualquiera
+   → tipicamente se usan 0, 999, -999, combinaciones de 9 o -1 (si la distribucion es positiva)
+   → categoricas o numericas, aunque gteneralmente es usada en categoricas
+   → el valor no debe coincidir con la media o mediana
+   → datos no faltan de forma aleatoria
+   → queremos marcar que el dato faltante es distinto
+   → facil de implementar
+   → forma rapida de obtener conjuntos completos
+   → puede ser integrado en produccion
+   → captura la importancia de la ausencia
+   → distorciona la distribucion original
+   → distorciona la varianza
+   → distorciona la covarianza con las otras variables
+   → este puede generar valores extremos
+   → el valor debe de ser escogido cuidadosamente, no moda, mediana o moda
+- imputacion al borde de la distribucion
+   → equivalente a la sustitucion por valores arbitrarios, automaticamente por uno al final de la distribucion de la variable
+   → si la variable esta normalmente distribuida se usa el promedio mas o menos 3 veces la desviacion estandar
+   → si es asimetrica, su usa la regla de proximidad entre-cuartil
+   → aprende valores de los datos
+   → necesitamos dividir el dataset en entrenamiento y prueba
+- imputacion por categoria mas frecuente o moda
+   → reemplaza todas las ocurrencias usando la moda
+   → se puede usar con variables categoricas o numericas
+   → es mas usado por variables categoricas
+   → valores faltan de manera aleatoria
+   → la mayoria de observacion son parecidas
+   → facil de implementar
+   → puede ser integrada en produccion
+   → distorciona la relacion entre variables
+   → lleva a la sobrerepresentacion
+   → se usa con MCAR
+   → los datos faltantes son del 5%
+- Sustitucion usando etiqueta missing
+   → valores faltantes toman categoria faltantes
+   → metodo mas usado para variables categorias
+   → facil de implementar
+   → puede ser integrado en prod
+   → captura la ausencia
+   → no asume los datos faltantes
+   → si NA es bajo, crear una vategoria adicional produce sobre ajusteen los arboloes de decision
+- sustitucion por muestras aleatorias
+   → para variables numericas y categoricas
+   → tomar observaciones aleatorias en donde existen y usar esos valores para los faltantes
+   → uso cuando es MCAR
+   → reemplazar una poblacion con datos con la misma distribucion
+   → facil de implementar
+   → puede ser integrado en produccion
+   → preserva la varianza de la variable
+   → aleatoriedad
+   → se pueden traer valores valores distintos en cada ronda de prediccion
+   → puede distorcionar las relaciones entre variables
+   → consume mucha memoria en produccion
+   → se debe fijar una semilla para que la imputacion no sea variable
+- idicador binario de datos faltantes
+   → binaria adicional que se agrega para datos faltantes
+   → variables numericas y categoricas
+   → se agrega en una columna de mas
+   → el reemplazo se puede hacer con otras tecnicas
+   → datos no faltan de manera aleatoria
+   → genera variable adicionales
+   → la variable original todavia tiene que ser sustituida
+   → muchos indicadores terminan siendo identicos o altamente correlacionados
+   → se usan mucho en competencias de data
+- SimpleImputer
+   → transformador de la libreria scikit learn
+   → permite usar gridsearch
+   → se pueden usar diferentes valores
+   → limitaciones
+      ⇒ retorna un arrray en lugar de un dataframe
+      ⇒ necesita clases adicionales para seleccionar cuales variables sustituir
+      ⇒ no es tan sencillo de usar
+   → se usa columntransformer</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -13271,7 +13456,7 @@ Representación gráfica
 Que es una derivada?
 </rich_text>
     </node>
-    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1663530127">
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1697594653">
       <rich_text>base de la estaditica
 - que es una muestra?
    → subconjunto de algo mas grande (poblacion)
@@ -13288,7 +13473,7 @@ Los tres analisis descriptivos fundamentales
    → resumir analizar y sacar conclusiones
    → se divide en
       ⇒ tablas de frecuencia
-         •  se tienen las clases
+         • se tienen las clases
          • frecuencia absoluta, total por clase
          • frecuencia absoluta acumulativa, sumar una tras la otra
          • frecuencia relativa, la frecuencia absoluta / total (porcentaje)
@@ -13402,7 +13587,7 @@ Tipos de funciones
 - </rich_text>
     </node>
   </node>
-  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1692850245">
+  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1698026179">
     <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1641884633">
       <rich_text>en python con () se hace un generator expresion que es como una lista pero mas potente, ocupa menos memoria
 
@@ -14250,6 +14435,35 @@ CH:
       ⇒ three
 - formula for index: A[i] = Base Address + i * datasize
    → in C the formula is pointer</rich_text>
+    </node>
+    <node name="Rust" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698026179" ts_lastsave="1698089223">
+      <rich_text>por que usar:
+- lenguaje mas amado por la comunidad
+- modo seguro, evita hacer codigo inseguro o feo
+- no tiene garbage collector
+- se pueden crear desde microcontroladores hasta videojuegos
+- lenguaje moderno con filosofia moderna
+- desventajas
+   → curva de aprendizaje muy pronunciada
+- variables se declaran `let {variable}: {tipo} = {valor}`
+- el println se maneja como macro: println!
+- con variables cadena se usan el &amp;
+- las variables son inmutables
+- para modificar variables debemos especificarle que son mutables asi: `let mut {variable}: {valor}`
+- dos formas de representar string: &amp;str y String
+- para capturar datos: `std::io::stdin().read_line(&amp;mut {variable}).unwrap();`
+- loop para hacer ciclos
+- unwrap es para manejo de errores, si existe devuelve el valor, de otras maneras truena
+- no existe el valor nulo
+- si existe o no se usa un Option&lt;T&gt;, siendo T el tipo base
+- los errores son un tipo de datos
+- los errores se devuelven del tipo Result&lt;T,E&gt;, T, tipo sin error y E el error
+- arrays y ciclos for
+   → los vectores se declaran: `let mut {vector} = Vec::new);`
+   → con tipo de dato: `let mut {vector}: Vec&lt;{tipo}&gt; = Vec::new();`
+- for se usa `for i in 0..3 {}` con variables: `for {var} in {array} {}`
+- vectores inmutables: `let {vector} = [{valores}]`, este no se pude modificar
+- para crear una funcion: `fn {nombre}({variables con tipo})`</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
