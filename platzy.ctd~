@@ -7001,7 +7001,7 @@ TO CHECK VULNERABILITIES
 		<rich_text scale="h2">Your Cleverbridge reference number: 431182666</rich_text>
 		<rich_text>
 </rich_text>
-		<node custom_icon_id="10" foreground="" is_bold="True" name="Path Beginer" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700447328.08" ts_lastsave="1700952467.25" unique_id="192">
+		<node custom_icon_id="10" foreground="" is_bold="True" name="Path Beginer" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700447328.08" ts_lastsave="1703107505.1" unique_id="192">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="Introductory Networking" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700447369.08" ts_lastsave="1700527383.42" unique_id="193">
 				<rich_text>OSI Model
@@ -7067,7 +7067,7 @@ ICMP networking Scanning
 - ping sweep, this send ICMP to each possible IP
 - to use: -sn with a range of IP, nmap -sn 192.168.0.1-254 or nmap -sn 192.168.0.0/24</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Network Services" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700952467.25" ts_lastsave="1701281797.18" unique_id="195">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Network Services" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700952467.25" ts_lastsave="1703032458.96" unique_id="195">
 				<rich_text>SMB
 - server message block protocol, used for sharing access to files, printest, serial ports and other resources
 - response-request protocol, transmit multiple message between the client and server
@@ -7124,7 +7124,15 @@ SMTP
    → if not is possible outgoing it sends te message back
 - POP is mor simple, only download from the mail server
 - SMTP syncrhonise the current inbox
-- default port: 25</rich_text>
+- default port: 25
+
+MySQL
+- relational database based in sql
+- persistent, organised collection of structured data
+- is only brand name for one of the most popular RDBMS software implementations</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="OWASP Juice Shop" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703107505.1" ts_lastsave="1703107505.1" unique_id="221">
+				<rich_text></rich_text>
 			</node>
 		</node>
 		<node custom_icon_id="0" foreground="" is_bold="False" name="Pyramid of pain" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939081.0" ts_lastsave="1685940575.0" unique_id="150">
@@ -8614,7 +8622,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 - 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
 - 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1702592748.38" unique_id="199">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703289733.02" unique_id="199">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="day 1" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640961.21" ts_lastsave="1701640964.5" unique_id="200">
 				<rich_text>Aprender sobre procesamiento de lenguaje natural
@@ -9102,6 +9110,327 @@ Back-Propagation
 Dataset Splits
 - para poder entrenar la red se dividen los datos para ver que realmente no tenga sobreentrenamiento
 - se divide generalmente en 3 partes: training data (datos para entrener la red, es del 70 al 80% de los datos), validation data (este se usa para validar el entrenamiento, este es entre 10 a 15%) y testing data (se calcula el performance final de la red, este es entre el 10 al 15%)</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 15" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1702694415.95" ts_lastsave="1702697404.83" unique_id="215">
+				<rich_text>Machine Learning, jingle bells SPAM: ML saves the day
+
+Se desea crear un detector de spam usando machine learning
+
+Objetivos:
+- diferentes pasos en un pipeline de generico ML
+- ML para clasificacion y entrenamiento de modelos
+- como partir un dataset para entrenar y probar
+- como preparar el modelo de ML
+- como evaluar la eficiencia del modelo
+
+Explorando el pipeline de ML
+- es una serie de pasos envueltos en crear y desplegar un modelo de ML
+- un tipico pipeline incluye:
+   → ingestion
+   → limpieza
+   → preprocesamiento
+   → modelado
+   → desplegado
+- Collection de datos
+   → es el proceso de recuperar data cruda desde varias fuentes para ser usadas por el ML.
+   → esta puede venir de diferentes partes, como bases de datos, archivos de texto, APIs, repositorios online, sensores, sobrevivientes, scrapeo de webs y otros
+   → se hace una revision de los datos obtenidos
+- Procesado de datos
+   → Limpieza, corregir errores, llenar valores perdidos, quitar ruido, y manejar outliers
+   → normalizacion, se escalan los datos numericos dentro de un rango uniforme, tipicamente [0, 1] y [-1, 1]
+   → estandarizacion, reescalar la data para tener una media de - y una desviacion estandar de 1
+   → extraccion de variables, transformacion de datos como texto o imagenes en valores numericos
+   → reduccion de dimensiones, reducir el numero de variables bajo consideracion de obtener un set de variables principales
+   → discretizacion, transformar variables continuas dentro de discretas
+   → procesamiento de texto, crear tokens, steamming, lemmatization, convertir el texto a un formato usable para ML
+   → imputacion, reemplazar valores perdidos con valores estadisticos
+   → ingenieria de variables, creacion de nuevas variables o modificar las existentes para mejorarlas
+- entrenamiento y test, partiendo del dataset
+   → es importante este paso ya que con el podemos probar que el modelo sea indicado y tenga buen performance
+- entrenamiento del modelo
+   → se tienen diferentes formas de entrenar un modelo, los mas comunmente usados para texto son:
+      ⇒ naive bayes, modelo probabilistico basdo en el teoream de bayes
+      ⇒ SVM, es un clasificador robusto, que busca el hiperplano optimo para separar diferentes clases, hace uso de funciones kernel no lineales y de alta dimensionalidad
+      ⇒ regresion logistica, hace uso de la funcion de regresion logistica, este es usado para modelos binarios
+      ⇒ arboles de decision, un modelo que usa un arbol tipo grafo, donde se pueden poner sus posibles soluciones
+      ⇒ random forest, es un conjuncion de multiples arboles de decision
+      ⇒ Gradient Boosting Machines, un conjunto de aprendizajes, para crear fuertes predicciones
+      ⇒ K-Nearest Neighbors (KNN), es un modelo no parametrico que clasifica cada punto basdo en el mayor numero de votos cercanos de sus vecinos
+- Entrenamiento con Naive Bayes
+   → se tiene varios mails etiquetados como spam y ham
+   → el modelo aprende de estos datos, se checa con que frecuencia aparecen las palabras de acuerdo a su etiquetado
+   → este calcula la probnabilidad de que el email sea o no spam de acuerdo al numero de palabras
+- Evaluacion del modelo
+   → despues de entrenar el modelo es necesario evaluarlo, este se puede checar si accuracy, precision y recall
+   → Precision, que tantos predicciones positivas hizo
+   → Sencibilidad (recall), cual de todos los ejemplos positivos han sido acertados
+   → F1-Score, la media harmonicade la precision y recall, cuales fueron clasificados incorrectamente
+   → Soporte, numero de ocurrencias actuales de la clase en el dataset especifico
+   → Exactitud, el total de observaciones correctamente predictas
+   → Promedio macro, este promedia los pesos por etiqueta
+   → Promedio de pesos, promedia los pesos soportados por cada etiqueta
+- Testeando el modelo
+   → una vez obtenidos resultados se puede probar con mas datos, nuevos</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 16" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1702764741.73" ts_lastsave="1702777585.07" unique_id="216">
+				<rich_text>ML, can't captcha this machine
+
+Objetivos:
+- estructuras complejas de redes neuronales
+- como funciona una red neuronal convexa
+- usando redes neuronales para reconocimiento de caracteres
+- integrando redes neuronales dentro de las herramientas del red team
+
+Introduccion
+- ver como los read team pueden usar ML
+
+Convolutional Neural Networks (CNN)
+- tienen la habilidad de extraer variables que pueden ser usadas para entrenar redes neuronales
+- en estas se tiene una extraccion de variables como parte de la red
+- aqui se usa algebra lineal
+- Se pueden dividir en tres componentes principales:
+   → Extraccion de variables
+   → Capas completamente conectadas
+   → Clasificacion
+
+Extraccion de variables
+- son usadas para clasificar imagenes
+- se usan para romper CAPTCHAs
+- Representacion de imagenes
+   → la computadora precive las imagenes como arreglos 2D de pixeles
+   → un valor de pixel describe que color puede verse, hay dos valores
+      ⇒ RGB: este se representa por 3 numeros del 0 al 255, describe la intensidad del Rojo, Azul y Verde
+      ⇒ Greyscale: se representa por un numero del 0 al 255, donde 0 es completamente negro y 255 blanco
+- Convolution
+   → se reduce el tamaño de la entrada
+   → se tienen miles de pixeles, por lo cual se necesita reducir haciendo sumarizacion de la imagen
+   → para esto la matriz se mueve sobre toda la imagen, calculandolo
+- Pooling
+   → en este se puede aplicar un metodo estadistico
+- Capas completamente conectadas
+   → aqu trabaja como las demas redes neuronales, aqui todos los nodos son reconectados entre ellos
+</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 17" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1702852543.19" ts_lastsave="1702870166.85" unique_id="217">
+				<rich_text>Traffic Analysis, I tawt I taw a c2 tat
+
+Objetivos
+- ganar conocimiento del formato del trafico de red
+- entender las diferencias entre captura de full package y flujos de red
+- aprender como procesar los flujos de datos de red
+- conocer y usar la herramienta SiLK para el analisis de flujo de red
+
+Network Traffic Data
+- </rich_text>
+				<rich_text style="italic">The network data is everywhere. It is all around us. Even now in this very task.</rich_text>
+				<rich_text>
+- esta ayuda a un manejo de red, resolucion de problemas, respuesta a incidentes y caceria de amenazas
+- Network manager
+   → monitoreo de performance
+   → identificar cuellos de botella
+   → asegurar la asignacion y calidad de servicios
+- resolucion de problemas
+   → identificar problemas de red
+   → validar configuraciones, implementaciones y cambios
+   → y configurar las lineas basicas de desempeño
+- respuesta de incidentes
+   → alcance del incidente
+   → analisis de causa raiz
+   → evaluacion de incidentes del dia dia
+- caceria de amenzas
+   → analisis proactivo para patrones maliciosos y sospechosos
+- estos vienen en varios formatos, PCAP (Packet capture)
+   → proveen un granular, crudo y comprensiva vista del trafico de red
+   → provee todos los datos posibles representados por paquetes
+- estos requieren guardarse, procesar y capacidades de analisis
+- network flow data es una alternativa ligera a los PCAP's, uso de formato netflow
+
+Mirada cerrada a PCAPs y flujos
+- Comparacion:
+   → Model
+      ⇒ PCAP, captura de paquetes
+      ⇒ Network Flow, Registros de flujos de protocolo
+   → Profundidad de la informacion
+      ⇒ PCAP, datos granulados detalladamente, contiene los datelles y payload
+      ⇒ Network Flow, resumen de la data, no contiene detalles ni payload
+   → Proposito general
+      ⇒ PCAP, analisis profundo de paquetes
+      ⇒ Network Flow, resumen del flujo de paquetes
+   → Pros
+      ⇒ PCAP, provee alta visibilidad de los paquetes
+      ⇒ Network Flow, provee un resumen muy alto
+   → Cons
+      ⇒ PCAP, duro de procesar y requiere tiempo y recursos para ser analizado, la encriptacion es un obstaculo
+      ⇒ Network Flow, resumen solamente, no payload
+   → Campos disponibles
+      ⇒ PCAP, capas de cabeceras y de payload
+      ⇒ Network Flow, metadata de paquetes
+
+Como colectar y procesar data de red
+- se hace uso de monitoreo y analisis de la red (wireshark, tshark y tcpdump)
+
+Recomendaciones y exploracion de herramientas
+- hacer uso de SiLK, este contiene varias herramientas y binarios para coleccionar, parsear, filtrar y analizar el trafico de red
+- este puede procesar directamente desde flujos, PCAPs y binary flow data
+
+SiLK
+- tiene dos partes
+   → el sistema de paquetes, collecion de multiples flujos de red (IPFIX, NetfFow v9 y NetFlow v5)
+   → la suite de analisis, contienen herramientas que pueden usarse para varias operaciones (list, sort, count y statistics)</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 18" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1702920046.18" ts_lastsave="1702921375.66" unique_id="218">
+				<rich_text>Eradication, A gift that keeps on giving
+
+Objetivos
+- identificar el uso de cpu y memoria en procesos de linux
+- matar innecesarios procesos en linux
+- buscar caminos que puedan persistir mas alla d ela terminacion
+- remove procesos que son permanentemente procesando
+
+Identificando los procesos
+- manejo de procesos usando top
+
+Chequeo de crons si kill mata el proceso y vuelve a parecer, crontab -l
+Para revisar los servicios corriendo: systemctl list-unit-files</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 19" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703024981.51" ts_lastsave="1703028384.47" unique_id="219">
+				<rich_text>Memory forensic, CrypTOYminers Sing volala-lala-lality
+
+Memory dumps
+
+Objectivos:
+- entender que es memory forensics y como usarlo para investigaciones forenses digitales
+- entender que es la data volatil y como volcarla
+- aprender sobre volatibilidady como se puede hacer un analisis de volvado de memoria
+- aprender sobre perfiles volatiles
+
+Forensic Memory
+- tambien conocida como memoria volatil o RAM
+- rama del forense digital
+- este involucra la examinacion y analisis de la RAM
+- este difiere del analisis forense de disco, donde todos los archivos pueden ser recuperados y estudiados
+- este se enfoca en los programas que estan corriendo cuando el dump fue creado
+- este es volatil por que una vez apagada la compu esta memoria se borra
+
+Data volatil
+- informacion que esta temporalmente guardada en la RAM
+- puede ser facilmente perdida o alterada
+- ejemplos: procesos corriendo, coneccion de red y contenido de RAM
+
+Memory dump
+- snapshot de la memoria que ha sido capturado para hacer un analisis
+
+Beneficios
+- se encuentra la data en tiempo real
+- es rapido ver actividades, detecta amenas cautelosas, datos volatiles como contraseñás y permite a los investigadores para entender actividades de los usuarios y estado de los sistemas durante memoria volatil
+- en el disco duro se consume mas tiempo, ya que estos pueden tener miles de Gigabytes en tamaño
+
+Que son los procesos
+- independiente y autocontenida unidad de ejecucion dentro de un sistema operativo
+- consiste de su propio codigo de programa, data, espacio en memoria y recursos del sistema
+- existen dos tipos:
+   → Procesos de usuario, estos son los que el usuario empezo, interactuan con el usuario
+   → Procesos de fondo, estos operan sin interaccion con el usuario
+
+Volatibility
+- es un CLI que permite a analizar un dump en orden de analisis de performance
+- esta escrito en python, se puede usar para:
+   → listar y cerrar conecciones de red
+   → listar un dispositivo corriendo procesos al mismo tiempo de la captura
+   → listar posibles comandos en linea 
+   → extraer posibles procesos malicioso
+
+Profiles
+- en este se define la arquitectura del SO, version y varias especificaciones de la memoria
+- es crucial usar el profile apropiado, ya que cada uno tiene diferentes capas de memoria y estructuras de datos
+- los profiles para linux deben crearse manualmente:
+   → no es uno solo, sistema operativo monolitico, tiene diferentes distribuciones y configuraciones
+   → depende de la version del kernel, configuraciones y capas de memoria
+   → win tiene una estructura de memoria mas estandarizada y API del sistema
+   → tambien tiene que ver que es un sistema de codigo abierto lo que hace que pueda tener variaciones
+
+Plugins
+- history file: vol.py -f {file} --profile={profile} linux_bash
+- running process: vol.py -f {file} --profile={profile} linux_pslist
+- process extraction: vol.py -f {file} --profile={profile} linux_procdump -D extracted
+- file extraction: vol.py -f {file} --profile={profile} linux_enumerate_files</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 20" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703092856.42" ts_lastsave="1703097089.4" unique_id="220">
+				<rich_text>DevSecOps, advent of frostlings
+
+Objetivos
+- aprender sobre ejecuciones de pipelines envenenadas
+- entender como tener CI/CD seguros
+- una introduccion a secure software development lifecycle y DevSecOps
+- aprender sobre mejores practicas de CI/CD
+
+Gitlab y SDLC cocepts
+- plataforma que permite la colaboracion y automatizacion a travez del desarrollo de vida del software
+- conceptos de GitLab:
+   → Version control system: aqui se puede encontrar los cambio que se van haciendo al codigo
+   → CI/CD pipelines: automatizacion de la creacion, testeo y despliegue del sistema
+   → Escaneo de seguridad: tiene incorporacion de SAST, DAST y escaneo de contenedores
+
+CI/CD
+- Continuous integration: creacion y testeo del codigo que se va subiendo, tambien se hacen las validaciones y escaneos de seguridad
+- Continuous deployment: aqui se envia el sistema a los diferentes entornos ya sea staging, sandbox o produccion
+
+DevSecOps
+- se hace el uso de seguridad en los pipelines de CI/CD
+
+CI/CD Attacks: PPE
+- poisoned pipeline execution
+- este ataque compromete componentes o el entorno en el SDLC
+- aqui el atacante tiene acceso al sistema de control (Git)</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 21" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703187442.04" ts_lastsave="1703187454.06" unique_id="222">
+				<rich_text>DevSecOps, Yule be poisoned: A pipeline of insecure code
+
+Objetivos:
+- entender cuan grandes operan los entornos de CI/CD
+- Explorar indirectamente ejecuciones de pipilenes envenados y como pyeden ser explotados con git
+- aplicar explotacion de CI/CD a entornos grandes de CI/CD 
+
+CI/CD environment
+- pasos generales: desarrollo, crecion, testeo y despliegue
+- estos pueden ser separados en diferentes sistemas
+
+Plataformas de automatizacion
+- se pueden tener dos tipos locales y remotas, travis CI es remota, mientras que jenkins es local
+- estas corren sobre agentes para crear el proyecto
+- estas plataformas pueden crear y configurar los entornos
+
+envenamiento indirect en ejecucion de pipelines
+- si el atacante no tiene acceso de escritura, es posible violar esta seguridad de forma indirecta modificando el alcance de la ejecucion del pipeline
+- puede aprvecharse que en un repo se tenga la proteccion que dependa de otro que probablemente no tenga esa proteccion y haciendo uso de esto pueda modificar cosas del primero</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 22" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703289733.03" ts_lastsave="1703290686.21" unique_id="223">
+				<rich_text>SSRF, Jingle your SSFR bels: A merry command and control hackventure
+
+Objetivos:
+- entender server-side request forgery (SSRF)
+- qeu tipos de SSRF son usados para explotar vulnerabilidades
+- prerequisitos pra explotar vulnerabilidades
+- como trabaja el ataque
+- como explotar la vulnerabilidad
+- mitigar medidas para proteccion
+
+Que es SSRF
+- es una vulnerabilidad de seguridad que ocurre cuando el atacante tiene acceso desde una aplicacion web, ya sea interno o externo
+- tipos:
+   → Basic, se envia una peticion elaborada al servidor vulnerable ya sea a recursos internos o externos, accesos publicos
+   → Blind SSRD, no se ve directamente la respuesta desde la peticion, se infiere la informacion usando las respuestas u observando los errores de mensaje
+   → Semi-Blind SSRD, no se recive directamente la respuestaen su explorador o aplicacion
+
+Prerequisitos para exploracion
+- vulnerable input points, se tiene campos suceptibles a manipulacion como URLs o archivos que se pueden subir
+- Lack of input validation, no se tiene validacion ni sanitizacion efectiva, se permite enviar peticiones maliciosas
+
+Como trabaja
+- Identificando las entradas vulnerables, se encuentra un input field que puede ser manipulado, este puede ser un parametro en la url, un endpoint o un parametro en la peticion
+- manipulando la entrada, se da una URL maliciosa u otro payload, este puede ser una url al servidor internos, bucle hacia la direccion o un servidor externo que puede controlar al objketivo
+- peticion a recursos no autorizados, se busca por medio de la peticion obtener acceso a recursos internos, servicios sensitivos o sistemas externos
+- explotar la respuesta, este puede proveer informacion importante, como datos internos del servidor, credenciales o alguna otra cosa para poder explotar</rich_text>
 			</node>
 		</node>
 	</node>
