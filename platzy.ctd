@@ -8622,7 +8622,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 - 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
 - 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703380325.36" unique_id="199">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703454446.55" unique_id="199">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="day 1" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640961.21" ts_lastsave="1701640964.5" unique_id="200">
 				<rich_text>Aprender sobre procesamiento de lenguaje natural
@@ -9472,6 +9472,58 @@ Coercion no convencional
    → si la configuracion es insuficiente se puede intentar mandar el challenge 
 - dos increibles y populares versiones de coercion son PrintSpooler y PetitPotam
 - </rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 24" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703454446.55" ts_lastsave="1703457827.28" unique_id="225">
+				<rich_text>Mobile analysis, You are on the naughty list, Mc Greedy
+
+Objetivos
+- Procedimientos para collecionar evidencia digital
+- los retos con smartphones modernos
+- usar Autopsy Digital Forensics con una imagen actual de andriod
+
+Digital Forensic
+- metodo usado por la ciencia resolver crimenes
+- coleccionar evidencia desde las escenas del crimen
+- se debe analizar e interpretar la evidencia para determinar que paso en la escena del crimen
+- para la adquirir esta analisis se necesita una imagen cruda
+- una raw image se una copia bit a bit
+- es una parte escencial
+- uso de una cadena de custodia, concepto legal usado para seguir la pocesion y manejo de evidencia, colecionada en una escena de crimen que es presentada en la corte
+
+Adquiriendo una imagen digital forense
+- esto puede representar un reto, dependiendo del dispostivo
+- 4 tipos de adquisicion de imagenes forenses
+   → Static acquisition: imagen bit a bit del dispositivo apagado
+   → Live acquisition: image bit a bit del dispositivo prendido
+   → Logical acquisition: una lista selecta de archivos copiados del archivo
+   → Sparse acquisition: fragmentos seleccionados de datos sin asignar, esto contiene datos borrados
+- considera los sigueintes escenarios
+   → el tamaño de la computadora apagada
+   → como parte de una escena del crimen, el investigador del crimen debe trabajar con la compu prendida
+
+Una computadora que esta apagada
+- se sabe que por default el disco no esta encriptado
+- no se debe prender la compu para no tener cambios en el disco
+- se clona el HDD o SDD removiendolo de la laptop y clonandolo
+- pasos:
+   → se usa un write blocker, clona sin ningun riesgo de modificar la data original
+   → se obtiene una una imagen raw o equivalente
+   → finalmente, necesitamos un dispositivo donde guardar la imagen
+
+Una computadora que esta prendida
+- en este caso se debe de apagar
+- si esta cifrada la data se debe de tener el password
+
+Obteniendo la imgen de un smartphone
+- los smartphones modernos ahora estan cifrados por defecto
+
+Cifrado en smart phones
+- desde android 4.4 introduce cifrado de disco completados
+- el telefono no puede entrar sin antes proveer el password
+- android 7 infroduce direct boot, un modo de archivo basado en cifrado
+- en android 9 y mayores se puede cifrar una SD
+- desde andoid 6 el cifrado es forsozo
+- iOS viene por default, usando filed'based encryption</rich_text>
 			</node>
 		</node>
 	</node>

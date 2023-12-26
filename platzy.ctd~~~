@@ -9383,8 +9383,26 @@ CI/CD Attacks: PPE
 - este ataque compromete componentes o el entorno en el SDLC
 - aqui el atacante tiene acceso al sistema de control (Git)</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="day 21" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703187442.04" ts_lastsave="1703187442.04" unique_id="222">
-				<rich_text></rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 21" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703187442.04" ts_lastsave="1703187454.06" unique_id="222">
+				<rich_text>DevSecOps, Yule be poisoned: A pipeline of insecure code
+
+Objetivos:
+- entender cuan grandes operan los entornos de CI/CD
+- Explorar indirectamente ejecuciones de pipilenes envenados y como pyeden ser explotados con git
+- aplicar explotacion de CI/CD a entornos grandes de CI/CD 
+
+CI/CD environment
+- pasos generales: desarrollo, crecion, testeo y despliegue
+- estos pueden ser separados en diferentes sistemas
+
+Plataformas de automatizacion
+- se pueden tener dos tipos locales y remotas, travis CI es remota, mientras que jenkins es local
+- estas corren sobre agentes para crear el proyecto
+- estas plataformas pueden crear y configurar los entornos
+
+envenamiento indirect en ejecucion de pipelines
+- si el atacante no tiene acceso de escritura, es posible violar esta seguridad de forma indirecta modificando el alcance de la ejecucion del pipeline
+- puede aprvecharse que en un repo se tenga la proteccion que dependa de otro que probablemente no tenga esa proteccion y haciendo uso de esto pueda modificar cosas del primero</rich_text>
 			</node>
 		</node>
 	</node>

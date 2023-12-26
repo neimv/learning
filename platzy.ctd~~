@@ -8622,7 +8622,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 - 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
 - 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703187442.04" unique_id="199">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703289733.02" unique_id="199">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="day 1" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640961.21" ts_lastsave="1701640964.5" unique_id="200">
 				<rich_text>Aprender sobre procesamiento de lenguaje natural
@@ -9403,6 +9403,34 @@ Plataformas de automatizacion
 envenamiento indirect en ejecucion de pipelines
 - si el atacante no tiene acceso de escritura, es posible violar esta seguridad de forma indirecta modificando el alcance de la ejecucion del pipeline
 - puede aprvecharse que en un repo se tenga la proteccion que dependa de otro que probablemente no tenga esa proteccion y haciendo uso de esto pueda modificar cosas del primero</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 22" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703289733.03" ts_lastsave="1703290686.21" unique_id="223">
+				<rich_text>SSRF, Jingle your SSFR bels: A merry command and control hackventure
+
+Objetivos:
+- entender server-side request forgery (SSRF)
+- qeu tipos de SSRF son usados para explotar vulnerabilidades
+- prerequisitos pra explotar vulnerabilidades
+- como trabaja el ataque
+- como explotar la vulnerabilidad
+- mitigar medidas para proteccion
+
+Que es SSRF
+- es una vulnerabilidad de seguridad que ocurre cuando el atacante tiene acceso desde una aplicacion web, ya sea interno o externo
+- tipos:
+   → Basic, se envia una peticion elaborada al servidor vulnerable ya sea a recursos internos o externos, accesos publicos
+   → Blind SSRD, no se ve directamente la respuesta desde la peticion, se infiere la informacion usando las respuestas u observando los errores de mensaje
+   → Semi-Blind SSRD, no se recive directamente la respuestaen su explorador o aplicacion
+
+Prerequisitos para exploracion
+- vulnerable input points, se tiene campos suceptibles a manipulacion como URLs o archivos que se pueden subir
+- Lack of input validation, no se tiene validacion ni sanitizacion efectiva, se permite enviar peticiones maliciosas
+
+Como trabaja
+- Identificando las entradas vulnerables, se encuentra un input field que puede ser manipulado, este puede ser un parametro en la url, un endpoint o un parametro en la peticion
+- manipulando la entrada, se da una URL maliciosa u otro payload, este puede ser una url al servidor internos, bucle hacia la direccion o un servidor externo que puede controlar al objketivo
+- peticion a recursos no autorizados, se busca por medio de la peticion obtener acceso a recursos internos, servicios sensitivos o sistemas externos
+- explotar la respuesta, este puede proveer informacion importante, como datos internos del servidor, credenciales o alguna otra cosa para poder explotar</rich_text>
 			</node>
 		</node>
 	</node>
