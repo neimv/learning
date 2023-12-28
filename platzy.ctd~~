@@ -8622,7 +8622,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 - 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
 - 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703289733.02" unique_id="199">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703454446.55" unique_id="199">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="day 1" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640961.21" ts_lastsave="1701640964.5" unique_id="200">
 				<rich_text>Aprender sobre procesamiento de lenguaje natural
@@ -9431,6 +9431,99 @@ Como trabaja
 - manipulando la entrada, se da una URL maliciosa u otro payload, este puede ser una url al servidor internos, bucle hacia la direccion o un servidor externo que puede controlar al objketivo
 - peticion a recursos no autorizados, se busca por medio de la peticion obtener acceso a recursos internos, servicios sensitivos o sistemas externos
 - explotar la respuesta, este puede proveer informacion importante, como datos internos del servidor, credenciales o alguna otra cosa para poder explotar</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 23" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703380325.36" ts_lastsave="1703383133.52" unique_id="224">
+				<rich_text>Coerced Authentication, relay all the way
+
+Objetivos:
+- lo basico de red para compartir archivos
+- entender autenticacion NTLM
+- como el ataque de coercion trabaja para autenticacion NTLM 
+- como las respuestas trabajan para el ataque de coercion de autenticacion
+- forzando la coercion de autenticacion usando archivos lnk
+
+Introduccion
+- conocer la autenticacion NTLM y como las amenzas pueden crear ataques de autenticacion de coercion
+
+Compartir es demostrar interes (sharing is caring)
+- se tiende a pensar que las computadoras son dispositivos aislados, pero el verdadero poder de una computadora viene cuando se conectan por red
+- esto viene mucho cuando se qieren compartir recursos
+- muchos de esto ayuda  poder tener lugares centralizados donde se puede acceder a documentos y estos estar protegidos por autenticacion
+- a pesar de todo no siempre se tiene el control de compartir archivos de forma segura, esto puede causar dos errores:
+   → si un atacante gana acceso puede obtener informacion sensitiva
+   → si tiene acceso de escritura puede modificar archivos que sean importantes o mantenerse sobre ataque
+
+NTLM autenticacion
+- SMB permite conectarse cliente-servidor, sin embargo a este se le han encontrado multiples vulnerabilidades
+- NetNTLM, referido a windows authentication, permite a la aplicacion hacer un middleman entre el cliente y el AD.
+- este se usa en varios servicios incluidos SMB y RDP
+- el usuario manda peticion al server, este responde con un ?challenge?, el usuario cifra su password con este challenge, para crear una respuesta y es enviada de nuevo al servidor, el servido pasa ambos al controlador de dominio, este se verifica para dar el acceso
+- para ganar acceso no autorizado se deberia interceptar esta autenticacion y los challenges
+
+Respondiendo a la carrera
+- una herramienta que se puede usar es Responder, hace uso de man-in-the-middle
+- en una LAN se puede envenenar cualquier Link-Local Multicast Name Resolution, NetBIOS Name Service y Web Proxy Auto-Discovery
+- En VPN, no es considerada como red local, por lo cual es imposible detectar la intercepcion y envenamiento
+
+Coercion no convencional
+- si no se puede escuchar y envenenar el request, debemos de crear uno propio, este es un nuevo tipo de ataque de vector: coercion
+- se pueden permitor dos tipos de ataques:
+   → si el password de la cuenta coercionada es debil se puede crackear el challenge de NetNTLM fuera de linea usando herramientas como hastcat o john the ripper
+   → si la configuracion es insuficiente se puede intentar mandar el challenge 
+- dos increibles y populares versiones de coercion son PrintSpooler y PetitPotam
+- </rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 24" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703454446.55" ts_lastsave="1703457827.28" unique_id="225">
+				<rich_text>Mobile analysis, You are on the naughty list, Mc Greedy
+
+Objetivos
+- Procedimientos para collecionar evidencia digital
+- los retos con smartphones modernos
+- usar Autopsy Digital Forensics con una imagen actual de andriod
+
+Digital Forensic
+- metodo usado por la ciencia resolver crimenes
+- coleccionar evidencia desde las escenas del crimen
+- se debe analizar e interpretar la evidencia para determinar que paso en la escena del crimen
+- para la adquirir esta analisis se necesita una imagen cruda
+- una raw image se una copia bit a bit
+- es una parte escencial
+- uso de una cadena de custodia, concepto legal usado para seguir la pocesion y manejo de evidencia, colecionada en una escena de crimen que es presentada en la corte
+
+Adquiriendo una imagen digital forense
+- esto puede representar un reto, dependiendo del dispostivo
+- 4 tipos de adquisicion de imagenes forenses
+   → Static acquisition: imagen bit a bit del dispositivo apagado
+   → Live acquisition: image bit a bit del dispositivo prendido
+   → Logical acquisition: una lista selecta de archivos copiados del archivo
+   → Sparse acquisition: fragmentos seleccionados de datos sin asignar, esto contiene datos borrados
+- considera los sigueintes escenarios
+   → el tamaño de la computadora apagada
+   → como parte de una escena del crimen, el investigador del crimen debe trabajar con la compu prendida
+
+Una computadora que esta apagada
+- se sabe que por default el disco no esta encriptado
+- no se debe prender la compu para no tener cambios en el disco
+- se clona el HDD o SDD removiendolo de la laptop y clonandolo
+- pasos:
+   → se usa un write blocker, clona sin ningun riesgo de modificar la data original
+   → se obtiene una una imagen raw o equivalente
+   → finalmente, necesitamos un dispositivo donde guardar la imagen
+
+Una computadora que esta prendida
+- en este caso se debe de apagar
+- si esta cifrada la data se debe de tener el password
+
+Obteniendo la imgen de un smartphone
+- los smartphones modernos ahora estan cifrados por defecto
+
+Cifrado en smart phones
+- desde android 4.4 introduce cifrado de disco completados
+- el telefono no puede entrar sin antes proveer el password
+- android 7 infroduce direct boot, un modo de archivo basado en cifrado
+- en android 9 y mayores se puede cifrar una SD
+- desde andoid 6 el cifrado es forsozo
+- iOS viene por default, usando filed'based encryption</rich_text>
 			</node>
 		</node>
 	</node>
