@@ -6981,7 +6981,7 @@ basic terms
 			<rich_text></rich_text>
 		</node>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1701640955.3" unique_id="149">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1703562346.08" unique_id="149">
 		<rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -8622,7 +8622,7 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 - 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
 - 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703380325.36" unique_id="199">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703454446.55" unique_id="199">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="day 1" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640961.21" ts_lastsave="1701640964.5" unique_id="200">
 				<rich_text>Aprender sobre procesamiento de lenguaje natural
@@ -9432,7 +9432,7 @@ Como trabaja
 - peticion a recursos no autorizados, se busca por medio de la peticion obtener acceso a recursos internos, servicios sensitivos o sistemas externos
 - explotar la respuesta, este puede proveer informacion importante, como datos internos del servidor, credenciales o alguna otra cosa para poder explotar</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="day 23" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703380325.36" ts_lastsave="1703383133.52" unique_id="224">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 23" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703380325.36" ts_lastsave="1703817530.51" unique_id="224">
 				<rich_text>Coerced Authentication, relay all the way
 
 Objetivos:
@@ -9460,6 +9460,107 @@ NTLM autenticacion
 - el usuario manda peticion al server, este responde con un ?challenge?, el usuario cifra su password con este challenge, para crear una respuesta y es enviada de nuevo al servidor, el servido pasa ambos al controlador de dominio, este se verifica para dar el acceso
 - para ganar acceso no autorizado se deberia interceptar esta autenticacion y los challenges
 
+</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="day 24" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703454446.55" ts_lastsave="1703457827.28" unique_id="225">
+				<rich_text>Mobile analysis, You are on the naughty list, Mc Greedy
+
+Objetivos
+- Procedimientos para collecionar evidencia digital
+- los retos con smartphones modernos
+- usar Autopsy Digital Forensics con una imagen actual de andriod
+
+Digital Forensic
+- metodo usado por la ciencia resolver crimenes
+- coleccionar evidencia desde las escenas del crimen
+- se debe analizar e interpretar la evidencia para determinar que paso en la escena del crimen
+- para la adquirir esta analisis se necesita una imagen cruda
+- una raw image se una copia bit a bit
+- es una parte escencial
+- uso de una cadena de custodia, concepto legal usado para seguir la pocesion y manejo de evidencia, colecionada en una escena de crimen que es presentada en la corte
+
+Adquiriendo una imagen digital forense
+- esto puede representar un reto, dependiendo del dispostivo
+- 4 tipos de adquisicion de imagenes forenses
+   → Static acquisition: imagen bit a bit del dispositivo apagado
+   → Live acquisition: image bit a bit del dispositivo prendido
+   → Logical acquisition: una lista selecta de archivos copiados del archivo
+   → Sparse acquisition: fragmentos seleccionados de datos sin asignar, esto contiene datos borrados
+- considera los sigueintes escenarios
+   → el tamaño de la computadora apagada
+   → como parte de una escena del crimen, el investigador del crimen debe trabajar con la compu prendida
+
+Una computadora que esta apagada
+- se sabe que por default el disco no esta encriptado
+- no se debe prender la compu para no tener cambios en el disco
+- se clona el HDD o SDD removiendolo de la laptop y clonandolo
+- pasos:
+   → se usa un write blocker, clona sin ningun riesgo de modificar la data original
+   → se obtiene una una imagen raw o equivalente
+   → finalmente, necesitamos un dispositivo donde guardar la imagen
+
+Una computadora que esta prendida
+- en este caso se debe de apagar
+- si esta cifrada la data se debe de tener el password
+
+Obteniendo la imgen de un smartphone
+- los smartphones modernos ahora estan cifrados por defecto
+
+Cifrado en smart phones
+- desde android 4.4 introduce cifrado de disco completados
+- el telefono no puede entrar sin antes proveer el password
+- android 7 infroduce direct boot, un modo de archivo basado en cifrado
+- en android 9 y mayores se puede cifrar una SD
+- desde andoid 6 el cifrado es forsozo
+- iOS viene por default, usando filed'based encryption</rich_text>
+			</node>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="burpsuit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703562346.08" ts_lastsave="1703818353.22" unique_id="226">
+			<rich_text></rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="the basics" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703627307.06" ts_lastsave="1703817992.63" unique_id="227">
+				<rich_text>is a web application security testing framework
+
+introduction a burpsuite
+comprender el uso de varias herramientas disponibles del framework
+una guia detallada del proceso de instalacion de burp suite
+navigar y configurar burp suite
+
+el core de burp suite es burp proxy
+
+es un framework basado en java, diseñado para servir como como una solucion comprensiva para conduir penetraciones de aplicacion web
+simplemente captura y activa la manipulacion de todo el trafico HTTP/HTTPS entre el explorador web y el servidor web
+para entender como trabajar con esto es necesario entender como funcionan las secciones del framework
+la habilidad de interceptar, ver y modificar las peticiones web
+
+existen diferentes versiones, community edition, professional y empresarial
+
+Features:
+- Proxy, es la parte mas renombrada, permite interceptar y modificar las peticiones y respuestas
+- Repeater, otra parte bien conocida, permite capturar, modificar y reenviar la misma peticion multples veces, se hace cuando se tiene prueba-error, por ejemplo SQLi o probar la funcionalidad de un endpoint para vulnerabilidades
+- Intruder, comunmente para ataques de fuerza bruta o endpoints desconocidos
+- Decoder, servicio para transformacion de datos, este puede decodificar la informacion capturada o codificar las cargas antes de enviarlas
+- Comparer, permite comparar dos piezas de datos por cada palabra o byte
+- Sequencer, se usa cuando se estan evualuando valores aleatorios, como valores de cookies u otro valor generado
+
+Introduccion
+- burp proxy es una herramienta fundamental y crucial que se tiene en burp suite
+- permite capturar peticiones y respuestas entre el usuario y el web server
+- este puede ser manipulado
+- puntos clave:
+   → interceptar peticiones, este debe nacer desde burp proxy, permite acciones como reenvio, eliminado, editado o enviarlo dentro de otros modulos
+   → tomar control, permite tomar control sobre el trafico web, para testear web apps
+   → capturar y logging, este puede ayudar para el analisis y revision de los requests
+   → soporte para websocket, ahora se permite la comunicacion por websocket
+   → logs and history, las peticiones pueden ser vistas en HTTP/WebSocket history
+- notables faetures en proxy settings
+   → intercepcion de repuestas, por default no viene activada se deben de activar con el checkbox en las reglas
+   → match and replace, este permite hacer uso de regex para modificar la entrada y salida de las peticiones, hace cambios dinamicos como modificar el user agent o manipular cookies
+
+el Target tab provee mas control sobre nuestro testeo:
+- site map, permite usar el mapa de la aplicacion web en forma de arbol, sirve para mejorar el crawling del objeto, explorando links entre paginas y mappeando los sitios externos posibles, esto ayuda a acumular data 
+- definicion de Issues, esta es una lista de vulnerabilidades web completa con descripciones y referencias
+- configuraciones de alcance, esto permite incluir o excluir especificos domios y/o IP
+
 Respondiendo a la carrera
 - una herramienta que se puede usar es Responder, hace uso de man-in-the-middle
 - en una LAN se puede envenenar cualquier Link-Local Multicast Name Resolution, NetBIOS Name Service y Web Proxy Auto-Discovery
@@ -9471,7 +9572,20 @@ Coercion no convencional
    → si el password de la cuenta coercionada es debil se puede crackear el challenge de NetNTLM fuera de linea usando herramientas como hastcat o john the ripper
    → si la configuracion es insuficiente se puede intentar mandar el challenge 
 - dos increibles y populares versiones de coercion son PrintSpooler y PetitPotam
-- </rich_text>
+
+Alcance y objetivo
+- aspecto de burp proxy
+- captura y logging de de todo el trafico
+- este sirve para poder interceptar todo o prevenir algoq ue no se requiera
+
+Proxy HTTPs
+- probelmas con el TLS enabled
+- se debe bajar el certificado de </rich_text>
+				<rich_text link="webs http://burt/cert">http://burt/cert</rich_text>
+				<rich_text> y agregar al explorador</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="repeater" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703818353.22" ts_lastsave="1703818353.22" unique_id="228">
+				<rich_text></rich_text>
 			</node>
 		</node>
 	</node>
