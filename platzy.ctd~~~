@@ -9515,7 +9515,7 @@ Cifrado en smart phones
 - iOS viene por default, usando filed'based encryption</rich_text>
 			</node>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="burpsuit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703562346.08" ts_lastsave="1703818353.22" unique_id="226">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="burpsuit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703562346.08" ts_lastsave="1703926025.11" unique_id="226">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="the basics" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703627307.06" ts_lastsave="1703817992.63" unique_id="227">
 				<rich_text>is a web application security testing framework
@@ -9584,7 +9584,7 @@ Proxy HTTPs
 				<rich_text link="webs http://burt/cert">http://burt/cert</rich_text>
 				<rich_text> y agregar al explorador</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="repeater" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703818353.22" ts_lastsave="1703822949.64" unique_id="228">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="repeater" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703818353.22" ts_lastsave="1703904881.34" unique_id="228">
 				<rich_text>Introduction
 - advanced capabilities
 - learn how to manipulate and resend captured requests
@@ -9603,7 +9603,18 @@ What is?
    → Target, specied the IP or domain to which the requests are sent
 
 Basic Usage
+- use with proxy module and trnasmit to repeater for editing and resuming
+- send with right click and select send to repeater or using Ctrl + R
+
+Inspector
+- supplementary feature
+- use to obtain a visually organized breakdown of request and response
+- is possible use with proxy and repeater
+- is possible change values for example change HTTP/1 to HTTP/2
 - </rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="intruder" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703926025.11" ts_lastsave="1703926025.11" unique_id="229">
+				<rich_text></rich_text>
 			</node>
 		</node>
 	</node>

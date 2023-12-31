@@ -6981,7 +6981,7 @@ basic terms
 			<rich_text></rich_text>
 		</node>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1703562346.08" unique_id="149">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1704004991.1" unique_id="149">
 		<rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -8554,7 +8554,7 @@ Commands
 </rich_text>
 			</node>
 		</node>
-		<node custom_icon_id="41" foreground="" is_bold="True" name="bandit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700199042.66" ts_lastsave="1702437879.36" unique_id="191">
+		<node custom_icon_id="40" foreground="" is_bold="True" name="bandit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1700199042.66" ts_lastsave="1704004427.14" unique_id="191">
 			<rich_text>ssh bandit.labs.overthewire.org -p 2220
 
 solutions:
@@ -8621,6 +8621,12 @@ vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
 - 31: bandit31: OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt, create temp dir and clone repo, check in tags and execute: `git show secret`
 - 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
 - 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
+		</node>
+		<node custom_icon_id="41" foreground="" is_bold="False" name="sadservers" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704004991.1" ts_lastsave="1704004995.9" unique_id="231">
+			<rich_text></rich_text>
+		</node>
+		<node custom_icon_id="41" foreground="" is_bold="False" name="natas" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704004410.48" ts_lastsave="1704004437.15" unique_id="230">
+			<rich_text></rich_text>
 		</node>
 		<node custom_icon_id="0" foreground="" is_bold="False" name="advent of cyber" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1701640955.3" ts_lastsave="1703454446.55" unique_id="199">
 			<rich_text></rich_text>
@@ -9613,7 +9619,7 @@ Inspector
 - is possible change values for example change HTTP/1 to HTTP/2
 - </rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="intruder" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703926025.11" ts_lastsave="1703979337.6" unique_id="229">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="intruder" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703926025.11" ts_lastsave="1703999225.52" unique_id="229">
 				<rich_text>Introduction
 - automated request manipulation and enables task such as fuzzing and brute-force
 - automated and customisable attacks
@@ -9636,7 +9642,34 @@ Positions
 - automatically attempts to identify the mos probable positions where payloads can be inserted
 
 Payloads
-- </rich_text>
+- this create, assing and configure payloads
+- payloads set:
+   → select type of payload
+   → with attack types only one option
+- settings
+   → specific options to current payload
+- Processing
+   → define rules to apply in each payload
+   → is possible capitalize words, skip payloads that match with regex or apply transformation or filtering
+- Encoding
+   → cutomize the encoding options for our payloads
+
+Sniper
+- is the default and most commonly used attack type
+- effective for single-position attacks, such as password brute-force or fuzzing for API endpoints
+- provide set of payloads like wordlist or a range of numbers
+
+Battering
+- this only use the same word in position options
+
+Pitchfork
+- similar a multiple sniper attacks simultaneously
+- use ibe payload set per position (max 20)
+- both list needs the same size
+
+Cluster bomb
+- allows us choice multiple payloads sets, on per position (max 20)
+- all payloadas are tested simultaneously</rich_text>
 			</node>
 		</node>
 	</node>

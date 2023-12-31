@@ -9613,8 +9613,57 @@ Inspector
 - is possible change values for example change HTTP/1 to HTTP/2
 - </rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="intruder" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703926025.11" ts_lastsave="1703926025.11" unique_id="229">
-				<rich_text></rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="intruder" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703926025.11" ts_lastsave="1703999225.52" unique_id="229">
+				<rich_text>Introduction
+- automated request manipulation and enables task such as fuzzing and brute-force
+- automated and customisable attacks
+- allow modify specific parts of a request and perform repetitive test with variations of input data
+- used with fuzzing and brute-force
+
+What is?
+- automated testint requests with variation of input values
+- this is captured from proxy modeule
+- using for burting force login, similar to wfuzz or ffuf
+- sub tabs:
+   → Positions, select type of attack and configure payloads
+   → Payloads, select values to insert into positions
+   → Resouce pool, not particulary useful in CE, 
+   → settings, configure attack behaviour
+- Fuzzing is discover for example subpaths in URL
+
+Positions
+- first step is examine ositions within the request where we want to insert our payloads
+- automatically attempts to identify the mos probable positions where payloads can be inserted
+
+Payloads
+- this create, assing and configure payloads
+- payloads set:
+   → select type of payload
+   → with attack types only one option
+- settings
+   → specific options to current payload
+- Processing
+   → define rules to apply in each payload
+   → is possible capitalize words, skip payloads that match with regex or apply transformation or filtering
+- Encoding
+   → cutomize the encoding options for our payloads
+
+Sniper
+- is the default and most commonly used attack type
+- effective for single-position attacks, such as password brute-force or fuzzing for API endpoints
+- provide set of payloads like wordlist or a range of numbers
+
+Battering
+- this only use the same word in position options
+
+Pitchfork
+- similar a multiple sniper attacks simultaneously
+- use ibe payload set per position (max 20)
+- both list needs the same size
+
+Cluster bomb
+- allows us choice multiple payloads sets, on per position (max 20)
+- all payloadas are tested simultaneously</rich_text>
 			</node>
 		</node>
 	</node>
