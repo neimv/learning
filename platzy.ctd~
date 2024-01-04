@@ -9698,7 +9698,7 @@ Organizer
 python requires Jython</rich_text>
 			</node>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704239791.92" unique_id="234">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704265336.89" unique_id="234">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="Live Host Discovery" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239791.92" ts_lastsave="1704263847.36" unique_id="235">
 				<rich_text>Introduction
@@ -9779,6 +9779,9 @@ Using reverse-DNS lookup
 - if does not send DNS queries use -n
 - use -R to query the DNS server even for offline hosts, reverse-DNS lookup for all hosts
 - is possible use a specific DNS using --dns-servers DNS_SERVER</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Basic port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704265336.89" ts_lastsave="1704265336.89" unique_id="236">
+				<rich_text></rich_text>
 			</node>
 		</node>
 	</node>

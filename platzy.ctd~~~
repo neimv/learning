@@ -9521,7 +9521,7 @@ Cifrado en smart phones
 - iOS viene por default, usando filed'based encryption</rich_text>
 			</node>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="burpsuit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703562346.08" ts_lastsave="1704169288.9" unique_id="226">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="burpsuit" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703562346.08" ts_lastsave="1704218809.02" unique_id="226">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="the basics" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1703627307.06" ts_lastsave="1703817992.63" unique_id="227">
 				<rich_text>is a web application security testing framework
@@ -9692,6 +9692,10 @@ Sequencer
 
 Organizer
 - help to store and annotate copies of HTTP requests</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="extensions" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704218809.02" ts_lastsave="1704219744.93" unique_id="233">
+				<rich_text>extension can be written in various languages, like python and java
+python requires Jython</rich_text>
 			</node>
 		</node>
 	</node>
