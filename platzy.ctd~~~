@@ -9698,7 +9698,7 @@ Organizer
 python requires Jython</rich_text>
 			</node>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704265336.89" unique_id="234">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704334161.91" unique_id="234">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="Live Host Discovery" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239791.92" ts_lastsave="1704263847.36" unique_id="235">
 				<rich_text>Introduction
@@ -9780,8 +9780,110 @@ Using reverse-DNS lookup
 - use -R to query the DNS server even for offline hosts, reverse-DNS lookup for all hosts
 - is possible use a specific DNS using --dns-servers DNS_SERVER</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Basic port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704265336.89" ts_lastsave="1704265336.89" unique_id="236">
-				<rich_text></rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Basic port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704265336.89" ts_lastsave="1704333665.87" unique_id="236">
+				<rich_text>TCP and UDP ports
+- identify a network service running on host
+- no more one services can listen on any TCP or UDP port
+- two states:
+   → open port, service is listening
+   → close port, service is not listening
+- states in nmap:
+   → Open, services is listening
+   → Closed, service is not listening, is accesible, is reachable and is not blocked by a firewall or other security appliance/programs
+   → Filtered, cannot determine if the port is open or closed, port is not accessible, firewall preventing nmap from reaching that port
+   → Unfiltered, cannot determine if the port is open or closed, the port is accessible, using an ACK scan -sA
+   → Open|Filtered, cannot determine whether the port is open or filtered
+   → Closed|Filtered, cannot determine whether the port is closed or filtered
+
+TCP Flags
+- different types of scans, depending of TCP header
+- the first 24 bytes is a TCP header
+- focus in TCP flags:
+   → URG, urgent point is significant, data is urgent, process immediately
+   → ACK, acknowledgement number is significant, , to acknowledge the receipt of a TCP segment
+   → PSH, push asking TCP to pass the data to the application promptly
+   → RST, used to reset connection, is possible send with firewall, when data is sent to a host and there is no service on the receiving end to answer
+   → SYN, initiate a TCP 3-way handshake and synchronize sequence numbers with the other host
+   → FIN, the sender has no more data to send
+
+TCP connect scan
+- works by completing the TCP 3-way handshake
+- to send a RST/ACK use -sT, only check open ports and no establishing connection
+- without root or sudoer only is possible discover open TCP ports
+- port response RST/ACK to close port
+- use of -F to fast mode, change from 1000 to 100 port scanner
+- -r to scan ports in consecutive order instead of random order
+
+TCP SYN scan
+- the default scan is SYN scan, using privileged user
+- required a privileged user to run
+- does not complete the TCP 3-way handshake
+- this does not establish a TCP connection
+- select this scan using -sS
+   → way: SYN - SYN/ACK - RST
+
+UDP scan
+- connection less potocol
+- cannot guarantee that a service listening on a UDP port would respond to our packets
+- an ICMP port unreachable error type3, code3 is returned
+- usgin with -sU
+   → way: UDP packet, no response open port
+   → way: UDP packet - ICMP type3, code 3, port is closed
+- ex: nmap -sU -F -v {ip}
+- priviledge user is necesary
+
+Fine-Tuning scope and performance
+- specify ports with:
+   → -p{list of ports using comma}
+   → -p{port}-{to port}
+   → -p-, to check all ports
+   → -F to 100 most common
+   → --top-ports {number to check}
+- scan timing control with: -T&lt;0-5&gt;, when -T0 us the slowest (paranoid) and -T5(fastest):
+   → paranoid (0)
+   → sneaky (1)
+   → polite (2)
+   → normal (3)
+   → Aggresive (4)
+   → insane (5)
+- to avoid alerts use 0 or 1
+- default is 3
+- 4 is used wirh CTFs and when learningto scan with practice
+- control rate using --min-rate {number} and --max-rate {number}
+- prallelization using --min-parallelism and --max-parallelism</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Advanced port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704334161.91" ts_lastsave="1704341575.72" unique_id="237">
+				<rich_text>an ACK flag is set when you want to acknowledge received data, ACK scan is like trying acknowledge (reconociendo) data that was neither sent nor received in the first place
+types of port scans:
+- Null scan
+- FIN scan
+- Xmas scan
+- Maimon scan
+- ACK scan
+- Window scan
+- Custom scan
+
+Cover soon:
+- Spoofing IP
+- Spoofing MAC
+- Decoy scan
+- Fragmented Packets
+- Idle/Zombie scan
+
+Evade Firewalls and IDS systems
+
+Null Scan
+- does not set any flag
+- use -sN option
+- this not trigger any response when irt reaches an open ports
+- way
+   → NULL - no response, open port
+   → NULL - RST,ACK, port us closed
+
+FIN Scan
+- 
+
+Xmas Scan</rich_text>
 			</node>
 		</node>
 	</node>

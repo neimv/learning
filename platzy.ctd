@@ -6981,7 +6981,7 @@ basic terms
 			<rich_text></rich_text>
 		</node>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1704239776.6" unique_id="149">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1704510132.87" unique_id="149">
 		<rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -8310,6 +8310,40 @@ API SECURITY -------
    → in V1 security is not updated
 - Insufficient Logging &amp; Monitoring
    → there is not anough evidence available due to the absence of logging and monitoring mechanims</rich_text>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="OWASP Juice" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704510132.87" ts_lastsave="1704518313.02" unique_id="239">
+			<rich_text>Inject the juice
+- vulnerabilities are very dangerous, injection
+- downtime or loss of data
+- exist multiple types of injections attacks, some of them are:
+   → SQL Injection, enters a maliciuos or malformed query to either retrieve or tamper data from a database
+   → Command Injection, web application take input or user-controlled dataand run them as system command
+   → Email Injection, allows malicious user to send email messages without prior authorization by the email server
+- use of SQL INJECTION:
+   → common use of “‘ or 1=1 --”
+
+who broke my lock
+- exploiting authentication through different flaws
+- mechanism that are vulnerable to manipulation
+   → weak password in high privileged accounts
+   → forgotten password pages
+
+Ah! Don't look!
+- should store and transmit sensitive data safely and securely
+- bypass called &quot;Poison Null Byte” like %00
+- using: %2500
+
+Who's flying this thing?
+- when broken access control exploits or bugs are found, it wil be categorised into one of two types
+   → Horizontal privilege escalation, occurs when a user can perform an action or access data of another data of another user with the same level of permissions
+   → Vertical privilege escalation, occurs when a user can perform an action or access data of another user with a higher level of permissions
+
+Where dud that come from
+- XSS or cross-site scripting is a vulnerability that allows attackers to run javascript in web applications
+- major types of XSS:
+   → DOM XSS, uses the HTML environment to execute malicius javascript, this use script tag
+   → Persistent XSS, is JS that is run when the server loads the page containing it, server does not sanitise the user data when it is uploaded to a page, use on blog posts
+   → Reflected XSS, JS that is run on the client-side end of the web application, these are most commonly found when the server doesn't sanitise search data</rich_text>
 		</node>
 		<node custom_icon_id="0" foreground="" is_bold="False" name="SAST" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1693355854.0" ts_lastsave="1693355859.0" unique_id="173">
 			<rich_text>Automatization of testing for code analysis</rich_text>
