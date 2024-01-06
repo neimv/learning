@@ -6981,7 +6981,7 @@ basic terms
 			<rich_text></rich_text>
 		</node>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1704004991.1" unique_id="149">
+	<node custom_icon_id="0" foreground="" is_bold="False" name="TryHackMe" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1685939072.0" ts_lastsave="1704239776.6" unique_id="149">
 		<rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -9696,6 +9696,92 @@ Organizer
 			<node custom_icon_id="0" foreground="" is_bold="False" name="extensions" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704218809.02" ts_lastsave="1704219744.93" unique_id="233">
 				<rich_text>extension can be written in various languages, like python and java
 python requires Jython</rich_text>
+			</node>
+		</node>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704265336.89" unique_id="234">
+			<rich_text></rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Live Host Discovery" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239791.92" ts_lastsave="1704263847.36" unique_id="235">
+				<rich_text>Introduction
+- efficent tool to help us handle repetitive tasks with
+   → Which systems are up?
+   → What services are running on these systems?
+- cover:
+   → ARP, discover live hosts
+   → ICMP, identify hosts
+   → TCP/UDP, send packages to TPC and UDP ports
+- steps:
+   → enumerate targets
+   → discover live hosts
+   → reverse-DNS lookup
+   → scan ports
+   → detect versions
+   → detect OS
+   → traceroute
+   → Scripts
+   → Write output
+
+Subnetworks
+- network segment is a group of computers connected using shared medium for example Ethernet switch or WiFi access point
+- network segment refers ti a physical connection
+- subnetwork refers to a logical connection
+- like reconnaissance, we want to discover more information about a group of hosts or about subnet
+- using ARP to discover live hosts, is a link layer protocol
+
+Enumerate Targets
+- list: MACHINE_IP URL1 URL2
+- range: 10.11.12.15-20
+- subnet: MACHINE_IP/30
+- with file: nmap -iL list_hosts.txt
+- check list of hosts: nmap -sL TARGETS
+
+Discover live hosts
+- use of TPC/IP layers
+   → ARP from link Layer, send a frame to the broadcast address on the network segment and asking a computer with a specific ip to response MAC
+   → ICMP frm network Layer, use ping type 8 (Echo) and Type 0 (Echo Reply)
+   → TCP from transport Layer, network scanning purposes, used when ICMP is blocked
+   → UDP from transport Layer
+
+Using ARP with nmap
+- use privileged user to use ARP requests
+- outside the local network, nmap use ICMP echo requests, TCP ACK to port 80, TCP SYN to port 443, and ICMP timestamp request
+- nmap by default use a ping scan to find lve hosts
+- to discover without port-scanning use: nmap -sn TARGET
+- ARP scan is possible only if you are on the same subnet
+- to use: nmap -PR -sn TARGETS, -PR is ARP scan
+- to check arp is possible use: arp-scan -l, to specify interface: arp-scan -I eth0 -l
+
+Using ICMP with nmap
+- send ping request TYPE8/echo to response ping reply TYPE0
+- many firewalls block ICMP echo
+- to use ICMP echo request: nmap -PE -sn TARGET, -sn to without port scan
+- exists another ICMP petition using Timestamp request TYPE13 and reply TYPE14, adding -PP, ex: nmap -PP -sn TARGET
+- another is using address mask queries, TYPE17 with repli TYPE18, using option -PM, ex: nmap -PM -sn TARGET
+
+Using TCP and UDP with nmap
+- TCP SYN Ping, send package with the SYN flag to TCP port 80, open port should reply with SYN/ACK, a closed port with RST, the specific state of the port is not significant here
+   → way: SYN - SYN,ACK - ACK, this OK
+   → way: SYN - SYN,ACK - RST, this closed
+- to use with TCP SYN: use -PS followed by the port, nmap -PS -sn TARGET
+- TCP ACK ping, sends a packet with ACK flag, by default use port 80
+- use option -PA followed by ports
+- example: nmap -PA -sn TARGET
+   → way: ACK - RST, tcp port is open or closed
+- UDP ping, this not expect to lead to any reply
+   → way: UDP packet, this is open
+   → way: UDP packet - ICMP Type3, Code 3, is closed
+- TO use: nmap -PU -sn TARGET
+- is possible use masscan
+- options of ports is in -P{x}{port}
+
+Using reverse-DNS lookup
+- by default is used reverse-DNS online hosts
+- because the hostnmaes can reveal a lot
+- if does not send DNS queries use -n
+- use -R to query the DNS server even for offline hosts, reverse-DNS lookup for all hosts
+- is possible use a specific DNS using --dns-servers DNS_SERVER</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Basic port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704265336.89" ts_lastsave="1704265336.89" unique_id="236">
+				<rich_text></rich_text>
 			</node>
 		</node>
 	</node>
