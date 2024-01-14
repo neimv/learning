@@ -7121,7 +7121,36 @@ MySQL
 - persistent, organised collection of structured data
 - is only brand name for one of the most popular RDBMS software implementations</rich_text>
       </node>
-      <node name="OWASP Juice Shop" unique_id="221" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1703107505" ts_lastsave="1703107505"/>
+      <node name="OWASP Juice Shop" unique_id="221" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1703107505" ts_lastsave="1705108886"/>
+      <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1705206307">
+        <rich_text>Introduction
+- integral part of how we interact with web apps
+- applications for file upload features are limitless
+- when handled badly, file uploadscan also open vulnerabilities in the server
+- the way up to full remote code execution (RCE)
+- injection of malicious webpages, vulnerabilities such as XSS or CSRF
+- purpose:
+   → Overwritting existing files on a server
+   → uploading and executing shells on a server
+   → bypassing client-side filtering
+   → bypassing varios kinds of server-side filtering
+   → fooling content type validation checks
+
+General methodology
+- enumeration is key
+- understand about our environment
+- scanning with a directory bruteforcer sush as gobuster
+- intercept requests with burpsuite
+- browser extension such as wappalyser can prove valuable information
+
+Overwriting exisiting files
+- to does not overwrite file the system execute multiple checks
+- common is assing new name
+- use of file permission on the server
+
+Remote code execution
+- </rich_text>
+      </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:
@@ -10019,21 +10048,7 @@ Saving the output
       ⇒ like hacker numbers</rich_text>
       </node>
     </node>
-    <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1704859643">
-      <rich_text>Introduction
-- integral part of how we interact with web apps
-- applications for file upload features are limitless
-- when handled badly, file uploadscan also open vulnerabilities in the server
-- the way up to full remote code execution (RCE)
-- injection of malicious webpages, vulnerabilities such as XSS or CSRF
-- purpose:
-   → Overwritting existing files on a server
-   → uploading and executing shells on a server
-   → bypassing client-side filtering
-   → bypassing varios kinds of server-side filtering
-   → fooling content type validation checks</rich_text>
-    </node>
-    <node name="Web Enumeration" unique_id="241" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704850228" ts_lastsave="1705104813">
+    <node name="Web Enumeration" unique_id="241" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704850228" ts_lastsave="1705105101">
       <rich_text>Introduction
 - vital in penetration testing
 
@@ -10099,7 +10114,11 @@ Modes:
 - Basic scanning, use of flag -h and ip address or domain name: nikto -h {vulnerable_ip}
 - multiple hosts and ports, is possible provide multiple arguments in a way: nikto -h {ip} -p {list ports}
 - Plugins, specify plugins: nikto -h {ip} -Plugin {plugin}
-- increase the verbosing: use -Display</rich_text>
+- increase the verbosing: use -Display
+- is possible tuning the scan using -Tuning with multiple categories
+- saving findings:
+   → multiple formats output: text file and html report
+   → use of -o or -Output, specify the format with name file or using -f flag</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">

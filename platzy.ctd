@@ -7122,7 +7122,7 @@ MySQL
 - is only brand name for one of the most popular RDBMS software implementations</rich_text>
       </node>
       <node name="OWASP Juice Shop" unique_id="221" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1703107505" ts_lastsave="1705108886"/>
-      <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1705203219">
+      <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1705210593">
         <rich_text>Introduction
 - integral part of how we interact with web apps
 - applications for file upload features are limitless
@@ -7134,7 +7134,28 @@ MySQL
    → uploading and executing shells on a server
    → bypassing client-side filtering
    → bypassing varios kinds of server-side filtering
-   → fooling content type validation checks</rich_text>
+   → fooling content type validation checks
+
+General methodology
+- enumeration is key
+- understand about our environment
+- scanning with a directory bruteforcer sush as gobuster
+- intercept requests with burpsuite
+- browser extension such as wappalyser can prove valuable information
+
+Overwriting exisiting files
+- to does not overwrite file the system execute multiple checks
+- common is assing new name
+- use of file permission on the server
+
+Remote code execution
+- allow us to execute code arbitrarily on the web server
+- even with a low-privileged user account is very extremely serious vulnerability
+- common is used the same language like backend
+- exists 2 basic ways:
+   → webshells
+   → reverse/bind shells, this is most ideal
+- pentest monkey reverse shell</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
