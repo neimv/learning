@@ -10033,7 +10033,7 @@ Saving the output
    → bypassing varios kinds of server-side filtering
    → fooling content type validation checks</rich_text>
     </node>
-    <node name="Web Enumeration" unique_id="241" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704850228" ts_lastsave="1705104318">
+    <node name="Web Enumeration" unique_id="241" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704850228" ts_lastsave="1705104813">
       <rich_text>Introduction
 - vital in penetration testing
 
@@ -10097,7 +10097,9 @@ Nikto
 
 Modes:
 - Basic scanning, use of flag -h and ip address or domain name: nikto -h {vulnerable_ip}
-- multiple hosts and ports, is possible provide multiple arguments in a way: nikto -h {ip} -p {list ports}</rich_text>
+- multiple hosts and ports, is possible provide multiple arguments in a way: nikto -h {ip} -p {list ports}
+- Plugins, specify plugins: nikto -h {ip} -Plugin {plugin}
+- increase the verbosing: use -Display</rich_text>
     </node>
   </node>
   <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
