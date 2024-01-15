@@ -9698,7 +9698,7 @@ Organizer
 python requires Jython</rich_text>
 			</node>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704334161.91" unique_id="234">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="NMAP" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239776.6" ts_lastsave="1704398126.72" unique_id="234">
 			<rich_text></rich_text>
 			<node custom_icon_id="0" foreground="" is_bold="False" name="Live Host Discovery" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704239791.92" ts_lastsave="1704263847.36" unique_id="235">
 				<rich_text>Introduction
@@ -9852,7 +9852,7 @@ Fine-Tuning scope and performance
 - control rate using --min-rate {number} and --max-rate {number}
 - prallelization using --min-parallelism and --max-parallelism</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Advanced port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704334161.91" ts_lastsave="1704355728.15" unique_id="237">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Advanced port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704334161.91" ts_lastsave="1704396625.8" unique_id="237">
 				<rich_text>an ACK flag is set when you want to acknowledge received data, ACK scan is like trying acknowledge (reconociendo) data that was neither sent nor received in the first place
 types of port scans:
 - Null scan
@@ -9940,7 +9940,69 @@ Spoofing and decoys
 - use to decoy: nmap -D DECOY1,ME,DECOY2 MACHINE_IP
 
 Fragmented packets
-- Firewall, is a piece of software or hardware that permits packets to pass or block</rich_text>
+- Firewall, is a piece of software or hardware that permits packets to pass or block
+- IDS, intrusion detection system, use to select packets wit specific patterns or specific content signatures, this inspect data content, and check if is malicious pattern
+- fragmented packets, use option -f, to fragment packets
+   → divided into 8 bytes or less
+   → using -f -f or -ff split in 16 byte-fragment
+   → is possible change the value using --mtu
+   → to increment size of packets use --data-length NUM
+
+Idle/Zombie Scan
+- spoofing to check scanning stealthily
+- requieres an idle system connected to the network that you can cominicate with
+- test is used like idle host
+- running: nmap -sI ZOMBIE_IP MACHINE_IP
+- this is required:
+   → trigger the idle host to respond so that you can record the current IP ID on the idle host
+   → send a SYN packet to a TCP port on target
+   → trigger the idle machine again to response so that compare the new Ip ID with the one received earlier
+- if port is closed response to zombie host
+- if port is open response with SYN/ACK to zombie and this response with RST
+- possible the target machine does not respond by firewall
+
+Geting more details
+- to get more info use --reason
+- to know because namp concluded that the system is up or a particular port is open
+- for more details use -v or -vv
+- another mode is use -d or -dd to debugging details</rich_text>
+			</node>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Post port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704398126.72" ts_lastsave="1704405171.1" unique_id="238">
+				<rich_text>Service Detection
+- before to detect open ports is necessary detect services 
+- adding -sV collect and determine service and version information for the open ports
+- is possible control the intensitity with --version-intensity LEVEL, ranges between 0 (lightest) and 9 or -sV --version-light has an intensity of 2 and -sV --version-all intensity of 9
+- -sV use 3-way handshake and establish the connection, use of -sS is nos possible
+
+OS Detection
+- is possible detect the OS using -O
+- nmap detect OS correctly the kernel version is possible was wrong
+- this fails or is possible that is possible by virtualization
+
+Traceroute
+- find of routers between you and the target, only add --traceroute
+
+NSE, nmap scripting engine
+- scripts in Lua
+- is possible use group of scripts
+- can install other user's scripts
+- run default scripts with: --script=default or adding -sC
+- is used to validations, are very instrusives
+
+Saving the output
+- formats:
+   → Normal
+      ⇒ this is similar to the output in terminal
+      ⇒ use -oN FILENAME
+   → Grepable
+      ⇒ use specific keywords or terms efficient
+      ⇒ use -oG FILENAME
+      ⇒ generally saved in 21 lines normal, in grepable is only 4 lines
+   → XML
+      ⇒ save in format XML
+      ⇒ use -oX FILENAME
+   → script Kiddie this is not recomend
+      ⇒ like hacker numbers</rich_text>
 			</node>
 		</node>
 	</node>

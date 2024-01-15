@@ -9852,7 +9852,7 @@ Fine-Tuning scope and performance
 - control rate using --min-rate {number} and --max-rate {number}
 - prallelization using --min-parallelism and --max-parallelism</rich_text>
 			</node>
-			<node custom_icon_id="0" foreground="" is_bold="False" name="Advanced port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704334161.91" ts_lastsave="1704341575.72" unique_id="237">
+			<node custom_icon_id="0" foreground="" is_bold="False" name="Advanced port scans" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1704334161.91" ts_lastsave="1704355728.15" unique_id="237">
 				<rich_text>an ACK flag is set when you want to acknowledge received data, ACK scan is like trying acknowledge (reconociendo) data that was neither sent nor received in the first place
 types of port scans:
 - Null scan
@@ -9881,9 +9881,66 @@ Null Scan
    → NULL - RST,ACK, port us closed
 
 FIN Scan
-- 
+- send TCP package with flag FIN
+- using -sF to select this option
+- similar to Null scan
+- is not sure if the port is open or if a firewall is blocking
+   → way: FIN - Null response, open port
+   → way: FIN - RST,ACK, port is closed
 
-Xmas Scan</rich_text>
+Xmas Scan
+- use name of Christmass tree lights
+- sets the FIN, PSH and URG flag
+- use -sX to select
+   → way: FIN,PSH,URG - Null response, open port
+   → way: FIN,PSH,URG - RST,ACK, port is closed
+- efficient in scanning a target behind stateless firewall
+
+Maimon Scan
+- FIN and ACK are set
+- send a RST packet as a response
+- certain BSD systems drop tha packet if it is an open port
+- to select: -sM
+- response is an RST packet
+   → way: FIN/ACK - RST, port open or closed, in some systems drop package if port is open
+
+ACK Scan
+- send packet with the ACK flag set
+- use -sA option
+- target response with RST
+   → way: ACK - RST, port is open or closed
+- used if there is a firewall in front of the target
+- to discover firewall rule sets and configuration
+
+Window Scan
+- almost the same as the ACK scan
+- this examines the TCP Windows field of the RST packet returned
+- on specific systems, this can reveal that the port is open
+- use -Sw to select this option
+   → way: ACK - RST, port is open or closed
+- against a linux system with no firewall will not provide much information
+- with repeat petition we get more satisfying result
+
+Custom Scan
+- TCP flag combination, use --scanflags
+- ex: --scanflag RSTSYNFIN to set RST,SYN,FIN
+
+Spoofing and decoys
+- target scan using spoofed IP address and even a spoofed MAC Address
+- beneficial in a situation where you can guarantee to cature the response
+- command: nmap -S SPOOFED_IP MACHINE_IP
+- save packages in spoofed ip
+- three steps:
+   → attacker send a packet with a poofed source IP address to the target machine
+   → Target machine replies to the spoofec IP address as the destination
+   → Attacker catures the replies to figure out open ports
+- expect the network interface using -e and explicity disbale ping with -Pn 
+- using same subnet as the target machine, you would be able to spoof your MAC address as well, using --spoof-mac SPOOFED_MAC, this only works if attacker and target is in the same Ethernet network or same WiFi
+- tha attacker might resort to using decoy to make it more challenging to be pinpointed, is simple coming from many IP address, this lost IP of attacker
+- use to decoy: nmap -D DECOY1,ME,DECOY2 MACHINE_IP
+
+Fragmented packets
+- Firewall, is a piece of software or hardware that permits packets to pass or block</rich_text>
 			</node>
 		</node>
 	</node>
