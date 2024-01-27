@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1700673736">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1706379007">
     <rich_text>sacar guardapeluzas y limpiarlos
 se separa la ropa en obscura y blanca
 blanca con claros
@@ -13,7 +13,32 @@ negra, chorro de vinagre menos grande, 2 tapas de jabon liquido mas color negro 
 calzones de leo y fany a mano
 playeras amarillas con la blanca y sueter del diario
 
-dansing.for.love@gmail.com</rich_text>
+dansing.for.love@gmail.com
+
+
+Network
+</rich_text>
+    <rich_text link="webs https://medium.com/@bijit211987/elevating-kubernetes-network-monitoring-with-istio-linkerd-and-envoy-2a3f4ab452dc">https://medium.com/@bijit211987/elevating-kubernetes-network-monitoring-with-istio-linkerd-and-envoy-2a3f4ab452dc</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://faun.pub/capturing-container-traffic-on-kubernetes-ee4a49b833b7">https://faun.pub/capturing-container-traffic-on-kubernetes-ee4a49b833b7</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://istio.io/latest/docs/setup/platform-setup/amazon-eks/">https://istio.io/latest/docs/setup/platform-setup/amazon-eks/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://px.dev">https://px.dev</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm">https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://aws-ia.github.io/terraform-aws-eks-blueprints/patterns/istio/">https://aws-ia.github.io/terraform-aws-eks-blueprints/patterns/istio/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://github.com/nicolaka/netshoot">https://github.com/nicolaka/netshoot</rich_text>
+    <rich_text>
+</rich_text>
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -6972,7 +6997,7 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1704850228">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1706132179">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -6986,13 +7011,20 @@ TO CHECK VULNERABILITIES
     <rich_text link="webs https://cve.mitre.org/">https://cve.mitre.org/</rich_text>
     <rich_text>
 
-
+</rich_text>
+    <rich_text link="webs https://pypi.org/project/hashID/">https://pypi.org/project/hashID/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://hashes.com/en/tools/hash_identifier">https://hashes.com/en/tools/hash_identifier</rich_text>
+    <rich_text>
 
 </rich_text>
     <rich_text scale="h2">Your Cleverbridge reference number: 431182666</rich_text>
     <rich_text>
+
 </rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="1" foreground="" ts_creation="1700447328" ts_lastsave="1703107505">
+    <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1706221821">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7008,7 +7040,7 @@ traceroute map the path request, in win use ICMP and unix-like us UDP
 WHOIS, query who a domain name is registered to
 DIG, </rich_text>
       </node>
-      <node name="Nmap" unique_id="194" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="1" foreground="" ts_creation="1700602042" ts_lastsave="1700675991">
+      <node name="Nmap" unique_id="194" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1700602042" ts_lastsave="1700675991">
         <rich_text>knowledge is power, we need to establisj which services are running on the targets
 depending of port is probably get the service running in the server
 nmap is used to perform many different kinds of port scan
@@ -7122,7 +7154,7 @@ MySQL
 - is only brand name for one of the most popular RDBMS software implementations</rich_text>
       </node>
       <node name="OWASP Juice Shop" unique_id="221" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1703107505" ts_lastsave="1705108886"/>
-      <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1705206715">
+      <node name="Upload vulnerabilities" unique_id="240" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1704813054" ts_lastsave="1705630962">
         <rich_text>Introduction
 - integral part of how we interact with web apps
 - applications for file upload features are limitless
@@ -7154,7 +7186,247 @@ Remote code execution
 - common is used the same language like backend
 - exists 2 basic ways:
    → webshells
-   → reverse/bind shells, this is most ideal</rich_text>
+   → reverse/bind shells, this is most ideal
+- pentest monkey reverse shell
+
+Filtering
+- defensive versus this techniques
+- client-side filtering, this run over user's browser, , it is trivially easy to pass
+- server-side filtering, run over server, this is more dificult to pass
+- types of filtering:
+   → extension validation: using a blacklist of extensions files
+   → File type fitlering: more intensive, file type filtering looks, two types of file validations:
+      ⇒ MIME validation: used as an identifier for files
+      ⇒ Magic number validation: accurate way of determining the content of a file, is a string of bytes at the very beginning of the file content wich identify the content
+   → File length filtering: used to prevent huge files
+   → File name filtering: in a files, name should be unique, adding a random aspect to the file name, file name should be sanitised for bad characters
+   → File content filtering: more complicated filtering systems may scan the full contents of an uploaded file
+
+Bypassing client side filtering
+- firts and weakest line of defense
+- is easy to bypass
+- four easy ways to bypass:
+   → turn off javascript: work if site doesn't require javascript in order to provide basic functionality
+   → Intercept and modify the incomming page: using burpsuite to intercept the incmoming web page and strip out the javascript
+   → Intercept and modify the file upload: previous method works before the webpage is loaded, this allow the web page load as normal, but intercepts the file upload
+   → Send the file directly to the upload point: sending using curl using: curl -X POST -f “submit:&lt;value&gt;” -F “&lt;file-parameter&gt;:@&lt;path-to-file&gt;” &lt;site&gt;
+
+Bypassing server-side filtering: file extensions
+- when can't see or manipulate the code
+- put together a payload which conforms to the restrictions
+- use of another extensions, for example in php: php3, php4, php5
+
+Bypassing server-side filtering: magic numbers
+- used as a more accurate identifier of files
+- string of hex digits, always the first thing in a file
+- used to validate file iploads, using this with white or black list
+
+Example methodology
+- steps to follow (create own methodology):
+   → use of browser extension such as the aforementioned Wappalyzer, this is to know languages and frameworks the web application, manually is use burpsuite to intercept response with headers like, server or x-powered-by
+   → with the page analize the source code for client-side to check is if possible use side filter 
+   → check how to access the uploaded file, use of gobuster
+      ⇒ is important the flag -x to check extensions: php,txt,html
+   → attempt at malicious file upload
+- assuming fail:
+   → if extension fails is using a blacklist to filter files, use any extension filter will be operating on a whitelist
+   → try re-uploading original innocent file, but change the magic number
+   → try upload file, but intercept the request with burpsuit and change the MIME
+   → enumerating file length filter is a case of uploading a small file, and before upload a bigger files</rich_text>
+      </node>
+      <node name="Hashing Crypto 101" unique_id="242" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1705631737" ts_lastsave="1705729191">
+        <rich_text>Key terms
+- plaintext, data before encryption or hashing, not only text
+- encoding, not a form of encryption, form of representation
+- hash, output of a hash function, ver “to hash”, produce the hash value of some data
+- brute force, attacking cryptography by truing every different password or another key
+- cryptanalysis, attacking cryptography by finding a weakness in the undelying maths
+
+What is a hash function?
+- different forms of encryption
+- takes som input data of any size and creates a summary or digest of that data.
+- is hard to predict the output
+- good hahsing will be fast to compute (relative) and slow of reverse
+- with a small change in the input should cuase a large change in the output
+- Why should I care?, used in multiple context, in password generally
+- hash collision, 2 different inputs give the same output
+   → hash function are designed to avoid this as best as they can
+   → collisions are note avoidable, pigeonhole effect
+   → MD5 and SHA1 has hash collision
+
+Uses for hashing
+- user for verify integrity of data or verifying password
+   → password verification
+      ⇒ not save in text plain
+      ⇒ rockyou.txt is a file over 14 million passwords
+   → protecting against rainbow table
+      ⇒ use of salt to the password, this is randomly generated and stored in the database
+      ⇒ salt is added to either the start or the end of the password before it's hashed 
+
+Recognising password hashes
+- automated hash recognition tools such as hashID
+- unix style password are very easy to recognisem this contains a prefix
+- standard format is $format$rounds$salt$hash
+- windows password using NTLM, is a variant of MD4
+- in linux hashes are stored in /etc/shadow
+- in windows password are stored in the SAM, use of tools like mimekatz
+- hashes in unix style:
+   → $1$, md5crypt, used in cisco stuff and older unix systems
+   → $2$, $2a$, $2b$, $2x$, $2y$, Bcrypt, popular for web apps
+   → $6$, sha512crypy
+
+Password cracking
+- not is possible decrypt password hashes
+- used rockyou for crack the password
+- when match you know the password
+- use of tools like hashcat and john the ripper
+
+Why crack on GPUs?
+- use of thousand of cores
+- is very good with maths
+- is more quickly to crack
+
+Cracking on VMs?
+- use of hashcat it is best in host
+- john the reaper uses CPU by default
+- Never use --force for hashcat, it can lead to false positives
+
+Hashing for integrity checking
+- used to check that files haven't been changed
+- used to check that files haven't been modified
+- HMACs
+   → method of using a cryptographic hashing function to check authenticity and integrity of data</rich_text>
+      </node>
+      <node name="John the ripper" unique_id="243" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1705797580" ts_lastsave="1706139885">
+        <rich_text>john who?
+- john the ripper is one of the most well know hash cracking
+- fast cracking speed + range of compatible hash types
+- 32 chars standard to MD5 hash
+- hashes are designed to operate one way, reverse operation from output to input is a problem P vs NP
+- with hashed version and large number of word is possible cracked
+- dictionary attack
+
+Cracking basic hashes
+- exists multiple ways to use
+- basic sintax: john [options] [path to file]
+
+Automatic Cracking
+- is possible detect type of hash and select appropriate rules and formats to crack
+- this is not always the best way
+- use: john --vordlist=[path of wordlist] [path to file]
+
+Identifying hashes
+- is necesary use another tools to identify the hash
+- use of: </rich_text>
+        <rich_text link="webs https://hashes.com/en/tools/hash_identifier">https://hashes.com/en/tools/hash_identifier</rich_text>
+        <rich_text>
+- use of hash-identifier tool of python, this is necesary download
+
+Format-Specific cracking
+- to use with the hash is identifier: john --format=[format] --wordlist=[path of wordlist] [path to file]
+- if is a common hash is necesary add raw in format
+- use of john --list=formats
+
+Cracking windows hashes
+- something a little bit more difficult
+- NTHash/NTLM, format in modern windows, is possible acquire dumping the SAM database, use of tools like mimikatz or active directory database
+
+Cracking hashes from /etc/shadow
+- /etc/shadow is where password hashed are stored, another information
+- one line ofr each user or user account of the system
+- only acessible by the root user
+- is necesary combine with the /etc/passwd file
+- use of unshadow: unshadow [path /etc/passwd] [path /etc/shadow]
+- ex: unshadow local_passwd local_shadow &gt; unshadowed.txt
+- in some cases is necesary use: --format=sha256crypt
+
+Single crack mode
+- use only the information provided in the username, use or possible passwords heuristically
+- change and add numbers or use of upper cases with the user
+- generally of poor passwords
+- Gecos field of the UNIX and another UNIX-like
+- every field separated by “:” us a GECOS
+- using: john --single --format=[format] [path to file]
+
+Custom rules
+- used in single crack, is possible define your own sets of rules
+- used in special format of password, use of capital letter, number and symbols
+- how to create:
+   → is defined in john.conf, usually in /etc/john/john.conf
+   → pattern: [List.Rules:THMRules], use of regex
+   → how to define: [List.Rules:PoloPassword]: \n cAZ"[0-9] [!$%@]"
+- to use custom rules: john --wordlist=[path of wordlist] --rule=[name rule] [path file]
+
+Cracking password protected zip files
+- is possible use john to crack password in zip files
+- zip2john, convert the zip file into a hash format
+- use: zip2john [options] [zip file] &gt; [output file]
+
+Cracking password protected rar archives
+- is a similar process to get password with zip
+- use: ra2john [rar file] &gt; [output file]
+- use rar2john rarfile.rar &gt; rar_hash.txt
+
+Before 2 process use john to rar_hash file
+
+Cracking SSH keys with john
+- is semi-frequently in CTF
+- john to crack the SSH private jey password of id_rsa files
+- this used ssh2john
+- use: ssh2john [id_rsa private key file] &gt; [output file]
+- ex: ssh2john id_rsa &gt; id_rsa_hash.txt</rich_text>
+      </node>
+      <node name="Encryption - crypto 101" unique_id="244" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1706221821" ts_lastsave="1706331314">
+        <rich_text>Key Terms
+- ciphertext, result of encrypting a plain text
+- Cipher, method of encrypting or decrypting data
+- plaintext, data before encrypting
+- Encryption, transforming data into ciphertext
+- Encoding, NOT a form of encryption, data representation
+- Key, information is needed to correctly decrypt
+- Passphrase, separate to the key, similar to password and used to protect a key
+- Asymmetric encryption, uses different keys to encrypt and decrypt
+- Symmetric encryption, uses the same key to encrypt and decrypt
+- Brute force, attacking to testing different password or every key
+- Cryptoanalysis, finding a weakness in the underlying maths
+- Alice and Bob, used to represent 2 people who generally wanto to communicate.
+
+Why is encryption important?
+- used to protect confidentiality, ensure integrity, ensure authenticity
+- in SSH, use an encrypted tunnel so that no one can snoop on your session
+- in bank is used a certificate that use cryptography
+- use of checksum to verify data
+- rarely interact directly with cryptography
+- in sensitive user data needs to be stores, use standard like PCI-DSS 
+- medical data has similar standards
+
+Crucial crypto maths
+- use of modulo operator
+- with large numbers, use programming languages
+- python is good for this as integers are unlimited in size
+- modulo is a remainders in division
+- modulo is no reversible
+
+Types of encryption
+- two main categories
+   → symmetric, use the same key to encrypt and decrypt te data, examples: DES and AES, to be faster, use of smaller keys (128 or 256 bits for AES, DES are 56 bits long)
+   → asymmetric, use a pair of keys, one to encrypt and the other to decrypt. Referred to public and private key, data encrypted with the private key can be decrypted with public key, and vice versa, this is slower and uses larger keys, RSA use 2048 to 4096 bit 
+
+RSA - Rivest Shamir Adlemn
+- RSA is based on the mathematically dificult problem of working out the factor of a large number
+- relatively often in CTFs, normally requiring you to calculate variables or break some encryption base on them
+- tools for defeating RSA: </rich_text>
+        <rich_text link="webs https://github.com/RsaCtfTool/RsaCtfTool">https://github.com/RsaCtfTool/RsaCtfTool</rich_text>
+        <rich_text>, </rich_text>
+        <rich_text link="webs https://github.com/ius/rsatool">https://github.com/ius/rsatool</rich_text>
+        <rich_text>
+- p and q are large prime numbers, n is a product of p and q
+- the public key is n and e, the private key is n and d
+- m is a message in plain text and c represents the ciphertext
+- Crypto CTF challenger often present you with a set of these values, and you need to break the encryption and decrypt a message to retrieve the flag
+
+Estableshing keys using asymmetric cryptography
+- </rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -8609,7 +8881,7 @@ Commands
 </rich_text>
       </node>
     </node>
-    <node name="bandit" unique_id="191" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="1" foreground="" ts_creation="1700199042" ts_lastsave="1704004427">
+    <node name="bandit" unique_id="191" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="40" is_bold="0" foreground="" ts_creation="1700199042" ts_lastsave="1704004427">
       <rich_text>ssh bandit.labs.overthewire.org -p 2220
 
 solutions:
