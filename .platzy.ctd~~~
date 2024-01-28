@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1700673736">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1706379042">
     <rich_text>sacar guardapeluzas y limpiarlos
 se separa la ropa en obscura y blanca
 blanca con claros
@@ -13,7 +13,57 @@ negra, chorro de vinagre menos grande, 2 tapas de jabon liquido mas color negro 
 calzones de leo y fany a mano
 playeras amarillas con la blanca y sueter del diario
 
-dansing.for.love@gmail.com</rich_text>
+dansing.for.love@gmail.com
+
+
+Network
+</rich_text>
+    <rich_text link="webs https://medium.com/@bijit211987/elevating-kubernetes-network-monitoring-with-istio-linkerd-and-envoy-2a3f4ab452dc">https://medium.com/@bijit211987/elevating-kubernetes-network-monitoring-with-istio-linkerd-and-envoy-2a3f4ab452dc</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://faun.pub/capturing-container-traffic-on-kubernetes-ee4a49b833b7">https://faun.pub/capturing-container-traffic-on-kubernetes-ee4a49b833b7</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://istio.io/latest/docs/setup/platform-setup/amazon-eks/">https://istio.io/latest/docs/setup/platform-setup/amazon-eks/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://px.dev">https://px.dev</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm">https://docs.tigera.io/calico/latest/getting-started/kubernetes/helm</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://aws-ia.github.io/terraform-aws-eks-blueprints/patterns/istio/">https://aws-ia.github.io/terraform-aws-eks-blueprints/patterns/istio/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://github.com/nicolaka/netshoot">https://github.com/nicolaka/netshoot</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://github.com/Stono/kconmon?tab=readme-ov-file">https://github.com/Stono/kconmon?tab=readme-ov-file</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://tridevreddy333.medium.com/deploying-zeek-in-kubernetes-1e15a20ddc4b">https://tridevreddy333.medium.com/deploying-zeek-in-kubernetes-1e15a20ddc4b</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://github.com/nirmata/kube-netc">https://github.com/nirmata/kube-netc</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://gist.github.com/etyp/dc9a9c620cc66f8d0344979e118b1721">https://gist.github.com/etyp/dc9a9c620cc66f8d0344979e118b1721</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://www.kubeshark.co/pricing">https://www.kubeshark.co/pricing</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://cilium.io">https://cilium.io</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://kubernetes.io/docs/concepts/cluster-administration/networking/">https://kubernetes.io/docs/concepts/cluster-administration/networking/</rich_text>
+    <rich_text>
+</rich_text>
+    <rich_text link="webs https://kubernetes.io/docs/concepts/services-networking/service/">https://kubernetes.io/docs/concepts/services-networking/service/</rich_text>
     <node name="Curso de cloud computing" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1619531922" ts_lastsave="1649170170">
       <rich_text># Que es EC2
 - son practicamente maquinas virtuales
@@ -7272,7 +7322,7 @@ Hashing for integrity checking
 - HMACs
    → method of using a cryptographic hashing function to check authenticity and integrity of data</rich_text>
       </node>
-      <node name="John the ripper" unique_id="243" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1705797580" ts_lastsave="1706139885">
+      <node name="John the ripper" unique_id="243" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1705797580" ts_lastsave="1706468802">
         <rich_text>john who?
 - john the ripper is one of the most well know hash cracking
 - fast cracking speed + range of compatible hash types
@@ -7346,12 +7396,14 @@ Before 2 process use john to rar_hash file
 
 Cracking SSH keys with john
 - is semi-frequently in CTF
-- john to crack the SSH private jey password of id_rsa files
+- john to crack the SSH private key password of id_rsa files
 - this used ssh2john
 - use: ssh2john [id_rsa private key file] &gt; [output file]
-- ex: ssh2john id_rsa &gt; id_rsa_hash.txt</rich_text>
+- ex: ssh2john id_rsa &gt; id_rsa_hash.txt
+
+to cracking: john --wordlist=/usr/share/wordlits/rockyou.txt [file]</rich_text>
       </node>
-      <node name="Encryption - crypto 101" unique_id="244" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1706221821" ts_lastsave="1706331015">
+      <node name="Encryption - crypto 101" unique_id="244" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1706221821" ts_lastsave="1706470122">
         <rich_text>Key Terms
 - ciphertext, result of encrypting a plain text
 - Cipher, method of encrypting or decrypting data
@@ -7400,7 +7452,37 @@ RSA - Rivest Shamir Adlemn
 - m is a message in plain text and c represents the ciphertext
 - Crypto CTF challenger often present you with a set of these values, and you need to break the encryption and decrypt a message to retrieve the flag
 
-Estableshing keys using asymmetric cryptography</rich_text>
+Estableshing keys using asymmetric cryptography
+- use of exchanging keys for symmetric encryption
+- this tends to be slower, for HTTP symmetric is beeter
+- the lock is the server's public key and the key represents the server's private key
+
+Digital Signatures  and Certificates
+- a way to probe the authenticity of files, who creates and modified
+- with asymmetric crypto, is produced a signature with private key and it can be verified with public key
+- Certificates, web servers contains a certificate that say if is real
+- using chain of trust, starting with root CA, this is trusted in device, OS or browser
+
+SSH Authentication
+- by default in ssh use usernames and passswords in the same way
+- is possible use public and private keys to prove that the client is valid and authorised
+- by default is used RSA Keys, is possible choose another algorithm, add/or passphrase
+- use of ssh-keygen
+- the private keys is like password for the user
+- the passphrase is used only to decrypt the key not to verify within server
+- when is used by the server, the keys should be created in local machine and copy the public key in the server
+- ssh keys are an excellent way to upgrade a reverse shell, assuming the user has login enabled
+
+Explaing Diffie hellman key exchange
+- allows 2 people/parties to establish a set of common cryptographic keys, to establishing common symmetric keys
+- DH key exchange is when is necessary a security talk but without key exchange with asymmetric crypto
+- used RSA public key
+- prevents attacks of man-in-the-middle
+
+PGP, GPG and AES
+- PGP, Pretty Good Privacy, software that implements encryption for encrypting files
+- GPG, GnuPG is an OpenSource of PGP, used to decrypt files in CTFs, private key can be protected with passphrases in a similar way to SSH, is possible use gpg2john to break passphrase
+- AES, </rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
