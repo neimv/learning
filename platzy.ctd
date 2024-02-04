@@ -7587,7 +7587,25 @@ john --wordlist=/usr/share/wordlists/rockyou.txt
 Find the flag
 flag2 in \Windows\system32\config</rich_text>
       </node>
-      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1706904870"/>
+      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707001437">
+        <rich_text>Understanding privesc
+- going from a lower permission to a higher permission
+- exploitation of vulnerabilities
+- gain unauthorized access to resources
+- is real world in CTF or penetretion tests the initial access is basic
+- acctions:
+   → reset passwords
+   → bypass access controls to compromise protected data
+   → edit software configurations
+   → enable persistence, so you can access the machine again later
+   → change privilege of users
+   → get that cheeky root flag
+
+Direction of privilege escalation
+- there two main privilege escalation variants
+   → Horizontal privesc, use of different users, with the same privilege level, use to gain another normal privilege user, use of SUID file attached to their home directory
+   → Vertical privesc (privilege elevation), gain higher privileges or access, with an existing account that you have already comprised, hijacking account with administrator privileges or root privileges</rich_text>
+      </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
       <rich_text>6 levels:

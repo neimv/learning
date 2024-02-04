@@ -7053,7 +7053,7 @@ TO CHECK VULNERABILITIES
 
 </rich_text>
     <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1706751218">
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1706904870">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7586,6 +7586,25 @@ john --wordlist=/usr/share/wordlists/rockyou.txt
 
 Find the flag
 flag2 in \Windows\system32\config</rich_text>
+      </node>
+      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707001376">
+        <rich_text>Understanding privesc
+- going from a lower permission to a higher permission
+- exploitation of vulnerabilities
+- gain unauthorized access to resources
+- is real world in CTF or penetretion tests the initial access is basic
+- acctions:
+   → reset passwords
+   → bypass access controls to compromise protected data
+   → edit software configurations
+   → enable persistence, so you can access the machine again later
+   → change privilege of users
+   → get that cheeky root flag
+
+Direction of privilege escalation
+- there two main privilege escalation variants
+   → Horizontal privesc, use of different users, with the same privilege level, use to gain another normal privilege user, use of SUID file attached to their home directory
+   → Vertical privesc (privilege elevation), gain higher privileges or access, with an existing account</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
