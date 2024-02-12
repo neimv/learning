@@ -7057,7 +7057,7 @@ TO CHECK VULNERABILITIES
 
 </rich_text>
     <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707255940">
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707540256">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7619,7 +7619,7 @@ Enumeration
    → SUID files, interesting items to escalate privileges. SUID is a special type of file permission give to a file
    → Crontab contents: cron are show here</rich_text>
       </node>
-      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707539744">
+      <node name="Linux PrivEsc" unique_id="248" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707255940" ts_lastsave="1707539902">
         <rich_text>Multiple types of Privileges Escalation
 based in: </rich_text>
         <rich_text link="webs https://github.com/sagishahar/lpeworkshop">https://github.com/sagishahar/lpeworkshop</rich_text>
@@ -7720,7 +7720,41 @@ NFS
 Kernel exploits
 - leave unstable state
 - exploit suggester 2: perl /home/user/tools/kernel-exploits/linux-exploit-suggester-2/linux-exploit-suggester-2.pl
-- the most common uis dirty cow</rich_text>
+- the most common uis dirty cow
+
+scripts: privesc-scripts</rich_text>
+      </node>
+      <node name="Vulnversity" unique_id="249" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1707540256" ts_lastsave="1707696647">
+        <rich_text>Reconnaissance
+- use of nmap to check wheere attack the machine
+- scan: `nmap -sV {ip}`
+- good flags
+   → -sV, determine version of services
+   → -p {x} or -p-, port scan for x port or all ports
+   → -Pn, disable host discovery and scan for open ports
+   → -A, Enables OS and version detection, executes in-build scripts
+   → -sC, scan with default nmap scripts
+   → -v, verbose mode
+   → -sU, UDP ort scan
+   → -sS, TCP SYN port scan
+
+Locating directories using gobuster
+- Use of gobuster
+- tool used to brute-force URIs (directories and files), DNS subdomains, and virtual host names
+- need a wordlist for gobuster, under /usr/share/wordlists
+- use: gobuster -dir -u </rich_text>
+        <rich_text link="webs http://{ip">http://{ip</rich_text>
+        <rich_text>} -w {wordlist location}
+- flags:
+   → -e, print the full URLs in your console
+   → -u, the target URL
+   → -w, Path to wordlist
+   → -U and -P, User and Password for basic auth
+   → -p {x}, Proxy to use requests
+   → -c {http cookies}, secify a cookie for simulating your auth
+
+Compromise the webserver
+- use gobuster with-x {extensions}</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
