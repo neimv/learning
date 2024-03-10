@@ -7980,7 +7980,7 @@ Where are IDORs located
 - it could be content in AJAX request or some file of JS
 - some values is in parameters</rich_text>
       </node>
-      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1709955631">
+      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1709955825">
         <rich_text>Introduction
 - exploit of inclusion vulnerabilities
 - local file inclusion (LFI), remote File Inclusion (RFI) and directory traversal
@@ -8018,7 +8018,9 @@ Remote File Inclusion
 - RFI steps: injects the malicious URL, if input not contains valdation, the url passes into the include function, the servers send a GET request to the maliciius server to fetch the file, finally the app includes the remote file into include function to execute the PHP file
 
 Remedetion
-- </rich_text>
+- update to lastest version
+- turn off php errors
+- use of WAF</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">

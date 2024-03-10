@@ -7980,7 +7980,7 @@ Where are IDORs located
 - it could be content in AJAX request or some file of JS
 - some values is in parameters</rich_text>
       </node>
-      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1709955991">
+      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1710038865">
         <rich_text>Introduction
 - exploit of inclusion vulnerabilities
 - local file inclusion (LFI), remote File Inclusion (RFI) and directory traversal
@@ -8024,7 +8024,10 @@ Remedetion
 - disable php features that cause file inclusion 
 - analyze the web application and allow only protocol and PHP wrappers
 - Never trust user input
-- implement whitelisting for file names and locations</rich_text>
+- implement whitelisting for file names and locations
+
+is possible change the method with burpsuite
+</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
