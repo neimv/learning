@@ -8093,9 +8093,33 @@ Blind XSS
 - similar to stored XSS, payload get stored on the website for another user to view
 - gennerally is used a call back - HTTP request, popular tool: XSS Hunter Express</rich_text>
       </node>
-      <node name="Command Injection" unique_id="262" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1710545901" ts_lastsave="1710545979">
+      <node name="Command Injection" unique_id="262" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1710545901" ts_lastsave="1710710230">
         <rich_text>Introduction
-- </rich_text>
+- abuse of an app behaviour to execute commands on the OS, using privileges that the app on a device is running
+- also know as Remote Code Execution (RCE)
+- is common use of whoami to list user
+
+discovery command injection
+- is because the language can execute commands in OS
+
+Exploiting command injection
+- is possible combine commands, using for example: “;”, “&amp;” and “&amp;&amp;”
+- is detected by two ways:
+   → blind command injection, is no direct output from the app when testing payloads
+   → verbose command injection, direct feedback from the app once you hace tested a payload
+- is the blind is common use ping and sleep, another is forcing some output, using &gt;, use of whoami and cat, usgin curl is a great way to test
+- is common use ping or whoami
+- common payloads:
+   → whoami, win and linux
+   → ls, linux, dir, windows
+   → ping, win and linux
+   → sleep, linux, timeout, windows
+   → nc
+
+Remedetion command injection
+- vulnerable functions:
+   → Exec
+   → Passtr</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
