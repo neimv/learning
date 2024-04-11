@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cherrytree>
   <bookmarks list=""/>
+  <node name="Calendar" unique_id="267" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712693287" ts_lastsave="1712764907">
+    <rich_text>Lunes
+- hacking
+- devops, monitoring
+
+Martes
+- hacking
+- ingles
+- programming, lua
+
+Miercoles
+- hacking
+- devops
+
+Jueves
+- hacking
+- ingles
+
+Viernes
+- hacking
+- creating, kodem game
+- programming, luaC
+
+Sabado
+- hacking
+- creating, kodem game
+
+Domingo
+- hacking
+- creating, platforms
+- devops, general
+- ingles</rich_text>
+  </node>
   <node name="devops" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="#1e90ff" ts_creation="1619462339" ts_lastsave="1711984959">
     <rich_text>sacar guardapeluzas y limpiarlos
 se separa la ropa en obscura y blanca
@@ -3781,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1712116859">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1712770058">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3824,7 +3857,75 @@ Data collection
    → is possible execute like service, </rich_text>
       <rich_text link="webs https://raw.githubusercontent.com/aussiearef/Prometheus/main/node.service">https://raw.githubusercontent.com/aussiearef/Prometheus/main/node.service</rich_text>
       <rich_text>
-   → is necesary create a user and group like prometheus server</rich_text>
+   → is necesary create a user and group like prometheus server
+
+Data Model
+- data is saved like time series
+- every time series is identified by metric name and labels
+- labels are key and value pair
+- labels are optional
+- language promql, data types:
+   → Scalar, float or string
+   → use of queries with another structure
+   → use of regular expressions
+   → instant vectors, single sample for a timestamp
+   → range vectors, similar to instant, range of samples use of brackets with specific time: [5m]
+- arithmetic operators
+   → addition, substraction, multiplication, division, modulo(%), power(^)
+- binary comparators
+   → ==, equal
+   → !=, non equal
+   → &gt;, greater
+   → &gt;=, greater of equal
+   → &lt;=, less than of equal
+- antoher: “and”, “or” and “unless”, only applied on instant vectors
+- filter matchers/selectors:
+   → &lt;metric name&gt;{filter_key=value, filter_key=value...}, comma is like “and”
+   → “=~” used to regular expresion
+   → “!~”, no match the regex
+   → regex never use empty strings
+- aggregation operators
+   → agg the elements of a single isntant vector
+   → result is a new instant vector
+   → use of:
+      ⇒ sum
+      ⇒ min
+      ⇒ max
+      ⇒ avg
+      ⇒ count
+      ⇒ group
+      ⇒ count_values, # of the same values
+      ⇒ topk, largest elements by a sample value
+      ⇒ bottomk, smallest elements by sample value
+      ⇒ stddev
+      ⇒ stdvar
+   → sintax: &lt;aggregation operator&gt;(instant vector), ex: sum(node_cpu_total)
+   → &lt;Aggregation operator&gt; (&lt;instant vector&gt;) by (&lt;label list&gt;), ex: sum(node_cpu_total) by (http_code)
+   → exclude: &lt;Agg oper&gt; (&lt;instant vector&gt;) Without (&lt;label list&gt;), ex: sum(node_cpu_total) without (http_code)
+- time offsets
+   → get the latest values of instant vector, use of offset &lt;time&gt; to get limit values
+
+Functions
+- absent, check if instant vector has any members, empty vector if has element
+- absent_over_time, if an range vector has any member, same absent
+- abs, convert values to absolute
+- ceil, convert nearest larger integer
+- floor, convert nearest smaller integer
+- clamp, clamp_min, clamp_max, use with instant vector, is like minor and maximum values limits
+- day_of_month and day_of_week
+- delta, can only used with gauges, instant vector
+- idelta, returrns the difference between first and last items, range of vector
+- log2, instante vector, return binary log of scalar value
+- log10, same but with decimal
+- ln, neutral logarithm
+- sort and sort_desc, instant vector, order elemtns
+- time, near current time stamp
+- timestamp, timestamp of each time series, instant vector
+- avg_over_time, range vector, average of items
+- sum_over_time, range vector, sum of items
+- min_over_time
+- max_over_time
+- count_over</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -7073,7 +7174,7 @@ use injection of proxy sidecards</rich_text>
     </node>
     <node name="Github Actions" unique_id="263" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1711984959" ts_lastsave="1711984959"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1708057899">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1712693287">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -8190,7 +8291,7 @@ Remedetion command injection
 
 </rich_text>
       </node>
-      <node name="SQL injection" unique_id="264" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1712074237" ts_lastsave="1712165654">
+      <node name="SQL injection" unique_id="264" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="152" is_bold="0" foreground="" ts_creation="1712074237" ts_lastsave="1712626479">
         <rich_text>What is a database?
 - way to storing collections of data in an organised manner
 - exists two types: relational and non-relational
@@ -8199,8 +8300,98 @@ Remedetion command injection
 What is SQLi
 - wherein a web app using sql can turn into sql injection, user get data using sql
 - example: </rich_text>
-        <rich_text link="webs https://website.thm">https://website.thm</rich_text>
-        <rich_text>/blog</rich_text>
+        <rich_text link="webs https://website.thm/blog?id=2;--">https://website.thm/blog?id=2;--</rich_text>
+        <rich_text> produce: SELECT * FROM blog WHERE id=2;-- and private=0 LIMIT 1;
+
+In-Band SQLi
+- the easiest type to detect and exploit, the same method of communication being used to exploit the vulnerability
+- Error-Based SQL Injection, the most useful for easily obtaining information about the database structure
+- Union-Based SQL injection, this use SQL UNION operator alongside a SELECT statement to return additional results to the page
+- steps:
+   → use first the ' to check vulnerabilities
+   → use UNION SELECT 1, to check structure
+   → increase the fields in UNION
+   → change the value of id in browser to check another responses
+   → using database in last field to get name of database
+   → with more complex queries is possible get the tables in database
+   → with tables is possible get the field in the interesting tables
+
+Blind SQLi - Authentication bypass
+- we get little to no feedback to confirm whether our injection queries
+- common use with authentication bypass
+- use of booleans to get values 
+- use of ' OR 1=1;-- to get values
+
+Boolean Based
+- refers to the response we receive from our injection attempts
+- use step to step to get information of the database, use of like and true in response
+
+Time Based
+- is similar to Boolean
+- use of sleep(x) in the UNION clausule
+
+Out of Band SQLi
+- is of specific features being enabled on the database server or the web app
+- classified in two different communication channels, one to launch and another to get
+
+Remedation
+- use of prepared statements (with parameterized queries), distintion between data and clausules
+- input validation, use of list that can allow restrict input
+- escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
+      </node>
+    </node>
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1712690016">
+      <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
+        <rich_text>Backbone of security enterprise
+
+What is?
+- for protection of the information and systems
+- the role:
+   → owns the overall security of an organization
+   → cyber's security risk is minimized
+   → devises strategies and creates systems that minimize risk
+   → periodically conducts tests to ensure the robustness of the cyber security
+   → develop and implmente secure network solutions
+   → collaborates and coordinates with other teams
+   → architects and engineers trustworthy, reliable and secure systems
+
+Core responsabilities of a SE
+- Asset management/Asset Inventory
+   → maintain an inventory of assets
+   → managing and maintaining the inventory
+   → the main fields: asset name, IP addresses, physical location, place in thje network, app running in assets, access permissions and the assets owner details
+- security policies:
+   → policies based on security principes
+   → is important that implementations followsa the letter and spirit of the policies
+   → needs of hardening in servers
+- secure assesment and assurance
+   → security is a hard work that requires continuos effort
+   → regular security assessments, audits and red-teaming and purple-teaming exercise
+
+Continuous improvement
+- ensure awareness
+   →  might be tasked with maintaining a certain security awareness
+   → humans are the weakest link in an oragnization
+- Managing risks
+   → this is essential by avoid operational disruption, data leakage, lawsuites or other forms of risk
+   → hardening of OS, use of reverse proxy
+- change management
+   → is necesary keeps track of changes in the organization
+   → the new modules requires: risk assesment, penetration testing and vulnerability assesment
+- vulnerability management
+   → monitoring of vulnerabilities across of the organization and planning to patch and minimizing their risk
+- compliance and audits
+   → regulatory and organizational requirements
+   → like PCI-DSS, HIPAA, SOC2, ISO27001, NIST-800-53 and more
+
+Additional roles and responsabilities
+- managing tools security tooling
+   → configure or fine-tune security tools suchs as SIEMs, Firewalls, WAFs, EDRs and more
+   → making decisions or providing input to decision-makers about tools
+- tabletop execises, explication of tasks
+- Disaster recovery and crisis management
+   → plan for untoward incidents, disasters or crisis
+   → involved in disaster recovery, business continuity and crisis management planning</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -11172,7 +11363,7 @@ Modes:
    → use of -o or -Output, specify the format with name file or using -f flag</rich_text>
     </node>
   </node>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1685941303">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1712707697">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -12932,6 +13123,28 @@ Adverbs and adjectives
 - adjectives describe things
 - adverbs, describes perform actions, describe adjectives
 - adverbs = adjectives + -ly</rich_text>
+    </node>
+    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1712709631">
+      <rich_text>Seasons for travel
+- globe = mundo
+- when can I travel?
+- it's a hot and sunny
+- cold and snowy
+- rainy
+- hot and sunny
+- windy 
+- where I can travel?
+- when, where and why
+
+greetings
+- good evening, good morning
+- how are you doing?, I'm doing fine or I'm great
+- how are you?, Good
+- how's it going?, all right
+- what's new?, not much
+- what's going on?, not much
+- Hey!, Hello!, Hi, there
+- What's up?, Nothing</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1697502469">
@@ -17862,7 +18075,7 @@ estados de hilos:
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
     </node>
-    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1710295597">
+    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1712693626">
       <rich_text>Lexical Conventios
 - not beging with numbers, string of letters, digits and underscores
 - with _{uppercase} is reserved to special cases
@@ -17908,6 +18121,8 @@ Functions
 - is possible return multiple values like a tuple
 - variadic fucntions, variable number of parameters, using (...), to use multiple variables
 - ipairs returns two values, the index and the value
+
+
 
 
 Games
