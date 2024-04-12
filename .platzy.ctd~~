@@ -8340,7 +8340,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1712690016">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1712855152">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -8392,6 +8392,49 @@ Additional roles and responsabilities
 - Disaster recovery and crisis management
    → plan for untoward incidents, disasters or crisis
    → involved in disaster recovery, business continuity and crisis management planning</rich_text>
+      </node>
+      <node name="security principles" unique_id="269" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712855152" ts_lastsave="1712879182">
+        <rich_text>Introduction
+- protect our assets
+- does not exists solution 100% secure
+
+CIA
+- this is a triad:
+   → Confidentiality, only the intended persons or recipients can access
+   → Integrity, data cannot be altered, detect alteration
+   → Availability, system or service is acailable when needed
+- is necesary think in:
+   → Authenticity: not fraudulent or counterfeit, from claimed source
+   → nonrepudiation: original source cannot deny that they are the source of a particular document/file/data
+- in 1998, Donn Parker - Parkerian Hexad, a set of six security elements:
+   → Availability, 
+   → Utility, usefulness of the information
+   → Integrity, 
+   → Authenticity, 
+   → Confidentiality, 
+   → Possession, we protect the information from unauthorized taking
+
+DAD
+- disclosure of secret data, alteration of data or destruction of data
+   → disclosure, the oposite of confidentiality
+   → alteration, opposite of integrity
+   → destruction/denial, opposite of availibility
+- this is the opposite of CIA
+
+Fundamental concepts of security models
+- fundamental security models:
+   → Bell-Lapadula, specify three rules:
+      ⇒ Simple Security Property: no read up, subject at a lower security level cannot read an object at a higher security level
+      ⇒ Start Security Property: no write down, subject at a higher security level cannot write to an object at a lower security level
+      ⇒ Discretionary-Security Property: access matrix to allow read an write operations
+   → The Biba Integrity, aims to achieve integrity by specifying two main rules
+      ⇒ Simple Integrity Property: no read down
+      ⇒ Star Integrity Property: no write up
+   → The Clark-Wilson, achieve integrity by using the follow concepts:
+      ⇒ Constrained Data Item (CDI)data type whose integrity we want to preserve
+      ⇒ Unconstrained Data Item (UDI), data types beyond CDI, such as user and system input
+      ⇒ Transformation Procedures (TPs), programmed operation, should maintain the integrity of CDIs
+      ⇒ Integrity Verification Procedures (IVPs), Check and ensure the validation of CDIs</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
