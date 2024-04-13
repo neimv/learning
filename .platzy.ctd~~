@@ -18146,7 +18146,7 @@ estados de hilos:
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
     </node>
-    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1712955091">
+    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1712955713">
       <rich_text>Lexical Conventios
 - not beging with numbers, string of letters, digits and underscores
 - with _{uppercase} is reserved to special cases
@@ -18198,6 +18198,7 @@ Conditional structures
 - Loops:
    → for, for var = exp1, exp2, exp3 do end
    → Generic for, return the next value during each iteration: return function, closures
+   → While loop, repeats its body while a condition es true
 
 
 Games
