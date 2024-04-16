@@ -8393,7 +8393,7 @@ Additional roles and responsabilities
    → plan for untoward incidents, disasters or crisis
    → involved in disaster recovery, business continuity and crisis management planning</rich_text>
       </node>
-      <node name="security principles" unique_id="269" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712855152" ts_lastsave="1712879355">
+      <node name="security principles" unique_id="269" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712855152" ts_lastsave="1712942364">
         <rich_text>Introduction
 - protect our assets
 - does not exists solution 100% secure
@@ -8437,7 +8437,32 @@ Fundamental concepts of security models
       ⇒ Integrity Verification Procedures (IVPs), Check and ensure the validation of CDIs
 
 Defence in Depth
-- createa security system of multiple levels</rich_text>
+- createa security system of multiple levels
+
+ISO/IEC 19249
+- Information technology - Security techniques - Catalogue of architectural and desing principles for secure products, systems and applications
+- five architectural principles:
+   → Domain separation, components (applications, data or other resources) in entity, every entity will have its own domain and be assinged a common set of security attributes
+   → Layering, structured in many levels and layers, is possible create security in different levels like permissions in linux
+   → Encapsulation, hide low-level implementations and prevent direct manipulation of data
+   → Redundancy, ensures availability and integrity
+   → Virtualizacion, sharing a single set of hardware among multiple OS
+- five design principles:
+   → Least Privilege, as need-to basis or need-to-know basis, answer the question: “who can access what”
+   → Attack Suerface Minimisation, know vulnerabilities, this is necesary minimized, deactivate services that is not necesaries
+   → Centralized Parameter Validation, validation of inputs
+   → Centralized General Security Services, we should aim to centralize all security services
+   → Preparing for Error and Exception Handling
+
+Zero trust vs trust but verify
+- Zero trust, treats trust as vulnerability and consequently it caters to insider-related threats, “never trust, always verify”, Authentication and authorization are required
+- trust but verify, always verify even when we trust an entity and its behaviour, verifying usually requires setting up proper logging mechanisms, requires: automated security mechanisms, proxy, intrusion detection and intruction prevention
+
+Threat versus risk
+- three terms:
+   → Vulnerability, susceptible to attack or damage
+   → Threat, potencial danger associated with this weakness or vulnerability
+   → Risk, concerned with the likelihood of a threat actor exploiting a vulnerability and the consequent impact</rich_text>
       </node>
       <node name="Introduction to Cryptography" unique_id="270" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1713067293" ts_lastsave="1713150683">
         <rich_text>Introduction
@@ -18198,7 +18223,7 @@ estados de hilos:
 </rich_text>
       <rich_text scale="h3" foreground="#eff3f8">Qué lenguaje introdujo el concepto de "código intermedio"?</rich_text>
     </node>
-    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1712693626">
+    <node name="Lua" unique_id="254" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1708538520" ts_lastsave="1712980648">
       <rich_text>Lexical Conventios
 - not beging with numbers, string of letters, digits and underscores
 - with _{uppercase} is reserved to special cases
@@ -18244,6 +18269,15 @@ Functions
 - is possible return multiple values like a tuple
 - variadic fucntions, variable number of parameters, using (...), to use multiple variables
 - ipairs returns two values, the index and the value
+
+Conditional structures
+- uso of if-then-end, elseif keyword
+- Loops:
+   → for, for var = exp1, exp2, exp3 do end
+   → Generic for, return the next value during each iteration: return function, closures
+   → While loop, repeats its body while a condition es true
+   → Repeat-until, repeats its body until its condition is true syntax:
+      ⇒ repeat {code} until {condition}, like a dowhile
 
 
 
