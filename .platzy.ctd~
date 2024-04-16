@@ -8340,7 +8340,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1712855152">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1713150747">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -8393,7 +8393,7 @@ Additional roles and responsabilities
    → plan for untoward incidents, disasters or crisis
    → involved in disaster recovery, business continuity and crisis management planning</rich_text>
       </node>
-      <node name="security principles" unique_id="269" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712855152" ts_lastsave="1712879350">
+      <node name="security principles" unique_id="269" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712855152" ts_lastsave="1712879355">
         <rich_text>Introduction
 - protect our assets
 - does not exists solution 100% secure
@@ -8436,7 +8436,85 @@ Fundamental concepts of security models
       ⇒ Transformation Procedures (TPs), programmed operation, should maintain the integrity of CDIs
       ⇒ Integrity Verification Procedures (IVPs), Check and ensure the validation of CDIs
 
-Defence in </rich_text>
+Defence in Depth
+- createa security system of multiple levels</rich_text>
+      </node>
+      <node name="Introduction to Cryptography" unique_id="270" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1713067293" ts_lastsave="1713150683">
+        <rich_text>Introduction
+- introduce the basic cryptography concepts
+- one of the simplest cipher is the Caesar
+- the Ceaser Cipher has a keyspace of 25
+- is considered a substitution cipher
+- another is transposition cipher, rearrange the columns based on the key and then read the rows, use of matrix
+- use of maths, a hard problem, i.e, a problem that cannot be solverd in polynomial time
+- in some cases is common break the cipher with common letter in language
+- use of quipqiup
+
+</rich_text>
+      </node>
+      <node name="Identity and Access Management" unique_id="271" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1713150747" ts_lastsave="1713215227">
+        <rich_text>questions:
+1. How can uniquely identify the different system users?
+2. How can a user prove who they are to the system?
+3. how can we help prevent an attacker from pretending to be a legitime user?
+4. how can we decide what user should access? how can we enforce such a decision?
+5. how can we know what a user is doing after logging in so that we can hold themaccountable for their actions?
+
+- Concepts:
+1. identification
+2. Authentication
+3. Strong passwords and Multi-Factor Authentication (MFA)
+4. Authorisation and Access Control
+5. Logging and Auditing
+
+Objectives
+1. Identification
+2. Authentication
+3. Authorization
+4. Accountability
+5. Access Control Models
+6. Single Sign On
+
+IAAA Model
+- identification, Authentication, Authorisation and Accountability, in this order
+- concepts:
+   → Identification, verification who the user
+   → Authentication, process of ensuring that the user is who they claim to be, one way is use of password
+   → Authorisation, determines what the user is allowed to access, use of specific operations
+   → Accountability, trakcs user activity to ensure they are resonsible for their actions
+
+Identification
+- is how a user, process or system claims a specific identity.
+- identification can be username
+- another examples:
+   → National ID number
+   → Student ID number
+   → Passport number
+   → Mobile phone number
+- using any number unique
+- without proper auth, severe damage can be incurred
+
+Authentication
+- process of verifying the identity of a user or system
+- Auth and Identification are core components of any infomartion system and network
+- identification, claim a specific identity, auth provides the identification of the user, system or process, ways:
+   → Something you know, ex: password
+   → Something you have, object, usually physical that you have
+   → Something you are, biometrics readers
+- Two more methods:
+   → Somewhere you are (logical/physical verification)
+   → Something you do (behaviour)
+- MFA: refers to using two or more of the above mechanisms
+
+Authorisation and Access Control
+- user should be granted the proper level of access
+- authorisation specifies what tha authenticated user should be allowed to access and do
+- access control enforces the set policy
+
+Accountability and logging
+- accountability ensures that users are accountable for the actions they perform on a system, responsability of the actions
+- logging: process of recording events that occur within system, user actions, system events and errors
+- logging and SIEM: security information and event management, aggregates log data from</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
