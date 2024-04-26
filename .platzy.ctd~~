@@ -3814,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1714163347">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1714160333">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3941,8 +3941,7 @@ Alerting
    → templates:  {{ values of labels use of $ }}
 - alert manager: convert alerts to notifications, sms, email or slack message, is possible send from multiple prometheus
 - access by port 9093
-- Matchers: use of match (use of =) and match_re (regex, use of =~), this is legacy, new use of matchers, is necesary create a routes in config prom and create the reivers, in global create config to send message
-- to inhibit alerts in config of prom is necesary add the inhibit_rules and add the rule with matchs</rich_text>
+- Matchers: use of match (use of =) and match_re (regex, use of =~), this is legacy, new use of matchers, is necesary create a routes in config prom and create the reeivers, in globar crea</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
