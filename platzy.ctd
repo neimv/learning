@@ -3814,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1714163347">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1714618616">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3942,7 +3942,15 @@ Alerting
 - alert manager: convert alerts to notifications, sms, email or slack message, is possible send from multiple prometheus
 - access by port 9093
 - Matchers: use of match (use of =) and match_re (regex, use of =~), this is legacy, new use of matchers, is necesary create a routes in config prom and create the reivers, in global create config to send message
-- to inhibit alerts in config of prom is necesary add the inhibit_rules and add the rule with matchs</rich_text>
+- to inhibit alerts in config of prom is necesary add the inhibit_rules and add the rule with matchs
+
+Service discovery and Push gateway
+- use of load balancer or use of serverless functions, use of push gateway to send metrics
+- discovery options:
+   → configured in prometheus.yml
+   → use with machines of aws in the course with: &lt;ec2_sd_config&gt;, &lt;kubernetes_sd_config&gt;
+   → port, region, access_key, secret_key, role_arn, filters, source_labels, refresh_interval, source labels, 
+   → in scrape_configs add: ec2_sd_configs</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -7191,7 +7199,7 @@ use injection of proxy sidecards</rich_text>
     </node>
     <node name="Github Actions" unique_id="263" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1711984959" ts_lastsave="1711984959"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1712693287">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1714438770">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -8357,7 +8365,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1714153868">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1714610696">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -8631,7 +8639,7 @@ Single Sign-On
 - various sources to carry out their daily work routines
 - use single set of login credentials</rich_text>
       </node>
-      <node name="Governance &amp; Regulation" unique_id="272" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1714153868" ts_lastsave="1714278338">
+      <node name="Governance &amp; Regulation" unique_id="272" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1714153868" ts_lastsave="1714328171">
         <rich_text>Introduction
 - by evolution of attacks is necesary knows this topic
 
@@ -8698,7 +8706,179 @@ Privacy and data Protection
 - penalties:
    → Tier 1, unintended data collection, sharing data without concent, 4% of the revenue or 20 million euros (whichever is higher)
    → Tier 2, less severe violations, including data breach, cyber policies, 2% of revenue or 10 million euros
-- PCI DSS, focused on maintaining secure card transaction and protecting against data theft and fraud</rich_text>
+- PCI DSS, focused on maintaining secure card transaction and protecting against data theft and fraud
+
+NIST special publications
+- NIST 800-53, security and privacy controls for information systems and organisations
+
+Information Security Management and Compliance
+- protects information assets from unauthorised access, use, disclosure, interruption, alteration and destruction
+- ISO/IEC 27001
+   → plan, develop, run and update
+   → core components:
+      ⇒ Score
+      ⇒ Information security policy
+      ⇒ Risk assessment
+      ⇒ Risk treatment
+      ⇒ Statement of applicability (SoA)
+      ⇒ Internal audit
+      ⇒ Management review
+- Service Organisation Control 2 (SOC 2)
+   → American Institute of Certified Public Accountants (AICPA) as a compliance/auditing framework
+   → Important Cardinals:
+      ⇒ is an auditing standard that evaluates the usefulness of a service, realated to confidentiality, availability, integrity and privacy
+      ⇒ Independent that security controls meet the relevan criteria
+      ⇒ reports provide  valuable information to customers, stakeholders and regulators, the audiy may cover physical security, network security, data encryption, backup and revocery and employee training and awereness
+   → planning and undergoing:
+      ⇒ Determine the scope
+      ⇒ Choose a suitable auditor
+      ⇒ Plan the audit
+      ⇒ Prepare for the audit
+      ⇒ Conduct the audit
+      ⇒ Receive the audit report</rich_text>
+      </node>
+      <node name="Threat Modelling" unique_id="275" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1714438770" ts_lastsave="1714610678">
+        <rich_text>Introduction
+- threat modelling frameworks for reducing potenial risks
+- learning MITRE ATT&amp;CK, DREAD, STRIDE and PASTA
+
+Threat Modelling Overview
+- systematic approach to identifying, prioritising and addressing potential security threats
+- definitions:
+   → Threats: any potential ocurrence, event or actor that may exploit vulnerabilities, formats: cyber attacks, human error or natural disasters
+   → Vulnerability: waekness or flaw in a system, application or process, formats: bugs, misconfigurations or desing flaws
+   → Risk: possibility of being comprimised by advantage of a vulnerability
+- High Level Process of Threat Modelling
+   → Definig scope
+   → Asset identification
+   → Identify threats
+   → Analyse vulnerabilities and priorise risks
+   → Develop and implement countermeasures
+   → Monitor an evaluate
+
+Modeling with MITRE ATT&amp;CK
+- Adversarial Tactics, Techniques and Common Knowledge, comprehensive, globally accessible knowledge base of cyber adversary behaviour and tactics
+- matrix thta covers various tactics and techniques</rich_text>
+      </node>
+      <node name="Linux Hardening" unique_id="276" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1714610696" ts_lastsave="1714693641">
+        <rich_text>Introduction
+- reliable and robust alternative to closed-source systems
+
+Physical Security
+- this is first layer
+- use of security in Physical drive and computer
+- use of password with GRUB
+- BIOS and UEFI password
+- use of grub2-mkpasswd-pbkdf2, this is not available for system deployed using cloud services
+
+Filesystem Partitioning and Encryption
+- makes data unreadable without the key
+- Linux Unified Key Setup
+- there are various software systems and tools that provides encryption
+- use of LUKS: LUKS phdr | KM1 | KM2 | ... | KM8 | bulk data
+   → LUKS phdr: LUKS Partition Header, store information about th UUID, the used cipher, cipher mode, key length and checksum of the master key
+   → KM: Key Material, each key is associated with a key slot, contains a copy of the master key
+   → Bulk Data: data encryption by the master key
+- LUKS works with different ciphers and cipher models
+- to works:
+   → install apt install cryptsetup
+   → confirm the partition name using: fdisk -l, lsblk, blkid
+   → set up the partition: cryptsetup -y -v luksFormat /dev/sdb1
+   → create a mapping: cryptsetup luksOpen /dev/sdb1 EDCdrive
+   → confirm mapping details: ls -l /dev/mapper/EDCdrive &amp;&amp; cryptsetup -v status EDCdrive
+   → overwrite data with zero: dd if=/dev/zero of=/dev/mapper/EDCdrive
+   → format: mkfs.ext4 /dev/mapper/EDCdrive -L "Strategos USB"
+   → mount it and start using: mount /dev/mapper/EDCdrive /media/secure-USB
+- check settings: cryptsetup luksDump /dev/sdb1
+- to mount and decrypt: sudo cryptsetup open --type luks secretvault.img myvault &amp;&amp; sudo mount /dev/mapper/myvault myvault/
+
+Firewall
+- client/server model
+- any device can be client or server or both
+- server listen on a known TCP or UDP port
+- firewall decides which packets can enter a system and which packets can leave a system
+- without a firewall, a client can communicate with any server without restriction
+- Linux Firewall
+   → stateless firewall can inspect certain fields in the ip and TCP/UDP headeer
+   → as a result packet can manipulate a few TCP flags to appear as if it is part of an ongoing connection and evade certain restriction
+   → a solution like SELinux or AppArmor can be used for more granular control over processes and their network access
+- Netfilter
+   → requires a front-end such as iptables or nftables
+- iptables
+   → has the following default chains
+      ⇒ input: iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+      ⇒ output: iptables -A OUTPUT -p tcp --sport 22 -j ACCEPT
+      ⇒ forward
+- nftables
+   → supported in kernel 3.13 and later
+   → nftables start with no tables or chains
+      ⇒ begin: nft add table fwfilter
+      ⇒ nft add chain fwfilter fwinput { type filter hook input priority 0 \; }: nft add fwfilter fwinput tcp dport 22 accept
+      ⇒ nft add chain fwfilter fwoutput { type filter hook output priority 0 \; }: nft add fwfilter fwoutput tcp sport 22 accept
+- UFW
+   → ufw allow 22/tcp
+
+Remote Access:
+- convenient way to access your system and files, common attacks:
+   → password sniffing
+   → password guessing and brute-forcing
+   → exploiting the listening services
+- protect sniffing:
+   → select a protocol that encrypts traffic
+   → use SSH over NetCat
+- protect guessing:
+   → search server with SSH listening and use of root with the most common passwords
+   → disable remote login as root
+   → disable password auth; force public key auth
+   → use of ssh keys:
+      ⇒ ssh-keygen -t rsa, creates private key and public key
+      ⇒ copied ssh to server: ssh-copy-id username@server
+
+Security User Accounts
+- root carries with it tremendous power and hence risk
+- rott is used for system maintenance, installing/removing and updating/configuring the system
+- Use sudo:
+   → use of user added to sudoers
+   → usermod -aG sudo &lt;username&gt;
+- Disable root
+   → modify /etc/passwd change shell of root to /sbin/nologin
+- Enforce a strong password policy
+   → libpwquality library providesmany options for password constraints
+   → configuration in /etc/pam.d/common-password, to install: apt-get install libpam-pwquality
+      ⇒ difok, number of chars
+      ⇒ minlen, set minimum length
+      ⇒ minclass, minimum number of required classes of chars
+      ⇒ badwords, space-separated list of words that must not be contained in the chosen password
+      ⇒ retry=N, N times before returning an error
+
+Disable Unused Accounts
+- disabled in /etc/passwd with /sbin/nologin
+
+Software and Services
+- with more software and services increases the vulnerabilities in the system
+- Disable unnecesary services
+   → removing or disabling unneeded services and packages
+   → minimized the number of installed sustem packages
+- Block unneeded network posrts
+   → set firewall ruless
+   → this depending of services in server
+- Avoid legacy protocol
+   → Delete telnet 
+   → use of SSH and SFTP
+
+Update and Upgrade Policies
+- this is vital step
+- use of apt update &amp;&amp; apt upgrade
+
+Audit and Log configuration
+- stored in /var/log
+   → messages, general
+   → auth.log, list all authentication attempts
+   → secure, lists all authentication attemps
+   → utmp, access log, information regarding users that are currently logged
+   → wtmp, information about users tjat logged in and out the system
+   → kern.log, log of message from kernel
+   → boot.log, start-up message and boot information</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
