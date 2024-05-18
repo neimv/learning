@@ -8365,7 +8365,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1715274638">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1715921323">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -8923,7 +8923,7 @@ Audit and Log configuration
    → kern.log, log of message from kernel
    → boot.log, start-up message and boot information</rich_text>
       </node>
-      <node name="Risk Management" unique_id="277" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1715274638" ts_lastsave="1715547080">
+      <node name="Risk Management" unique_id="277" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1715274638" ts_lastsave="1715547219">
         <rich_text>Basic Terminology
 - Threat, intetional or accidental event that can compromise the security of an information system
 - Vulnerability, weakness that cybercriminales can exploit
@@ -8978,7 +8978,51 @@ Monitor risk
    → solutions to future
 - monitoring:
    → change in bussiness
-   → change in information systems</rich_text>
+   → change in information systems
+- compliance:
+   → new laws might see light
+   → new policies might be enforced
+
+Supply chain risk management
+- risk associated with hardware
+- risk associated with software
+- risk associated with services</rich_text>
+      </node>
+      <node name="Vulnerability Management" unique_id="278" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1715646008" ts_lastsave="1715797610">
+        <rich_text>Introduction
+- weakness in an information system, system security procedures, internal controls or implementation that could be exploited or triggered bu a threat source
+- identifying, detecting, mitigating and reporting a vulnerability
+
+Vulnerability management vs vulnerability scanning
+- Management, ongoing, proactive and frequently automated activity 
+- Scanningknow how vulnerability scans are conducted and the tools at hand
+
+Vulnerability Classification
+- CVE, common vulnerabilities and exposures (CVE), consist: CVE prefix, the year and sequence name
+- CCE, Common Configuration Enumeration
+- CPE, Common Platform Enumeration
+- CVSS, Common Vulnerability Scoring System
+
+Vulnerability Mangement Life Cycle, Discovery &amp; Prioritise
+- six phases: discovery, prioritize, assess, report, remediate,verify
+- </rich_text>
+      </node>
+      <node name="Secure Network Architecture" unique_id="279" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1715921323" ts_lastsave="1715922401">
+        <rich_text>Introduction
+- most critical components of a corporate environment
+
+Network Segmentation
+- practice: BYOD, Bring Your Own Device
+- RAT, remote access trojan
+- use of VLANs, Virtual LAN
+- configured on switch by adding a tag
+- the 802.1q or dot1q tag
+- this tag is added in VLAN Dataframe
+- 802.1 standard between vendors
+- use of ovs-vsctl
+
+Common Secure Network Architecture
+- </rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -13711,7 +13755,7 @@ Adverbs and adjectives
 - adverbs, describes perform actions, describe adjectives
 - adverbs = adjectives + -ly</rich_text>
     </node>
-    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1712709631">
+    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1715832016">
       <rich_text>Seasons for travel
 - globe = mundo
 - when can I travel?
@@ -13731,7 +13775,18 @@ greetings
 - what's new?, not much
 - what's going on?, not much
 - Hey!, Hello!, Hi, there
-- What's up?, Nothing</rich_text>
+- What's up?, Nothing
+
+free - crowded
+Tidy - untidy, cuarto desordenado
+clean - dirty
+friendly - rude
+
+Can I see the check, please?
+
+high heels, zapatillas
+
+</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1697502469">
@@ -18726,7 +18781,7 @@ Games
 - install imagemagick
 - convert {image} -geometry 16x16 -colors 8 -unique-colors -scale 4000% ~/scheme.png
 - display ~/scheme.png</rich_text>
-      <node name="data structure" unique_id="274" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1714177701" ts_lastsave="1715445380">
+      <node name="data structure" unique_id="274" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1714177701" ts_lastsave="1715808822">
         <rich_text>Intro
 - does not exists data structure
 - tables can efficiently represent various data structure
@@ -18798,6 +18853,27 @@ Dictionary
 
 </rich_text>
         <rich_text justification="left"></rich_text>
+        <rich_text>
+
+Sets
+- unordered collection of distintict elements
+- do not allow duplicate elements
+- operations
+   → add
+   → remove
+   → contains
+   → size
+
+</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+Binary trees
+- in which each node can have a left cild and right child
+- they can't have moore that two children
+
+</rich_text>
+        <rich_text justification="left"></rich_text>
         <codebox char_offset="169" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local a = {}
 
 for i = 1, 1000 do a[i] end</codebox>
@@ -18861,9 +18937,52 @@ end
 function size(queue)
     return queue.rear - queue.front + 1
 end</codebox>
-        <codebox char_offset="908" justification="left" frame_width="503" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local map = {}
+        <codebox char_offset="908" justification="left" frame_width="504" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local map = {}
 
 -- se usan las operaciones comunes para un diccionario</codebox>
+        <codebox char_offset="1055" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">function newSet()
+    local set = {}
+
+    return set
+end
+
+function contains(set, element)
+    return set[element] ~= nil
+end
+
+function add(set, element)
+    set[element] = true
+end
+
+function remove(set, element)
+    set[element] = nil
+end
+
+function size(set)
+    local count = 0
+
+    for _ in pairs(set)
+        count = count + 1
+    end
+
+    return count
+end</codebox>
+        <codebox char_offset="1172" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local Node = {}
+
+Node.__index = Node
+
+function Node.new(value)
+    local self = setmetatable({}, Node)
+    self.value = value
+    self.left = nil
+    self.right = nil
+
+    return self
+end
+
+local root = Node.new(10)
+root.left = Node.new(5)
+root.right = Node.new(15)</codebox>
       </node>
     </node>
   </node>
