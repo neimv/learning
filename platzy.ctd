@@ -3814,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1714618616">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1716757214">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3950,7 +3950,30 @@ Service discovery and Push gateway
    → configured in prometheus.yml
    → use with machines of aws in the course with: &lt;ec2_sd_config&gt;, &lt;kubernetes_sd_config&gt;
    → port, region, access_key, secret_key, role_arn, filters, source_labels, refresh_interval, source labels, 
-   → in scrape_configs add: ec2_sd_configs</rich_text>
+   → in scrape_configs add: ec2_sd_configs
+
+Security
+- authentication,
+   → securing web UI
+   → APIs
+   → Push gateway
+   → exporters
+   → alert manager
+- basic authentication (username and password)
+   → bcrypt hashof your password
+   → web configuration file
+   → apache tools or httpd-tools, use of htpasswd
+- open auth (OAuth)
+- Manual TLS auth
+- enabled HTTPS
+   → creating ssl certificate
+   → in web.yaml file created to user, add tls_server_config
+   → in exporter, copy web.yaml to node_exporter, with certs
+- push gateway:
+   → is possible use web.yaml
+   → use of basic authentication to connect
+- alert manager
+   → use of web.yaml file</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -7199,7 +7222,7 @@ use injection of proxy sidecards</rich_text>
     </node>
     <node name="Github Actions" unique_id="263" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1711984959" ts_lastsave="1711984959"/>
   </node>
-  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1714438770">
+  <node name="TryHackMe" unique_id="149" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939072" ts_lastsave="1716835658">
     <rich_text>good url:
 
 TO CHECK VULNERABILITIES
@@ -8365,7 +8388,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1715921323">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1716088038">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -9007,7 +9030,7 @@ Vulnerability Mangement Life Cycle, Discovery &amp; Prioritise
 - six phases: discovery, prioritize, assess, report, remediate,verify
 - </rich_text>
       </node>
-      <node name="Secure Network Architecture" unique_id="279" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1715921323" ts_lastsave="1715922753">
+      <node name="Secure Network Architecture" unique_id="279" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1715921323" ts_lastsave="1716088030">
         <rich_text>Introduction
 - most critical components of a corporate environment
 
@@ -9026,6 +9049,62 @@ Common Secure Network Architecture
 
 Network Security Policies and Control
 - </rich_text>
+      </node>
+      <node name="Windows Hardening" unique_id="280" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1716088038" ts_lastsave="1716351847">
+        <rich_text>Introduction
+- basic concepts required to harden a workstation
+
+Understanding general concepts
+- servies in windows like network connectivity, storage, memory, sound, user credentials and data backups
+- managed by service control manager divided in Local, Network and System
+- Windows registry, unified container database that stores configurational settings, essential keys and shared prefereneces
+   → is normal that malicious program makes undesired changes
+   → is important protects the registry
+- Event viewer, show log details about all events, categories:
+   → Application: record events of installed programs
+   → System: system components
+   → Security: security and auth
+- Telemetry: data collection system used by microsoft
+
+Identity &amp; access management
+- Standard vs Admin account, only auth and authorised user can access the system
+   → Admin account is used to install osftware and accesing the registry editor, service panel, etc.
+- User account control, ensures that all services and applications execute in non-administrator accounts
+- Local Policy and Group Policies Editor, built-in interactive tool by microsoft, configure and implment local and group policies
+- Password Policies, ensures complex and strong password for user account
+
+Network Management
+- Windows defender firewall, protects computers from malicious attacks and blocks unauthorised traffic
+- Disabled unused networking devices
+- Disable SMB Protocol
+- Protecting Local Domain Name System
+- Mitigating ARP attack, check arp -a, if a MAC is mapped in 2 IP, is probably ARP poison attack
+
+Application Managements
+- Trusted application store, using microsoft store is mor secure
+- Safe app installation, only allow instalation of apps from MS store
+- Malware Removal through windows defender anti virus, complete anti-malware
+   → real time protection
+   → browse integration
+   → application guard
+   → controlled folder access</rich_text>
+      </node>
+      <node name="Active Directory Hardening" unique_id="281" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1716835658" ts_lastsave="1716838094">
+        <rich_text>Introduction
+- used to manage, control and govern a network of computers, servers and other devices
+
+Understanding General Active Directory Concepts
+- Domain, core unit regarding the logical structure
+- Domain Controller, Active directory server that acts as the brain for a windows server domain
+- Trees and Forest, most critical concepts
+   → Trees, responsible for sharing resources between domains, is possible by one-way or two-ways trust
+   → Forest, sharing standard global catalogue, directory schema, logical structure and directory configuration, forest-level trust to connect between forests
+- Trust in active directory
+   → connection between domains</rich_text>
+        <node name="AD Breaches" unique_id="282" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="13" is_bold="0" foreground="" ts_creation="1716835952" ts_lastsave="1716835962">
+          <rich_text>Introduction
+- </rich_text>
+        </node>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -13758,7 +13837,7 @@ Adverbs and adjectives
 - adverbs, describes perform actions, describe adjectives
 - adverbs = adjectives + -ly</rich_text>
     </node>
-    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1715832016">
+    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1716103361">
       <rich_text>Seasons for travel
 - globe = mundo
 - when can I travel?
@@ -13789,7 +13868,12 @@ Can I see the check, please?
 
 high heels, zapatillas
 
-</rich_text>
+Triage
+- I feel sick
+
+where and how
+
+runny - sucio</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1697502469">
@@ -18784,7 +18868,7 @@ Games
 - install imagemagick
 - convert {image} -geometry 16x16 -colors 8 -unique-colors -scale 4000% ~/scheme.png
 - display ~/scheme.png</rich_text>
-      <node name="data structure" unique_id="274" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1714177701" ts_lastsave="1715808822">
+      <node name="data structure" unique_id="274" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1714177701" ts_lastsave="1716746533">
         <rich_text>Intro
 - does not exists data structure
 - tables can efficiently represent various data structure
@@ -18877,6 +18961,21 @@ Binary trees
 
 </rich_text>
         <rich_text justification="left"></rich_text>
+        <rich_text>
+
+Graphs
+- pair (V, A), V being a finite non-empty set and A a set of pairs
+   → V are called vertices
+   → A called edges
+   → Number of V is order of G
+   → Number of A is size of G
+
+</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+- Depth First Search, algo for traversing or search graph data structures
+- Breadth First Search (BFS), traversing or searching graph data structures</rich_text>
         <codebox char_offset="169" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local a = {}
 
 for i = 1, 1000 do a[i] end</codebox>
@@ -18986,6 +19085,31 @@ end
 local root = Node.new(10)
 root.left = Node.new(5)
 root.right = Node.new(15)</codebox>
+        <codebox char_offset="1358" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local Graph = {}
+
+function Graph.new()
+    return {vertices = {}, edges = {}}
+end
+
+function Graph.addVertex(graph, vertex)
+    graph.vertices[vertex] = true
+    graph.edges[vertex] = graph.edges[vertex] or {}
+end
+
+function Graph.addEdge(graph, vertex1, vertex2)
+    graph.edges[vertex1][vertex2] = true
+    graph.edges[vertex2][vertex1] = true
+end
+
+function Graph.getAdjacentVertices(graph, vertex)
+    local adjacent = {}
+
+    for v in pairs(graph.edges[vertex]) do
+        table.insert(adjacent, v)
+    end
+
+    return adjacent
+end</codebox>
       </node>
     </node>
   </node>
