@@ -3814,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1716757214">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1717117954">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3973,7 +3973,22 @@ Security
    → is possible use web.yaml
    → use of basic authentication to connect
 - alert manager
-   → use of web.yaml file</rich_text>
+   → use of web.yaml file
+
+Grafana
+- open osurce software
+- visualise time-series data
+- metrics from varios data-sources
+- alerting
+- multi-organisational
+- is possible install using apt
+- Dashboard design
+   → browser apps
+   → APM / backend services
+   → Infrastructure
+   → synthetic monitors
+   → Bussiness
+- </rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -8388,7 +8403,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1716088038">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1717127711">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -9089,7 +9104,7 @@ Application Managements
    → application guard
    → controlled folder access</rich_text>
       </node>
-      <node name="Active Directory Hardening" unique_id="281" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1716835658" ts_lastsave="1716838028">
+      <node name="Active Directory Hardening" unique_id="281" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1716835658" ts_lastsave="1716942135">
         <rich_text>Introduction
 - used to manage, control and govern a network of computers, servers and other devices
 
@@ -9098,11 +9113,24 @@ Understanding General Active Directory Concepts
 - Domain Controller, Active directory server that acts as the brain for a windows server domain
 - Trees and Forest, most critical concepts
    → Trees, responsible for sharing resources between domains, is possible by one-way or two-ways trust
-   → Forest, sharing standard global catalogue, directory schema, logical structure and directory configuration, forest-level trust to connect be</rich_text>
+   → Forest, sharing standard global catalogue, directory schema, logical structure and directory configuration, forest-level trust to connect between forests
+- Trust in active directory
+   → connection between domains
+
+Securing Authentication Methods
+- use of tool group policy management editor
+- LAN manager hash, store password with two types of hash representation
+- SMB Signing, server message block, used for file and printing communication
+- LDAP, Light Weight Directory Access Protocol enables locating and authenticating resources on the network
+- Password Rotation</rich_text>
         <node name="AD Breaches" unique_id="282" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="13" is_bold="0" foreground="" ts_creation="1716835952" ts_lastsave="1716835962">
           <rich_text>Introduction
 - </rich_text>
         </node>
+      </node>
+      <node name="Network Device Hardening" unique_id="283" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1717127711" ts_lastsave="1717127719">
+        <rich_text>Introduction
+- building blocks and backbone of today's contemporary amd ;arg</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -18866,7 +18894,7 @@ Games
 - install imagemagick
 - convert {image} -geometry 16x16 -colors 8 -unique-colors -scale 4000% ~/scheme.png
 - display ~/scheme.png</rich_text>
-      <node name="data structure" unique_id="274" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1714177701" ts_lastsave="1716746533">
+      <node name="data structure" unique_id="274" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1714177701" ts_lastsave="1717028476">
         <rich_text>Intro
 - does not exists data structure
 - tables can efficiently represent various data structure
@@ -18973,7 +19001,14 @@ Graphs
         <rich_text>
 
 - Depth First Search, algo for traversing or search graph data structures
-- Breadth First Search (BFS), traversing or searching graph data structures</rich_text>
+- Breadth First Search (BFS), traversing or searching graph data structures
+
+Topological Sort
+- use of DAGs, directed acyclic graph
+- is a sequence
+
+</rich_text>
+        <rich_text justification="left"></rich_text>
         <codebox char_offset="169" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0">local a = {}
 
 for i = 1, 1000 do a[i] end</codebox>
@@ -19108,6 +19143,7 @@ function Graph.getAdjacentVertices(graph, vertex)
 
     return adjacent
 end</codebox>
+        <codebox char_offset="1584" justification="left" frame_width="500" frame_height="100" width_in_pixels="1" syntax_highlighting="lua" highlight_brackets="1" show_line_numbers="0"></codebox>
       </node>
     </node>
   </node>
