@@ -3814,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1717117954">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1717961885">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3988,7 +3988,8 @@ Grafana
    → Infrastructure
    → synthetic monitors
    → Bussiness
-- </rich_text>
+- connect with prometheus
+   → search connections or settings, to add data source</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -9128,9 +9129,35 @@ Securing Authentication Methods
 - </rich_text>
         </node>
       </node>
-      <node name="Network Device Hardening" unique_id="283" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1717127711" ts_lastsave="1717127719">
+      <node name="Network Device Hardening" unique_id="283" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1717127711" ts_lastsave="1717213487">
         <rich_text>Introduction
-- building blocks and backbone of today's contemporary amd ;arg</rich_text>
+- building blocks and backbone of today's contemporary ana large network and systems
+
+Common threats and attack vector
+- network devices vs endpoint devices
+   → endpoint can generate or consume data on a network
+   → network used to manage and control network resources
+- Unauthorised access, gain access of a network device
+- Denial of service, disruption of critical devices and services
+- Man-in-the-middle, intercept the network request between two parties
+- Privilege escalation, gaining higher-level privileges or rights to perform restricted actions
+- Bandwidth theft/hotlinking, linking bandwidth-intensive resource from an external website to its original website
+
+Common Hardening Techniques
+- reduce the attack surface of a system or network by removing unnecessary functionality:
+   → Updating and Patching
+   → Disabling unnecessary services &amp; ports
+   → Principle of least privilege (POLP)
+   → Logs monitoring
+   → Backup regularly
+   → Multi-factor Authentication
+- use of secure protocols like HTTPS, SSH, SSL/TLS and IPSec
+- remove insecure protocols
+- Implementation of monitoring and logging control, techniques:
+   → Syslog, protocol to transfer log messages, stored in central server
+   → SNMP, send messages with predefined events
+   → NetFlow, protocol to collect and analyze network traffic data
+   → Packet Capures, capturing and storing using tools like wireshark</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
