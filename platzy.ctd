@@ -3814,7 +3814,7 @@ IAM Roles
 </rich_text>
       </node>
     </node>
-    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1717961885">
+    <node name="Telemetry (Prom &amp; Graf)" unique_id="130" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672430910" ts_lastsave="1718137534">
       <rich_text>collection of business and diagnosis data from the software in prod, and store and visualize it for eht purpose of diagnostic
 
 
@@ -3989,7 +3989,18 @@ Grafana
    → synthetic monitors
    → Bussiness
 - connect with prometheus
-   → search connections or settings, to add data source</rich_text>
+   → search connections or settings, to add data source
+
+Loki
+- log aggregation and analysis
+- log aggregation, collection, storing and querying large amount of logs
+- use of pipelines stages to extract data, logfmt: mapping: component
+
+OTel, opentelemetry
+- open source observability framework
+- collect and export metrics, logs and traces
+- is not am observability backend like prom
+- grafana alloy, telemetry collector</rich_text>
     </node>
     <node name="Linux" unique_id="131" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1672680784" ts_lastsave="1688748748">
       <rich_text>Linux
@@ -13890,7 +13901,7 @@ Adverbs and adjectives
 - adverbs, describes perform actions, describe adjectives
 - adverbs = adjectives + -ly</rich_text>
     </node>
-    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1717967226">
+    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1718162890">
       <rich_text>Seasons for travel
 - globe = mundo
 - when can I travel?
@@ -13914,6 +13925,10 @@ greetings
 - what's going on?, not much
 - Hey!, Hello!, Hi, there
 - What's up?, Nothing
+
+restaurant
+- can i have, to requests
+- can I see the check, please?, para pedir la cuenta
 
 free - crowded
 Tidy - untidy, cuarto desordenado
