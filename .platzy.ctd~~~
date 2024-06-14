@@ -13901,7 +13901,7 @@ Adverbs and adjectives
 - adverbs, describes perform actions, describe adjectives
 - adverbs = adjectives + -ly</rich_text>
     </node>
-    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1717967226">
+    <node name="Vocabulario y Expresiones" unique_id="268" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1712707697" ts_lastsave="1718336816">
       <rich_text>Seasons for travel
 - globe = mundo
 - when can I travel?
@@ -13925,6 +13925,13 @@ greetings
 - what's going on?, not much
 - Hey!, Hello!, Hi, there
 - What's up?, Nothing
+
+restaurant
+- can i have, to requests
+- can I see the check, please?, para pedir la cuenta
+
+howpital
+
 
 free - crowded
 Tidy - untidy, cuarto desordenado
