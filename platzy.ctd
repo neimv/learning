@@ -8433,7 +8433,7 @@ Remedation
 - escaping user input, use of / to scaping clausules, replaced special chars</rich_text>
       </node>
     </node>
-    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1720106416">
+    <node name="Security Engineer" unique_id="265" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="10" is_bold="0" foreground="" ts_creation="1712690013" ts_lastsave="1721098501">
       <node name="Introduction" unique_id="266" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1712690033" ts_lastsave="1712693191">
         <rich_text>Backbone of security enterprise
 
@@ -9408,7 +9408,7 @@ Disaster recovery
 - Warm DR, principle of near real-time synch, data is just being kept as a backup to resume business
 - Hot DR, zero RTO but is more expensive, actual and DR work in parallel</rich_text>
       </node>
-      <node name="Auditing and Monitoring" unique_id="288" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1720106416" ts_lastsave="1720327384">
+      <node name="Auditing and Monitoring" unique_id="288" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1720106416" ts_lastsave="1720663146">
         <rich_text>Auditing
 - check-up for a company or organization
 - examining of company's process, internal controls and financial statements, this according to the policies and laws
@@ -9483,7 +9483,80 @@ Logs
    → Troubleshooting
    → Monitoring
    → Auditing
-   → Compliance</rich_text>
+   → Compliance
+- review later
+
+Monitoring
+- involves continuously observing and checking an IT system's performance and metrics
+- reviewing processes, users, workflows, transactions, data storage, applications, servers, networks, and security protocols
+- is crucial:
+   → Troubleshooting and maintenance
+   → Performance optimisation
+   → Preventing failures
+   → Security risk mitigation
+   → Regulatory compliance
+- this is real-time observation
+
+SIEM Basic
+- sSecurity Information and Event Management
+- set of integrated magement technologies
+- collect and aggregate log data
+- cycle: collect data, aggregate data, discover and detect threats, identify breaches and investigate alerts</rich_text>
+      </node>
+      <node name="Weaponizing Vulnerabilities" unique_id="289" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1720733640" ts_lastsave="1720979958">
+        <rich_text>Introduction
+- process of taking a know vulnerabiliti in a software and creating an exploit for it
+- goal: advantage of a single vulnerability or set of vulnerabilities to elevate access to a system
+- this may be utilized in conjuntction with additional exploits or vulnerabilities
+
+What is a exploit?
+- take various forms, such as an executable file, text message, email attachment or even file that is hidden
+- this can be local or remote
+
+Vulnerability Lifecycle
+- Vulnerability Disclosure Program (VDP), understand how vulnerabilities can be mitigated earlier
+- five stages: Discovery, Coordination, Mitigation and Lessons Learned
+- Linear manner: Product Lauched, Vulnerability Discovered, Development of PoC, Development of Patch, Patch Released, Patch Applied
+
+Opportunity for Weaponizing Vulnerabilities
+- requires a deep understanding of the target resource
+- takes time, expertise and knowledge orf the target
+
+Exploit Chaining
+- multi-stage exploitation
+- steps:
+   → Reconnaissance: gather information about the target system
+   → Initial exploit: use of information
+   → Privilege Escalation: access sensitive information
+   → Persistence: use of other exploits to establish persistence on the target system
+   → Lateral movement: use of additional exploits to move laterally through the target system's network and compromise other systems
+   → RCE: (remote code execution) use of malware to gain control of the target</rich_text>
+      </node>
+      <node name="Intro to IR and IM" unique_id="290" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="12" is_bold="0" foreground="" ts_creation="1721098501" ts_lastsave="1721144208">
+        <rich_text>Incident Response and Incident Management
+
+Wat is a Cyber Incident?
+- starts at the SOC
+- monitoring events, alert is generated if an event is anomaly or unexpected
+- Incident Response
+   → covers the technical aspect, this response: what happened?
+   → tools:
+      ⇒ EDR or AV Alert
+      ⇒ Network Tap Alert
+      ⇒ SIEM Alert
+   → with alert check the latest logon events 
+   → in some events is necesary Digital Forensic
+   → is necessary understand the scope 
+- Incident Management
+   → the process aspect of dealing with an incident
+   → response: how do we respond to what happened
+- Levels:
+   → SOC incident
+   → CERT Incident
+   → CSIRT Incident
+   → CMT Incident
+
+</rich_text>
       </node>
     </node>
     <node name="Pyramid of pain" unique_id="150" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685939081" ts_lastsave="1685940575">
@@ -12455,7 +12528,7 @@ Modes:
    → use of -o or -Output, specify the format with name file or using -f flag</rich_text>
     </node>
   </node>
-  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1718473085">
+  <node name="English" unique_id="32" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747640" ts_lastsave="1720733640">
     <node name="Descriptions" unique_id="33" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1624747655" ts_lastsave="1625432347">
       <rich_text>Discovery learning
 	fill in the gaps
@@ -14265,7 +14338,7 @@ where and how
 
 runny - sucio</rich_text>
     </node>
-    <node name="Pronunciacion basica" unique_id="284" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1718473085" ts_lastsave="1720494009">
+    <node name="Pronunciacion basica" unique_id="284" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1718473085" ts_lastsave="1720663971">
       <rich_text>Introduction
 - 26 letters
 - 5 vowels
@@ -14280,6 +14353,7 @@ Vowel sounds
 - Jaw, open or closed
 - Tongue, up or down / front or back
 - articulater and vocal tract open
+- in american with o sound the r: born and north, in british r is silent
 
 Consonants
 - stop the air sound
@@ -17833,7 +17907,58 @@ Los métodos mas populares de un Readable stream son:
 </rich_text>
     </node>
   </node>
-  <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1625265105"/>
+  <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1722149022">
+    <node name="Manejo de la Interfaz" unique_id="291" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1722149015" ts_lastsave="1722266499">
+      <rich_text>Que es Unity
+- game engine, en tiempo real
+   → interactividad como el jugador le habla al juego
+- que no es, no es editor de assets, probuilder y unityAnimations
+
+Instalacion
+- unity hub, version de editores de unity, descarga e instala cosas
+- unity editor, este tiene modulos, donde se crean los juegos
+- modulos, herramientas para compilar los juegos
+
+paneles
+- jerarquia
+- project/consola
+- inspector
+- escena/juego
+
+Escena e inspector
+- escena es una forma de ver escenas
+- una escena es un asset, algo como niveles, el menu por ejemplo es un nivel
+- assets e instancias de assets
+- en el inspector se ven todas las propiedades de los assets
+- game object, todo elemento en una escena
+- componente, comportamiento de un game object
+- escena, un asset que engloba varios gameobjects y configuraciones
+
+Exportar
+- en paquete se le da export package
+
+Navegar en el escena
+- pivote, punto al rededor del cual se transforma un objeto, 2d o 3d
+- click derecho para moverse sobre la escena
+- WSDA para moverse como en un shooter
+- para bajar velocidad, click derecho + scroll del mouse
+- tiene que estar en la escena, si no, no responde
+- con mouse en medio se puede mover la vision
+- atl y click normal se mueve en pivote
+- alt - click derecho, para zoom</rich_text>
+    </node>
+    <node name="Programacion" unique_id="292" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1722149022" ts_lastsave="1722193538">
+      <rich_text>Que es un script y ciclo de vida
+- es un asset, componente, clase de C#, MonoBehaviour
+- mensajes, son metodos:
+   → OnEnable, OnDisable
+   → Start, Destroy
+   → Awake
+   → Update
+   → OnMouseDown
+   → Reset</rich_text>
+    </node>
+  </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251"/>
   <node name="Matematicas" unique_id="38" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617840054" ts_lastsave="1667337877">
     <node name="funciones matematicas para DS e IA" unique_id="85" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1652028696" ts_lastsave="1666052420">
