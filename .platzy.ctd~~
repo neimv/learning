@@ -14338,7 +14338,7 @@ where and how
 
 runny - sucio</rich_text>
     </node>
-    <node name="Pronunciacion basica" unique_id="284" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1718473085" ts_lastsave="1720663971">
+    <node name="Pronunciacion basica" unique_id="284" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1718473085" ts_lastsave="1723009592">
       <rich_text>Introduction
 - 26 letters
 - 5 vowels
@@ -14360,8 +14360,8 @@ Consonants
 - voiced: B, D, G
 - voiceless: P, T, K
 - flow air sounds: voiced: V, Z; Voiceless: F, S
-- partially blocking the air sounds: voiced - R and L
-- Nasal Sounds, voiced: M, N, NG
+- partially blocking the air sounds: voiced - R and L, alveolar ridge and tongue
+- Nasal Sounds, voiced: M, N, NG, 
 
 Words with ing
 - verbs, playing
@@ -14385,7 +14385,9 @@ Past simple ed
 verbs and nouns with -s ends
 - s, ducks
 - z, bees
-- iz, dances</rich_text>
+- iz, dances
+
+</rich_text>
     </node>
   </node>
   <node name="Ciencia de datos" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1617689129" ts_lastsave="1697502469">
@@ -17907,8 +17909,8 @@ Los métodos mas populares de un Readable stream son:
 </rich_text>
     </node>
   </node>
-  <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1722149022">
-    <node name="Manejo de la Interfaz" unique_id="291" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1722149015" ts_lastsave="1722266316">
+  <node name="Juegos" unique_id="31" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1625265105" ts_lastsave="1723576990">
+    <node name="Manejo de la Interfaz" unique_id="291" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1722149015" ts_lastsave="1722530496">
       <rich_text>Que es Unity
 - game engine, en tiempo real
    → interactividad como el jugador le habla al juego
@@ -17942,9 +17944,104 @@ Navegar en el escena
 - click derecho para moverse sobre la escena
 - WSDA para moverse como en un shooter
 - para bajar velocidad, click derecho + scroll del mouse
-- tiene que estar en la escena, si no, no responde</rich_text>
+- tiene que estar en la escena, si no, no responde
+- con mouse en medio se puede mover la vision
+- atl y click normal se mueve en pivote
+- alt - click derecho, para zoom
+
+Componente transform
+- importante por
+   → grayboxing
+   → armar nivel
+   → hacer pruebas
+- todos los gameobject tienen transform
+- herramientas, tecla: qwerty
+- para ponerlos sobre una superficie: con ctrl+shift para ponerla en cualquier superficie
+- para ponerlo en la cabeza: ctrl+shit+f
+
+Materiales
+- Meshes, se almacenan en la memoria, montos de puntos unidos (vertices)
+- Mapas UV
+- Texturas, que tan brillante o pulido es
+- Materiales, representacion del shader, propiedades, texturas
+- Shaders, programa que dice como renderizar cada pixel
+- N-gon, figura de N lados
+- mesh filter (contiene informacion) y mesh renderer (como se debe de mostrar)
+- ctrl+d para duplicar
+- Ulint, sin luz
+- reflection probe, mapea los reflejos a su alrededor
+
+Espacio global, local y jerarquia
+- global, relativo a donde ve el gameobject
+- local, depende del lugar donde este colocado
+- jerarquia, si gira el objeto padre gira el objeto hijo
+- la escala irregular la heredan los hijos, si se rotan con esa escala se deforman
+- el hijo toma como origin la posicion del padre
+
+fuentes de sonido y escuchas
+- audioSource, emite sonido
+   → AudioClip, asset del sonido
+   → PlayOnAwake, play en cuanto se activa
+   → Loop
+   → Priority, que sonido es mas importante que otro
+   → Volume
+   → Pitch
+   → spatial blend, sirve para saber si va a reproducirse en un espacio 3D
+- audioListener, escucha sonido, solo puede haber 1
+   → de donde viene el sonido o el espectador
+   → viene añadido en la escena por defecto
+   → si no hay, no hay sonido
+- audioMixer, agrupa sonidos, controla volumenes y efectos
+   → este es un asset
+
+Luces y efectos
+- trail, efectos tipo tron, dependen de donde pasa el objeto
+- particulas, utiles para fuego y agua
+- lineas, como trails con control mas facil, se opnene los puntos donde se quiera
+- luz direccional, luz de sol, no depende se posicion, depende de la rotacion, si cambia rotacion cambia lugar de las sombras
+- la luz del sol se muestra en el cielo
+
+Prefabs
+- duplicado de objetos
+- copias sincronizadas
+- simples, anidados y variantes
+- un asset, template o copias con modifcaciones
+- simple, template en forma de asset
+- anidado, prefab dentro de otro
+- variabte, modificaciones que son prefabs
+- para volverlo prefab se tiene que arrastrar a la parte de assets
+
+Sprites, 2D
+- siempre usar PNG por la transparencia
+- para modificar profundidad se usa order in layer
+- sorting layer, se usa para guardar los order in layer
+- para hacer los giros en 2d se usa el sprite editor para poner el pivote donde se quiere que gire
+- se agrupa un padre para agrupar los objetos y modificar el pivote
+
+Leyes de la fisica
+- Rigidbodies, simula fisica, se comunica con el transform
+- Colliders, cual es su cuerpo para colisionar
+- tiene que ser el colider convexo
+- Jerarquias y rigidbodies, los hijos estan sujetos a su padre
+- rigidmody dinamico y kinematico
+   → dinamico, obedece normalmente las leyes de la fisica
+   → kinematico, es como si existiera una mano invisible, es estatico y si choca con otros los hace volar
+
+Joints
+- que es, una articulaciones que une dos rigidbodies, simulacion fisica que e puede romper
+- clavos
+- resortes
+- bisagras
+- fixed joint, es como pegamento, distribuye la masa, no tiene que ser hijo del otro
+- Spring Joint, configuracion elastica, telas de araña o cuerdas, si no hay connected body, se va a conectar a un punto vacio
+- Hinge + Spring, parte del componente HingeJoint, la bisagra tiende a ser un angulo
+- hinge motor, gira sobre cierto eje con una fuerza determinada
+- sin colider se vuelven en masa 0 y se vuelven caoticos
+- al agregar un Joint se agrega el Rigidbody
+- se debe agregar mesh collider para que no se mueve de mas
+- use spring, sirve para hacer un resorte, queda a cierto angulo de acuerdo a lo que se necesita</rich_text>
     </node>
-    <node name="Programacion" unique_id="292" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1722149022" ts_lastsave="1722193538">
+    <node name="Programacion" unique_id="292" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1722149022" ts_lastsave="1723321882">
       <rich_text>Que es un script y ciclo de vida
 - es un asset, componente, clase de C#, MonoBehaviour
 - mensajes, son metodos:
@@ -17953,7 +18050,120 @@ Navegar en el escena
    → Awake
    → Update
    → OnMouseDown
-   → Reset</rich_text>
+   → Reset
+- El click depende de los colliders
+- OnDisable aparece junto con OnDestroy
+
+Aprender a usar la consola
+- errores de compilacion, tiempo de ejecucion y logica
+
+Propiedades publicas y privadas
+- publicas, van al principio de la clase, fuera de metodos dentro de la clase, otros scripts alas pueden ver y modificar
+- privadas y protegidas, no se ven en el inspector y no pueden verlas otras clases
+- atributos, decoraciones dentro de cada variable
+- es posible crear clases sin heredar, clases utils, requiere agregar el space a donde existe y aparte debe ser serializable, UnityEngine
+
+Clases Serialibles
+- en unity se muestra que se puede dar de acuerdo a los cripts que se usen y sus propiedades
+- se deben de bloquear y desbloquear candados
+- para recordar se debe serializar a un json, se debe crear la propiedad en la clase que lo usara, junto con JsonUtility.Json(objeto a serializar)
+- para regrear al objeto despues del json: JsonUtility.FromJson&lt;objeto que es&gt; (propiedad)
+- PlayerPrefs, para guardar en la compu, PlayerPrefs.SetString("llave", “valor), GetString para obtener data(”llave"), checar si existe: se usa HasKey
+
+El componente transform y los vectores
+- vector3 para las dimensiones del transform, del tipo float
+- Quaternion, expresion de las rotaciones, uso de euler angle
+- en C# hay sobrecarga de operadores
+- propiedades del transform
+   → Posicion (vector 3)
+   → Rotacion (Quaternion)
+   → Tamaño (vector 3)
+- Vector != escalar
+
+Manipulando el transform
+- local, es relativo
+- global, es el mundo, las direcciones siempre son las direcciones
+- vector direccional es vector unitario
+
+LERP
+- interpolacion lineal, se mueve de “a” a “b”, de forma lineal
+
+Tiempo
+- entre frame y frame:
+   → es diferente en cada frame
+   → depende de la dificultad de renderizado
+   → depende de la maquina
+- time.time, tiempo pasado desde que se dio play
+- time.deltaTime, entre upda y update
+
+Movimiento y tiempo
+
+Colisiones, entran en contacto
+Triggers, no colisionan, pueden sobreponerse
+capsule collider es mas barato que un colider normal
+botones son discretos, mandan señal boolean
+
+
+obtener componentes, estos metodos no deben de ir en el update, con s se pueden encontrar varios, una lista del componente
+GetComponent
+GetComponentInParent
+GetComponentInChildren
+FindObjectOfType // este metodo es muy caro
+para crear eventos se hace:
+	public event System.Action onAlarm;
+	onAlarm?.Invoke(); // por si es nulo
+checar MoveTowards
+
+Reset sobre Start, se que es dificil de romper, es legible y flexible, solo funciona en el editor (reset)
+Se hace uso de Getters y Setters
+
+Configuracion, informacion e inicializacion
+- seteadas por el mismo script
+- modificala bajo tu propio riesgo
+- inicializacion, setear en el reset, start o editor, su valor es fundamental</rich_text>
+    </node>
+    <node name="Curso de programacion 2D" unique_id="293" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1723516648" ts_lastsave="1724201750">
+      <rich_text>Fijar un alcance, definir metas
+Define plataforma y publico objetivo
+Testea seguido sobre builds
+
+Se pueden arrastrar varios elementos para que estos se vuelvan una animacion, agregandola a la escena
+el pixel art no se escala, el tamaño de un pixel sea equivalente al tamaño de otros
+
+Timeline, ya existe en unity
+
+Debug:
+- Debug.Log()
+- breakpoints
+
+arrrays, guardan datos del mismo tipo, son fijas
+listas, son dinamicas conforme se requiere
+los diccionarios se les da el tipo desde inicio, no son con valores dinamicos
+
+New input system</rich_text>
+    </node>
+    <node name="Desarrollo en moviles" unique_id="294" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1723521034" ts_lastsave="1723756487">
+      <rich_text>Problemas de gameplay
+- algo por hacer, pero no se sabe como hacer con progra
+- descripcion del movimiento sobre vectores
+- coliciones, interacciones entre objetos
+- uso de arrays para muchos objetos
+
+Match simplificado
+- analizar que elementos son parte del juego
+- uso de tamaños y coordenadas
+
+Tamaño ortografico
+- distancia entre el centro de la pantalla y el extremo inferior/superior de lo que vemos</rich_text>
+    </node>
+    <node name="Interfaces" unique_id="295" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1723576990" ts_lastsave="1723577561">
+      <rich_text>Unity UI es el core
+- basado en objects y components
+- se craean directamente en el game voew
+- no sirve para cambiar interfaces del editor
+
+toolkit
+- archivos basados en xml, html y css</rich_text>
     </node>
   </node>
   <node name="Teoricos" unique_id="56" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1641243242" ts_lastsave="1641243251"/>
@@ -20824,7 +21034,7 @@ Macreos
 		not support stacksets</rich_text>
     </node>
   </node>
-  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1713813224">
+  <node name="notes" unique_id="156" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="0" foreground="" ts_creation="1685390640" ts_lastsave="1722562864">
     <rich_text>
 *	Identificación oficial vigente (INE, en caso de pasaporte nos lo validan pero nos piden otra identificación adicional, como cedula, licencia… )
 *	Comprobante de domicilio, no mayor a dos meses 
@@ -20854,5 +21064,9 @@ bench --site zecore-dev.localhost migrate
 
 </rich_text>
     <rich_text link="webs https://stackoverflow.com/questions/73596136/kustomize-how-to-ignore-ksops-in-ci-cd-environment">https://stackoverflow.com/questions/73596136/kustomize-how-to-ignore-ksops-in-ci-cd-environment</rich_text>
+    <rich_text>
+
+
+- </rich_text>
   </node>
 </cherrytree>
